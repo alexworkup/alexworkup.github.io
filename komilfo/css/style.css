@@ -165,16 +165,24 @@
 .extra-menu {
   font-size: 14px;
   font-weight: 500;
-  height: 32px;
 }
 .extra-menu__row {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -25px;
   height: 100%;
+  min-height: 32px;
+}
+@media screen and (max-width: 1440px) {
+  .extra-menu__row {
+    margin: 0 -25px;
+  }
 }
 .extra-menu__list {
   display: flex;
   list-style: none;
-  margin: 0 -25px;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 0;
   height: 100%;
 }
@@ -187,9 +195,16 @@
   color: #656D75;
 }
 .extra-menu__item {
-  padding: 0 25px;
+  margin: 0 25px;
   display: flex;
   align-items: center;
+  min-height: 30px;
+  transition: 0.3s margin linear;
+}
+@media screen and (max-width: 1440px) {
+  .extra-menu__item {
+    margin: 0 15px;
+  }
 }
 .extra-menu__col--profile {
   margin-left: auto;
