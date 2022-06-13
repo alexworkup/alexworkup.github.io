@@ -1,10 +1,10 @@
 .header {
 
   &__top {
-    background-color: $c-very-light-gray;
+    background-color: $c-white-smoke;
   }
-}
 
+}
 
 .extra-menu {
   font-size: 14px;
@@ -25,13 +25,13 @@
   }
 
   &__link {
-    color: $c-font-light;
+    color: $c-nepal;
     text-decoration: none;
     line-height: 1em;
 
     &:hover,
     &.selected {
-      color: #656D75;
+      color: $c-mid-grey;
     }
   }
 
@@ -45,6 +45,41 @@
 
     &--profile {
       margin-left: auto;
+    }
+  }
+}
+
+.link-profile,
+.change-city {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 10px;
+
+    path {
+      fill: $c-nepal;
+    }
+  }
+
+  &__arrow {
+    margin-left: 4px;
+  }
+}
+.change-city {
+
+  &.active {
+    color: $c-mid-grey;
+
+    .change-city__arrow {
+      transform: scale(1, -1);
+    }
+
+    .change-city__icon {
+
+      path {
+        fill: $c-mid-grey;
+      }
     }
   }
 }
