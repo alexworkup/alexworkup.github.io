@@ -158,20 +158,21 @@
   font-style: normal;
   font-display: swap;
 }
-.header__top {
+.header__row--top {
   background-color: #F8F8F8;
 }
 
 .extra-menu {
   font-size: 14px;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
 }
 .extra-menu__row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -25px;
   height: 100%;
-  min-height: 32px;
 }
 @media screen and (max-width: 1440px) {
   .extra-menu__row {
@@ -198,13 +199,16 @@
   margin: 0 25px;
   display: flex;
   align-items: center;
-  min-height: 30px;
+  min-height: 32px;
   transition: 0.3s margin linear;
 }
 @media screen and (max-width: 1440px) {
   .extra-menu__item {
     margin: 0 15px;
   }
+}
+.extra-menu__col--about {
+  padding-left: 100px;
 }
 .extra-menu__col--profile {
   margin-left: auto;
@@ -238,6 +242,74 @@
   fill: #656D75;
 }
 
+.logo {
+  font-size: 0;
+  display: block;
+}
+
+.header-mid {
+  position: relative;
+  z-index: 1;
+}
+.header-mid__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.header-mid__row .logo {
+  position: absolute;
+  left: 0;
+  top: -30px;
+}
+.header-mid__col {
+  min-height: 63px;
+  display: flex;
+  align-items: center;
+}
+.header-mid__col--logo {
+  min-width: 235px;
+}
+
+.search-line {
+  display: flex;
+  align-items: center;
+}
+.search-line__button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 14px;
+  color: #A2ACB5;
+  transition: 0.3s color linear;
+}
+.search-line__button:hover {
+  color: #656D75;
+}
+.search-line__button svg {
+  margin-right: 7px;
+}
+.search-line__button svg path {
+  fill: #A2ACB5;
+}
+.search-line__field {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #F8F8F8;
+  transition: 0.3s border linear;
+}
+.search-line__field:focus {
+  border-bottom: 1px solid #A2ACB5;
+}
+
 body {
   font-family: "Gilroy", sans-serif;
   font-size: 16px;
@@ -246,14 +318,24 @@ body {
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .wrapper {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
 }
 .wrapper a {
   transition: 0.2s color ease-in;

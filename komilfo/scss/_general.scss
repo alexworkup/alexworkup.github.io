@@ -6,15 +6,26 @@ body {
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+
 .container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 
 .wrapper {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
 
   a {
     transition: .2s color ease-in;

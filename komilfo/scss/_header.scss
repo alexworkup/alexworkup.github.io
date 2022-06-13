@@ -1,21 +1,24 @@
 .header {
 
-  &__top {
-    background-color: $c-white-smoke;
-  }
+  &__row {
 
+    &--top {
+      background-color: $c-white-smoke;
+    }
+  }
 }
 
 .extra-menu {
   font-size: 14px;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
 
   &__row {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -25px;
     height: 100%;
-    min-height: 32px;
 
     @media #{$laptop} {
       margin: 0 -25px;
@@ -46,7 +49,7 @@
     margin: 0 25px;
     display: flex;
     align-items: center;
-    min-height: 30px;
+    min-height: 32px;
     transition: .3s margin linear;
     
     @media #{$laptop} {
@@ -55,6 +58,10 @@
   }
 
   &__col {
+
+    &--about {
+      padding-left: 100px;
+    }
 
     &--profile {
       margin-left: auto;
@@ -79,6 +86,7 @@
     margin-left: 4px;
   }
 }
+
 .change-city {
 
   &.active {
@@ -95,4 +103,83 @@
       }
     }
   }
+}
+
+.logo {
+  font-size: 0;
+  display: block;
+}
+
+.header-mid {
+  position: relative;
+  z-index: 1;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    .logo {
+      position: absolute;
+      left: 0;
+      top: -30px;
+    }
+  }
+
+  &__col {
+    min-height: 63px;
+    display: flex;
+    align-items: center;
+
+    &--logo {
+      min-width: 235px;
+    }
+  }
+}
+
+.search-line {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    font-size: 14px;
+    color: $c-nepal;
+    transition: .3s color linear;
+
+    &:hover {
+      color: $c-mid-grey;
+    }
+
+    svg {
+      margin-right: 7px;
+
+      path {
+        fill: $c-nepal;
+      }
+    }
+  }
+
+  &__field {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    border-bottom: 1px solid $c-white-smoke;
+    transition: .3s border linear;
+
+    &:focus {
+      border-bottom: 1px solid $c-nepal;
+    }
+  }
+
 }
