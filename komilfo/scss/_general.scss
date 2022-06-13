@@ -1,0 +1,28 @@
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.wrapper {
+  overflow: hidden;
+
+  a {
+    transition: .2s color ease-in;
+
+    &:not([class]) {
+      color: $c-font-light;
+    }
+  }
+
+}
+

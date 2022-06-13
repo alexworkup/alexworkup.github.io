@@ -2,6 +2,7 @@
 
 # JetBrains
 .idea
+.sass-cache
 
 # dependencies
 /node_modules
