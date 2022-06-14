@@ -5,19 +5,23 @@ $font-weight-base:     400;
 
 
 // Color
-$c-teal-blue:         #2A4652;
 $c-white:             #FFFFFF;
 $c-white-smoke:       #F8F8F8;
 $c-nepal:             #A2ACB5;
 $c-mid-grey:          #656D75;
+$c-bali-hai:          #819BA7;
+$c-teal-blue:         #2A4652;
 $c-arapawa:           #2D505B;
 $c-rob-roy:           #D4AE4A;
 $c-festival:          #E9C547;
+$c-tacha:             #DFC559;
+
 
 // Responsive width
 $desktop: 'screen and (max-width: 1680px)';
 $laptop: 'screen and (max-width: 1440px)';
 $notebook: 'screen and (max-width: 1366px)';
+$laptop_s: 'screen and (max-width: 1024px)';
 $tablet: 'screen and (max-width: 999px)';
 $phone: 'screen and (max-width: 500px)';
 

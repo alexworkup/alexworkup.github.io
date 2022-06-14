@@ -60,6 +60,10 @@
     @media #{$laptop} {
       margin: 0 15px;
     }
+
+    @media #{$laptop-s} {
+      margin: 0 10px;
+    }
   }
 
   &__col {
@@ -261,6 +265,11 @@
     font-weight: 400;
     color: $c-arapawa;
     line-height: .8em;
+    transition: .2s font-size linear;
+
+    @media #{$laptop_s} {
+      font-size: 25px;
+    }
   }
 
   &__number,
@@ -276,10 +285,67 @@
   }
 }
 
+.header-menu {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    &--menu {
+      padding-left: 200px;
+      transition: .2s all linear;
+
+      @media #{$notebook} {
+        padding-left: 0;
+      }
+    }
+
+    &--control {
+      margin-left: auto;
+
+      .link-control {
+        margin-right: 25px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+
+          svg {
+
+            path {
+              fill: $c-white;
+            }
+          }
+        }
+
+        svg {
+
+          path {
+            fill: $c-bali-hai;
+            transition: .2s all linear;
+          }
+        }
+      }
+    }
+  }
+}
+
 .main-menu {
+
+  &__item {
+    margin: 0 5px;
+  }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -290,11 +356,49 @@
     display: block;
     line-height: 45px;
     position: relative;
-    padding: 0 45px;
+    padding: 0 30px;
     text-decoration: none;
+    transition: .2s all linear;
 
-    &:hover {
-      color: $c-festival;
+    @media #{$notebook} {
+      padding: 0 20px;
     }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      background-color: $c-tacha;
+      transform: scale(0, -1);
+      transition: .2s all ease-in;
+    }
+
+    &:hover,
+    &.selected {
+      color: $c-festival;
+
+      &:before {
+        transform: scale(1, -1);
+      }
+    }
+  }
+}
+
+.link-control {
+  display: block;
+  font-size: 0;
+  position: relative;
+
+  span {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $c-festival;
   }
 }

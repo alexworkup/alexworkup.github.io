@@ -179,6 +179,9 @@
     @media screen and (max-width: 1440px) {
       .extra-menu__item {
         margin: 0 15px; } }
+    @media screen and (max-width: 1024px) {
+      .extra-menu__item {
+        margin: 0 10px; } }
   .extra-menu__col--about {
     padding-left: 100px; }
   .extra-menu__col--profile {
@@ -305,7 +308,11 @@
   font-size: 30px;
   font-weight: 400;
   color: #2D505B;
-  line-height: .8em; }
+  line-height: .8em;
+  transition: .2s font-size linear; }
+  @media screen and (max-width: 1024px) {
+    .phone-block__number {
+      font-size: 25px; } }
 .phone-block__number, .phone-block__order {
   text-decoration: none;
   display: block; }
@@ -314,8 +321,35 @@
   color: #D4AE4A;
   font-weight: 500; }
 
+.header-menu__row {
+  display: flex;
+  flex-wrap: wrap; }
+.header-menu__col {
+  display: flex;
+  align-items: center; }
+  .header-menu__col--menu {
+    padding-left: 200px;
+    transition: .2s all linear; }
+    @media screen and (max-width: 1366px) {
+      .header-menu__col--menu {
+        padding-left: 0; } }
+  .header-menu__col--control {
+    margin-left: auto; }
+    .header-menu__col--control .link-control {
+      margin-right: 25px; }
+      .header-menu__col--control .link-control:last-child {
+        margin-right: 0; }
+      .header-menu__col--control .link-control:hover svg path {
+        fill: #FFFFFF; }
+      .header-menu__col--control .link-control svg path {
+        fill: #819BA7;
+        transition: .2s all linear; }
+
+.main-menu__item {
+  margin: 0 5px; }
 .main-menu__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -324,10 +358,39 @@
   display: block;
   line-height: 45px;
   position: relative;
-  padding: 0 45px;
-  text-decoration: none; }
-  .main-menu__link:hover {
+  padding: 0 30px;
+  text-decoration: none;
+  transition: .2s all linear; }
+  @media screen and (max-width: 1366px) {
+    .main-menu__link {
+      padding: 0 20px; } }
+  .main-menu__link:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    background-color: #DFC559;
+    transform: scale(0, -1);
+    transition: .2s all ease-in; }
+  .main-menu__link:hover, .main-menu__link.selected {
     color: #E9C547; }
+    .main-menu__link:hover:before, .main-menu__link.selected:before {
+      transform: scale(1, -1); }
+
+.link-control {
+  display: block;
+  font-size: 0;
+  position: relative; }
+  .link-control span {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #E9C547; }
 
 body {
   font-family: "Gilroy", sans-serif;
