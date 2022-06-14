@@ -1,4 +1,22 @@
 @font-face {
+  font-family: 'Alumni Sans';
+  src: url("../fonts/alumni/AlumniSans-Medium.woff2") format("woff2"), url("../fonts/alumni/AlumniSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Alumni Sans';
+  src: url("../fonts/alumni/AlumniSans-ExtraLight.woff2") format("woff2"), url("../fonts/alumni/AlumniSans-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Alumni Sans';
+  src: url("../fonts/alumni/AlumniSans-Light.woff2") format("woff2"), url("../fonts/alumni/AlumniSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
   font-family: 'Gilroy';
   src: url("../fonts/gilroy/Gilroy-ExtraBold.eot");
   src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"), url("../fonts/gilroy/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
@@ -419,5 +437,43 @@ body {
     transition: .2s color ease-in; }
     .wrapper a:not([class]) {
       color: #A2ACB5; }
+
+.main-slider {
+  height: 450px;
+  font-family: "Alumni Sans", sans-serif; }
+  .main-slider__wrapper {
+    height: 100%; }
+  .main-slider .slider-item {
+    position: relative;
+    height: 100%; }
+    .main-slider .slider-item__wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%; }
+    .main-slider .slider-item__title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 70px;
+      line-height: .9em;
+      color: #2D505B;
+      margin-bottom: 10px; }
+    .main-slider .slider-item__content {
+      width: 50%; }
+    .main-slider .slider-item__text {
+      font-weight: 200;
+      font-size: 40px;
+      line-height: 30px;
+      color: #2D505B; }
+    .main-slider .slider-item__pics {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+      .main-slider .slider-item__pics img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
 
 /*# sourceMappingURL=style.css.map */

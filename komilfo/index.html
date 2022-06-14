@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="js/jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -144,9 +148,32 @@
             </div>
         </header>
         <main class="main">
-            <section class="main-slider">
-                <div class="main-slider__wrapper">
-
+            <section class="main-slider swiper">
+                <div class="main-slider__wrapper swiper-wrapper">
+                    <div class="slider-item swiper-slide">
+                        <picture class="slider-item__pics">
+                            <source srcset="" media="(min-width: 1000px)">
+                            <img srcset="images/slider-item-pics01.jpg" alt="…">
+                        </picture>
+                        <div class="slider-item__wrapper container">
+                            <div class="slider-item__content">
+                                <div class="slider-item__title">Текстиль, парфюмерия и оборудование</div>
+                                <div class="slider-item__text">для отелей в Москве от надёжного поставщика</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-item swiper-slide">
+                        <picture class="slider-item__pics">
+                            <source srcset="" media="(min-width: 1000px)">
+                            <img srcset="images/slider-item-pics01.jpg" alt="…">
+                        </picture>
+                        <div class="slider-item__wrapper container">
+                            <div class="slider-item__content">
+                                <div class="slider-item__title">Текстиль, парфюмерия и оборудование</div>
+                                <div class="slider-item__text">для отелей в Москве от надёжного поставщика</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
