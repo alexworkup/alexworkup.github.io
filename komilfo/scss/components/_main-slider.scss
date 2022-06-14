@@ -21,8 +21,12 @@
       font-weight: 300;
       font-size: 70px;
       line-height: .9em;
-      color: $c-arapawa;
+      color: $c-teal-blue;
       margin-bottom: 10px;
+
+      @media #{$notebook} {
+        font-size: 60px;
+      }
     }
 
     &__content {
@@ -33,7 +37,11 @@
       font-weight: 200;
       font-size: 40px;
       line-height: 30px;
-      color: $c-arapawa;
+      color: $c-teal-blue;
+
+      @media #{$notebook} {
+        font-size: 30px;
+      }
     }
 
     &__pics {
@@ -51,7 +59,5 @@
       }
     }
   }
-
-
 
 }

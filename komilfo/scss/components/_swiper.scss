@@ -1,0 +1,25 @@
+.swiper {
+
+  &-pagination {
+
+    &--custom {
+      height: 20px;
+      bottom: 20px !important;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .swiper-pagination-bullet {
+        width: 150px;
+        height: 3px;
+        border-radius: 0;
+        background: $c-teal-blue;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background: $c-rob-roy;
+        }
+      }
+    }
+  }
+}
