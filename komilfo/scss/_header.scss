@@ -5,6 +5,11 @@
     &--top {
       background-color: $c-white-smoke;
     }
+
+    &--bottom {
+      background-color: $c-teal-blue;
+      padding: 5px 0;
+    }
   }
 }
 
@@ -119,21 +124,60 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 0;
-
-    .logo {
-      position: absolute;
-      left: 0;
-      top: -30px;
-    }
+    min-height: 63px;
+    box-sizing: border-box;
   }
 
   &__col {
-    min-height: 63px;
     display: flex;
     align-items: center;
+    margin-right: 30px;
+    transition: .2s margin-right linear;
+
+    @media #{$notebook} {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &--logo {
       min-width: 235px;
+      margin-right: auto;
+      position: relative;
+
+      @media #{$notebook} {
+        min-width: 180px;
+      }
+
+      .logo {
+        position: absolute;
+        left: 0;
+        top: -40px;
+        width: 100%;
+
+        img {
+          width: 100%;
+          transition: .2s width linear;
+        }
+      }
+    }
+
+    &--phone {
+      align-items: flex-end;
+    }
+
+    &--search {
+
+      .search-line__field {
+        width: 370px;
+        transition: .3s width linear;
+
+        @media #{$notebook} {
+          width: 200px;
+        }
+      }
     }
   }
 }
@@ -182,4 +226,75 @@
     }
   }
 
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: $c-white-smoke;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 0 3px;
+
+    svg {
+
+      path {
+        fill: $c-nepal;
+      }
+    }
+  }
+
+
+}
+
+.phone-block {
+
+  &__number {
+    font-size: 30px;
+    font-weight: 400;
+    color: $c-arapawa;
+    line-height: .8em;
+  }
+
+  &__number,
+  &__order {
+    text-decoration: none;
+    display: block;
+  }
+
+  &__order {
+    text-align: right;
+    color: $c-rob-roy;
+    font-weight: 500;
+  }
+}
+
+.main-menu {
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    color: $c-white;
+    display: block;
+    line-height: 45px;
+    position: relative;
+    padding: 0 45px;
+    text-decoration: none;
+
+    &:hover {
+      color: $c-festival;
+    }
+  }
 }
