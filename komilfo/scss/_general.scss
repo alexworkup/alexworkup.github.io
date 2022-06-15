@@ -25,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  height: 100%;
+  background-color: $c-snow;
 
   a {
     transition: .2s color ease-in;
@@ -37,3 +37,56 @@ body {
 
 }
 
+.h1, h1,
+.h2, h2,
+.h3, h3 {
+  font-style: normal;
+  color: $c-teal-blue;
+  margin: 0;
+  line-height: 1em;
+  font-family: $font-family-add;
+}
+
+.h2, h2 {
+  font-size: 80px;
+  font-weight: 200;
+}
+
+.h3, h3 {
+  font-size: 37px;
+  font-weight: 400;
+}
+
+.label-section {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+  color: $c-nepal;
+  line-height: 3.2em;
+  text-transform: uppercase;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-width: 40px;
+    height: 1px;
+    background-color: $c-rob-roy;
+  }
+}
+
+.btn {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: $c-teal-blue;
+  text-decoration: none;
+  line-height: 50px;
+  height: 50px;
+  display: inline-block;
+  padding: 0 30px;
+  border: 1px solid $c-rob-roy;
+}
