@@ -583,6 +583,14 @@ body {
     margin-top: auto;
     position: relative;
     box-sizing: border-box; }
+    .section-card__content:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(27, 42, 49, 0.75);
+      left: 0;
+      top: 0; }
   .section-card__pics {
     font-size: 0;
     width: 100%;
@@ -591,52 +599,74 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-  .section-card__text .label-section {
-    font-size: 11px;
-    line-height: 45px;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px; }
+  .section-card__text {
+    margin-top: auto; }
+    .section-card__text .label-section {
+      font-size: 11px;
+      line-height: 45px;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      color: #C4C4C4; }
   .section-card__title {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    position: relative; }
   .section-card__anons {
     margin: 0;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    color: #597987; }
-  .section-card__more {
-    margin-top: auto;
-    align-self: flex-start;
-    position: relative; }
-  .section-card--short .section-card__anons {
+    color: #597987;
     display: none; }
-  .section-card--short .section-card__text {
-    margin-top: auto; }
-  .section-card--short .section-card__more {
-    margin-top: initial;
+  .section-card__more {
+    align-self: flex-start;
+    position: relative;
     border: 0;
-    padding: 0;
+    padding: 0 15px 0 0;
     line-height: 1em;
     height: auto;
     color: #D4AE4A;
     font-size: 14px; }
-  .section-card--short .label-section {
-    color: #C4C4C4; }
-  .section-card--short .section-card__title {
-    color: #FFFFFF;
-    position: relative; }
-  .section-card--short .section-card__content:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(27, 42, 49, 0.75);
-    left: 0;
-    top: 0; }
-  .section-card--full .section-card__content,
-  .section-card--full .section-card__pics {
+    .section-card__more:hover {
+      color: #FFFFFF; }
+      .section-card__more:hover:before {
+        right: 0; }
+    .section-card__more:before {
+      content: '';
+      position: absolute;
+      height: 8px;
+      width: 5px;
+      right: 3px;
+      top: 5px;
+      background-image: url("../images/icon/arrow-more.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: .3s right linear; }
+  .section-card:nth-child(1) .section-card__pics,
+  .section-card:nth-child(1) .section-card__content, .section-card:nth-child(3) .section-card__pics,
+  .section-card:nth-child(3) .section-card__content, .section-card:nth-child(5) .section-card__pics,
+  .section-card:nth-child(5) .section-card__content {
     height: 50%; }
+  .section-card:nth-child(1) .section-card__content:before, .section-card:nth-child(3) .section-card__content:before, .section-card:nth-child(5) .section-card__content:before {
+    content: none; }
+  .section-card:nth-child(1) .section-card__title, .section-card:nth-child(3) .section-card__title, .section-card:nth-child(5) .section-card__title {
+    color: #2A4652; }
+  .section-card:nth-child(1) .label-section, .section-card:nth-child(3) .label-section, .section-card:nth-child(5) .label-section {
+    color: #A2ACB5; }
+  .section-card:nth-child(1) .section-card__anons, .section-card:nth-child(3) .section-card__anons, .section-card:nth-child(5) .section-card__anons {
+    display: block; }
+  .section-card:nth-child(1) .section-card__more, .section-card:nth-child(3) .section-card__more, .section-card:nth-child(5) .section-card__more {
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    border: 1px solid #D4AE4A;
+    color: #2A4652; }
+    .section-card:nth-child(1) .section-card__more:before, .section-card:nth-child(3) .section-card__more:before, .section-card:nth-child(5) .section-card__more:before {
+      content: none; }
+  .section-card:nth-child(1) .section-card__text, .section-card:nth-child(3) .section-card__text, .section-card:nth-child(5) .section-card__text {
+    margin-top: initial;
+    margin-bottom: auto; }
   .section-card:nth-child(1) {
     grid-row-start: 1;
     grid-row-end: 3; }
