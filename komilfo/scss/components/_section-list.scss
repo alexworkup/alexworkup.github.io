@@ -8,6 +8,10 @@
     grid-auto-rows: minmax(285px, auto);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+
+    @media #{$laptop_s} {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__title {
@@ -194,12 +198,24 @@
     grid-column-start: 3;
     grid-row-start: 1;
     grid-row-end: 3;
+
+    @media #{$laptop_s} {
+      grid-column-start: initial;
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
   }
 
   &:nth-child(5) {
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 4;
+
+    @media #{$laptop_s} {
+      grid-column-start: inherit;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
   }
 
 }
