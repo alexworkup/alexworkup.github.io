@@ -90,3 +90,17 @@ body {
   padding: 0 30px;
   border: 1px solid $c-rob-roy;
 }
+
+.section-page-title {
+  text-align: center;
+  margin-bottom: 25px;
+
+  .label-section {
+    margin-bottom: 10px;
+
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
