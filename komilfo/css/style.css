@@ -494,6 +494,36 @@ body {
       left: 50%;
       transform: translateX(-50%); }
 
+.footer__row--menu {
+  background-color: #11242d;
+  background-image: url("../images/footer-bg.png");
+  padding: 10px 0;
+  min-height: 400px; }
+.footer .extra-menu__list {
+  height: auto;
+  margin-bottom: 20px;
+  margin-left: -15px;
+  margin-right: -15px; }
+.footer .extra-menu__col {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .footer .extra-menu__col--about {
+    padding-left: 0; }
+  .footer .extra-menu__col--logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; }
+  .footer .extra-menu__col--contacts {
+    align-items: flex-end; }
+.footer .extra-menu__item {
+  margin: 0 15px; }
+.footer .extra-menu__link:hover, .footer .extra-menu__link.selected {
+  color: #D4AE4A; }
+.footer .phone-block__number {
+  color: #FFFFFF; }
+
 .main-slider {
   height: 450px;
   font-family: "Alumni Sans", sans-serif; }

@@ -1,0 +1,63 @@
+.footer {
+
+  &__row {
+
+    &--menu {
+      background-color: #11242d;
+      background-image: url("../images/footer-bg.png");
+      padding: 10px 0;
+      min-height: 400px;
+    }
+  }
+
+  .extra-menu {
+
+    &__list {
+      height: auto;
+      margin-bottom: 20px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    &__col {
+      width: calc(100% / 3);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &--about {
+        padding-left: 0;
+      }
+
+      &--logo {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      &--contacts {
+        align-items: flex-end;
+      }
+    }
+
+    &__item {
+      margin: 0 15px;
+    }
+
+    &__link {
+
+      &:hover,
+      &.selected {
+        color: $c-rob-roy;
+      }
+    }
+  }
+
+  .phone-block {
+
+    &__number {
+      color: $c-white;
+    }
+  }
+
+}
