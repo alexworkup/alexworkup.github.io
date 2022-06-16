@@ -7,6 +7,19 @@
 
   .clients-slider {
 
+    &__col {
+
+      &.swiper-slide-prev {
+
+          .clients-slider__item {
+
+            &:before {
+              right: 2px;
+            }
+          }
+      }
+    }
+
     &__wrapper {
       padding-bottom: 60px;
       align-items: center;
@@ -36,6 +49,21 @@
       img {
         max-width: 100%;
       }
+    }
+
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: calc(50% - 30px);
+    transform: translateY(-50%);
+
+    &--prev {
+      left: -100px;
+    }
+
+    &--next {
+      right: -100px;
     }
   }
 }

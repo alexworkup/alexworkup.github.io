@@ -20,5 +20,9 @@ $( document ).ready(function() {
             clickable: true,
         },
 
+        navigation: {
+            nextEl: '.our-clients .slider-arrow--next',
+            prevEl: '.our-clients .slider-arrow--prev',
+        },
     });
 });
