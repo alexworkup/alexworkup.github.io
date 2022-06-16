@@ -11,4 +11,14 @@ $( document ).ready(function() {
         },
 
     });
+
+    const ourClients = new Swiper('.clients-slider.swiper', {
+        slidesPerView: 5,
+
+        pagination: {
+            el: '.clients-slider .swiper-pagination',
+            clickable: true,
+        },
+
+    });
 });

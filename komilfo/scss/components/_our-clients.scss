@@ -1,0 +1,41 @@
+.our-clients {
+  margin-bottom: 80px;
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  .clients-slider {
+
+    &__wrapper {
+      padding-bottom: 60px;
+      align-items: center;
+    }
+
+    .swiper-pagination--custom {
+      bottom: 0!important;
+      justify-content: center;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 56px;
+        background-color: #C0CFD9;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

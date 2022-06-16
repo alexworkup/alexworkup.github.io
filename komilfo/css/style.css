@@ -537,10 +537,11 @@ body {
         height: 100%;
         object-fit: cover;
         object-position: center; }
+  .main-slider .swiper-pagination--custom {
+    bottom: 20px !important; }
 
 .swiper-pagination--custom {
   height: 20px;
-  bottom: 20px !important;
   display: flex;
   align-items: center;
   justify-content: flex-start; }
@@ -770,5 +771,31 @@ body {
       .about-company__title h2 span {
         font-size: 70px;
         text-transform: none; }
+
+.our-clients {
+  margin-bottom: 80px; }
+  .our-clients__title {
+    margin-bottom: 70px; }
+  .our-clients .clients-slider__wrapper {
+    padding-bottom: 60px;
+    align-items: center; }
+  .our-clients .clients-slider .swiper-pagination--custom {
+    bottom: 0 !important;
+    justify-content: center; }
+  .our-clients .clients-slider__item {
+    display: flex;
+    justify-content: center;
+    position: relative; }
+    .our-clients .clients-slider__item:before {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 56px;
+      background-color: #C0CFD9; }
+    .our-clients .clients-slider__item img {
+      max-width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
