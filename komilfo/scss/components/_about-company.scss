@@ -1,0 +1,50 @@
+.about-company {
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__col {
+    width: 50%;
+    padding: 0 22px;
+
+    &--text {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__anons {
+    text-align: center;
+    font-weight: 300;
+    color: $c-teal-blue;
+    line-height: 1.5em;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    .label-section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 90px;
+      text-transform: uppercase;
+      line-height: .6em;
+
+      span {
+        font-size: 70px;
+        text-transform: none;
+      }
+    }
+  }
+}

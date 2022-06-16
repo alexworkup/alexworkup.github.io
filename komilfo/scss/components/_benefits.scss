@@ -1,0 +1,77 @@
+.benefits {
+  margin-bottom: 75px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    width: calc(100% / 5);
+  }
+
+  .benefits-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    &:hover {
+
+      .benefits-item__icon {
+
+        svg {
+          stroke: $c-rob-roy;
+          animation: 3s infinite alternate rotate;
+        }
+      }
+    }
+
+    &__icon {
+      width: 119px;
+      height: 119px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      position: relative;
+      transition: .2s all linear;
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        stroke: #6E8A96;
+        transition: .2s stroke linear;
+      }
+
+      img {
+        position: relative;
+      }
+    }
+
+    &__text {
+      color: $c-teal-blue;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.3em;
+    }
+
+  }
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
