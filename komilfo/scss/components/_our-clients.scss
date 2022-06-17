@@ -1,11 +1,16 @@
 .our-clients {
   margin-bottom: 80px;
+  padding: 0 20px;
 
   &__title {
     margin-bottom: 70px;
   }
 
   .clients-slider {
+
+    @media #{$desktop} {
+      width: calc(100% - 150px);
+    }
 
     &__col {
 
@@ -35,6 +40,10 @@
       justify-content: center;
       position: relative;
 
+      @media #{$desktop} {
+        padding: 0 30px;
+      }
+
       &:before {
         content: '';
         position: absolute;
@@ -60,10 +69,18 @@
 
     &--prev {
       left: -100px;
+
+      @media #{$desktop} {
+        left: 0;
+      }
     }
 
     &--next {
       right: -100px;
+
+      @media #{$desktop} {
+        right: 0;
+      }
     }
   }
 }

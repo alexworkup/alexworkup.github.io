@@ -10,6 +10,10 @@
       background-color: $c-teal-blue;
       padding: 5px 0;
     }
+
+    &--mid {
+      background-color: $c-white;
+    }
   }
 }
 
@@ -26,8 +30,9 @@
     height: 100%;
 
     @media #{$laptop} {
-      margin: 0 -25px;
+      margin: 0;
     }
+
   }
 
   &__list {
@@ -70,6 +75,10 @@
 
     &--about {
       padding-left: 100px;
+
+      @media #{$laptop_s} {
+        padding-left: 0;
+      }
     }
 
     &--profile {
@@ -160,6 +169,12 @@
         left: 0;
         top: -40px;
         width: 100%;
+        transition: .2s all linear;
+
+        @media #{$laptop_s} {
+          position: relative;
+          top: 0;
+        }
 
         img {
           width: 100%;
@@ -170,6 +185,17 @@
 
     &--phone {
       align-items: flex-end;
+
+      @media #{$laptop_s} {
+        align-items: center;
+      }
+
+      .phone-block {
+
+        @media #{$laptop_s} {
+          margin-top: 10px;
+        }
+      }
     }
 
     &--search {
@@ -362,6 +388,10 @@
 
     @media #{$notebook} {
       padding: 0 20px;
+    }
+
+    @media #{$laptop_s} {
+      padding: 0 10px;
     }
 
     &:before {

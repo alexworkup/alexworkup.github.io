@@ -97,6 +97,10 @@
         color: #4C6874;
         white-space: nowrap;
 
+        @media #{$laptop} {
+          white-space: normal;
+        }
+
         a {
           text-decoration: none;
         }
