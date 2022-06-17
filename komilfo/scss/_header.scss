@@ -385,6 +385,27 @@
       }
     }
   }
+
+  .main-submenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 0;
+      line-height: 1.5em;
+
+      a {
+        text-decoration: none;
+        color: #6B8C9E;
+
+        &:hover,
+        &.selected {
+          color: $c-festival;
+        }
+      }
+    }
+  }
 }
 
 .link-control {
