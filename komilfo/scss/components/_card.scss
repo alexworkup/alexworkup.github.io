@@ -1,0 +1,169 @@
+.card {
+  max-width: 320px;
+  background: $c-white;
+
+  &__content {
+    padding: 15px;
+  }
+
+  &__art {
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #88A1AC;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 10px;
+
+    span {
+      color: #5c757f;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-family-base;
+    line-height: 20px;
+  }
+
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+
+  &__pics {
+    font-size: 0;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__row {
+    position: relative;
+
+    &--title {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #EEF6FA;
+    }
+
+    &--prop {
+      margin-bottom: 15px;
+    }
+
+    &--buy {
+      min-height: 20px;
+
+      .btn {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 38px;
+        white-space: nowrap;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.card-prop {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .prop-normal {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #88A1AC;
+    font-style: italic;
+
+    span {
+      color: #2a4652;
+    }
+  }
+
+  &__item {
+    margin-bottom: 3px;
+    margin-right: 20px;
+  }
+
+}
+
+.card-control {
+  display: flex;
+  position: relative;
+
+  &--line {
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 25px;
+      width: 1px;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(177, 202, 212, 0.5);
+    }
+  }
+
+  &__col {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    &--favorite {
+      justify-content: flex-end;
+    }
+  }
+
+  .link-control {
+    margin-right: 18px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+
+      path {
+        fill: #8FA7B1;
+      }
+    }
+  }
+}
+
+.price {
+
+  &__basic {
+    font-size: 20px;
+    color: $c-teal-blue;
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+
+  &__discount {
+    font-size: 14px;
+    color: #88A1AC;
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #B1CAD5;
+      top: 50%;
+    }
+  }
+}
