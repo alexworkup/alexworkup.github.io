@@ -29,7 +29,7 @@ body {
   min-height: 100%;
 
   a {
-    transition: .2s color ease-in;
+    //transition: .2s color ease-in;
 
     &:not([class]) {
       color: $c-nepal;
@@ -89,7 +89,7 @@ body {
   font-size: 16px;
   color: $c-teal-blue;
   text-decoration: none;
-  line-height: 50px;
+  line-height: 48px;
   height: 50px;
   display: inline-block;
   padding: 0 30px;

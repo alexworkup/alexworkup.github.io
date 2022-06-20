@@ -126,3 +126,14 @@
     }
   }
 }
+
+.map {
+  height: 400px;
+  width: 100%;
+  filter: grayscale(1);
+  transition: .3s all linear;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}

@@ -443,6 +443,13 @@
   font-size: 0;
   position: relative;
 
+  &.active {
+
+    span {
+      display: block;
+    }
+  }
+
   span {
     position: absolute;
     right: -2px;
@@ -451,5 +458,6 @@
     height: 9px;
     border-radius: 50%;
     background-color: $c-festival;
+    display: none;
   }
 }

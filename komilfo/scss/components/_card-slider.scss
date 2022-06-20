@@ -1,0 +1,29 @@
+.card-slider {
+
+  &__wrapper {
+    padding: 0 6px;
+    overflow: hidden;
+  }
+
+  &__item {
+    padding: 0 6px 35px 6px;
+    box-sizing: border-box;
+  }
+
+  &__inner {
+    overflow: initial!important;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 25%;
+
+    &--prev {
+      left: -70px;
+    }
+
+    &--next {
+      right: -70px;
+    }
+  }
+}
