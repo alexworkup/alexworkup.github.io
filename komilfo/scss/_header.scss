@@ -281,6 +281,20 @@
     }
   }
 
+  &--white {
+
+    .socials__item {
+      background-color: #D0DBE4;
+    }
+
+    svg {
+
+      path {
+        fill: white;
+        fill-opacity: 1;
+      }
+    }
+  }
 
 }
 

@@ -1,0 +1,36 @@
+.breadcrumbs {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    font-size: 14px;
+    padding-right: 20px;
+    position: relative;
+
+    &:last-child {
+
+      &:before {
+        content: none;
+      }
+    }
+
+    span {
+      color: #2a4652;
+    }
+
+    &:before {
+      content: '>';
+      position: absolute;
+      right: 5px;
+      color: #A8B1B9;
+    }
+  }
+
+  &__link {
+    color: #A8B1B9;
+    text-decoration: none;
+  }
+}
