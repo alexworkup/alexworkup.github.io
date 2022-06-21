@@ -38,6 +38,11 @@ $( document ).ready(function() {
         },
     });
 
+    const subSlider = new Swiper('.sub-slider .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+    });
+
     // Слайдеры
 
 

@@ -41,9 +41,11 @@ body {
   margin: 0;
   line-height: 1em;
   font-family: $font-family-add;
+  position: relative;
 }
 
-.h2, h2 {
+.h2, h2,
+.h1, h1 {
   font-size: 80px;
   font-weight: 200;
 }
@@ -123,11 +125,8 @@ body {
     margin-bottom: 30px;
 
     .h1 {
-      font-size: 80px;
-      font-weight: 200;
       text-align: center;
       color: white;
-      position: relative;
       padding-bottom: 25px;
 
       &:before {
