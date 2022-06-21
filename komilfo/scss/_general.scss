@@ -27,15 +27,6 @@ body {
   flex-direction: column;
   background-color: $c-snow;
   min-height: 100%;
-
-  a {
-    //transition: .2s color ease-in;
-
-    &:not([class]) {
-      color: $c-nepal;
-    }
-  }
-
 }
 
 .main {
@@ -155,5 +146,13 @@ body {
   &__content {
     background-color: rgba(251, 251, 251, 0.98);
     padding: 30px;
+
+    a {
+      //transition: .2s color ease-in;
+
+      &:not([class]) {
+        color: $c-nepal;
+      }
+    }
   }
 }

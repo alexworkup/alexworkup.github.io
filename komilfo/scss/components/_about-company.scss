@@ -11,13 +11,23 @@
     align-items: center;
   }
 
+  &__pics {
+    display: block;
+    position: absolute;
+  }
+
   &__col {
-    width: 50%;
+    width: 100%;
     padding: 0 22px;
+    position: relative;
 
     &--text {
       display: flex;
       align-items: center;
+    }
+
+    &--pics {
+      min-height: 620px;
     }
   }
 
@@ -45,6 +55,30 @@
         font-size: 70px;
         text-transform: none;
       }
+    }
+  }
+
+  &--page {
+
+    .about-company__pics {
+      right: 0;
+    }
+
+    .about-company__anons {
+      text-align: left;
+    }
+
+    .about-company__col--text {
+      padding: 0 50px;
+    }
+
+    .about-company__title {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .about-company__text {
+      display: block;
     }
   }
 }
