@@ -90,6 +90,36 @@ body {
   box-sizing: border-box;
 }
 
+.more {
+  position: relative;
+  line-height: 1em;
+  color: $c-rob-roy;
+  font-size: 14px;
+  padding-right: 15px;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-white;
+
+    &:before {
+      right: 0;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 5px;
+    right: 3px;
+    top: 6px;
+    background-image: url("../images/icon/arrow-more.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s right linear;
+  }
+}
+
 .section-page-title {
   text-align: center;
   margin-bottom: 25px;

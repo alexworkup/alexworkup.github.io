@@ -64,13 +64,14 @@
 
     &--prop {
       margin-bottom: 15px;
-      //max-height: 20px;
-      //overflow: hidden;
-      //transition: max-height 2s linear;
+      max-height: 20px;
+      overflow: hidden;
+      transition: max-height 2s linear;
     }
 
     &--buy {
-      min-height: 20px;
+      min-height: 0;
+      visibility: hidden;
 
       .btn {
         position: absolute;
