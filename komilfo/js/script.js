@@ -41,6 +41,10 @@ $( document ).ready(function() {
     const subSlider = new Swiper('.sub-slider .swiper', {
         slidesPerView: 'auto',
         spaceBetween: 10,
+
+        navigation: {
+            nextEl: '.sub-slider .sub-slider__arrow',
+        },
     });
 
     // Слайдеры
