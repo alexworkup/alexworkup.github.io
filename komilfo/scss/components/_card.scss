@@ -2,18 +2,41 @@
   background: $c-white;
   box-shadow: none;
   transition: .2s box-shadow linear;
+  min-height: 450px;
+  z-index: 10;
+
+  &__col {
+
+    &--pics {
+      height: 55%;
+    }
+
+    &--content {
+      height: 45%;
+      background-color: white;
+      position: relative;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
 
   &:hover {
     box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
 
-    //.card__row--prop {
-    //  max-height: 200px;
-    //}
+    .card__row--prop {
+      max-height: 200px;
+    }
 
   }
 
   &__content {
     padding: 10px 15px 15px 15px;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
   }
 
   &__art {
@@ -44,7 +67,7 @@
   &__pics {
     font-size: 0;
     display: block;
-    height: 245px;
+    height: 100%;
 
     img {
       width: 100%;
@@ -63,10 +86,10 @@
     }
 
     &--prop {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       max-height: 20px;
       overflow: hidden;
-      transition: max-height 2s linear;
+      transition: max-height 1s linear;
     }
 
     &--buy {

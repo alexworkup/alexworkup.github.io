@@ -1,0 +1,126 @@
+.pagination {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__btn,
+  &__pages {
+    position: relative;
+  }
+
+  &__btn {
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8FA7B1;
+    border: 1px solid #BECAD1;
+    background: #fbfbfb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: .2s color linear;
+
+    span {
+      margin-right: 15px;
+    }
+
+    svg {
+      transition: .2s all linear;
+
+      path {
+        fill: #8FA7B1;
+      }
+    }
+
+    &:hover {
+      color: #E9C547;
+
+      svg {
+        transform: scale(-1, 1);
+
+        path {
+          fill: #E9C547;
+        }
+      }
+    }
+  }
+
+  &__pages {
+    margin-left: auto;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #DCE9EE;
+  }
+
+  .num-pages {
+    background-color: #fbfbfb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__arrow {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: #9AB2BC;
+          }
+        }
+      }
+
+      svg {
+
+        path {
+          fill: #DCE9EE;
+          transition: .2s all linear;
+        }
+      }
+
+    }
+
+    &__wrapper {
+      display: flex;
+      padding: 0 5px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px solid rgba(143, 167, 177, 0);
+      color: rgba(143, 167, 177, 1);
+      text-decoration: none;
+      margin: 0 2px;
+      transition: .2s all linear;
+
+      &:hover,
+      &.selected {
+        color: #E9C547;
+        border: 1px solid rgba(143, 167, 177, 1);
+      }
+
+      &--more {
+
+        &:hover {
+          border: 1px solid rgba(143, 167, 177, 0);
+        }
+      }
+    }
+  }
+}

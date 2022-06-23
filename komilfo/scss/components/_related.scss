@@ -1,0 +1,37 @@
+.related {
+  position: relative;
+  margin: 0 -12px;
+
+  &__title {
+    color: #2A4652;
+    font-size: 48px;
+    line-height: 1em;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 1px;
+      background-color: #D4AE4A;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .card-slider .slider-arrow {
+    top: calc(50% - 60px);
+  }
+
+  .slider-arrow--prev {
+    left: -110px;
+  }
+
+  .slider-arrow--next {
+    right: -110px;
+  }
+}

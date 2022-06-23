@@ -5,12 +5,17 @@
     margin-bottom: 15px;
   }
 
-  &__desc {
+  &__anons {
     text-align: center;
     font-size: 16px;
     line-height: 1.25em;
     color: #6D8793;
     margin-bottom: 30px;
+  }
+
+  &__desc {
+    color: #2A4652;
+    line-height: 1.3em;
   }
 
   &__subsection {
@@ -35,9 +40,19 @@
   &__body {
     display: flex;
     padding-top: 22px;
+    margin-bottom: 70px;
+  }
 
-    .filter {
-      min-width: 300px;
+  &__filter {
+    min-width: 300px;
+    padding-right: 22px;
+    box-sizing: border-box;
+  }
+
+  &__elements {
+
+    .catalog-list {
+      margin-bottom: 30px;
     }
   }
 }
@@ -120,6 +135,56 @@
 
     span {
       color: #5e7787;
+    }
+  }
+}
+
+.category {
+  margin: 0;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid #D0DCE1;
+  list-style: none;
+  font-family: $font-family-add;
+  font-size: 24px;
+  line-height: 1.25em;
+  font-weight: 500;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &:hover,
+    &.selected {
+
+      &:before {
+        background-color: rgba(212, 174, 74, 1);
+      }
+
+      a:not([class]) {
+        color: rgba(212, 174, 74, 1);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      background: #88A1AC;
+      border-radius: 50%;
+      transition: .2s background linear;
+    }
+
+    a {
+      text-decoration: none;
+      transition: .2s color linear;
+
+      &:not([class]) {
+        color: #2A4652;
+      }
+
     }
   }
 }
