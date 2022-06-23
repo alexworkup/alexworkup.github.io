@@ -1,14 +1,16 @@
 .card {
   background: $c-white;
-  box-shadow: none;
-  transition: .2s box-shadow linear;
-  min-height: 450px;
+  transform: translateY(0);
+  transition: .2s all linear;
+  min-height: 420px;
   z-index: 10;
 
   &__col {
+    transition: .3s all linear;
 
     &--pics {
       height: 55%;
+      box-shadow: none;
     }
 
     &--content {
@@ -18,25 +20,48 @@
     }
   }
 
+  &__buy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__wrapper {
     height: 100%;
   }
 
   &:hover {
-    box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
+    transform: translateY(-10px);
+    z-index: 11;
+
+    .card__col--pics {
+      height: 45%;
+      box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
+    }
+
+    .card__content {
+      box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
+    }
+
+    .card__col--content {
+      height: 55%;
+    }
 
     .card__row--prop {
       max-height: 200px;
+      //transition: .5s all linear;
     }
 
   }
 
   &__content {
-    padding: 10px 15px 15px 15px;
+    padding: 10px 15px 60px 15px;
     min-height: 100%;
     box-sizing: border-box;
     position: absolute;
     background-color: white;
+    box-shadow: none;
+    transition: .2s box-shadow linear;
   }
 
   &__art {
@@ -79,6 +104,16 @@
   &__row {
     position: relative;
 
+    &--control {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      padding: 0 15px;
+      box-sizing: border-box;
+      bottom: 20px;
+      background-color: white;
+    }
+
     &--title {
       padding-bottom: 10px;
       margin-bottom: 10px;
@@ -89,7 +124,7 @@
       margin-bottom: 10px;
       max-height: 20px;
       overflow: hidden;
-      transition: max-height 1s linear;
+      transition: max-height .2s linear;
     }
 
     &--buy {
