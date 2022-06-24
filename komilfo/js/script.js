@@ -134,29 +134,15 @@ $( document ).ready(function() {
                     $(this).removeClass('on');
                     selectList.slideUp(duration);
                 }
+
             });
 
-            $(document).click(function (e) {
-
-                if ( !$(selectHead).hasClass('on') ) {
-                    $(selectHead).addClass('on');
-                    selectList.slideDown(duration);
-
-                    selectItem.on('click', function() {
-                        let chooseItem = $(this).data('value');
-
-                        $('select').val(chooseItem).attr('selected', 'selected');
-                        selectHead.text( $(this).find('span').text() );
-
-                        selectList.slideUp(duration);
-                        selectHead.removeClass('on');
-                    });
-
-                } else {
-                    $(selectHead).removeClass('on');
+            $(document).click('on', function(e) {
+                var box = $('.prop-select');
+                if (!box.is(e.target) && box.has(e.target).length === 0) {
                     selectList.slideUp(duration);
+                    $(selectHead).removeClass('on');
                 }
-
             });
 
         });

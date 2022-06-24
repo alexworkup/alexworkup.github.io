@@ -50,6 +50,7 @@
   }
 
   &__elements {
+    flex-grow: 1;
 
     .catalog-list {
       margin-bottom: 30px;

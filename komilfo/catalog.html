@@ -389,7 +389,7 @@
                                             </div>
                                         </div>
                                     </article>
-                                    <article class="catalog-list__item card active">
+                                    <article class="catalog-list__item card">
                                         <div class="card__wrapper">
                                             <div class="card__col card__col--pics">
                                                 <a href="#" class="card__pics">
@@ -412,44 +412,73 @@
                                                                     Размер: <span>150х220</span>
                                                                 </div>
                                                             </div>
-                                                            <div class="card-prop__list hide">
+                                                            <div class="card-prop__list card-prop__list--change hide">
                                                                 <div class="card-prop__item prop-change">
                                                                     <div class="prop-change__title">Наволочка</div>
                                                                     <div class="prop-change__row">
-                                                                        <div class="prop-change__col">
+                                                                        <div class="prop-change__col prop-change__col--select">
                                                                             <select name="select" class="prop-select">
                                                                                 <option value="value1" selected>52х72</option>
                                                                                 <option value="value2">64х72</option>
                                                                                 <option value="value3">75х72</option>
                                                                             </select>
                                                                         </div>
-                                                                        <div class="prop-change__col">
+                                                                        <div class="prop-change__col prop-change__col--price">
                                                                             <output class="prop-price">
                                                                                 327.00 ₽
                                                                             </output>
                                                                         </div>
-                                                                        <div class="prop-change__col">
-                                                                            <input class="prop-qt" type="number" name="quantity">
+                                                                        <div class="prop-change__col prop-change__col--qt">
+                                                                            <div class="prop-qt">
+                                                                                <input type="text" value="1" maxlength="2" name="quantity">
+                                                                                <span>шт.</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="card-prop__item prop-change">
-                                                                    <div class="prop-change__title">Наволочка</div>
+                                                                    <div class="prop-change__title">Пододеяльник</div>
                                                                     <div class="prop-change__row">
-                                                                        <div class="prop-change__col">
+                                                                        <div class="prop-change__col prop-change__col--select">
                                                                             <select name="select" class="prop-select">
-                                                                                <option value="value1">52х72</option>
-                                                                                <option value="value2">64х72</option>
-                                                                                <option value="value3" selected>75х72</option>
+                                                                                <option value="value1" selected>150х220</option>
+                                                                                <option value="value2">150х220</option>
+                                                                                <option value="value3">150х220</option>
                                                                             </select>
                                                                         </div>
-                                                                        <div class="prop-change__col">
+                                                                        <div class="prop-change__col prop-change__col--price">
                                                                             <output class="prop-price">
-                                                                                327.00 ₽
+                                                                                2327.00 ₽
                                                                             </output>
                                                                         </div>
-                                                                        <div class="prop-change__col">
-                                                                            <input class="prop-qt" type="number" name="quantity">
+                                                                        <div class="prop-change__col prop-change__col--qt">
+                                                                            <div class="prop-qt">
+                                                                                <input type="text" value="99" maxlength="2" name="quantity">
+                                                                                <span>шт.</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-prop__item prop-change">
+                                                                    <div class="prop-change__title">Простыня</div>
+                                                                    <div class="prop-change__row">
+                                                                        <div class="prop-change__col prop-change__col--select">
+                                                                            <select name="select" class="prop-select">
+                                                                                <option value="value1" selected>150х245</option>
+                                                                                <option value="value2">150х245</option>
+                                                                                <option value="value3">150х245</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="prop-change__col prop-change__col--price">
+                                                                            <output class="prop-price">
+                                                                                1327.00 ₽
+                                                                            </output>
+                                                                        </div>
+                                                                        <div class="prop-change__col prop-change__col--qt">
+                                                                            <div class="prop-qt">
+                                                                                <input type="text" value="1" maxlength="2" name="quantity">
+                                                                                <span>шт.</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -460,6 +489,7 @@
                                                         <div class="card-control">
                                                             <div class="card-control__col card-control__col--price">
                                                                 <div class="price">
+                                                                    <span>Итого:</span>
                                                                     <div class="price__basic">19812.00 ₽</div>
                                                                     <s class="price__discount">25400.00</s>
                                                                 </div>

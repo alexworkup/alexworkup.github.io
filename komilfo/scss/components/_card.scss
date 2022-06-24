@@ -28,7 +28,7 @@
     background: rgba(255, 255, 255, 0.9);
     opacity: 0;
     transition: .2s opacity linear;
-    padding: 0 38px;
+    padding: 0 35px;
   }
 
   &__wrapper {
@@ -62,7 +62,7 @@
     }
 
     .card__row--control {
-      bottom: 35px;
+      bottom: 20px;
     }
 
     .card-prop__list.hide {
@@ -167,6 +167,12 @@
     display: flex;
     flex-wrap: wrap;
 
+    &--change {
+      padding-bottom: 10px;
+      padding-top: 5px;
+      border-bottom: 1px solid #EEF6FA;
+    }
+
     &.hide {
       overflow: hidden;
       opacity: 0;
@@ -177,7 +183,7 @@
 
   .prop-normal {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5em;
     color: #88A1AC;
     font-style: italic;
@@ -192,16 +198,38 @@
   }
 
   .prop-change {
+    margin: 5px 0;
 
     &__title {
       font-style: italic;
       font-weight: 400;
       font-size: 13px;
       line-height: 1em;
+      margin-bottom: 5px;
     }
 
     &__row {
       display: flex;
+      align-items: center;
+    }
+
+    &__col {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--price {
+        min-width: 80px;
+        text-align: center;
+      }
+    }
+
+    .prop-price {
+      font-weight: 400;
+      font-size: 16px;
+      color: #2A4652;
     }
 
     .prop-select,
@@ -210,7 +238,31 @@
     }
 
     .prop-qt {
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #E7EEF3;
+      border-radius: 10px;
+      max-width: 50px;
+      box-sizing: border-box;
+      position: relative;
+      font-size: 14px;
 
+      input {
+        padding-left: 6px;
+        font-weight: 500;
+        max-width: 100%;
+        box-sizing: border-box;
+        outline: none;
+        border: 0;
+        background: transparent;
+      }
+
+      span {
+        color: #88A1AC;
+        position: absolute;
+        right: 5px;
+        font-style: italic;
+      }
     }
 
   }
@@ -227,50 +279,45 @@
     padding-right: 25px;
     cursor: pointer;
     user-select: none;
+    font-size: 14px;
+    color: #88A1AC;
 
     &:after {
       content: '';
       display: block;
-      width: 25px;
-      height: 25px;
+      width: 7px;
+      height: 5px;
       position: absolute;
-      right: 9px;
-      top: 9px;
-      background: url('path-to-image') no-repeat right center / cover;
-      opacity: 0.6;
+      right: 12px;
+      top: 50%;
+      background-image: url('../images/icon/arrow-select.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 1;
+      transform: translateY(-50%);
+      transition: all .2s ease-in-out;
+    }
 
-      -webkit-transition: all .27s ease-in-out;
-      -o-transition: all .27s ease-in-out;
-      transition: all .27s ease-in-out;
+    &.on {
+      display: block;
 
-      -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+      &:after {
+        transform: translateY(-50%) scale(1, -1);
+      }
     }
 
     &__list {
       position: absolute;
-      top: 31px;
+      top: 33px;
       left: 0;
-      border: 1px solid #E7EEF3;
       border-radius: 10px;
       cursor: pointer;
       width: 100%;
       z-index: 2;
       background: #fff;
       user-select: none;
-
-      &.on {
-        display: block;
-
-        &:after {
-          -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg);
-        }
-      }
+      box-shadow: 0 4px 10px rgb(92 117 128 / 20%);
     }
 
     &__item {
@@ -278,6 +325,7 @@
       span {
         display: block;
         padding: 5px 15px;
+        font-size: 14px;
 
         &:hover {
           color: #12b223;
@@ -339,11 +387,18 @@
 
 .price {
 
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    font-style: italic;
+    color: #7C959F;
+  }
+
   &__basic {
     font-size: 20px;
     color: $c-teal-blue;
     font-weight: 500;
-    line-height: 1.2em;
+    line-height: 1em;
   }
 
   &__discount {
