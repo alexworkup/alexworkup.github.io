@@ -1,13 +1,17 @@
 .card-slider {
 
   &__wrapper {
-    padding: 0 6px;
+    padding: 10px 6px 40px 6px;
     overflow: hidden;
   }
 
   &__item {
     padding: 0 6px 35px 6px;
     box-sizing: border-box;
+
+    .card {
+      height: 420px;
+    }
   }
 
   &__inner {
