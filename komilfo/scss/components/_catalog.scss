@@ -82,10 +82,14 @@
         left: inherit;
         right: 15px;
         transform: none;
+        line-height: 40px;
+        height: 42px;
+        bottom: -15px;
       }
 
       &:hover {
         transform: translateY(0);
+        box-shadow: 0 2px 25px rgba(132, 152, 162, 0.19);
 
         .card__col--pics,
         .card__content {
@@ -126,6 +130,11 @@
           box-sizing: border-box;
           width: 100%;
           grid-column: 1/3;
+
+          .card-control {
+            margin-left: auto;
+            display: block;
+          }
         }
 
         &--prop {
@@ -138,7 +147,7 @@
           position: relative;
           bottom: 0;
           padding: 0;
-          width: 150px;
+          width: 140px;
           margin-left: auto;
         }
       }
@@ -153,7 +162,7 @@
         position: initial;
         padding: 0;
         display: grid;
-        grid-template-columns: calc(100% - 150px) 1fr;
+        grid-template-columns: calc(100% - 140px) 1fr;
       }
 
       .card-control {
@@ -178,9 +187,57 @@
           &.hide {
             opacity: 1;
             height: auto;
+            padding-bottom: 0;
+            border: 0;
+          }
+
+          &:not(.hide) {
+            display: none;
           }
         }
       }
+
+      .prop-change {
+        position: relative;
+        border-right: 1px solid #ECF3F5;
+        margin-right: 10px;
+
+        &:last-child {
+          border: none;
+        }
+
+        &__col {
+          margin-right: 10px;
+
+          .prop-price {
+            font-size: 15px;
+          }
+
+          &--price {
+            min-width: auto;
+          }
+        }
+      }
+
+      .prop-normal {
+        font-size: 14px;
+      }
+
+      .price {
+
+        &__basic {
+          font-size: 23px;
+        }
+      }
+
+      .new-select {
+        min-width: auto;
+      }
+    }
+
+    .teaser {
+      min-height: auto;
+      margin-bottom: 30px;
     }
   }
 }
