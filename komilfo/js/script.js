@@ -3,7 +3,6 @@ $( document ).ready(function() {
 
 
     // Слайдеры
-
     const mainSlider = new Swiper('.main-slider.swiper', {
         loop: true,
         effect: "fade",
@@ -46,7 +45,6 @@ $( document ).ready(function() {
             nextEl: '.sub-slider .sub-slider__arrow',
         },
     });
-
     // Слайдеры
 
 
@@ -69,11 +67,10 @@ $( document ).ready(function() {
 
         }
     });
+    // Яндекс карта
 
 
     // Стилизация select
-
-
     if($('.prop-select').length) {
 
         $('.prop-select').each(function() {
@@ -93,8 +90,6 @@ $( document ).ready(function() {
             const selectHead = _this.next('.new-select');
 
             selectHead.text( selectedOption[0].innerHTML );
-
-            // console.log(selectedOption[0].innerHTML);
 
             $('<div>', {
                 class: 'new-select__list'
@@ -146,8 +141,29 @@ $( document ).ready(function() {
             });
 
         });
-
     }
+    // Стилизация select
+
+
+    // Переключение вида каталога
+    $(document).on('click', '.view-change__item.in-line', function () {
+        $('.view-change__item').removeClass('active');
+        $(this).addClass('active');
+        $('.catalog-list').removeClass('view-tile');
+        $('.catalog-list').addClass('view-line');
+        return false;
+    });
+
+    $(document).on('click', '.view-change__item.in-tiles', function () {
+        $('.view-change__item').removeClass('active');
+        $(this).addClass('active');
+        $('.catalog-list').removeClass('view-line');
+        $('.catalog-list').addClass('view-tile');
+        return false;
+    });
+    // Переключение вида каталога
+
+
 
 
 });
