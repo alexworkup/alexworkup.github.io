@@ -79,6 +79,8 @@
   }
 
   .card-desc {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DAE7EE;
 
     &__title {
       font-size: 28px;
@@ -96,6 +98,109 @@
       font-size: 15px;
       line-height: 30px;
       text-decoration: none;
+    }
+
+  }
+
+  .product-param {
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #DAE7EE;
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc(100% / 3);
+      padding-right: 30px;
+      box-sizing: border-box;
+      position: relative;
+
+      &:last-child {
+        padding-right: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: calc(100% + 15px);
+        background-color: #DAE7EE;
+        top: -15px;
+        right: 15px;
+      }
+
+    }
+
+    .prop-change {
+
+      &__row {
+        align-items: flex-start;
+      }
+
+      &__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 24px;
+        font-family: $font-family-add;
+        font-style: normal;
+        color: #385764;
+        margin-bottom: 5px;
+        margin-left: 5px;
+      }
+
+      &__name {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        font-style: italic;
+        color: #88A1AC;
+        margin-left: 5px;
+        margin-bottom: 3px;
+      }
+
+      &__col {
+        margin-right: 10px;
+
+        &--qt {
+
+          .prop-qt {
+            max-width: 33px;
+
+            input {
+              text-align: center;
+              padding-left: 0;
+              font-size: 14px;
+            }
+          }
+
+          span {
+            display: none;
+          }
+        }
+
+        &--price {
+
+          .prop-change__name {
+            margin-left: 0;
+            margin-bottom: 10px;
+          }
+
+          .prop-price {
+            font-size: 15px;
+          }
+        }
+      }
+
+      .new-select {
+        min-width: 80px;
+      }
     }
   }
 }
