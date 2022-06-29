@@ -3,6 +3,7 @@ $( document ).ready(function() {
 
 
     // Слайдеры
+
     const mainSlider = new Swiper('.main-slider.swiper', {
         loop: true,
         effect: "fade",
@@ -45,10 +46,12 @@ $( document ).ready(function() {
             nextEl: '.sub-slider .sub-slider__arrow',
         },
     });
+
     // Слайдеры
 
 
     // Яндекс карта
+
     ymaps.ready(function () {
         var map = new ymaps.Map("map", {
             center: [55.648484, 37.501950],
@@ -67,10 +70,12 @@ $( document ).ready(function() {
 
         }
     });
+
     // Яндекс карта
 
 
     // Стилизация select
+
     if($('.prop-select').length) {
 
         $('.prop-select').each(function() {
@@ -142,10 +147,12 @@ $( document ).ready(function() {
 
         });
     }
+
     // Стилизация select
 
 
     // Переключение вида каталога
+
     $(document).on('click', '.view-change__item.in-line', function () {
         $('.view-change__item').removeClass('active');
         $(this).addClass('active');
@@ -161,9 +168,18 @@ $( document ).ready(function() {
         $('.catalog-list').addClass('view-tile');
         return false;
     });
+
     // Переключение вида каталога
 
 
+    // Переключение вида каталога
 
+    $('.gallery-small__item').on('click', function(e){
+        let id = $(this).attr('data-id');
+        $('html,body').stop().animate({ scrollTop: $('#'+id+'').offset().top }, 500);
+        e.preventDefault();
+    });
+
+    // Переключение вида каталога
 
 });

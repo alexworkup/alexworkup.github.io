@@ -71,7 +71,8 @@
     grid-row-end: 3;
   }
 
-  &.view-line {
+  &.view-line,
+  &.basket-line {
     display: block;
 
     .card {

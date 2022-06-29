@@ -177,6 +177,11 @@ body {
     padding: 20px;
     color: #597987;
 
+    &--basket {
+      background: transparent;
+      padding: 0;
+    }
+
     a {
       //transition: .2s color ease-in;
 
