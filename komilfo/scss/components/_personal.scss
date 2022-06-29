@@ -1,0 +1,129 @@
+.personal {
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+
+    &--content {
+      margin-right: 17px;
+      padding: 20px 0 20px 20px;
+      background: rgba(251, 251, 251, 0.95)
+    }
+
+    &--sidebar {
+      width: 305px;
+      flex-shrink: 0;
+    }
+  }
+
+  .price {
+    font-weight: 400;
+    position: relative;
+
+    span {
+      font-size: 18px;
+      color: #8FA7B1;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    &__basic {
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    &__discount {
+      font-size: 18px;
+      color: #88A1AC;
+    }
+  }
+
+  .remove-item {
+    padding: 0;
+    margin: 0 5px 0 0;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .check {
+    padding: 20px 20px 95px 20px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 2px 25px rgba(132, 152, 162, 0.19);
+
+    &:before {
+      content: '';
+      width: calc(100% - 40px);
+      height: 40px;
+      background-image: url("../images/barcode.svg");
+      position: absolute;
+      left: 20px;
+      bottom: 35px;
+    }
+
+    &__wrapper {
+      position: relative;
+    }
+
+    &__amount {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #2A4652;
+      padding: 17px 0;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 15px;
+
+      &:before,
+      &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &:before {
+        background-image: url("../images/amount-before.svg");
+        height: 7px;
+        top: 2px;
+      }
+
+      &:after {
+        bottom: 0;
+        height: 5px;
+        background-image: url("../images/amount-after.svg");
+      }
+
+    }
+
+    &__cost {
+      margin-bottom: 8px;
+    }
+
+    &__delivery {
+      margin-bottom: 25px;
+
+      .delivery {
+
+        span {
+          border-bottom: none;
+        }
+      }
+    }
+
+    &__checkout {
+
+      .btn {
+        width: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}
