@@ -71,6 +71,16 @@
     grid-row-end: 3;
   }
 
+  &.basket-line {
+
+    .card {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &.view-line,
   &.basket-line {
     display: block;
