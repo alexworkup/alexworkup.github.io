@@ -89,6 +89,13 @@ body {
   border: 1px solid $c-rob-roy;
   box-sizing: border-box;
   cursor: pointer;
+  text-align: center;
+  position: relative;
+
+  &--gray {
+    border: 1px solid #8FA7B1;
+    color: #839CA7;
+  }
 }
 
 .more {
