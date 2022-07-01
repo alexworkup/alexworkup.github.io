@@ -155,7 +155,7 @@
                     <img src="images/page-bg-cart.jpg" alt="Корзина">
                 </div>
                 <div class="page__header">
-                    <h1 class="h1">Оформление заказа</h1>
+                    <h1 class="h1">Личный кабинет</h1>
                 </div>
                 <div class="page__content page__content--basket container">
                     <div class="personal personal--wide">
@@ -163,85 +163,19 @@
                             <div class="personal__col personal__col--content">
                                 <form class="ordering" action="#" name="ORDER_FORM">
                                     <div class="ordering__row ordering-step ordering-step--completed">
-                                        <div class="ordering-step__num"><span>01</span></div>
-                                        <div class="ordering-step__wrapper">
-                                            <div class="ordering-step__title">Адрес доставки</div>
-                                            <div class="ordering-step__content step-content">
-                                                <div class="step-content__item">
-                                                    <div class="ordering-address">
-                                                        <div class="ordering-address__tab">
-                                                            <a href="#" class="btn active-type">Юридическое лицо</a>
-                                                            <a href="#" class="btn btn--gray">Физическое лицо</a>
-                                                        </div>
-                                                        <div class="ordering-address__search">
-                                                            <div class="search-line">
-                                                                <button class="search-line__button">
-                                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path d="M19.7722 18.6726L14.8912 13.7917C16.1045 12.3328 16.8354 10.4593 16.8354 8.41797C16.8354 3.77628 13.0592 0 8.41776 0C3.77618 0 0 3.77628 0 8.41797C0 13.0593 3.77618 16.8353 8.41776 16.8353C10.459 16.8353 12.3326 16.1045 13.7915 14.8912L18.6726 19.7722C18.8244 19.9241 19.0235 20 19.2224 20C19.4214 20 19.6204 19.9241 19.7723 19.7722C20.076 19.4685 20.076 18.9763 19.7722 18.6726ZM1.55518 8.41797C1.55518 4.63381 4.6337 1.55518 8.41776 1.55518C12.2017 1.55518 15.2801 4.63381 15.2801 8.41797C15.2801 12.2018 12.2017 15.2801 8.41776 15.2801C4.6337 15.2801 1.55518 12.2018 1.55518 8.41797Z"></path>
-                                                                    </svg>
-                                                                    <span>Поиск</span>
-                                                                </button>
-                                                                <input class="search-line__field" type="text" value="г. Челябинск" name="q" autocomplete="off">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="step-content__control">
-                                                        <a href="#" class="btn next btn--gray"><span>Далее</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ordering-step__control">
-                                            <button class="change-step">Изменить</button>
-                                        </div>
-                                    </div>
-                                    <div class="ordering__row ordering-step">
-                                        <div class="ordering-step__num"><span>02</span></div>
-                                        <div class="ordering-step__wrapper">
-                                            <div class="ordering-step__title">Доставка</div>
-                                            <div class="ordering-step__content step-content">
-                                                <div class="step-content__item">
-                                                    <label class="checkbox">
-                                                        <input checked type="checkbox">
-                                                        <span>СДЭК</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ordering-step__control">
-                                            <button class="change-step">Изменить</button>
-                                        </div>
-                                    </div>
-                                    <div class="ordering__row ordering-step">
-                                        <div class="ordering-step__num"><span>03</span></div>
-                                        <div class="ordering-step__wrapper">
-                                            <div class="ordering-step__title">Оплата</div>
-                                            <div class="ordering-step__content step-content">
-                                                <div class="step-content__item">
-                                                    <label class="checkbox">
-                                                        <input checked type="checkbox">
-                                                        <span>Счет </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ordering-step__control">
-                                            <button class="change-step">Изменить</button>
-                                        </div>
-                                    </div>
-                                    <div class="ordering__row ordering-step ordering-step--completed">
                                         <div class="ordering-step__num"><span>04</span></div>
                                         <div class="ordering-step__wrapper">
-                                            <div class="ordering-step__title">Покупатель</div>
+                                            <div class="ordering-step__title">Личные данные</div>
                                             <div class="ordering-step__content step-content">
                                                 <div class="step-content__item">
-                                                    <div class="personal-form">
+                                                    <div class="personal-form personal-form--lk">
                                                         <div class="personal-form__row">
                                                             <div class="personal-form__col">
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span><sup>*</sup>ФИО</span>
-                                                                        <input value="Смирнов Александр Владимирович" name="name" type="text">
+                                                                        <input readonly value="Смирнов Александр Владимирович" name="name" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -249,7 +183,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>E-mail</span>
-                                                                        <input value="Liniya@mail.ru" name="email" type="text">
+                                                                        <input readonly value="Liniya@mail.ru" name="email" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -259,7 +194,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span><sup>*</sup>Телефон</span>
-                                                                        <input value="8(905)6566-98-52" name="phone" type="text">
+                                                                        <input readonly value="8(905)6566-98-52" name="phone" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -267,7 +203,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>БИК</span>
-                                                                        <input value="4564 6546 4655" name="bik" type="text">
+                                                                        <input readonly value="4564 6546 4655" name="bik" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -277,7 +214,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span><sup>*</sup>Организация / ИП</span>
-                                                                        <input value='ООО "Линии"' name="ip" type="text">
+                                                                        <input readonly value='ООО "Линии"' name="ip" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -285,7 +223,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>ОГРН / ОГРНИП</span>
-                                                                        <input value="4866 4552 1313" name="og" type="text">
+                                                                        <input readonly value="4866 4552 1313" name="og" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -295,7 +234,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>Расчетный счет</span>
-                                                                        <input value='4865 6456 4564 56' name="s" type="text">
+                                                                        <input readonly value='4865 6456 4564 56' name="s" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -303,7 +243,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>Корреспондентский счет</span>
-                                                                        <input value="4563 1234 556" name="s" type="text">
+                                                                        <input readonly value="4563 1234 556" name="s" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -313,7 +254,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span>Юридический адрес</span>
-                                                                        <input value='ул. Ленина дом. 158' name="s" type="text">
+                                                                        <input readonly value='ул. Ленина дом. 158' name="s" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -321,7 +263,8 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span><sup>*</sup> ИНН</span>
-                                                                        <input value="4564 6546 4132 13132" name="s" type="text">
+                                                                        <input readonly value="4564 6546 4132 13132" name="s" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -331,24 +274,12 @@
                                                                 <div class="personal-form__item">
                                                                     <label>
                                                                         <span><sup>*</sup>Адрес доставки</span>
-                                                                        <input value='ул. Ленина дом. 282' name="s" type="text">
+                                                                        <input readonly value='ул. Ленина дом. 282' name="s" type="text">
+                                                                        <button class="change-step">Изменить</button>
                                                                     </label>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="personal-form__row">
-                                                            <div class="personal-form__col personal-form__col--wide">
-                                                                <div class="personal-form__item">
-                                                                    <label>
-                                                                        <span>Комментарии к заказу:</span>
-                                                                        <textarea name="" id="" cols="30" rows="3"></textarea>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="step-content__control">
-                                                        <a href="#" class="btn prev btn--gray"><span>Назад</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -357,9 +288,9 @@
                                             <button class="change-step">Изменить</button>
                                         </div>
                                     </div>
-                                    <div class="ordering__row ordering-send">
+                                    <div class="ordering__row ordering-send ordering-send--lk">
                                         <div class="ordering-send__col">
-                                            <a href="#" class="btn">Оформить заказ</a>
+                                            <a href="#" class="btn btn--gray btn-save">Сохранить</a>
                                         </div>
                                         <div class="ordering-send__col">
                                             <label>
@@ -371,6 +302,22 @@
                                 </form>
                             </div>
                             <div class="personal__col personal__col--sidebar">
+                                <div class="personal-card">
+                                    <div class="personal-card__header">
+                                        <div class="personal-card__name">
+                                            Смирнов Александр Владимирович
+                                        </div>
+                                    </div>
+                                    <div class="personal-card__content">
+                                        <ul>
+                                            <li><b>Телефон</b><br> 8(905)6566-98-52</li>
+                                            <li><b>Телефон</b><br> 8(905)6566-98-52</li>
+                                        </ul>
+                                    </div>
+                                    <div class="personal-card__control">
+
+                                    </div>
+                                </div>
                                 <div class="check">
                                     <div class="check__wrapper">
                                         <div class="check__amount">3 товара на сумму</div>
