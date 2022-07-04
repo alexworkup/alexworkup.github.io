@@ -27,6 +27,10 @@ body {
   flex-direction: column;
   background-color: $c-snow;
   min-height: 100%;
+
+  &--product {
+    overflow: initial;
+  }
 }
 
 .main {
@@ -126,6 +130,21 @@ body {
     background-repeat: no-repeat;
     transition: .3s right linear;
   }
+}
+
+.close {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #B5CFDB;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .section-page-title {

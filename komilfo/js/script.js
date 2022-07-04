@@ -182,4 +182,11 @@ $( document ).ready(function() {
 
     // Переключение вида каталога
 
+    // Настройка popup
+
+    Fancybox.bind("[data-fancybox]", {
+        infinite: false,
+    });
+
+    // Настройка popup
 });

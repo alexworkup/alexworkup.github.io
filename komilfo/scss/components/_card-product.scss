@@ -123,6 +123,14 @@
     padding-bottom: 16px;
     border-bottom: 1px solid #DAE7EE;
 
+    &--add {
+
+      .prop-normal {
+        color: #2A4652;
+        font-style: normal;
+      }
+    }
+
     &__title {
       font-size: 28px;
       line-height: 1em;
@@ -294,6 +302,90 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  .card-detail {
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    right: -50vw;
+    background-color: white;
+    z-index: 100;
+    padding: 50px 40px 50px 60px;
+    box-sizing: border-box;
+    transition: .3s all linear;
+
+    &__close {
+      position: absolute;
+      right: 50px;
+      z-index: 10;
+    }
+
+    .card-desc {
+      border-bottom: 0;
+    }
+
+    .detail-gallery {
+
+      &__item {
+        font-size: 0;
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 64px;
+      margin-bottom: 25px;
+      font-weight: 300;
+    }
+
+    &__col {
+
+      &--text {
+        flex-grow: 1;
+        padding-right: 20px;
+      }
+
+      &--gallery {
+        width: 275px;
+        flex-shrink: 0;
+      }
+    }
+
+    &__row {
+      display: flex;
+    }
+
+    .equipment {
+      color: #2A4652;
+
+      &__item {
+        margin-bottom: 20px;
+      }
+
+      &__title {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1em;
+        font-family: $font-family-add;
+        margin-bottom: 5px;
+      }
+
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-bottom: 5px;
+        }
       }
     }
   }

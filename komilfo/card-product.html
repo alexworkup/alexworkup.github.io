@@ -8,9 +8,10 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper--product">
         <header class="header">
             <div class="header__row header__row--top">
                 <div class="extra-menu container">
@@ -211,7 +212,7 @@
                                                     <img src="images/rec-02.svg" alt="Ручная стирка" title="Ручная стирка">
                                                 </li>
                                             </ul>
-                                            <a href="#" class="card-desc__more">Подробнее...</a>
+                                            <a data-fancybox data-src="#card-detail" href="#" class="card-desc__more">Подробнее...</a>
                                         </div>
                                         <div class="product-param">
                                             <div class="product-param__list">
@@ -335,6 +336,89 @@
                                     <div class="card-product__control">
                                         <a href="#" class="btn to-cart">В корзину</a>
                                         <a href="#" class="btn btn--gray in-catalog">Перейти в каталог</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;" class="card-product__detail card-detail popup-custom">
+                            <button class="card-detail__close close">
+                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.73078 0L11 1.26923L1.26934 11L0.000118827 9.73077L9.73078 0Z" fill="#527686"/>
+                                    <path d="M1.26922 0L0 1.26923L9.73066 11L10.9999 9.73077L1.26922 0Z" fill="#527686"/>
+                                </svg>
+                            </button>
+                            <div class="card-detail__wrapper">
+                                <h2 class="card-detail__title h2">Описание товара</h2>
+                                <div class="card-detail__row">
+                                    <div class="card-detail__col card-detail__col--text">
+                                        <div class="card-desc">
+                                            <ul class="card-desc__list param-list">
+                                                <li class="prop-normal">Цвет: <a href="#">Белый</a></li>
+                                                <li class="prop-normal">Плотность: <span>125 г/м2</span></li>
+                                                <li class="prop-normal">Состав: <span>50% хлопок /50% полиэстер</span></li>
+                                                <li class="prop-normal">Минимальная партия: <span>10 комплектов</span></li>
+                                                <li class="prop-normal">Срок пошива: <span>2 недели</span></li>
+                                                <li class="prop-normal prop-normal--icon">
+                                                    Рекомендации по уходу:
+                                                    <img src="images/rec-01.svg" alt="Стирка при 40 градусов" title="Стирка при 40 градусов">
+                                                    <img src="images/rec-02.svg" alt="Ручная стирка" title="Ручная стирка">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-desc card-desc--add">
+                                            <ul class="card-desc__list param-list">
+                                                <li class="prop-normal">Состав: 100% хлопок.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-detail__equipment equipment">
+                                            <div class="equipment__item">
+                                                <div class="equipment__title">Комплектация и размеры 1,5-спального комплекта:</div>
+                                                <ul class="equipment__list">
+                                                    <li>пододеяльник 215х145 см - 1 шт.,</li>
+                                                    <li>простыня 220х150 см - 1 шт.,</li>
+                                                    <li>наволочки: 70х70 см - 2 шт.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="equipment__item">
+                                                <div class="equipment__title">Комплектация и размеры 2-спального комплекта:</div>
+                                                <ul class="equipment__list">
+                                                    <li>пододеяльник 215х175 см - 1 шт.,</li>
+                                                    <li>простыня 220х200 см - 1 шт.,</li>
+                                                    <li>наволочки: 70х70 см - 2 шт.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="equipment__item">
+                                                <div class="equipment__title">Комплектация и размеры евро комплекта:</div>
+                                                <ul class="equipment__list">
+                                                    <li>пододеяльник 215х220 см - 1 шт.,</li>
+                                                    <li>простыня 220x240 см - 1 шт.,</li>
+                                                    <li>наволочки: 70х70 см - 2 шт.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="equipment__item">
+                                                <div class="equipment__title">Комплектация и размеры семейного комплекта:</div>
+                                                <ul class="equipment__list">
+                                                    <li>пододеяльник 215х145 - 2 шт.,</li>
+                                                    <li>простыня 220x240 см - 1 шт.,</li>
+                                                    <li>наволочки: 70х70 см - 2 шт.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-detail__col card-detail__col--gallery">
+                                        <div class="detail-gallery">
+                                            <div class="detail-gallery__wrapper">
+                                                <div class="detail-gallery__item">
+                                                    <img src="images/detail-gallery01.jpg" alt="Постельное белье Stripe Satin White">
+                                                </div>
+                                                <div class="detail-gallery__item">
+                                                    <img src="images/detail-gallery02.jpg" alt="Постельное белье Stripe Satin White">
+                                                </div>
+                                                <div class="detail-gallery__item">
+                                                    <img src="images/detail-gallery03.jpg" alt="Постельное белье Stripe Satin White">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -572,6 +656,7 @@
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/fancyapp/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

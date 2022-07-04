@@ -592,6 +592,9 @@ body {
   background-color: #FBFBFB;
   min-height: 100%;
 }
+.wrapper--product {
+  overflow: initial;
+}
 
 .main {
   flex: 1 1 auto;
@@ -685,6 +688,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.3s right linear;
+}
+
+.close {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #B5CFDB;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .section-page-title {
@@ -2607,6 +2625,10 @@ body {
   padding-bottom: 16px;
   border-bottom: 1px solid #DAE7EE;
 }
+.card-product .card-desc--add .prop-normal {
+  color: #2A4652;
+  font-style: normal;
+}
 .card-product .card-desc__title {
   font-size: 28px;
   line-height: 1em;
@@ -2736,6 +2758,70 @@ body {
 }
 .card-product .gallery-small__item:last-child {
   margin-bottom: 0;
+}
+.card-product .card-detail {
+  position: fixed;
+  height: 100vh;
+  width: 50vw;
+  top: 0;
+  right: -50vw;
+  background-color: white;
+  z-index: 100;
+  padding: 50px 40px 50px 60px;
+  box-sizing: border-box;
+  transition: 0.3s all linear;
+}
+.card-product .card-detail__close {
+  position: absolute;
+  right: 50px;
+  z-index: 10;
+}
+.card-product .card-detail .card-desc {
+  border-bottom: 0;
+}
+.card-product .card-detail .detail-gallery__item {
+  font-size: 0;
+  margin-bottom: 5px;
+}
+.card-product .card-detail .detail-gallery__item:last-child {
+  margin-bottom: 0;
+}
+.card-product .card-detail__title {
+  font-size: 64px;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+.card-product .card-detail__col--text {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+.card-product .card-detail__col--gallery {
+  width: 275px;
+  flex-shrink: 0;
+}
+.card-product .card-detail__row {
+  display: flex;
+}
+.card-product .card-detail .equipment {
+  color: #2A4652;
+}
+.card-product .card-detail .equipment__item {
+  margin-bottom: 20px;
+}
+.card-product .card-detail .equipment__title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1em;
+  font-family: "Alumni Sans", "Arial Narrow", sans-serif;
+  margin-bottom: 5px;
+}
+.card-product .card-detail .equipment__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card-product .card-detail .equipment__list li {
+  margin-bottom: 5px;
 }
 
 .delivery {
