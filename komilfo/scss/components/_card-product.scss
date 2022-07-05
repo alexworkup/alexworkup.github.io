@@ -310,13 +310,6 @@
   .card-detail {
     width: 50vw;
     right: -50vw;
-    overflow-y: scroll;
-
-    &__close {
-      position: absolute;
-      right: 50px;
-      z-index: 10;
-    }
 
     .card-desc {
       border-bottom: 0;
@@ -332,29 +325,6 @@
           margin-bottom: 0;
         }
       }
-    }
-
-    &__title {
-      font-size: 64px;
-      margin-bottom: 25px;
-      font-weight: 300;
-    }
-
-    &__col {
-
-      &--text {
-        flex-grow: 1;
-        padding-right: 20px;
-      }
-
-      &--gallery {
-        width: 275px;
-        flex-shrink: 0;
-      }
-    }
-
-    &__row {
-      display: flex;
     }
 
     .equipment {

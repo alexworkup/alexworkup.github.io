@@ -342,16 +342,16 @@
                             </div>
                         </div>
                         <div class="card-product__detail card-detail popup-custom">
-                            <button class="card-detail__close close">
+                            <button class="popup-custom__close close">
                                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.73078 0L11 1.26923L1.26934 11L0.000118827 9.73077L9.73078 0Z" fill="#527686"/>
                                     <path d="M1.26922 0L0 1.26923L9.73066 11L10.9999 9.73077L1.26922 0Z" fill="#527686"/>
                                 </svg>
                             </button>
-                            <div class="card-detail__wrapper">
-                                <h2 class="card-detail__title h2">Описание товара</h2>
-                                <div class="card-detail__row">
-                                    <div class="card-detail__col card-detail__col--text">
+                            <div class="popup-custom__wrapper">
+                                <h2 class="popup-custom__title h2">Описание товара</h2>
+                                <div class="popup-custom__row">
+                                    <div class="popup-custom__col popup-custom__col--text">
                                         <div class="card-desc">
                                             <ul class="card-desc__list param-list">
                                                 <li class="prop-normal">Цвет: <a href="#">Белый</a></li>
@@ -423,7 +423,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="card-detail__col card-detail__col--gallery">
+                                    <div class="popup-custom__col popup-custom__col--gallery">
                                         <div class="detail-gallery">
                                             <div class="detail-gallery__wrapper">
                                                 <div class="detail-gallery__item">
@@ -441,6 +441,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -668,6 +669,145 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div id="popup-favorites" class="popup-custom">
+        <button class="popup-custom__close close">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.73078 0L11 1.26923L1.26934 11L0.000118827 9.73077L9.73078 0Z" fill="#527686"/>
+                <path d="M1.26922 0L0 1.26923L9.73066 11L10.9999 9.73077L1.26922 0Z" fill="#527686"/>
+            </svg>
+        </button>
+        <div class="popup-custom__wrapper">
+            <h2 class="popup-custom__title h2">Избранное</h2>
+            <div class="popup-custom__row">
+                <div class="popup-custom__col">
+                    <div class="favorites-list">
+                        <div class="favorites-list__item">
+                            <article class="card">
+                                <div class="card__wrapper">
+                                    <div class="card__col card__col--pics">
+                                        <a href="#" class="card__pics">
+                                            <img loading="lazy" src="images/card01.jpg" alt="Комплект постельного белья FRAME lagoon">
+                                        </a>
+                                    </div>
+                                    <div class="card__col card__col--content">
+                                        <div class="card__content">
+                                            <div class="card__row card__row--title">
+                                                <div class="card__art">Артикул: <span>006589AV</span></div>
+                                                <h3 class="card__name"><a class="card__link" href="#">Комплект постельного белья FRAME lagoon</a></h3>
+                                            </div>
+                                            <div class="card__row card__row--prop">
+                                                <div class="card-prop">
+                                                    <div class="card-prop__list">
+                                                        <div class="card-prop__item prop-normal">
+                                                            Цвет: <a href="#">Белый</a>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Размер: <span>150х220</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prop__list hide">
+                                                        <div class="card-prop__item prop-normal">
+                                                            Плотность: <span>125 г/м2</span>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Состав: <span>50% хлопок / 50% полиэстер</span>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Минимальная партия: <span>10 комплектов</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card__row card__row--control">
+                                                <div class="card-control">
+                                                    <div class="card-control__col card-control__col--price">
+                                                        <div class="price">
+                                                            <div class="price__basic">19812.00 ₽</div>
+                                                            <s class="price__discount">25400.00</s>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-control__col card-control__col--favorite">
+                                                        <a class="link-control link-control--favorite" href="#">
+                                                            <span></span>
+                                                            <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14.9996 27C14.8261 27 14.66 26.93 14.5383 26.8062L3.77456 15.84C1.34186 13.3981 0 10.49 0 7.65452C0 3.07624 3.0302 -3.05176e-05 7.54059 -3.05176e-05C11.4177 -3.05176e-05 12.9543 1.72877 14.9996 4.14181C17.0449 1.72902 18.581 -3.05176e-05 22.4583 -3.05176e-05C26.9692 -3.05176e-05 30 3.07624 30 7.65452C30 10.49 28.6587 13.3983 26.2231 15.8433L15.4606 26.8063C15.3389 26.9303 15.1728 27 14.9996 27ZM7.54059 1.29981C3.74662 1.29981 1.29495 3.79423 1.29495 7.65452C1.29495 10.1427 2.50186 12.7245 4.69373 14.9243L14.9996 25.4243L25.3042 14.9278C27.4984 12.7248 28.705 10.143 28.705 7.65462C28.705 3.79433 26.2529 1.2999 22.4583 1.2999C19.1073 1.2999 17.8892 2.73751 15.871 5.11941L15.4914 5.56658C15.3683 5.71114 15.1886 5.79405 14.9996 5.79405C14.8105 5.79405 14.6305 5.71114 14.5078 5.56658L14.1307 5.12226C12.1116 2.7385 10.8927 1.29981 7.54059 1.29981Z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="card__buy btn">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="favorites-list__item">
+                            <article class="card">
+                                <div class="card__wrapper">
+                                    <div class="card__col card__col--pics">
+                                        <a href="#" class="card__pics">
+                                            <img loading="lazy" src="images/card01.jpg" alt="Комплект постельного белья FRAME lagoon">
+                                        </a>
+                                    </div>
+                                    <div class="card__col card__col--content">
+                                        <div class="card__content">
+                                            <div class="card__row card__row--title">
+                                                <div class="card__art">Артикул: <span>006589AV</span></div>
+                                                <h3 class="card__name"><a class="card__link" href="#">Комплект постельного белья FRAME lagoon</a></h3>
+                                            </div>
+                                            <div class="card__row card__row--prop">
+                                                <div class="card-prop">
+                                                    <div class="card-prop__list">
+                                                        <div class="card-prop__item prop-normal">
+                                                            Цвет: <a href="#">Белый</a>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Размер: <span>150х220</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-prop__list hide">
+                                                        <div class="card-prop__item prop-normal">
+                                                            Плотность: <span>125 г/м2</span>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Состав: <span>50% хлопок / 50% полиэстер</span>
+                                                        </div>
+                                                        <div class="card-prop__item prop-normal">
+                                                            Минимальная партия: <span>10 комплектов</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card__row card__row--control">
+                                                <div class="card-control">
+                                                    <div class="card-control__col card-control__col--price">
+                                                        <div class="price">
+                                                            <div class="price__basic">19812.00 ₽</div>
+                                                            <s class="price__discount">25400.00</s>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-control__col card-control__col--favorite">
+                                                        <a class="link-control link-control--favorite" href="#">
+                                                            <span></span>
+                                                            <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14.9996 27C14.8261 27 14.66 26.93 14.5383 26.8062L3.77456 15.84C1.34186 13.3981 0 10.49 0 7.65452C0 3.07624 3.0302 -3.05176e-05 7.54059 -3.05176e-05C11.4177 -3.05176e-05 12.9543 1.72877 14.9996 4.14181C17.0449 1.72902 18.581 -3.05176e-05 22.4583 -3.05176e-05C26.9692 -3.05176e-05 30 3.07624 30 7.65452C30 10.49 28.6587 13.3983 26.2231 15.8433L15.4606 26.8063C15.3389 26.9303 15.1728 27 14.9996 27ZM7.54059 1.29981C3.74662 1.29981 1.29495 3.79423 1.29495 7.65452C1.29495 10.1427 2.50186 12.7245 4.69373 14.9243L14.9996 25.4243L25.3042 14.9278C27.4984 12.7248 28.705 10.143 28.705 7.65462C28.705 3.79433 26.2529 1.2999 22.4583 1.2999C19.1073 1.2999 17.8892 2.73751 15.871 5.11941L15.4914 5.56658C15.3683 5.71114 15.1886 5.79405 14.9996 5.79405C14.8105 5.79405 14.6305 5.71114 14.5078 5.56658L14.1307 5.12226C12.1116 2.7385 10.8927 1.29981 7.54059 1.29981Z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="card__buy btn">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/smoothscroll/SmoothScroll.min.js"></script>
     <script src="js/jquery/jquery-3.6.0.min.js"></script>

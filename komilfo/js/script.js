@@ -184,8 +184,25 @@ $( document ).ready(function() {
 
     // Popup
 
-    $(document).on('click', '.card-desc__more, .popup-custom .close', function (e) {
-       $('.card-detail, .popup-custom .close').toggleClass('active');
+    $(document).on('click', '.card-desc__more', function (e) {
+       $('.card-detail').toggleClass('active');
+       $('body').toggleClass('popup-open');
+    });
+
+    $(document).on('click', '.form-header__close', function (e) {
+        Fancybox.close();
+    });
+
+    $(document).click('on', function(e) {
+        var boxPopup = $('.card-detail');
+        if (!$('.card-desc__more').is(e.target) && !boxPopup.is(e.target) && boxPopup.has(e.target).length === 0 && $('.card-detail').hasClass('active')) {
+            $('.card-detail, .popup-custom .close').toggleClass('active');
+            $('body').toggleClass('popup-open');
+        }
+    });
+
+    $(document).on('click', '.link-control--favorite, .popup-custom .close', function (e) {
+        $('.popup-custom, .popup-custom .close').toggleClass('active');
         $('body').toggleClass('popup-open');
     });
 

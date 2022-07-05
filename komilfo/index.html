@@ -8,6 +8,7 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
 </head>
 <body>
     <div class="wrapper">
@@ -102,7 +103,7 @@
                         <div class="header-mid__col header-mid__col--phone">
                             <div class="phone-block">
                                 <a class="phone-block__number" href="tel:+74957237444">8 (495) 723-74-44</a>
-                                <a class="phone-block__order" href="#">заказать звонок</a>
+                                <a class="phone-block__order" data-fancybox data-src="#popup-form" href="#">заказать звонок</a>
                             </div>
                         </div>
                     </div>
@@ -970,7 +971,7 @@
                             </ul>
                             <div class="phone-block">
                                 <a class="phone-block__number" href="tel:+74957237444">8 (495) 723-74-44</a>
-                                <a class="phone-block__order" href="#">заказать звонок</a>
+                                <a class="phone-block__order" data-fancybox data-src="#popup-form" href="#">заказать звонок</a>
                             </div>
                         </div>
                     </div>
@@ -1098,7 +1099,7 @@
         </footer>
     </div>
 
-    <div style="display: none;" class="popup-form">
+    <div style="display: none;" class="popup-form" id="popup-form">
         <div class="popup-form__wrapper">
             <div class="popup-form__header form-header">
                 <div class="form-header__social">
@@ -1158,6 +1159,7 @@
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <script src="js/inputmask/jquery.inputmask.js"></script>
     <script src="https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/fancyapp/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
