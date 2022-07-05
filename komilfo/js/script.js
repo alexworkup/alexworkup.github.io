@@ -182,11 +182,24 @@ $( document ).ready(function() {
 
     // Переключение вида каталога
 
-    // Настройка popup
+    // Popup
 
-    Fancybox.bind("[data-fancybox]", {
-        infinite: false,
+    $(document).on('click', '.card-desc__more, .popup-custom .close', function (e) {
+       $('.card-detail, .popup-custom .close').toggleClass('active');
+        $('body').toggleClass('popup-open');
     });
 
-    // Настройка popup
+    // Popup
+
+
+    $('input[type=tel]').inputmask({
+        mask: '+7 (*{1}99) 999-99-99',
+        placeholder: "+7 (___) ___-__-__",
+        androidHack: "rtfm",
+        definitions: {
+            '*': {
+                validator: "[0-6,9]"
+            }
+        }
+    });
 });

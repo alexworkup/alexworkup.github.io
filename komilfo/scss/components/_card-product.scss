@@ -147,6 +147,7 @@
       font-size: 15px;
       line-height: 30px;
       text-decoration: none;
+      cursor: pointer;
     }
 
   }
@@ -307,16 +308,9 @@
   }
 
   .card-detail {
-    position: fixed;
-    height: 100vh;
     width: 50vw;
-    top: 0;
     right: -50vw;
-    background-color: white;
-    z-index: 100;
-    padding: 50px 40px 50px 60px;
-    box-sizing: border-box;
-    transition: .3s all linear;
+    overflow-y: scroll;
 
     &__close {
       position: absolute;
