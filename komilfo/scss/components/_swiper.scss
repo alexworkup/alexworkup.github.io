@@ -11,10 +11,15 @@
 
       .swiper-pagination-bullet {
         width: 150px;
+        max-width: 85px;
         height: 3px;
         border-radius: 0;
         background: $c-teal-blue;
         opacity: 1;
+        
+        @media #{$phone} {
+          height: 2px;
+        }
 
         &.swiper-pagination-bullet-active {
           background: $c-rob-roy;

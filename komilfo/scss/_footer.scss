@@ -7,6 +7,13 @@
       background-image: url("../images/footer-bg.png");
       padding: 10px 0 20px 0;
       min-height: 400px;
+
+      @media #{$phone} {
+        display: flex;
+        padding-top: 125px;
+        position: relative;
+        min-height: auto;
+      }
     }
 
     &--copyright {
@@ -15,18 +22,43 @@
 
   }
 
+  &__menu {
+
+    @media #{$phone} {
+      width: 50%;
+      padding: 0 15px 0 0;
+    }
+  }
+
   .extra-menu {
     margin-bottom: 15px;
+
+    @media #{$phone} {
+      position: initial;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      flex-grow: 1;
+    }
 
     &__list {
       height: auto;
       margin-bottom: 20px;
       margin-left: -15px;
       margin-right: -15px;
+
+      @media #{$phone} {
+        flex-direction: column;
+        margin: 0;
+      }
     }
 
     &__row {
       margin: 0;
+
+      @media #{$phone} {
+        flex-direction: column;
+      }
     }
 
     &__col {
@@ -34,6 +66,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @media #{$phone} {
+        width: 100%;
+      }
 
       &--about {
         padding-left: 0;
@@ -43,18 +79,49 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
+
+        @media #{$phone} {
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          max-width: 160px;
+
+          img {
+            width: 100%;
+          }
+        }
       }
 
       &--contacts {
         align-items: flex-end;
+
+        @media #{$phone} {
+          align-items: flex-start;
+        }
       }
     }
 
     &__item {
       margin: 0 15px;
+
+      @media #{$phone} {
+        min-height: 30px;
+      }
+
+      &--mail {
+
+        @media #{$phone} {
+          position: absolute;
+          bottom: -30px;
+        }
+      }
     }
 
     &__link {
+
+      @media #{$phone} {
+        font-size: 15px;
+      }
 
       &:hover,
       &.selected {
@@ -65,8 +132,24 @@
 
   .phone-block {
 
+    @media #{$phone} {
+      margin-left: 15px;
+      margin-top: 30px;
+    }
+
     &__number {
       color: $c-white;
+
+      @media #{$phone} {
+        font-size: 18px;
+      }
+    }
+
+    &__order {
+
+      @media #{$phone} {
+        text-align: left;
+      }
     }
   }
 
@@ -79,9 +162,32 @@
     &__link {
       padding: 0;
 
+      @media #{$phone} {
+        font-size: 15px;
+        line-height: 30px;
+      }
+
       &:before {
         content: none;
       }
+    }
+
+    &__item {
+      margin: 0;
+    }
+
+    &__list {
+
+      @media #{$phone} {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .main-submenu {
+
+    @media #{$phone} {
+      display: none;
     }
   }
 
@@ -90,8 +196,16 @@
     flex-wrap: wrap;
     align-items: center;
 
+    @media #{$phone} {
+      padding: 0 15px;
+    }
+
     &__col {
       width: calc(100% / 3);
+
+      @media #{$phone} {
+        width: calc(100% / 2);
+      }
 
       &--text {
         color: #4C6874;
@@ -101,10 +215,22 @@
           white-space: normal;
         }
 
+        @media #{$phone} {
+          order: 3;
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
         a {
           text-decoration: none;
           color: #4C6874;
           transition: .2s all linear;
+
+          @media #{$phone} {
+            display: block;
+          }
 
           &:hover {
             color: #ffffff;
@@ -115,6 +241,13 @@
       &--social {
         display: flex;
         justify-content: center;
+
+        @media #{$phone} {
+          order: 1;
+          margin-top: auto;
+          margin-bottom: 15px;
+          justify-content: flex-start;
+        }
 
         .socials {
 
@@ -128,6 +261,14 @@
       &--developer {
         display: flex;
         justify-content: flex-end;
+
+        @media #{$phone} {
+          order: 2;
+
+          .developer {
+            transform: translateY(-28px);
+          }
+        }
       }
     }
   }

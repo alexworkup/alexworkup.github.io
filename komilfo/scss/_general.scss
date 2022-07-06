@@ -201,6 +201,12 @@ body {
   transition: .5s all cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: scroll;
 
+  @media #{$phone} {
+    width: 95vw;
+    right: -95vw;
+    padding: 20px 35px 0 20px;
+  }
+
   &--basket {
 
     .side {
@@ -212,16 +218,12 @@ body {
     }
 
     .popup-custom__title {
-      font-size: 55px;
+      font-size: 48px;
     }
   }
 
   &__close {
-    margin-right: -17px;
-
-    @media #{$phone} {
-      margin-right: 0;
-    }
+    margin-right: -18px;
   }
 
   &__col {
@@ -268,7 +270,7 @@ body {
     justify-content: space-between;
 
     @media #{$phone} {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
   }
 

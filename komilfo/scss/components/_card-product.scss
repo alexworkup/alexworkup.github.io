@@ -323,6 +323,28 @@
 
   .product-gallery {
 
+    @media #{$phone} {
+      height: 260px;
+      margin-bottom: 20px;
+    }
+
+    .swiper-pagination {
+      display: none;
+      padding: 0;
+      bottom: 0;
+
+      @media #{$phone} {
+        display: block;
+      }
+    }
+
+    &__wrapper {
+
+      @media #{$phone} {
+        height: 100%;
+      }
+    }
+
     &__list {
       display: block;
 
@@ -337,6 +359,11 @@
       width: 100%;
       background-color: #ffffff;
       margin-bottom: 20px;
+
+      @media #{$phone} {
+        margin-bottom: 0;
+        height: 100%;
+      }
 
       img {
         width: 100%;
@@ -384,7 +411,7 @@
     @media #{$phone} {
       width: 95vw;
       right: -95vw;
-      padding: 20px;
+      padding: 20px 35px 0 20px;
     }
 
     .card-desc {
@@ -420,6 +447,10 @@
           padding: 5px;
           margin: 0;
           height: 160px;
+        }
+
+        @media #{$phone} {
+          height: 120px;
         }
 
         &:last-child {

@@ -15,6 +15,10 @@
     justify-content: space-between;
     padding: 15px 30px;
 
+    @media #{$phone} {
+      padding: 15px 20px;
+    }
+
     .socials {
 
       &__item {
@@ -46,10 +50,18 @@
     line-height: 1em;
     margin-bottom: 15px;
     text-align: center;
+
+    @media #{$phone} {
+      font-size: 30px;
+    }
   }
 
   &__body {
     margin-bottom: 40px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
 
     label {
       width: 100%;

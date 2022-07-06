@@ -76,6 +76,10 @@ $( document ).ready(function() {
         if (!productGallery) {
             productGallery = new Swiper('.product-gallery .swiper', {
                 spaceBetween: 1,
+                pagination: {
+                    el: '.product-gallery .swiper-pagination',
+                    clickable: true,
+                },
             });
         }
     }

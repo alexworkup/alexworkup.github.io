@@ -8,14 +8,110 @@
 
     &--bottom {
       background-color: $c-teal-blue;
-      padding: 5px 0;
+      padding: 5px 0 0 0;
     }
 
     &--mid {
       background-color: $c-white;
     }
   }
+
+  .submenu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    visibility: hidden;
+    top: 50px;
+    opacity: 0;
+    padding: 15px 0 30px 0;
+    transition: 0.5s all cubic-bezier(0.16, 1, 0.3, 1);
+
+    @media #{$notebook} {
+      top: 45px;
+    }
+
+    &.active,
+    &:hover {
+      visibility: visible;
+      z-index: 50;
+      opacity: 1;
+    }
+
+    &__wrapper {
+      position: relative;
+      display: flex;
+    }
+
+    &__col {
+
+      &--menu {
+        padding-left: 85px;
+
+        @media #{$notebook} {
+          padding-left: 25px;
+        }
+      }
+
+      &--teaser {
+        flex-grow: 1;
+        padding: 0 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .teaser {
+          min-height: auto;
+          width: 80%;
+
+          &__title {
+
+            @media #{$notebook} {
+              font-size: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: calc(100vw - 10px);
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      top: 0;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      background-color: rgba(255, 255, 255, 0.98);
+      filter: drop-shadow(0px 4px 26px rgba(42, 70, 82, 0.1));
+    }
+
+    .main-submenu {
+
+      li {
+        margin-bottom: 5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #2A4652;
+          font-weight: 500;
+          transition: .2s all linear;
+
+          &:hover,
+          &.selected {
+            color: #CBA63C;
+          }
+        }
+      }
+    }
+  }
 }
+
 
 .extra-menu {
   font-size: 14px;
@@ -416,6 +512,7 @@
     padding: 0 30px;
     text-decoration: none;
     transition: .2s all linear;
+    padding-bottom: 5px;
 
     @media #{$notebook} {
       padding: 0 20px;
@@ -429,7 +526,7 @@
       content: '';
       position: absolute;
       width: 100%;
-      bottom: -5px;
+      bottom: 0;
       left: 0;
       height: 2px;
       background-color: $c-tacha;
@@ -443,6 +540,15 @@
 
       &:before {
         transform: scale(1, -1);
+      }
+    }
+
+    &:hover {
+
+      & + .submenu {
+        z-index: 50;
+        visibility: visible;
+        opacity: 1;
       }
     }
   }
