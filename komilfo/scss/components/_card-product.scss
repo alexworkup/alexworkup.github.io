@@ -4,6 +4,10 @@
 
   &__wrapper {
     display: flex;
+
+    @media #{$phone} {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
@@ -12,6 +16,11 @@
 
     &--content {
       padding: 20px 40px 40px 40px;
+
+      @media #{$phone} {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 
@@ -31,6 +40,10 @@
       font-weight: 400;
       line-height: 1em;
       margin-bottom: 2px;
+
+      @media #{$phone} {
+        font-size: 36px;
+      }
     }
   }
 
@@ -157,6 +170,11 @@
     margin-bottom: 15px;
     border-bottom: 1px solid #DAE7EE;
 
+    @media #{$phone} {
+      padding: 0;
+      border-bottom: none;
+    }
+
     &__list {
       display: flex;
       flex-wrap: wrap;
@@ -167,6 +185,14 @@
       padding-right: 30px;
       box-sizing: border-box;
       position: relative;
+      min-width: 245px;
+
+      @media #{$phone} {
+        width: 100%;
+        padding-right: 0;
+        padding-top: 10px;
+        border-bottom: 1px solid #DAE7EE;
+      }
 
       &:nth-child(3n) {
         padding-right: 0;
@@ -184,6 +210,10 @@
         background-color: #DAE7EE;
         top: -15px;
         right: 15px;
+
+        @media #{$desktop} {
+          content: none;
+        }
       }
 
     }
@@ -217,6 +247,10 @@
 
       &__col {
         margin-right: 10px;
+
+        @media #{$desktop} {
+          margin-bottom: 10px;
+        }
 
         &--qt {
 
@@ -256,6 +290,10 @@
 
   &__delivery {
     margin-bottom: 17px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
   }
 
   &__control {
@@ -267,6 +305,15 @@
       text-align: center;
       margin-right: 10px;
 
+      @media #{$laptop_s} {
+        width: auto;
+      }
+
+      @media #{$tablet} {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
       &:last-child {
         margin-right: 0;
       }
@@ -275,6 +322,14 @@
   }
 
   .product-gallery {
+
+    &__list {
+      display: block;
+
+      @media #{$phone} {
+        display: flex;
+      }
+    }
 
     &__item {
       font-size: 0;
@@ -295,6 +350,11 @@
     position: absolute;
     left: 25px;
     top: 40px;
+    z-index: 10;
+
+    @media #{$phone} {
+      display: none;
+    }
 
     &__item {
       display: block;
@@ -310,6 +370,22 @@
   .card-detail {
     width: 50vw;
     right: -50vw;
+    padding: 50px 40px 50px 60px;
+
+    @media #{$notebook} {
+      padding: 40px;
+    }
+
+    @media #{$tablet} {
+      width: 80vw;
+      right: -80vw;
+    }
+
+    @media #{$phone} {
+      width: 95vw;
+      right: -95vw;
+      padding: 20px;
+    }
 
     .card-desc {
       border-bottom: 0;
@@ -317,9 +393,34 @@
 
     .detail-gallery {
 
+      &__wrapper {
+        display: block;
+
+        @media #{$notebook} {
+          display: flex;
+          width: calc(100% + 10px);
+          margin: 0 -5px;
+        }
+      }
+
       &__item {
         font-size: 0;
         margin-bottom: 5px;
+        height: 220px;
+        box-sizing: border-box;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @media #{$notebook} {
+          width: calc(100% / 3);
+          padding: 5px;
+          margin: 0;
+          height: 160px;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -340,6 +441,10 @@
         line-height: 1em;
         font-family: $font-family-add;
         margin-bottom: 5px;
+
+        @media #{$phone} {
+          font-size: 26px;
+        }
       }
 
       &__list {

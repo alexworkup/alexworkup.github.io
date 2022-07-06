@@ -34,10 +34,21 @@
   justify-content: center;
   cursor: pointer;
 
+  &:hover {
+
+    svg {
+
+      path {
+        fill: #73828d;
+      }
+    }
+  }
+
   svg {
 
     path {
       fill: #C0CFD9;
+      transition: .2s all linear;
     }
   }
 }

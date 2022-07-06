@@ -2,14 +2,40 @@
   margin-bottom: 80px;
   padding: 0 20px;
 
+  @media #{$phone} {
+    margin-bottom: 40px;
+  }
+
   &__title {
     margin-bottom: 70px;
+
+    @media #{$phone} {
+      margin-bottom: 30px;
+    }
+
+    .h2 {
+
+      @media #{$phone} {
+        font-size: 60px;
+      }
+    }
+  }
+
+  &__wrapper {
+
+    @media #{$phone} {
+      padding: 0;
+    }
   }
 
   .clients-slider {
 
     @media #{$desktop} {
       width: calc(100% - 150px);
+    }
+
+    @media #{$phone} {
+      width: 100%;
     }
 
     &__col {
@@ -28,11 +54,19 @@
     &__wrapper {
       padding-bottom: 60px;
       align-items: center;
+
+      @media #{$phone} {
+        padding-bottom: 40px;
+      }
     }
 
     .swiper-pagination--custom {
       bottom: 0!important;
       justify-content: center;
+
+      @media #{$phone} {
+        padding: 0;
+      }
     }
 
     &__item {
@@ -44,6 +78,10 @@
         padding: 0 30px;
       }
 
+      @media #{$phone} {
+        padding: 0;
+      }
+
       &:before {
         content: '';
         position: absolute;
@@ -53,6 +91,26 @@
         width: 1px;
         height: 56px;
         background-color: #C0CFD9;
+
+        @media #{$phone} {
+          right: 20px;
+        }
+      }
+
+      &:after {
+        content: none;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 56px;
+        background-color: #C0CFD9;
+
+        @media #{$phone} {
+          left: 20px;
+          content: '';
+        }
       }
 
       img {
@@ -66,6 +124,10 @@
     position: absolute;
     top: calc(50% - 30px);
     transform: translateY(-50%);
+
+    @media #{$phone} {
+      display: none;
+    }
 
     &--prev {
       left: -100px;

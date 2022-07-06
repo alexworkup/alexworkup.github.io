@@ -104,6 +104,11 @@
         a {
           text-decoration: none;
           color: #4C6874;
+          transition: .2s all linear;
+
+          &:hover {
+            color: #ffffff;
+          }
         }
       }
 
@@ -133,6 +138,11 @@
   width: 100%;
   filter: grayscale(1);
   transition: .3s all linear;
+  overflow: hidden;
+
+  @media #{$phone} {
+    height: 200px;
+  }
 
   &:hover {
     filter: grayscale(0);

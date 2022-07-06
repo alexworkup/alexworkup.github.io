@@ -16,7 +16,7 @@ $( document ).ready(function() {
     });
 
     const ourClients = new Swiper('.clients-slider.swiper', {
-        slidesPerView: 5,
+        slidesPerView: 1,
 
         pagination: {
             el: '.clients-slider .swiper-pagination',
@@ -27,6 +27,27 @@ $( document ).ready(function() {
             nextEl: '.our-clients .slider-arrow--next',
             prevEl: '.our-clients .slider-arrow--prev',
         },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+
+            1680: {
+                slidesPerView: 5,
+                spaceBetween: 40
+            },
+        }
     });
 
     const cards = new Swiper('.card-slider .swiper', {
@@ -45,6 +66,40 @@ $( document ).ready(function() {
         navigation: {
             nextEl: '.sub-slider .sub-slider__arrow',
         },
+    });
+
+
+    let productGallery = null;
+    let mediaQuerySize = 500;
+
+    function catalogSliderInit () {
+        if (!productGallery) {
+            productGallery = new Swiper('.product-gallery .swiper', {
+                spaceBetween: 1,
+            });
+        }
+    }
+
+    function catalogSliderDestroy () {
+        if (productGallery) {
+            productGallery.destroy();
+            productGallery = null;
+        }
+    }
+
+    $(window).on('load resize', function () {
+
+        // Берём текущую ширину экрана
+        var windowWidth = $(this).innerWidth();
+
+        // Если ширина экрана меньше или равна mediaQuerySize(500)
+        if (windowWidth <= mediaQuerySize) {
+            // Инициализировать слайдер если он ещё не был инициализирован
+            catalogSliderInit()
+        } else {
+            // Уничтожить слайдер если он был инициализирован
+            catalogSliderDestroy()
+        }
     });
 
     // Слайдеры
@@ -138,7 +193,7 @@ $( document ).ready(function() {
             });
 
             $(document).click('on', function(e) {
-                var box = $('.prop-select');
+                let box = $('.prop-select');
                 if (!box.is(e.target) && box.has(e.target).length === 0) {
                     selectList.slideUp(duration);
                     $(selectHead).removeClass('on');
@@ -184,26 +239,32 @@ $( document ).ready(function() {
 
     // Popup
 
-    $(document).on('click', '.card-desc__more', function (e) {
-       $('.card-detail').toggleClass('active');
-       $('body').toggleClass('popup-open');
-    });
-
     $(document).on('click', '.form-header__close', function (e) {
         Fancybox.close();
     });
 
+    $(document).on('click', '*[data-popup]', function () {
+        let idPopup = $(this).data('popup');
+        $(idPopup).toggleClass('active');
+        $('body').toggleClass('popup-open');
+        return false;
+    });
+
+    $(document).on('click', '.popup-custom__close', function () {
+        $(this).parents('.popup-custom').toggleClass('active');
+        $('body').toggleClass('popup-open');
+    });
+
     $(document).click('on', function(e) {
-        var boxPopup = $('.card-detail');
-        if (!$('.card-desc__more').is(e.target) && !boxPopup.is(e.target) && boxPopup.has(e.target).length === 0 && $('.card-detail').hasClass('active')) {
-            $('.card-detail, .popup-custom .close').toggleClass('active');
-            $('body').toggleClass('popup-open');
+        let box = $('.popup-custom');
+        if (!$('.remove-item').is(e.target) && !box.is(e.target) && box.has(e.target).length === 0) {
+            $(box).removeClass('active');
+            $('body').removeClass('popup-open');
         }
     });
 
-    $(document).on('click', '.link-control--favorite, .popup-custom .close', function (e) {
-        $('.popup-custom, .popup-custom .close').toggleClass('active');
-        $('body').toggleClass('popup-open');
+    $(document).on('click', '.side .remove-item', function () {
+        $(this).parents('.card').remove();
     });
 
     // Popup

@@ -4,6 +4,7 @@
   transition: .2s all linear;
   min-height: 420px;
   z-index: 10;
+  position: relative;
 
   &__col {
     transition: .3s all linear;

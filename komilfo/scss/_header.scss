@@ -48,6 +48,7 @@
     color: $c-nepal;
     text-decoration: none;
     line-height: 1em;
+    transition: .2s all linear;
 
     &:hover,
     &.selected {
@@ -273,10 +274,21 @@
     border-radius: 20px;
     margin: 0 3px;
 
+    &:hover {
+
+      svg {
+
+        path {
+          fill-opacity: 1;
+        }
+      }
+    }
+
     svg {
 
       path {
         fill: $c-nepal;
+        transition: .2s all linear;
       }
     }
   }
@@ -322,6 +334,11 @@
     text-align: right;
     color: $c-rob-roy;
     font-weight: 500;
+    transition: .2s all linear;
+
+    &:hover {
+      color: #E9C547;
+    }
   }
 }
 
@@ -442,6 +459,7 @@
       a {
         text-decoration: none;
         color: #6B8C9E;
+        transition: .2s all linear;
 
         &:hover,
         &.selected {
