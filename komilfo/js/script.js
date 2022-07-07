@@ -312,13 +312,23 @@ $( document ).ready(function() {
 
         $(document).on('click', '.mobile-top__col--toggle, .mobile-app__close .close-app', function () {
             $(this).toggleClass('active');
-            $('.mobile-app').toggleClass('active');
             $('.submenu-inner').removeClass('active');
-            $('body').toggleClass('mobile-menu');
+
+            if(!$('.mobile-app').hasClass('active')) {
+                $('.mobile-app').addClass('active');
+            } else {
+                $('.mobile-app').removeClass('active');
+            }
+
+            if(!$('.mobile-app').hasClass('active')) {
+                $('body').removeClass('mobile-menu');
+            } else {
+                $('body').addClass('mobile-menu');
+            }
         });
 
-        $(document).on('click', '.app-nav__item', function () {
-            $(this).find('.submenu-inner').toggleClass('active');
+        $(document).on('click', '.app-nav__link, .app-nav__item .next', function () {
+            $(this).parents('.app-nav__item').find('.submenu-inner').toggleClass('active');
             $('.mobile-app').removeClass('active');
             $('.mobile-app').css('opacity', '1');
             return false;
