@@ -27,6 +27,10 @@ body {
       opacity: .6;
     }
   }
+
+  &.mobile-menu {
+    overflow: hidden;
+  }
 }
 
 html,
@@ -40,6 +44,10 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+
+  @media #{$phone} {
+    padding: 0 15px;
+  }
 }
 
 
@@ -296,6 +304,10 @@ body {
     position: absolute;
     background-color: #101E24;
 
+    @media #{$phone} {
+      display: none;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -308,10 +320,23 @@ body {
     padding-top: 10px;
     margin-bottom: 30px;
 
+    @media #{$phone} {
+      padding-left: 15px;
+      margin-bottom: 10px;
+    }
+
     .h1 {
       text-align: center;
       color: white;
       padding-bottom: 25px;
+
+      @media #{$phone} {
+        font-size: 40px;
+        color: #2A4652;
+        text-align: left;
+        font-weight: 400;
+        padding-bottom: 0;
+      }
 
       &:before {
         content: '';
@@ -322,6 +347,10 @@ body {
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
+
+        @media #{$phone} {
+          content: none;
+        }
       }
     }
   }
@@ -330,6 +359,10 @@ body {
     background-color: rgba(251, 251, 251, 0.98);
     padding: 20px;
     color: #597987;
+
+    @media #{$phone} {
+      padding: 15px;
+    }
 
     &--basket {
       background: transparent;
@@ -352,4 +385,5 @@ body {
   border: none;
   appearance: none;
   cursor: pointer;
+  background: none;
 }

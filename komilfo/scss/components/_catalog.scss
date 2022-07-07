@@ -3,6 +3,14 @@
 
   &__title {
     margin-bottom: 15px;
+
+    .h1 {
+
+      @media #{$phone} {
+        font-size: 40px;
+        font-weight: 400;
+      }
+    }
   }
 
   &__anons {
@@ -11,11 +19,45 @@
     line-height: 1.25em;
     color: #6D8793;
     margin-bottom: 30px;
+
+    @media #{$phone} {
+      text-align: left;
+    }
   }
 
   &__desc {
-    color: #2A4652;
-    line-height: 1.3em;
+
+    .section-desc {
+
+      @media #{$tablet} {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__img {
+        float: right;
+
+        @media #{$tablet} {
+          order: 2;
+        }
+
+        @media #{$phone} {
+
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      &__text {
+        color: #2A4652;
+        line-height: 1.3em;
+
+        @media #{$tablet} {
+          order: 1;
+        }
+      }
+    }
   }
 
   &__subsection {
@@ -41,12 +83,20 @@
     display: flex;
     padding-top: 22px;
     margin-bottom: 70px;
+
+    @media #{$phone} {
+      margin-bottom: 40px;
+    }
   }
 
   &__filter {
     min-width: 300px;
     padding-right: 22px;
     box-sizing: border-box;
+
+    @media #{$laptop_s} {
+      display: none;
+    }
   }
 
   &__elements {
@@ -64,11 +114,42 @@
   grid-column-gap: 13px;
   grid-row-gap: 13px;
 
+  @media #{$tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$phone} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .teaser {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    @media #{$tablet} {
+      grid-column-end: 3;
+    }
+
+    @media #{$phone} {
+      grid-column-end: 2;
+      min-height: auto;
+    }
+
+    &__title {
+
+      @media #{$phone} {
+        font-size: 30px;
+      }
+    }
+
+    &__desc {
+
+      @media #{$phone} {
+        min-width: 80%;
+      }
+    }
   }
 
   &.basket-line {
@@ -213,6 +294,10 @@
         border-right: 1px solid #ECF3F5;
         margin-right: 10px;
 
+        @media #{$laptop_s} {
+          border-right: none;
+        }
+
         &:last-child {
           border: none;
         }
@@ -281,6 +366,10 @@
       z-index: 10;
       right: 0;
       background: linear-gradient(300grad, #edf2f5 20%, transparent);
+
+      @media #{$phone} {
+        background: linear-gradient(300grad, #dee5eb 20%, transparent);
+      }
     }
   }
 
@@ -304,6 +393,12 @@
     color: #6c8596;
     white-space: nowrap;
     transition: .2s all linear;
+
+    @media #{$phone} {
+      line-height: 40px;
+      height: 40px;
+      padding: 0 20px;
+    }
 
     &--all {
       margin-right: 8px;

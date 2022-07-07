@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
 
+  @media #{$phone} {
+    flex-direction: column;
+  }
+
   &__btn,
   &__pages {
     position: relative;
@@ -19,6 +23,12 @@
     display: flex;
     align-items: center;
     transition: .2s color linear;
+
+    @media #{$phone} {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
     span {
       margin-right: 15px;
@@ -47,6 +57,10 @@
 
   &__pages {
     margin-left: auto;
+
+    @media #{$phone} {
+      margin-right: auto;
+    }
   }
 
   &:before {

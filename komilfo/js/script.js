@@ -1,6 +1,10 @@
+var is_mobile = false;
 
 $( document ).ready(function() {
 
+    if ($(window).width() <= 768) {
+        is_mobile = true;
+    }
 
     // Слайдеры
 
@@ -57,6 +61,21 @@ $( document ).ready(function() {
             nextEl: '.card-slider .slider-arrow--next',
             prevEl: '.card-slider .slider-arrow--prev',
         },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+            },
+
+            480: {
+                slidesPerView: 2,
+            },
+
+            1280: {
+                slidesPerView: 4,
+            },
+
+        }
     });
 
     const subSlider = new Swiper('.sub-slider .swiper', {
@@ -212,21 +231,24 @@ $( document ).ready(function() {
 
     // Переключение вида каталога
 
-    $(document).on('click', '.view-change__item.in-line', function () {
-        $('.view-change__item').removeClass('active');
-        $(this).addClass('active');
-        $('.catalog-list').removeClass('view-tile');
-        $('.catalog-list').addClass('view-line');
-        return false;
-    });
+    if(!is_mobile) {
 
-    $(document).on('click', '.view-change__item.in-tiles', function () {
-        $('.view-change__item').removeClass('active');
-        $(this).addClass('active');
-        $('.catalog-list').removeClass('view-line');
-        $('.catalog-list').addClass('view-tile');
-        return false;
-    });
+        $(document).on('click', '.view-change__item.in-line', function () {
+            $('.view-change__item').removeClass('active');
+            $(this).addClass('active');
+            $('.catalog-list').removeClass('view-tile');
+            $('.catalog-list').addClass('view-line');
+            return false;
+        });
+
+        $(document).on('click', '.view-change__item.in-tiles', function () {
+            $('.view-change__item').removeClass('active');
+            $(this).addClass('active');
+            $('.catalog-list').removeClass('view-line');
+            $('.catalog-list').addClass('view-tile');
+            return false;
+        });
+    }
 
     // Переключение вида каталога
 
@@ -284,4 +306,29 @@ $( document ).ready(function() {
             }
         }
     });
+
+
+    if(is_mobile) {
+
+        $(document).on('click', '.mobile-top__col--toggle, .mobile-app__close .close-app', function () {
+            $(this).toggleClass('active');
+            $('.mobile-app').toggleClass('active');
+            $('.submenu-inner').removeClass('active');
+            $('body').toggleClass('mobile-menu');
+        });
+
+        $(document).on('click', '.app-nav__item', function () {
+            $(this).find('.submenu-inner').toggleClass('active');
+            $('.mobile-app').removeClass('active');
+            $('.mobile-app').css('opacity', '1');
+            return false;
+        });
+
+        $(document).on('click', '.submenu-inner .back, .submenu-inner .close-app', function () {
+            $('.mobile-app').addClass('active');
+            $('.submenu-inner').toggleClass('active');
+            return false;
+        });
+
+    }
 });

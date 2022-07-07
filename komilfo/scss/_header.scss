@@ -1,5 +1,9 @@
 .header {
 
+  @media #{$phone} {
+    display: none;
+  }
+
   &__row {
 
     &--top {

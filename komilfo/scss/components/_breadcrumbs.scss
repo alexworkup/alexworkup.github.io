@@ -1,6 +1,10 @@
 .breadcrumbs {
   background-color: #F1F6F8;
 
+  @media #{$phone} {
+    padding-top: 25px;
+  }
+
   ul {
     padding-top: 12px;
     padding-bottom: 12px;

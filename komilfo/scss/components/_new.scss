@@ -1,6 +1,10 @@
 .new {
   margin-bottom: 95px;
 
+  @media #{$phone} {
+    margin-bottom: 15px;
+  }
+
   &__wrapper {
     position: relative;
     padding-top: 45px;

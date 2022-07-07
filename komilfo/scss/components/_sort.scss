@@ -25,10 +25,26 @@
 
     &--num {
       min-width: 300px;
+
+      @media #{$phone} {
+        min-width: auto;
+        margin-right: 10px;
+      }
     }
 
     &--view {
       margin-left: auto;
+
+      @media #{$phone} {
+        margin-left: auto;
+      }
+    }
+
+    &--choice {
+
+      @media #{$phone} {
+        margin-left: auto;
+      }
     }
   }
 
@@ -40,10 +56,18 @@
       font-size: 15px;
       color: $c-teal-blue;
       margin-right: 24px;
+
+      @media #{$phone} {
+        display: none;
+      }
     }
 
     &__item {
       margin-right: 36px;
+
+      @media #{$phone} {
+        margin-right: 10px;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -76,6 +100,10 @@
     line-height: 1em;
     font-family: $font-family-add;
     color: #2A4652;
+
+    @media #{$phone} {
+      font-size: 25px;
+    }
   }
 
   .sort-list {
@@ -84,6 +112,38 @@
       color: #2A4652;
       text-decoration: none;
       margin-right: 30px;
+
+      span {
+        position: relative;
+
+        @media #{$laptop_s} {
+          padding-right: 12px;
+
+          &:after {
+            content: '';
+            width: 7px;
+            height: 5px;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            background-image: url('../images/icon/arrow-select.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      @media #{$laptop_s} {
+        display: none;
+      }
+
+      &--price {
+
+        @media #{$laptop_s} {
+          display: block;
+        }
+      }
 
       &:last-child {
         margin-right: 0;

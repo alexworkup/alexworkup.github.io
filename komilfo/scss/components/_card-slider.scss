@@ -1,5 +1,9 @@
 .card-slider {
 
+  @media #{$phone} {
+    padding: 0;
+  }
+
   &__wrapper {
     padding: 10px 6px 40px 6px;
     overflow: hidden;

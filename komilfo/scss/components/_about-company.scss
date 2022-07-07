@@ -5,6 +5,10 @@
     margin-bottom: 50px;
   }
 
+  @media #{$phone} {
+    margin-bottom: 20px;
+  }
+
   &__wrapper {
     display: flex;
 
@@ -28,6 +32,11 @@
       @media #{$tablet} {
         max-width: 100%;
       }
+
+      @media #{$phone} {
+        width: 100%;
+        height: auto;
+      }
     }
 
     @media #{$tablet} {
@@ -41,6 +50,10 @@
     width: 100%;
     padding: 0 22px;
     position: relative;
+
+    @media #{$phone} {
+      padding: 0;
+    }
 
     &--text {
       display: flex;
@@ -56,6 +69,12 @@
 
       @media #{$tablet} {
         min-height: auto;
+        order: 2;
+      }
+
+      @media #{$phone} {
+        margin: 0 -20px;
+        width: calc(100% + 40px);
       }
     }
   }
@@ -66,10 +85,23 @@
     color: $c-teal-blue;
     line-height: 1.5em;
     margin-bottom: 60px;
+
+    @media #{$tablet} {
+      margin-bottom: 30px;
+    }
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+      text-align: left;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
+
+    @media #{$phone} {
+      margin-bottom: 30px;
+    }
 
     .label-section {
       margin-bottom: 30px;
@@ -80,9 +112,18 @@
       text-transform: uppercase;
       line-height: .6em;
 
+      @media #{$phone} {
+        font-size: 64px;
+        font-weight: 300;
+      }
+
       span {
         font-size: 70px;
         text-transform: none;
+
+        @media #{$phone} {
+          font-size: 50px;
+        }
       }
     }
   }
@@ -99,6 +140,15 @@
 
     .about-company__col--text {
       padding: 0 50px;
+
+      @media #{$tablet} {
+        order: 1;
+      }
+
+      @media #{$phone} {
+        padding: 0;
+      }
+
     }
 
     .about-company__title {
