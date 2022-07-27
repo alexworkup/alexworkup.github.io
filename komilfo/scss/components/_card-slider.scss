@@ -13,6 +13,45 @@
     padding: 0 6px 35px 6px;
     box-sizing: border-box;
 
+    &.swiper-slide-active {
+
+      .card {
+        transform: translateY(-10px);
+        z-index: 11;
+
+        .card__content {
+          padding-bottom: 75px;
+        }
+
+        .card__buy {
+          opacity: 1;
+        }
+
+        .card__col--pics {
+          height: 45%;
+          box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
+        }
+
+        .card__content {
+          box-shadow: 0 4px 15px rgba(92, 117, 128, 0.5);
+        }
+
+        .card__col--content {
+          height: 55%;
+        }
+
+        .card__row--control {
+          bottom: 30px;
+        }
+
+        .card-prop__list.hide {
+          height: auto;
+          opacity: 1;
+          overflow: visible;
+        }
+      }
+    }
+
     .card {
       height: 420px;
     }
