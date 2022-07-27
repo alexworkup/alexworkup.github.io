@@ -54,12 +54,60 @@ $( document ).ready(function() {
         }
     });
 
-    const cards = new Swiper('.card-slider .swiper', {
+    const cards = new Swiper('#hits .swiper', {
         slidesPerView: 4,
 
         navigation: {
-            nextEl: '.card-slider .slider-arrow--next',
-            prevEl: '.card-slider .slider-arrow--prev',
+            nextEl: '#hits .slider-arrow--next',
+            prevEl: '#hits .slider-arrow--prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+            },
+
+            480: {
+                slidesPerView: 2,
+            },
+
+            1280: {
+                slidesPerView: 4,
+            },
+
+        }
+    });
+
+    new Swiper('#soput .swiper', {
+        slidesPerView: 4,
+
+        navigation: {
+            nextEl: '#soput .slider-arrow--next',
+            prevEl: '#soput .slider-arrow--prev',
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1.1,
+            },
+
+            480: {
+                slidesPerView: 2,
+            },
+
+            1280: {
+                slidesPerView: 4,
+            },
+
+        }
+    });
+
+    new Swiper('#pohozie .swiper', {
+        slidesPerView: 4,
+
+        navigation: {
+            nextEl: '#pohozie .slider-arrow--next',
+            prevEl: '#pohozie .slider-arrow--prev',
         },
 
         breakpoints: {
@@ -83,7 +131,8 @@ $( document ).ready(function() {
         spaceBetween: 10,
 
         navigation: {
-            nextEl: '.sub-slider .sub-slider__arrow',
+            nextEl: '.sub-slider .sub-slider__arrow.right',
+            prevEl: '.sub-slider .sub-slider__arrow.left',
         },
     });
 
@@ -140,7 +189,7 @@ $( document ).ready(function() {
 
             map.geoObjects
                 .add(new ymaps.Placemark([55.648484, 37.501950], {
-                    balloonContent: 'Комильфо сервис<br> <a href="tel:+74957237444">8 (495) 723-74-44</a>'
+                    balloonContent: 'Компания Комильфо<br> <a href="tel:+74957237444">8 (495) 723-74-44</a>'
                 }, {
                     preset: 'islands#icon',
                     iconColor: '#0095b6'

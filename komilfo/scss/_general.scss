@@ -60,6 +60,10 @@ body {
 
   &--product {
     overflow: initial;
+
+    @media #{$phone} {
+      overflow: hidden;
+    }
   }
 }
 
@@ -98,6 +102,17 @@ body {
   line-height: 3.2em;
   text-transform: uppercase;
   display: inline-block;
+
+  span {
+    font-size: 22px;
+    font-weight: 400;
+    color: #AE9978;
+
+    sup {
+      font-size: 12px;
+      top: -14px;
+    }
+  }
 
   &:before {
     content: '';
@@ -362,6 +377,13 @@ body {
 
     @media #{$phone} {
       padding: 15px;
+    }
+
+    .related-block {
+
+      @media #{$phone} {
+        padding: 0;
+      }
     }
 
     &--basket {

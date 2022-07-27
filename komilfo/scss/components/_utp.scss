@@ -1,0 +1,51 @@
+.utp {
+  &__container {
+    padding: 100px 0;
+    text-align: center;
+
+    @media #{$phone} {
+      padding: 30px 0;
+    }
+  }
+
+  &__title {
+    color: #5d6972;
+    font-size: 30px;
+    margin-bottom: 60px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 996px;
+    margin: 0 auto;
+
+    @media #{$phone} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @media #{$phone} {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-height: 85px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #839099;
+      line-height: 18px;
+      margin: 0;
+      padding: 10px 0 0 0;
+    }
+  }
+}

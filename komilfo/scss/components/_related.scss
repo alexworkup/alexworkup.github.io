@@ -2,6 +2,10 @@
   position: relative;
   margin: 0 -12px;
 
+  @media #{$phone} {
+    margin: 0 -15px;
+  }
+
   &__title {
     color: #2A4652;
     font-size: 48px;

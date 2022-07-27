@@ -84,4 +84,18 @@
       }
     }
   }
+
+  .for-home {
+    .subsection {
+      &-item {
+        width: calc(100% / 3);
+        min-height: 180px;
+
+        @media #{$phone} {
+          width: calc(100% / 2);
+          min-height: 100px;
+        }
+      }
+    }
+  }
 }

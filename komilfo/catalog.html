@@ -731,7 +731,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="sub-slider__arrow">
+                                <div class="sub-slider__arrow left">
+                                    <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.1343 13L0.0957816 11.0471L6.72095 4.7003L8.75947 6.65317L2.1343 13Z" fill="#90A0AA"/>
+                                        <path d="M-3.466e-05 1.95287L2.03848 2.43086e-08L9 6.44082L6.96148 8.39369L-3.466e-05 1.95287Z" fill="#90A0AA"/>
+                                    </svg>
+                                </div>
+                                <div class="sub-slider__arrow right">
                                     <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.1343 13L0.0957816 11.0471L6.72095 4.7003L8.75947 6.65317L2.1343 13Z" fill="#90A0AA"/>
                                         <path d="M-3.466e-05 1.95287L2.03848 2.43086e-08L9 6.44082L6.96148 8.39369L-3.466e-05 1.95287Z" fill="#90A0AA"/>
@@ -788,6 +794,17 @@
                                     <li><a href="#">Для SPA</a></li>
                                     <li><a href="#">Вышивка</a></li>
                                 </ul>
+                                <article class="teaser">
+                                    <picture class="teaser__pics">
+                                        <source srcset="images/teaser-img.jpg" media="(min-width: 1000px)">
+                                        <img loading="lazy" src="images/teaser-img.jpg" alt="Текстиль для гостиниц и отелей">
+                                    </picture>
+                                    <div class="teaser__content">
+                                        <h4 class="teaser__title">Текстиль для гостиниц и отелей</h4>
+                                        <div class="teaser__desc">Комплексное оснащение предприятий<br> сегмента <span>HoReCa под ключ</span></div>
+                                        <a href="#" class="teaser__more more">подробнее</a>
+                                    </div>
+                                </article>
                             </div>
                             <div class="catalog__elements">
                                 <div class="catalog-list">
@@ -938,7 +955,7 @@
                                                                         </div>
                                                                         <div class="prop-change__col prop-change__col--qt">
                                                                             <div class="prop-qt">
-                                                                                <input type="text" value="1" maxlength="2" name="quantity">
+                                                                                <input type="text" value="1" maxlength="4" name="quantity">
                                                                                 <span>шт.</span>
                                                                             </div>
                                                                         </div>
@@ -961,7 +978,7 @@
                                                                         </div>
                                                                         <div class="prop-change__col prop-change__col--qt">
                                                                             <div class="prop-qt">
-                                                                                <input type="text" value="99" maxlength="2" name="quantity">
+                                                                                <input type="text" value="99" maxlength="4" name="quantity">
                                                                                 <span>шт.</span>
                                                                             </div>
                                                                         </div>
@@ -984,7 +1001,7 @@
                                                                         </div>
                                                                         <div class="prop-change__col prop-change__col--qt">
                                                                             <div class="prop-qt">
-                                                                                <input type="text" value="1" maxlength="2" name="quantity">
+                                                                                <input type="text" value="1" maxlength="4" name="quantity">
                                                                                 <span>шт.</span>
                                                                             </div>
                                                                         </div>
@@ -1103,17 +1120,6 @@
                                                     <a href="#" class="card__buy btn">В корзину</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </article>
-                                    <article class="teaser">
-                                        <picture class="teaser__pics">
-                                            <source srcset="images/teaser-img.jpg" media="(min-width: 1000px)">
-                                            <img loading="lazy" src="images/teaser-img.jpg" alt="Текстиль для гостиниц и отелей">
-                                        </picture>
-                                        <div class="teaser__content">
-                                            <h4 class="teaser__title">Текстиль для гостиниц и отелей</h4>
-                                            <div class="teaser__desc">Комплексное оснащение предприятий<br> сегмента <span>HoReCa под ключ</span></div>
-                                            <a href="#" class="teaser__more more">подробнее</a>
                                         </div>
                                     </article>
                                     <article class="catalog-list__item card">
@@ -1689,7 +1695,7 @@
                     <section class="related">
                         <h2 class="related__title h2">Хиты продаж в этой категории</h2>
                         <div class="related__wrapper">
-                            <div class="card-slider">
+                            <div id="hits" class="card-slider">
                                 <div class="card-slider__wrapper">
                                     <div class="card-slider__inner swiper">
                                         <div class="card-slider__list swiper-wrapper">
@@ -2398,7 +2404,7 @@
             <div class="footer__row footer__row--copyright">
                 <div class="footer-copyright container">
                     <div class="footer-copyright__col footer-copyright__col--text">
-                        <p>© Комильфо-Сервис, 2022 Москва <a href="#">Политика конфиденциальности</a></p>
+                        <p>© Компания Комильфо, 2022 Москва <a href="#">Политика конфиденциальности</a></p>
                     </div>
                     <div class="footer-copyright__col footer-copyright__col--social">
                         <div class="socials">
