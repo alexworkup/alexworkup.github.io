@@ -430,6 +430,13 @@ html,
 body {
   height: 100vh; }
 
+.page-inner .h1, .page-inner h1 {
+  color: #d9d9d9;
+  font-family: 'Source Serif Pro', "Arial Narrow", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
 .container {
   max-width: 1540px;
   margin: 0 auto;
@@ -453,7 +460,7 @@ body {
   flex: 1 1 auto;
   padding-top: 120px;
   padding-bottom: 50px;
-  background-color: #000000;
+  background-color: #181818;
   position: relative; }
 
 .h1, h1,
