@@ -11,6 +11,10 @@
     display: grid;
   }
 
+  @media #{$phone} {
+    height: 100vh;
+  }
+
   &__wrap,
   &__list,
   &__item {

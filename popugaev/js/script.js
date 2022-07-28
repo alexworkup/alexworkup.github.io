@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     const swiper = new Swiper('.main-slider .swiper', {
         effect: 'fade',
-        speed: 800,
+        speed: 1000,
         autoplay: true,
         mousewheel: true,
 

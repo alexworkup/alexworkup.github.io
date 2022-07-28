@@ -741,7 +741,6 @@ body {
         .footer .menu ul li a {
           letter-spacing: .15em;
           font-weight: 500;
-          color: #4f6c87;
           text-transform: none; }
           @media screen and (max-width: 500px) {
             .footer .menu ul li a {
@@ -809,6 +808,9 @@ body {
       height: auto;
       flex: 1 1 auto;
       display: grid; } }
+  @media screen and (max-width: 500px) {
+    .main-slider {
+      height: 100vh; } }
   .main-slider__wrap, .main-slider__list, .main-slider__item {
     height: 100%; }
   .main-slider__wrap {
