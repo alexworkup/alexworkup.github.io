@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  height: 100px;
+  background-color: #000000;
+  z-index: 100;
+  padding: 0 40px;
+  box-sizing: border-box;
+
+  @media #{$tablet} {
+    padding: 0 20px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__col {
+
+    &--logo {
+      margin-right: auto;
+
+      .logo {
+
+        b {
+
+          @media #{$notebook} {
+            font-size: 24px;
+          }
+
+          @media #{$phone} {
+            font-size: 20px;
+          }
+        }
+
+        span {
+
+          @media #{$notebook} {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    &--menu {
+      margin-left: auto;
+      margin-right: 40px;
+
+      @media #{$notebook} {
+        margin-right: 20px;
+      }
+
+      @media #{$laptop_s} {
+        display: none;
+      }
+    }
+  }
+
+  .toggle {
+    position: relative;
+    display: block;
+    width: 89px;
+    height: 21px;
+    opacity: .5;
+    transition: .3s all linear;
+
+    &:before,
+    &:after {
+      content: '';
+    }
+
+    &:before,
+    &:after,
+    span {
+      position: absolute;
+      height: 1px;
+      width: 72px;
+      background-color: #ffffff;
+      transition: .2s all linear;
+    }
+
+    span {
+      top: 50%;
+      left: 0;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    &:before,
+    &:after {
+      right: 0;
+    }
+
+    &:hover {
+      opacity: .8;
+
+      &:before,
+      &:after {
+        right: 15px;
+      }
+
+      span {
+        left: 15px;
+      }
+    }
+  }
+}
