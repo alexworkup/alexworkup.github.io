@@ -712,7 +712,7 @@ body {
   .footer .copyright {
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #1a242d; }
+    background-color: #091016; }
     @media screen and (max-width: 500px) {
       .footer .copyright {
         padding-bottom: 0; } }
@@ -1098,12 +1098,12 @@ body {
           color: #d9d9d9;
           text-decoration: none; }
       .service-list .card-service__text p {
-        color: #d9d9d9;
+        color: #a7a7a7;
         line-height: 1.5em;
         font-size: 14px;
         margin: 0 0 20px 0; }
     .service-list .card-service__pics {
-      height: 350px;
+      height: 450px;
       display: block;
       font-size: 0;
       margin-bottom: 20px;
