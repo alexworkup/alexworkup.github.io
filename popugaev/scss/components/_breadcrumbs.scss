@@ -1,12 +1,14 @@
 .breadcrumbs {
 
   ul {
-    padding-top: 12px;
-    margin-bottom: 12px;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
+    padding-left: 40px;
+
+    @media #{$phone} {
+      padding-left: 20px;
+    }
 
     li {
       font-size: 11px;
@@ -14,6 +16,10 @@
       position: relative;
       text-transform: uppercase;
       color: #a7a7a7;
+
+      @media #{$phone} {
+        line-height: 1.5em;
+      }
 
       &:last-child {
 

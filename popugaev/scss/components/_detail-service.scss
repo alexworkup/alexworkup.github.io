@@ -7,6 +7,10 @@
     padding-top: 30px;
   }
 
+  @media #{$phone} {
+    padding-top: 0;
+  }
+
   &__wrap {
     display: flex;
 
