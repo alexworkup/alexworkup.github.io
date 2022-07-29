@@ -1,0 +1,38 @@
+.breadcrumbs {
+
+  ul {
+    padding-top: 12px;
+    margin-bottom: 12px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    li {
+      font-size: 11px;
+      padding-right: 20px;
+      position: relative;
+      text-transform: uppercase;
+      color: #a7a7a7;
+
+      &:last-child {
+
+        &:before {
+          content: none;
+        }
+      }
+
+      &:before {
+        content: '>';
+        position: absolute;
+        right: 5px;
+        color: #A8B1B9;
+      }
+
+      a {
+        color: #d9d9d9;
+        text-decoration: none;
+      }
+    }
+  }
+}
