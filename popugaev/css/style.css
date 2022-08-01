@@ -1309,7 +1309,8 @@ body {
             margin-right: 0; } }
       @media screen and (max-width: 500px) {
         .detail-service .menu ul li {
-          margin: 0 0 10px 0; } }
+          margin: 0 0 10px 0;
+          width: 100%; } }
       .detail-service .menu ul li span {
         margin-right: 10px;
         color: #a7a7a7;

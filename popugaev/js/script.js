@@ -2,6 +2,11 @@ var is_mobile = false;
 
 $(document).ready(function() {
 
+    SmoothScroll({
+        animationTime: 400,
+        stepSize: 100,
+    });
+
     if ($(window).width() <= 768) {
         is_mobile = true;
     }
