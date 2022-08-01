@@ -9,6 +9,10 @@
   .news-item {
     display: flex;
 
+    @media #{$tablet} {
+      flex-wrap: wrap;
+    }
+
     &:hover {
 
       .news-item__pics img {
@@ -20,16 +24,28 @@
 
       .news-item__pics {
         order: 2;
+
+        @media #{$tablet} {
+          order: 1;
+        }
       }
 
       .news-item__content {
         order: 1;
+
+        @media #{$tablet} {
+          order: 2;
+        }
       }
     }
 
     &__pics,
     &__content {
       width: 50%;
+
+      @media #{$tablet} {
+        width: 100%;
+      }
     }
 
     &__content {
@@ -49,6 +65,10 @@
       overflow: hidden;
 
       @media #{$tablet} {
+        height: 300px;
+      }
+
+      @media #{$phone} {
         height: auto;
       }
 
@@ -58,6 +78,10 @@
         object-fit: cover;
         transform: scale(1);
         transition: 2s transform linear;
+
+        @media #{$phone} {
+          object-fit: contain;
+        }
       }
 
     }
