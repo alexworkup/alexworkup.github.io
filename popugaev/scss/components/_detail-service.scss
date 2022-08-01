@@ -205,6 +205,7 @@
 
       li {
         margin: 0 0 20px 0;
+        display: flex;
 
         @media #{$laptop_s} {
           margin-right: 10px;
@@ -216,6 +217,12 @@
 
         @media #{$phone} {
           margin: 0 0 10px 0;
+        }
+
+        span {
+          margin-right: 10px;
+          color: #a7a7a7;
+          opacity: .5;
         }
 
         a {

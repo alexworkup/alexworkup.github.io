@@ -22,7 +22,7 @@
         margin: 0 10px;
       }
 
-      a {
+      a, span {
         text-decoration: none;
         position: relative;
         display: flex;
@@ -36,6 +36,9 @@
         text-transform: uppercase;
         color: #a7a7a7;
         transition: .2s all linear;
+      }
+
+      a {
 
         &:hover,
         &.selected {
