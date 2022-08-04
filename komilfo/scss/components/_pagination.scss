@@ -22,7 +22,12 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: .2s color linear;
+    transition: .2s color linear,
+                .2s border linear;
+
+    &:hover {
+      border: 1px solid $c-rob-roy;
+    }
 
     @media #{$phone} {
       width: 100%;

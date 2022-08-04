@@ -57,6 +57,11 @@ body {
   flex-direction: column;
   background-color: $c-snow;
   min-height: 100%;
+  padding-top: 150px;
+
+  @media #{$tablet} {
+    padding-top: 60px;
+  }
 
   &--product {
     overflow: initial;
@@ -140,10 +145,24 @@ body {
   cursor: pointer;
   text-align: center;
   position: relative;
+  transition: .2s color linear;
+
+  &:hover,
+  &.active {
+    color: $c-rob-roy;
+  }
 
   &--gray {
     border: 1px solid #8FA7B1;
     color: #839CA7;
+    transition: .2s border linear,
+    .2s color linear;
+
+    &:hover,
+    &.active {
+      border: 1px solid $c-rob-roy;
+      color: $c-rob-roy;
+    }
   }
 }
 
@@ -408,4 +427,27 @@ body {
   appearance: none;
   cursor: pointer;
   background: none;
+
+  path {
+    transition: .2s all linear;
+  }
+
+  &:hover {
+
+    path {
+      fill: $c-rob-roy;
+
+      &:nth-child(2) {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.fancybox {
+
+  &__slide {
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+  }
 }

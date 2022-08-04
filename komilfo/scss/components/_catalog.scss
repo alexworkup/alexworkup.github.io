@@ -159,8 +159,9 @@
     grid-row-gap: 5px;
   }
 
-  &:not(.basket-line) {
+  &.view-tile {
     .catalog-list__item {
+
       &.card {
 
         @media #{$phone} {
@@ -253,6 +254,73 @@
             }
           }
 
+        }
+      }
+    }
+  }
+
+  &.view-wide {
+    grid-template-columns: repeat(1, 1fr);
+
+    .card {
+      min-height: auto;
+
+      &__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__content {
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      &__row {
+
+        &--control {
+          bottom: 0;
+          padding: 0;
+          position: relative;
+        }
+      }
+
+      &__col {
+
+        &--pics {
+          height: 180px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(0);
+
+        .card__col--content {
+          height: auto;
+        }
+
+        .card__content {
+          box-shadow: none;
+        }
+
+        .card__col--pics {
+          height: 180px;
+          box-shadow: none;
+        }
+
+        .card__buy {
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+
+    .card-prop {
+
+      &__list {
+
+        &.hide {
+          display: none;
         }
       }
     }
@@ -491,6 +559,18 @@
     justify-content: center;
     align-items: center;
 
+
+    @media #{$phone} {
+      right: -10px;
+    }
+
+    &:hover {
+
+      path {
+        fill: $c-rob-roy;
+      }
+    }
+
     &.left {
       right: auto;
       left: 134px;
@@ -518,7 +598,7 @@
       background: linear-gradient(300grad, #edf2f5 20%, transparent);
 
       @media #{$phone} {
-        background: linear-gradient(300grad, #dee5eb 20%, transparent);
+        background: linear-gradient(300grad, #eaeff3 20%, transparent);
       }
     }
   }

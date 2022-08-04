@@ -65,6 +65,21 @@
     &__item {
       margin-right: 36px;
 
+      &--wide {
+        display: none;
+
+        @media #{$phone} {
+          display: block;
+        }
+      }
+
+      &--line {
+
+        @media #{$phone} {
+          display: none;
+        }
+      }
+
       @media #{$phone} {
         margin-right: 10px;
       }
@@ -81,6 +96,10 @@
           path {
             fill: #2A4652;
           }
+
+          rect {
+            stroke: #2A4652;
+          }
         }
       }
 
@@ -88,6 +107,10 @@
 
         path {
           fill: #C4D8E1;
+          transition: .2s all linear;
+        }
+
+        rect {
           transition: .2s all linear;
         }
       }

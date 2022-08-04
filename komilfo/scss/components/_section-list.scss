@@ -179,9 +179,14 @@
     .section-card__more {
       height: 50px;
       padding: 0 30px;
-      line-height: 50px;
+      line-height: 49px;
       border: 1px solid #D4AE4A;
       color: $c-teal-blue;
+      transition: .2s color linear;
+
+      &:hover {
+        color: #D4AE4A;
+      }
 
       &:before {
         content: none;

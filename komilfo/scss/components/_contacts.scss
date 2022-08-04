@@ -137,6 +137,14 @@
       .socials {
         margin-right: 50px;
 
+        &__item {
+          transition: .2s all linear;
+
+          &:hover {
+            background-color: #aeb5bb;
+          }
+        }
+
         @media #{$phone} {
           margin-right: 0;
           margin-bottom: 20px;

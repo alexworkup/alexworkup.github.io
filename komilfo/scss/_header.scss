@@ -1,6 +1,11 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
 
-  @media #{$phone} {
+  @media #{$tablet} {
     display: none;
   }
 
@@ -179,11 +184,16 @@
 
       @media #{$laptop_s} {
         padding-left: 0;
+        margin-left: auto;
       }
     }
 
     &--profile {
       margin-left: auto;
+
+      @media #{$laptop_s} {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -265,6 +275,10 @@
         min-width: 180px;
       }
 
+      @media #{$laptop_s} {
+        margin-top: -30px;
+      }
+
       .logo {
         position: absolute;
         left: 0;
@@ -275,6 +289,7 @@
         @media #{$laptop_s} {
           position: relative;
           top: 0;
+          max-width: 120px;
         }
 
         img {
@@ -584,6 +599,23 @@
   display: inline-block;
   font-size: 0;
   position: relative;
+
+  &:hover {
+
+    svg {
+
+      path {
+        fill: $c-rob-roy!important;
+      }
+    }
+  }
+
+  svg {
+
+    path {
+      transition: .2s all linear;
+    }
+  }
 
   &.active {
 
