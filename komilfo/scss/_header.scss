@@ -1,9 +1,75 @@
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+
+  &.fixed {
+    position: fixed;
+    top: -55px;
+    transition: .3s top linear;
+
+    &.active {
+      top: 0;
+    }
+
+    .header-menu__col--control .link-control {
+
+      @media #{$laptop_s} {
+        margin-right: 15px;
+      }
+    }
+
+    .extra-menu,
+    .header__row--mid {
+      display: none;
+    }
+
+    .header-menu__col--logo {
+      display: block;
+      margin-right: 40px;
+
+      @media #{$laptop_s} {
+        margin-right: 20px;
+      }
+    }
+
+    .header-menu__col--phone {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+
+      @media #{$laptop_s} {
+        display: none;
+      }
+    }
+
+    .header-menu__col--menu {
+      padding-left: 0;
+      margin-left: auto;
+    }
+
+    .header-menu__col--control {
+      margin-left: initial;
+    }
+
+    .main-menu__link {
+      padding: 0 25px;
+
+      @media #{$notebook} {
+        padding: 0 15px;
+      }
+
+      @media #{$laptop_s} {
+        padding: 0 10px;
+      }
+    }
+
+    .submenu {
+      top: 45px;
+    }
+  }
 
   @media #{$tablet} {
     display: none;
@@ -470,10 +536,41 @@
 
     &--menu {
       padding-left: 200px;
-      transition: .2s all linear;
+      //transition: .2s all linear;
 
       @media #{$notebook} {
         padding-left: 0;
+      }
+    }
+
+    &--logo {
+      display: none;
+      width: 105px;
+      position: relative;
+
+      .logo {
+        position: absolute;
+        top: -4px;
+        left: 0;
+        z-index: 60;
+      }
+    }
+
+    &--phone {
+      display: none;
+
+      .phone-block {
+        color: white;
+
+        &__number {
+          color: white;
+          font-size: 20px;
+          font-weight: 300;
+
+          span {
+            color: #D4AE4A;
+          }
+        }
       }
     }
 

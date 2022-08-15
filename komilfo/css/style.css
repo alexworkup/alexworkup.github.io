@@ -157,11 +157,51 @@
   font-style: normal;
   font-display: swap; }
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100; }
+  .header.fixed {
+    position: fixed;
+    top: -55px;
+    transition: .3s top linear; }
+    .header.fixed.active {
+      top: 0; }
+    @media screen and (max-width: 1024px) {
+      .header.fixed .header-menu__col--control .link-control {
+        margin-right: 15px; } }
+    .header.fixed .extra-menu,
+    .header.fixed .header__row--mid {
+      display: none; }
+    .header.fixed .header-menu__col--logo {
+      display: block;
+      margin-right: 40px; }
+      @media screen and (max-width: 1024px) {
+        .header.fixed .header-menu__col--logo {
+          margin-right: 20px; } }
+    .header.fixed .header-menu__col--phone {
+      display: flex;
+      align-items: center;
+      margin: 0 auto; }
+      @media screen and (max-width: 1024px) {
+        .header.fixed .header-menu__col--phone {
+          display: none; } }
+    .header.fixed .header-menu__col--menu {
+      padding-left: 0;
+      margin-left: auto; }
+    .header.fixed .header-menu__col--control {
+      margin-left: initial; }
+    .header.fixed .main-menu__link {
+      padding: 0 25px; }
+      @media screen and (max-width: 1366px) {
+        .header.fixed .main-menu__link {
+          padding: 0 15px; } }
+      @media screen and (max-width: 1024px) {
+        .header.fixed .main-menu__link {
+          padding: 0 10px; } }
+    .header.fixed .submenu {
+      top: 45px; }
   @media screen and (max-width: 999px) {
     .header {
       display: none; } }
@@ -450,11 +490,29 @@
   display: flex;
   align-items: center; }
   .header-menu__col--menu {
-    padding-left: 200px;
-    transition: .2s all linear; }
+    padding-left: 200px; }
     @media screen and (max-width: 1366px) {
       .header-menu__col--menu {
         padding-left: 0; } }
+  .header-menu__col--logo {
+    display: none;
+    width: 105px;
+    position: relative; }
+    .header-menu__col--logo .logo {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      z-index: 60; }
+  .header-menu__col--phone {
+    display: none; }
+    .header-menu__col--phone .phone-block {
+      color: white; }
+      .header-menu__col--phone .phone-block__number {
+        color: white;
+        font-size: 20px;
+        font-weight: 300; }
+        .header-menu__col--phone .phone-block__number span {
+          color: #D4AE4A; }
   .header-menu__col--control {
     margin-left: auto; }
     .header-menu__col--control .link-control {
@@ -587,7 +645,7 @@ body {
   flex-direction: column;
   background-color: #FBFBFB;
   min-height: 100%;
-  padding-top: 150px; }
+  padding-top: 0; }
   @media screen and (max-width: 999px) {
     .wrapper {
       padding-top: 60px; } }
