@@ -384,4 +384,17 @@ $( document ).ready(function() {
         });
 
     }
+
+    const heightHeader = $('.header').height();
+
+    $( window ).scroll(function() {
+
+        if($(window).scrollTop() > heightHeader) {
+            $('.header.fixed').addClass('active');
+        } else {
+            $('.header.fixed').removeClass('active');
+        }
+
+        // console.log($(window).scrollTop());
+    });
 });

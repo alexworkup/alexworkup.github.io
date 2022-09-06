@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   background-color: $c-snow;
   min-height: 100%;
-  padding-top: 150px;
+  padding-top: 0;
 
   @media #{$tablet} {
     padding-top: 60px;
