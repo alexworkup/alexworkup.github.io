@@ -1,0 +1,121 @@
+.products {
+  height: 476px;
+  margin-top: 150px;
+  margin-bottom: 250px;
+
+  &__wrap,
+  &__content {
+    position: relative;
+    height: 100%;
+  }
+
+  &__content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../images/products-img__bg.jpg");
+  }
+
+  &__title {
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    font-size: 190px;
+    line-height: 1em;
+    background: linear-gradient(98.82deg, #1E303E 43.28%, #1E303E 82.47%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+    text-align: right;
+    padding-right: 130px;
+  }
+
+  &__img {
+    height: 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .product-list {
+    display: flex;
+    margin-top: auto;
+
+    .product-item {
+      width: calc(100% / 4);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+
+      &:hover {
+
+        .product-item__title {
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+
+      &__title {
+        height: 50px;
+        line-height: 53px;
+        padding: 0 20px;
+        font-size: 24px;
+        font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+        text-transform: uppercase;
+        color: #ffffff;
+        background: transparent;
+        margin-bottom: -25px;
+        position: relative;
+
+        i {
+          font-style: normal;
+          position: relative;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(274.09deg, #285681 17.27%, #0F3354 72.8%);
+          border-radius: 9px;
+          transition: .1s all ease-in;
+          opacity: 0;
+        }
+      }
+
+      &__img {
+        height: 200px;
+        width: 100%;
+        position: relative;
+
+        img {
+          position: absolute;
+          left: calc(50% - 30px);
+          transform: translateX(-50%);
+          width: auto;
+          max-width: initial;
+        }
+      }
+    }
+  }
+}
