@@ -35,3 +35,22 @@ body {
   padding: 0 20px;
   position: relative;
 }
+
+.btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 53px;
+  padding: 0 30px;
+  background: linear-gradient(274.09deg, #285681 17.27%, #0F3354 72.8%);
+  border-radius: 9px;
+  color: #34C3FF;
+  font-size: 24px;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  transition: .1s all linear;
+  text-decoration: none;
+
+  &:hover {
+    color: #FFFFFF;
+    background: linear-gradient(224.09deg, #285681 17.27%, #0F3354 72.8%);
+  }
+}

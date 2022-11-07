@@ -14,12 +14,19 @@
             <div class="header__nav">
                 <div class="nav-panel">
                     <div class="nav-panel__row">
-                        <div class="nav-panel__col">
+                        <div class="nav-panel__col nav-panel__col--logo">
                             <a href="/" class="logo"><img src="images/logo.svg" alt="Промснаб"></a>
                         </div>
-                        <div class="nav-panel__col">
+                        <div class="nav-panel__col nav-panel__col--nav">
                             <nav class="nav nav--header">
                                 <ul>
+                                    <li class="toggle">
+                                        <a href="#">
+                                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 7H19M1 1H19M1 13H13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </a>
+                                    </li>
                                     <li><a href="#">Каталог</a></li>
                                     <li><a href="#">Оплата</a></li>
                                     <li><a href="#">О компании</a></li>
@@ -27,15 +34,15 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="nav-panel__col">
+                        <div class="nav-panel__col nav-panel__col--phone">
                             <div class="phone">
-                                <div class="phone__icon">
+                                <a href="tel:+79028005606" class="phone__icon">
                                     <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.2661 4.37301C12.0934 4.53371 12.8537 4.93652 13.4498 5.5299C14.0458 6.12328 14.4504 6.88023 14.6119 7.70386M11.2661 1C12.9849 1.1901 14.5878 1.9564 15.8115 3.17307C17.0351 4.38974 17.8069 5.98448 18 7.69543M8.02782 11.0036C7.01004 9.99033 6.20638 8.84466 5.61685 7.62226C5.56614 7.51711 5.54078 7.46454 5.5213 7.39802C5.45208 7.16161 5.5018 6.87131 5.64581 6.6711C5.68633 6.61476 5.73475 6.56656 5.83157 6.47017C6.1277 6.17536 6.27577 6.02796 6.37257 5.87973C6.73764 5.32075 6.73764 4.60012 6.37257 4.04113C6.27577 3.89291 6.1277 3.74551 5.83157 3.4507L5.66651 3.28637C5.21636 2.83823 4.99128 2.61416 4.74956 2.49245C4.26881 2.25037 3.70107 2.25037 3.22033 2.49245C2.9786 2.61416 2.75352 2.83823 2.30337 3.28638L2.16985 3.4193C1.72124 3.86591 1.49694 4.08921 1.32562 4.39281C1.13553 4.72969 0.998852 5.25292 1.00001 5.63932C1.00105 5.98754 1.0689 6.22553 1.2046 6.7015C1.93387 9.25942 3.30986 11.6731 5.33257 13.6868C7.35527 15.7005 9.7798 17.0703 12.3492 17.7963C12.8273 17.9314 13.0664 17.999 13.4161 18C13.8043 18.0011 14.3298 17.8651 14.6682 17.6758C14.9732 17.5053 15.1975 17.282 15.6461 16.8354L15.7796 16.7024C16.2298 16.2543 16.4549 16.0302 16.5771 15.7896C16.8203 15.311 16.8203 14.7458 16.5771 14.2672C16.4549 14.0265 16.2298 13.8025 15.7796 13.3543L15.6146 13.19C15.3185 12.8952 15.1704 12.7478 15.0215 12.6514C14.46 12.288 13.7361 12.288 13.1746 12.6514C13.0258 12.7478 12.8777 12.8952 12.5816 13.19C12.4847 13.2864 12.4363 13.3346 12.3797 13.3749C12.1786 13.5183 11.887 13.5678 11.6496 13.4989C11.5827 13.4795 11.5299 13.4543 11.4243 13.4038C10.1964 12.8169 9.0456 12.0168 8.02782 11.0036Z" stroke="#34C3FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </div>
+                                </a>
                                 <ul class="phone__list">
-                                    <li><a href="tel:+7 902 800 5606"><span>+7 902</span> 800 5606</a></li>
+                                    <li><a href="tel:+79028005606"><span>+7 902</span> 800 5606</a></li>
                                 </ul>
                                 <div class="phone__arrow">
                                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-panel__col">
+                        <div class="nav-panel__col nav-panel__col--price">
                             <a class="download-price" href="#">
                                 <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.0588 9.925V5.08C16.0588 3.65187 16.0588 2.9378 15.7511 2.39232C15.4804 1.91251 15.0484 1.52241 14.5172 1.27793C13.9132 1 13.1225 1 11.5412 1H5.51765C3.93632 1 3.14566 1 2.54167 1.27793C2.01039 1.52241 1.57845 1.91251 1.30775 2.39232C1 2.9378 1 3.65187 1 5.08V13.92C1 15.3481 1 16.0622 1.30775 16.6077C1.57845 17.0875 2.01039 17.4776 2.54167 17.7221C3.14566 18 3.93628 18 5.51751 18H9M10.4118 8.65H4.76471M6.64706 12.05H4.76471M12.2941 5.25H4.76471M11.3529 15.45L14.1765 18M14.1765 18L17 15.45M14.1765 18V12.9" stroke="#F0F0F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,8 +67,54 @@
     <section class="slider">
         <div class="slider__wrap">
             <div class="slider__list">
-                <div class="slider__item">
-
+                <div class="slider__item slider-item">
+                    <picture class="slider-item__img">
+                        <source srcset="images/slide_01_mobile.jpg" media="(max-width: 768px)">
+                        <img src="images/slide_01.jpg" alt="Крупнейший поставщик металлопроката в Челябинске">
+                    </picture>
+                    <div class="slider-item__wrap container">
+                        <div class="slider-item__content">
+                            <h2 class="slider-item__title">Крупнейший поставщик металлопроката в Челябинске</h2>
+                            <div class="slider-item__text">это богатый опыт и профессионализм, это позволяет нам занимать лидирующие позиции на рынке металлопроката.</div>
+                            <div class="slider-item__control">
+                                <a class="btn" href="#">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="favorites">
+        <div class="favorites__wrap container">
+            <div class="favorites__list">
+                <div class="favorites__item">
+                    <div class="favorite">
+                        <div class="favorite__pics"><img src="images/favorite_01.jpg" alt="Опытные специалисты"></div>
+                        <h3 class="favorite__title">Опытные специалисты</h3>
+                        <p class="favorite__text">Реализуем металлопродукцию с 2010 года</p>
+                    </div>
+                </div>
+                <div class="favorites__item">
+                    <div class="favorite">
+                        <div class="favorite__pics"><img src="images/favorite_02.jpg" alt="Помогаем с выбором"></div>
+                        <h3 class="favorite__title">Помогаем с выбором</h3>
+                        <p class="favorite__text">Отвечаем на вопросы клиентов в течение 10 минут</p>
+                    </div>
+                </div>
+                <div class="favorites__item">
+                    <div class="favorite">
+                        <div class="favorite__pics"><img src="images/favorite_03.jpg" alt="ценообразование"></div>
+                        <h3 class="favorite__title">ценообразование</h3>
+                        <p class="favorite__text">Мы можем предложить вам действительно низкие цены</p>
+                    </div>
+                </div>
+                <div class="favorites__item">
+                    <div class="favorite">
+                        <div class="favorite__pics"><img src="images/favorite_04.jpg" alt="Гарантия качества"></div>
+                        <h3 class="favorite__title">Гарантия качества</h3>
+                        <p class="favorite__text">Продукция соответствует стандартам ГОСТ и ТУ</p>
+                    </div>
                 </div>
             </div>
         </div>
