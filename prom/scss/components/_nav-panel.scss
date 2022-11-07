@@ -1,0 +1,77 @@
+.nav-panel {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 -10px;
+
+    @media #{$tablet} {
+      margin: 0;
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    @media #{$laptop_s} {
+      padding: 5px 10px;
+    }
+
+    @media #{$tablet} {
+      padding: 0;
+    }
+
+    &--logo {
+
+      @media #{$tablet} {
+        order: 2;
+        max-width: 155px;
+      }
+    }
+
+    &--nav {
+
+      @media #{$tablet} {
+        order: 1;
+      }
+    }
+
+    &--phone {
+
+      @media #{$tablet} {
+        order: 3;
+        padding: 0;
+
+        .phone {
+          margin-top: -10px;
+
+          &__list,
+          &__arrow {
+            display: none;
+          }
+
+          &__icon {
+            margin-right: 0;
+          }
+
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+
+    }
+
+    &--price {
+
+      @media #{$tablet} {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Reset CSS */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial Narrow", sans-serif;
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.btn {
+  display: inline-block;
+  height: 50px;
+  line-height: 53px;
+  padding: 0 30px;
+  background: linear-gradient(274.09deg, #285681 17.27%, #0F3354 72.8%);
+  border-radius: 9px;
+  color: #34C3FF;
+  font-size: 24px;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  transition: .1s all linear;
+  text-decoration: none;
+
+  &:hover {
+    color: #FFFFFF;
+    background: linear-gradient(224.09deg, #285681 17.27%, #0F3354 72.8%);
+  }
+}

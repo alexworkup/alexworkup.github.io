@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__wrap {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+
+    @media #{$phone} {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+
+  &__nav {
+    width: 100%;
+  }
+}
