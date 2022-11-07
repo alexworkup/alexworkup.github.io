@@ -1,6 +1,7 @@
 //Main
-@import 'variables';
-
+@import "variables";
+@import "general";
+@import "header";
 
 //Components
-
+@import "components/nav";
