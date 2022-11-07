@@ -1,5 +1,14 @@
 .header {
-  background: rgba(20, 39, 48, 0.5);
+  background: rgba(20, 39, 48, 1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  &__wrap {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 
   &__nav {
     width: 100%;

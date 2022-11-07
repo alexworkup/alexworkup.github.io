@@ -1,0 +1,47 @@
+.phone {
+  display: flex;
+  align-items: center;
+
+  &__icon,
+  &__arrow {
+    font-size: 0;
+  }
+
+  &__icon {
+    margin-right: 13px;
+  }
+
+  &__arrow {
+    width: 28px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+
+      a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        transition: .1s all linear;
+
+        &:hover {
+          color: #34C3FF;
+        }
+
+        span {
+          color: #959DA4;
+        }
+      }
+    }
+  }
+}

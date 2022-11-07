@@ -1,7 +1,11 @@
 //Main
+@import "fonts";
 @import "variables";
 @import "general";
 @import "header";
 
 //Components
 @import "components/nav";
+@import "components/nav-panel";
+@import "components/phone";
+@import "components/download-price";

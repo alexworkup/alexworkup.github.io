@@ -1,6 +1,14 @@
 .nav-panel {
+  padding: 10px 0;
 
   &__row {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
   }
 }

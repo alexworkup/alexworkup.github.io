@@ -3,15 +3,22 @@
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 -30px;
     display: flex;
+    font-weight: bold;
 
     li {
+      padding: 0 30px;
 
       a {
         text-decoration: none;
         color: #FFFFFF;
         text-transform: uppercase;
+        transition: .1s all linear;
+
+        &:hover {
+          color: #34C3FF;
+        }
       }
     }
   }

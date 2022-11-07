@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat/Montserrat-Bold.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat/Montserrat-Medium.woff2") format("woff2"), url("../fonts/montserrat/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/bebas/bebasneuebold.woff2") format("woff2"), url("../fonts/bebas/bebasneuebold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
 /* Reset CSS */
 *,
 *::before,
@@ -26,6 +47,7 @@ img {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", "Arial Narrow", sans-serif;
 }
 
 .container {
@@ -36,7 +58,15 @@ body {
 }
 
 .header {
-  background: rgba(20, 39, 48, 0.5);
+  background: rgb(20, 39, 48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header__wrap {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .header__nav {
   width: 100%;
@@ -45,13 +75,90 @@ body {
 .nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 -30px;
   display: flex;
+  font-weight: bold;
+}
+.nav ul li {
+  padding: 0 30px;
 }
 .nav ul li a {
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
+  transition: 0.1s all linear;
+}
+.nav ul li a:hover {
+  color: #34C3FF;
+}
+
+.nav-panel {
+  padding: 10px 0;
+}
+.nav-panel__row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav-panel__col {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+}
+.phone__icon, .phone__arrow {
+  font-size: 0;
+}
+.phone__icon {
+  margin-right: 13px;
+}
+.phone__arrow {
+  width: 28px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.phone ul {
+  margin: 0;
+  padding: 0;
+}
+.phone ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  transition: 0.1s all linear;
+}
+.phone ul li a:hover {
+  color: #34C3FF;
+}
+.phone ul li a span {
+  color: #959DA4;
+}
+
+.download-price {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #34C3FF;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 24px;
+  transition: 0.1s all linear;
+}
+.download-price:hover {
+  color: #FFFFFF;
+}
+.download-price svg {
+  margin-right: 12px;
+  margin-top: -2px;
 }
 
 /*# sourceMappingURL=style.css.map */
