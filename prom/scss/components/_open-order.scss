@@ -1,0 +1,20 @@
+.open-order {
+  background-color: #0d151f;
+  background-image: url("../images/open-order-bg.jpg");
+  padding: 36px 0;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__form {
+
+    label {
+      display: flex;
+
+      input {
+
+      }
+    }
+  }
+}

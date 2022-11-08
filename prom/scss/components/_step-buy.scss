@@ -1,0 +1,74 @@
+.step-buy {
+  margin-bottom: 150px;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+  }
+
+  &__wrap {
+    padding-top: 45px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 50px);
+    margin: 0 -25px;
+  }
+
+  &__item {
+    width: calc(100% / 3);
+    padding: 25px;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+
+    &:hover {
+
+      .step-item__num {
+        color: #b1b7c0;
+
+        &:before {
+          bottom: -20px;
+        }
+      }
+    }
+
+    &__title {
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: 32px;
+      line-height: 1em;
+      color: #30414E;
+    }
+
+    &__text {
+      color: #7E8D98;
+      font-family: "Gilroy", "Arial Narrow", sans-serif;
+      font-weight: 500;
+      line-height: 1.2em;
+    }
+
+    &__num {
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      font-size: 150px;
+      line-height: .8em;
+      color: #D8E1EA;
+      position: relative;
+      margin-right: 20px;
+      transition: .2s color linear;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 84px;
+        background-image: url("../images/angle.svg");
+        bottom: 0;
+        transition: .2s bottom linear;
+      }
+    }
+  }
+}
