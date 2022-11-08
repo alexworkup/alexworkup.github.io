@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -246,22 +248,46 @@
                 <div class="open-order__content">
                     <h2 class="open-order__title">Оставьте заявку</h2>
                     <div class="open-order__form">
-                        <form action="#">
-                            <label>
-                                <input name="name" type="text" placeholder="Ваше Имя">
-                            </label>
-                            <label>
-                                <input name="phone" type="tel" placeholder="Телефон">
-                            </label>
-                            <label>
-                                <input name="phone" type="email" placeholder="Ваша почта">
+                        <form class="form" action="#">
+                            <div class="form__row">
+                                <label>
+                                    <input name="name" type="text" placeholder="Ваше Имя">
+                                </label>
+                            </div>
+                            <div class="form__row">
+                                <label>
+                                    <input name="phone" type="tel" placeholder="Телефон">
+                                </label>
+                            </div>
+                            <div class="form__row form__row--phone">
+                                <label>
+                                    <input name="phone" type="email" placeholder="Ваша почта">
+                                </label>
                                 <a href="#" class="btn">отправить ЗАЯВКУ</a>
-                            </label>
+                            </div>
+                            <div class="form__row">
+                                <label class="check">
+                                    <input type="checkbox" checked>
+                                    <span>Я согласен на обработку персональных данных</span>
+                                </label>
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div class="open-order__img">
+                    <img src="images/order-person.png" alt="Оставьте заявку">
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <h2 class="h2 partners__title">Наши  партнеры</h2>
+            <div class="partners__wrap container">
+                <div class="partners-list">
+                    <div class="partners-list__wrap">
+                        <div class="partners-list__item">
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
