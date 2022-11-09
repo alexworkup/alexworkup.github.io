@@ -5,6 +5,7 @@
 
   @media #{$phone} {
     max-height: 290px;
+    margin-top: 50px;
   }
 
   &__wrap,
@@ -52,6 +53,10 @@
       font-size: 150px;
     }
 
+    @media #{$tablet} {
+      font-size: 100px;
+    }
+
     @media #{$phone} {
       font-size: 70px;
       color: rgba(128, 146, 159, 0.5);
@@ -77,9 +82,14 @@
   }
 
   .product-list {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: auto;
+    width: 100%;
+    overflow: inherit;
+
+    &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     @media #{$notebook} {
       margin-bottom: -50px;
@@ -94,7 +104,7 @@
       text-decoration: none;
 
       @media #{$tablet} {
-        width: calc(100% / 3);
+        width: calc(100% / 2);
       }
 
       &:hover {

@@ -5,6 +5,11 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
+    @media #{$tablet} {
+      flex-wrap: nowrap;
+      margin: 0 -10px;
+    }
   }
 
   &__item {
@@ -12,12 +17,9 @@
     padding: 0 15px;
 
     @media #{$tablet} {
-      width: calc(100% / 2);
-      margin-bottom: 20px;
-    }
-
-    @media #{$phone} {
       width: 100%;
+      padding: 0 10px;
+      margin-bottom: 20px;
     }
 
     .favorite {
@@ -30,6 +32,10 @@
         margin-bottom: 18px;
         display: block;
         overflow: hidden;
+
+        @media #{$phone} {
+          height: 124px;
+        }
 
         img {
           width: 100%;

@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
     /* PHONE */
 
-    /* SLIDER */
+    /* MAIN SLIDER */
     const mainSlider = new Swiper('.js-slider .swiper', {
         effect: 'fade',
 
@@ -59,5 +59,44 @@ $(document).ready(function () {
             }
         }
     });
-    /* SLIDER */
+    /* MAIN SLIDER */
+
+    /* OTHER SLIDERS */
+    if(isMobile) {
+        const favoritesSlider = new Swiper('.js-slider-favorites .swiper', {
+            slidesPerView: 1.25,
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1.25,
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 2.25,
+                },
+
+            }
+        });
+
+        const productsSlider = new Swiper('.js-slider-products .swiper', {
+            slidesPerView: 1.25,
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1.25,
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 2.25,
+                },
+
+            }
+        });
+    }
+    /* OTHER SLIDERS */
+
+
+
 });

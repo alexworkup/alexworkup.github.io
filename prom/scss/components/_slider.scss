@@ -7,6 +7,10 @@
     height: 584px;
   }
 
+  @media #{$phone} {
+    margin-bottom: 42px;
+  }
+
   &__wrap,
   &__list {
     height: 100%;

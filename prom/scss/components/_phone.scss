@@ -8,6 +8,10 @@
     .phone__arrow {
       transform: scale(1, -1);
     }
+
+    .phone__list {
+      display: block;
+    }
   }
 
   &__icon,
@@ -28,6 +32,24 @@
     cursor: pointer;
     z-index: 2;
     transition: .2s all ease-in;
+
+    &:hover {
+
+      svg {
+
+        path {
+          stroke: #34C3FF;
+        }
+      }
+    }
+
+
+    svg {
+
+      path {
+        transition: .2s all linear;
+      }
+    }
   }
 
   &__main {
@@ -39,7 +61,7 @@
     z-index: 2;
     transition: .1s all linear;
 
-    @media #{$phone} {
+    @media #{$tablet} {
       display: none;
     }
 
@@ -58,8 +80,6 @@
     top: 25px;
     right: 0;
     padding: 10px 28px 10px 10px;
-    height: 0;
-    overflow: hidden;
     display: none;
     //box-shadow: 0 10px 10px rgb(0 0 0 / 30%);
 
