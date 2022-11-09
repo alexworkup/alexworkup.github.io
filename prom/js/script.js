@@ -39,6 +39,7 @@ $(document).ready(function () {
                 $('body').toggleClass('open-mobile');
                 return false;
             });
+
         } else {
 
         }
