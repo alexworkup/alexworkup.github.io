@@ -13,6 +13,10 @@
     .header__wrap {
       padding-top: 0;
       padding-bottom: 0;
+
+      @media #{$phone} {
+        padding: 13px 25px;
+      }
     }
   }
 
@@ -23,8 +27,7 @@
     transition: .2s all ease-in;
 
     @media #{$phone} {
-      padding-top: 13px;
-      padding-bottom: 13px;
+      padding: 13px 25px;
     }
   }
 

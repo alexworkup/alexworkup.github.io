@@ -1,0 +1,30 @@
+.partners {
+  margin-bottom: 70px;
+
+  &__title {
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+
+  &__text {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #94A0A9;
+  }
+
+  .partners-list {
+    margin-bottom: 50px;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__item {
+      padding: 10px;
+    }
+  }
+}
