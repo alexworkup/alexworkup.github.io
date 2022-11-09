@@ -9,15 +9,26 @@
     flex-wrap: wrap;
     font-weight: bold;
 
-    @media #{$notebook} {
+
+
+    @media #{$laptop_l} {
       margin: 0 -20px;
+    }
+
+    @media #{$tablet} {
+      margin: 0 -10px;
     }
 
     li {
       padding: 10px 30px;
 
-      @media #{$phone} {
+      @media #{$laptop_l} {
+        padding: 10px 20px;
+      }
+
+      @media #{$laptop_s} {
         font-size: 14px;
+        padding: 10px;
       }
 
       &:not(.toggle) {
@@ -30,6 +41,10 @@
       &.toggle {
         padding-right: 0;
         margin-right: -10px;
+
+        @media #{$laptop_l} {
+          margin-right: 0;
+        }
 
         a {
           width: 22px;
@@ -59,10 +74,6 @@
             height: 15px;
           }
         }
-      }
-
-      @media #{$notebook} {
-        padding: 10px 20px;
       }
 
       a {

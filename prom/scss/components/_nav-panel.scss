@@ -27,9 +27,12 @@
 
     &--logo {
 
+      @media #{$laptop_s} {
+        max-width: 155px;
+      }
+
       @media #{$tablet} {
         order: 2;
-        max-width: 155px;
       }
     }
 
