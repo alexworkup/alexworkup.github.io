@@ -41,6 +41,10 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
+
+  @media #{$phone_s} {
+    padding: 0 10px;
+  }
 }
 
 .wrapper {

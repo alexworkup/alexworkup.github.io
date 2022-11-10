@@ -4,6 +4,14 @@
   &__title {
     text-align: center;
     margin: 0 0 50px 0;
+
+    @media #{$phone} {
+      font-size: 60px;
+    }
+
+    @media #{$laptop_l} {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -12,19 +20,56 @@
     font-size: 16px;
     line-height: 19px;
     color: #94A0A9;
+
+    @media #{$tablet} {
+
+      br {
+        display: none;
+      }
+    }
+
+    @media #{$tablet} {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
   }
 
   .partners-list {
     margin-bottom: 50px;
+    
+    @media #{$phone} {
+      margin-bottom: 0;
+    }
 
     &__wrap {
       display: flex;
       justify-content: space-around;
       align-items: center;
+
+      @media #{$laptop_s} {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media #{$tablet} {
+        flex-wrap: nowrap;
+        justify-content: inherit;
+      }
     }
 
     &__item {
       padding: 10px;
+      width: auto;
+
+      img {
+        display: inline-block;
+      }
+      
+      @media #{$laptop_s} {
+        width: calc(100% / 3);
+        text-align: center;
+      }
     }
   }
 }

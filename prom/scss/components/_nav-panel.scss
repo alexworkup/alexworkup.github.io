@@ -3,11 +3,12 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: calc(100% + 20px);
     justify-content: space-between;
     margin: 0 -10px;
 
     @media #{$tablet} {
+      width: 100%;
       margin: 0;
     }
   }
@@ -50,7 +51,7 @@
         padding: 0;
 
         .phone {
-          margin-top: -10px;
+          margin-top: -5px;
 
           &__list,
           &__arrow {

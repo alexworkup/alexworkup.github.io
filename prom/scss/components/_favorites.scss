@@ -5,10 +5,12 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    width: calc(100% + 30px);
 
     @media #{$tablet} {
       flex-wrap: nowrap;
       margin: 0 -10px;
+      width: calc(100% + 20px);
     }
   }
 
@@ -16,9 +18,17 @@
     width: calc(100% / 4);
     padding: 0 15px;
 
+    @media #{$laptop_s} {
+      width: calc(100% / 2);
+      padding-bottom: 15px;
+    }
+
     @media #{$tablet} {
-      width: 100%;
       padding: 0 10px;
+    }
+
+    @media #{$phone} {
+      width: 100%;
       margin-bottom: 20px;
     }
 

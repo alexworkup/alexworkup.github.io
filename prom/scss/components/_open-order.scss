@@ -6,24 +6,66 @@
   background-position: center;
   background-size: cover;
 
+  @media #{$phone} {
+    padding-top: 10px;
+    margin-bottom: 50px;
+  }
+
   &__title {
     margin: 0 0 10px 0;
     font-size: 120px;
     line-height: 1em;
     color: rgba(198, 231, 255, 0.4);
     font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    @media #{$notebook} {
+      font-size: 80px;
+    }
+
+    @media #{$phone} {
+      line-height: .8em;
+    }
   }
 
   &__content {
     width: 50%;
     max-width: 680px;
     padding-bottom: 36px;
+
+    @media #{$laptop_l} {
+      width: 60%;
+    }
+
+    @media #{$laptop_s} {
+      width: 100%;
+    }
   }
 
   &__img {
     width: 50%;
     position: relative;
     padding-bottom: 36px;
+    pointer-events: none;
+
+    @media #{$laptop_l} {
+      width: 40%;
+    }
+
+    @media #{$laptop_s} {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media #{$tablet} {
+      width: 50%;
+      right: -100px;
+    }
+
+    @media #{$phone} {
+      width: 90%;
+      right: -140px;
+    }
 
     img {
       position: absolute;
@@ -45,16 +87,33 @@
         display: flex;
         margin-bottom: 16px;
 
+        @media #{$laptop_s} {
+          flex-wrap: wrap;
+        }
+
+        @media #{$phone} {
+          margin-bottom: 10px;
+        }
+
         &--phone {
 
           label {
             margin-right: 17px;
+
+            @media #{$laptop_s} {
+              margin-right: 0;
+              margin-bottom: 16px;
+            }
           }
         }
 
         label {
           flex-grow: 1;
           position: relative;
+
+          @media #{$laptop_s} {
+            width: 100%;
+          }
 
           &:before {
             content: '';
@@ -95,6 +154,17 @@
               font-size: 16px;
               position: relative;
               padding-left: 36px;
+              display: flex;
+
+              @media #{$phone} {
+                font-size: 14px;
+                line-height: .8em;
+                font-weight: 500;
+                z-index: 10;
+                max-width: 80%;
+                color: #A2B8CB;
+                opacity: .9;
+              }
 
               &:before {
                 content: '';
@@ -132,6 +202,12 @@
           font-family: "Gilroy", "Arial Narrow", sans-serif;
           color: #ffffff;
 
+          @media #{$phone} {
+            height: 55px;
+            font-size: 16px;
+            padding: 0 15px;
+          }
+
           &::placeholder {
             font-family: "Gilroy", "Arial Narrow", sans-serif;
             color: #A2B8CB;
@@ -142,6 +218,10 @@
           display: flex;
           align-items: center;
           height: auto;
+
+          @media #{$phone} {
+            z-index: 10;
+          }
         }
       }
     }
