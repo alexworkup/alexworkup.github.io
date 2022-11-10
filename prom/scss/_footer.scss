@@ -1,10 +1,10 @@
 .footer {
   background-color: #0d151f;
   height: 390px;
-  display: flex;
-  flex-direction: column;
+  @include vp-display(flex);
+  @include vp-flex-direction(column);
   background-image: url("../images/footer-bg.jpg");
-  background-size: cover;
+  @include vp-background-size(cover);
   position: relative;
   
   @media #{$tablet} {
@@ -23,7 +23,7 @@
     background-image: url("../images/emblem.svg");
     left: calc(50% - 100px);
     top: calc(50% + 20px);
-    transform: translateY(-50%);
+    @include vp-transform(translateY(-50%));
     background-repeat: no-repeat;
 
     @media #{$tablet} {
@@ -31,7 +31,7 @@
       top: calc(50% - 30px);
       width: 200px;
       height: 200px;
-      background-size: cover;
+      @include vp-background-size(cover);
     }
 
     @media #{$phone} {
@@ -59,12 +59,12 @@
       @media #{$tablet} {
 
         &__col--phone {
-          order: 3;
+          @include vp-order(3);
         }
 
         &__col--socials {
           display: block;
-          order: 2;
+          @include vp-order(2);
           margin-left: auto;
           margin-right: 20px;
 
@@ -77,7 +77,7 @@
         }
 
         &__col--logo {
-          order: 1;
+          @include vp-order(1);
 
           img {
             max-width: 130px;
@@ -86,7 +86,7 @@
 
         &__col--nav {
           width: 100%;
-          order: 4;
+          @include vp-order(4);
         }
 
         .nav {
@@ -95,7 +95,7 @@
           ul {
             margin: 0 -5px;
             width: 100%;
-            justify-content: space-between;
+            @include vp-justify-content(space-between);
 
             li {
               display: block;
@@ -121,9 +121,9 @@
   }
 
   &__row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include vp-display(flex);
+    @include vp-justify-content(space-between);
+    @include vp-flex-wrap(wrap);
     padding-bottom: 10px;
   }
 
@@ -133,8 +133,8 @@
 
   &__copyright,
   &__dev {
-    display: flex;
-    align-items: center;
+    @include vp-display(flex);
+    @include vp-align-items(center);
   }
 
   &__copyright {
@@ -144,7 +144,7 @@
     font-weight: 500;
 
     @media #{$tablet} {
-      order: 2;
+      @include vp-order(2);
     }
 
     @media #{$phone} {
@@ -157,10 +157,10 @@
 
       @media #{$phone} {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include vp-display(flex);
+        @include vp-align-items(center);
+        @include vp-justify-content(space-between);
+        @include vp-flex-wrap(wrap);
       }
 
       span {
@@ -175,7 +175,7 @@
       a {
         color: #607687;
         text-decoration: none;
-        transition: .2s color linear;
+        @include vp-transition(.2s color linear);
 
         &:hover {
           color: #34C3FF;
@@ -189,8 +189,8 @@
 
     @media #{$tablet} {
       width: 100%;
-      order: 1;
-      justify-content: space-between;
+      @include vp-order(1);
+      @include vp-justify-content(space-between);
     }
 
     .footer-email {
@@ -199,10 +199,10 @@
       line-height: 19px;
       color: #708A9F;
       text-decoration: none;
-      display: flex;
-      align-items: center;
       margin-right: 40px;
-      transition: .2s color linear;
+      @include vp-display(flex);
+      @include vp-align-items(center);
+      @include vp-transition(.2s color linear);
 
       &:hover {
         color: #34C3FF;

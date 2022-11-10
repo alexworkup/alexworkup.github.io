@@ -5,8 +5,8 @@
     list-style: none;
     padding: 0;
     margin: 0 -30px;
-    display: flex;
-    flex-wrap: wrap;
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
     font-weight: bold;
 
     @media #{$laptop_l} {
@@ -78,7 +78,7 @@
         text-decoration: none;
         color: #FFFFFF;
         text-transform: uppercase;
-        transition: .1s all linear;
+        @include vp-transition(.1s all linear);
 
         &:hover {
           color: #34C3FF;
@@ -90,7 +90,7 @@
   &--mobile {
 
     ul {
-      flex-direction: column;
+      @include vp-flex-direction(column);
 
       li {
         margin-bottom: 5px;

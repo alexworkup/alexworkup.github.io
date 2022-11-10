@@ -43,18 +43,18 @@
     }
 
     &__wrap {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      @include vp-display(flex);
+      @include vp-justify-content(space-around);
+      @include vp-align-items(center);
 
       @media #{$laptop_s} {
-        flex-wrap: wrap;
-        justify-content: center;
+        @include vp-flex-wrap(wrap);
+        @include vp-justify-content(center);
       }
 
       @media #{$tablet} {
-        flex-wrap: nowrap;
-        justify-content: inherit;
+        @include vp-flex-wrap(nowrap);
+        @include vp-justify-content(inherit);
       }
     }
 

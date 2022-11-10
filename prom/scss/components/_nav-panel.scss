@@ -1,10 +1,10 @@
 .nav-panel {
 
   &__row {
-    display: flex;
-    flex-wrap: wrap;
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
     width: calc(100% + 20px);
-    justify-content: space-between;
+    @include vp-justify-content(space-between);
     margin: 0 -10px;
 
     @media #{$tablet} {
@@ -14,8 +14,8 @@
   }
 
   &__col {
-    display: flex;
-    align-items: center;
+    @include vp-display(flex);
+    @include vp-align-items(center);
     padding: 10px;
 
     @media #{$laptop_s} {
@@ -33,21 +33,21 @@
       }
 
       @media #{$tablet} {
-        order: 2;
+        @include vp-order(2);
       }
     }
 
     &--nav {
 
       @media #{$tablet} {
-        order: 1;
+        @include vp-order(1);
       }
     }
 
     &--phone {
 
       @media #{$tablet} {
-        order: 3;
+        @include vp-order(3);
         padding: 0;
 
         .phone {

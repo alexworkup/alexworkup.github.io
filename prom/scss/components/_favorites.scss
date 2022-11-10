@@ -2,13 +2,13 @@
   margin-bottom: 70px;
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
     margin: 0 -15px;
     width: calc(100% + 30px);
 
     @media #{$tablet} {
-      flex-wrap: nowrap;
+      @include vp-flex-wrap(nowrap);
       margin: 0 -10px;
       width: calc(100% + 20px);
     }

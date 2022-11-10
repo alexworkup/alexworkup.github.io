@@ -1,8 +1,8 @@
 .contacts-list {
 
   .contact-item {
-    display: flex;
     margin-bottom: 15px;
+    @include vp-display(flex);
 
     &:last-child {
       margin-bottom: 0;

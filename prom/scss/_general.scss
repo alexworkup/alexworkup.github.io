@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  @include vp-box-sizing(border-box);
 }
 
 ul[class],
@@ -70,7 +70,7 @@ body {
   color: #34C3FF;
   font-size: 24px;
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
-  transition: .1s all linear;
+  @include vp-transition(.1s all linear);
   text-decoration: none;
 
   &:hover {
@@ -92,7 +92,7 @@ body {
     max-width: 820px;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%);
+    @include vp-transform(translateX(-50%));
   }
 
   span {

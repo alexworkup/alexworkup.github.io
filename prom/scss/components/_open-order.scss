@@ -4,7 +4,7 @@
   padding-top: 36px;
   margin-bottom: 70px;
   background-position: center;
-  background-size: cover;
+  @include vp-background-size(cover);
 
   @media #{$phone} {
     padding-top: 10px;
@@ -71,12 +71,12 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      transform: translateX(-50%);
+      @include vp-transform(translateX(-50%));
     }
   }
 
   &__wrap {
-    display: flex;
+    @include vp-display(flex);
   }
 
   &__form {
@@ -84,11 +84,11 @@
     .form {
 
       &__row {
-        display: flex;
+        @include vp-display(flex);
         margin-bottom: 16px;
 
         @media #{$laptop_s} {
-          flex-wrap: wrap;
+          @include vp-flex-wrap(wrap);
         }
 
         @media #{$phone} {
@@ -154,7 +154,7 @@
               font-size: 16px;
               position: relative;
               padding-left: 36px;
-              display: flex;
+              @include vp-display(flex);
 
               @media #{$phone} {
                 font-size: 14px;
@@ -177,7 +177,7 @@
                 border-radius: 5px;
                 left: 0;
                 top: 50%;
-                transform: translateY(-50%);
+                @include vp-transform(translateY(-50%));
               }
             }
           }
@@ -193,7 +193,7 @@
           width: 100%;
           background: rgba(21, 36, 50, 0.5);
           border-radius: 11px;
-          appearance: none;
+          @include vp-appearance(none);
           height: 60px;
           padding: 0 27px;
           border: none;
@@ -215,8 +215,8 @@
         }
 
         a.btn {
-          display: flex;
-          align-items: center;
+          @include vp-display(flex);
+          @include vp-align-items(center);
           height: auto;
 
           @media #{$phone} {

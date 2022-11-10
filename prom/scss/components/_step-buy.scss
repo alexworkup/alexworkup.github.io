@@ -23,8 +23,8 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
     width: calc(100% + 50px);
     margin: 0 -25px;
 
@@ -48,8 +48,8 @@
   }
 
   .step-item {
-    display: flex;
-    align-items: flex-start;
+    @include vp-display(flex);
+    @include vp-align-items(flex-start);
 
     &:hover {
 
@@ -94,7 +94,7 @@
       color: #D8E1EA;
       position: relative;
       margin-right: 20px;
-      transition: .2s color linear;
+      @include vp-transition(.2s color linear);
 
       @media #{$phone} {
         font-size: 110px;
@@ -107,7 +107,7 @@
         height: 84px;
         background-image: url("../images/angle.svg");
         bottom: 0;
-        transition: .2s bottom linear;
+        @include vp-transition(.2s bottom linear);
 
         @media #{$phone} {
           bottom: -20px;

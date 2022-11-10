@@ -1,13 +1,13 @@
 .download-price {
-  display: flex;
-  align-items: center;
+  @include vp-display(flex);
+  @include vp-align-items(center);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   color: #34C3FF;
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
   font-size: 24px;
-  transition: .1s all linear;
+  @include vp-transition(.1s all linear);
 
   &:hover {
     color: #FFFFFF;

@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 100;
   background-color: transparent;
-  transition: .2s background-color ease-in;
+  @include vp-transition(.2s background-color ease-in);
 
   &--color {
     background: rgba(20, 39, 48, .9);
@@ -24,7 +24,7 @@
     padding-top: 25px;
     padding-bottom: 25px;
     position: relative;
-    transition: .2s all ease-in;
+    @include vp-transition(.2s all ease-in);
 
     @media #{$phone} {
       padding: 13px 25px;
