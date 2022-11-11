@@ -48,10 +48,6 @@ $(document).ready(function () {
 
                     breakpoints: {
 
-                        320: {
-                            slidesPerView: 1.25,
-                        },
-
                         480: {
                             slidesPerView: 2.25,
                         },
@@ -138,4 +134,13 @@ $(document).ready(function () {
             return false;
         }
     }
+
+    $(document).on('click', '.js-up', function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+    });
 });

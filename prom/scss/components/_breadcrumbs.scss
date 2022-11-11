@@ -1,0 +1,47 @@
+.breadcrumbs {
+
+  ul {
+    margin: 0 0 38px 0;
+    list-style: none;
+    padding: 0;
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
+
+    li {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      padding-right: 20px;
+      position: relative;
+
+      &:last-child {
+
+        &:before {
+          content: none;
+        }
+      }
+
+      span {
+        color: #bdbdbd;
+      }
+
+      &:before {
+        content: '>';
+        position: absolute;
+        right: 5px;
+        color: #434D5B;
+      }
+
+      a {
+        color: #434D5B;
+        text-decoration: none;
+        @include vp-transition(.2s color linear);
+
+        &:hover {
+          color: #bdbdbd;
+        }
+      }
+    }
+  }
+
+}
