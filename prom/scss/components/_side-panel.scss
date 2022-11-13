@@ -15,6 +15,10 @@
     @include vp-align-items(center);
     @include vp-justify-content(center);
 
+    @media #{$phone} {
+      width: 35px;
+    }
+
     &:first-child {
       z-index: 1;
 

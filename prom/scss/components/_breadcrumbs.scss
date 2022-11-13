@@ -7,6 +7,10 @@
     @include vp-display(flex);
     @include vp-flex-wrap(wrap);
 
+    @media #{$phone} {
+      margin: 0 0 20px 0;
+    }
+
     li {
       font-size: 14px;
       font-weight: 500;

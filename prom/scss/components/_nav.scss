@@ -24,7 +24,7 @@
         padding: 10px 20px;
       }
 
-      @media #{$laptop_s} {
+      @media screen and (max-width: 1280px) {
         font-size: 14px;
         padding: 10px;
       }
@@ -80,7 +80,8 @@
         text-transform: uppercase;
         @include vp-transition(.1s all linear);
 
-        &:hover {
+        &:hover,
+        &.selected {
           color: #34C3FF;
         }
       }

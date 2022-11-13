@@ -1,0 +1,158 @@
+.contacts {
+  margin-bottom: 70px;
+  
+  @media #{$laptop_l} {
+    margin-bottom: 0;
+  }
+
+  &__wrap {
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
+  }
+
+  &__map {
+    width: 100%;
+    margin-bottom: -30px;
+
+    @media #{$phone} {
+      @include vp-order(2);
+      width: calc(100% + 40px);
+      margin: -30px -20px 0 -20px;
+    }
+
+    .map {
+      height: 284px;
+      background-color: #ffffff;
+      background-image: url("../images/map-bg.jpg");
+      background-position: center;
+
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+
+  &__address {
+    padding: 30px;
+    background-color: white;
+    min-width: 430px;
+    margin-right: 34px;
+    position: relative;
+    
+    @media #{$notebook} {
+      min-width: auto;
+      max-width: 360px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0;
+    }
+    
+    @media #{$phone} {
+      @include vp-order(1);
+      padding: 20px;
+    }
+
+    .h2 {
+      @media #{$phone} {
+        margin-top: 0;
+      }
+    }
+
+    .contact-item {
+
+      &__icon {
+
+        svg {
+
+          path {
+            stroke: #C3D5DD;
+          }
+        }
+      }
+
+      &__text {
+
+        span {
+          color: #C4CCCF;
+        }
+
+        p {
+          color: #495864;
+          line-height: 1.3em;
+
+          a {
+            color: #495864;
+          }
+        }
+      }
+    }
+  }
+
+  &__requisites {
+    padding-top: 30px;
+    @include vp-flex-grow(1);
+
+    @media screen and (max-width: 1280px) {
+      width: 100%;
+    }
+
+    @media #{$phone} {
+      @include vp-order(3);
+    }
+
+    .h2 {
+      margin-left: 20px;
+
+      @media #{$phone} {
+        margin-left: 10px;
+        margin-top: 0;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      tr {
+
+        @media #{$phone} {
+          @include vp-display(flex);
+          @include vp-flex-wrap(wrap);
+          margin-bottom: 10px;
+          padding:  5px 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(even) {
+          background-color: #ffffff;
+        }
+
+        td {
+          padding: 12px 20px;
+          border: none;
+          font-weight: 500;
+          vertical-align: top;
+          line-height: 1.5em;
+          color: #30414E;
+          max-width: 500px;
+
+          @media #{$phone} {
+            padding: 0;
+            line-height: 1.2em;
+            width: 100%;
+          }
+
+          &:first-child {
+            color: #607687;
+          }
+        }
+      }
+    }
+  }
+}

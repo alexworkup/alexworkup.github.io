@@ -28,7 +28,7 @@
 
     &--logo {
 
-      @media #{$laptop_s} {
+      @media screen and (max-width: 1280px) {
         max-width: 155px;
       }
 

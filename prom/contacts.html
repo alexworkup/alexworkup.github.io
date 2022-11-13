@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
-<body class="index">
+<body class="page">
     <div class="wrapper">
         <header class="header">
             <div class="header__wrap container">
@@ -22,7 +22,7 @@
                     <div class="nav-panel">
                         <div class="nav-panel__row">
                             <div class="nav-panel__col nav-panel__col--logo">
-                                <a href="/" class="logo"><img src="images/logo.svg" alt="Промснаб"></a>
+                                <a href="index.html" class="logo"><img src="images/logo.svg" alt="Промснаб"></a>
                             </div>
                             <div class="nav-panel__col nav-panel__col--nav">
                                 <nav class="nav nav--header">
@@ -40,7 +40,7 @@
                                         <li><a href="catalog.html">Каталог</a></li>
                                         <li><a href="payment.html">Оплата</a></li>
                                         <li><a href="about.html">О компании</a></li>
-                                        <li><a href="contacts.html">Контакты</a></li>
+                                        <li><a class="selected" href="contacts.html">Контакты</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -94,7 +94,7 @@
                             <li><a href="catalog.html">Каталог</a></li>
                             <li><a href="payment.html">Оплата</a></li>
                             <li><a href="about.html">О компании</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
+                            <li><a class="selected" href="contacts.html">Контакты</a></li>
                         </ul>
                     </nav>
                     <a class="download-price" data-fancybox data-src="#order-price" href="#">
@@ -199,207 +199,132 @@
                 </svg>
             </div>
         </div>
-        <section class="slider js-slider js-slider--main">
-            <div class="slider__wrap swiper">
-                <div class="slider__list swiper-wrapper">
-                    <div class="slider__item swiper-slide">
-                        <div class="slider-item">
-                            <picture class="slider-item__img">
-                                <source srcset="images/slide_01_mobile.jpg" media="(max-width: 768px)">
-                                <img src="images/slide_01.jpg" alt="Крупнейший поставщик металлопроката в Челябинске">
-                            </picture>
-                            <div class="slider-item__wrap container">
-                                <div class="slider-item__content">
-                                    <h2 class="slider-item__title">Крупнейший поставщик металлопроката в Челябинске</h2>
-                                    <div class="slider-item__text">это богатый опыт и профессионализм, это позволяет нам занимать лидирующие позиции на рынке металлопроката.</div>
-                                    <div class="slider-item__control">
-                                        <a class="btn" href="#">Оставить заявку</a>
+        <main class="main">
+            <div class="main__header">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><span>Контакты</span></li>
+                        </ul>
+                    </div>
+                    <h1 class="h1">Контакты</h1>
+                </div>
+            </div>
+            <div class="main__wrap container">
+                <div class="main__content main__content--contacts">
+                    <div class="contacts">
+                        <div class="contacts__wrap">
+                            <div class="contacts__map">
+                                <div class="map" id="map">
+                                    <script id="ymap_lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f9bbd69b3918de4d5ec4159914ef548bcc355332d4ad693adbf0cca824112f2&amp;width=100%25&amp;height=284&amp;lang=ru_RU&amp;scroll=true"></script>
+                                </div>
+                            </div>
+                            <div class="contacts__address">
+                                <h2 class="h2">ООО “ПРОМСНАБ”</h2>
+                                <div class="contacts-list">
+                                    <div class="contact-item">
+                                        <div class="contact-item__icon">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.15 13.9007C2.20607 14.7582 1 15.9532 1 17.275C1 19.8845 5.70101 22 11.5 22C17.299 22 22 19.8845 22 17.275C22 15.9532 20.7939 14.7582 18.85 13.9007M17.8 7.3C17.8 11.5669 13.075 13.6 11.5 16.75C9.925 13.6 5.2 11.5669 5.2 7.3C5.2 3.82061 8.02061 1 11.5 1C14.9794 1 17.8 3.82061 17.8 7.3ZM12.55 7.3C12.55 7.8799 12.0799 8.35 11.5 8.35C10.9201 8.35 10.45 7.8799 10.45 7.3C10.45 6.7201 10.9201 6.25 11.5 6.25C12.0799 6.25 12.55 6.7201 12.55 7.3Z" stroke="#587289" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-item__text">
+                                            <span>Адрес</span>
+                                            <p>г. Челябинск, ул. Ленина, 160</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-item__icon">
+                                            <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22 12.0833L19.8686 9.97222L17.736 12.0833M20.1879 10.5C20.1879 15.7467 15.8925 20 10.5939 20C5.29535 20 1 15.7467 1 10.5C1 5.25329 5.29535 1 10.5939 1C14.1138 1 17.1909 2.87692 18.8602 5.67515M10.5939 5.22222V10.5L13.7919 12.6111" stroke="#587289" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-item__text">
+                                            <span>Режим работы</span>
+                                            <p>Пн. - Пт.: 9.00 - 18.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-item__icon">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.6816 5.16666C14.7036 5.36517 15.6428 5.86276 16.3791 6.59576C17.1154 7.32876 17.6152 8.26381 17.8146 9.28124M13.6816 1C15.8049 1.23483 17.7849 2.18143 19.2965 3.68438C20.8081 5.18733 21.7614 7.15729 22 9.27082M9.68143 13.3573C8.42417 12.1057 7.43142 10.6905 6.70317 9.18044C6.64052 9.05055 6.6092 8.98561 6.58514 8.90343C6.49963 8.6114 6.56105 8.25279 6.73894 8.00547C6.789 7.93588 6.8488 7.87634 6.96841 7.75726C7.33422 7.39309 7.51712 7.211 7.6367 7.0279C8.08767 6.33739 8.08767 5.4472 7.63671 4.7567C7.51712 4.57359 7.33422 4.39151 6.96841 4.02733L6.76451 3.82435C6.20844 3.27076 5.93041 2.99397 5.63181 2.84361C5.03794 2.54458 4.33662 2.54458 3.74276 2.84361C3.44415 2.99397 3.16612 3.27076 2.61005 3.82435L2.44511 3.98855C1.89094 4.54024 1.61386 4.81608 1.40224 5.19112C1.16742 5.60727 0.998582 6.25361 1.00001 6.73093C1.00129 7.16108 1.08511 7.45506 1.25274 8.04303C2.15361 11.2028 3.85336 14.1844 6.352 16.6719C8.85063 19.1594 11.8456 20.8515 15.0196 21.7484C15.6102 21.9153 15.9055 21.9987 16.3376 22C16.817 22.0014 17.4663 21.8333 17.8843 21.5996C18.261 21.3889 18.5381 21.113 19.0923 20.5613L19.2572 20.3971C19.8133 19.8436 20.0913 19.5668 20.2423 19.2695C20.5427 18.6783 20.5427 17.9801 20.2423 17.3889C20.0913 17.0916 19.8133 16.8148 19.2572 16.2612L19.0533 16.0582C18.6875 15.6941 18.5046 15.512 18.3207 15.3929C17.6271 14.944 16.7329 14.944 16.0393 15.3929C15.8553 15.512 15.6724 15.6941 15.3066 16.0582C15.187 16.1773 15.1272 16.2369 15.0573 16.2867C14.8089 16.4638 14.4487 16.5249 14.1553 16.4398C14.0728 16.4159 14.0075 16.3847 13.8771 16.3223C12.3603 15.5973 10.9387 14.609 9.68143 13.3573Z" stroke="#587289" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-item__text">
+                                            <span>Телефон</span>
+                                            <p><a href="tel:+79008003000">+7 (900) 800-30-00</a>, <a href="tel:+79008003001">+7 (900) 800-30-01</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <div class="contact-item__icon">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.7 7.29934V12.5493C15.7 13.3848 16.0319 14.186 16.6226 14.7767C17.2134 15.3675 18.0146 15.6993 18.85 15.6993C19.6854 15.6993 20.4866 15.3675 21.0774 14.7767C21.6681 14.186 22 13.3848 22 12.5493V11.4993C21.9999 9.12953 21.198 6.82945 19.7249 4.9731C18.2518 3.11676 16.1941 1.81333 13.8863 1.27476C11.5785 0.736187 9.15634 0.994142 7.01372 2.00668C4.87111 3.01922 3.13403 4.7268 2.08493 6.85175C1.03583 8.97671 0.736424 11.3941 1.23539 13.7108C1.73435 16.0275 3.00233 18.1072 4.83317 19.6119C6.664 21.1166 8.95001 21.9577 11.3195 21.9984C13.6889 22.0392 16.0025 21.2772 17.884 19.8363M15.7 11.4993C15.7 13.8189 13.8196 15.6993 11.5 15.6993C9.18041 15.6993 7.30001 13.8189 7.30001 11.4993C7.30001 9.17975 9.18041 7.29934 11.5 7.29934C13.8196 7.29934 15.7 9.17975 15.7 11.4993Z" stroke="#587289" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-item__text">
+                                            <span>E-mail</span>
+                                            <p><a href="mailto:promsnab@mail.ru">promsnab@mail.ru</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="slider__item swiper-slide">
-                        <div class="slider-item">
-                            <picture class="slider-item__img">
-                                <source srcset="images/slide_01_mobile.jpg" media="(max-width: 768px)">
-                                <img src="images/slide_01.jpg" alt="Крупнейший поставщик металлопроката в Челябинске">
-                            </picture>
-                            <div class="slider-item__wrap container">
-                                <div class="slider-item__content">
-                                    <h2 class="slider-item__title">Крупнейший поставщик профильной трубы</h2>
-                                    <div class="slider-item__text">это богатый опыт и профессионализм, это позволяет нам занимать лидирующие позиции на рынке металлопроката.</div>
-                                    <div class="slider-item__control">
-                                        <a class="btn" href="#">Оставить заявку</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__pagination">
-                    <div class="container">
-                        <div class="fraction"><span>1</span>/2</div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="favorites js-slider js-slider--favorites">
-            <div class="favorites__wrap container swiper">
-                <div class="favorites__list swiper-wrapper">
-                    <div class="favorites__item swiper-slide">
-                        <div class="favorite">
-                            <div class="favorite__pics"><img src="images/favorite_01.jpg" alt="Опытные специалисты"></div>
-                            <h3 class="favorite__title">Опытные специалисты</h3>
-                            <p class="favorite__text">Реализуем металлопродукцию<br> с 2010 года</p>
-                        </div>
-                    </div>
-                    <div class="favorites__item swiper-slide">
-                        <div class="favorite">
-                            <div class="favorite__pics"><img src="images/favorite_02.jpg" alt="Помогаем с выбором"></div>
-                            <h3 class="favorite__title">Помогаем с выбором</h3>
-                            <p class="favorite__text">Отвечаем на вопросы клиентов<br> в течение 10 минут</p>
-                        </div>
-                    </div>
-                    <div class="favorites__item swiper-slide">
-                        <div class="favorite">
-                            <div class="favorite__pics"><img src="images/favorite_03.jpg" alt="ценообразование"></div>
-                            <h3 class="favorite__title">ценообразование</h3>
-                            <p class="favorite__text">Мы можем предложить вам<br> действительно низкие цены</p>
-                        </div>
-                    </div>
-                    <div class="favorites__item swiper-slide">
-                        <div class="favorite">
-                            <div class="favorite__pics"><img src="images/favorite_04.jpg" alt="Гарантия качества"></div>
-                            <h3 class="favorite__title">Гарантия качества</h3>
-                            <p class="favorite__text">Продукция соответствует<br> стандартам ГОСТ и ТУ</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="products js-slider js-slider--products">
-            <div class="products__wrap">
-                <div class="products__bg">
-                    <div class="products__img container">
-                        <img src="images/product-item__img.png" alt="Продукция">
-                    </div>
-                </div>
-                <div class="products__content container">
-                    <h2 class="products__title">Продукция</h2>
-                    <div class="product-list swiper">
-                        <div class="product-list__wrap swiper-wrapper">
-                            <a class="product-item swiper-slide" href="#">
-                                <span class="product-item__title"><i>шестигранник стальной</i></span>
-                                <span class="product-item__img">
-                                <img src="images/product-list__item01.png" alt="шестигранник стальной">
-                            </span>
-                            </a>
-                            <a class="product-item swiper-slide" href="#">
-                                <span class="product-item__title"><i>профильная труба</i></span>
-                                <span class="product-item__img">
-                                <img src="images/product-list__item02.png" alt="профильная труба">
-                            </span>
-                            </a>
-                            <a class="product-item swiper-slide" href="#">
-                                <span class="product-item__title"><i>лист стальной</i></span>
-                                <span class="product-item__img">
-                                <img src="images/product-list__item03.png" alt="лист стальной">
-                            </span>
-                            </a>
-                            <a class="product-item swiper-slide" href="#">
-                                <span class="product-item__title"><i>Круг стальной</i></span>
-                                <span class="product-item__img">
-                                <img src="images/product-list__item04.png" alt="Круг стальной">
-                            </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="step-buy">
-            <h2 class="step-buy__title h2">как купить металл?</h2>
-            <div class="decor-line">
-                <span>
-                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 4.94301V14.6044L3.41767 16.6265V6.96515L8.65809 4.04428L13.6707 6.96515V16.6265L17.0883 14.6044V4.94301L8.65809 0L0 4.94301Z" fill="#CFDDE8"/>
-                    <path d="M14.5759 3.41772L6.37354 8.48636V18.3932L14.5759 23.4619L23 18.3932L19.453 16.5501L14.5759 19.3148L9.69883 16.5501V10.5599L14.5759 7.56479L19.453 10.5599L23 8.48636L14.5759 3.41772Z" fill="#CFDDE8"/>
-                    </svg>
-                </span>
-            </div>
-            <div class="step-buy__wrap container">
-                <div class="step-buy__list">
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">01</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Скачайте прайс</div>
-                                <div class="step-item__text">в удобном для вас формате EXCEL<br> или PDF. Найдите
-                                    интересующую<br> позицию
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">02</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Позвоните в отдел продаж</div>
-                                <div class="step-item__text">если у вас возникли вопросы, свяжитесь с<br> нашими
-                                    менеджерами по телефону<br> 8 (902) 800-90-14
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">03</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Пришлите заявку</div>
-                                <div class="step-item__text">на электронный адрес promsnab@mail.ru<br> в которой укажите
-                                    все необходимые<br> требования
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">04</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Оплатите счет</div>
-                                <div class="step-item__text">на ваш адрес будет выслан счет,<br> договор и, при
-                                    необходимости,<br> спецификация. После оплаты счета<br> сообщите вашему менеджеру
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">05</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Забирайте заказ</div>
-                                <div class="step-item__text">наш менеджер сообщил вам о готовности<br> металла, и
-                                    предполагаемое время<br> забора груза
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-buy__item">
-                        <div class="step-item">
-                            <div class="step-item__num">06</div>
-                            <div class="step-item__content">
-                                <div class="step-item__title">Отгрузочные документы</div>
-                                <div class="step-item__text">вы получите по электронной почте.<br> оригиналы, на ваше
-                                    усмотрение, мы<br> передадим с экспедитором или<br> вышлем по почте
+                            <div class="contacts__requisites">
+                                <h2 class="h2">Реквизиты</h2>
+                                <div class="requisites">
+                                    <table>
+                                        <tr>
+                                            <td>Полное наименование:</td>
+                                            <td>Общество с ограниченной ответственностью «ПромСнаб»</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сокращенное наименование:</td>
+                                            <td>ООО «ПромСнаб»</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ИНН/КПП:</td>
+                                            <td>7999001099/999707007</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ОГРН:</td>
+                                            <td>9911001123456</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Юридический адрес:</td>
+                                            <td>г. Челябинск, ул. Ленина 160</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Фактический адрес:</td>
+                                            <td>г. Челябинск, ул. Ленина 160</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Телефон, факс:</td>
+                                            <td>+7 (900) 800-30-00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Электронная почта:</td>
+                                            <td>promsnab@mail.ru</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Сайт:</td>
+                                            <td>http://promsnab.ru</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Банковские реквизиты:</td>
+                                            <td>
+                                                БИК 041234567 <br>
+                                                Р/с №99879420880090091123 в ОАО «Сберегательный банк», <br>
+                                                Кор/счет 90505350500000000124
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
         <section class="open-order">
             <div class="open-order__wrap container">
                 <div class="open-order__content">
@@ -484,7 +409,7 @@
                 <div class="nav-panel container">
                     <div class="nav-panel__row">
                         <div class="nav-panel__col nav-panel__col--logo">
-                            <a href="/" class="logo"><img src="images/logo.svg" alt="Промснаб"></a>
+                            <a href="index.html" class="logo"><img src="images/logo.svg" alt="Промснаб"></a>
                         </div>
                         <div class="nav-panel__col nav-panel__col--socials">
                             <ul class="socials socials--footer">
@@ -539,7 +464,7 @@
                                     <li><a href="catalog.html">Каталог</a></li>
                                     <li><a href="payment.html">Оплата</a></li>
                                     <li><a href="about.html">О компании</a></li>
-                                    <li><a href="contacts.html">Контакты</a></li>
+                                    <li><a class="selected" href="contacts.html">Контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -707,3 +632,4 @@
     </div>
 </body>
 </html>
+

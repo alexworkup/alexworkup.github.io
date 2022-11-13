@@ -1,0 +1,104 @@
+.popup-form {
+  width: 470px;
+  padding: 35px;
+  
+  @media #{$tablet} {
+    width: auto;
+  }
+
+  .h2 {
+    margin: 0 0 18px 0;
+    font-size: 36px;
+    color: #000000;
+  }
+
+  form {
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    textarea {
+      resize: none;
+      font-size: 16px;
+      padding: 10px;
+      border: 1px solid #E9EEF1;
+      border-radius: 5px;
+      outline: none!important;
+      height: 50px;
+      width: 100%;
+      margin-top: 3px;
+
+      @media #{$phone} {
+        height: 45px;
+      }
+    }
+
+    textarea {
+      height: auto;
+      
+      @media #{$phone} {
+        max-height: 100px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #667989;
+      font-size: 14px;
+      line-height: 16px;
+
+      &.check {
+        margin: 18px 0;
+        @include vp-display(flex);
+
+        input {
+          display: none;
+
+          &:checked {
+
+            & + span {
+
+              &:before {
+                background-image: url("../images/check-light.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+
+        span {
+          position: relative;
+          padding-left: 37px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid #E9EEF1;
+            border-radius: 5px;
+            left: 0;
+            top: 50%;
+            @include vp-transform(translateY(-50%));
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+
+        a {
+          color: #667989;
+        }
+      }
+    }
+  }
+
+  .btn-submit {
+    padding: 0 50px;
+  }
+}
