@@ -71,6 +71,72 @@ body {
 .main {
   @include vp-flex(1 1 auto);
 
+  &--product {
+
+    .main__content {
+      padding: 40px 35px 100px 35px;
+
+      @media #{$phone} {
+        padding: 10px 10px 60px 10px;
+      }
+    }
+
+    .product-list {
+      margin-top: -150px;
+
+      @media #{$notebook} {
+        margin-top: -90px;
+      }
+
+      @media #{$tablet} {
+        display: none;
+      }
+
+      &__wrap {
+        @include vp-justify-content(flex-end);
+      }
+
+      .product-item {
+        max-width: 270px;
+
+        &:hover {
+
+          .product-item__img {
+
+            &:before {
+              @media #{$notebook} {
+                content: none;
+              }
+            }
+          }
+        }
+
+        @media #{$notebook} {
+          max-width: 230px;
+        }
+
+        &__img {
+          height: 300px;
+
+          @media #{$notebook} {
+            height: 240px;
+          }
+
+          &:before {
+            @include vp-background-size(cover);
+            width: calc(100% + 55px);
+            height: 100%;
+          }
+
+          img {
+            max-height: 100%;
+          }
+        }
+
+      }
+    }
+  }
+
   &__wrap {
     position: relative;
 
@@ -235,7 +301,8 @@ body {
 }
 
 .h1, h1,
-.h2, h2 {
+.h2, h2,
+.h3, h3 {
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
   line-height: 1em;
   text-transform: uppercase;
@@ -248,6 +315,10 @@ body {
 .h2, h2 {
   font-size: 64px;
   color: #30414E;
+}
+
+.h3, h3 {
+  font-size: 32px;
 }
 
 .btn {

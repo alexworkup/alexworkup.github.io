@@ -1,0 +1,133 @@
+.product-list {
+  margin-top: auto;
+  width: 100%;
+  overflow: inherit;
+
+  &__wrap {
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
+
+    @media #{$tablet} {
+      @include vp-flex-wrap(nowrap);
+    }
+  }
+
+  @media #{$notebook} {
+    margin-bottom: -50px;
+  }
+
+  .product-item {
+    width: calc(100% / 4);
+    text-align: center;
+    @include vp-display(flex);
+    @include vp-flex-direction(column);
+    @include vp-align-items(center);
+    text-decoration: none;
+
+    @media #{$tablet} {
+      width: calc(100% / 2);
+      @include vp-align-items(flex-end);
+    }
+
+    &:hover {
+
+      .product-item__title {
+
+        &:before {
+          opacity: 1;
+
+          @media #{$tablet} {
+            opacity: 0;
+          }
+        }
+      }
+
+      .product-item__img {
+
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__title {
+      height: 50px;
+      line-height: 53px;
+      padding: 0 20px;
+      font-size: 24px;
+      font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: transparent;
+      margin-bottom: -25px;
+      position: relative;
+
+      i {
+        font-style: normal;
+        position: relative;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include vp-linear-gradient(274.09deg, #285681 17.27%, #0F3354 72.8%);
+        border-radius: 9px;
+        @include vp-transition(.1s all ease-in);
+        opacity: 0;
+      }
+    }
+
+    &__img {
+      height: 200px;
+      width: 100%;
+      position: relative;
+
+      @media #{$tablet} {
+        height: 360px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 458px;
+        height: 100%;
+        top: 0;
+        left: calc(50% - 30px);
+        @include vp-transform(translateX(-50%));
+        background-image: url("../images/hover-item.png");
+        opacity: 0;
+        @include vp-transition(.2s opacity ease-in);
+
+        @media #{$notebook} {
+          @include vp-background-size(cover);
+          width: 100%;
+        }
+
+        @media #{$tablet} {
+          content: none;
+        }
+      }
+
+      img {
+        position: absolute;
+        left: calc(50% - 30px);
+        @include vp-transform(translateX(-50%));
+        width: auto;
+        max-width: initial;
+
+        @media #{$notebook} {
+          max-width: 100%;
+        }
+
+        @media #{$tablet} {
+          max-height: 100%;
+          left: calc(50% + 30px);
+        }
+      }
+    }
+  }
+}

@@ -125,7 +125,7 @@ $(document).ready(function () {
 
     function checkOffset(element) {
         if($(element).length) {
-            if($(element).offset().top >= 100) {
+            if($(element).offset().top >= 80) {
                 $(element).addClass('header--color');
             } else {
                 $(element).removeClass('header--color');
@@ -146,23 +146,27 @@ $(document).ready(function () {
 
     /* YAMAP */
     var map_container = document.getElementById('map');
-    var options_map = {
-        once: true,
-        passive: true,
-        capture: true
-    };
-    map_container.addEventListener('click', start_lazy_map, options_map);
-    map_container.addEventListener('mouseover', start_lazy_map, options_map);
-    map_container.addEventListener('touchstart', start_lazy_map, options_map);
-    map_container.addEventListener('touchmove', start_lazy_map, options_map);
 
-    var map_loaded = false;
-    function start_lazy_map() {
-        if (!map_loaded) {
-            var map_block = document.getElementById('ymap_lazy');
-            map_loaded = true;
-            map_block.setAttribute('src', map_block.getAttribute('data-src'));
-            map_block.removeAttribute('data_src');
+    if(map_container) {
+
+        var options_map = {
+            once: true,
+            passive: true,
+            capture: true
+        };
+        map_container.addEventListener('click', start_lazy_map, options_map);
+        map_container.addEventListener('mouseover', start_lazy_map, options_map);
+        map_container.addEventListener('touchstart', start_lazy_map, options_map);
+        map_container.addEventListener('touchmove', start_lazy_map, options_map);
+
+        var map_loaded = false;
+        function start_lazy_map() {
+            if (!map_loaded) {
+                var map_block = document.getElementById('ymap_lazy');
+                map_loaded = true;
+                map_block.setAttribute('src', map_block.getAttribute('data-src'));
+                map_block.removeAttribute('data_src');
+            }
         }
     }
     /* YAMAP */

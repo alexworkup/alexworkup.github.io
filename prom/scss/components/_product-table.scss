@@ -1,0 +1,128 @@
+.product-table {
+
+  &__body {
+
+    .h3 {
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+
+      @media #{$phone} {
+        font-size: 25px;
+        line-height: 1.2em;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &__control {
+    @include vp-display(flex);
+    @include vp-justify-content(flex-end);
+
+    @media #{$phone_s} {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    @include vp-display(flex);
+    @include vp-justify-content(space-between);
+    @include vp-flex-wrap(wrap);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E5EEF4;
+    margin-bottom: 20px;
+
+    .h2 {
+      margin: 0 20px 20px 0;
+      border-bottom: 0;
+      padding: 0;
+
+      @media #{$phone} {
+        font-size: 25px;
+        margin-bottom: 10px;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  .table-control {
+    @include vp-display(flex);
+    font-size: 0;
+    margin: 0 -12px;
+
+    &__item {
+      padding: 0 12px;
+    }
+  }
+
+  .table-list {
+    @include vp-display(flex);
+    @include vp-flex-wrap(wrap);
+    width: calc(100% + 12px);
+    margin: 0 -12px;
+
+    @media #{$phone} {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__item {
+      width: 50%;
+      max-width: 50%;
+      padding: 0 12px;
+      
+      @media #{$laptop_s} {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media #{$phone} {
+        padding: 0;
+        margin-bottom: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        font-size: 14px;
+        line-height: 1.3em;
+        width: 100%;
+
+        @media #{$phone} {
+          font-size: 11px;
+          line-height: 1.2em;
+        }
+
+        tr {
+
+          td {
+            border: 1px solid #CDCDCD;
+            padding: 8px 17px;
+            font-weight: 500;
+            color: #505D67;
+
+            @media #{$phone} {
+              padding: 4px 10px;
+            }
+          }
+
+          th {
+            border: 1px solid #30414E;
+            padding: 8px 17px;
+            color: #30414E;
+          }
+        }
+
+      }
+    }
+  }
+}
