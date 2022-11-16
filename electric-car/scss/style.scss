@@ -1,0 +1,15 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;700&display=swap');
+
+//Main
+@import "variables";
+@import "fonts";
+@import "general";
+
+//Components
+@import "components/header";
+@import "components/video";
+@import "components/sidebar";
+@import "components/popup";
+@import "components/sound";
+@import "components/viewer";

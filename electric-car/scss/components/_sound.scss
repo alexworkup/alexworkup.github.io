@@ -1,0 +1,65 @@
+.sound {
+  position: fixed;
+  right: 65px;
+  bottom: 40px;
+  width: 75px;
+  height: 75px;
+  border: 2px solid rgba(123, 135, 144, .45);
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s border linear;
+
+  @media #{$phone} {
+    width: 32px;
+    height: 32px;
+    z-index: 100;
+    bottom: inherit;
+    top: 300px;
+    right: 10px;
+    padding: 5px;
+  }
+
+  svg {
+    opacity: .45;
+    transition: .3s opacity linear;
+    fill: rgba(123, 135, 144, 1);
+  }
+
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(123, 135, 144, .45);
+    transform: rotate(45deg);
+    transition: .3s background-color linear;
+  }
+
+  &:hover {
+    border: 2px solid rgba(123, 135, 144, 1);
+
+    &:before {
+      background-color: rgba(123, 135, 144, 1);
+    }
+
+    svg {
+      opacity: 1;
+    }
+  }
+
+  &.active {
+    border: 2px solid rgba(123, 135, 144, 1);
+
+    &:before {
+      content: normal;
+    }
+
+    svg {
+      opacity: 1;
+      fill: #3b68c4;
+    }
+  }
+}

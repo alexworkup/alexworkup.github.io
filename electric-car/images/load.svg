@@ -1,0 +1,32 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="53.969" height="10" viewBox="0 0 53.969 10">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccd8e3;
+        fill-opacity: 0;
+        stroke: #ccd8e3;
+        stroke-linejoin: round;
+        stroke-opacity: 0.59;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+
+      #Rectangle_2_copy_3 {
+      stroke: #3b68c4;
+      }
+
+      #Rectangle_2_copy_4 {
+      animation: 1s linear 0s infinite alternate change_fill;
+      }
+
+      @keyframes change_fill {
+        0% { stroke: #ccd8e3; }
+        100% { stroke: #3b68c4; }
+      }
+
+    </style>
+  </defs>
+  <path id="Rectangle_2_copy_3" data-name="Rectangle 2 copy 3" class="cls-1" d="M307.466,50.989l-9.327.005c-1.2,0-1.5-.95-0.682-2.123l2.631-3.749A5.184,5.184,0,0,1,303.75,43l9.327-.006c1.2,0,1.5.95,0.682,2.123l-2.63,3.749A5.186,5.186,0,0,1,307.466,50.989Z" transform="translate(-296 -42)"/>
+  <path id="Rectangle_2_copy_4" data-name="Rectangle 2 copy 4" class="cls-1" d="M324.844,50.989l-9.327.005c-1.2,0-1.5-.95-0.682-2.123l2.63-3.749A5.186,5.186,0,0,1,321.128,43l9.327-.006c1.2,0,1.5.95,0.682,2.123l-2.631,3.749A5.184,5.184,0,0,1,324.844,50.989Z" transform="translate(-296 -42)"/>
+  <path id="Rectangle_2_copy_5" data-name="Rectangle 2 copy 5" class="cls-1" d="M342.221,50.989l-9.327.005c-1.2,0-1.5-.95-0.681-2.123l2.63-3.749A5.184,5.184,0,0,1,338.506,43l9.327-.006c1.2,0,1.5.95,0.681,2.123l-2.63,3.749A5.184,5.184,0,0,1,342.221,50.989Z" transform="translate(-296 -42)"/>
+</svg>

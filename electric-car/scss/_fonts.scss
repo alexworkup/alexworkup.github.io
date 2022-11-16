@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+  url('../fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+  url('../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/Gilroy-Medium.eot');
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+  url('../fonts/Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+  url('../fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy/Gilroy-SemiBold.eot');
+  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+  url('../fonts/Gilroy/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Gilroy/Gilroy-SemiBold.woff') format('woff'),
+  url('../fonts/Gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Panton Black';
+  src: url('../fonts/Panton/Panton-Black.eot');
+  src: url('../fonts/Panton/Panton-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Panton/Panton-Black.woff') format('woff'),
+  url('../fonts/Panton/Panton-Black.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Officina Serif';
+  src: url('../fonts/Officina/OfficinaSerifBookC.woff2') format('woff2'),
+  url('../fonts/Officina/OfficinaSerifBookC.woff') format('woff'),
+  url('../fonts/Officina/OfficinaSerifBookC.ttf') format('truetype');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Officina Serif';
+  src: url('../fonts/Officina/OfficinaSerifBold.woff2') format('woff2'),
+  url('../fonts/Officina/OfficinaSerifBold.woff') format('woff'),
+  url('../fonts/Officina/OfficinaSerifBold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}

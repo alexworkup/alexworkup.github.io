@@ -1,0 +1,154 @@
+.sidebar {
+  position: fixed;
+  right: 50px;
+  top: 120px;
+  z-index: 110;
+
+  &:before {
+    content: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: .90;
+
+    @media #{$phone} {
+      content: '';
+    }
+  }
+
+  @media #{$phone} {
+    right: inherit;
+    width: 100%;
+    height: calc(100% - 87px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    top: inherit;
+    left: -100%;
+    transition: .3s left ease-in;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  &__close {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+
+    @media #{$phone} {
+      display: block;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -30px;
+
+    &:hover {
+
+      .sidebar__text {
+        margin-top: 40px;
+
+        i {
+          opacity: 1;
+        }
+
+        &:after {
+          border-color: #3b68c4;
+        }
+      }
+
+      .sidebar__icon {
+        opacity: 1;
+
+        svg {
+          fill: #3b68c4;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: right;
+    margin-right: 15px;
+    font-family: 'Jura', sans-serif;
+    margin-top: 0;
+    position: relative;
+    transition: .3s all ease-in;
+
+    @media #{$phone} {
+      margin-top: 40px;
+    }
+
+    i {
+      font-style: normal;
+      opacity: 0;
+      transition: .3s all ease-in;
+
+      @media #{$phone} {
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #c8d9e4;
+      position: absolute;
+      right: -25px;
+      top: 15px;
+      display: block;
+      background-color: #0d171e;
+      z-index: 10;
+      transition: .3s border ease-in;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icon {
+    opacity: .6;
+    transition: .3s opacity ease-in;
+
+    svg {
+      fill: #c8d9e4;
+      transition: .3s all linear;
+    }
+  }
+}

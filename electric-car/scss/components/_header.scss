@@ -1,0 +1,53 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid $c_border;
+  background: transparent;
+  transition: .2s all linear;
+
+  @media #{$phone} {
+    background: linear-gradient(to bottom, #1d2027, #14171b);
+  }
+
+  &__wrap {
+    padding: 25px 0;
+    transition: .2s all linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media #{$phone} {
+      padding: 20px 0;
+    }
+  }
+
+  &__col {
+
+    &--burger {
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s all linear;
+      cursor: pointer;
+
+      &.active {
+        opacity: 1;
+      }
+
+      @media #{$phone} {
+        opacity: .59;
+        visibility: visible;
+      }
+    }
+  }
+
+  .logo {
+
+    img {
+      max-width: 113px;
+      height: auto;
+    }
+  }
+}

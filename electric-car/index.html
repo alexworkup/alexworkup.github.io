@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@3dweb/360javascriptviewer/lib/JavascriptViewer.min.js"></script>
+    <link rel="stylesheet" href="js/fancy/jquery.fancybox.css">
+    <script src="js/fancy/jquery.fancybox.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/swiped-events.js"></script>
+    <script src="js/script.js"></script>
+    <title>SKYWORTH AUTO</title>
+</head>
+<body class="index">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrap">
+                    <div class="header__col header__col--logo">
+                        <a href="/" class="logo"><img width="300" height="115" src="images/logo.svg" alt="SKYWORTH AUTO"></a>
+                    </div>
+                    <div class="header__col header__col--burger burger">
+                        <svg width="62" height="18">
+                            <use xlink:href="images/sprite.svg#toggle"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <video id="video" class="video" playsinline muted loop poster="images/video-bg.jpg">
+                <source src="video/video-bg.mp4" type="video/mp4">
+                <source src="video/video-bg.ogv" type="video/ogg">
+                <source src="video/video-bg.webm" type="video/webm">
+            </video>
+            <div class="viewer">
+                <div class="viewer__wrap">
+                    <h2>SKYWELL ET5<br><span>УЖЕ В России</span></h2>
+                    <div id="jsv-holder" class="viewer__model">
+                        <div class="viewer__platform">
+                            <div class="platform-control">
+                                <div class="platform-control__arrow">
+                                    <button type="button" class="left"></button>
+                                    <button type="button" class="right"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <img id="jsv-image" alt="your 360 images" src="images/3d/001.png">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="sidebar">
+            <button type="button" class="sidebar__close" title="Close">
+                <img src="images/close.svg" alt="Закрыть">
+            </button>
+            <div class="sidebar__list">
+                <a data-fancybox="" data-src="#order-phone" href="javascript:;" class="sidebar__item">
+                    <span class="sidebar__text"><i>Записаться<br> на тест-драйв</i></span>
+                    <span class="sidebar__icon">
+                            <svg width="92" height="127">
+                                <use xlink:href="images/sprite.svg#time"></use>
+                            </svg>
+                        </span>
+                </a>
+                <a href="#" class="sidebar__item">
+                    <span class="sidebar__text"><i>Заказать<br> сейчас</i></span>
+                    <span class="sidebar__icon">
+                            <svg width="92" height="127">
+                                <use xlink:href="images/sprite.svg#phone"></use>
+                            </svg>
+                        </span>
+                </a>
+                <a href="configuration.html" class="sidebar__item">
+                    <span class="sidebar__text"><i>Выбрать<br> конфигурацию</i></span>
+                    <span class="sidebar__icon">
+                            <svg width="92" height="127">
+                                <use xlink:href="images/sprite.svg#control"></use>
+                            </svg>
+                        </span>
+                </a>
+            </div>
+        </aside>
+        <section class="popup" id="order-phone">
+            <form id="theForm" class="simform">
+                <div class="simform-inner">
+                    <ol class="questions">
+                        <li>
+                            <span><label for="q1">Ваше имя?</label></span>
+                            <input id="q1" name="q1" type="text"/>
+                        </li>
+                        <li>
+                            <span><label for="q2">Ваш номер телефона?</label></span>
+                            <input id="q2" name="q2" type="tel"/>
+                        </li>
+                    </ol><!-- /questions -->
+                    <button class="submit" type="submit">Send answers</button>
+                    <div class="controls">
+                        <button class="next"></button>
+                        <div class="progress"></div>
+                        <span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+                        <span class="error-message"></span>
+                    </div><!-- / controls -->
+                </div><!-- /simform-inner -->
+                <span class="final-message"></span>
+            </form><!-- /simform -->
+        </section>
+        <div class="sound">
+            <svg width="41" height="35">
+                <use xlink:href="images/sprite.svg#sound"></use>
+            </svg>
+        </div>
+        <div class="load">
+            <img src="images/load.svg" alt="Загрузка видео">
+        </div>
+    </div>
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/maskphone.js"></script>
+    <script>
+        var theForm = document.getElementById( 'theForm' );
+        //disable form autocomplete
+        theForm.setAttribute( "autocomplete", "off" );
+
+        new stepsForm( theForm, {
+            onSubmit : function( form ) {
+                // hide form
+                classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+                /*
+                form.submit()
+                or
+                AJAX request (maybe show loading indicator while we don't have an answer..)
+                */
+
+                // let's just simulate something...
+                var messageEl = theForm.querySelector( '.final-message' );
+                messageEl.innerHTML = `Спасибо ${document.getElementById('q1').value}, мы скоро вам перезвоним.`;
+                classie.addClass( messageEl, 'show' );
+            }
+        } );
+    </script>
+</body>
+</html>
