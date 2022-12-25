@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Grandis Extended';
+  src: url('../fonts/grandis/GrandisExtended-Regular.eot');
+  src: local('Grandis Extended Regular'), local('GrandisExtended-Regular'),
+  url('../fonts/grandis/GrandisExtended-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/grandis/GrandisExtended-Regular.woff2') format('woff2'),
+  url('../fonts/grandis/GrandisExtended-Regular.woff') format('woff'),
+  url('../fonts/grandis/GrandisExtended-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Basis Grotesque Pro';
+  src: url('../fonts/basis/BasisGrotesquePro-Bold.eot');
+  src: local('Basis Grotesque Pro Bold'), local('BasisGrotesquePro-Bold'),
+  url('../fonts/basis/BasisGrotesquePro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/basis/BasisGrotesquePro-Bold.woff2') format('woff2'),
+  url('../fonts/basis/BasisGrotesquePro-Bold.woff') format('woff'),
+  url('../fonts/basis/BasisGrotesquePro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Basis Grotesque Pro';
+  src: url('../fonts/basis/BasisGrotesquePro-Regular.eot');
+  src: local('Basis Grotesque Pro Regular'), local('BasisGrotesquePro-Regular'),
+  url('../fonts/basis/BasisGrotesquePro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/basis/BasisGrotesquePro-Regular.woff2') format('woff2'),
+  url('../fonts/basis/BasisGrotesquePro-Regular.woff') format('woff'),
+  url('../fonts/basis/BasisGrotesquePro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/noto/NotoSans-Light.woff2') format('woff2'),
+  url('../fonts/noto/NotoSans-Light.woff') format('woff'),
+  url('../fonts/noto/NotoSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/noto/NotoSans-Regular.woff2') format('woff2'),
+  url('../fonts/noto/NotoSans-Regular.woff') format('woff'),
+  url('../fonts/noto/NotoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/noto/NotoSans-Medium.woff2') format('woff2'),
+  url('../fonts/noto/NotoSans-Medium.woff') format('woff'),
+  url('../fonts/noto/NotoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/noto/NotoSans-Bold.woff2') format('woff2'),
+  url('../fonts/noto/NotoSans-Bold.woff') format('woff'),
+  url('../fonts/noto/NotoSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

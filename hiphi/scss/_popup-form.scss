@@ -10,7 +10,7 @@
     padding: 25px;
     width: 100%;
     height: auto;
-    min-height: 350px;
+    min-height: 350px; 
   }
 
   .close {
@@ -60,7 +60,7 @@
       font-size: 20px;
       color: white;
       margin: 0;
-
+      
       @media #{$phone} {
         font-size: 18px;
       }

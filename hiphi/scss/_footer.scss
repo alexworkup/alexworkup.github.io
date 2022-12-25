@@ -1,0 +1,29 @@
+.footer {
+  padding: 20px;
+  position: relative;
+  background-color: #060708;
+
+  @media #{$phone} {
+    padding: 10px 20px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+
+  &__col {
+
+    @media #{$phone} {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    &--socials {
+      margin: 0 30px;
+    }
+  }
+}
