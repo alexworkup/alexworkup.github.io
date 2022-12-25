@@ -1,0 +1,449 @@
+@font-face {
+  font-family: "Grandis Extended";
+  src: url("../fonts/grandis/GrandisExtended-Regular.eot");
+  src: local("Grandis Extended Regular"), local("GrandisExtended-Regular"), url("../fonts/grandis/GrandisExtended-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/grandis/GrandisExtended-Regular.woff2") format("woff2"), url("../fonts/grandis/GrandisExtended-Regular.woff") format("woff"), url("../fonts/grandis/GrandisExtended-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("../fonts/basis/BasisGrotesquePro-Bold.eot");
+  src: local("Basis Grotesque Pro Bold"), local("BasisGrotesquePro-Bold"), url("../fonts/basis/BasisGrotesquePro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/basis/BasisGrotesquePro-Bold.woff2") format("woff2"), url("../fonts/basis/BasisGrotesquePro-Bold.woff") format("woff"), url("../fonts/basis/BasisGrotesquePro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: url("../fonts/basis/BasisGrotesquePro-Regular.eot");
+  src: local("Basis Grotesque Pro Regular"), local("BasisGrotesquePro-Regular"), url("../fonts/basis/BasisGrotesquePro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/basis/BasisGrotesquePro-Regular.woff2") format("woff2"), url("../fonts/basis/BasisGrotesquePro-Regular.woff") format("woff"), url("../fonts/basis/BasisGrotesquePro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto/NotoSans-Light.woff2") format("woff2"), url("../fonts/noto/NotoSans-Light.woff") format("woff"), url("../fonts/noto/NotoSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto/NotoSans-Regular.woff2") format("woff2"), url("../fonts/noto/NotoSans-Regular.woff") format("woff"), url("../fonts/noto/NotoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto/NotoSans-Medium.woff2") format("woff2"), url("../fonts/noto/NotoSans-Medium.woff") format("woff"), url("../fonts/noto/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto/NotoSans-Bold.woff2") format("woff2"), url("../fonts/noto/NotoSans-Bold.woff") format("woff"), url("../fonts/noto/NotoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reset CSS */
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  background-image: url("../images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    background-image: url("../images/main-bg-mobile.jpg");
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.control {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 425px) {
+  .control {
+    padding: 0 20px;
+  }
+}
+.control .btn {
+  margin-bottom: 24px;
+}
+.control .btn:last-child {
+  margin-bottom: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-start;
+  color: black;
+  font-family: "Grandis Extended", "Arial Narrow", sans-serif;
+}
+.logo__icon {
+  margin-right: 12px;
+  font-size: 0;
+}
+.logo__text {
+  display: flex;
+  flex-direction: column;
+}
+.logo__text .logo-sign {
+  font-size: 14px;
+}
+.logo__text .logo-sign br {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .logo__text .logo-sign br {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  .logo__text .logo-sign {
+    font-size: 12px;
+  }
+}
+
+.big-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .big-logo {
+    padding: 0 20px;
+  }
+}
+.big-logo svg {
+  max-width: 100%;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #FFFFFF;
+  border-radius: 40.5px;
+  color: #FFFFFF;
+  line-height: 60px;
+  height: 63px;
+  display: inline-block;
+  padding: 0 48px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Noto Sans", "Arial Narrow", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+@media screen and (max-width: 425px) {
+  .btn {
+    background: rgba(0, 0, 0, 0.6);
+    line-height: 50px;
+    height: 54px;
+    padding: 0 30px;
+  }
+}
+.btn span {
+  position: relative;
+}
+.btn:hover {
+  color: #000000;
+}
+.btn:hover:before {
+  transform: translateX(0) translateZ(0);
+  left: 0;
+  opacity: 0.9;
+  width: 100%;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(0) translateZ(0);
+  border-radius: 40.5px;
+  animation: none;
+  opacity: 0;
+  width: 20%;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socials__item {
+  padding: 0 3px;
+  opacity: 0.7;
+  transition: 0.2s all linear;
+}
+.socials__item:hover {
+  opacity: 1;
+}
+
+.phone,
+.email {
+  font-family: "Noto Sans", "Arial Narrow", sans-serif;
+  color: #6A7885;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s color linear;
+}
+.phone:hover,
+.email:hover {
+  color: #ffffff;
+}
+
+.fancybox__backdrop {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .fancybox__backdrop {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.fancybox__content {
+  background: transparent;
+}
+
+.header {
+  padding: 20px;
+}
+.header__row {
+  display: flex;
+}
+
+.footer {
+  padding: 40px;
+}
+@media screen and (max-width: 425px) {
+  .footer {
+    padding: 20px;
+  }
+}
+.footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 425px) {
+  .footer__col {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+.footer__col--socials {
+  margin: 0 30px;
+}
+
+.popup-form {
+  max-width: 650px;
+  padding: 25px 67px 50px 67px;
+  font-family: "Noto Sans", "Arial Narrow", sans-serif;
+  overflow: hidden;
+  border-radius: 20px;
+}
+@media screen and (max-width: 425px) {
+  .popup-form {
+    padding: 25px;
+  }
+}
+.popup-form .close {
+  position: absolute;
+  z-index: 5;
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  outline: none !important;
+}
+@media screen and (max-width: 425px) {
+  .popup-form .close {
+    right: 10px;
+    top: 10px;
+  }
+}
+.popup-form .close:hover svg path {
+  stroke: #ffffff;
+}
+.popup-form .close svg path {
+  transition: 0.2s all linear;
+}
+@media screen and (max-width: 425px) {
+  .popup-form .close svg path {
+    stroke: #ffffff;
+    opacity: 0.9;
+  }
+}
+.popup-form__wrap {
+  position: relative;
+}
+.popup-form__bg {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  background-image: url("../images/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  filter: blur(7.5px);
+}
+.popup-form__bg:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 768px) {
+  .popup-form__bg {
+    background-image: url("../images/main-bg-mobile.jpg");
+  }
+}
+.popup-form__title {
+  text-align: center;
+  font-weight: 100;
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 26px;
+}
+@media screen and (max-width: 425px) {
+  .popup-form__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+.popup-form .form__row {
+  margin-bottom: 33px;
+  display: block;
+}
+@media screen and (max-width: 425px) {
+  .popup-form .form__row {
+    margin-bottom: 20px;
+  }
+}
+.popup-form .form__row:last-child {
+  margin-bottom: 0;
+}
+.popup-form .form__row--submit {
+  text-align: center;
+}
+.popup-form .form__row--submit .btn {
+  font-size: 14px;
+}
+.popup-form .form__row--sign p {
+  font-size: 12px;
+  line-height: 14px;
+  color: #6A7885;
+  margin: 0;
+}
+@media screen and (max-width: 425px) {
+  .popup-form .form__row--sign p {
+    text-align: center;
+  }
+}
+.popup-form .form__row--sign p a {
+  color: #6A7885;
+  transition: 0.2s all linear;
+}
+.popup-form .form__row--sign p a:hover {
+  color: #ffffff;
+}
+.popup-form .form input {
+  width: 100%;
+  appearance: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #6A7885;
+  border-radius: 29.5px;
+  height: 59px;
+  padding: 0 27px;
+  outline: none !important;
+  color: #cad2d9;
+  transition: 0.2s all linear;
+}
+.popup-form .form input:focus {
+  border: 1px solid #cad2d9;
+  outline: none !important;
+}
+.popup-form .form input:focus::placeholder {
+  color: #cad2d9;
+}
+.popup-form .form input::placeholder {
+  font-family: "Noto Sans", "Arial Narrow", sans-serif;
+  color: #6A7885;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */

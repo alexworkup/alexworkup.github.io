@@ -1,0 +1,180 @@
+.popup-form {
+  //position: absolute;
+  //left: 50%;
+  //top: 50%;
+  //transform: translate(-50%, -50%);
+  max-width: 650px;
+  padding: 25px 67px 50px 67px;
+  font-family: 'Noto Sans', "Arial Narrow", sans-serif;
+  overflow: hidden;
+  border-radius: 20px;
+  
+  @media #{$phone} {
+    padding: 25px;
+  }
+
+  .close {
+    position: absolute;
+    z-index: 5;
+    appearance: none;
+    border: 0;
+    background: none;
+    padding: 0;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    outline: none!important;
+
+    @media #{$phone} {
+      right: 10px;
+      top: 10px;
+    }
+
+    &:hover {
+
+      svg {
+
+        path {
+          stroke: #ffffff;
+        }
+      }
+    }
+
+    svg {
+
+      path {
+        transition: .2s all linear;
+
+        @media #{$phone} {
+          stroke: #ffffff;
+          opacity: .9;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__bg {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background-image: url("../images/main-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    filter: blur(7.5px);
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    @media #{$tablet} {
+      background-image: url("../images/main-bg-mobile.jpg");
+    }
+  }
+
+
+  &__title {
+    text-align: center;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 26px;
+
+    @media #{$phone} {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .form {
+
+    &__row {
+      margin-bottom: 33px;
+      display: block;
+
+      @media #{$phone} {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &--submit {
+        text-align: center;
+
+        .btn {
+          font-size: 14px;
+        }
+      }
+
+      &--sign {
+
+        p {
+          font-size: 12px;
+          line-height: 14px;
+          color: #6A7885;
+          margin: 0;
+
+          @media #{$phone} {
+            text-align: center;
+          }
+
+          a {
+            color: #6A7885;
+            transition: .2s all linear;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      appearance: none;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid #6A7885;
+      border-radius: 29.5px;
+      height: 59px;
+      padding: 0 27px;
+      outline: none!important;
+      color: #cad2d9;
+      transition: .2s all linear;
+
+      &:focus {
+        border: 1px solid #cad2d9;
+        outline: none!important;
+
+        &::placeholder {
+          color: #cad2d9;
+        }
+      }
+
+      &::placeholder {
+        font-family: 'Noto Sans', "Arial Narrow", sans-serif;
+        color: #6A7885;
+        font-size: 14px;
+      }
+    }
+  }
+}
