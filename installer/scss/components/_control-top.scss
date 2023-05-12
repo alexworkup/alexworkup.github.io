@@ -1,0 +1,11 @@
+.control-top {
+
+  &__list {
+    display: flex;
+    margin: 0 -20px;
+  }
+
+  &__item {
+    padding: 0 20px;
+  }
+}

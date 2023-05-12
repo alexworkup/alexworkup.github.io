@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Kelson Sans";
+  src: url("../fonts/kelson/kelsonsanslightru.woff2") format("woff2"), url("../fonts/kelson/kelsonsanslightru.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kelson Sans";
+  src: url("../fonts/kelson/kelsonsansregularru.woff2") format("woff2"), url("../fonts/kelson/kelsonsansregularru.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kelson Sans";
+  src: url("../fonts/kelson/kelsonsansboldru.woff2") format("woff2"), url("../fonts/kelson/kelsonsansboldru.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+.header {
+  background-color: #455A64;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+.header__row_top {
+  padding: 15px 50px;
+  margin: 0 -40px;
+}
+.header__row .main-menu {
+  width: 100%;
+}
+.header__col {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+}
+.header__col_border:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #4E5C61;
+}
+.header__col_btn {
+  display: flex;
+}
+
+body {
+  font-family: "Kelson Sans", "Arial Narrow", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1578px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.pin-top {
+  color: #91A3AB;
+  font-size: 14px;
+}
+.pin-top__wrap, .pin-top__link {
+  display: flex;
+  align-items: center;
+}
+.pin-top__link {
+  color: #91A2AB;
+  transition: 0.2s color linear;
+  text-decoration: none;
+}
+.pin-top__link:hover {
+  color: #C0D3DC;
+}
+.pin-top__icon {
+  margin-right: 10px;
+}
+
+.work-time {
+  font-size: 14px;
+  color: #91A3AB;
+}
+.work-time__wrap {
+  display: flex;
+  align-items: center;
+}
+.work-time__icon {
+  margin-right: 10px;
+}
+.work-time__text span {
+  color: #74B12B;
+}
+
+.menu-top {
+  font-size: 14px;
+}
+.menu-top__list {
+  display: flex;
+  align-items: center;
+  margin: 0 -20px;
+}
+.menu-top__link {
+  color: #91A3AB;
+  text-decoration: none;
+  transition: 0.2s color linear;
+}
+.menu-top__link:hover {
+  color: #C0D3DC;
+}
+.menu-top__item {
+  padding: 0 20px;
+}
+
+.control-top__list {
+  display: flex;
+  margin: 0 -20px;
+}
+.control-top__item {
+  padding: 0 20px;
+}
+
+.social__list {
+  display: flex;
+  margin: 0 -10px;
+}
+.social__item {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

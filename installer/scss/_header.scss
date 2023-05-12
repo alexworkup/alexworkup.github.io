@@ -1,0 +1,41 @@
+.header {
+  background-color: #455A64;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    &_top {
+      padding: 15px 50px;
+      margin: 0 -40px;
+    }
+
+    .main-menu {
+      width: 100%;
+    }
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+
+    &_border {
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #4E5C61;
+      }
+    }
+
+    &_btn {
+      display: flex;
+    }
+  }
+}

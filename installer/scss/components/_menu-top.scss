@@ -1,0 +1,23 @@
+.menu-top {
+  font-size: 14px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 -20px;
+  }
+
+  &__link {
+    color: #91A3AB;
+    text-decoration: none;
+    transition: .2s color linear;
+
+    &:hover {
+      color: #C0D3DC;
+    }
+  }
+
+  &__item {
+    padding: 0 20px;
+  }
+}

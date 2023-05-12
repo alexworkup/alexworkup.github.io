@@ -1,0 +1,24 @@
+.pin-top {
+  color: #91A3AB;
+  font-size: 14px;
+
+  &__wrap,
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: #91A2AB;
+    transition: .2s color linear;
+    text-decoration: none;
+
+    &:hover {
+      color: #C0D3DC;
+    }
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
