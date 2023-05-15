@@ -1,0 +1,14 @@
+.phone {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+
+    span {
+      color: #91A2AB;
+    }
+  }
+}

@@ -1,4 +1,33 @@
 @font-face {
+  font-family: 'Kelson Sans RU';
+  src: url('../fonts/kelson/KelsonSans-LightRU.woff2') format('woff2'),
+  url('../fonts/kelson/KelsonSans-LightRU.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kelson Sans RU';
+  src: url('../fonts/kelson/KelsonSans-RegularRU.woff2') format('woff2'),
+  url('../fonts/kelson/KelsonSans-RegularRU.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kelson Sans RU';
+  src: url('../fonts/kelson/KelsonSans-BoldRU.woff2') format('woff2'),
+  url('../fonts/kelson/KelsonSans-BoldRU.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*
+@font-face {
   font-family: 'Kelson Sans';
   src: url('../fonts/kelson/kelsonsanslightru.woff2') format('woff2'),
   url('../fonts/kelson/kelsonsanslightru.woff') format('woff');
@@ -22,3 +51,4 @@
   font-weight: 700;
   font-style: normal;
 }
+*/

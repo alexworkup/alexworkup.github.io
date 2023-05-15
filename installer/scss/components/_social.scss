@@ -8,5 +8,51 @@
   &__item {
     padding: 0 10px;
     text-decoration: none;
+
+    svg {
+
+      path {
+        transition: .2s all linear;
+      }
+    }
+
+    &_vk {
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: #2476FD;
+          }
+        }
+      }
+    }
+
+    &_viber {
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: #8F54A7;
+          }
+        }
+      }
+    }
+
+    &_whatsapp {
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: #34D368;
+          }
+        }
+      }
+    }
   }
 }

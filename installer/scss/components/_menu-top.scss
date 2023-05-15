@@ -19,5 +19,9 @@
 
   &__item {
     padding: 0 20px;
+
+    @media #{$desktop} {
+      padding: 0 10px;
+    }
   }
 }

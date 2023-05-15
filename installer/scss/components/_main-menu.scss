@@ -1,0 +1,36 @@
+.main-menu {
+  padding: 30px 48px;
+  background: rgba(69, 90, 100, 0.3);
+  box-shadow: 0 4px 25px rgba(14, 39, 51, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &_toggle {
+      margin-right: 60px;
+    }
+
+    &_phone {
+      margin-right: 12px;
+    }
+
+    &_nav {
+      flex-grow: 1;
+      margin: 0 auto;
+      align-items: stretch;
+      padding: 0 20px;
+
+      .main-nav {
+        width: 100%;
+      }
+    }
+  }
+}

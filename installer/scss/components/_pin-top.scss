@@ -20,5 +20,84 @@
 
   &__icon {
     margin-right: 10px;
+    position: relative;
+
+    svg {
+
+      path,
+      circle {
+        transition: .2s all linear;
+      }
+    }
   }
+
+  &_search {
+
+    &:hover {
+
+      svg {
+
+        path {
+          stroke: #8DC44A;
+        }
+
+        circle {
+          stroke: #C0D3DC;
+        }
+      }
+    }
+  }
+
+  &_basket {
+
+    &:hover {
+
+      svg {
+
+        #basket-icon-wrap {
+          stroke: #C0D3DC;
+        }
+
+        #basket-icon-stroke {
+          stroke: #8DC44A;
+        }
+      }
+    }
+
+    &.active {
+
+      .pin-top__icon {
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          background-color: #8DC44A;
+          border-radius: 50%;
+          top: -2px;
+          right: -3px;
+        }
+      }
+    }
+  }
+
+  &_sign-in {
+
+    &:hover {
+
+      svg {
+
+        #sign-in-circle {
+          stroke: #C0D3DC;
+        }
+
+        #sign-in-head,
+        #sign-in-body {
+          stroke: #8DC44A;
+        }
+      }
+    }
+  }
+
 }
