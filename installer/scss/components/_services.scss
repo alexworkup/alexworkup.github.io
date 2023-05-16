@@ -1,7 +1,19 @@
 .services {
   padding-top: 76px;
+  background-image: url("../images/services-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  & + .work-stages {
+    margin-top: -240px;
+  }
 
   &__title {
     margin-bottom: 50px;
+  }
+
+  &__advantages {
+    padding-top: 175px;
+    padding-bottom: 430px;
   }
 }
