@@ -19,6 +19,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 /*
 @font-face {
   font-family: 'Kelson Sans';
@@ -110,6 +118,35 @@ body {
 html,
 body {
   height: 100vh;
+}
+
+.h2 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 42px;
+  color: #455A64;
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 10px;
+}
+.h2:before, .h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.h2:before {
+  width: 5px;
+  height: 44px;
+  background-color: #6BA229;
+  bottom: -8px;
+  z-index: 1;
+}
+.h2:after {
+  height: 1px;
+  width: 295px;
+  background-color: #E2EBEE;
+  left: -11px;
 }
 
 .container {
@@ -541,6 +578,143 @@ body {
 
 .services {
   padding-top: 76px;
+}
+.services__title {
+  margin-bottom: 50px;
+}
+
+.services-list {
+  box-shadow: 1px 0 0 0 #E2EBEE, 0 1px 0 0 #E2EBEE, 1px 1px 0 0 #E2EBEE, 1px 0 0 0 #E2EBEE inset, 0 1px 0 0 #E2EBEE inset;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.services-list__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(550px, max-content) minmax(550px, max-content);
+  counter-reset: example 0;
+}
+.services-list .tile-service {
+  position: relative;
+  counter-increment: example 1;
+  box-shadow: 1px 0 0 0 #E2EBEE, 0 1px 0 0 #E2EBEE, 1px 1px 0 0 #E2EBEE, 1px 0 0 0 #E2EBEE inset, 0 1px 0 0 #E2EBEE inset;
+  overflow: hidden;
+}
+.services-list .tile-service.active:before {
+  color: #ffffff;
+  opacity: 0.2;
+}
+.services-list .tile-service.active .tile-service__img {
+  opacity: 1;
+}
+.services-list .tile-service.active .tile-service__title {
+  color: #ffffff;
+}
+.services-list .tile-service.active .tile-service__title:before {
+  background: #8DC54A;
+}
+.services-list .tile-service.active .tile-service__desc {
+  color: #ffffff;
+}
+.services-list .tile-service.active .tile-service__nav ul li::marker {
+  color: #ffffff;
+}
+.services-list .tile-service.active .tile-service__nav ul li a {
+  color: #ffffff;
+}
+.services-list .tile-service.active .tile-service__nav ul li a:hover {
+  color: #6BA229;
+}
+.services-list .tile-service__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.services-list .tile-service__img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(41.88deg, #182D37 6.88%, rgba(69, 90, 100, 0) 79.53%);
+}
+.services-list .tile-service__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.services-list .tile-service:before {
+  content: "0" counter(example);
+  position: absolute;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 180px;
+  color: #455A64;
+  opacity: 0.06;
+  z-index: 2;
+  left: -40px;
+  top: 10px;
+}
+.services-list .tile-service__wrap {
+  padding: 110px 44px 25px 55px;
+  position: relative;
+  z-index: 3;
+  height: 100%;
+}
+.services-list .tile-service__title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  color: #455A64;
+  position: relative;
+  padding-bottom: 14px;
+  margin-bottom: 30px;
+}
+.services-list .tile-service__title:before {
+  content: "";
+  position: absolute;
+  width: 152px;
+  height: 2px;
+  background: #C4DAA9;
+  bottom: 0;
+  left: 0;
+}
+.services-list .tile-service__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #455A64;
+  font-family: "Gilroy", "Arial Narrow", sans-serif;
+  margin-bottom: 25px;
+}
+.services-list .tile-service__icon {
+  position: absolute;
+  right: 40px;
+  bottom: 35px;
+}
+.services-list .tile-service__nav {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+}
+.services-list .tile-service__nav ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+.services-list .tile-service__nav ul li::marker {
+  color: #455A64;
+}
+.services-list .tile-service__nav ul li a {
+  color: #455A64;
+  text-decoration: none;
+  transition: 0.1s color linear;
+}
+.services-list .tile-service__nav ul li a:hover {
+  color: #6BA229;
 }
 
 .btn {
