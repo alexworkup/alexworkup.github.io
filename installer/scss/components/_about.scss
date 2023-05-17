@@ -1,0 +1,35 @@
+.about {
+  background-color: #576065;
+  padding: 55px 0;
+  background-image: url("../images/about-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 70px;
+
+  &__title {
+    color: #ffffff;
+  }
+
+  &__text {
+    color: #ffffff;
+    font-family: 'Gilroy', 'Arial Narrow', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 55px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    width: 50%;
+
+    &_form {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}

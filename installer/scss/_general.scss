@@ -49,6 +49,25 @@ body {
     background-color: #E2EBEE;
     left: -11px;
   }
+
+  &_center {
+    display: inline-block;
+    padding-left: 0;
+    padding-bottom: 12px;
+
+    &:before {
+      width: 44px;
+      height: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -2px;
+    }
+
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .container {

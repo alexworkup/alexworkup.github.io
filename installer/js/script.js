@@ -35,5 +35,14 @@ $( document ).ready(function() {
         },
     });
 
+    const workSlider = new Swiper('.work-list.swiper', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.work-list .swiper-button-next',
+            prevEl: '.work-list .swiper-button-prev',
+        },
+    });
+
 
 });
