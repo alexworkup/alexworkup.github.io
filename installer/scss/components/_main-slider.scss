@@ -35,46 +35,12 @@
     width: 100%;
     height: 117px;
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      height: 100%;
-      top: 0;
-      margin-top: 0;
-      width: 30px;
-      display: flex;
-      align-items: center;
-
-      &:after {
-        content: none;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        top: 0;
-        width: 1px;
-        background-color: #FFFFFF;
-        opacity: .2;
-      }
-    }
-
     .swiper-button-prev {
       left: -75px;
-      justify-content: flex-start;
-
-      &:before {
-        right: 0;
-      }
     }
 
     .swiper-button-next {
       right: -75px;
-      justify-content: flex-end;
-
-      &:before {
-        left: 0;
-      }
     }
   }
 

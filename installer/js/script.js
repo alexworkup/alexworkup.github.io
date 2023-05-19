@@ -39,8 +39,17 @@ $( document ).ready(function() {
         slidesPerView: 4,
         spaceBetween: 30,
         navigation: {
-            nextEl: '.work-list .swiper-button-next',
-            prevEl: '.work-list .swiper-button-prev',
+            nextEl: '.our-work .swiper-button-next',
+            prevEl: '.our-work .swiper-button-prev',
+        },
+    });
+
+    const manufacturersSlider = new Swiper('.manufacturers-list.swiper', {
+        slidesPerView: 6,
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.manufacturers .swiper-button-next',
+            prevEl: '.manufacturers .swiper-button-prev',
         },
     });
 

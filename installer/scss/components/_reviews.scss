@@ -1,0 +1,13 @@
+.reviews {
+  background-color: #1d2934;
+  padding-top: 32px;
+  padding-bottom: 29px;
+
+  &__title {
+    text-align: center;
+
+    .h2 {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,7 +1,57 @@
 .our-work {
+  margin-bottom: 120px;
+
+  &__list {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__arrows {
+
+    &.swiper-arrows {
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        height: 117px;
+        top: calc(50% - 15px);
+        transform: translateY(-50%);
+
+        &:before {
+          background-color: #E2EBEE;
+        }
+
+        &:hover {
+
+          svg {
+
+            path {
+              fill: #6BA229;
+            }
+          }
+
+          &:before {
+            background-color: #C4DAA9;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        left: -48px;
+      }
+
+      .swiper-button-next {
+        right: -48px;
+      }
+    }
+  }
 
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     text-align: center;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
   }
 }

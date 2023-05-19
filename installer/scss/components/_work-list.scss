@@ -1,5 +1,10 @@
 .work-list {
 
+  &.swiper {
+    padding: 10px 20px 40px 20px;
+    margin: 0 -20px;
+  }
+
   .work-item {
     width: 100%;
     position: relative;

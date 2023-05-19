@@ -1,0 +1,20 @@
+.article-date {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__num {
+    color: #91A2AB;
+    font-size: 16px;
+    line-height: 19px;
+
+    span {
+      color: #455A64;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
