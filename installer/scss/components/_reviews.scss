@@ -2,12 +2,72 @@
   background-color: #1d2934;
   padding-top: 32px;
   padding-bottom: 29px;
+  background-image: url("../images/reviews-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 70px;
 
   &__title {
     text-align: center;
+    margin-bottom: 37px;
 
     .h2 {
       color: #ffffff;
     }
+  }
+
+  &__content {
+    position: relative;
+    margin-bottom: 54px;
+  }
+
+  .reviews-list {
+
+    &__wrap {
+      display: flex;
+    }
+  }
+
+  &__arrows {
+
+    &.swiper-arrows {
+
+      .swiper-button-prev {
+        left: -48px;
+      }
+
+      .swiper-button-next {
+        right: -48px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: 50%;
+        max-height: 117px;
+        transform: translateY(-50%);
+
+        &:hover {
+
+          svg {
+
+            path {
+              fill: #6BA229;
+            }
+          }
+        }
+
+        svg {
+
+          path {
+            fill: #8397A3;
+          }
+        }
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
   }
 }

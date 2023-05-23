@@ -53,5 +53,14 @@ $( document ).ready(function() {
         },
     });
 
+    const reviewsSlider = new Swiper('.reviews-list.swiper', {
+        slidesPerView: 3,
+        spaceBetween: 26,
+        navigation: {
+            nextEl: '.reviews .swiper-button-next',
+            prevEl: '.reviews .swiper-button-prev',
+        },
+    });
+
 
 });

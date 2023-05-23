@@ -1,0 +1,25 @@
+.articles {
+  margin-bottom: 70px;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    padding-left: 60px;
+  }
+}
+
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  &__item {
+    width: calc(100% / 4);
+    padding: 0 15px;
+  }
+}
