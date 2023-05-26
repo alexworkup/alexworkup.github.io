@@ -12,6 +12,7 @@
   &.active {
 
     .question-item__icon {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMyIgdmlld0JveD0iMCAwIDEzIDMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS43NSAxLjVMMS4yNSAxLjUiIHN0cm9rZT0iIzQ1NUE2NCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K");
 
       svg {
 
@@ -20,6 +21,11 @@
         }
       }
     }
+
+    .question-item__body {
+      display: block;
+    }
+
   }
 
   &__head {
@@ -56,5 +62,6 @@
     font-size: 16px;
     line-height: 20px;
     color: #455A64;
+    display: none;
   }
 }

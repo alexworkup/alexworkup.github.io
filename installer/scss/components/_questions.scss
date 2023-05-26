@@ -1,4 +1,10 @@
 .questions {
+  padding-bottom: 78px;
+  background-image: url("../images/questions-bg.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
 
   &__title {
     margin-bottom: 50px;
@@ -9,5 +15,23 @@
     &__item {
       margin-bottom: 15px;
     }
+  }
+
+  &__col {
+    width: calc(50% + 80px);
+
+    &_form {
+      padding-left: 80px;
+      width: calc(50% - 80px);
+
+      .question-form {
+        max-width: 395px;
+      }
+    }
+  }
+
+  &__row {
+    padding-left: 50px;
+    display: flex;
   }
 }

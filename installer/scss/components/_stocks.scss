@@ -1,0 +1,26 @@
+.stocks {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin-bottom: 53px;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stocks-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: calc(100% / 4);
+      padding: 0 15px;
+    }
+  }
+}

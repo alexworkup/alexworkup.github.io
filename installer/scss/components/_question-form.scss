@@ -1,0 +1,98 @@
+.question-form {
+
+  &__title {
+    color: #455A64;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #455A64;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+
+    span {
+      color: #6BA229;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #91A3AB;
+    text-transform: uppercase;
+    font-family: 'Gilroy', 'Arial Narrow', sans-serif;
+    margin-bottom: 13px;
+  }
+
+  &__phone {
+    margin-bottom: 42px;
+
+    .phone {
+      font-size: 40px;
+      line-height: 48px;
+
+      &__link {
+        color: #6BA229;
+
+        span {
+          color: #91A2AB;
+        }
+      }
+
+    }
+  }
+
+  &__input {
+    width: 100%;
+    appearance: none;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #455A64;
+    padding: 0 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #C6D6DD;
+    backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'Gilroy', 'Arial Narrow', sans-serif;
+
+    &::placeholder {
+      color: #91A3AB;
+      font-family: 'Gilroy', 'Arial Narrow', sans-serif;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__fields {
+    margin-bottom: 20px;
+  }
+
+  &__checkbox {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #C1C4C6;
+    font-family: 'Gilroy', 'Arial Narrow', sans-serif;
+    margin-bottom: 19px;
+  }
+
+  &__submit {
+    font-size: 0;
+  }
+}

@@ -6,6 +6,11 @@ $( document ).ready(function() {
         is_mobile = true;
     }
 
+    $(document).on('click', '.question-item', function (e) {
+        $(this).find('.question-item__body').slideToggle();
+        $(this).toggleClass('active');
+    });
+
     const mainSlider = new Swiper('.main-slider.swiper', {
         effect: 'fade',
         navigation: {
