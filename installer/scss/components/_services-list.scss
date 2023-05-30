@@ -3,11 +3,30 @@
   border-radius: 10px;
   overflow: hidden;
 
+  @media #{$phone} {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
   &__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(550px, max-content) minmax(550px, max-content);
     counter-reset: example 0;
+
+    @media #{$notebook} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$tablet-mini} {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+    }
+
+    @media #{$phone} {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .tile-service {
@@ -16,6 +35,11 @@
     box-shadow: 1px 0 0 0 #E2EBEE, 0 1px 0 0 #E2EBEE, 1px 1px 0 0 #E2EBEE, 1px 0 0 0 #E2EBEE inset, 0 1px 0 0 #E2EBEE inset;
     overflow: hidden;
     background-color: #ffffff;
+
+    @media #{$phone} {
+      box-shadow: none;
+      border: 1px solid #E2EBEE;
+    }
 
     &.active {
 
@@ -97,6 +121,11 @@
       z-index: 2;
       left: -40px;
       top: 10px;
+
+      @media #{$phone} {
+        font-size: 100px;
+        line-height: 120px;
+      }
     }
 
     &__wrap {
@@ -104,6 +133,10 @@
       position: relative;
       z-index: 3;
       height: 100%;
+
+      @media #{$phone} {
+        padding: 26px 18px 18px 18px;
+      }
     }
 
     &__title {
@@ -114,6 +147,15 @@
       position: relative;
       padding-bottom: 14px;
       margin-bottom: 30px;
+
+      @media #{$phone} {
+        margin-bottom: 15px;
+      }
+
+      @media #{$laptop_s} {
+        font-size: 25px;
+        line-height: 110%;
+      }
 
       &:before {
         content: '';
@@ -133,12 +175,23 @@
       color: #455A64;
       font-family: $font-family-add;
       margin-bottom: 25px;
+
+      @media #{$phone} {
+        font-size: 14px;
+        line-height: 120%;
+        margin-bottom: 10px;
+      }
     }
 
     &__icon {
       position: absolute;
       right: 40px;
       bottom: 35px;
+
+      @media #{$phone} {
+        right: 20px;
+        bottom: 20px;
+      }
     }
 
     &__nav {

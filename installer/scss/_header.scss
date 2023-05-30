@@ -2,14 +2,13 @@
   position: relative;
   z-index: 10;
 
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 280px;
-    background: linear-gradient(180deg, rgba(13, 28, 35, 0.81) 7.2%, rgba(39, 58, 68, 0) 80.85%);
+  &__wrap {
+
+    &.container {
+      @media #{$tablet-mini} {
+        padding: 0;
+      }
+    }
   }
 
   &__row {
@@ -17,12 +16,108 @@
     justify-content: space-between;
 
     &_top {
-      padding: 15px 50px;
-      margin: 0 -40px;
+      padding: 15px 25px;
+      
+      @media #{$tablet-mini} {
+        display: none;
+      }
     }
 
     .main-menu {
       width: 100%;
+
+      @media #{$notebook} {
+        padding: 20px;
+      }
+
+      @media #{$tablet-mini} {
+        background: rgba(69, 90, 100, 0.3);
+        box-shadow: 0 4px 25px rgba(14, 39, 51, 0.15);
+        backdrop-filter: blur(5px);
+        border-radius: 0;
+        padding: 12px 20px;
+      }
+
+      @media screen and (max-width: 360px) {
+        padding: 12px 10px;
+      }
+
+      &__col {
+
+        &_toggle {
+
+          @media #{$notebook} {
+            display: none;
+          }
+
+          @media #{$tablet-mini} {
+            display: flex;
+            margin-right: 20px;
+          }
+
+          @media screen and (max-width: 360px) {
+            margin-right: 10px;
+          }
+        }
+
+        &_nav {
+
+          @media #{$tablet-mini} {
+            display: none;
+          }
+        }
+
+        &_phone {
+
+          @media #{$tablet-mini} {
+            margin-left: auto;
+            margin-right: 0;
+          }
+        }
+
+        &_order-phone {
+
+          @media screen and (max-width: 980px) {
+            display: none;
+          }
+        }
+
+        &_logo {
+
+          .logo {
+
+            @media #{$notebook} {
+              max-width: 115px;
+            }
+
+            @media #{$tablet-mini} {
+              font-size: 0;
+              position: relative;
+              top: -7px;
+            }
+
+            svg {
+              @media #{$notebook} {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &_phone {
+
+          .phone {
+
+            @media #{$notebook} {
+              font-size: 22px;
+            }
+
+            @media #{$phone} {
+              font-size: 17px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -31,6 +126,20 @@
     align-items: center;
     padding: 0 40px;
     position: relative;
+
+    &_street {
+
+      @media screen and (max-width: 1280px) {
+        display: none;
+      }
+    }
+
+    &_work-time {
+
+      @media screen and (max-width: 980px) {
+        display: none;
+      }
+    }
 
     @media #{$desktop} {
       padding: 0 20px;
@@ -52,6 +161,19 @@
 
     &_btn {
       display: flex;
+
+      .control-top {
+
+        .pin-top {
+
+          &__text {
+
+            @media screen and (max-width: 1366px) {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 }

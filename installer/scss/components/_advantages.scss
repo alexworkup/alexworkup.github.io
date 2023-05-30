@@ -6,6 +6,15 @@
     grid-template-rows: repeat(2, minmax(157px, max-content));
     grid-column-gap: 24px;
     grid-row-gap: 15px;
+
+    @media #{$notebook} {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, minmax(157px, max-content));
+    }
+
+    @media #{$laptop_s} {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .adv-item {
@@ -25,6 +34,10 @@
       position: relative;
       height: 100%;
 
+      @media #{$phone} {
+        padding-left: 37px;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -34,6 +47,10 @@
         top: 50%;
         left: 50px;
         transform: translateY(-50%);
+
+        @media #{$phone} {
+          left: 20px;
+        }
       }
     }
 

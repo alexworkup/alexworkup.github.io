@@ -13,6 +13,9 @@
   overflow: hidden;
   min-width: 170px;
   text-align: center;
+  border: 0;
+  appearance: none;
+  cursor: pointer;
 
   &:before {
     content: '';
@@ -24,8 +27,23 @@
     background: linear-gradient(34.22deg, #6BA229 23.9%, rgba(146, 228, 48, 0) 59.79%);
   }
 
+  &__text,
+  &__icon {
+    position: relative;
+  }
+
   &__text {
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    position: relative;
+  }
+
+  &__icon {
+    margin-right: 9px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
   }
 }

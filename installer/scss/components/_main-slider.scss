@@ -3,6 +3,27 @@
   height: 740px;
   margin-top: -160px;
 
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(180deg, rgba(13, 28, 35, 0.81) 7.2%, rgba(39, 58, 68, 0) 80.85%);
+    pointer-events: none;
+    z-index: 2;
+
+    @media #{$tablet-mini} {
+      height: 180px;
+    }
+  }
+
+  @media #{$tablet-mini} {
+    height: 500px;
+    margin-top: -65px;
+  }
+
   .slider-num {
     font-size: 15px;
     color: #ffffff;
@@ -53,6 +74,10 @@
     bottom: 20px;
     width: 100%;
     z-index: 2;
+    
+    @media #{$tablet-mini} {
+      display: none;
+    }
 
     .slider-num {
       padding-bottom: 0;
@@ -109,11 +134,19 @@
   .slider-item {
     padding-top: 160px;
 
+    @media #{$tablet-mini} {
+      padding-top: 64px;
+    }
+
     &__btn {
       position: absolute;
       z-index: 1;
       bottom: -15px;
       left: 149px;
+
+      @media #{$phone} {
+        left: 40px;
+      }
     }
 
     &__anons {
@@ -121,6 +154,11 @@
       line-height: 19px;
       color: #DEDDDD;
       text-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
+
+      @media #{$phone} {
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
 
     &__title {
@@ -131,6 +169,17 @@
       text-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
       text-transform: uppercase;
       margin-bottom: 5px;
+      
+      @media #{$tablet-mini} {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 5px;
+      }
+
+      @media screen and (max-width: 360px) {
+        font-size: 35px;
+        line-height: 100%;
+      }
 
       span {
         color: #6BA229;
@@ -139,6 +188,10 @@
 
     &__num {
       margin-bottom: 30px;
+      
+      @media #{$phone} {
+        margin-bottom: 20px;
+      }
     }
 
     &__content {
@@ -167,12 +220,23 @@
       padding: 32px 30px 32px 85px;
       max-width: 786px;
       height: 100%;
+
+      @media #{$tablet-mini} {
+        padding: 15px 15px 15px 35px;
+      }
     }
 
     &__wrap {
       height: 100%;
       display: flex;
       align-items: center;
+
+      &.container {
+
+        @media #{$phone} {
+          padding: 0 10px;
+        }
+      }
     }
 
     &__pics {

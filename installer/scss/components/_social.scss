@@ -55,4 +55,24 @@
       }
     }
   }
+
+  &_footer {
+
+    .social__list {
+      margin: 0;
+    }
+
+    .social__item {
+      width: 32px;
+      height: 32px;
+      background: rgba(198, 203, 206, 0.2);
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0 3px;
+    }
+  }
+
 }

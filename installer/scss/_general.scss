@@ -13,7 +13,6 @@ body {
 
 html,
 body {
-  height: 100vh;
   background-color: #F9FAFD;
 }
 
@@ -26,6 +25,11 @@ body {
   position: relative;
   padding-left: 32px;
   padding-bottom: 10px;
+
+  @media #{$tablet-mini} {
+    font-size: 25px;
+    line-height: 110%;
+  }
 
   &:before,
   &:after {

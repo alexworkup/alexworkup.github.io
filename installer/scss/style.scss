@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'fonts';
 @import 'header';
+@import 'footer';
 @import 'general';
 
 //Components
@@ -36,5 +37,8 @@
 @import 'components/question-form';
 @import 'components/stocks';
 @import 'components/stock-item';
+@import 'components/map';
+@import 'components/pop-goods';
+@import 'components/product-item';
 
 @import 'components/btn';

@@ -4,16 +4,31 @@
   background-repeat: no-repeat;
   background-position: bottom center;
 
+  @media #{$tablet-mini} {
+    padding-top: 20px;
+  }
+
   & + .work-stages {
     margin-top: -240px;
   }
 
   &__title {
     margin-bottom: 50px;
+
+    @media #{$tablet-mini} {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
   }
 
   &__advantages {
     padding-top: 175px;
     padding-bottom: 430px;
+
+    @media #{$notebook} {
+      padding-top: 75px;
+      padding-bottom: 200px;
+    }
   }
 }
