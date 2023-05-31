@@ -2,7 +2,7 @@ var is_mobile = false;
 
 $( document ).ready(function() {
 
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 500) {
         is_mobile = true;
     }
 
@@ -10,6 +10,15 @@ $( document ).ready(function() {
         $(this).find('.question-item__body').slideToggle();
         $(this).toggleClass('active');
     });
+
+
+    if(is_mobile) {
+
+        const serviceSlider = new Swiper('.services-list.swiper', {
+            slidesPerView: 1.15,
+            spaceBetween: 11,
+        });
+    }
 
     const mainSlider = new Swiper('.main-slider.swiper', {
         effect: 'fade',

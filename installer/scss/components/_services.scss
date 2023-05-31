@@ -10,6 +10,10 @@
 
   & + .work-stages {
     margin-top: -240px;
+
+    @media #{$notebook} {
+      margin-top: -140px;
+    }
   }
 
   &__title {
@@ -29,6 +33,10 @@
     @media #{$notebook} {
       padding-top: 75px;
       padding-bottom: 200px;
+    }
+
+    @media #{$phone} {
+      padding-top: 38px;
     }
   }
 }

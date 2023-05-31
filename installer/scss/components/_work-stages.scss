@@ -3,6 +3,7 @@
   margin-bottom: 50px;
 
   &__wrap {
+    position: relative;
     background: #F9FAFD;
     border-radius: 10px;
     padding: 45px 35px 45px 35px;
@@ -10,6 +11,29 @@
     background-image: url("../images/work-stages-bg.jpg");
     background-repeat: no-repeat;
     background-position: top right;
+
+    @media #{$laptop_s} {
+      background-image: none;
+    }
+
+    &:before {
+      content: none;
+      position: absolute;
+      width:100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #FFFFFF;
+      opacity: .6;
+
+      @media #{$notebook} {
+        content: '';
+      }
+    }
+
+    @media #{$notebook} {
+        background-size: contain;
+    }
   }
 
   &__content {
@@ -27,6 +51,15 @@
     max-width: 70%;
     position: relative;
 
+    @media #{$notebook} {
+      max-width: 100%;
+    }
+
+    @media #{$laptop_s} {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+    }
+
     &:before {
       content: '';
       left: 50%;
@@ -34,11 +67,19 @@
       height: 100%;
       width: 1px;
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSI2ODYiIHZpZXdCb3g9IjAgMCAxIDY4NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjAuNSIgeTE9Ii0yLjE4NTU3ZS0wOCIgeDI9IjAuNTAwMDMiIHkyPSI2ODYiIHN0cm9rZT0idXJsKCNwYWludDBfbGluZWFyXzIwOF8zMTI4KSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzIwOF8zMTI4IiB4MT0iLTAuOTk5MDc5IiB5MT0iLTcuMTM4NCIgeDI9Ii0wLjk5OTA1MSIgeTI9IjY0OC4xNjciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0UyRUJFRSIgc3RvcC1vcGFjaXR5PSIwIi8+CjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjRTJFQkVFIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0UyRUJFRSIgc3RvcC1vcGFjaXR5PSIwIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==");
+
+      @media #{$laptop_s} {
+        content: none;
+      }
     }
   }
 
   &__item {
     padding: 35px;
+
+    @media #{$laptop_s} {
+      padding: 20px;
+    }
   }
 
   .stage-item {
