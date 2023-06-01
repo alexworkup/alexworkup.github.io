@@ -18,18 +18,44 @@
     font-size: 18px;
     line-height: 22px;
     padding: 55px;
+    
+    @media #{$tablet-mini} {
+      padding: 10px 0;
+    }
   }
 
   &__row {
     display: flex;
+
+    @media #{$notebook} {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
     width: 50%;
 
+    @media #{$notebook} {
+      width: 100%;
+    }
+
     &_form {
       display: flex;
       align-items: flex-end;
+
+      @media #{$notebook} {
+        max-width: 80%;
+        padding: 0 50px;
+      }
+
+      @media #{$laptop_s} {
+        max-width: 100%;
+      }
+
+      @media #{$tablet-mini} {
+        padding: 10px 0;
+      }
+
     }
   }
 }

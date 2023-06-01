@@ -2,6 +2,11 @@
   max-width: 1680px;
   margin-bottom: 50px;
 
+  @media #{$phone} {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
   &__wrap {
     position: relative;
     background: #F9FAFD;
@@ -14,6 +19,11 @@
 
     @media #{$laptop_s} {
       background-image: none;
+    }
+
+    @media #{$phone} {
+      padding: 35px 20px 20px 20px;
+      border-radius: 0;
     }
 
     &:before {
@@ -29,6 +39,10 @@
       @media #{$notebook} {
         content: '';
       }
+
+      @media #{$phone} {
+        content: none;
+      }
     }
 
     @media #{$notebook} {
@@ -38,6 +52,10 @@
 
   &__content {
     padding: 15px;
+
+    @media #{$phone} {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -79,6 +97,10 @@
 
     @media #{$laptop_s} {
       padding: 20px;
+    }
+
+    @media #{$phone} {
+      padding: 15px 0;
     }
   }
 
