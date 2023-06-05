@@ -1,12 +1,28 @@
 .our-work {
   margin-bottom: 120px;
 
+  @media #{$phone} {
+    margin-bottom: 54px;
+  }
+
   &__list {
     position: relative;
     margin-bottom: 20px;
+
+    @media #{$desktop} {
+      padding: 0 40px;
+    }
+
+    @media #{$phone} {
+      padding: 0;
+    }
   }
 
   &__arrows {
+
+    @media #{$phone} {
+      display: none;
+    }
 
     &.swiper-arrows {
 
@@ -37,10 +53,18 @@
 
       .swiper-button-prev {
         left: -48px;
+
+        @media #{$desktop} {
+          left: 0;
+        }
       }
 
       .swiper-button-next {
         right: -48px;
+
+        @media #{$desktop} {
+          right: 0;
+        }
       }
     }
   }
@@ -48,6 +72,10 @@
   &__title {
     margin-bottom: 50px;
     text-align: center;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
   }
 
   &__more {

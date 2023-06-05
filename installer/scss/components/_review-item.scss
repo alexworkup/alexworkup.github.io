@@ -5,6 +5,10 @@
   padding: 29px 33px 60px 33px;
   position: relative;
 
+  @media #{$phone} {
+    padding: 20px;
+  }
+
   &:hover {
 
     .review-item__more {
@@ -19,6 +23,10 @@
     bottom: 25px;
     opacity: 0;
     transition: .2s all linear;
+
+    @media #{$phone} {
+      display: none;
+    }
   }
 
   &__top {
@@ -32,6 +40,11 @@
     font-size: 16px;
     line-height: 19px;
     color: #455A64;
+
+    @media #{$phone} {
+      font-size: 14px;
+      line-height: 115%;
+    }
   }
 
   .review-person {
@@ -53,6 +66,10 @@
     &__icon {
       margin-right: 18px;
       font-size: 0;
+
+      @media #{$phone} {
+        margin-right: 10px;
+      }
     }
 
     &__name {
@@ -60,6 +77,11 @@
       font-size: 20px;
       line-height: 24px;
       color: #455A64;
+
+      @media #{$phone} {
+        font-size: 18px;
+        line-height: 115%;
+      }
     }
   }
 }

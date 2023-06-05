@@ -19,6 +19,14 @@
   &__content {
     position: relative;
     margin-bottom: 54px;
+
+    @media #{$desktop} {
+      padding: 0 40px;
+    }
+
+    @media #{$phone} {
+      padding: 0;
+    }
   }
 
   .reviews-list {
@@ -30,14 +38,26 @@
 
   &__arrows {
 
+    @media #{$phone} {
+      display: none;
+    }
+
     &.swiper-arrows {
 
       .swiper-button-prev {
         left: -48px;
+
+        @media #{$desktop} {
+          left: 0;
+        }
       }
 
       .swiper-button-next {
         right: -48px;
+
+        @media #{$desktop} {
+          right: 0;
+        }
       }
 
       .swiper-button-prev,

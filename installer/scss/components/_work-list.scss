@@ -3,6 +3,33 @@
   &.swiper {
     padding: 10px 20px 40px 20px;
     margin: 0 -20px;
+
+    @media #{$phone} {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__wrap {
+
+    &.swiper-wrapper {
+
+      @media #{$phone} {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__item {
+
+    @media #{$phone} {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   .work-item {
@@ -17,6 +44,10 @@
     padding: 18px;
     box-shadow: none;
     transition: .2s box-shadow linear;
+
+    @media #{$phone} {
+      height: 200px;
+    }
 
     &:hover {
       box-shadow: 0 10px 25px rgba(69, 90, 100, 0.44);

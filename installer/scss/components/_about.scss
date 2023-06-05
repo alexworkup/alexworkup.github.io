@@ -7,6 +7,11 @@
   background-size: cover;
   margin-bottom: 70px;
 
+  @media #{$phone} {
+    padding-bottom: 10px;
+    margin-bottom: 54px;
+  }
+
   &__title {
     color: #ffffff;
   }
@@ -21,6 +26,11 @@
     
     @media #{$tablet-mini} {
       padding: 10px 0;
+    }
+
+    @media #{$phone} {
+      font-size: 16px;
+      line-height: 115%;
     }
   }
 
@@ -54,6 +64,13 @@
 
       @media #{$tablet-mini} {
         padding: 10px 0;
+      }
+
+      .open-form {
+
+        @media #{$phone} {
+          margin: 0 -5px;
+        }
       }
 
     }

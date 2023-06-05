@@ -1,25 +1,73 @@
 .pop-goods {
-  margin-bottom: 180px;
+  margin-bottom: 120px;
+
+  @media #{$phone} {
+    margin-bottom: 72px;
+  }
 
   &__head {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+
+    @media #{$laptop-s} {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tabs {
+    padding: 20px 0 10px 0;
+
+    @media #{$phone} {
+      padding-bottom: 0;
+    }
   }
 
   &__title {
     margin-right: 77px;
+
+    @media #{$phone} {
+      margin-right: 0;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    margin-bottom: 40px;
+
+    @media #{$phone} {
+      margin: 0 -5px;
+      margin-bottom: 20px;
+    }
   }
 
   &__item {
     width: calc(100% / 4);
-    padding: 0 15px;
+    padding: 10px 15px;
+    
+    @media #{$desktop} {
+      padding: 5px;
+    }
+
+    @media #{$laptop} {
+      width: calc(100% / 3);
+    }
+
+    @media #{$laptop-s} {
+      width: calc(100% / 2);
+    }
+
+    @media #{$phone} {
+      width: 100%;
+    }
 
     .product-item {
       height: 100%;
@@ -30,6 +78,10 @@
     background: #FFFFFF;
     border-radius: 10px 0;
 
+    @media #{$phone} {
+      background: none;
+    }
+
     &__item {
       height: 55px;
       display: flex;
@@ -38,6 +90,19 @@
       text-decoration: none;
       color: #455A64;
       position: relative;
+      background: #FFFFFF;
+      overflow: hidden;
+      border-radius: 10px 0;
+
+      @media #{$phone} {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 35px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       &:before {
         content: '';
@@ -64,6 +129,7 @@
 
     &__list {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 }

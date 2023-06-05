@@ -20,6 +20,16 @@
       @media #{$notebook} {
         content: none;
       }
+
+      @media #{$phone} {
+        content: '';
+        background-image: url("../images/open-form-wrap-mobile.svg");
+        left: 10px;
+      }
+
+      @media #{$phone-mini} {
+        content: none;
+      }
     }
   }
 
@@ -29,6 +39,14 @@
 
     @media #{$tablet-mini} {
       padding: 50px;
+    }
+
+    @media #{$phone} {
+      padding: 7px 23px 20px 23px;
+    }
+
+    @media #{$phone-mini} {
+      padding: 20px;
     }
 
     &:before {
@@ -55,6 +73,11 @@
     font-family: 'Gilroy', 'Arial Narrow', sans-serif;
     text-transform: uppercase;
     margin-bottom: 17px;
+
+    @media #{$phone} {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
@@ -69,6 +92,10 @@
     @media #{$laptop_s} {
       font-size: 40px;
       line-height: 120%;
+    }
+
+    @media #{$phone} {
+      font-size: 25px;
     }
 
     span {
@@ -96,6 +123,10 @@
       width: 100%;
     }
 
+    @media #{$phone-mini} {
+      padding: 0;
+    }
+
     &_field {
 
       @media #{$tablet-mini} {
@@ -120,6 +151,10 @@
 
     @media #{$tablet-mini} {
       flex-wrap: wrap;
+    }
+
+    @media #{$phone} {
+      margin: 0;
     }
   }
 
@@ -162,6 +197,16 @@
     @media #{$notebook} {
       padding-top: 10px;
     }
+
+    @media #{$phone} {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 27px;
+    }
+
+    @media #{$phone-mini} {
+      padding-left: 0;
+    }
   }
 
   &__policy {
@@ -179,6 +224,12 @@
         display: none;
       }
     }
+
+    @media #{$phone} {
+      text-align: left;
+      order: 2;
+      margin-right: 0;
+    }
   }
 
   &__btn {
@@ -188,6 +239,11 @@
 
     @media #{$notebook} {
       bottom: 0;
+    }
+
+    @media #{$phone} {
+      order: 1;
+      margin-bottom: 10px;
     }
   }
 }

@@ -49,18 +49,60 @@ $( document ).ready(function() {
         },
     });
 
-    const workSlider = new Swiper('.work-list.swiper', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.our-work .swiper-button-next',
-            prevEl: '.our-work .swiper-button-prev',
-        },
-    });
+    if(!is_mobile) {
+        const workSlider = new Swiper('.work-list.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                // when window width is >= 500px
+                500: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                // when window width is >= 1440px
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                // when window width is >= 1680px
+                1680: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+            navigation: {
+                nextEl: '.our-work .swiper-button-next',
+                prevEl: '.our-work .swiper-button-prev',
+            },
+        });
+    }
 
     const manufacturersSlider = new Swiper('.manufacturers-list.swiper', {
-        slidesPerView: 6,
+        slidesPerView: 1,
         spaceBetween: 0,
+        breakpoints: {
+            // when window width is >= 500px
+            500: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 1024px
+            1024: {
+                slidesPerView: 3,
+            },
+            // when window width is >= 1440px
+            1440: {
+                slidesPerView: 4,
+            },
+            // when window width is >= 1680px
+            1680: {
+                slidesPerView: 6,
+            }
+        },
         navigation: {
             nextEl: '.manufacturers .swiper-button-next',
             prevEl: '.manufacturers .swiper-button-prev',
@@ -68,8 +110,22 @@ $( document ).ready(function() {
     });
 
     const reviewsSlider = new Swiper('.reviews-list.swiper', {
-        slidesPerView: 3,
-        spaceBetween: 26,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+            // when window width is >= 1024px
+            1024: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 1440px
+            1440: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 1680px
+            1680: {
+                slidesPerView: 3,
+            }
+        },
         navigation: {
             nextEl: '.reviews .swiper-button-next',
             prevEl: '.reviews .swiper-button-prev',
