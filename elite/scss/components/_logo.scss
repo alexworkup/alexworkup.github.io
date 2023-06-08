@@ -1,0 +1,38 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  .logo-text {
+
+    &__title,
+    &__subtitle {
+      font-family: $font-family-header;
+      font-style: italic;
+      line-height: 120%;
+    }
+
+    &__title {
+      color: $c-yellow;
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: -5px;
+    }
+
+    &__subtitle {
+      color: $c-white;
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    &__desc {
+      line-height: 107.14%;
+      font-weight: 500;
+      font-size: 14px;
+      opacity: .6;
+    }
+  }
+}

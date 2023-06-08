@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-Medium.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-Bold.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-BoldItalic.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-SemiBold.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-MediumItalic.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-SemiBoldItalic.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/gilroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Bold.woff") format("woff"), url("../fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.header__row_top {
+  padding: 11px 0 17px 0;
+}
+
+html,
+body {
+  background-color: #752232;
+  height: 100vh;
+}
+
+body {
+  font-family: "Gilroy", "Arial Narrow", sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-image: url("../images/body-bg.jpg");
+  background-repeat: repeat;
+  position: relative;
+}
+body:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 351px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #2F0308 0%, rgba(95, 9, 12, 0) 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1442px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__icon {
+  margin-right: 10px;
+}
+.logo .logo-text__title, .logo .logo-text__subtitle {
+  font-family: "Cormorant Garamond", "Arial Narrow", sans-serif;
+  font-style: italic;
+  line-height: 120%;
+}
+.logo .logo-text__title {
+  color: #FFF383;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: -5px;
+}
+.logo .logo-text__subtitle {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 600;
+}
+.logo .logo-text__desc {
+  line-height: 107.14%;
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=style.css.map */

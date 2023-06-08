@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-Medium.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-Bold.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-BoldItalic.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-SemiBold.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-MediumItalic.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-SemiBoldItalic.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+  url('../fonts/gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/gilroy/Gilroy-Regular.woff') format('woff'),
+  url('../fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy/Gilroy-Medium.eot');
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+  url('../fonts/gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/gilroy/Gilroy-Medium.woff') format('woff'),
+  url('../fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroy/Gilroy-Bold.eot');
+  src: local('Gilroy Bold'), local('Gilroy-Bold'),
+  url('../fonts/gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/gilroy/Gilroy-Bold.woff') format('woff'),
+  url('../fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
