@@ -1,0 +1,61 @@
+.btn {
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  color: $c-yellow;
+  border: 2px solid $c-orange;
+  border-radius: 25px;
+  padding: 0 33px;
+  display: inline-block;
+  background: #500B14;
+  transition: .2s all linear;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &:active {
+    color: $c-yellow;
+    background: #6E0B1B;
+    box-shadow: 0 0 25px rgba(255, 243, 131, 0.5);
+  }
+}
+
+.btn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $c-yellow;
+  font-family: $font-family-header;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 120%;
+  text-decoration: none;
+
+  &__text {
+    padding: 0 80px;
+    position: relative;
+
+    &:before {
+      left: 0;
+      background-image: url("../images/btn-more-left.svg");
+    }
+
+    &:after {
+      right: 0;
+      background-image: url("../images/btn-more-right.svg");
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% + 3px);
+      transform: translateY(-50%);
+      width: 70px;
+      height: 6px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

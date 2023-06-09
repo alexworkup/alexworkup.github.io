@@ -1,0 +1,26 @@
+.phone {
+
+  &__wrap {
+    text-align: right;
+    display: inline-block;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    color: white;
+
+    span {
+      color: $c-orange;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    color: $c-pink;
+  }
+}

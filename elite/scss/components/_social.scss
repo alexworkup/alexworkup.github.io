@@ -1,0 +1,46 @@
+.social {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 -4px;
+  }
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #711C2A;
+    margin: 0 4px;
+
+    svg {
+
+      path {
+        transition: .2s all linear;
+      }
+    }
+
+    &_ok {
+
+      &:hover {
+
+        path {
+          fill: #F69337;
+        }
+      }
+    }
+
+    &_vk {
+
+      &:hover {
+
+        path {
+          fill: #2476FD;
+        }
+      }
+    }
+  }
+}

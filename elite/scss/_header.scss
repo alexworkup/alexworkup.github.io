@@ -1,9 +1,45 @@
 .header {
+  margin-bottom: 25px;
 
   &__row {
+    display: flex;
 
     &_top {
       padding: 11px 0 17px 0;
+      justify-content: space-between;
+    }
+  }
+
+  .header-info {
+
+    &__row {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 -10px;
+
+      &_text {
+        margin-bottom: 14px;
+      }
+    }
+
+    &__col {
+      padding: 0 10px;
+
+      &_socials {
+
+      }
+    }
+
+    &__text {
+      font-family: $font-family-header;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 36px;
+
+      span {
+        color: $c-yellow;
+      }
     }
   }
 }
