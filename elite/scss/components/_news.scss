@@ -1,4 +1,5 @@
 .news {
+  margin-bottom: 60px;
 
   &__list {
     display: flex;
@@ -10,10 +11,26 @@
   &__item {
     padding: 0 10px;
     width: 50%;
+
+    &:hover {
+
+      .news-item__wrap {
+        box-shadow: 0 4px 25px #4F0E1C;
+      }
+    }
   }
 
   .news-item {
     height: 100%;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
 
     &__date {
       color: #DA9D30;
@@ -46,6 +63,8 @@
       padding: 13px;
       display: flex;
       height: 100%;
+      box-shadow: none;
+      transition: .2s all linear;
     }
 
     &__pics {
@@ -84,13 +103,14 @@
       display: inline-block;
       height: 37px;
       line-height: 34px;
-      padding: 0 18px;
+      padding: 0 18px 0 0;
       border: 1px solid transparent;
       border-radius: 20.5px;
       transition: .2s all linear;
 
       &:hover {
         border: 1px solid $c-yellow;
+        padding-left: 18px;
       }
 
       span {

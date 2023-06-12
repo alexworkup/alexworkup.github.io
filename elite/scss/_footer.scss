@@ -1,0 +1,183 @@
+.footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #2F0308 0%, rgba(95, 9, 12, 0) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  &__top {
+    background: rgba(34, 1, 2, 0.5);
+
+    .main-menu {
+      background: none;
+      padding: 0;
+
+      .main-nav {
+
+        &__list {
+          margin-left: -40px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background: rgba(34, 1, 2, 0.5);
+    padding: 20px 0 40px 0;
+
+    .logo {
+
+      &__icon {
+
+        img {
+          max-height: 75px;
+        }
+      }
+    }
+
+    .footer-contacts {
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 120%;
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            text-decoration: none;
+            color: #FFFFFF;
+          }
+
+          b {
+            font-weight: normal;
+            color: $c-orange;
+          }
+        }
+      }
+    }
+
+    .footer-copy {
+      color: $c-orange;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 170%;
+    }
+  }
+
+  &__content {
+    padding:  50px 0 30px 0;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -20px;
+  }
+
+  &__col {
+    padding: 0 20px;
+
+    &_contacts {
+      display: flex;
+      align-items: center;
+    }
+
+    &_copy {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &_desc {
+      padding-right: 20px;
+    }
+
+    &_socials {
+      display: flex;
+      flex-shrink: 0;
+
+      .social {
+        margin-right: 20px;
+
+        &__item {
+          background: #620F1E;
+          border: 2px solid rgba(222, 189, 85, 0.6);
+        }
+      }
+    }
+  }
+
+  .footer-desc {
+
+    &__title {
+      font-family: $font-family-header;
+      font-size: 40px;
+      line-height: 100%;
+      color: $c-yellow;
+
+      span {
+        color: #FFFFFF;
+      }
+    }
+
+    &__subtitle {
+      font-family: $font-family-header;
+      font-size: 25px;
+      line-height: 100%;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 15px;
+
+      b {
+        color: $c_yellow;
+      }
+    }
+
+    &__more {
+      text-decoration: none;
+      color: $c_yellow;
+      font-size: 14px;
+      line-height: 120%;
+      transition: .2s all linear;
+
+      &:hover {
+        color: #FFFFFF;
+      }
+
+      span {
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: relative;
+          background-image: url(../images/arrow-news-btn.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-left: 6px;
+          margin-bottom: -1px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

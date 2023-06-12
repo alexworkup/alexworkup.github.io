@@ -2307,7 +2307,7 @@ body {
   margin: 0 -15px;
 }
 .articles-list__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 0 15px;
 }
 
@@ -2549,7 +2549,7 @@ body {
   flex-wrap: wrap;
 }
 .stocks .stocks-list__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 0 15px;
 }
 
@@ -2563,7 +2563,7 @@ body {
   opacity: 0.7;
 }
 .stock-item__wrap {
-  background-color: rgb(13, 33, 43);
+  background-color: #0d212b;
   height: 100%;
   padding: 20px;
   display: flex;
@@ -2697,7 +2697,7 @@ body {
   }
 }
 .pop-goods__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 10px 15px;
 }
 @media screen and (max-width: 1680px) {
@@ -2707,12 +2707,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .pop-goods__item {
-    width: 33.3333333333%;
+    width: calc(100% / 3);
   }
 }
 @media screen and (max-width: 1024px) {
   .pop-goods__item {
-    width: 50%;
+    width: calc(100% / 2);
   }
 }
 @media screen and (max-width: 500px) {

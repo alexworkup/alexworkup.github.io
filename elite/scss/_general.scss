@@ -1,7 +1,7 @@
 html,
 body {
   background-color: #752232;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
 
 
 .container {
-  max-width: 1442px;
+  max-width: 1482px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
