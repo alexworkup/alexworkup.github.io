@@ -1,0 +1,90 @@
+.side-panel {
+  position: fixed;
+  right: 11px;
+  top: calc(50% - 170px);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+  &__item {
+    width: 55px;
+    height: 55px;
+    background: rgba(98, 15, 30, 0.5);
+    border: 2px solid rgba(222, 189, 85, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    position: relative;
+    text-decoration: none;
+
+    @media #{$phone} {
+      width: 49px;
+      height: 49px;
+    }
+
+    &_basket,
+    &_up {
+
+      &:hover {
+
+        svg {
+
+          path {
+            stroke: #ffffff;
+          }
+        }
+      }
+    }
+
+    &_basket {
+
+      i {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: #983545;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        background-color: $c-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+      }
+    }
+
+    &_phone {
+
+      &:hover {
+
+        svg {
+
+          path {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+
+    svg {
+
+      path {
+        transition: .1s all linear;
+      }
+    }
+
+    span {
+      font-size: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

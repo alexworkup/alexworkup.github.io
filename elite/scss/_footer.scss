@@ -10,10 +10,21 @@
     top: 0;
     background: linear-gradient(180deg, #2F0308 0%, rgba(95, 9, 12, 0) 100%);
     transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: 1;
+    pointer-events: none;
+
+    @media #{$laptop} {
+      z-index: 2;
+    }
   }
 
   &__top {
     background: rgba(34, 1, 2, 0.5);
+
+    @media #{$laptop} {
+      position: relative;
+      z-index: 2;
+    }
 
     .main-menu {
       background: none;
@@ -23,6 +34,14 @@
 
         &__list {
           margin-left: -40px;
+
+          @media #{$laptop} {
+            margin-left: 0;
+          }
+
+          @media #{$tablet-mini} {
+            flex-wrap: wrap;
+          }
         }
       }
     }
@@ -30,7 +49,17 @@
 
   &__bottom {
     background: rgba(34, 1, 2, 0.5);
-    padding: 20px 0 40px 0;
+    padding: 15px 0 35px 0;
+
+    @media #{$laptop} {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer__wrap {
+      position: relative;
+      z-index: 2;
+    }
 
     .logo {
 
@@ -81,16 +110,29 @@
   }
 
   &__content {
-    padding:  50px 0 30px 0;
+    padding:  45px 0 25px 0;
+    position: relative;
+    z-index: 2;
   }
 
   &__row {
     display: flex;
     margin: 0 -20px;
+
+    &_bottom {
+      flex-wrap: wrap;
+    }
+
+    &_content {
+
+      @media #{$tablet-mini} {
+        flex-wrap: wrap;
+      }
+    }
   }
 
   &__col {
-    padding: 0 20px;
+    padding: 5px 20px;
 
     &_contacts {
       display: flex;
@@ -129,6 +171,10 @@
       line-height: 100%;
       color: $c-yellow;
 
+      @media #{$laptop_s} {
+        font-size: 30px;
+      }
+
       span {
         color: #FFFFFF;
       }
@@ -139,6 +185,10 @@
       font-size: 25px;
       line-height: 100%;
       margin-bottom: 15px;
+
+      @media #{$laptop_s} {
+        font-size: 20px;
+      }
     }
 
     &__text {

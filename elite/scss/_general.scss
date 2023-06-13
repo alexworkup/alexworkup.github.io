@@ -39,7 +39,7 @@ body {
   position: relative;
 
   @media #{$phone} {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 
@@ -49,6 +49,44 @@ body {
   min-height: 100%;
   overflow: hidden;
   position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 43px;
+    width: 397px;
+    height: 573px;
+    background-image: url("../images/archangel-big.png");
+    background-repeat: no-repeat;
+
+    @media #{$laptop} {
+      opacity: .5;
+    }
+
+    @media #{$phone} {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-image: url("../images/archangel-small.png");
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    width: 345px;
+    height: 473px;
+
+    @media #{$laptop} {
+      z-index: 1;
+    }
+
+    @media #{$phone} {
+      display: none;
+    }
+  }
 }
 
 .main {
@@ -69,6 +107,10 @@ body {
   align-items: center;
   flex-direction: column;
 
+  @media #{$tablet-mini} {
+    font-size: 25px;
+  }
+
   &:after {
     content: '';
     position: relative;
@@ -76,7 +118,14 @@ body {
     height: 41px;
     background-image: url("../images/decor-title.svg");
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     display: inline-block;
     margin-top: 4px;
+
+    @media #{$tablet-mini} {
+      width: 190px;
+      height: 27px;
+    }
   }
 }

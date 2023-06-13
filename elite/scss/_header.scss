@@ -1,6 +1,10 @@
 .header {
   margin-bottom: 25px;
 
+  @media #{$tablet-mini} {
+    display: none;
+  }
+
   &__row {
     display: flex;
 
@@ -10,24 +14,49 @@
     }
   }
 
+  &__col {
+
+    &_logo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+
+      .logo {
+
+        &__text {
+          @media #{$laptop_s} {
+            display: none;
+          }
+        }
+
+        &__icon {
+
+          img {
+
+            @media #{$laptop_s} {
+              max-height: 75px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .header-info {
 
     &__row {
       display: flex;
       justify-content: flex-end;
       margin: 0 -10px;
+      flex-wrap: wrap;
 
       &_text {
-        margin-bottom: 14px;
+        margin-bottom: 10px;
       }
     }
 
     &__col {
-      padding: 0 10px;
-
-      &_socials {
-
-      }
+      padding: 5px 10px;
     }
 
     &__text {

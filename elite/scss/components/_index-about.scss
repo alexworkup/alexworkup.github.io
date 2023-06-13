@@ -6,9 +6,26 @@
     font-family: $font-family-header;
     font-weight: 600;
     margin-bottom: -15px;
+    
+    @media #{$tablet-mini} {
+      font-size: 25px;
+      margin-bottom: -3px;
+    }
+
+    @media #{$phone-mini} {
+      font-size: 20px;
+    }
 
     span {
       font-size: 30px;
+
+      @media #{$tablet-mini} {
+        font-size: 25px;
+      }
+
+      @media #{$phone-mini} {
+        font-size: 20px;
+      }
     }
   }
 
@@ -18,12 +35,24 @@
     font-weight: 600;
     font-size: 40px;
     margin-bottom: 20px;
+
+    @media #{$tablet-mini} {
+      font-size: 21px;
+    }
+
+    @media #{$phone-mini} {
+      font-size: 18px;
+    }
   }
 
   &__inner {
     background: rgba(34, 1, 2, 0.3);
     border-radius: 5px;
     padding: 30px 44px;
+
+    @media #{$phone} {
+      padding: 20px 12px;
+    }
   }
 
   &__text {
@@ -31,6 +60,11 @@
     font-size: 16px;
     line-height: 150%;
     color: #F1F1F1;
+
+    @media #{$tablet-mini} {
+      font-size: 14px;
+      line-height: 120%;
+    }
 
     b {
       color: $c-orange;

@@ -8,10 +8,15 @@
 
     &__list {
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__item {
       padding: 0 20px;
+
+      @media #{$notebook} {
+        padding: 0;
+      }
     }
 
     &__link {
@@ -60,19 +65,6 @@
     align-items: center;
   }
 
-  &__col {
-
-    &_search {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-
-      .work-time {
-        margin-right: 12px;
-      }
-    }
-  }
-
   .work-time {
     display: flex;
     align-items: center;
@@ -91,48 +83,26 @@
     }
   }
 
-  .top-search {
+  &__col {
 
-    &__form {
-      position: relative;
-    }
+    &_search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
 
-    &__submit {
-      appearance: none;
-      font-size: 0;
-      width: 22px;
-      height: 22px;
-      border: none;
-      background-color: transparent;
-      margin: 0;
-      padding: 0;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQxM18yKSI+CjxjaXJjbGUgY3g9IjEwLjUiIGN5PSIxMC41IiByPSI5LjUiIHN0cm9rZT0iI0E4NEM1NiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPHBhdGggZD0iTTE3LjUgMTcuNUwyMSAyMSIgc3Ryb2tlPSIjQTg0QzU2IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfNDEzXzIiPgo8cmVjdCB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      left: 11px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+      .work-time {
+        margin-right: 12px;
 
-    &__field {
-      appearance: none;
-      background: rgba(103, 15, 33, 0.8);
-      border-radius: 18.5px;
-      border: 0;
-      font-size: 16px;
-      line-height: 112%;
-      color: $c-orange;
-      text-align: right;
-      height: 37px;
-      padding: 0 24px 0 40px;
-
-      &::placeholder {
-        color: $c-orange;
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
       }
 
-      &:focus {
-        outline: none;
+      .top-search {
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
       }
     }
   }

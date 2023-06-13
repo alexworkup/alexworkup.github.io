@@ -1,10 +1,19 @@
 .sections {
   margin-bottom: 55px;
 
+  @media #{$phone} {
+    margin-bottom: 28px;
+  }
+
   &__inner {
     background: rgba(34, 1, 2, 0.3);
     border-radius: 5px;
     padding: 38px 16px;
+
+    @media #{$phone} {
+      padding: 0;
+      background: none;
+    }
   }
 
   &__list {
@@ -14,6 +23,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     margin-bottom: 35px;
+    
+    @media #{$tablet} {
+      grid-template-columns: repeat(1, 1fr); 
+    }
+
+    @media #{$phone} {
+      grid-row-gap: 12px;
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -22,6 +40,15 @@
 
   .section-item {
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media #{$phone} {
+      background: rgba(34, 1, 2, 0.3);
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+    }
 
     &:hover {
 
@@ -40,21 +67,32 @@
 
     &__pics {
       width: 100%;
-      height: 345px;
+      height: 0;
       overflow: hidden;
       border-radius: 5px;
+      padding-bottom: 50%;
       box-shadow: none;
       transition: .2s all linear;
+      margin-top: auto;
+
+      @media #{$phone} {
+        border-radius: 0;
+      }
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
       }
     }
 
     &__title {
       margin-bottom: 10px;
+
+      @media #{$phone} {
+        padding: 5px 12px 14px 12px;
+        margin-bottom: 0;
+      }
     }
 
     &__name {
@@ -62,6 +100,10 @@
       font-weight: 600;
       font-size: 30px;
       line-height: 100%;
+
+      @media #{$tablet-mini} {
+        font-size: 22px;
+      }
     }
 
     &__follow {
@@ -69,6 +111,10 @@
       line-height: 100%;
       text-decoration: none;
       color: $c-yellow;
+
+      @media #{$tablet-mini} {
+        font-size: 14px;
+      }
 
       span {
         position: relative;
@@ -90,6 +136,13 @@
   }
 
   &__more {
+    
+    @media #{$phone} {
+      background: rgba(34, 1, 2, 0.3);
+      border-radius: 0 0 5px 5px;
+      padding: 28px 12px;
+      margin-top: -2px;
+    }
 
     .btn-more {
       font-family: $font-family-base;
@@ -97,6 +150,11 @@
       font-size: 16px;
       line-height: 19px;
       position: relative;
+
+      @media #{$phone} {
+        font-size: 14px;
+        line-height: 100%;
+      }
 
       &__wrap {
         display: flex;
@@ -106,17 +164,43 @@
         border-radius: 32px;
         padding-top: 17px;
         padding-bottom: 9px;
+
+        @media #{$phone} {
+          padding-top: 10px;
+          padding-bottom: 5px;
+        }
       }
 
       &__text {
         padding: 0 66px;
 
+        @media #{$phone} {
+          padding: 0 40px;
+        }
+
+        &:before,
+        &:after {
+
+          @media #{$phone} {
+            background-size: contain;
+            width: 56px;
+          }
+        }
+
         &:before {
           left: -40px;
+
+          @media #{$phone} {
+            left: -30px;
+          }
         }
 
         &:after {
           right: -40px;
+
+          @media #{$phone} {
+            right: -30px;
+          }
         }
       }
 
