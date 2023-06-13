@@ -1,0 +1,36 @@
+.footer-mobile {
+  display: none;
+
+  @media #{$tablet-mini} {
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    padding: 12px 20px;
+    align-items: center;
+
+    &_top {
+      background: rgba(34, 1, 2, 0.6);
+      justify-content: space-between;
+
+      .phone {
+
+        &__link {
+          font-size: 20px;
+        }
+
+        &__text {
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+
+  .footer-desc {
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}

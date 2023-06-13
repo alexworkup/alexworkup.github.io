@@ -1,5 +1,15 @@
 .social {
 
+  &_footer {
+
+    .social__item {
+      background: #620F1E;
+      border: 2px solid rgba(222, 189, 85, 0.6);
+      width: 32px;
+      height: 32px;
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;
