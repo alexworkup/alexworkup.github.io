@@ -6,11 +6,23 @@ $( document ).ready(function() {
         is_mobile = true;
     }
 
+    if($('.sidebar').length) {
+
+        $(document).on('click', '.toggle', function (e) {
+
+            Fancybox.show(
+                [{ src: "#sidebar", type: "inline" }],
+                {
+                    mainClass: 'test',
+                }
+            );
+        });
+    }
+
     $(document).on('click', '.question-item', function (e) {
         $(this).find('.question-item__body').slideToggle();
         $(this).toggleClass('active');
     });
-
 
     if(is_mobile) {
 

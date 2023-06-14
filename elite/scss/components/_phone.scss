@@ -12,8 +12,16 @@
     line-height: 120%;
     color: white;
 
+    &:hover {
+
+      span {
+        color: $c-yellow;
+      }
+    }
+
     span {
       color: $c-orange;
+      transition: .1s color linear;
     }
   }
 

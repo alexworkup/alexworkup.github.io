@@ -17,6 +17,25 @@
       @media #{$notebook} {
         padding: 0;
       }
+
+      &:hover,
+      &.active {
+
+        .main-nav__link {
+          color: $c-yellow;
+
+          & + .submenu {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          &:after {
+            bottom: -12px;
+            opacity: 1;
+          }
+        }
+      }
+
     }
 
     &__link {
@@ -30,15 +49,6 @@
       position: relative;
       transition: .2s all linear;
 
-      &:hover,
-      &.active {
-
-        &:after {
-          bottom: -12px;
-          opacity: 1;
-        }
-      }
-
       &:after {
         content: '';
         position: absolute;
@@ -51,12 +61,10 @@
         left: 50%;
         transform: translateX(-50%);
         opacity: 0;
-        transition: .2s all linear;
+        transition: .1s all linear;
+        z-index: 60;
       }
 
-      &:hover {
-        color: $c-yellow;
-      }
     }
   }
 

@@ -31,6 +31,11 @@
   font-size: 25px;
   line-height: 120%;
   text-decoration: none;
+  transition: .1s color linear;
+
+  &:hover {
+    color: $c-white;
+  }
   
   @media #{$phone-mini} {
     font-size: 20px;

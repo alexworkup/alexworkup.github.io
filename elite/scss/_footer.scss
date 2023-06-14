@@ -1,5 +1,9 @@
 .footer {
   position: relative;
+  
+  @media #{$tablet-mini} {
+    display: none;
+  }
 
   &:before {
     content: '';
@@ -184,7 +188,7 @@
     margin-bottom: 15px;
 
     @media #{$laptop_s} {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
