@@ -6,6 +6,15 @@ $( document ).ready(function() {
         is_mobile = true;
     }
 
+    $(document).on('click', '.js-up', function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+    });
+
     if($('.sidebar').length) {
 
         $(document).on('click', '.toggle', function (e) {
@@ -13,7 +22,7 @@ $( document ).ready(function() {
             Fancybox.show(
                 [{ src: "#sidebar", type: "inline" }],
                 {
-                    mainClass: 'test',
+                    mainClass: 'sidebar-open',
                 }
             );
         });

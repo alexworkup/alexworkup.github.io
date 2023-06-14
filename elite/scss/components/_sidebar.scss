@@ -9,6 +9,12 @@
   overflow: auto;
   display: none;
 
+  &.fancybox__content {
+    background-image: url(../images/submenu-bg.png);
+    background-color: rgba(51, 8, 18, 0.95);
+    padding: 13px;
+  }
+
   @media #{$tablet-mini} {
     display: block;
   }
@@ -33,6 +39,7 @@
         width: 100%;
         position: relative;
         transition: .1s all linear;
+        outline: none!important;
 
         &:before {
           content: "";
@@ -139,5 +146,20 @@
         font-size: 20px;
       }
     }
+  }
+}
+
+.sidebar-open {
+
+  .fancybox__slide {
+    padding: 0;
+  }
+
+  .carousel__button {
+    top: 10px!important;
+    right: 10px!important;
+    width: 37px;
+    height: 37px;
+    border: 2px solid rgba(194, 100, 110, 0.3);
   }
 }

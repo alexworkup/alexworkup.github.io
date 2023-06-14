@@ -1359,6 +1359,9 @@ body:before {
 .header-mobile__row_top {
   margin-bottom: 8px;
 }
+.header-mobile__row_search {
+  margin: 0;
+}
 .header-mobile__row_search .top-search {
   width: 100%;
 }
@@ -1628,6 +1631,11 @@ body:before {
   overflow: auto;
   display: none;
 }
+.sidebar.fancybox__content {
+  background-image: url(../images/submenu-bg.png);
+  background-color: rgba(51, 8, 18, 0.95);
+  padding: 13px;
+}
 @media screen and (max-width: 767px) {
   .sidebar {
     display: block;
@@ -1651,6 +1659,7 @@ body:before {
   width: 100%;
   position: relative;
   transition: 0.1s all linear;
+  outline: none !important;
 }
 .sidebar .sidebar-menu li a:before {
   content: "";
@@ -1736,6 +1745,17 @@ body:before {
 }
 .sidebar .sidebar-socials .phone__link {
   font-size: 20px;
+}
+
+.sidebar-open .fancybox__slide {
+  padding: 0;
+}
+.sidebar-open .carousel__button {
+  top: 10px !important;
+  right: 10px !important;
+  width: 37px;
+  height: 37px;
+  border: 2px solid rgba(194, 100, 110, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */
