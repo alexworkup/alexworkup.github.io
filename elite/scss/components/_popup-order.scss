@@ -1,0 +1,70 @@
+.popup-order {
+  max-width: 374px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__wrap {
+    padding: 12px 22px 22px 22px;
+    background-color: rgba(115, 25, 40, 0.9);
+    background-image: url("../images/submenu-bg.png");
+  }
+
+  &__row {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-family: $font-family-header;
+    font-size: 35px;
+    line-height: 100%;
+    color: $c-orange;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    position: relative;
+    margin-bottom: 6px;
+
+    &:after {
+      content: '';
+      width: 275px;
+      height: 40px;
+      position: absolute;
+      background-image: url("../images/popup-title.svg");
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      font-size: 25px;
+      color: #FFFFFF;
+      display: block;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    background: rgba(68, 12, 18, 0.7);
+    border-radius: 50px;
+    appearance: none;
+    height: 49px;
+    line-height: 49px;
+    outline: none;
+    padding: 0 20px;
+    border: 0;
+    color: #DE7580;
+    font-size: 16px;
+
+    &::placeholder {
+      color: #DE7580;
+      font-size: 16px;
+      font-family: $font-family-base;
+    }
+
+    &_textarea {
+      height: auto;
+      border-radius: 20px;
+      resize: none;
+    }
+  }
+}

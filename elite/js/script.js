@@ -25,6 +25,8 @@ $( document ).ready(function() {
                     mainClass: 'sidebar-open',
                 }
             );
+
+            return false;
         });
     }
 
