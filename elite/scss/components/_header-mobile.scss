@@ -1,6 +1,8 @@
 .header-mobile {
   display: none;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
   
   @media #{$tablet-mini} {
     display: block;

@@ -1,7 +1,7 @@
 html,
 body {
   background-color: #752232;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body {
@@ -12,8 +12,6 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-image: url("../images/body-bg.jpg");
-  background-repeat: repeat;
   position: relative;
 
   &:before {
@@ -24,6 +22,7 @@ body {
     left: 0;
     top: 0;
     background: linear-gradient(180deg, #2F0308 0%, rgba(95, 9, 12, 0) 100%);
+    z-index: 1;
   }
 }
 
@@ -49,6 +48,8 @@ body {
   min-height: 100%;
   overflow: hidden;
   position: relative;
+  background-image: url("../images/body-bg.jpg");
+  background-repeat: repeat;
 
   &:before {
     content: '';
@@ -59,6 +60,7 @@ body {
     height: 573px;
     background-image: url("../images/archangel-big.png");
     background-repeat: no-repeat;
+    z-index: 2;
 
     @media #{$laptop} {
       opacity: .5;
@@ -91,6 +93,8 @@ body {
 
 .main {
   flex: 1 1 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .h1,

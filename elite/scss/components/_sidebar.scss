@@ -1,32 +1,76 @@
-.sidebar {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  padding: 13px;
-  background-image: url(../images/submenu-bg.png);
-  background-color: rgba(51, 8, 18, 0.95);
-  z-index: 110;
-  overflow: auto;
-  display: none;
+.sidebar {}
 
-  &.fancybox__content {
-    background-image: url(../images/submenu-bg.png);
-    background-color: rgba(51, 8, 18, 0.95);
-    padding: 13px;
+.sidebar-menu {
+  list-style: none;
+  margin: 0 0 12px 0;
+  background: rgba(34, 1, 2, 0.3);
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 115%;
+  padding: 10px 0;
+
+  li {
+
+    a {
+      padding: 12px 22px;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      background: transparent;
+      width: 100%;
+      position: relative;
+      transition: .1s all linear;
+      outline: none!important;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 38px;
+        background-image: url(../images/sidebar-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: .1s opacity linear;
+      }
+
+      &:hover,
+      &:active {
+        color: $c-yellow;
+        background: rgba(79, 10, 21, 0.6);
+
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
   }
+}
 
-  @media #{$tablet-mini} {
-    display: block;
-  }
+.sidebar-catalog {
+  background: rgba(34, 1, 2, 0.3);
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 16px;
 
-  .sidebar-menu {
-    list-style: none;
-    margin: 0 0 12px 0;
+  &__title {
+    font-family: $font-family-header;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    color: #BDA32B;
     background: rgba(34, 1, 2, 0.3);
-    border-radius: 5px;
-    font-size: 18px;
-    line-height: 115%;
-    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+    padding: 12px 22px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
     li {
 
@@ -39,7 +83,6 @@
         width: 100%;
         position: relative;
         transition: .1s all linear;
-        outline: none!important;
 
         &:before {
           content: "";
@@ -68,117 +111,20 @@
       }
     }
   }
-
-  .sidebar-catalog {
-    background: rgba(34, 1, 2, 0.3);
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 16px;
-
-    &__title {
-      font-family: $font-family-header;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 40px;
-      color: #BDA32B;
-      background: rgba(34, 1, 2, 0.3);
-      border-radius: 5px 5px 0 0;
-      padding: 12px 22px;
-    }
-
-    &__list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-
-        a {
-          padding: 12px 22px;
-          color: #ffffff;
-          text-decoration: none;
-          display: inline-block;
-          background: transparent;
-          width: 100%;
-          position: relative;
-          transition: .1s all linear;
-
-          &:before {
-            content: "";
-            position: absolute;
-            width: 26px;
-            height: 38px;
-            background-image: url(../images/sidebar-arrow.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            left: -10px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: .1s opacity linear;
-          }
-
-          &:hover,
-          &:active {
-            color: $c-yellow;
-            background: rgba(79, 10, 21, 0.6);
-
-            &:before {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .sidebar-socials {
-    padding: 0 22px 22px 22px;
-
-    .phone {
-      margin-bottom: 15px;
-
-      &__wrap {
-        text-align: left;
-      }
-
-      &__link {
-        font-size: 20px;
-      }
-    }
-  }
 }
 
-.sidebar-open {
+.sidebar-socials {
+  padding: 0 22px 22px 22px;
 
-  .fancybox__slide {
-    padding: 0;
-  }
+  .phone {
+    margin-bottom: 15px;
 
-  .carousel__button {
-    top: 10px!important;
-    right: 10px!important;
-    width: 37px;
-    height: 37px;
-    border: 2px solid rgba(194, 100, 110, 0.3);
-
-    &:hover {
-
-      svg {
-
-        path {
-          stroke: #ffffff;
-        }
-      }
+    &__wrap {
+      text-align: left;
     }
 
-    svg {
-      width: 15px;
-      height: 15px;
-
-      path {
-        stroke: $c-yellow;
-      }
+    &__link {
+      font-size: 20px;
     }
   }
 }

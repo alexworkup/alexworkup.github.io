@@ -15,14 +15,14 @@ $( document ).ready(function() {
         });
     });
 
-    if($('.sidebar').length) {
+    if($('.mobile-menu').length) {
 
         $(document).on('click', '.toggle', function (e) {
 
             Fancybox.show(
-                [{ src: "#sidebar", type: "inline" }],
+                [{ src: "#mobile-menu", type: "inline" }],
                 {
-                    mainClass: 'sidebar-open',
+                    mainClass: 'mobile-menu-open',
                 }
             );
 
