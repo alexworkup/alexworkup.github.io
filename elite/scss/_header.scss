@@ -1,7 +1,7 @@
 .header {
   margin-bottom: 25px;
   position: relative;
-  z-index: 3;
+  z-index: 10;
 
   @media #{$tablet-mini} {
     display: none;

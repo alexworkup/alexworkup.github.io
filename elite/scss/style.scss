@@ -3,6 +3,7 @@
 @import 'fonts';
 @import 'header';
 @import 'footer';
+@import 'main';
 @import 'general';
 
 //Components
@@ -17,10 +18,10 @@
 @import "components/add-sections";
 @import "components/side-panel";
 @import "components/header-mobile";
-@import "components/top-search";
 @import "components/footer-mobile";
 @import "components/submenu";
 @import "components/sidebar";
 @import "components/popup-order";
 @import "components/mobile-menu";
 @import "components/breadcrumbs";
+@import "components/search-bar";

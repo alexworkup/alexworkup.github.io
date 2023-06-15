@@ -1,0 +1,24 @@
+.main {
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 5;
+
+  &__row {
+    display: grid;
+    padding-top: 13px;
+    grid-template-columns: minmax(auto, 303px) 1fr;
+    grid-column-gap: 23px;
+  }
+
+  &__col {
+
+    &_content {
+      line-height: 130%;
+
+      a:not([class]) {
+        color: $c_yellow;
+      }
+    }
+
+  }
+}

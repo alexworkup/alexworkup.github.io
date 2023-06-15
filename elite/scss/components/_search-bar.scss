@@ -1,4 +1,4 @@
-.top-search {
+.search-bar {
 
   &__form {
     position: relative;
@@ -32,6 +32,7 @@
     color: $c-orange;
     text-align: right;
     height: 37px;
+    width: 100%;
     padding: 0 24px 0 40px;
 
     &::placeholder {

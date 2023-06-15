@@ -60,7 +60,7 @@ body {
     height: 573px;
     background-image: url("../images/archangel-big.png");
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: 3;
 
     @media #{$laptop} {
       opacity: .5;
@@ -91,10 +91,27 @@ body {
   }
 }
 
-.main {
-  flex: 1 1 auto;
-  position: relative;
-  z-index: 2;
+.page {
+
+  .main-menu {
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 100%;
+      background: rgba(64, 10, 19, 0.9);
+      box-shadow: 0 4px 30px rgba(45, 7, 13, 0.9);
+      backdrop-filter: blur(2px);
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
 }
 
 .h1,

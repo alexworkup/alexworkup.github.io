@@ -1,4 +1,38 @@
-.sidebar {}
+.sidebar {
+
+  &__main {
+    max-width: 303px;
+  }
+
+  &__row {
+    margin-bottom: 15px;
+
+    &_search {
+
+      .search-bar {
+
+        &__field {
+          text-align: left;
+          background: rgba(75, 12, 24, 0.8);
+        }
+      }
+    }
+
+    &_add {
+
+      .sidebar-menu {
+        font-size: 16px;
+      }
+    }
+
+    &_btn {
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
 
 .sidebar-menu {
   list-style: none;

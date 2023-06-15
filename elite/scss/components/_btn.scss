@@ -19,6 +19,18 @@
     background: #6E0B1B;
     box-shadow: 0 0 25px rgba(255, 243, 131, 0.5);
   }
+
+  &_advice {
+    font-family: $font-family-header;
+    font-weight: 500;
+    font-size: 30px;
+    height: 57px;
+    color: $c-yellow;
+    background: rgba(34, 1, 2, 0.4);
+    border: 2px solid #FFF383;
+    border-radius: 5px;
+    text-align: center;
+  }
 }
 
 .btn-more {
