@@ -207,7 +207,7 @@
                                     </div>
                                 </div>
                                 <div class="header-info__col header-info__col_order">
-                                    <a href="#" class="btn">Обратный звонок</a>
+                                    <a data-fancybox="" data-src="#popup-form" href="#" class="btn">Обратный звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -934,7 +934,7 @@
                 </svg>
             </span>
         </a>
-        <a href="#" class="side-panel__item side-panel__item_phone">
+        <a data-fancybox="" data-src="#popup-form" class="side-panel__item side-panel__item_phone">
             <span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20.4961 3.1662L15.0805 8.58179M15.0805 8.58179V4.5201M15.0805 8.58179H19.1422" stroke="#BDA32B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -950,10 +950,11 @@
             </span>
         </a>
     </div>
-    <div class="popup-order">
+    <div style="display: none;" class="popup-order" id="popup-form">
         <div class="popup-order__wrap">
             <div class="popup-order__title">заказ <span>обратного звонка</span></div>
             <div class="popup-order__form">
+                <!-- <p>Спасибо. Ваше сообщение отправлено.</p> -->
                 <form action="#">
                     <div class="popup-order__row">
                         <input class="popup-order__field" type="text" placeholder="Ваше имя">
@@ -965,12 +966,12 @@
                         <textarea class="popup-order__field popup-order__field_textarea" name="message" cols="10" rows="4" placeholder="Комментарий"></textarea>
                     </div>
                     <div class="popup-order__row">
-                        <div class="popup-order__check">
+                        <label class="popup-order__check">
                             <input type="checkbox">
                             <span>Я даю согласие на <a href="#">обработку персональных данных</a></span>
-                        </div>
+                        </label>
                     </div>
-                    <div class="popup-order__row">
+                    <div class="popup-order__row popup-order__row_btn">
                         <a href="#" class="btn">Заказать</a>
                     </div>
                 </form>

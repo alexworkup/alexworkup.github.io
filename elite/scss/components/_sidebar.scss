@@ -161,5 +161,24 @@
     width: 37px;
     height: 37px;
     border: 2px solid rgba(194, 100, 110, 0.3);
+
+    &:hover {
+
+      svg {
+
+        path {
+          stroke: #ffffff;
+        }
+      }
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+
+      path {
+        stroke: $c-yellow;
+      }
+    }
   }
 }

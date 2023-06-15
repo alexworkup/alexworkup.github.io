@@ -129,3 +129,10 @@ body {
     }
   }
 }
+
+.fancybox {
+
+  &__backdrop {
+    background: rgba(50, 24, 27, 0.92)!important;
+  }
+}

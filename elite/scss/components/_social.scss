@@ -15,6 +15,26 @@
           fill: #983545;
         }
       }
+
+      &_ok {
+
+        &:hover {
+
+          path {
+            fill: #F69337;
+          }
+        }
+      }
+
+      &_vk {
+
+        &:hover {
+
+          path {
+            fill: #2476FD;
+          }
+        }
+      }
     }
   }
 
