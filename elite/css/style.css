@@ -326,11 +326,56 @@
   grid-template-columns: minmax(auto, 303px) 1fr;
   grid-column-gap: 23px;
 }
+@media screen and (max-width: 1024px) {
+  .main__row {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__col_sidebar {
+    display: none;
+  }
+}
 .main__col_content {
   line-height: 130%;
+  padding-bottom: 60px;
 }
 .main__col_content a:not([class]) {
   color: #FFF383;
+}
+.main__col_content a:not([class]):hover {
+  color: #ffffff;
+}
+.main__col_content b:not([class]) {
+  color: #DEBD55;
+  font-weight: normal;
+}
+.main__col_content .sections__wrap {
+  padding: 0;
+}
+.main__col_content .news {
+  margin-bottom: 0;
+}
+.main__col_content .news__wrap {
+  padding: 0;
+}
+.main__col_content .news__list {
+  margin-left: 0;
+  margin-right: 0;
+}
+.main__col_content .news__item {
+  width: 100%;
+  margin-bottom: 13px;
+  padding: 0;
+}
+.main__col_content .news__item:last-child {
+  margin-bottom: 0;
+}
+.main__col_content .news__item:hover .news-item__wrap {
+  background: rgba(62, 10, 15, 0.6);
+}
+.main__col_content .news .news-item__wrap {
+  background: rgba(34, 1, 2, 0.3);
 }
 
 html,
@@ -444,6 +489,9 @@ body:before {
   width: 100vw;
   z-index: -1;
   pointer-events: none;
+}
+.page .header-mobile__desc {
+  display: none;
 }
 
 .h1,
@@ -775,6 +823,10 @@ body:before {
     margin-bottom: 0;
   }
 }
+.news__pagination {
+  margin-bottom: 10px;
+  margin-top: 13px;
+}
 .news__item {
   padding: 0 10px;
   width: 50%;
@@ -1020,6 +1072,24 @@ body:before {
     margin-bottom: 28px;
   }
 }
+.sections__title {
+  display: flex;
+  justify-content: center;
+}
+.sections__title .h2 {
+  text-align: center;
+  text-transform: none;
+  line-height: 86%;
+  max-width: 80%;
+}
+@media screen and (max-width: 500px) {
+  .sections__title .h2 {
+    max-width: 100%;
+  }
+}
+.sections__title .h2:after {
+  margin-top: 10px;
+}
 .sections__inner {
   background: rgba(34, 1, 2, 0.3);
   border-radius: 5px;
@@ -1037,7 +1107,6 @@ body:before {
   grid-column-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  margin-bottom: 35px;
 }
 @media screen and (max-width: 999px) {
   .sections__list {
@@ -1141,6 +1210,9 @@ body:before {
   margin-left: 6px;
   margin-bottom: -1px;
   display: inline-block;
+}
+.sections__more {
+  margin-top: 35px;
 }
 @media screen and (max-width: 500px) {
   .sections__more {
@@ -1415,13 +1487,15 @@ body:before {
 .header-mobile__row {
   display: flex;
   margin: 0 -5px;
-  justify-content: space-between;
 }
 .header-mobile__row_top {
   margin-bottom: 8px;
 }
 .header-mobile__row_search {
   margin: 0;
+}
+.header-mobile__row_search .search-bar {
+  width: 100%;
 }
 .header-mobile__row_search .top-search {
   width: 100%;
@@ -1447,6 +1521,7 @@ body:before {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  margin-left: auto;
 }
 .header-mobile__col_phone .phone {
   margin-bottom: 9px;
@@ -2077,6 +2152,253 @@ body:before {
 }
 .search-bar__field:focus {
   outline: none;
+}
+
+.page-tab {
+  margin-bottom: 40px;
+}
+.page-tab__nav {
+  margin-bottom: 32px;
+}
+.page-tab .tab-content {
+  background: rgba(34, 1, 2, 0.3);
+  border-radius: 5px;
+  padding: 25px 65px 25px 20px;
+}
+@media screen and (max-width: 767px) {
+  .page-tab .tab-content {
+    padding: 20px;
+  }
+}
+.page-tab .tab-content__title {
+  font-family: "Cormorant Garamond", "Arial Narrow", sans-serif;
+  font-size: 40px;
+  line-height: 100%;
+}
+@media screen and (max-width: 500px) {
+  .page-tab .tab-content__title {
+    font-size: 32px;
+  }
+}
+.page-tab .tab-content__title span {
+  color: #FFF383;
+}
+.page-tab .tab-content__text {
+  font-size: 14px;
+}
+.page-tab .tab-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-gap: 12px;
+}
+@media screen and (max-width: 500px) {
+  .page-tab .tab-nav {
+    grid-template-columns: 1fr;
+  }
+}
+.page-tab .tab-nav__item {
+  background: rgba(34, 1, 2, 0.3);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 75%;
+  font-family: "Cormorant Garamond", "Arial Narrow", sans-serif;
+  text-align: center;
+  color: #FFF383;
+  padding: 14px 14px 20px 14px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.1s all linear;
+}
+.page-tab .tab-nav__item:after {
+  content: "";
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  background-image: url(../images/decor-link.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.1s all linear;
+}
+.page-tab .tab-nav__item:hover, .page-tab .tab-nav__item.active {
+  background: rgba(34, 1, 2, 0.5);
+}
+.page-tab .tab-nav__item:hover:after, .page-tab .tab-nav__item.active:after {
+  bottom: -12px;
+  opacity: 1;
+}
+
+.pagination {
+  background: rgba(60, 5, 16, 0.4);
+  border-radius: 10px;
+  min-height: 51px;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.pagination__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.pagination__nav .pag-count {
+  margin-right: 10px;
+}
+.pagination__back {
+  color: #FF8995;
+  transition: 0.1s all linear;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0 5px 20px;
+  line-height: 100%;
+}
+.pagination__back:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/arrow-news-btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+.pagination__back:hover {
+  color: #ffffff;
+}
+.pagination .num-page {
+  display: flex;
+  align-items: center;
+}
+.pagination .num-page__link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #C2646E;
+  padding: 0 5px;
+  transition: 0.1s color linear;
+}
+@media screen and (max-width: 500px) {
+  .pagination .num-page__link {
+    display: none;
+  }
+}
+.pagination .num-page__link:hover {
+  color: #ffffff;
+}
+.pagination .num-page__wrap {
+  display: flex;
+  align-items: center;
+}
+.pagination .num-page__arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.pagination .num-page__arrow:hover path {
+  stroke: #DEBD55;
+}
+.pagination .num-page__arrow path {
+  transition: 0.1s all linear;
+}
+.pagination .num-page__item {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 2px;
+}
+.pagination .num-page__item:not(.num-page__item_dots):hover {
+  background: rgba(216, 119, 129, 0.2);
+  color: #FFF383;
+}
+.pagination .num-page__item:not(.num-page__item_dots).active {
+  background: #5B1322;
+  color: #FFF383;
+}
+.pagination .pag-count {
+  color: #C2646E;
+}
+.pagination .pag-count__page {
+  color: #DEBD55;
+}
+.pagination .pag-count__num {
+  color: #ffffff;
+}
+
+.product-item__wrap {
+  display: flex;
+  flex-direction: column;
+  background: rgba(34, 1, 2, 0.3);
+  border-radius: 5px;
+  padding: 13px 13px 16px 13px;
+}
+.product-item__name {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 90%;
+  color: #FFF383;
+  font-family: "Cormorant Garamond", "Arial Narrow", sans-serif;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.product-item__pics {
+  max-height: 245px;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.product-item__pics img {
+  width: 100%;
+  max-height: inherit;
+  object-fit: cover;
+}
+.product-item .item-props {
+  list-style: none;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 130%;
+}
+.product-item .item-props__name {
+  color: #FFF383;
+  font-weight: normal;
+}
+.product-item .item-props__value {
+  color: #ffffff;
+}
+.product-item .product-price {
+  line-height: 100%;
+}
+.product-item .product-price__text {
+  color: #FF8995;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.product-item .product-price__value {
+  font-size: 20px;
+  color: #FFF383;
+}
+.product-item .product-price__value span {
+  color: #D87781;
 }
 
 /*# sourceMappingURL=style.css.map */

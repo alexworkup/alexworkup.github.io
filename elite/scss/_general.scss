@@ -112,6 +112,10 @@ body {
       pointer-events: none;
     }
   }
+
+  .header-mobile__desc {
+    display: none;
+  }
 }
 
 .h1,

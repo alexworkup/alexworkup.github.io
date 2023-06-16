@@ -1,0 +1,131 @@
+.pagination {
+  background: rgba(60, 5, 16, 0.4);
+  border-radius: 10px;
+  min-height: 51px;
+  padding: 15px 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .pag-count {
+      margin-right: 10px;
+    }
+  }
+
+  &__back {
+    color: #FF8995;
+    transition: .1s all linear;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0 5px 20px;
+    line-height: 100%;
+
+    &:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url(../images/arrow-news-btn.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  .num-page {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      font-size: 14px;
+      text-decoration: none;
+      color: #C2646E;
+      padding: 0 5px;
+      transition: .1s color linear;
+      
+      @media #{$phone} {
+        display: none;
+      }
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+
+      &:hover {
+
+        path {
+          stroke: $c-orange;
+        }
+      }
+
+      path {
+        transition: .1s all linear;
+      }
+    }
+
+    &__item {
+      width: 31px;
+      height: 31px;
+      border-radius: 50%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #ffffff;
+      margin: 0 2px;
+
+      &:not(.num-page__item_dots) {
+
+        &:hover {
+          background: rgba(216, 119, 129, 0.2);
+          color: $c-yellow;
+        }
+
+        &.active {
+          background: #5B1322;
+          color: $c-yellow;
+        }
+      }
+
+
+    }
+  }
+
+  .pag-count {
+    color: #C2646E;
+
+    &__page {
+      color: $c-orange;
+    }
+
+    &__num {
+      color: #ffffff;
+    }
+  }
+}

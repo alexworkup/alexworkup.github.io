@@ -15,7 +15,7 @@
     <script src="js/fancyapp/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
 </head>
-<body>
+<body class="page">
     <div class="wrapper">
         <div style="display: none;" id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu__wrap">
@@ -24,13 +24,13 @@
                         <a href="#">Каталог</a>
                     </li>
                     <li>
-                        <a href="#">Услуги</a>
+                        <a href="services.html">Услуги</a>
                     </li>
                     <li>
                         <a href="new-products.html">Новинки</a>
                     </li>
                     <li>
-                        <a href="news.html">Новости</a>
+                        <a class="active" href="news.html">Новости</a>
                     </li>
                     <li>
                         <a href="about.html">О компании</a>
@@ -281,12 +281,12 @@
                                                 </div>
                                             </div>
                                             <div class="main-nav__item">
-                                                <a href="#" class="main-nav__link">Услуги</a>
+                                                <a href="services.html" class="main-nav__link">Услуги</a>
                                             </div>
                                             <div class="main-nav__item">
                                                 <a href="new-products.html" class="main-nav__link">Новинки</a>
                                             </div>
-                                            <div class="main-nav__item">
+                                            <div class="main-nav__item active">
                                                 <a href="news.html" class="main-nav__link">Новости</a>
                                             </div>
                                             <div class="main-nav__item">
@@ -331,382 +331,189 @@
             </div>
         </header>
         <main class="main">
-            <div class="news">
-                <div class="news__wrap container">
-                    <div class="news__title">
-                        <h2 class="h2">Новости</h2>
-                    </div>
-                    <div class="news__list">
-                        <div class="news__item">
-                            <div class="news-item">
-                                <div class="news-item__wrap">
-                                    <a href="#" class="news-item__link"></a>
-                                    <div class="news-item__pics">
-                                        <img loading="lazy" src="images/news-item.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской">
-                                    </div>
-                                    <div class="news-item__date"><span>14</span>.04.2023</div>
-                                    <div class="news-item__name">Бронзовые статуэтки Святой Блаженной Ксении Петербургской</div>
-                                    <div class="news-item__anons">Вчера были запущены в производство бронзовые статуэтки Святой Блаженной Ксении Петербургской. Бронзовая статуэтка Святая Ксения Петербургская, станет памятным подарком Православному Верующему человеку как хранительница семейного очага.</div>
-                                    <div class="news-item__control">
-                                        <a href="#" class="news-item__btn"><span>Перейти к изделию</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news-item">
-                                <div class="news-item__wrap">
-                                    <a href="#" class="news-item__link"></a>
-                                    <div class="news-item__pics"><img loading="lazy" src="images/news-item2.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской"></div>
-                                    <div class="news-item__date"><span>11</span>.04.2023</div>
-                                    <div class="news-item__name">Бронзовая статуэтка Салават Юлаев</div>
-                                    <div class="news-item__anons">Сегодня запущена в производство Бронзовая статуэтка Салават Юлаев, символ города Уфа, республики Башкортостан. Статуэтка Салавата Юлаева станет памятным подарком Государственным служащим и гостям столицы республики Башкирия города Уфа.</div>
-                                    <div class="news-item__control"><a href="#" class="news-item__btn"><span>Перейти к изделию</span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news__more">
-                        <a href="#" class="btn-more">
-                            <span class="btn-more__text">все новости</span>
-                            <svg class="btn-more__icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13 1L7 4.75L1 0.999999M13 5.25L7 9L1 5.25" stroke="#DEBD55" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+
+            <div class="main__wrap container">
+
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="/">Художественная мастерская "А-Элит"</a></li>
+                        <li><span>О компании</span></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="index-about">
-                <div class="index-about__wrap container">
-                    <div class="index-about__inner">
-                        <div class="index-about__title">"А-Элит" <span>(Подарки из бронзы)</span></div>
-                        <div class="index-about__subtitle">Художественная литейная мастерская</div>
-                        <div class="index-about__text">
-                            <b>Литейная мастерская "А-Элит" основана в 1996 году.</b><br>
-                            Стабильность и надежность предприятия обеспечивают профессиональные кадры, накопленный большой опыт в работе, а также собственная производственная база, оснащенная современным оборудованием. Подробнее о нас в разделе о компании <a href="#">литейная мастерская</a>.<br>
-                            В своих изделиях мастера литейной мастерской "А-Элит" используют <a href="">художественное литье</a> по выплавляемым моделям из бронзы с последующей обработкой: чеканкой, полировкой и патинированием (искусственное старение бронзы).<br>
-                            При производстве часов, бронзовых статуэток, скульптур, и других изделий из бронзы, для подставок и корпусов используется натуральный природный камень: змеевик, яшма и другие. Также для некоторых изделий используются натуральные породы дерева.<br>
-                            Художественная литейная мастерская "А-Элит" осуществляет доставку продукции <a href="#">во все города Российской Федерации</a>.
+                <div class="main__row">
+                    <div class="main__col main__col_sidebar">
+                        <div class="sidebar">
+                            <div class="sidebar__row sidebar__row_catalog">
+                                <div class="sidebar-catalog">
+                                    <div class="sidebar-catalog__title">Каталог</div>
+                                    <ul class="sidebar-catalog__list">
+                                        <li><a href="#">Бронзовые статуэтки</a></li>
+                                        <li><a href="#">Бронзовые часы</a></li>
+                                        <li><a href="#">Подарочные ложки для обуви</a></li>
+                                        <li><a href="#">Письменные наборы</a></li>
+                                        <li><a href="#">Призы победителям</a></li>
+                                        <li><a href="#">Бронзовые светильники</a></li>
+                                        <li><a href="#">Бронзовые подсвечники</a></li>
+                                        <li><a href="#">Изготовление скульптур на заказ</a></li>
+                                        <li><a href="#">Изготовление статуэток на заказ</a></li>
+                                        <li><a href="#">Изготовление сувениров на заказ</a></li>
+                                        <li><a href="#">Оптовикам и интернет-магазинам</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="sidebar__row sidebar__row_search">
+                                <div class="search-bar">
+                                    <form class="search-bar__form" action="/search/">
+                                        <input class="search-bar__submit" type="submit" name="s">
+                                        <input class="search-bar__field" type="text" name="q" placeholder="Поиск по тематике">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sidebar__row sidebar__row_add">
+                                <ul class="sidebar-menu">
+                                    <li><a href="#">Статуэтки</a></li>
+                                    <li><a href="#">Подарки</a></li>
+                                    <li><a href="#">Новинки</a></li>
+                                </ul>
+                            </div>
+                            <div class="sidebar__row sidebar__row_btn">
+                                <a href="#" class="btn btn_advice">Рекомендуем</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="sections">
-                <div class="sections__wrap container">
-                    <div class="sections__inner">
-                        <div class="sections__list">
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Художественное литье из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
+                    <div class="main__col main__col_content">
+                        <h1 class="h1">Новости</h1>
+                        <div class="news">
+                            <div class="news__wrap container">
+                                <div class="news__list">
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics">
+                                                    <img loading="lazy" src="images/news-item.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской">
+                                                </div>
+                                                <div class="news-item__date"><span>14</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовые статуэтки Святой Блаженной Ксении Петербургской</div>
+                                                <div class="news-item__anons">Вчера были запущены в производство бронзовые статуэтки Святой Блаженной Ксении Петербургской. Бронзовая статуэтка Святая Ксения Петербургская, станет памятным подарком Православному Верующему человеку как хранительница семейного очага.</div>
+                                                <div class="news-item__control">
+                                                    <a href="#" class="news-item__btn"><span>Перейти к изделию</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-01.jpg" alt="Художественное литье из бронзы.">
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics"><img loading="lazy" src="images/news-item2.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской"></div>
+                                                <div class="news-item__date"><span>11</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовая статуэтка Салават Юлаев</div>
+                                                <div class="news-item__anons">Сегодня запущена в производство Бронзовая статуэтка Салават Юлаев, символ города Уфа, республики Башкортостан. Статуэтка Салавата Юлаева станет памятным подарком Государственным служащим и гостям столицы республики Башкирия города Уфа.</div>
+                                                <div class="news-item__control"><a href="#" class="news-item__btn"><span>Перейти к изделию</span></a></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые статуэтки.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics">
+                                                    <img loading="lazy" src="images/news-item.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской">
+                                                </div>
+                                                <div class="news-item__date"><span>14</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовые статуэтки Святой Блаженной Ксении Петербургской</div>
+                                                <div class="news-item__anons">Вчера были запущены в производство бронзовые статуэтки Святой Блаженной Ксении Петербургской. Бронзовая статуэтка Святая Ксения Петербургская, станет памятным подарком Православному Верующему человеку как хранительница семейного очага.</div>
+                                                <div class="news-item__control">
+                                                    <a href="#" class="news-item__btn"><span>Перейти к изделию</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-02.jpg" alt="Бронзовые статуэтки.">
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics"><img loading="lazy" src="images/news-item2.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской"></div>
+                                                <div class="news-item__date"><span>11</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовая статуэтка Салават Юлаев</div>
+                                                <div class="news-item__anons">Сегодня запущена в производство Бронзовая статуэтка Салават Юлаев, символ города Уфа, республики Башкортостан. Статуэтка Салавата Юлаева станет памятным подарком Государственным служащим и гостям столицы республики Башкирия города Уфа.</div>
+                                                <div class="news-item__control"><a href="#" class="news-item__btn"><span>Перейти к изделию</span></a></div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые часы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics">
+                                                    <img loading="lazy" src="images/news-item.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской">
+                                                </div>
+                                                <div class="news-item__date"><span>14</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовые статуэтки Святой Блаженной Ксении Петербургской</div>
+                                                <div class="news-item__anons">Вчера были запущены в производство бронзовые статуэтки Святой Блаженной Ксении Петербургской. Бронзовая статуэтка Святая Ксения Петербургская, станет памятным подарком Православному Верующему человеку как хранительница семейного очага.</div>
+                                                <div class="news-item__control">
+                                                    <a href="#" class="news-item__btn"><span>Перейти к изделию</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-03.jpg" alt="Бронзовые часы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-04.jpg" alt="Подарочные ложки для обуви из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Художественное литье из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-05.jpg" alt="Художественное литье из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые статуэтки.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-06.jpg" alt="Бронзовые статуэтки.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые часы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-07.jpg" alt="Бронзовые часы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-08.jpg" alt="Подарочные ложки для обуви из бронзы.">
+                                    <div class="news__item">
+                                        <div class="news-item">
+                                            <div class="news-item__wrap">
+                                                <a href="#" class="news-item__link"></a>
+                                                <div class="news-item__pics"><img loading="lazy" src="images/news-item2.jpg" alt="Бронзовые статуэтки Святой Блаженной Ксении Петербургской"></div>
+                                                <div class="news-item__date"><span>11</span>.04.2023</div>
+                                                <div class="news-item__name">Бронзовая статуэтка Салават Юлаев</div>
+                                                <div class="news-item__anons">Сегодня запущена в производство Бронзовая статуэтка Салават Юлаев, символ города Уфа, республики Башкортостан. Статуэтка Салавата Юлаева станет памятным подарком Государственным служащим и гостям столицы республики Башкирия города Уфа.</div>
+                                                <div class="news-item__control"><a href="#" class="news-item__btn"><span>Перейти к изделию</span></a></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Художественное литье из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-09.jpg" alt="Художественное литье из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые статуэтки. </div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-10.jpg" alt="Бронзовые статуэтки.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые часы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-11.jpg" alt="Бронзовые часы.">
+                                <div class="news__pagination">
+                                    <div class="pagination">
+                                        <a href="#" class="pagination__back">Назад</a>
+                                        <div class="pagination__nav">
+                                            <div class="pag-count">Новости <span class="pag-count__page">1 - 10</span> из <span class="pag-count__num">258</span></div>
+                                            <div class="num-page">
+                                                <a href="#" class="num-page__link">Начало</a>
+                                                <div class="num-page__wrap">
+                                                    <a href="#" class="num-page__arrow num-page__arrow_prev">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8 14.0667L1 7.53332L8 0.999987" stroke="#C2646E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="#" class="num-page__item active">1</a>
+                                                    <a href="#" class="num-page__item">2</a>
+                                                    <a href="#" class="num-page__item">3</a>
+                                                    <a href="#" class="num-page__item num-page__item_dots">...</a>
+                                                    <a href="#" class="num-page__item">15</a>
+                                                    <a href="#" class="num-page__arrow num-page__arrow_next">
+                                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 14.0667L8 7.53332L0.999999 0.999987" stroke="#C2646E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="num-page__link">Конец</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-12.jpg" alt="Подарочные ложки для обуви из бронзы .">
-                                    </div>
+                                <div class="news__more">
+                                    <a href="#" class="btn-more">
+                                        <span class="btn-more__text">все новости</span>
+                                        <svg class="btn-more__icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 1L7 4.75L1 0.999999M13 5.25L7 9L1 5.25" stroke="#DEBD55" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Художественное литье из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-13.jpg" alt="Художественное литье из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые статуэтки.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-14.jpg" alt="Бронзовые статуэтки.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые часы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-15.jpg" alt="Бронзовые часы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-16.jpg" alt="Подарочные ложки для обуви из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Бронзовые часы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-17.jpg" alt="Бронзовые часы.">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sections__item">
-                                <div class="section-item">
-                                    <a href="#" class="section-item__link"></a>
-                                    <div class="section-item__title">
-                                        <div class="section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                        <a href="#" class="section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                    </div>
-                                    <div class="section-item__pics">
-                                        <img loading="lazy" src="images/section-img-18.jpg" alt="Подарочные ложки для обуви из бронзы.">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sections__more">
-                            <a href="#" class="btn-more">
-                                <span class="btn-more__wrap">
-                                    <span class="btn-more__text">Перейти ко всем подаркам</span>
-                                    <svg class="btn-more__icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 1L7 4.75L1 0.999999M13 5.25L7 9L1 5.25" stroke="#DEBD55" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </span>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="add-sections">
-                <div class="add-sections__wrap container">
-                    <div class="add-sections__title">
-                        <h2 class="h2">Новинки</h2>
-                    </div>
-                    <div class="add-sections__inner">
-                        <div class="add-sections__list">
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-01.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-02.jpg" alt="Салават Юлаев, символ города Уфа, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Салават Юлаев, символ города Уфа, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-03.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-04.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-05.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-06.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                            <div class="add-sections__item">
-                                <div class="add-section">
-                                    <a href="#" class="add-section__link"></a>
-                                    <div class="add-section__pics">
-                                        <img loading="lazy" width="170" height="170" src="images/latest-07.jpg" alt="Святая Блаженная Ксения Петербургская, бронзовая статуэтка.">
-                                    </div>
-                                    <div class="add-section__name">Святая Блаженная Ксения Петербургская, бронзовая статуэтка.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="add-sections__more">
-                            <a href="#" class="btn-more">
-                                <span class="btn-more__text">еще новинки</span>
-                                <svg class="btn-more__icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 1L7 4.75L1 0.999999M13 5.25L7 9L1 5.25" stroke="#DEBD55" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </main>
         <footer class="footer-mobile">
             <div class="footer-mobile__row footer-mobile__row_top">
@@ -797,12 +604,12 @@
                                                 <a href="#" class="main-nav__link">Каталог</a>
                                             </div>
                                             <div class="main-nav__item">
-                                                <a href="#" class="main-nav__link">Услуги</a>
+                                                <a href="services.html" class="main-nav__link">Услуги</a>
                                             </div>
                                             <div class="main-nav__item">
                                                 <a href="new-products.html" class="main-nav__link">Новинки</a>
                                             </div>
-                                            <div class="main-nav__item">
+                                            <div class="main-nav__item active">
                                                 <a href="news.html" class="main-nav__link">Новости</a>
                                             </div>
                                             <div class="main-nav__item">
