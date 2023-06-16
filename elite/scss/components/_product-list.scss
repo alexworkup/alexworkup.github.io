@@ -1,0 +1,6 @@
+.product-list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-gap: 10px;
+}
