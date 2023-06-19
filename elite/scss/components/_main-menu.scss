@@ -19,8 +19,7 @@
         padding: 0;
       }
 
-      &:hover,
-      &.active {
+      &:hover {
 
         .main-nav__link {
           color: $c-yellow;
@@ -29,6 +28,18 @@
             opacity: 1;
             visibility: visible;
           }
+
+          &:after {
+            bottom: -12px;
+            opacity: 1;
+          }
+        }
+      }
+
+      &.active {
+
+        .main-nav__link {
+          color: $c-yellow;
 
           &:after {
             bottom: -12px;

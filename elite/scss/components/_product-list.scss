@@ -1,6 +1,19 @@
 .product-list {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fit, 270px);
-  grid-gap: 10px;
+
+  &__sort {
+    margin-bottom: 28px;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 45px;
+  }
+
+  &__pagination {
+    margin-bottom: 10px;
+  }
+
 }
