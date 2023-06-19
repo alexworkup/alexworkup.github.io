@@ -13,9 +13,14 @@
     &__title {
       font-family: $font-family-header;
       font-size: 40px;
+      font-weight: normal;
       line-height: 100%;
       color: #ffffff;
       margin: 0 0 15px 0;
+
+      @media #{$phone} {
+        font-size: 25px;
+      }
 
       span {
         color: $c-yellow;
@@ -25,6 +30,28 @@
     &__content {
       font-size: 14px;
       line-height: 125%;
+    }
+  }
+
+  &__section {
+    margin-bottom: 18px;
+  }
+
+  &__add {
+    margin-bottom: 23px;
+
+    &_gift {
+      margin-bottom: 70px;
+    }
+
+    &_recommend {
+
+      .product-list {
+
+        &__wrap {
+          margin-bottom: 12px;
+        }
+      }
     }
   }
 }

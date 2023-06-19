@@ -1,5 +1,12 @@
 .product-list {
 
+  &__title {
+
+    .h2 {
+      font-size: 25px;
+    }
+  }
+
   &__sort {
     margin-bottom: 28px;
   }
