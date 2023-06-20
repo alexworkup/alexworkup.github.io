@@ -87,23 +87,4 @@
     }
   }
 
-  .product-price {
-    line-height: 100%;
-
-    &__text {
-      color: #FF8995;
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    &__value {
-      font-size: 20px;
-      color: $c-yellow;
-
-      span {
-        color: #D87781;
-      }
-    }
-
-  }
 }

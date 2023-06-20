@@ -64,6 +64,32 @@
       }
     }
   }
+
+  &_back {
+    color: #FF8995;
+    background: rgba(34, 1, 2, 0.3);
+    border: 1px solid #A84C56;
+    transition: .1s all linear;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      width: 12px;
+      height: 8px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC4zNTY0IDEuMTMxMDRMNi45MTcyIDQuMDYwNDVMMTAuMzU2NCA2Ljk4OTg1TTQuNjI0MzcgMS4xMzEwNEwxLjE4NTEyIDQuMDYwNDVMNC42MjQzNyA2Ljk4OTg1IiBzdHJva2U9IiNERUJENTUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      border: 1px solid $c-yellow;
+    }
+  }
 }
 
 .btn-more {
