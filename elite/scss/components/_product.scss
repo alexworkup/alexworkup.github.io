@@ -7,6 +7,22 @@
     grid-template-rows: auto;
     grid-gap: 32px;
     margin-bottom: 50px;
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: minmax(auto, 40%) 1fr;
+    }
+
+    @media #{$laptop_s} {
+      grid-template-columns: minmax(auto, 50%) 1fr;
+    }
+
+    @media #{$tablet-mini} {
+      grid-template-columns: 100%;
+    }
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
   }
 
  .big-gallery {
@@ -35,8 +51,15 @@
      border-radius: 5px;
      overflow: hidden;
 
+     @media screen and (max-width: 1280px) {
+       height: 0;
+       padding-bottom: 100%;
+     }
+
      img {
       max-width: 100%;
+      width: 100%;
+      height: auto;
      }
    }
  }
@@ -51,6 +74,18 @@
       opacity: .5;
       transition: .1s all linear;
 
+      @media screen and (max-width: 1280px) {
+        max-height: 80px;
+      }
+
+      @media #{$tablet-mini} {
+        max-height: 120px;
+      }
+
+      @media #{$phone} {
+        max-height: 80px;
+      }
+
       &.swiper-slide-thumb-active,
       &:hover {
         opacity: 1;
@@ -60,6 +95,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
       }
     }
   }
@@ -81,11 +117,20 @@
       line-height: 85%;
       margin: 0 0 10px 0;
       font-weight: normal;
+
+      @media #{$phone} {
+        font-size: 25px;
+      }
     }
 
     &__desc,
     &__props {
       margin-bottom: 20px;
+
+      @media #{$phone} {
+        font-size: 14px;
+        line-height: 120%;
+      }
     }
 
     &__desc {
@@ -97,6 +142,10 @@
 
     &__props {
       margin-left: -16px;
+
+      @media #{$phone} {
+        margin-left: 0;
+      }
 
       table {
         border-collapse: collapse;
@@ -142,6 +191,10 @@
         font-size: 40px;
         font-weight: 300;
         line-height: 100%;
+
+        @media #{$phone} {
+          font-size: 30px;
+        }
       }
 
       &__text {
@@ -164,6 +217,11 @@
 
       &_price {
         min-width: 225px;
+        margin-right: 10px;
+
+        @media #{$phone} {
+          min-width: auto;
+        }
       }
     }
 
@@ -173,6 +231,10 @@
       color: #FF8995;
       max-width: 80%;
       font-weight: 500;
+
+      @media #{$phone} {
+        max-width: 100%;
+      }
     }
   }
 
@@ -183,6 +245,10 @@
  .general-text {
    font-size: 16px;
    line-height: 125%;
+
+   @media #{$phone} {
+     font-size: 14px;
+   }
 
    b {
      font-family: $font-family-header;
@@ -204,6 +270,14 @@
 
      &_wrap {
        background: rgba(34, 1, 2, 0.3);
+     }
+
+     &_no-wrap {
+
+       @media #{$phone} {
+         padding-left: 0;
+         padding-right: 0;
+       }
      }
    }
  }

@@ -6,11 +6,11 @@
   &__row {
     display: grid;
     padding-top: 13px;
-    grid-template-columns: minmax(auto, 303px) 1fr;
+    grid-template-columns: minmax(auto, 303px) calc(100% - 303px);
     grid-column-gap: 23px;
 
     @media #{$laptop_s} {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
     }
   }
 

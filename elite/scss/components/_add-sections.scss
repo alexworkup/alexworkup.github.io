@@ -98,4 +98,33 @@
       }
     }
   }
+
+  &_more {
+    margin-bottom: 60px;
+
+    .add-sections__wrap {
+      padding: 0;
+    }
+
+    .add-sections__list {
+      background: rgba(34, 1, 2, 0.3);
+      border-radius: 5px;
+      padding: 30px;
+      margin-bottom: 10px;
+    }
+
+    .add-sections__title {
+
+      .h2 {
+        font-size: 25px;
+        margin-bottom: 17px;
+      }
+    }
+
+    .add-sections__inner {
+      padding: 0;
+      background: none;
+      border-radius: 0;
+    }
+  }
 }
