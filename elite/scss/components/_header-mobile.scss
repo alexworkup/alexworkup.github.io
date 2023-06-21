@@ -2,14 +2,14 @@
   display: none;
   margin-bottom: 20px;
   position: relative;
-  z-index: 2;
+  z-index: 100;
   
   @media #{$tablet-mini} {
     display: block;
   }
 
   &__control {
-    padding: 3px 10px 9px 10px;
+    padding: 10px;
     background: #3A0507;
   }
 
@@ -84,6 +84,10 @@
     &_toggle {
       padding-left: 10px;
       margin-right: 10px;
+
+      .toggle {
+        font-size: 0;
+      }
     }
 
     &_logo {
@@ -134,6 +138,73 @@
             width: auto;
           }
         }
+      }
+    }
+  }
+
+  .header-mobile-top {
+
+    .logo {
+
+      &__icon {
+        text-decoration: none;
+
+        span {
+          font-family: $font-family-header;
+          color: $c-yellow;
+          font-size: 25px;
+          line-height: 85%;
+          font-style: italic;
+          display: none;
+        }
+      }
+    }
+
+    &.fixed {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      background: rgba(81, 9, 11, 0.95);
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+      margin: 0;
+      padding: 15px;
+
+      .logo {
+
+        img {
+          display: none;
+        }
+
+        &__icon {
+          text-decoration: none;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      .social {
+        display: none;
+      }
+
+      .phone {
+        margin-bottom: 0;
+
+        &__text {
+          display: none;
+        }
+      }
+
+      .header-mobile__col_toggle {
+        padding-left: 0;
+        margin-right: 5px;
+      }
+
+      .header-mobile__col_phone {
+        padding-right: 0;
       }
     }
   }
