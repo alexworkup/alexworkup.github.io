@@ -118,6 +118,7 @@
       font-family: $font-family-header;
       font-size: 30px;
       line-height: 100%;
+      margin-bottom: 5px;
 
       @media #{$tablet-mini} {
         font-size: 22px;

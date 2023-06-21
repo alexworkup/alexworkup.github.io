@@ -1364,6 +1364,7 @@ body:before {
   font-family: "Cormorant Garamond", "Arial Narrow", sans-serif;
   font-size: 30px;
   line-height: 100%;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 767px) {
   .main-sections .main-section-item__name {
