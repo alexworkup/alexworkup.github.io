@@ -1,0 +1,51 @@
+.points-delivery {
+
+  &__title {
+    font-family: $font-family-header;
+    font-size: 40px;
+    line-height: 100%;
+    color: #ffffff;
+    padding-left: 30px;
+    margin-bottom: 20px;
+
+    @media #{$tablet} {
+      padding-left: 0;
+      font-size: 30px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -5px;
+
+    @media #{$tablet} {
+      flex-wrap: wrap;
+      margin: 0;
+    }
+  }
+
+  &__col {
+    background: rgba(34, 1, 2, 0.3);
+    border-radius: 5px;
+    padding: 30px;
+    width: 50%;
+    margin: 0 5px;
+
+    @media #{$tablet} {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 15px;
+    }
+
+    @media #{$tablet} {
+      font-size: 14px;
+    }
+
+    ul {
+      list-style: none;
+      color: $c-yellow;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

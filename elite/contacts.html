@@ -13,6 +13,7 @@
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="js/fancyapp/fancybox.css">
     <script src="js/fancyapp/fancybox.umd.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU" type="text/javascript"></script>
     <script src="js/script.js"></script>
 </head>
 <body class="page">
@@ -33,10 +34,10 @@
                         <a href="news.html">Новости</a>
                     </li>
                     <li>
-                        <a class="active" href="about.html">О компании</a>
+                        <a href="about.html">О компании</a>
                     </li>
                     <li>
-                        <a href="contacts.html">Контакты</a>
+                        <a class="active" href="contacts.html">Контакты</a>
                     </li>
                 </ul>
                 <div class="sidebar-catalog">
@@ -301,10 +302,10 @@
                                             <div class="main-nav__item">
                                                 <a href="news.html" class="main-nav__link">Новости</a>
                                             </div>
-                                            <div class="main-nav__item active">
+                                            <div class="main-nav__item">
                                                 <a href="about.html" class="main-nav__link">О компании</a>
                                             </div>
-                                            <div class="main-nav__item">
+                                            <div class="main-nav__item active">
                                                 <a href="contacts.html" class="main-nav__link">Контакты</a>
                                             </div>
                                         </div>
@@ -349,7 +350,7 @@
                 <div class="breadcrumbs">
                     <ul>
                         <li><a href="/">Художественная мастерская «А-Элит»</a></li>
-                        <li><span>О компании</span></li>
+                        <li><span>Контакты</span></li>
                     </ul>
                 </div>
                 <div class="main__row">
@@ -394,93 +395,162 @@
                         </div>
                     </div>
                     <div class="main__col main__col_content">
-                        <h1 class="h1">О компании</h1>
-                        <div class="page-tab">
-                            <div class="page-tab__nav tab-nav">
-                                <a href="#" class="tab-nav__item active">Литейная мастерская "А&nbsp;-&nbsp;Элит"</a>
-                                <a href="#" class="tab-nav__item">Изготовление изделий из бронзы на заказ</a>
-                                <a href="#" class="tab-nav__item">Оставляйте свои отзывы и пожелания</a>
-                                <a href="#" class="tab-nav__item">Вакансии</a>
-                            </div>
-                            <div class="page-tab__content tab-content">
-                                <div class="tab-content__title">Литейная мастерская <span>«А-Элит»</span></div>
-                                <div class="tab-content__text">
-                                    <p>Литейная мастерская «А-Элит» производит <a href="">бронзовые статуэтки</a>, скульптуры из бронзы, <a href="">бронзовые часы, ложки для обуви</a>. Принимаем заказы на изготовление бронзовых скульптур и статуэток из бронзы, создание мастер-моделей скульптур.<br>
-                                        Литейная мастерская «А-Элит» оснащена современным оборудованием. Творческая группа скульпторов и маркетологов нашей компании находится в постоянном поиске новых идей, которые наши специалисты мастерски воплощают в <a href="">художественное литье из бронзы</a>.<br>
-                                        Также наша литейная мастерская готова сотрудничать со скульпторами из других регионов на взаимовыгодных условиях. Художественная литейная мастерская «А-Элит» осуществляет доставку продукции во все города Российской Федерации.<br>
-                                        Воспользоваться услугами литейной мастерской «А-Элит», на изготовление изделий из бронзы и латуни на заказ, а также приобрести готовые изделия из бронзы из нашего каталога, Вы можете в Москве, Спб, , Казани, Екатеринбурге, Курске, Волгограде, Челябинске, Самаре, Тольятти, Нижнем Новгороде, Ростове-на-Дону, Новосибирске, Омске, Ижевске, Саратове, Перми, Уфе, Красноярске, Новокузнецке, Краснодаре, Иркутске, Туле, Владивостоке, Воронеже, Томске, Сургуте, Тюмени, Смоленске, Хабаровске, Ханты-Мансийске, Якутске подробнее.</p>
-                                    <p>Литейная мастерская «А-Элит» покупает лом бронзы, лом латуни.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-sections">
-                            <div class="main-sections__wrap container">
-                                <div class="main-sections__title">
-                                    <h2 class="h2">Художественное литье из бронзы. Перейти в каталог художественного литья из бронзы</h2>
-                                </div>
-                                <div class="main-sections__inner">
-                                    <div class="main-sections__list">
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Художественное литье из бронзы.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
+                        <div class="contacts">
+                            <div class="contacts__wrap">
+                                <h1 class="contacts__title">Контакты</h1>
+                                <div class="contacts__content">
+                                    <div class="public-number">
+                                        <div class="public-number__text"><span>Бесплатный звонок</span> для всех регионов России</div>
+                                        <div class="public-number__phone">
+                                            <div class="phone">
+                                                <div class="phone__wrap">
+                                                    <a href="tel:+78003337731" class="phone__link">8(800) <span>333-77-31</span></a>
+                                                    <div class="phone__text">Бесплатно по РФ</div>
+                                                </div>
                                             </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-01.jpg" alt="Художественное литье из бронзы.">
-                                            </div>
+                                            <a data-fancybox="" data-src="#popup-form" href="#" class="btn">Обратный звонок</a>
                                         </div>
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Бронзовые статуэтки.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
+                                    </div>
+                                    <div class="address-block">
+                                        <div class="address-block__row">
+                                            <div class="address-block__col address-block__col_list">
+                                                <ul>
+                                                    <li>
+                                                        <b>Производство</b>
+                                                        г. Златоуст ул. 30 лет Победы, дом 9-А
+                                                    </li>
+                                                    <li>
+                                                        <b>Контактный  Телефон:</b>
+                                                        <a href="tel:+73517506344">+7(351) 750-63-44</a><br>
+                                                        моб: <a href="tel:+79323059619">8(932) 305-96-19</a> (Viber, WhatsApp)<br>
+                                                        моб: <a href="tel:+79264313965">8(926)431-39-65</a>
+                                                    </li>
+                                                    <li>
+                                                        <b>Отдел маркетинга:</b>
+                                                        Email: <a href="mailto:aelite-zlat.market@yandex.ru">aelite-zlat.market@yandex.ru</a>
+                                                    </li>
+                                                    <li>
+                                                        <b>Отдел сбыта:</b>
+                                                        Email: <a href="mailto:aelite-zlat@yandex.ru">aelite-zlat@yandex.ru</a>
+                                                    </li>
+                                                    <li>
+                                                        <b>Директор:</b>
+                                                        Клопов Вячеслав Викторович<br>
+                                                        <a href="mailto:slik19@yandex.ru">slik19@yandex.ru</a><br>
+                                                        Skype: slik191
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-02.jpg" alt="Бронзовые статуэтки.">
-                                            </div>
-                                        </div>
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Бронзовые часы.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                            </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-03.jpg" alt="Бронзовые часы.">
-                                            </div>
-                                        </div>
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Подарочные ложки для обуви из бронзы.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                            </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-04.jpg" alt="Подарочные ложки для обуви из бронзы.">
-                                            </div>
-                                        </div>
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Художественное литье из бронзы.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                            </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-05.jpg" alt="Художественное литье из бронзы.">
-                                            </div>
-                                        </div>
-                                        <div class="main-section-item">
-                                            <a href="#" class="main-section-item__link"></a>
-                                            <div class="main-section-item__title">
-                                                <div class="main-section-item__name">Бронзовые статуэтки.</div>
-                                                <a href="#" class="main-section-item__follow"><span>Перейти в каталог художественного литья из бронзы</span></a>
-                                            </div>
-                                            <div class="main-section-item__pics">
-                                                <img loading="lazy" src="images/section-img-06.jpg" alt="Бронзовые статуэтки.">
+                                            <div class="address-block__col address-block__col_map">
+                                                <div class="map" id="map"></div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="points-delivery">
+                            <div class="points-delivery__title">Склады. Пункты выдачи заказов. Магазины</div>
+                            <div class="points-delivery__row">
+                                <div class="points-delivery__col">
+                                    <ul>
+                                        <li>г. Москва: Ленинградский пр. д 2</li>
+                                        <li>г. Москва: ул. Каргопольская д. 13 корп. 1</li>
+                                        <li>г. Москва: ул. Маршала Малиновского, д. 6, корп.1, оф. 2А</li>
+                                        <li>г. Москва: ул. Широкая 4 корп.1</li>
+                                        <li>г. Москва: ул. В. Сыромятническая, д. 2, ЮЦ Голден Гросс, 216 пав.</li>
+                                        <li>г. Москва: ул. Кожевническая, д. 7, стр.1</li>
+                                        <li>г. Санкт-Петербург: ул. Кузнецовская д.52, корпус 15</li>
+                                        <li>г. Абакан: ул. Чертыгашева, д.126Н, 2 этаж, оф. 2.г.</li>
+                                        <li>г. Александров: ул. Восстания 1905 года, д.2Беларусь,</li>
+                                        <li>Минск,: ул. Хмаринская, д. 7,оф. 3</li>
+                                        <li>Казахстан, г. Алматы: ул. Шевченко, д.118, оф.127</li>
+                                        <li>Казахстан, г. Алматы: ул. Манаса, д.67/2, оф. 2</li>
+                                        <li>Казахстан, г. Алматы: пр. Суюнбая, д.66-68</li>
+                                        <li>Казахстан, г. Астана: пр. Республики, д. 73</li>
+                                        <li>Казахстан, г. Атырау: ул. Валиханова, д.9Б</li>
+                                        <li>Казахстан, г. Кызылорда: ул. Ауезова, д. 1а</li>
+                                        <li>Казахстан, г. Павлодар: ул. Лермонтова 45/2</li>
+                                        <li>Казахстан, г.Петропавловск: ул. Володарского, д.126</li>
+                                        <li>Казахстан, г.Тараз: ул.Воинская, д.2а</li>
+                                        <li>Казахстан, г.Усть-Каменогорск: ул. Протозанова, д. 83</li>
+                                        <li>г. Альметьевск: ул. Чехова, д. 20</li>
+                                        <li>г. Армавир: ул. Новороссийская, д.2/4, офис 207</li>
+                                        <li>г. Артем: ул. Ключевая, д.1/1,оф.1, вход с торца зданияг.</li>
+                                        <li>г. Архангельск: ул. Розинга, д. 6</li>
+                                        <li>г. Астрахань: ул. Богдана Хмельницкого, д. 44/</li>
+                                        <li>г. Ачинск: ул. 1-й Микрорайон д. 34</li>
+                                        <li>г. Балаково: Проспект Героев, д. 41, офис 301</li>
+                                        <li>г. Балахна: ул. Дзержинского, д.1</li>
+                                        <li>г. Балашиха: пр.Ленина, д.10а</li>
+                                        <li>г. Барнаул: ул. Малахова, д.83</li>
+                                        <li>г. Барнаул: пр-т Строителей, д.29</li>
+                                        <li>г. Белгород: ул. Попова, д.76a</li>
+                                        <li>г. Белгород: ул. Дегтярева, д.2А</li>
+                                        <li>г. Белгород: пр. Б.Хмельницкого, д.149А</li>
+                                        <li>г. Белоярский: ул. Молодости 2А</li>
+                                        <li>г. Бердск: ул. Вокзальная, д.26, оф.209</li>
+                                        <li>г. Березники: ул.Ломоносова, д.98/3</li>
+                                        <li>г. Бийск: ул. Льва Толстого, д.141,оф 11</li>
+                                        <li>г. Благовещенск: ул. Тенистая, д.101А</li>
+                                        <li>г. Братск: ул. Комсомольская, д.16, оф.12</li>
+                                        <li>г. Брянск: ул. Трудовая, д. 5</li>
+                                        <li>г. Великий Новгород: ул. Б.Санкт-Петербуржская</li>
+                                        <li>г. Великие Луки: ул. Ботвина, д. 19, оф. 2</li>
+                                        <li>г. Видное: ул. Донбасская д. 2</li>
+                                        <li>г. Владивосток: ул.Пушкинская, д.52</li>
+                                        <li>г. Владивосток: ул.Давыдова, д.22а</li>
+                                    </ul>
+                                </div>
+                                <div class="points-delivery__col">
+                                    <ul>
+                                        <li>г. Москва: Ленинградский пр. д 2</li>
+                                        <li>г. Москва: ул. Каргопольская д. 13 корп. 1</li>
+                                        <li>г. Москва: ул. Маршала Малиновского, д. 6, корп.1, оф. 2А</li>
+                                        <li>г. Москва: ул. Широкая 4 корп.1</li>
+                                        <li>г. Москва: ул. В. Сыромятническая, д. 2, ЮЦ Голден Гросс, 216 пав.</li>
+                                        <li>г. Москва: ул. Кожевническая, д. 7, стр.1</li>
+                                        <li>г. Санкт-Петербург: ул. Кузнецовская д.52, корпус 15</li>
+                                        <li>г. Абакан: ул. Чертыгашева, д.126Н, 2 этаж, оф. 2.г.</li>
+                                        <li>г. Александров: ул. Восстания 1905 года, д.2Беларусь,</li>
+                                        <li>Минск,: ул. Хмаринская, д. 7,оф. 3</li>
+                                        <li>Казахстан, г. Алматы: ул. Шевченко, д.118, оф.127</li>
+                                        <li>Казахстан, г. Алматы: ул. Манаса, д.67/2, оф. 2</li>
+                                        <li>Казахстан, г. Алматы: пр. Суюнбая, д.66-68</li>
+                                        <li>Казахстан, г. Астана: пр. Республики, д. 73</li>
+                                        <li>Казахстан, г. Атырау: ул. Валиханова, д.9Б</li>
+                                        <li>Казахстан, г. Кызылорда: ул. Ауезова, д. 1а</li>
+                                        <li>Казахстан, г. Павлодар: ул. Лермонтова 45/2</li>
+                                        <li>Казахстан, г.Петропавловск: ул. Володарского, д.126</li>
+                                        <li>Казахстан, г.Тараз: ул.Воинская, д.2а</li>
+                                        <li>Казахстан, г.Усть-Каменогорск: ул. Протозанова, д. 83</li>
+                                        <li>г. Альметьевск: ул. Чехова, д. 20</li>
+                                        <li>г. Армавир: ул. Новороссийская, д.2/4, офис 207</li>
+                                        <li>г. Артем: ул. Ключевая, д.1/1,оф.1, вход с торца зданияг.</li>
+                                        <li>г. Архангельск: ул. Розинга, д. 6</li>
+                                        <li>г. Астрахань: ул. Богдана Хмельницкого, д. 44/</li>
+                                        <li>г. Ачинск: ул. 1-й Микрорайон д. 34</li>
+                                        <li>г. Балаково: Проспект Героев, д. 41, офис 301</li>
+                                        <li>г. Балахна: ул. Дзержинского, д.1</li>
+                                        <li>г. Балашиха: пр.Ленина, д.10а</li>
+                                        <li>г. Барнаул: ул. Малахова, д.83</li>
+                                        <li>г. Барнаул: пр-т Строителей, д.29</li>
+                                        <li>г. Белгород: ул. Попова, д.76a</li>
+                                        <li>г. Белгород: ул. Дегтярева, д.2А</li>
+                                        <li>г. Белгород: пр. Б.Хмельницкого, д.149А</li>
+                                        <li>г. Белоярский: ул. Молодости 2А</li>
+                                        <li>г. Бердск: ул. Вокзальная, д.26, оф.209</li>
+                                        <li>г. Березники: ул.Ломоносова, д.98/3</li>
+                                        <li>г. Бийск: ул. Льва Толстого, д.141,оф 11</li>
+                                        <li>г. Благовещенск: ул. Тенистая, д.101А</li>
+                                        <li>г. Братск: ул. Комсомольская, д.16, оф.12</li>
+                                        <li>г. Брянск: ул. Трудовая, д. 5</li>
+                                        <li>г. Великий Новгород: ул. Б.Санкт-Петербуржская</li>
+                                        <li>г. Великие Луки: ул. Ботвина, д. 19, оф. 2</li>
+                                        <li>г. Видное: ул. Донбасская д. 2</li>
+                                        <li>г. Владивосток: ул.Пушкинская, д.52</li>
+                                        <li>г. Владивосток: ул.Давыдова, д.22а</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -598,10 +668,10 @@
                                             <div class="main-nav__item">
                                                 <a href="news.html" class="main-nav__link">Новости</a>
                                             </div>
-                                            <div class="main-nav__item active">
+                                            <div class="main-nav__item">
                                                 <a href="about.html" class="main-nav__link">О компании</a>
                                             </div>
-                                            <div class="main-nav__item">
+                                            <div class="main-nav__item active">
                                                 <a href="contacts.html" class="main-nav__link">Контакты</a>
                                             </div>
                                         </div>

@@ -47,6 +47,34 @@ $( document ).ready(function() {
             thumbs: {
                 swiper: smallGallery,
             },
+
+            navigation: {
+                nextEl: '.big-gallery .swiper-button-next',
+                prevEl: '.big-gallery .swiper-button-prev',
+            },
         });
     }
+
+    ymaps.ready(function () {
+        var map = new ymaps.Map("map", {
+            center: [55.148462, 59.678929],
+            zoom: 15
+        });
+
+        if (map) {
+
+            map.geoObjects
+                .add(new ymaps.Placemark([55.148462, 59.678929], {
+                    balloonContent: 'Художественная литейная мастерская «А-Элит»'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: './images/baloon.svg',
+                    iconImageSize: [73, 53],
+                    iconImageOffset: [-30, -50],
+                    preset: 'islands#icon',
+                    iconColor: '#0095b6'
+                }))
+
+        }
+    });
 });

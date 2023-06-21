@@ -35,6 +35,26 @@
           }
         }
       }
+
+      &_wt {
+
+        &:hover {
+
+          path {
+            fill: #25d366;
+          }
+        }
+      }
+
+      &_phone {
+
+        &:hover {
+
+          path {
+            fill: #ffffff;
+          }
+        }
+      }
     }
   }
 

@@ -157,6 +157,8 @@
 
       @media #{$phone} {
         font-size: 14px;
+        border: 1px solid $c-yellow;
+        padding-left: 18px;
       }
 
       &:hover {

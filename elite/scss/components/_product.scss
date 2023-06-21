@@ -45,6 +45,36 @@
      pointer-events: none;
    }
 
+   .swiper-button-prev,
+   .swiper-button-next {
+     background: rgba(255, 255, 255, 0.3);
+     width: 28px;
+     height: 28px;
+     border-radius: 50%;
+     opacity: 1;
+
+     svg {
+
+       path {
+         transition: .1s all linear;
+       }
+     }
+
+     &:hover {
+
+       svg {
+
+         path {
+           stroke: #FEF275;
+         }
+       }
+     }
+
+     &:after {
+       content: none;
+     }
+   }
+
    &__item {
      font-size: 0;
      height: 505px;

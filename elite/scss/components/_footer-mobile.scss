@@ -18,6 +18,13 @@
     &_top {
       background: rgba(34, 1, 2, 0.6);
       justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 7px;
+      padding-bottom: 7px;
+
+      .footer-mobile__col {
+        padding: 5px 0;
+      }
 
       .phone {
 
@@ -27,6 +34,13 @@
 
         &__text {
           margin-top: -2px;
+        }
+      }
+
+      .social {
+
+        &__item {
+          margin: 0 2px;
         }
       }
     }
