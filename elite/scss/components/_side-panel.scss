@@ -1,10 +1,10 @@
 .side-panel {
   position: fixed;
   right: 11px;
-  top: calc(50% - 170px);
   display: flex;
   flex-direction: column;
   z-index: 100;
+  bottom: 20px;
 
   &__item {
     width: 55px;

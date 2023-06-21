@@ -15,6 +15,17 @@ $( document ).ready(function() {
         });
     });
 
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var mainNav = document.querySelector('.main-menu_top');
+
+        if (window.pageYOffset > (header.offsetHeight + 100)) {
+            mainNav.classList.add('fixed');
+        } else {
+            mainNav.classList.remove('fixed');
+        }
+    });
+
     if($('.mobile-menu').length) {
 
         $(document).on('click', '.toggle', function (e) {
@@ -55,26 +66,30 @@ $( document ).ready(function() {
         });
     }
 
-    ymaps.ready(function () {
-        var map = new ymaps.Map("map", {
-            center: [55.148462, 59.678929],
-            zoom: 15
+    if($('.map').length) {
+
+        ymaps.ready(function () {
+            var map = new ymaps.Map("map", {
+                center: [55.148462, 59.678929],
+                zoom: 15
+            });
+
+            if (map) {
+
+                map.geoObjects
+                    .add(new ymaps.Placemark([55.148462, 59.678929], {
+                        balloonContent: 'Художественная литейная мастерская «А-Элит»'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: './images/baloon.svg',
+                        iconImageSize: [73, 53],
+                        iconImageOffset: [-30, -50],
+                        preset: 'islands#icon',
+                        iconColor: '#0095b6'
+                    }))
+
+            }
         });
+    }
 
-        if (map) {
-
-            map.geoObjects
-                .add(new ymaps.Placemark([55.148462, 59.678929], {
-                    balloonContent: 'Художественная литейная мастерская «А-Элит»'
-                }, {
-                    iconLayout: 'default#image',
-                    iconImageHref: './images/baloon.svg',
-                    iconImageSize: [73, 53],
-                    iconImageOffset: [-30, -50],
-                    preset: 'islands#icon',
-                    iconColor: '#0095b6'
-                }))
-
-        }
-    });
 });
