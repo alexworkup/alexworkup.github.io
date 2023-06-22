@@ -58,14 +58,14 @@
         width: 100%;
         bottom: -5px;
         left: 0;
-        background: $c-blue;
+        background: $c-light-blue;
         transform: scale(0);
         transition: .2s all linear;
       }
 
       &:hover,
       &.active {
-        color: $c-blue;
+        color: $c-light-blue;
 
         &:after {
           transform: scale(1);

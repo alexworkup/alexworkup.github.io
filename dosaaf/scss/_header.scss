@@ -32,7 +32,7 @@
   }
 
   .headline {
-    border-radius: 77.5px;
+    border-radius: 77.5px 0 0 77.5px;
     background: rgba(33, 49, 61, 0.5);
     backdrop-filter: blur(2px);
     padding: 30px 330px 30px 55px;
@@ -56,7 +56,7 @@
         }
 
         &.c-blue {
-          color: $c-blue;
+          color: $c-light-blue;
         }
 
       }
@@ -64,7 +64,7 @@
       b {
         font-size: 120px;
         font-weight: 500;
-        color: $c-blue;
+        color: $c-light-blue;
         margin-left: 10px;
       }
     }

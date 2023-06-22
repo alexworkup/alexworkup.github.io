@@ -5,7 +5,7 @@
   height: 57px;
   line-height: 57px;
   border-radius: 28.5px;
-  border: 2px solid $c-blue;
+  border: 2px solid $c-light-blue;
   color: $c-white;
   font-weight: 600;
   background: linear-gradient(178deg, #334F65 0%, #303A44 100%);
@@ -13,7 +13,7 @@
   transition: .1s all linear;
 
   &:hover {
-    color: $c-blue;
+    color: $c-light-blue;
   }
 
   &:active {
