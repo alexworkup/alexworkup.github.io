@@ -3354,6 +3354,11 @@ body:before {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  .contacts .address-block__col_list {
+    min-width: auto;
+  }
+}
 .contacts .address-block__col_list ul {
   list-style: none;
   padding: 0;
