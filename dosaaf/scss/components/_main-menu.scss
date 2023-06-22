@@ -1,0 +1,76 @@
+.main-menu {
+  width: 100%;
+
+  &_fixed {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+  }
+
+  &__wrap {
+    border-radius: 42.5px;
+    background: rgba(37, 61, 75, 0.70);
+    backdrop-filter: blur(2px);
+    padding: 5px 18px 5px 6px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -14px;
+  }
+
+  &__col {
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+
+    &_nav {
+      margin: 0 auto;
+    }
+  }
+
+  .main-nav {
+    display: flex;
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 100%;
+
+    &__item {
+      padding: 0 2rem;
+    }
+
+    &__link {
+      height: 100%;
+      color: $c-white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      position: relative;
+      transition: .1s color linear;
+
+      &:after {
+        content: '';
+        height: 3px;
+        position: absolute;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        background: $c-blue;
+        transform: scale(0);
+        transition: .2s all linear;
+      }
+
+      &:hover,
+      &.active {
+        color: $c-blue;
+
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

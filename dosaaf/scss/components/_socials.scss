@@ -1,0 +1,38 @@
+.socials {
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border-radius: 15.5px;
+    border: 2px solid rgba(83, 152, 255, 0.50);
+    margin: 0 5px;
+    padding: 5px;
+    height: 30px;
+    width: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+
+      svg {
+
+        path {
+          fill: $c-white;
+        }
+      }
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+
+      path {
+        transition: .1s all linear;
+      }
+    }
+  }
+}
