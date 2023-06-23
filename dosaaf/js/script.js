@@ -16,44 +16,21 @@ $( document ).ready(function() {
     });
 
 
-    if ($(window).width() <= 500) {
-        is_mobile = true;
-    }
-
-    if(is_mobile) {
+    if(!is_mobile) {
 
         window.addEventListener('scroll', function() {
-            var headerMobile = document.querySelector('.header-mobile');
-            var topMobile = document.querySelector('.header-mobile-top');
-            var heightTopMobile = topMobile.offsetHeight;
-            var wrapTopMobile = document.querySelector('.header-mobile__control');
+            var menu = document.querySelector('.main-menu_fixed');
+            var heightMenu = menu.offsetHeight;
 
-            if (window.pageYOffset > headerMobile.offsetHeight) {
-                topMobile.classList.add('fixed');
-                wrapTopMobile.style.paddingBottom = heightTopMobile+'px';
+            console.log( heightMenu );
+
+            if (window.pageYOffset > heightMenu) {
+                menu.style.top = '10px';
             } else {
-                topMobile.classList.remove('fixed');
-                wrapTopMobile.style.paddingBottom = '10px';
-            }
-        });
-    } else {
-
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('.header');
-            var mainNav = document.querySelector('.main-menu_top');
-            var heightMenu = mainNav.offsetHeight;
-            var wrapMenu = document.querySelector('.header__row_menu');
-
-            if (window.pageYOffset > header.offsetHeight - heightMenu) {
-                mainNav.classList.add('fixed');
-                wrapMenu.style.paddingBottom = heightMenu+'px';
-            } else {
-                mainNav.classList.remove('fixed');
-                wrapMenu.style.paddingBottom = 0;
+                menu.style.top = '40px';
             }
         });
     }
-
 
     if($('.mobile-menu').length) {
 
@@ -67,31 +44,6 @@ $( document ).ready(function() {
             );
 
             return false;
-        });
-    }
-
-    if($('.big-gallery').length) {
-
-        const smallGallery = new Swiper('.small-gallery.swiper', {
-            slidesPerView: 4,
-            spaceBetween: 8,
-            freeMode: true,
-            watchSlidesProgress: true,
-        });
-
-        const bigGallery = new Swiper('.big-gallery.swiper', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            effect: 'fade',
-
-            thumbs: {
-                swiper: smallGallery,
-            },
-
-            navigation: {
-                nextEl: '.big-gallery .swiper-button-next',
-                prevEl: '.big-gallery .swiper-button-prev',
-            },
         });
     }
 

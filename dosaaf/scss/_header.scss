@@ -1,6 +1,10 @@
 .header {
   height: 719px;
   margin-bottom: 37px;
+  
+  @media #{$phone} {
+    height: 350px;
+  }
 
   &__wrap {
     height: 100%;
@@ -29,6 +33,14 @@
     position: relative;
     margin-top: auto;
     margin-bottom: 45px;
+
+    @media #{$phone} {
+      max-width: 80%;
+    }
+
+    @media screen and (max-width: 374px) {
+      max-width: 90%;
+    }
   }
 
   .headline {
@@ -38,10 +50,28 @@
     padding: 30px 330px 30px 55px;
     margin-right: -100px;
 
+    @media screen and (max-width: 1280px) {
+      padding: 30px 30px 30px 55px;
+      margin-right: 0;
+    }
+
+    @media #{$phone} {
+      padding: 15px 15px 15px 50px;
+    }
+
     &__text {
       color: $c-white;
       font-size: 40px;
       line-height: 25px;
+
+      @media screen and (max-width: 1280px) {
+        font-size: 30px;
+        line-height: 120%;
+      }
+
+      @media #{$phone} {
+        font-size: 18px;
+      }
 
       span {
         text-transform: uppercase;
@@ -66,6 +96,11 @@
         font-weight: 500;
         color: $c-light-blue;
         margin-left: 10px;
+
+        @media screen and (max-width: 1280px) {
+          font-size: 30px;
+          margin-left: 0;
+        }
       }
     }
   }

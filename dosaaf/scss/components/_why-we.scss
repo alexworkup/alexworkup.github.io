@@ -2,6 +2,10 @@
   padding: 30px 0;
   margin-bottom: 25px;
 
+  @media #{$phone} {
+    padding: 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 33px;
@@ -13,8 +17,12 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
     grid-gap: 31px;
+
+    @media #{$phone} {
+      grid-gap: 20px;
+    }
   }
 
   .why-item {
