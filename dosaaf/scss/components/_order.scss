@@ -19,10 +19,18 @@
     background: rgba(255, 255, 255, 0.60);
     backdrop-filter: blur(5px);
     padding: 35px 35px 50px 35px;
+
+    @media #{$phone} {
+      padding: 15px;
+    }
   }
 
   &__head {
     margin-bottom: 23px;
+
+    @media #{$phone} {
+      margin-bottom: 15px;
+    }
   }
 
   &__title {
@@ -30,17 +38,33 @@
     font-weight: 900;
     line-height: 90%;
     text-transform: uppercase;
+
+    @media #{$phone} {
+      font-size: 30px;
+      text-align: center;
+      line-height: 100%;
+    }
   }
 
   &__subtitle {
     font-size: 30px;
     line-height: 100%;
+
+    @media #{$phone} {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 
   &__row {
     margin: 0 -11px 23px -11px;
     display: flex;
     align-items: center;
+
+    @media #{$phone} {
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -66,6 +90,15 @@
 
       .order__col {
         width: 50%;
+
+        @media #{$phone} {
+          width: 100%;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
 
@@ -73,15 +106,31 @@
 
       .btn {
         padding: 0 66px;
+
+        @media #{$phone} {
+          justify-content: center;
+        }
       }
     }
   }
 
   &__col {
     padding: 0 11px;
+    
+    @media #{$phone} {
+      width: 100%;
+    }
   }
 
   &__approval {
     font-size: 14px;
+
+    @media #{$phone} {
+      text-align: center;
+
+      br {
+        display: none;
+      }
+    }
   }
 }

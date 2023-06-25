@@ -44,6 +44,10 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
+
+  @media #{$phone} {
+    font-size: 25px;
+  }
 }
 
 .wrapper {
@@ -55,6 +59,11 @@ body {
   background-image: url("../images/footer-bg.jpg");
   background-position: 100% calc(100% - 56px);
   background-repeat: no-repeat;
+
+  @media #{$phone} {
+    background-position: 0 calc(100% - 56px);
+    background-size: auto 700px;
+  }
 }
 
 a:not([class]) {
@@ -81,6 +90,11 @@ a:not([class]) {
     width: 30px;
     height: 30px;
     position: relative;
+    
+    @media #{$phone} {
+      top: 5px!important;
+      right: 5px!important;
+    }
 
     &:before {
       content: "";

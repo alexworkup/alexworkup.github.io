@@ -5,6 +5,10 @@
     text-align: center;
     margin-bottom: 70px;
 
+    @media #{$laptop-s} {
+      margin-bottom: 20px;
+    }
+
     .h2 {
       margin: 0;
     }
@@ -14,6 +18,14 @@
     display: grid;
     grid-gap: 16px;
     grid-template-columns: 1fr minmax(auto, 500px) 1fr;
+
+    @media #{$laptop} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$laptop-s} {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -24,14 +36,60 @@
     display: flex;
     align-items: center;
 
+    @media #{$phone} {
+      min-height: auto;
+    }
+
     &:first-child {
       border-radius: 0 150px 150px 0;
       justify-content: flex-end;
+
+      @media #{$laptop-s} {
+        margin-right: 10px;
+      }
+
+      .work-item {
+
+        @media #{$laptop-s} {
+          flex-direction: row-reverse;
+        }
+      }
     }
 
     &:last-child {
       border-radius: 150px 0 0 150px;
       justify-content: flex-start;
+
+      .work-item {
+
+        @media #{$laptop-s} {
+          flex-direction: row-reverse;
+        }
+      }
+
+      @media #{$laptop} {
+        justify-content: center;
+        border-radius: 0;
+        grid-column: 1/3;
+      }
+
+      @media #{$laptop-s} {
+        grid-column: 1/2;
+        justify-content: flex-end;
+        margin-right: 10px;
+        border-radius: 0 150px 150px 0;
+      }
+    }
+
+    &:nth-child(2) {
+
+      @media #{$laptop} {
+        border-radius: 150px 0 0 150px;
+      }
+
+      @media #{$laptop-s} {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -46,16 +104,38 @@
       margin-right: 22px;
       opacity: .5;
       line-height: 80%;
+
+      @media #{$laptop-s} {
+        margin: 0 20px;
+      }
+
+      @media #{$phone} {
+        font-size: 90px;
+        margin: 0 10px;
+      }
     }
 
     &__name {
       font-size: 30px;
       font-weight: 500;
       margin-bottom: 18px;
+
+      @media #{$phone} {
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
     }
 
     &__text {
       font-size: 18px;
+
+      @media #{$phone} {
+        font-size: 14px;
+
+        br {
+          display: none;
+        }
+      }
     }
 
   }

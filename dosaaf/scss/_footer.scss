@@ -6,16 +6,63 @@
 
     .main-menu {
 
+      &__col {
+
+        &_logo {
+
+          .logo {
+
+            &__icon {
+
+              @media #{$phone} {
+                height: 60px;
+              }
+            }
+
+            &__text {
+
+              b {
+                @media #{$phone} {
+                  font-size: 40px;
+                }
+              }
+
+              span {
+                @media #{$phone} {
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+
+        &_btn {
+          @media #{$phone} {
+            display: none;
+          }
+        }
+      }
+
       &__wrap {
         background: none;
         backdrop-filter: none;
         padding: 5px 20px;
+
+        @media #{$phone} {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
       }
     }
   }
 
   &__middle {
     padding: 35px 0 23px 0;
+
+    @media #{$phone} {
+      padding: 10px 0 10px 0;
+      background: rgba(220, 227, 233, 0.80);
+    }
   }
 
   &__bottom {
@@ -25,6 +72,10 @@
 
   &__col {
     padding: 0 10px;
+
+    @media #{$phone} {
+      padding: 2 10px;
+    }
   }
 
   &__row {
@@ -36,6 +87,12 @@
       color: #3C4E5B;
       font-size: 14px;
 
+      @media #{$phone} {
+        display: grid;
+        grid-template-columns: auto;
+        font-size: 12px;
+      }
+
       a {
         color: #8CA9D1;
         text-decoration: none;
@@ -45,10 +102,34 @@
           color: #ffffff;
         }
       }
+
+      .footer__col_dev {
+        display: none;
+
+        @media #{$phone} {
+         display: block;
+          grid-column: 2/3;
+          grid-row: 1/4;
+
+          .developer {
+
+            img {
+              max-width: 95px;
+            }
+          }
+        }
+      }
     }
 
     &_text {
       justify-content: space-between;
+
+      .footer__col_dev {
+
+        @media #{$phone} {
+          display: none;
+        }
+      }
     }
   }
 
@@ -59,13 +140,25 @@
       font-size: 24px;
       line-height: 100%;
       font-weight: 500;
+
+      @media #{$phone} {
+        font-size: 20px;
+      }
     }
 
     &__text {
       margin-bottom: 20px;
 
+      @media #{$phone} {
+        margin-bottom: 10px;
+      }
+
       span {
         font-size: 32px;
+
+        @media #{$phone} {
+          font-size: 20px;
+        }
 
         &.c-red {
           color: $c-red;

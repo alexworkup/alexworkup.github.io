@@ -1,3 +1,8 @@
 .open-order {
   padding: 330px 0 180px 0;
+
+  @media #{$phone} {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
 }

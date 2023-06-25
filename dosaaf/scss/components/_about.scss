@@ -2,7 +2,16 @@
   height: 446px;
   background-image: url("../images/about-bg.png");
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 35px;
+
+  @media #{$phone} {
+    padding: 0 15px;
+    background-size: calc(100% + 500px);
+    background-position: top;
+    height: auto;
+  }
 
   &__wrap {
     border-radius: 131.5px 0 0 131.5px;
@@ -14,6 +23,22 @@
     max-width: calc(50% + 190px);
     margin-left: auto;
     margin-top: 54px;
+
+    @media #{$laptop} {
+      padding-right: 20px;
+      max-width: 80%;
+    }
+
+    @media #{$laptop-s} {
+      max-width: 90%;
+    }
+
+    @media #{$phone} {
+      flex-direction: column;
+      border-radius: 50px;
+      max-width: 100%;
+      padding: 25px;
+    }
   }
 
   &__text {
@@ -21,12 +46,33 @@
     font-size: 18px;
     line-height: 125%;
 
+    @media #{$phone} {
+      font-size: 14px;
+    }
+
     span {
       font-size: 20px;
+
+      @media #{$phone} {
+        font-size: 16px;
+      }
     }
   }
 
   &__icon {
     margin-right: 30px;
+
+    @media #{$phone} {
+      margin-right: 0;
+      margin-bottom: 10px;
+      margin-top: -70px;
+      width: 115px;
+      height: 115px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 }
