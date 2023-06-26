@@ -15,6 +15,15 @@ $( document ).ready(function() {
         });
     });
 
+    $(document).on('click', '.close-fancy', function() {
+        Fancybox.close();
+        return false;
+    });
+
+    $(document).on('click', '.question-item', function (e) {
+        $(this).find('.question-item__body').slideToggle();
+        $(this).toggleClass('active');
+    });
 
     if(!is_mobile) {
 

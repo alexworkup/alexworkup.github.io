@@ -1,0 +1,48 @@
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 120%;
+  color: #697C8B;
+
+  @media #{$phone} {
+    font-size: 12px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      position: relative;
+      padding-right: 15px;
+      margin-right: 5px;
+
+      &:last-child {
+        padding-right: 0;
+        margin-right: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+
+      &:after {
+        content: '>';
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      a {
+        color: #697C8B;
+        text-decoration: none;
+        transition: .1s color linear;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
