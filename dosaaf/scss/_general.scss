@@ -153,3 +153,49 @@ a:not([class]) {
     }
   }
 }
+
+.special-version {
+  border-radius: 20px 0 0 20px;
+  background: rgba(37, 61, 75, 0.70);
+  backdrop-filter: blur(2px);
+  width: 68px;
+  height: 84px;
+  padding-left: 14px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: -11px;
+  top: 140px;
+  transition: .1s right linear;
+
+  @media #{$phone} {
+    width: 56px;
+    height: 50px;
+    padding-left: 10px;
+  }
+
+  &:hover {
+    right: 0;
+  }
+}
+
+.js-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DCE3E9;
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  position: fixed;
+  top: 80%;
+  right: 13px;
+  border: 2px solid #839099;
+  cursor: pointer;
+
+  @media #{$phone} {
+    width: 45px;
+    height: 45px;
+    right: 5px;
+  }
+}

@@ -1,0 +1,167 @@
+.contacts {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -13px;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media #{$phone} {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__col {
+    padding: 5px 13px;
+
+    @media #{$phone} {
+      padding: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_social {
+      margin-left: auto;
+
+      @media #{$phone} {
+        margin-left: inherit;
+        order: 3;
+      }
+    }
+
+    &_btn {
+
+      .btn {
+        font-size: 16px;
+
+        &:hover {
+
+          svg {
+
+            path {
+              fill: #2476FD;
+            }
+          }
+        }
+      }
+
+      @media #{$phone} {
+        order: 5;
+      }
+    }
+
+    &_address {
+
+      @media #{$phone} {
+        order: 1;
+      }
+    }
+
+    &_phone {
+
+      @media #{$phone} {
+        order: 2;
+      }
+    }
+  }
+
+  .contacts-address {
+
+    &__text {
+      color: $c-dark-blue;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 120%;
+
+      @media #{$phone} {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    &__title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      color: #8C99AD;
+      margin-bottom: 5px;
+      display: none;
+
+      @media #{$phone} {
+        display: block;
+      }
+    }
+  }
+
+  .contacts-social {
+
+    &__title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      color: #8C99AD;
+      margin-bottom: 5px;
+      display: none;
+
+      @media #{$phone} {
+        display: block;
+      }
+    }
+  }
+
+  .contacts-phones {
+
+    &__title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      color: #8C99AD;
+      margin-bottom: 5px;
+      display: none;
+
+      @media #{$phone} {
+        display: block;
+      }
+    }
+
+    &__list {
+
+      a {
+        font-weight: 700;
+        font-size: 24px;
+        text-decoration: none;
+
+        @media #{$phone} {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        span {
+          color: $c-light-blue;
+        }
+      }
+    }
+  }
+
+  &__map {
+
+    .map {
+      width: 100%;
+      height: 343px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 4px solid rgba(255, 255, 255, 0.50);
+      box-shadow: 0 4px 25px 0 rgba(51, 79, 101, 0.15);
+
+      @media #{$phone} {
+        height: 423px;
+      }
+    }
+  }
+}
