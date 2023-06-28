@@ -340,6 +340,7 @@ a:not([class]):hover {
   position: fixed;
   right: -11px;
   top: 140px;
+  z-index: 100;
   transition: 0.1s right linear;
 }
 @media screen and (max-width: 767px) {
@@ -364,6 +365,7 @@ a:not([class]):hover {
   position: fixed;
   top: 80%;
   right: 13px;
+  z-index: 100;
   border: 2px solid #839099;
   cursor: pointer;
 }
