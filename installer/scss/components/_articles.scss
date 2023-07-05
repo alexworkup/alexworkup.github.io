@@ -1,15 +1,42 @@
 .articles {
-  margin-bottom: 70px;
+  margin-bottom: 55px;
 
   &__head {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+
+    @media #{$phone} {
+      margin-bottom: 30px;
+    }
   }
 
   &__content {
     padding-left: 60px;
+
+    @media #{$tablet-mini} {
+      padding-left: 0;
+    }
+
+    .articles__more {
+      margin-top: 20px;
+      display: none;
+      justify-content: center;
+
+      @media #{$phone} {
+        display: flex;
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  &__more {
+
+    @media #{$phone} {
+      display: none;
+    }
   }
 }
 
@@ -20,6 +47,18 @@
 
   &__item {
     width: calc(100% / 4);
-    padding: 0 15px;
+    padding: 15px;
+
+    @media screen and (max-width: 1280px) {
+      width: calc(100% / 3);
+    }
+    
+    @media #{$laptop_s} {
+      width: calc(100% / 2);
+    }
+
+    @media #{$tablet-mini} {
+      width: 100%;
+    }
   }
 }

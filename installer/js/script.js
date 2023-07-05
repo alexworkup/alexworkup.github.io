@@ -175,6 +175,11 @@ $( document ).ready(function() {
         waitForTilesLoad(layer).then(function() {
             // Скрываем индикатор загрузки после полной загрузки карты
             //spinner.removeClass('is-active');
+
+            if(is_mobile) {
+                myMapTemp.behaviors.disable('drag');
+            }
+
         });
     }
 

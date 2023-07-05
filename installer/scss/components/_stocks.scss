@@ -1,12 +1,24 @@
 .stocks {
   margin-bottom: 90px;
 
+  @media #{$phone} {
+    margin-bottom: 40px;
+  }
+
   &__title {
     margin-bottom: 50px;
+
+    @media #{$phone} {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     margin-bottom: 53px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
   }
 
   &__more {
@@ -20,7 +32,23 @@
 
     &__item {
       width: calc(100% / 4);
-      padding: 0 15px;
+      padding: 15px;
+
+      @media screen and (max-width: 1280px) {
+        width: calc(100% / 3);
+      }
+
+      @media #{$laptop_s} {
+        width: calc(100% / 2);
+      }
+
+      @media #{$tablet-mini} {
+        width: 100%;
+      }
+
+      @media #{$phone} {
+        padding: 5px 0 5px 0;
+      }
     }
   }
 }

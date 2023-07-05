@@ -46,6 +46,10 @@
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjc1IDYuNUwxLjI1IDYuNSIgc3Ryb2tlPSIjNDU1QTY0IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik02LjUgMS4yNUw2LjUgMTEuNzUiIHN0cm9rZT0iIzQ1NUE2NCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K");
     background-position: calc(50% + 1px) calc(50% + 1px);
     background-repeat: no-repeat;
+
+    @media #{$phone} {
+      margin-right: 12px;
+    }
   }
 
   &__title {
@@ -53,6 +57,11 @@
     font-size: 18px;
     line-height: 22px;
     color: #455A64;
+
+    @media #{$phone} {
+      font-size: 14px;
+      line-height: 120%;
+    }
   }
 
   &__body {
@@ -63,5 +72,11 @@
     line-height: 20px;
     color: #455A64;
     display: none;
+
+    @media #{$phone} {
+      padding: 20px;
+      line-height: 120%;
+      font-size: 14px;
+    }
   }
 }

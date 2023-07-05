@@ -1,5 +1,9 @@
 .footer {
 
+  @media #{$tablet-mini} {
+    display: none;
+  }
+
   &__row {
     display: flex;
     margin: 0 -20px;
@@ -21,6 +25,7 @@
         font-size: 18px;
 
         &__text {
+          white-space: nowrap;
 
           span {
             color: #455A64;
@@ -56,14 +61,43 @@
 
         .phone {
 
+          @media #{$laptop_s} {
+            font-size: 25px;
+            line-height: 100%;
+          }
+
           &__link {
               color: #6AA228;
           }
         }
       }
 
+      &__col_order-phone {
+
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+
+      &__col_logo {
+
+        .logo {
+
+          svg {
+
+            @media #{$laptop_s} {
+              max-width: 124px;
+            }
+          }
+        }
+      }
+
       &__col_nav {
         padding: 0 8%;
+
+        @media #{$laptop_s} {
+          padding: 0 4%;
+        }
       }
 
       .main-nav {
@@ -88,16 +122,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media #{$laptop_s} {
+      background-position: center;
+    }
+
     .footer-nav {
 
       &__row {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -40px;
+        margin: -20px -40px;
       }
 
       &__col {
-        padding: 0 40px;
+        padding: 20px 40px;
         width: auto;
       }
 

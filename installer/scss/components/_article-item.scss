@@ -40,6 +40,11 @@
     opacity: 0;
     left: 0;
     transition: .2s all linear;
+
+    @media #{$phone} {
+      opacity: 1;
+      bottom: 0;
+    }
   }
 
   &__title,

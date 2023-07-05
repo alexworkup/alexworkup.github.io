@@ -7,6 +7,10 @@
   background-size: cover;
   margin-bottom: 70px;
 
+  @media #{$phone} {
+    background-position: 100%;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 37px;

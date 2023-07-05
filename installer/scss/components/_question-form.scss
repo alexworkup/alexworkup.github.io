@@ -6,6 +6,10 @@
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
+
+    @media #{$phone} {
+      font-size: 35px;
+    }
   }
 
   &__subtitle {
@@ -15,6 +19,12 @@
     color: #455A64;
     text-transform: uppercase;
     margin-bottom: 42px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 120%;
+    }
 
     span {
       color: #6BA229;
@@ -34,9 +44,18 @@
   &__phone {
     margin-bottom: 42px;
 
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
+
     .phone {
       font-size: 40px;
       line-height: 48px;
+
+      @media #{$phone} {
+        font-size: 35px;
+        line-height: 120%;
+      }
 
       &__link {
         color: #6BA229;
