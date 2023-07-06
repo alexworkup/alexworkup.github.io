@@ -51,11 +51,14 @@
     }
 
     .main-menu {
-      padding: 10px 0;
-      backdrop-filter: none;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
+
+      &__wrap {
+        padding: 10px 0;
+        backdrop-filter: none;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
 
       &__col_phone {
 

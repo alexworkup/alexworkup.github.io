@@ -1,8 +1,17 @@
 .popup-form {
   max-width: 460px;
-  background: rgba(249, 250, 253, 0.90);
   border-radius: 20px;
   overflow: hidden;
+
+  &.fancybox__content {
+    padding: 0;
+    background: none;
+
+    a,
+    input {
+      outline: none!important;
+    }
+  }
 
   &__header {
     background: rgba(37, 47, 52, 0.90);
@@ -24,13 +33,23 @@
     padding-bottom: 5px;
     padding-left: 25px;
     margin-bottom: 30px;
+
+    @media #{$phone} {
+      font-size: 20px;
+    }
   }
 
   &__content {
     padding: 25px;
+    background: rgba(249, 250, 253, 0.90);
   }
 
   &__form {
+    margin-bottom: 35px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
 
     input {
       appearance: none;
@@ -55,6 +74,7 @@
     margin-bottom: 17px;
 
     &_btn {
+      margin-bottom: 10px;
 
       .btn {
         width: 100%;
@@ -69,6 +89,7 @@
       text-align: center;
       font-size: 12px;
       color: #A6B7BE;
+      line-height: 130%;
 
       a {
         text-decoration: none;
@@ -78,6 +99,46 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &__desc {
+    text-align: center;
+    color: #5C7580;
+    font-size: 20px;
+    line-height: 100%;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: #C4DAA9;
+      width: 150px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__phone {
+    text-align: center;
+
+    .phone {
+
+      &__link {
+        color: #455A64;
+
+        span {
+          color: #82929A;
+        }
+      }
     }
   }
 }

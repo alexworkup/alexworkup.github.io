@@ -11,6 +11,9 @@
     <script src="js/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/inputmask/jquery.inputmask.js"></script>
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
+    <script src="js/fancyapp/fancybox.umd.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -140,7 +143,7 @@
             </div>
             <div class="header__row header__row_main">
                 <div class="main-menu">
-                    <div class="main-menu__wrap">
+                    <div class="main-menu__wrap container">
                         <div class="main-menu__row">
                             <div class="main-menu__col main-menu__col_toggle">
                                 <div class="top-toggle">
@@ -182,13 +185,6 @@
                                     <div class="main-nav__list">
                                         <div class="main-nav__item">
                                             <a href="#" class="main-nav__link">Товары</a>
-                                            <!--
-                                            <div class="nav-submenu">
-                                                <div class="nav-submenu__row">
-                                                    <div class="nav-submenu__col"></div>
-                                                </div>
-                                            </div>
-                                            -->
                                         </div>
                                         <div class="main-nav__item">
                                             <a href="#" class="main-nav__link">Услуги</a>
@@ -211,9 +207,87 @@
                                 </div>
                             </div>
                             <div class="main-menu__col main-menu__col_order-phone">
-                                <a href="#" class="btn">
+                                <a href="#" data-fancybox="" data-src="#order-phone" class="btn">
                                     <span class="btn__text">Заказать звонок</span>
                                 </a>
+                            </div>
+                        </div>
+                        <div class="main-menu__submenu">
+                            <div class="submenu">
+                                <div class="submenu__wrap">
+                                    <ul class="submenu__list">
+                                        <li class="submenu__item">
+                                            <a class="submenu__link" href="#"><span>Отопление</span></a>
+                                            <ul class="extra-menu">
+                                                <li class="extra-menu__item">
+                                                    <a class="extra-menu__link" href="">Радиаторы и комплектующие</a>
+                                                    <ul class="extra-menu">
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Коллектора</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Смесительные узлы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапана</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапаны RTL</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Термостатические клапаны</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Сервоприводы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Крепеж трубы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Арматурная сетка</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Пенощит и подложка</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Шкафы коллекторные</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Бойлеры</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Водонагреватели</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Внутрипольные конвекторы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item active">
+                                            <a class="submenu__link" href="#"><span>Водоснабжение</span></a>
+                                            <ul class="extra-menu">
+                                                <li class="extra-menu__item">
+                                                    <a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a>
+                                                    <ul class="extra-menu">
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Коллектора</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Смесительные узлы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапана</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапаны RTL</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Термостатические клапаны</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Сервоприводы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Крепеж трубы</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Арматурная сетка</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Пенощит и подложка</a></li>
+                                                        <li class="extra-menu__item"><a href="" class="extra-menu__link">Шкафы коллекторные</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Комплектующие для теплого пола</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Запорная и регулировочная арматура</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Насосы отопления</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Котлы отопления</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Радиаторы и комплектующие</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Бойлеры</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Водонагреватели</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a class="submenu__link" href="#"><span>Канализация</span></a>
+                                            <ul class="extra-menu">
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Комплектующие для теплого пола</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Запорная и регулировочная арматура</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Насосы отопления</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Котлы отопления</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Радиаторы и комплектующие</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a class="submenu__link" href="#"><span>Метизы</span></a>
+                                            <ul class="extra-menu">
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Комплектующие для теплого пола</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Запорная и регулировочная арматура</a></li>
+                                                <li class="extra-menu__item"><a class="extra-menu__link" href="">Насосы отопления</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1864,7 +1938,7 @@
                                 </div>
                             </div>
                             <div class="main-menu__col main-menu__col_order-phone">
-                                <a href="#" class="btn">
+                                <a href="#" data-fancybox="" data-src="#order-phone" class="btn">
                                     <span class="btn__text">Заказать звонок</span>
                                 </a>
                             </div>
@@ -2115,7 +2189,7 @@
                 </svg>
             </span>
         </a>
-        <a href="#" class="side-panel__item side-panel__item_phone">
+        <a href="#" data-fancybox="" data-src="#order-phone"  class="side-panel__item side-panel__item_phone">
             <span>
                 <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_170_1935)">
@@ -2131,7 +2205,7 @@
             </span>
         </a>
     </div>
-    <div id="order-phone" class="popup-form">
+    <div style="display: none;" id="order-phone" class="popup-form">
         <div class="popup-form__wrap">
             <div class="popup-form__header">
                 <div class="social">
@@ -2153,7 +2227,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="popup-form__close">
+                <div class="popup-form__close close-fancy">
                     <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.5625 18.5753L12.4125 12.4253" stroke="#91A2AB" stroke-width="2" stroke-linecap="round"/>
                         <path d="M18.5625 12.4254L12.4125 18.5754" stroke="#91A2AB" stroke-width="2" stroke-linecap="round"/>
@@ -2182,6 +2256,14 @@
                         <a href="#">Политики конфиденциальности</a>
                     </div>
                 </form>
+                <div class="popup-form__desc">
+                    Вы можете сэкономить время, <br>позвонив нам прямо сейчас:
+                </div>
+                <div class="popup-form__phone">
+                    <div class="phone">
+                        <a href="tel:+73517767568" class="phone__link"><span>+7(351)</span> 776-75-68</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

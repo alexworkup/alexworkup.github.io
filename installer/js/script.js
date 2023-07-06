@@ -20,6 +20,55 @@ $( document ).ready(function() {
         });
     }
 
+    $('input[type=tel]').inputmask({
+        mask: '+7 (*{1}99) 999-99-99',
+        placeholder: "+7 (___) ___-__-__",
+        androidHack: "rtfm",
+        definitions: {
+            '*': {
+                validator: "[0-6,9]"
+            }
+        }
+    });
+
+    $(document).on('click', '.close-fancy', function() {
+        Fancybox.close();
+        return false;
+    });
+
+    if(!is_mobile) {
+
+        var mainMenu = document.querySelector('.header .main-menu');
+
+        window.addEventListener('scroll', function() {
+            var mainMenuRect = mainMenu.getBoundingClientRect();
+            var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollPosition >= mainMenuRect.top) {
+                mainMenu.classList.add('fixed');
+            } else {
+                mainMenu.classList.remove('fixed');
+            }
+        });
+    }
+
+    var submenu = document.querySelector('.submenu');
+
+    if (submenu) {
+        var ulList = submenu.querySelectorAll('ul');
+        var maxHeight = 0;
+
+        ulList.forEach(function(ul) {
+            var ulHeight = ul.offsetHeight;
+            if (ulHeight > maxHeight) {
+                maxHeight = ulHeight;
+            }
+        });
+
+        submenu.style.minHeight = maxHeight + 'px';
+    }
+
+
     const mainSlider = new Swiper('.main-slider.swiper', {
         effect: 'fade',
         navigation: {
