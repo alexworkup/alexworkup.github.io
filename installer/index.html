@@ -184,7 +184,7 @@
                                 <nav class="main-nav">
                                     <div class="main-nav__list">
                                         <div class="main-nav__item">
-                                            <a href="#" class="main-nav__link">Товары</a>
+                                            <a href="#" data-submenu="submenu-products" class="main-nav__link">Товары</a>
                                         </div>
                                         <div class="main-nav__item">
                                             <a href="#" class="main-nav__link">Услуги</a>
@@ -213,15 +213,15 @@
                             </div>
                         </div>
                         <div class="main-menu__submenu">
-                            <div class="submenu">
+                            <div id="submenu-products" class="submenu">
                                 <div class="submenu__wrap">
                                     <ul class="submenu__list">
-                                        <li class="submenu__item">
+                                        <li class="submenu__item if-sub">
                                             <a class="submenu__link" href="#"><span>Отопление</span></a>
                                             <ul class="extra-menu">
-                                                <li class="extra-menu__item">
+                                                <li class="extra-menu__item if-sub">
                                                     <a class="extra-menu__link" href="">Радиаторы и комплектующие</a>
-                                                    <ul class="extra-menu">
+                                                    <ul class="extra-menu last-extra-menu">
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Коллектора</a></li>
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Смесительные узлы</a></li>
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапана</a></li>
@@ -239,12 +239,12 @@
                                                 <li class="extra-menu__item"><a class="extra-menu__link" href="">Внутрипольные конвекторы</a></li>
                                             </ul>
                                         </li>
-                                        <li class="submenu__item active">
+                                        <li class="submenu__item if-sub">
                                             <a class="submenu__link" href="#"><span>Водоснабжение</span></a>
                                             <ul class="extra-menu">
-                                                <li class="extra-menu__item">
+                                                <li class="extra-menu__item if-sub">
                                                     <a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a>
-                                                    <ul class="extra-menu">
+                                                    <ul class="extra-menu last-extra-menu">
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Коллектора</a></li>
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Смесительные узлы</a></li>
                                                         <li class="extra-menu__item"><a href="" class="extra-menu__link">Клапана</a></li>
@@ -266,7 +266,7 @@
                                                 <li class="extra-menu__item"><a class="extra-menu__link" href="">Водонагреватели</a></li>
                                             </ul>
                                         </li>
-                                        <li class="submenu__item">
+                                        <li class="submenu__item if-sub">
                                             <a class="submenu__link" href="#"><span>Канализация</span></a>
                                             <ul class="extra-menu">
                                                 <li class="extra-menu__item"><a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a></li>
@@ -277,7 +277,7 @@
                                                 <li class="extra-menu__item"><a class="extra-menu__link" href="">Радиаторы и комплектующие</a></li>
                                             </ul>
                                         </li>
-                                        <li class="submenu__item">
+                                        <li class="submenu__item if-sub">
                                             <a class="submenu__link" href="#"><span>Метизы</span></a>
                                             <ul class="extra-menu">
                                                 <li class="extra-menu__item"><a class="extra-menu__link" href="">Трубы и фитинги для отопления и теплого пола</a></li>
@@ -1909,13 +1909,6 @@
                                     <div class="main-nav__list">
                                         <div class="main-nav__item">
                                             <a href="#" class="main-nav__link">Товары</a>
-                                            <!--
-                                            <div class="nav-submenu">
-                                                <div class="nav-submenu__row">
-                                                    <div class="nav-submenu__col"></div>
-                                                </div>
-                                            </div>
-                                            -->
                                         </div>
                                         <div class="main-nav__item">
                                             <a href="#" class="main-nav__link">Услуги</a>

@@ -2,7 +2,7 @@ var is_mobile = false;
 
 $( document ).ready(function() {
 
-    if ($(window).width() <= 500) {
+    if ($(window).width() <= 767) {
         is_mobile = true;
     }
 

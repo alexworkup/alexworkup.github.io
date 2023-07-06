@@ -79,11 +79,13 @@
   position: fixed;
   top: 54px;
   left: 0;
+  padding: 0 20px;
 }
 @media screen and (max-width: 767px) {
   .header__row .main-menu {
     top: 0;
     position: fixed;
+    padding: 0;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -614,11 +616,16 @@ body {
   padding: 10px 14px 10px 48px;
   background: rgba(69, 90, 100, 0.7);
 }
+@media screen and (max-width: 1024px) {
+  .main-menu.fixed .main-menu__wrap {
+    padding: 20px;
+  }
+}
 .main-menu.fixed .main-menu__col_order-phone .btn {
   height: 33px;
   line-height: 33px;
 }
-.main-menu.fixed .submenu {
+.main-menu.fixed .submenu.active {
   margin-top: 8px;
 }
 .main-menu.fixed .main-nav__link:before {
@@ -708,6 +715,7 @@ body {
   left: 0;
   transform: scale(0, -1);
   transition: 0.2s all ease-in;
+  z-index: 10;
 }
 .main-nav__link:hover, .main-nav__link.selected {
   color: #8DC44A;
@@ -2418,17 +2426,17 @@ body {
   margin: 0 -15px;
 }
 .articles-list__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 15px;
 }
 @media screen and (max-width: 1280px) {
   .articles-list__item {
-    width: 33.3333333333%;
+    width: calc(100% / 3);
   }
 }
 @media screen and (max-width: 1024px) {
   .articles-list__item {
-    width: 50%;
+    width: calc(100% / 2);
   }
 }
 @media screen and (max-width: 767px) {
@@ -2789,17 +2797,17 @@ body {
   flex-wrap: wrap;
 }
 .stocks .stocks-list__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 15px;
 }
 @media screen and (max-width: 1280px) {
   .stocks .stocks-list__item {
-    width: 33.3333333333%;
+    width: calc(100% / 3);
   }
 }
 @media screen and (max-width: 1024px) {
   .stocks .stocks-list__item {
-    width: 50%;
+    width: calc(100% / 2);
   }
 }
 @media screen and (max-width: 767px) {
@@ -2823,7 +2831,7 @@ body {
   opacity: 0.7;
 }
 .stock-item__wrap {
-  background-color: rgb(13, 33, 43);
+  background-color: #0d212b;
   height: 100%;
   padding: 20px;
   display: flex;
@@ -2957,7 +2965,7 @@ body {
   }
 }
 .pop-goods__item {
-  width: 25%;
+  width: calc(100% / 4);
   padding: 10px 15px;
 }
 @media screen and (max-width: 1680px) {
@@ -2967,12 +2975,12 @@ body {
 }
 @media screen and (max-width: 1440px) {
   .pop-goods__item {
-    width: 33.3333333333%;
+    width: calc(100% / 3);
   }
 }
 @media screen and (max-width: 1024px) {
   .pop-goods__item {
-    width: 50%;
+    width: calc(100% / 2);
   }
 }
 @media screen and (max-width: 500px) {
@@ -3496,8 +3504,29 @@ body {
 
 .submenu {
   font-size: 16px;
-  margin-top: 28px;
+  margin-top: 0;
+  position: relative;
   transition: 0.2s opacity linear;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+.submenu.active {
+  margin-top: 28px;
+  visibility: visible;
+  opacity: 1;
+  min-height: inherit;
+  height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .submenu {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .submenu {
+    display: none;
+  }
 }
 .submenu:hover {
   opacity: 1;
@@ -3508,8 +3537,18 @@ body {
   padding-top: 40px;
   min-height: inherit;
 }
+@media screen and (max-width: 1024px) {
+  .submenu__wrap {
+    padding-top: 20px;
+  }
+}
 .submenu__item {
   padding-right: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .submenu__item {
+    padding-right: 20px;
+  }
 }
 .submenu__item:last-child {
   margin-bottom: 0;
@@ -3526,12 +3565,12 @@ body {
 .submenu__item:hover .submenu__link:before, .submenu__item.active .submenu__link:before {
   opacity: 1;
 }
-.submenu__item:hover .submenu__link:after, .submenu__item.active .submenu__link:after {
-  opacity: 1;
-}
 .submenu__item:hover .submenu__link + .extra-menu, .submenu__item.active .submenu__link + .extra-menu {
   opacity: 1;
   visibility: visible;
+}
+.submenu__item.if-sub:hover .submenu__link:after, .submenu__item.if-sub.active .submenu__link:after {
+  opacity: 1;
 }
 .submenu__list {
   list-style: none;
@@ -3585,15 +3624,22 @@ body {
   z-index: 10;
   transition: 0.1s all linear;
 }
+@media screen and (max-width: 1024px) {
+  .submenu__link:after {
+    right: -24px;
+  }
+}
 .submenu .extra-menu {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 40px;
+  padding: 0 40px 0 40px;
   position: absolute;
   left: 100%;
   top: 0;
-  width: 100vw;
-  max-width: 400px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 425px;
   min-height: 100%;
   opacity: 0;
   visibility: hidden;
@@ -3601,19 +3647,57 @@ body {
   font-weight: 400;
   transition: 0.1s all linear;
 }
+@media screen and (max-width: 1024px) {
+  .submenu .extra-menu {
+    padding: 0 20px 0 20px;
+    max-width: 345px;
+  }
+}
 .submenu .extra-menu:hover {
   opacity: 1;
   visibility: visible;
 }
-.submenu .extra-menu__item:hover .extra-menu__link:hover, .submenu .extra-menu__item:hover .extra-menu__link.active {
-  color: #8DC44A;
-}
 .submenu .extra-menu__link {
   text-decoration: none;
   color: #ffffff;
-  padding: 6px 0;
+  padding: 5px 0;
   display: block;
   transition: 0.1s all linear;
+  position: relative;
+}
+.submenu .extra-menu__link:before {
+  content: "";
+  position: absolute;
+  background: #6BA229;
+  width: 7px;
+  height: 24px;
+  right: -44px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 10;
+  transition: 0.1s all linear;
+}
+@media screen and (max-width: 1024px) {
+  .submenu .extra-menu__link:before {
+    right: -24px;
+  }
+}
+.submenu .extra-menu__item:hover:before, .submenu .extra-menu__item.active:before {
+  opacity: 1;
+}
+.submenu .extra-menu__item:hover > .extra-menu__link, .submenu .extra-menu__item.active > .extra-menu__link {
+  color: #8DC44A;
+}
+.submenu .extra-menu__item:hover > .extra-menu__link + .extra-menu, .submenu .extra-menu__item.active > .extra-menu__link + .extra-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.submenu .extra-menu__item.if-sub:hover > .extra-menu__link:before, .submenu .extra-menu__item.if-sub.active > .extra-menu__link:before {
+  opacity: 1;
+}
+.submenu .extra-menu.last-extra-menu .extra-menu__item:hover > .extra-menu__link:before, .submenu .extra-menu.last-extra-menu .extra-menu__item.active > .extra-menu__link:before {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

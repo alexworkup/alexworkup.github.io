@@ -12,6 +12,10 @@
       &__wrap {
         padding: 10px 14px 10px 48px;
         background: rgba(69, 90, 100, 0.70);
+        
+        @media #{$laptop_s} {
+          padding: 20px;
+        }
       }
 
       &__col {
@@ -27,7 +31,10 @@
     }
 
     .submenu {
-      margin-top: 8px;
+
+      &.active {
+        margin-top: 8px;
+      }
     }
 
     .main-nav {
