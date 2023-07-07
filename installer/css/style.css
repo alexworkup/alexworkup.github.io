@@ -211,6 +211,10 @@
   }
 }
 
+.footer {
+  position: relative;
+  z-index: 1;
+}
 @media screen and (max-width: 767px) {
   .footer {
     display: none;
@@ -396,8 +400,10 @@ body {
 html,
 body {
   background-color: #F9FAFD;
+  height: 100vh;
 }
 
+.h1,
 .h2 {
   font-weight: 400;
   font-size: 35px;
@@ -408,17 +414,21 @@ body {
   padding-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
-  .h2 {
+  .h1,
+.h2 {
     font-size: 25px;
     line-height: 110%;
   }
 }
-.h2:before, .h2:after {
+.h1:before, .h1:after,
+.h2:before,
+.h2:after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
 }
+.h1:before,
 .h2:before {
   width: 5px;
   height: 44px;
@@ -426,17 +436,20 @@ body {
   bottom: -8px;
   z-index: 1;
 }
+.h1:after,
 .h2:after {
   height: 1px;
   width: 295px;
   background-color: #E2EBEE;
   left: -11px;
 }
+.h1_center,
 .h2_center {
   display: inline-block;
   padding-left: 0;
   padding-bottom: 12px;
 }
+.h1_center:before,
 .h2_center:before {
   width: 44px;
   height: 5px;
@@ -444,6 +457,7 @@ body {
   transform: translateX(-50%);
   bottom: -2px;
 }
+.h1_center:after,
 .h2_center:after {
   left: 50%;
   transform: translateX(-50%);
@@ -459,6 +473,20 @@ body {
   .container {
     padding: 0 15px;
   }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main {
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 5;
 }
 
 .pin-top {
@@ -3697,6 +3725,31 @@ body {
 }
 .submenu .extra-menu.last-extra-menu .extra-menu__item:hover > .extra-menu__link:before, .submenu .extra-menu.last-extra-menu .extra-menu__item.active > .extra-menu__link:before {
   opacity: 0;
+}
+
+.header-page {
+  background-color: #354953;
+  position: relative;
+}
+.header-page__wrap {
+  padding-top: 100px;
+}
+.header-page__menu, .header-page__wrap {
+  position: relative;
+  z-index: 1;
+}
+.header-page__pics {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 600px;
+  overflow: hidden;
+}
+.header-page__pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

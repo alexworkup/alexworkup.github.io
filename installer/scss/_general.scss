@@ -18,9 +18,11 @@ body {
 html,
 body {
   background-color: #F9FAFD;
+  height: 100vh;
 }
 
 
+.h1,
 .h2 {
   font-weight: 400;
   font-size: 35px;
@@ -87,4 +89,18 @@ body {
   @media #{$phone} {
     padding: 0 15px;
   }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.main {
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 5;
 }
