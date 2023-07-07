@@ -8,7 +8,6 @@
   height: 0;
 
   &.active {
-    margin-top: 28px;
     visibility: visible;
     opacity: 1;
     min-height: inherit;
@@ -30,7 +29,8 @@
 
   &__wrap {
     border-top: 1px solid rgba(74, 82, 86, 0.30);
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     min-height: inherit;
 
     @media #{$laptop_s} {

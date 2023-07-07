@@ -53,21 +53,74 @@ $( document ).ready(function() {
     }
 
     var submenu = document.querySelector('.submenu');
+    var mainNavLinks = document.querySelectorAll('.main-nav__link[data-submenu]');
 
-    if (submenu) {
-        var ulList = submenu.querySelectorAll('ul');
-        var maxHeight = 0;
+    if(mainNavLinks) {
 
-        ulList.forEach(function(ul) {
-            var ulHeight = ul.offsetHeight;
-            if (ulHeight > maxHeight) {
-                maxHeight = ulHeight;
-            }
+        mainNavLinks.forEach(function (link) {
+            var submenuId = link.getAttribute('data-submenu');
+            var submenuElement = document.getElementById(submenuId);
+
+            link.addEventListener('mouseover', function (event) {
+                submenuElement.classList.add('active');
+                link.classList.add('active');
+                getHeight(this, event.type);
+            });
+
+            link.addEventListener('mouseout', function (event) {
+                submenuElement.classList.remove('active');
+                link.classList.remove('active');
+                getHeight(this, event.type);
+            });
+
         });
-
-        submenu.style.minHeight = maxHeight + 'px';
     }
 
+    submenu.addEventListener('mouseover', function (event) {
+        this.classList.add('active');
+        document.querySelector('.main-nav__link[data-submenu="' + this.getAttribute('id') + '"]').classList.add('selected');
+        getHeight(this, event.type);
+    });
+
+    submenu.addEventListener('mouseout', function (event) {
+        this.classList.remove('active');
+        document.querySelector('.main-nav__link[data-submenu="' + this.getAttribute('id') + '"]').classList.remove('selected');
+        getHeight(this, event.type);
+    });
+
+    function getHeight(element, event) {
+        var submenuElement;
+
+        if(element.getAttribute('data-submenu')) {
+            submenuElement = document.getElementById(element.getAttribute('data-submenu'));
+        }
+
+        if(element.getAttribute('id')) {
+            submenuElement = document.getElementById(element.getAttribute('id'));
+        }
+
+        if(submenuElement) {
+            var ulList = submenuElement.querySelectorAll('ul');
+            var maxHeight = 0;
+
+            ulList.forEach(function(ul) {
+
+                var ulHeight = ul.offsetHeight;
+                if (ulHeight > maxHeight) {
+                    maxHeight = ulHeight;
+                }
+            });
+
+            if(event === 'mouseover') {
+                submenuElement.style.minHeight = maxHeight + 'px';
+            }
+
+            if(event === 'mouseout') {
+                submenuElement.style.minHeight = 0 + 'px';
+            }
+        }
+
+    }
 
     const mainSlider = new Swiper('.main-slider.swiper', {
         effect: 'fade',
