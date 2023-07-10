@@ -6,8 +6,13 @@ body {
   padding: 0;
   scroll-behavior: smooth;
 
-  @media #{$tablet-mini} {
-    padding-top: 54px;
+  &.index {
+
+    .main {
+      @media #{$tablet-mini} {
+        padding-top: 54px;
+      }
+    }
   }
 }
 
@@ -103,4 +108,42 @@ body {
   flex: 1 1 auto;
   position: relative;
   z-index: 5;
+
+  &__page {
+
+    &.container {
+
+      @media #{$phone} {
+        padding: 0;
+      }
+    }
+
+    .services {
+      padding-top: 0;
+      margin-top: -45px;
+    }
+  }
+
+  &__inner {
+    padding: 45px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(249, 250, 253, 0.60) 0%, #F9FAFD 90.63%);
+
+    @media screen and (max-width: 980px) {
+      padding: 20px;
+    }
+
+    @media #{$phone} {
+      border-radius: 0;
+    }
+  }
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }

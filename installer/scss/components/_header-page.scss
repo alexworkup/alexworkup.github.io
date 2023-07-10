@@ -9,7 +9,16 @@
   &__menu,
   &__wrap {
     position: relative;
+  }
+
+  &__breadcrumbs {
+    position: relative;
     z-index: 1;
+    margin-bottom: 40px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
   }
 
   &__pics {
@@ -24,6 +33,16 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    .h1 {
+      color: #ffffff;
+      margin-bottom: 45px;
     }
   }
 }

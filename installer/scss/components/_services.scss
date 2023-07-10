@@ -4,16 +4,16 @@
   background-repeat: no-repeat;
   background-position: bottom center;
 
+  & + .questions {
+    margin-top: 85px;
+  }
+
   @media #{$tablet-mini} {
     padding-top: 20px;
   }
 
   & + .work-stages {
-    margin-top: -240px;
-
-    @media #{$notebook} {
-      margin-top: -140px;
-    }
+    margin-top: -100px;
   }
 
   &__title {
@@ -28,7 +28,7 @@
 
   &__advantages {
     padding-top: 175px;
-    padding-bottom: 430px;
+    padding-bottom: 285px;
 
     @media #{$notebook} {
       padding-top: 75px;

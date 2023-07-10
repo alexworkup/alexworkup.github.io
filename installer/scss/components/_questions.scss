@@ -5,6 +5,14 @@
   background-repeat: no-repeat;
   margin-bottom: 60px;
 
+  &.full-width {
+    margin-bottom: 0;
+
+    @media #{$phone} {
+      margin-bottom: 40px;
+    }
+  }
+
   @media #{$laptop_s} {
     background-position: 100% 100%;
   }

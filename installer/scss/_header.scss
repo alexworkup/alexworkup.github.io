@@ -38,10 +38,6 @@
 
       &__wrap {
 
-        @media #{$notebook} {
-          padding: 20px;
-        }
-
         @media #{$tablet-mini} {
           background: rgba(69, 90, 100, 0.3);
           box-shadow: 0 4px 25px rgba(14, 39, 51, 0.15);
