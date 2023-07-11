@@ -122,12 +122,36 @@ body {
       padding-top: 0;
       margin-top: -45px;
     }
+
+    .our-work {
+      margin-bottom: 60px;
+
+      &__wrap {
+        padding: 0;
+      }
+    }
   }
 
   &__inner {
     padding: 45px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(249, 250, 253, 0.60) 0%, #F9FAFD 90.63%);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(249, 250, 253, 0.60) 0%, #F9FAFD 20%);
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      @media screen and (max-width: 980px) {
+        background: #F9FAFD;
+      }
+    }
 
     @media screen and (max-width: 980px) {
       padding: 20px;

@@ -1,5 +1,20 @@
 .work-list {
 
+  &_page {
+
+    .work-list__wrap {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-gap: 30px;
+      margin-bottom: 50px;
+
+      @media #{$phone} {
+        grid-gap: 10px;
+      }
+    }
+  }
+
   &.swiper {
     padding: 10px 20px 40px 20px;
     margin: 0 -20px;

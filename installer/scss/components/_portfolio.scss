@@ -1,0 +1,45 @@
+.portfolio {
+
+  &__text {
+    margin-bottom: 25px;
+    color: #455A64;
+    line-height: 130%;
+    font-size: 18px;
+
+    @media #{$laptop_s} {
+      font-size: 16px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 55px;
+
+    @media #{$laptop_s} {
+      margin-bottom: 25px;
+    }
+
+    .tab-sections {
+      background: transparent;
+      font-size: 18px;
+
+      @media #{$laptop_s} {
+        font-size: 16px;
+      }
+
+      &__item {
+        background: transparent;
+        padding: 0 30px;
+
+        @media #{$laptop_s} {
+          height: 40px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+
+}

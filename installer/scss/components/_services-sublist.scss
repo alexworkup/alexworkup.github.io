@@ -1,6 +1,10 @@
 .services-sublist {
   margin-bottom: 80px;
 
+  @media #{$phone} {
+    margin-bottom: 50px;
+  }
+
   &__wrap {
     display: grid;
     grid-template-rows: auto;
