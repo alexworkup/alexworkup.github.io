@@ -43,7 +43,23 @@
   }
 
   &_icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  &_back {
+    background: #f9fafd;
+    border-radius: 10px 0;
+    border: 1px solid rgba(145, 162, 171, 0.40);
+    color: #91A2AB;
+
+    &:before {
+      content: none;
+    }
+
+    .btn__text {
+      text-shadow: none;
+    }
   }
 }

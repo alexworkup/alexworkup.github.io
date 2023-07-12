@@ -234,6 +234,16 @@ $( document ).ready(function() {
         },
     });
 
+    const portfolioGallery = new Swiper('.portfolio-gallery.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.portfolio-gallery .swiper-button-next',
+            prevEl: '.portfolio-gallery .swiper-button-prev',
+        },
+    });
+
 
     if (!is_mobile) {
         $(document).on("mouseover", ".card-pics__control span", function() {

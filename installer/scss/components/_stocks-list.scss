@@ -1,0 +1,25 @@
+.stocks-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    width: calc(100% / 4);
+    padding: 15px;
+
+    @media screen and (max-width: 1280px) {
+      width: calc(100% / 3);
+    }
+
+    @media #{$laptop_s} {
+      width: calc(100% / 2);
+    }
+
+    @media #{$tablet-mini} {
+      width: 100%;
+    }
+
+    @media #{$phone} {
+      padding: 5px 0 5px 0;
+    }
+  }
+}
