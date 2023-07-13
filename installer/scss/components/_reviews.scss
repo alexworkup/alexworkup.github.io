@@ -33,13 +33,6 @@
     }
   }
 
-  .reviews-list {
-
-    &__wrap {
-      display: flex;
-    }
-  }
-
   &__arrows {
 
     @media #{$phone} {
@@ -93,5 +86,35 @@
   &__more {
     display: flex;
     justify-content: center;
+  }
+}
+
+.reviews-list {
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__pagination {
+    margin-top: 100px;
+
+    @media #{$phone} {
+      margin-top: 30px;
+    }
+  }
+
+  &.in-page {
+
+    .reviews-list__wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-rows: auto;
+      grid-gap: 26px;
+
+      @media #{$phone} {
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+      }
+    }
   }
 }

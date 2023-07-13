@@ -38,6 +38,17 @@
       display: none;
     }
   }
+
+  &_still {
+
+    .articles__content {
+      padding-left: 0;
+    }
+
+    .articles__wrap {
+      padding: 0;
+    }
+  }
 }
 
 .articles-list {

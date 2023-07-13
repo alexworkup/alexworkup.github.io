@@ -4,12 +4,15 @@
   border-radius: 10px;
   padding: 29px 33px 60px 33px;
   position: relative;
+  box-shadow: none;
+  transition: .2s all linear;
 
   @media #{$phone} {
     padding: 20px;
   }
 
   &:hover {
+    box-shadow: 0 10px 25px 0 rgba(52, 63, 69, 0.15);
 
     .review-item__more {
       bottom: 16px;
@@ -60,7 +63,7 @@
       bottom: 0;
       background: #C4DAA9;
       height: 2px;
-      width: 252px;
+      width: 156px;
     }
 
     &__icon {

@@ -1,0 +1,86 @@
+.article-detail {
+  margin-bottom: 60px;
+
+  &__pics {
+    max-width: 695px;
+    float: left;
+    margin-right: 26px;
+    margin-bottom: 20px;
+    font-size: 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media #{$laptop} {
+      max-width: 50%;
+    }
+
+    @media #{$tablet} {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+      margin-right: 0;
+      float: none;
+    }
+  }
+
+  &__title {
+    color: #455A64;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 30px 0;
+
+    @media #{$phone} {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .article-date {
+    margin-bottom: 16px;
+
+    &__num {
+      font-size: 25px;
+
+      @media #{$tablet} {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 25px;
+
+        @media #{$tablet} {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__icon {
+      margin-right: 15px;
+    }
+  }
+
+  &__text {
+    color: #455A64;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+
+    ol {
+      list-style-position: inside;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
