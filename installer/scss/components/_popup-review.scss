@@ -1,0 +1,67 @@
+.popup-review {
+  max-width: 936px;
+
+  &.fancybox__content {
+    padding: 0;
+    background: transparent;
+  }
+
+  .is-close {
+    display: none;
+  }
+
+  &__wrap {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(37, 47, 52, 0.90);
+    padding: 5px 10px 5px 25px;
+
+    @media #{$phone} {
+      padding-left: 20px;
+    }
+
+    .article-date {
+
+      &__num {
+        color: #C0CFD7;
+
+        span {
+          color: #8DC44A;
+        }
+      }
+    }
+  }
+
+  &__close {
+    font-size: 0;
+  }
+
+  .review-item {
+    background: none;
+    backdrop-filter: none;
+    padding: 0;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &__content {
+    padding: 30px 40px 60px 40px;
+    background: rgba(255, 255, 255, 0.90);
+    
+    @media #{$phone} {
+      padding: 20px;
+    }
+  }
+}

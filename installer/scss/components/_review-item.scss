@@ -7,10 +7,6 @@
   box-shadow: none;
   transition: .2s all linear;
 
-  @media #{$phone} {
-    padding: 20px;
-  }
-
   &:hover {
     box-shadow: 0 10px 25px 0 rgba(52, 63, 69, 0.15);
 
@@ -28,7 +24,8 @@
     transition: .2s all linear;
 
     @media #{$phone} {
-      display: none;
+      opacity: 1;
+      bottom: 16px;
     }
   }
 

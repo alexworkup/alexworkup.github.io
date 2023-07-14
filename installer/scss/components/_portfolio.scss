@@ -5,6 +5,7 @@
     color: #455A64;
     line-height: 130%;
     font-size: 18px;
+    font-family: $font-family-add;
 
     @media #{$laptop_s} {
       font-size: 16px;
