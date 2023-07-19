@@ -134,9 +134,7 @@ body {
 
   &__inner {
     padding: 45px;
-    border-radius: 10px;
     position: relative;
-    overflow: hidden;
 
     &:before {
       content: '';
@@ -147,6 +145,7 @@ body {
       top: 0;
       left: 0;
       z-index: -1;
+      border-radius: 10px;
 
       @media screen and (max-width: 980px) {
         background: #F9FAFD;
@@ -160,6 +159,17 @@ body {
     @media #{$phone} {
       border-radius: 0;
     }
+  }
+
+  &_contacts {
+
+   .main__inner {
+     padding: 0;
+
+     &:before {
+       content: none;
+     }
+   }
   }
 }
 

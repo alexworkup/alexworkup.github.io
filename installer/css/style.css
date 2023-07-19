@@ -500,9 +500,7 @@ body {
 }
 .main__inner {
   padding: 45px;
-  border-radius: 10px;
   position: relative;
-  overflow: hidden;
 }
 .main__inner:before {
   content: "";
@@ -513,6 +511,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  border-radius: 10px;
 }
 @media screen and (max-width: 980px) {
   .main__inner:before {
@@ -528,6 +527,12 @@ body {
   .main__inner {
     border-radius: 0;
   }
+}
+.main_contacts .main__inner {
+  padding: 0;
+}
+.main_contacts .main__inner:before {
+  content: none;
 }
 
 .full-width {
@@ -4746,6 +4751,92 @@ body {
 }
 .about-page__content .tab-content__pics img {
   max-width: 100%;
+}
+
+.contacts {
+  padding-top: 60px;
+}
+.contacts__tile {
+  margin-bottom: 40px;
+}
+.contacts .contacts-tile__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+}
+.contacts .contacts-tile__item {
+  border-radius: 10px;
+  background: rgba(69, 90, 100, 0.3);
+  box-shadow: 0 4px 25px 0 rgba(14, 39, 51, 0.3);
+  backdrop-filter: blur(7.5px);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 190px;
+}
+.contacts .contacts-tile__item_phone .contacts-tile__text a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.contacts .contacts-tile__item_phone .contacts-tile__text a span {
+  color: #91A2AB;
+}
+.contacts .contacts-tile__item_mail .contacts-tile__text a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.contacts .contacts-tile__item_time .contacts-tile__text {
+  color: #6BA229;
+}
+.contacts .contacts-tile__icon {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+.contacts .contacts-tile__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #FFFFFF;
+  text-align: center;
+}
+.contacts .contacts-tile__text i {
+  font-style: normal;
+  color: #6BA229;
+}
+.contacts .contacts-tile__text span {
+  color: #91A2AB;
+}
+.contacts .contacts-tile__social .social__item {
+  display: flex;
+  align-items: center;
+}
+.contacts .contacts-tile__social .social__item svg {
+  width: 25px;
+  height: auto;
+}
+.contacts .contacts-desc {
+  display: flex;
+  height: 500px;
+}
+.contacts .contacts-desc__text {
+  position: relative;
+  z-index: 1;
+}
+.contacts .contacts-desc__map {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+}
+.contacts .contacts-desc__map .map {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
