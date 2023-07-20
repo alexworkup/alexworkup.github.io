@@ -25,6 +25,7 @@
     background: rgba(69, 90, 100, 0.8);
     backdrop-filter: blur(5px);
     border-radius: 10px;
+    font-family: $font-family-base;
 
     &__row {
       display: flex;

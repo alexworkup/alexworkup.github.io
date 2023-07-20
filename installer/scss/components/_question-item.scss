@@ -57,6 +57,7 @@
     font-size: 18px;
     line-height: 22px;
     color: #455A64;
+    font-family: $font-family-base;
 
     @media #{$phone} {
       font-size: 14px;

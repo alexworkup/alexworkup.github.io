@@ -6,6 +6,7 @@
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
+    font-family: $font-family-base;
 
     @media #{$phone} {
       font-size: 35px;
@@ -19,6 +20,7 @@
     color: #455A64;
     text-transform: uppercase;
     margin-bottom: 42px;
+    font-family: $font-family-base;
 
     @media #{$phone} {
       margin-bottom: 20px;
@@ -51,6 +53,7 @@
     .phone {
       font-size: 40px;
       line-height: 48px;
+      font-family: $font-family-base;
 
       @media #{$phone} {
         font-size: 35px;

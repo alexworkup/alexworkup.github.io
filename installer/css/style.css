@@ -483,6 +483,9 @@ body {
   position: relative;
   z-index: 5;
 }
+.main__page {
+  font-family: "Gilroy", "Arial Narrow", sans-serif;
+}
 @media screen and (max-width: 500px) {
   .main__page.container {
     padding: 0;
@@ -497,6 +500,11 @@ body {
 }
 .main__page .our-work__wrap {
   padding: 0;
+}
+.main__page .h1, .main__page h1,
+.main__page .h2, .main__page h2,
+.main__page .h3, .main__page h3 {
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .main__inner {
   padding: 45px;
@@ -531,8 +539,23 @@ body {
 .main_contacts .main__inner {
   padding: 0;
 }
+@media screen and (max-width: 1024px) {
+  .main_contacts .main__inner {
+    padding: 45px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .main_contacts .main__inner {
+    padding: 20px;
+  }
+}
 .main_contacts .main__inner:before {
   content: none;
+}
+@media screen and (max-width: 1024px) {
+  .main_contacts .main__inner:before {
+    content: "";
+  }
 }
 
 .full-width {
@@ -1243,6 +1266,7 @@ body {
   z-index: 2;
   left: -40px;
   top: 10px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .services-list .tile-service:before {
@@ -1269,6 +1293,7 @@ body {
   position: relative;
   padding-bottom: 14px;
   margin-bottom: 30px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .services-list .tile-service__title {
@@ -1320,6 +1345,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 25px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .services-list .tile-service__nav ul {
   margin: 0;
@@ -1364,6 +1390,7 @@ body {
   background: rgba(69, 90, 100, 0.8);
   backdrop-filter: blur(5px);
   border-radius: 10px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .advantages .adv-item__row {
   display: flex;
@@ -2326,6 +2353,7 @@ body {
   color: #91A2AB;
   font-size: 16px;
   line-height: 19px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .article-date__num span {
   color: #455A64;
@@ -2507,6 +2535,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #455A64;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .review-item .review-person__name {
@@ -2520,6 +2549,7 @@ body {
   align-items: center;
   text-decoration: none;
   font-size: 14px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .article-more__icon {
   margin-left: 8px;
@@ -2621,6 +2651,7 @@ body {
   color: #455A64;
   margin-bottom: 15px;
   font-weight: 500;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .article-item__anons {
   color: #91A2AB;
@@ -2710,6 +2741,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #455A64;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .question-item__title {
@@ -2740,6 +2772,8 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
 }
 .questions.full-width {
   margin-bottom: 0;
@@ -2836,6 +2870,7 @@ body {
   font-size: 40px;
   line-height: 48px;
   text-transform: uppercase;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .question-form__title {
@@ -2849,6 +2884,7 @@ body {
   color: #455A64;
   text-transform: uppercase;
   margin-bottom: 42px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .question-form__subtitle {
@@ -2880,6 +2916,7 @@ body {
 .question-form__phone .phone {
   font-size: 40px;
   line-height: 48px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .question-form__phone .phone {
@@ -3004,6 +3041,7 @@ body {
   line-height: 30px;
   color: white;
   text-transform: uppercase;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .stock-item__title span {
   color: #6BA229;
@@ -3013,6 +3051,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #769FAF;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .stock-item__subtitle span {
   color: #ffffff;
@@ -3323,6 +3362,7 @@ body {
   border: 0;
   appearance: none;
   cursor: pointer;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .btn:before {
   content: "";
@@ -3971,6 +4011,7 @@ body {
   top: 0;
   line-height: 1em;
   transition: 0.2s color linear;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 1024px) {
   .services-sublist .sub-service__num {
@@ -3988,6 +4029,7 @@ body {
   color: #455A64;
   padding-bottom: 6px;
   position: relative;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 1024px) {
   .services-sublist .sub-service__name {
@@ -4068,6 +4110,7 @@ body {
   overflow: hidden;
   border-radius: 10px 0;
   margin: 5px;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 @media screen and (max-width: 500px) {
   .tab-sections__item {
@@ -4205,6 +4248,7 @@ body {
 .pagination .pag-more__text {
   margin-right: 14px;
   color: #91A2AB;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .pagination .pag-more__text span {
   color: #6BA229;
@@ -4238,6 +4282,7 @@ body {
   align-items: center;
   justify-content: center;
   line-height: 0.9em;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .pagination .num-page__item.active, .pagination .num-page__item:hover {
   border: 1px solid #6BA229;
@@ -4756,13 +4801,33 @@ body {
 .contacts {
   padding-top: 60px;
 }
+@media screen and (max-width: 1024px) {
+  .contacts {
+    padding-top: 0;
+  }
+}
 .contacts__tile {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1024px) {
+  .contacts__tile {
+    margin-bottom: 0;
+  }
+}
 .contacts .contacts-tile__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-tile__list {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+@media screen and (max-width: 640px) {
+  .contacts .contacts-tile__list {
+    grid-template-columns: 1fr;
+  }
 }
 .contacts .contacts-tile__item {
   border-radius: 10px;
@@ -4774,6 +4839,16 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 190px;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-tile__item {
+    background: rgb(69, 90, 100);
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacts .contacts-tile__item {
+    min-height: auto;
+  }
 }
 .contacts .contacts-tile__item_phone .contacts-tile__text a {
   color: #FFFFFF;
@@ -4805,6 +4880,7 @@ body {
   line-height: 30px;
   color: #FFFFFF;
   text-align: center;
+  font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
 .contacts .contacts-tile__text i {
   font-style: normal;
@@ -4824,10 +4900,67 @@ body {
 .contacts .contacts-desc {
   display: flex;
   height: 500px;
+  margin-bottom: -60px;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc {
+    left: 0;
+    right: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 40px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__content {
+    padding: 0;
+  }
 }
 .contacts .contacts-desc__text {
   position: relative;
-  z-index: 1;
+  z-index: 5;
+  max-width: 50%;
+  padding: 90px 0 0 64px;
+  font-size: 18px;
+  line-height: 130%;
+  color: #455A64;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__text {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contacts .contacts-desc__text {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+.contacts .contacts-desc__text .h2 {
+  font-size: 32px;
+  padding-left: 0;
+}
+@media screen and (max-width: 500px) {
+  .contacts .contacts-desc__text .h2 {
+    font-size: 28px;
+  }
+}
+.contacts .contacts-desc__text .h2:before {
+  content: none;
+}
+.contacts .contacts-desc__text .h2:after {
+  left: 0;
+  background: #C4DAA9;
+  height: 1.5px;
+  width: 137px;
 }
 .contacts .contacts-desc__map {
   position: absolute;
@@ -4835,8 +4968,56 @@ body {
   left: 0;
   height: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__map {
+    position: relative;
+    height: 200px;
+  }
+}
 .contacts .contacts-desc__map .map {
   height: 100%;
+}
+.contacts .contacts-desc__map .map__bg {
+  background-image: url("../images/map-bg-wide.jpg");
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__map .map__bg {
+    background-position: 85% 50%;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+.contacts .contacts-desc__map .map:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(86deg, #F9FAFD 49.07%, rgba(217, 217, 217, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__map .map:before {
+    content: none;
+  }
+}
+.contacts .contacts-desc__map .map:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #f9f9f9 65%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+@media screen and (max-width: 1024px) {
+  .contacts .contacts-desc__map .map:after {
+    content: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

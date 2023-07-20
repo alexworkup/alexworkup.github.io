@@ -56,6 +56,7 @@
     &__text {
       margin-right: 14px;
       color: #91A2AB;
+      font-family: $font-family-base;
 
       span {
         color: #6BA229;
@@ -92,6 +93,7 @@
       align-items: center;
       justify-content: center;
       line-height: .9em;
+      font-family: $font-family-base;
 
       &.active,
       &:hover {

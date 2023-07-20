@@ -4,6 +4,8 @@
   background-position: bottom;
   background-repeat: no-repeat;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
 
   &.full-width {
     margin-bottom: 0;

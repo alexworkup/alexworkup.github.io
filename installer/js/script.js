@@ -262,11 +262,19 @@ $( document ).ready(function() {
 
     //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
     function init() {
+
         var myMapTemp = new ymaps.Map("map-yandex",{
             center: [55.127631, 61.378874],
             zoom: 15,
             controls: ['zoomControl'],
         });
+
+        myMapTemp.behaviors.disable('scrollZoom');
+
+        var mapContainer = document.getElementById('map-yandex');
+
+        if (mapContainer.classList.contains('map__wrap_contacts') && !window.matchMedia("(max-width: 1024px)").matches) myMapTemp.setCenter([55.127631, 61.358874]);
+
         var myPlacemarkTemp = new ymaps.Placemark([55.127631, 61.378874],{
             balloonContent: "Рылеева, 16А",
         },{

@@ -110,6 +110,7 @@ body {
   z-index: 5;
 
   &__page {
+    font-family: $font-family-add;
 
     &.container {
 
@@ -129,6 +130,12 @@ body {
       &__wrap {
         padding: 0;
       }
+    }
+
+    .h1, h1,
+    .h2, h2,
+    .h3, h3 {
+      font-family: $font-family-base;
     }
   }
 
@@ -166,8 +173,20 @@ body {
    .main__inner {
      padding: 0;
 
+     @media #{$laptop_s} {
+       padding: 45px;
+     }
+
+     @media #{$tablet} {
+       padding: 20px;
+     }
+
      &:before {
        content: none;
+
+       @media #{$laptop_s} {
+         content: '';
+       }
      }
    }
   }

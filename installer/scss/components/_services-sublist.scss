@@ -66,6 +66,7 @@
       top: 0;
       line-height: 1em;
       transition: .2s color linear;
+      font-family: $font-family-base;
 
       @media #{$laptop_s} {
         font-size: 60px;
@@ -84,6 +85,7 @@
       color: #455A64;
       padding-bottom: 6px;
       position: relative;
+      font-family: $font-family-base;
       
       @media #{$laptop_s} {
         font-size: 26px;

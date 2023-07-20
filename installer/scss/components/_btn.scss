@@ -16,6 +16,7 @@
   border: 0;
   appearance: none;
   cursor: pointer;
+  font-family: $font-family-base;
 
   &:before {
     content: '';
