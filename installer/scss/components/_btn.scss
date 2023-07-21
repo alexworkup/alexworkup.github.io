@@ -35,6 +35,7 @@
 
   &__text {
     text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    position: relative;
   }
 
   &__icon {
@@ -61,6 +62,26 @@
 
     .btn__text {
       text-shadow: none;
+    }
+  }
+
+  &_more {
+
+    .btn__text {
+      padding-right: 15px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTTEgMC44MDQxNjlMNC4wMDg2NSAzLjQ3NDc5TDEgNi4xNDU0MU01LjAxMTUzIDAuODA0MTY5TDguMDIwMTcgMy40NzQ3OUw1LjAxMTUzIDYuMTQ1NDEiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==");
+        right: 0;
+        top: calc(50% + 1px);
+        transform: translateY(-50%);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
   }
 }
