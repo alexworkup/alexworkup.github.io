@@ -6,6 +6,10 @@
     padding: 16px 0 16px 22px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 620px) {
+      padding: 0;
+    }
   }
 
   &__col {
