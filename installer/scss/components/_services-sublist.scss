@@ -155,6 +155,10 @@
     .services-sublist__wrap {
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       grid-row-gap: 23px;
+
+      @media screen and (max-width: 500px) {
+        grid-template-columns: 100%;
+      }
     }
 
     .sub-service {

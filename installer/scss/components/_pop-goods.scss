@@ -74,4 +74,15 @@
     }
   }
 
+  &_page {
+
+    .pop-goods__wrap {
+      padding: 0 65px;
+
+      @media screen and (max-width: 767px) {
+        padding: 0 20px;
+      }
+    }
+  }
+
 }

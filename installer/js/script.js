@@ -20,6 +20,36 @@ $( document ).ready(function() {
         });
     }
 
+    if($('.big-gallery').length) {
+
+        const smallGallery = new Swiper('.small-gallery.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 8,
+            freeMode: true,
+            watchSlidesProgress: true,
+
+            pagination: {
+                el: '.small-gallery .swiper-pagination',
+            },
+        });
+
+        const bigGallery = new Swiper('.big-gallery.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            effect: 'fade',
+
+            thumbs: {
+                swiper: smallGallery,
+            },
+
+            navigation: {
+                nextEl: '.big-gallery .swiper-button-next',
+                prevEl: '.big-gallery .swiper-button-prev',
+            },
+        });
+
+    }
+
     $('input[type=tel]').inputmask({
         mask: '+7 (*{1}99) 999-99-99',
         placeholder: "+7 (___) ___-__-__",

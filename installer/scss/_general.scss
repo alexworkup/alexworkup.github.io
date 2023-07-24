@@ -157,6 +157,7 @@ body {
       left: 0;
       z-index: -1;
       border-radius: 10px;
+      max-height: 790px;
 
       @media screen and (max-width: 980px) {
         background: #F9FAFD;

@@ -84,4 +84,27 @@
       }
     }
   }
+
+  &_border {
+    background: none;
+    border-radius: 10px 0;
+    border: 1px solid #91A2AB;
+
+    .btn__text {
+      text-shadow: none;
+      color: #91A3AB;
+    }
+
+    &:before {
+      content: none;
+    }
+
+    &:hover {
+      border: 1px solid #6BA229;
+
+      .btn__text {
+        color: #6BA229;
+      }
+    }
+  }
 }

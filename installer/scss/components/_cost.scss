@@ -1,0 +1,31 @@
+.cost {
+  font-family: $font-family-base;
+
+  &__status {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #98BE7A;
+    margin-bottom: 2px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__actual {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #455A64;
+    margin-right: 7px;
+  }
+
+  &__old {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #A5ABAD;
+  }
+}
