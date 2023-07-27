@@ -1,0 +1,41 @@
+.detail-gallery {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+  }
+
+  &__item {
+    padding: 12px;
+
+    @media #{$tablet-mini} {
+      width: 50%;
+      padding: 4px;
+    }
+
+    a {
+      max-height: 190px;
+      display: block;
+      font-size: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+
+      @media #{$tablet-mini} {
+        max-height: 130px;
+      }
+
+      img {
+        max-height: inherit;
+        width: auto;
+
+        @media #{$tablet-mini} {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}

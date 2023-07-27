@@ -61,9 +61,19 @@ $( document ).ready(function() {
         }
     });
 
+    if($('.mobile-block').length) {
+        const slinky = $('.mobile-block__menu').slinky();
+    }
+
+
     $(document).on('click', '.close-fancy', function() {
         Fancybox.close();
         return false;
+    });
+
+    $(document).on('click', '.price-table__title', function() {
+        $(this).toggleClass('active');
+        $('.price-table__content[data-id='+$(this).attr("id")+']').toggleClass('active');
     });
 
     const subSlider = new Swiper('.sub-slider .swiper',{

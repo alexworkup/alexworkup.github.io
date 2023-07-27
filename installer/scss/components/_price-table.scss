@@ -1,0 +1,130 @@
+.price-table {
+  font-family: $font-family-base;
+  width: 100%;
+  border-collapse: collapse;
+
+  &__btn {
+    position: absolute;
+    right: 11px;
+    top: 7px;
+    font-size: 0;
+    width: 35px;
+    height: 35px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjc1IDYuNUwxLjI1IDYuNSIgc3Ryb2tlPSIjNDU1QTY0IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxwYXRoIGQ9Ik02LjUgMS4yNUw2LjUgMTEuNzUiIHN0cm9rZT0iIzQ1NUE2NCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 125%;
+    cursor: pointer;
+
+    &.active {
+
+      .price-table__btn {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMyIgdmlld0JveD0iMCAwIDEzIDMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS43NSAxLjVMMS4yNSAxLjUiIHN0cm9rZT0iIzQ1NUE2NCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K);
+
+        svg {
+
+          path {
+            stroke: #8DC44A;
+          }
+        }
+      }
+    }
+
+    @media #{$tablet-mini} {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    td {
+      border-radius: 10px;
+      background: #D2DCE1;
+      position: relative;
+      padding: 12.5px 50px 12.5px 20px;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: table-row;
+    }
+
+    td {
+      color: #313A3F;
+      padding: 16px 30px;
+      width: 25%;
+
+      @media #{$tablet-mini} {
+        padding: 10px 10px 10px 20px;
+      }
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+
+      &:first-child {
+        width: 50%;
+
+        @media #{$tablet-mini} {
+          width: 40%;
+        }
+      }
+    }
+
+    &_color {
+
+      td {
+        background-color: #FFFFFF;
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+
+  &__header {
+
+    th {
+      color: #98A6AD;
+      font-family: $font-family-base;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 10px 30px;
+      width: 25%;
+
+      &:first-child {
+        text-align: left;
+        color: #98A6AD;
+        width: 50%;
+      }
+    }
+  }
+
+  &__space {
+
+    td {
+      padding: 0;
+      height: 25px;
+    }
+  }
+
+  &__cost {
+
+    span {
+      color: #91A2AB;
+    }
+  }
+}

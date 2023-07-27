@@ -1,0 +1,36 @@
+.service-price {
+
+  &__desc {
+    display: flex;
+
+    @media #{$tablet-mini} {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__text {
+    color: #708089;
+    font-family: $font-family-base;
+    line-height: 150%;
+    font-weight: 400;
+    padding-right: 20px;
+
+    @media #{$tablet-mini} {
+      font-size: 14px;
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 20px;
+    }
+  }
+
+  &__btn {
+    flex-grow: 1;
+    text-align: right;
+
+    .btn {
+      min-width: 220px;
+    }
+  }
+}
