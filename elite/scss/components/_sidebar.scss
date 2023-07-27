@@ -1,4 +1,12 @@
 .sidebar {
+  position: sticky;
+  top: 80px;
+  margin-bottom: 20px;
+
+  @media #{$laptop_s} {
+    position: relative;
+    top: 0;
+  }
 
   &__main {
     max-width: 303px;

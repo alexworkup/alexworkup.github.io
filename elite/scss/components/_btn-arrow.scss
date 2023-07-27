@@ -1,0 +1,57 @@
+.btn-arrow {
+  color: #FFF383;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+
+  &:hover {
+    color: #FF8995;
+
+    &:after,
+    &:before {
+      background-image: url(../images/btn-arrow-hover.svg);
+    }
+  }
+
+  &:after,
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/btn-arrow-right.svg);
+  }
+
+  &-right {
+    &:after {
+      content: '';
+      margin-left: 11px;
+    }
+
+    &:hover {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-left {
+    &:before {
+      content: '';
+      transform: rotate(180deg);
+      margin-right: 11px;
+    }
+
+    &:hover {
+      &:before {
+        transform: none;
+      }
+    }
+  }
+}

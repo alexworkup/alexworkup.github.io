@@ -10,6 +10,7 @@
   background: #500B14;
   position: relative;
   transition: .2s all linear;
+  cursor: pointer;
 
   &:hover {
     color: #ffffff;
@@ -88,6 +89,15 @@
     &:hover {
       color: #ffffff;
       border: 1px solid $c-yellow;
+    }
+  }
+
+  &.btn {
+    &-small {
+      padding: 0 10px;
+      height: 40px;
+      line-height: 37px;
+      font-size: 14px;
     }
   }
 }

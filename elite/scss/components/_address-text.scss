@@ -1,0 +1,39 @@
+.address-text {
+
+  p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+
+    li {
+      margin-bottom: 15px;
+      line-height: 130%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      b {
+        display: block;
+
+        &:not([class]) {
+          color: $c-yellow;
+        }
+      }
+
+      a {
+        text-decoration: none;
+
+        &:not([class]) {
+          color: $c-white;
+        }
+      }
+    }
+  }
+}
