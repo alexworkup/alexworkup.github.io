@@ -25,6 +25,27 @@
     .btn {
       min-width: auto;
       padding: 0 20px;
+      background-color: transparent;
+      color: #455A64;
+
+      &__icon {
+
+        svg {
+
+          path {
+            stroke: #455A64;
+          }
+        }
+      }
+
+      &__text {
+        text-shadow: none;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+
     }
   }
 

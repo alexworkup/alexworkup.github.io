@@ -9,9 +9,23 @@
   z-index: 1000;
   height: 100%;
   width: 100%;
+  display: none;
+
+  &.fancybox__content {
+    background: rgba(69, 90, 100, 0.60);
+    padding: 0;
+  }
+
+  &__close {
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    cursor: pointer;
+    z-index: 10;
+  }
 
   &__body {
-    padding: 20px;
+    padding: 0;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -22,6 +36,14 @@
     margin-bottom: 25px;
     flex-grow: 1;
     width: 100%;
+
+    &.slinky-menu {
+      background: transparent;
+    }
+  }
+
+  &__nav {
+    padding: 18px;
   }
 
   &__wrap {
@@ -44,8 +66,7 @@
   }
 
   .mobile-menu  {
-    padding: 0;
-    margin: 0;
+    padding: 20px 0 0 18px;
     font-family: $font-family-base;
     list-style: none;
     height: 100%;
@@ -54,7 +75,7 @@
     &:before {
       content: '';
       position: absolute;
-      left: 3px;
+      left: 21px;
       top: 0;
       width: 1px;
       height: 100%;
@@ -69,6 +90,7 @@
       display: inline-block;
       padding: 10px 10px 10px 21px;
       transition: .2s all linear;
+      outline: none!important;
 
       &:before {
         content: '';
@@ -93,7 +115,6 @@
     }
 
     li {
-      position: relative;
 
       ul {
         list-style: none;
@@ -102,7 +123,7 @@
         li {
 
           a {
-            padding-left: 10px;
+            padding: 5px 10px 5px 20px;
 
             &:hover {
 
@@ -114,6 +135,64 @@
         }
       }
     }
+
+    .header {
+
+      .title {
+        font-size: 16px;
+        color: #8DC44A;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .back {
+        position: absolute;
+        top: -54px;
+        width: calc(100% + 20px);
+        left: -20px;
+        background: rgba(19, 23, 24, 0.20);
+        height: 45px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+
+          &:before {
+            content: '';
+            display: block;
+            opacity: 1;
+          }
+        }
+
+        &:after {
+          content: 'Назад';
+          position: relative;
+          color: #91A2AB;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1em;
+        }
+
+        &:before {
+          position: relative;
+          width: 12px;
+          height: 12px;
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMiAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExIDFMNi43MTQyOSA1TDExIDlNNS4yODU3MSAxTDEgNUw1LjI4NTcxIDkiIHN0cm9rZT0iIzZCQTIyOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: transparent;
+          margin-right: 8px;
+          opacity: 1;
+        }
+      }
+    }
+
+    ul.active {
+      padding-top: 45px;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
   }
 
   .mobile-nav {
