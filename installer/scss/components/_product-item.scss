@@ -46,7 +46,49 @@
         opacity: 0;
       }
 
+      &:hover {
+        color: #FFFFFF;
+
+        svg {
+
+          path {
+            stroke: #ffffff;
+          }
+        }
+      }
+
     }
+
+    &.in_basket {
+
+      .btn {
+        color: #6BA229;
+
+        svg {
+
+          path {
+            stroke: #6BA229;
+          }
+        }
+
+        &:hover {
+          color: #6BA229;
+          background: transparent;
+
+          &:before {
+            content: none;
+          }
+
+          svg {
+
+            path {
+              stroke: #6BA229;
+            }
+          }
+        }
+      }
+    }
+
   }
 
   &__pics {

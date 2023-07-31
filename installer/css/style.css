@@ -3245,6 +3245,28 @@ body {
 .product-item__btn .btn:before {
   opacity: 0;
 }
+.product-item__btn .btn:hover {
+  color: #FFFFFF;
+}
+.product-item__btn .btn:hover svg path {
+  stroke: #ffffff;
+}
+.product-item__btn.in_basket .btn {
+  color: #6BA229;
+}
+.product-item__btn.in_basket .btn svg path {
+  stroke: #6BA229;
+}
+.product-item__btn.in_basket .btn:hover {
+  color: #6BA229;
+  background: transparent;
+}
+.product-item__btn.in_basket .btn:hover:before {
+  content: none;
+}
+.product-item__btn.in_basket .btn:hover svg path {
+  stroke: #6BA229;
+}
 .product-item__pics {
   width: 100%;
   height: 300px;
