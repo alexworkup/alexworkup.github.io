@@ -1111,6 +1111,7 @@ body {
   background-image: url("../images/services-bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-attachment: fixed;
 }
 .services + .questions {
   margin-top: 85px;
@@ -1687,6 +1688,7 @@ body {
   background-position: center;
   background-size: cover;
   margin-bottom: 70px;
+  background-attachment: fixed;
 }
 .about.full-width {
   margin-bottom: 0;

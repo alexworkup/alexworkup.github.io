@@ -3,6 +3,7 @@
   background-image: url("../images/services-bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
+  background-attachment: fixed;
 
   & + .questions {
     margin-top: 85px;
