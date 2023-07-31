@@ -37,6 +37,24 @@ $(document).ready(function () {
 
     }
 
+    $(document).on('click', '.pin-top_search', function (e) {
+
+        Fancybox.show([{
+                src: "#popup-search",
+                type: "inline",
+            }],
+            {
+                closeButton: false,
+                mainClass: 'popup-search-open',
+            });
+
+        return false;
+    });
+
+    $(document).on('click', '.popup-search__close', function (e) {
+        Fancybox.close();
+    });
+
     if ($('.big-gallery').length) {
 
         const smallGallery = new Swiper('.small-gallery.swiper', {

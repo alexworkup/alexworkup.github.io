@@ -243,3 +243,11 @@ body {
     padding: 0;
   }
 }
+
+.fancybox__container.popup-search-open {
+
+  .fancybox__slide::before,
+  .fancybox__slide::after {
+    margin: inherit;
+  }
+}
