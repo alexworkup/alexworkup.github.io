@@ -1288,7 +1288,7 @@ body {
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: 1s all linear;
+  transition: 2.5s all linear;
 }
 .services-list .tile-service:before {
   content: "0" counter(example);
