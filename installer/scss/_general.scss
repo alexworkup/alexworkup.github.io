@@ -171,6 +171,38 @@ body {
     @media #{$phone} {
       border-radius: 0;
     }
+
+    a {
+      color: #455A64;
+    }
+
+    .question-form {
+
+      a.btn {
+        color: #FFFFFF;
+      }
+    }
+
+    .sub-service {
+
+      a.btn {
+        color: #FFFFFF;
+      }
+    }
+
+    .portfolio-detail {
+
+      a.btn.btn_order {
+        color: #FFFFFF;
+      }
+    }
+
+    .service-price {
+
+      a.btn {
+        color: #FFFFFF;
+      }
+    }
   }
 
   &_contacts {

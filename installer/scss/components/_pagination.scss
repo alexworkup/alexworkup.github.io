@@ -95,10 +95,15 @@
       line-height: .9em;
       font-family: $font-family-base;
 
-      &.active,
-      &:hover {
+      &.active {
         border: 1px solid #6BA229;
         color: #6BA229;
+      }
+
+      &:hover {
+        border: 1px solid #E2EBEE;
+        background-color: #E2EBEE;
+        color: #91A2AB;
       }
 
       &_dots {

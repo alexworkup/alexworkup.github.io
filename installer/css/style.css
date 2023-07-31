@@ -541,6 +541,21 @@ body {
     border-radius: 0;
   }
 }
+.main__inner a {
+  color: #455A64;
+}
+.main__inner .question-form a.btn {
+  color: #FFFFFF;
+}
+.main__inner .sub-service a.btn {
+  color: #FFFFFF;
+}
+.main__inner .portfolio-detail a.btn.btn_order {
+  color: #FFFFFF;
+}
+.main__inner .service-price a.btn {
+  color: #FFFFFF;
+}
 .main_contacts .main__inner {
   padding: 0;
 }
@@ -4528,9 +4543,14 @@ body {
   line-height: 0.9em;
   font-family: "Kelson Sans RU", "Arial Narrow", sans-serif;
 }
-.pagination .num-page__item.active, .pagination .num-page__item:hover {
+.pagination .num-page__item.active {
   border: 1px solid #6BA229;
   color: #6BA229;
+}
+.pagination .num-page__item:hover {
+  border: 1px solid #E2EBEE;
+  background-color: #E2EBEE;
+  color: #91A2AB;
 }
 .pagination .num-page__item_dots {
   border: 1px solid #F9FAFD;
