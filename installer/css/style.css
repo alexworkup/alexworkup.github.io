@@ -1192,7 +1192,7 @@ body {
 }
 
 .services-list {
-  box-shadow: 1px 0 0 0 #E2EBEE, 0 1px 0 0 #E2EBEE, 1px 1px 0 0 #E2EBEE, 1px 0 0 0 #E2EBEE inset, 0 1px 0 0 #E2EBEE inset;
+  /*box-shadow: 1px 0 0 0 #E2EBEE, 0 1px 0 0 #E2EBEE, 1px 1px 0 0 #E2EBEE, 1px 0 0 0 #E2EBEE inset, 0 1px 0 0 #E2EBEE inset;*/
   border-radius: 10px;
   overflow: hidden;
 }
