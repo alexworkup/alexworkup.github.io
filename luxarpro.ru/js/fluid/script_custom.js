@@ -1644,4 +1644,4 @@ function startAnimation() {
 
 startAnimation();
 
-setInterval(()=>{ startAnimation() }, 10000);
+setInterval(()=>{ startAnimation() }, 60000);
