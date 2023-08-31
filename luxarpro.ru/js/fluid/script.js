@@ -682,18 +682,6 @@ updateKeywords();
 initFramebuffers();
 multipleSplats(parseInt(Math.random() * 20) + 5);
 
-let countLoadAnimation = 0;
-let loadAnimation = setInterval(()=>{
-    multipleSplats(1);
-    countLoadAnimation += 1;
-    /*
-    if(countLoadAnimation >= 10) {
-        clearInterval(loadAnimation);
-    }
-    */
-}, 5000);
-
-
 var lastUpdateTime = Date.now();
 var colorUpdateTimer = 0.0;
 update();
@@ -1031,7 +1019,7 @@ canvas.addEventListener('touchstart', function (e) {
     }
 });
 
-canvas.addEventListener('touchmove', function (e) {
+canvas.addEventListener('mousemove', function (e) {
     e.preventDefault();
     var touches = e.targetTouches;
     for (var i = 0; i < touches.length; i++) {
