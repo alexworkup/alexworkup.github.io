@@ -1471,13 +1471,61 @@ function generateColor () {
     c.b *= 0.15;
      */
 
+    var arrColor = [
+        {
+            r: 142*0.0015,
+            g: 47*0.0015,
+            b: 142*0.0015,
+        },
+        {
+            r: 208*0.0015,
+            g: 71*0.0015,
+            b: 208*0.0015,
+        },
+        {
+            r: 249*0.0015,
+            g: 12*0.0015,
+            b: 249*0.0015,
+        },
+        {
+            r: 116*0.0015,
+            g: 17*0.0015,
+            b: 116*0.0015,
+        },
+        {
+            r: 180*0.0015,
+            g: 36*0.0015,
+            b: 180*0.0015,
+        },
+        {
+            r: 122*0.0015,
+            g: 24*0.0015,
+            b: 122*0.0015,
+        },
+        {
+            r: 161*0.0015,
+            g: 49*0.0015,
+            b: 165*0.0015,
+        },
+        {
+            r: 102*0.0015,
+            g: 222*0.0015,
+            b: 223*0.0015,
+        }
+    ];
+
+    var randomIndex = Math.floor(Math.random() * arrColor.length);
+    var randomColor = arrColor[randomIndex];
+
     var c = {
         r: 161*0.0015,
         g: 49*0.0015,
         b: 165*0.0015,
     };
 
-    return c;
+    console.log(c);
+
+    return randomColor;
 }
 
 function HSVtoRGB (h, s, v) {
