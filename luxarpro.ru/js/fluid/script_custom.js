@@ -28,6 +28,7 @@ SOFTWARE.
 // Simulation section
 
 const canvas = document.getElementById('fluidCanvas');
+
 resizeCanvas();
 
 let config = {
@@ -46,7 +47,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
-    TRANSPARENT: false,
+    TRANSPARENT: true,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
@@ -856,7 +857,7 @@ let bloomFramebuffers = [];
 let sunrays;
 let sunraysTemp;
 
-let ditheringTexture = createTextureAsync('LDR_LLL1_0.png');
+let ditheringTexture = createTextureAsync('bg-canvas.jpg');
 
 const blurProgram            = new Program(blurVertexShader, blurShader);
 const copyProgram            = new Program(baseVertexShader, copyShader);
@@ -1066,7 +1067,7 @@ function updateKeywords () {
 
 updateKeywords();
 initFramebuffers();
-multipleSplats(parseInt(Math.random() * 2) + 2);
+//multipleSplats(parseInt(Math.random() * 2) + 2);
 
 let lastUpdateTime = Date.now();
 let colorUpdateTimer = 0.0;
@@ -1095,6 +1096,7 @@ function calcDeltaTime () {
 function resizeCanvas () {
     let width = scaleByPixelRatio(canvas.clientWidth);
     let height = scaleByPixelRatio(canvas.clientHeight);
+    //canvas.getContext('2d', { alpha: true });
     if (canvas.width != width || canvas.height != height) {
         canvas.width = width;
         canvas.height = height;
@@ -1523,8 +1525,6 @@ function generateColor () {
         b: 165*0.0015,
     };
 
-    console.log(c);
-
     return randomColor;
 }
 
@@ -1602,3 +1602,44 @@ function hashCode (s) {
     }
     return hash;
 };
+
+
+function smoothMouseMove(timestamp, startX, endX, duration) {
+    const progress = Math.min(1, (timestamp - startTime) / duration);
+    const currentX = startX + progress * (endX - startX);
+
+    moveMouse(currentX);
+
+    if (progress < 1) {
+        requestAnimationFrame((newTimestamp) =>
+            smoothMouseMove(newTimestamp, startX, endX, duration)
+        );
+    }
+}
+
+function moveMouse(clientX) {
+    var event = new MouseEvent('mousemove', {
+        bubbles: true,
+        cancelable: true,
+        clientX: clientX,
+        clientY: window.innerHeight / 2,
+    });
+
+    // Dispatch the mouse event
+    document.dispatchEvent(event);
+}
+
+var endX = window.innerWidth / 2; // end position for X
+var duration = 2000; // duration of the movement in milliseconds
+
+var startTime = null;
+
+function startAnimation() {
+    var startX = 0;
+    startTime = performance.now();
+    requestAnimationFrame((timestamp) =>
+        smoothMouseMove(timestamp, startX, endX, duration)
+    );
+}
+
+startAnimation();

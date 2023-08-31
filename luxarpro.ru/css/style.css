@@ -81,6 +81,8 @@ body {
   height: 100%;
   left: 0;
   top: 0;
+  background-color: #000000;
+  background-image: url("../images/bg-canvas.jpg");
 }
 .bg-canvas canvas {
   width: inherit;
