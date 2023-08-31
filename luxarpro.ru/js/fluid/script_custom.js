@@ -47,7 +47,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
-    TRANSPARENT: true,
+    TRANSPARENT: false,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
@@ -857,7 +857,7 @@ let bloomFramebuffers = [];
 let sunrays;
 let sunraysTemp;
 
-let ditheringTexture = createTextureAsync('bg-canvas.jpg');
+let ditheringTexture = createTextureAsync('LDR_LLL1_0.png');
 
 const blurProgram            = new Program(blurVertexShader, blurShader);
 const copyProgram            = new Program(baseVertexShader, copyShader);
@@ -1643,3 +1643,5 @@ function startAnimation() {
 }
 
 startAnimation();
+
+setInterval(()=>{ startAnimation() }, 10000);
