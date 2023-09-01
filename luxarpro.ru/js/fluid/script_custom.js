@@ -29,7 +29,7 @@ SOFTWARE.
 
 const canvas = document.getElementById('fluidCanvas');
 
-resizeCanvas();
+//resizeCanvas();
 
 let config = {
     SIM_RESOLUTION: 128,
@@ -1067,11 +1067,16 @@ function updateKeywords () {
 
 updateKeywords();
 initFramebuffers();
-//multipleSplats(parseInt(Math.random() * 2) + 2);
+
 
 let lastUpdateTime = Date.now();
 let colorUpdateTimer = 0.0;
-updateFluid();
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateFluid();
+    console.log('Документ полностью загружен');
+});
+
 
 function updateFluid () {
     const dt = calcDeltaTime();

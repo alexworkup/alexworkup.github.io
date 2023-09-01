@@ -1,25 +1,4 @@
 @font-face {
-  font-family: "Kelson Sans RU";
-  src: url("../fonts/kelson/KelsonSans-LightRU.woff2") format("woff2"), url("../fonts/kelson/KelsonSans-LightRU.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Kelson Sans RU";
-  src: url("../fonts/kelson/KelsonSans-RegularRU.woff2") format("woff2"), url("../fonts/kelson/KelsonSans-RegularRU.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Kelson Sans RU";
-  src: url("../fonts/kelson/KelsonSans-BoldRU.woff2") format("woff2"), url("../fonts/kelson/KelsonSans-BoldRU.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Gilroy";
   src: url("../fonts/gilroy/Gilroy-Regular.eot");
   src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Regular.woff") format("woff"), url("../fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
@@ -27,42 +6,49 @@
   font-style: normal;
   font-display: swap;
 }
-/*
 @font-face {
-  font-family: 'Kelson Sans';
-  src: url('../fonts/kelson/kelsonsanslightru.woff2') format('woff2'),
-  url('../fonts/kelson/kelsonsanslightru.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/gilroy/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Light.woff") format("woff"), url("../fonts/gilroy/Gilroy-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Kelson Sans';
-  src: url('../fonts/kelson/kelsonsansregularru.woff2') format('woff2'),
-  url('../fonts/kelson/kelsonsansregularru.woff') format('woff');
-  font-weight: 400;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-UltraLight.eot");
+  src: local("Gilroy UltraLight"), local("Gilroy-UltraLight"), url("../fonts/gilroy/Gilroy-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-UltraLight.woff") format("woff"), url("../fonts/gilroy/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200;
   font-style: normal;
+  font-display: swap;
 }
-
 @font-face {
-  font-family: 'Kelson Sans';
-  src: url('../fonts/kelson/kelsonsansboldru.woff2') format('woff2'),
-  url('../fonts/kelson/kelsonsansboldru.woff') format('woff');
-  font-weight: 700;
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Thin.eot");
+  src: local("Gilroy Thin"), local("Gilroy-Thin"), url("../fonts/gilroy/Gilroy-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Thin.woff") format("woff"), url("../fonts/gilroy/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
-*/
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  color: #FFFFFF;
+  font-family: "Gilroy", "Arial Narrow", sans-serif;
 }
 body.index .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   background-color: #000000;
 }
 
@@ -76,18 +62,22 @@ body {
   height: 100vh;
 }
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-canvas.jpg");
+}
+
 .bg-canvas {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #000000;
-  background-image: url("../images/bg-canvas.jpg");
 }
 .bg-canvas canvas {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
 }
 
@@ -102,11 +92,86 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  background: radial-gradient(53.43% 63.56% at 50% 37.83%, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+  background: radial-gradient(53.43% 63.56% at 50% 37.83%, rgba(58, 108, 167, 0.2) 0%, transparent 100%);
 }
 .big-logo img {
   max-width: 100%;
   position: relative;
+}
+.big-logo svg {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 60px;
+  left: 60px;
+}
+.header .toggle {
+  padding: 20px;
+  display: inline-block;
+}
+
+.fancybox__backdrop {
+  background: transparent;
+}
+
+.popup-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.popup-menu.fancybox__content {
+  padding: 0;
+  background: transparent;
+}
+.popup-menu .is-close {
+  display: none;
+}
+.popup-menu__wrap {
+  position: relative;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12.5px);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1400px;
+  max-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-menu__close {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+  cursor: pointer;
+}
+.popup-menu__content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.popup-menu__content ul li {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 250;
+  line-height: 90px;
+}
+.popup-menu__content ul li a {
+  color: #FFF;
+  text-decoration: none;
+  transition: 0.2s all linear;
+  outline: none !important;
+}
+.popup-menu__content ul li a:hover {
+  color: #FF6BC0;
 }
 
 /*# sourceMappingURL=style.css.map */
