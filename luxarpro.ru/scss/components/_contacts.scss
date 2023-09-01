@@ -1,0 +1,59 @@
+.contacts {
+  padding: 60px 30px 60px 30px;
+
+  @media #{$phone} {
+    padding: 20px 0 20px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+
+    @media #{$phone} {
+      grid-template-columns: repeat(auto-fit, minmax(100%, auto));
+    }
+  }
+
+  .contact-item {
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(2px);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+
+    @media #{$phone} {
+      padding: 30px;
+      min-height: 180px;
+    }
+
+    &__icon {
+      flex-shrink: 0;
+
+      @media #{$phone} {
+        max-width: 50px;
+      }
+    }
+
+    &__text {
+      flex-grow: 1;
+      padding: 0 10px;
+      text-align: center;
+      color: #FFF;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 300;
+
+      @media #{$phone} {
+        font-size: 22px;
+      }
+
+      a {
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+  }
+}
