@@ -50,7 +50,7 @@ body {
     height: 100%;
     left: 0;
     top: 0;
-    background: linear-gradient(180deg, rgba(58, 108, 167, 0.3), transparent, rgba(58, 108, 167, 0.3));
+    background: radial-gradient(53.43% 63.56% at 50% 37.83%, rgb(58 108 167 / 20%) 0%, transparent 100%);
     z-index: 1;
   }
 }
@@ -123,6 +123,9 @@ body {
 .page {
   position: relative;
   padding: 20px 120px 0 120px;
+  width: 100%;
+  max-width: 1640px;
+  margin: 0 auto;
   z-index: 2;
 
   @media #{$laptop_s} {
@@ -131,12 +134,6 @@ body {
 
   @media #{$phone} {
     padding: 10px;
-  }
-
-  &__wrap {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
   }
 
   &__header {
