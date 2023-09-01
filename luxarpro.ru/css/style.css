@@ -45,8 +45,7 @@ body {
   color: #FFFFFF;
   font-family: "Gilroy", "Arial Narrow", sans-serif;
 }
-body.index .wrapper {
-  height: 100%;
+body.index .main {
   display: flex;
   align-items: center;
   justify-content: center;
