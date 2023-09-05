@@ -1,0 +1,29 @@
+.solution-menu {
+  padding: 25px 35px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(2px);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 -14px;
+  }
+
+  &__item {
+    padding: 0 14px;
+    font-size: 0;
+    opacity: .5;
+    transition: .2s all linear;
+
+    &.active,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    font-size: 0;
+  }
+}

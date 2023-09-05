@@ -37,6 +37,7 @@ body {
   overflow: hidden;
   position: relative;
   background-image: url("../images/bg-canvas.jpg");
+  background-size: cover;
 }
 
 .main {
@@ -167,14 +168,28 @@ img {
   max-width: 100%;
 }
 
-.h1 {
-  color: #FFF;
+.h1,
+.h2 {
   font-size: 35px;
-  font-style: normal;
   font-weight: 300;
   line-height: 120%;
 
   @media #{$tablet-mini} {
     font-size: 30px;
   }
+}
+
+.h1 {
+  color: #FFF;
+  font-style: normal;
+}
+
+.h2,
+.h3 {
+  color: #FF6BC0;
+}
+
+.h3 {
+  font-size: 25px;
+  font-weight: 400;
 }
