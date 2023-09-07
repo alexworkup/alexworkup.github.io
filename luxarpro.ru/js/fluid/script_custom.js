@@ -56,7 +56,7 @@ let config = {
     BLOOM_SOFT_KNEE: 0.7,
     SUNRAYS: true,
     SUNRAYS_RESOLUTION: 196,
-    SUNRAYS_WEIGHT: 1.0,
+    SUNRAYS_WEIGHT: 0.3,
 }
 
 function pointerPrototype () {
