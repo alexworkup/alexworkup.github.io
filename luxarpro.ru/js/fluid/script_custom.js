@@ -1617,8 +1617,8 @@ var container = document.body;
 var ballRadius = 25;
 var ballX = window.innerWidth / 2 - ballRadius; // Горизонтальная позиция мяча (начально в центре экрана)
 var ballY = window.innerHeight / 2 - ballRadius; // Вертикальная позиция мяча (начально в центре экрана)
-var ballSpeedX = 6; // Горизонтальная скорость
-var ballSpeedY = 6; // Вертикальная скорость
+var ballSpeedX = 3; // Горизонтальная скорость
+var ballSpeedY = 3; // Вертикальная скорость
 
 var containerWidth = window.innerWidth;
 var containerHeight = window.innerHeight;
