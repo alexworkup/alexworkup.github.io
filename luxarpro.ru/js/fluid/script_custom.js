@@ -1609,44 +1609,51 @@ function hashCode (s) {
 };
 
 
-function smoothMouseMove(timestamp, startX, endX, duration) {
-    const progress = Math.min(1, (timestamp - startTime) / duration);
-    const currentX = startX + progress * (endX - startX);
 
-    moveMouse(currentX);
 
-    if (progress < 1) {
-        requestAnimationFrame((newTimestamp) =>
-            smoothMouseMove(newTimestamp, startX, endX, duration)
-        );
+var ball = document.querySelector(".ball");
+var container = document.body;
+
+var ballRadius = 25;
+var ballX = window.innerWidth / 2 - ballRadius; // Горизонтальная позиция мяча (начально в центре экрана)
+var ballY = window.innerHeight / 2 - ballRadius; // Вертикальная позиция мяча (начально в центре экрана)
+var ballSpeedX = 6; // Горизонтальная скорость
+var ballSpeedY = 6; // Вертикальная скорость
+
+var containerWidth = window.innerWidth;
+var containerHeight = window.innerHeight;
+
+function moveBall() {
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
+    // Проверяем столкновение с краями контейнера
+    if (ballX + ballRadius > containerWidth || ballX - ballRadius < 0) {
+        ballSpeedX *= -1; // Меняем направление по X при столкновении с горизонтальным краем
     }
+    if (ballY + ballRadius > containerHeight || ballY - ballRadius < 0) {
+        ballSpeedY *= -1; // Меняем направление по Y при столкновении с вертикальным краем
+    }
+
+    ball.style.transform = `translate(${ballX}px, ${ballY}px)`;
+
+    simulateMouseMove(ballX, ballY);
+
+    requestAnimationFrame(moveBall);
 }
 
-function moveMouse(clientX) {
+function simulateMouseMove(clientX, clientY) {
     var event = new MouseEvent('mousemove', {
         bubbles: true,
         cancelable: true,
         clientX: clientX,
-        clientY: window.innerHeight / 2,
+        clientY: clientY,
     });
 
-    // Dispatch the mouse event
+    // Отправляем событие перемещения мыши
     document.dispatchEvent(event);
 }
 
-var endX = window.innerWidth / 2; // end position for X
-var duration = 2000; // duration of the movement in milliseconds
+moveBall();
 
-var startTime = null;
-
-function startAnimation() {
-    var startX = 0;
-    startTime = performance.now();
-    requestAnimationFrame((timestamp) =>
-        smoothMouseMove(timestamp, startX, endX, duration)
-    );
-}
-
-startAnimation();
-
-setInterval(()=>{ startAnimation() }, 60000);
+// setInterval(()=>{ startAnimation() }, 5000);
