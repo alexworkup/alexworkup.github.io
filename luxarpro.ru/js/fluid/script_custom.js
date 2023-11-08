@@ -88,8 +88,6 @@ if (!ext.supportLinearFiltering) {
     config.SUNRAYS = false;
 }
 
-
-
 function getWebGLContext (canvas) {
     const params = { alpha: true, depth: false, stencil: false, antialias: false, preserveDrawingBuffer: false };
 
@@ -1654,6 +1652,6 @@ function simulateMouseMove(clientX, clientY) {
     document.dispatchEvent(event);
 }
 
-moveBall();
+//moveBall();
 
 // setInterval(()=>{ startAnimation() }, 5000);

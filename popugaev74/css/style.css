@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-Bold.eot");
+  src: local("Druk Cyr Bold"), local("DrukCyr-Bold"), url("../fonts/druk/DrukCyr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-Bold.woff2") format("woff2"), url("../fonts/druk/DrukCyr-Bold.woff") format("woff"), url("../fonts/druk/DrukCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-Heavy.eot");
+  src: local("Druk Cyr Heavy"), local("DrukCyr-Heavy"), url("../fonts/druk/DrukCyr-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-Heavy.woff2") format("woff2"), url("../fonts/druk/DrukCyr-Heavy.woff") format("woff"), url("../fonts/druk/DrukCyr-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-HeavyItalic.eot");
+  src: local("Druk Cyr Heavy Italic"), local("DrukCyr-HeavyItalic"), url("../fonts/druk/DrukCyr-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-HeavyItalic.woff2") format("woff2"), url("../fonts/druk/DrukCyr-HeavyItalic.woff") format("woff"), url("../fonts/druk/DrukCyr-HeavyItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-MediumItalic.eot");
+  src: local("Druk Cyr Medium Italic"), local("DrukCyr-MediumItalic"), url("../fonts/druk/DrukCyr-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-MediumItalic.woff2") format("woff2"), url("../fonts/druk/DrukCyr-MediumItalic.woff") format("woff"), url("../fonts/druk/DrukCyr-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-SuperItalic.eot");
+  src: local("Druk Cyr Super Italic"), local("DrukCyr-SuperItalic"), url("../fonts/druk/DrukCyr-SuperItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-SuperItalic.woff2") format("woff2"), url("../fonts/druk/DrukCyr-SuperItalic.woff") format("woff"), url("../fonts/druk/DrukCyr-SuperItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-Super.eot");
+  src: local("Druk Cyr Super"), local("DrukCyr-Super"), url("../fonts/druk/DrukCyr-Super.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-Super.woff2") format("woff2"), url("../fonts/druk/DrukCyr-Super.woff") format("woff"), url("../fonts/druk/DrukCyr-Super.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-Medium.eot");
+  src: local("Druk Cyr Medium"), local("DrukCyr-Medium"), url("../fonts/druk/DrukCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-Medium.woff2") format("woff2"), url("../fonts/druk/DrukCyr-Medium.woff") format("woff"), url("../fonts/druk/DrukCyr-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Druk Cyr";
+  src: url("../fonts/druk/DrukCyr-BoldItalic.eot");
+  src: local("Druk Cyr Bold Italic"), local("DrukCyr-BoldItalic"), url("../fonts/druk/DrukCyr-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/druk/DrukCyr-BoldItalic.woff2") format("woff2"), url("../fonts/druk/DrukCyr-BoldItalic.woff") format("woff"), url("../fonts/druk/DrukCyr-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+.section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.section.swiper-slide {
+  height: 100vh;
+}
+.section.swiper-slide-active .section__text {
+  transform: translateY(50%);
+  bottom: 50%;
+  opacity: 1;
+  transition: 0.8s 0.2s all ease;
+}
+.section.swiper-slide-active .section__pics {
+  transform: scale(1.05);
+  transition: 1s all linear;
+}
+.section:first-child.swiper-slide-active .section__text {
+  transform: translateY(20%);
+  bottom: 20%;
+  opacity: 1;
+  transition: 0.8s 0.2s all ease;
+}
+.section:first-child .section__wrap {
+  align-items: flex-end;
+}
+.section:first-child .section__wrap:before {
+  content: none;
+}
+.section:first-child .section__title {
+  margin-bottom: 2%;
+}
+.section:last-child .section__title {
+  font-size: 150px;
+  line-height: 100%;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1440px) {
+  .section:last-child .section__title {
+    font-size: 100px;
+    margin-bottom: 20px;
+  }
+}
+.section__wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfdfdf;
+  position: relative;
+}
+.section__wrap:before, .section__wrap:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  left: 0;
+  z-index: 2;
+}
+.section__wrap:before {
+  top: 0;
+  background: linear-gradient(0, rgba(228, 187, 165, 0) 0%, #E4BBA5 100%);
+}
+.section__wrap:after {
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(228, 187, 165, 0) 0%, #E4BBA5 100%);
+}
+.section__title {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 200px;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  font-family: "Druk Cyr", sans-serif;
+  text-align: center;
+  line-height: 90%;
+  position: relative;
+  z-index: 5;
+}
+.section__pics {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: scale(1);
+  transition: 1s all linear;
+}
+.section__pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.section__text {
+  position: absolute;
+  z-index: 5;
+  text-align: center;
+  height: auto;
+  bottom: 0;
+  opacity: 0.3;
+  transform: none;
+  transition: 0.8s 0.2s all ease;
+}
+.section img {
+  max-width: 100%;
+}
+
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: scale(1);
+  transition: 0.5s all linear;
+}
+.menu-fixed:hover {
+  transform: scale(1.05);
+}
+
+.online-fixed {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  transform: scale(1);
+  transition: 0.5s all linear;
+}
+.online-fixed:hover {
+  transform: scale(1.05);
+}
+
+.menu-btn {
+  max-height: 350px;
+}
+
+.phone {
+  color: #FFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 180px;
+}
+@media screen and (max-width: 1440px) {
+  .phone {
+    font-size: 120px;
+    margin-top: -40px;
+  }
+}
+
+.main-v2 .swiper-slide-active .section__text {
+  transform: translate(-50%, 50%);
+  left: 50%;
+}
+.main-v2 .section__text {
+  left: 0;
+}
+.main-v2 .section__text img {
+  max-width: 960px;
+}
+.main-v2 .section__title {
+  white-space: nowrap;
+}
+.main-v2 .section:first-child.swiper-slide-active .section__text {
+  transform: translate(-50%, 50%);
+  left: 50%;
+  bottom: 30%;
+}
+.main-v2 .phone {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=style.css.map */
