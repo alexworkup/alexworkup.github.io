@@ -1,0 +1,26 @@
+<svg width="152" height="146" viewBox="0 0 152 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 20">
+<g id="Ellipse 1" filter="url(#filter0_b_309_125)">
+<circle cx="76.5" cy="71.5" r="68.5" fill="white" fill-opacity="0.6"/>
+</g>
+<circle id="Ellipse 3" cx="70" cy="70" r="69.5" transform="matrix(-1 0 0 1 140 0)" stroke="url(#paint0_linear_309_125)"/>
+<circle id="Ellipse 2" cx="70" cy="70" r="69.5" transform="matrix(-1 0 0 1 152 6)" stroke="url(#paint1_linear_309_125)"/>
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M77.5462 71.8391L92.9712 87.2641L92.2641 87.9712L76.8391 72.5462L61.4142 87.9712L60.7071 87.2641L76.132 71.8391L60 55.7071L60.7071 55L76.8391 71.132L92.9712 55L93.6783 55.7071L77.5462 71.8391Z" fill="#BBBBBB"/>
+</g>
+<defs>
+<filter id="filter0_b_309_125" x="-17" y="-22" width="187" height="187" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="12.5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_309_125"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_309_125" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_309_125" x1="104.234" y1="6.13138" x2="70" y2="140" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_309_125" x1="104.234" y1="6.13138" x2="70" y2="140" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
