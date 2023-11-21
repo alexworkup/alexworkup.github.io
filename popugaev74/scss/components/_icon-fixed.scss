@@ -1,0 +1,67 @@
+.icon-fixed {
+  position: fixed;
+  width: 137px;
+  height: 137px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(12.5px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 979px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    border-radius: 50%;
+    transition: .8s all ease-in-out;
+  }
+
+  &:before {
+    top: -3px;
+    left: -8px;
+  }
+
+  &:after {
+    top: 3px;
+    left: 8px;
+  }
+
+  &:hover {
+
+    &:before {
+      top: 3px;
+      left: 8px;
+    }
+
+    &:after {
+      top: -3px;
+      left: -8px;
+    }
+  }
+
+  &_burger {
+    top: 20px;
+    left: 30px;
+  }
+
+  &_phone {
+    right: 20px;
+    bottom: 130px;
+  }
+}

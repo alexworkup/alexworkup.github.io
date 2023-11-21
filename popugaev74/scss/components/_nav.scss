@@ -1,0 +1,31 @@
+.nav {
+
+  &__item {
+    color: #FFF;
+    text-shadow: 0 0 25px #C5B295;
+    font-family: "Druk Cyr", sans-serif;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 90%;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(2px);
+    padding-top: 50%;
+
+    &:before {
+      content: "";
+      padding-top: 100%;
+      float: left;
+    }
+
+    span {
+      width: 100%;
+      margin: auto;
+      background: silver;
+      overflow: hidden;
+    }
+  }
+}

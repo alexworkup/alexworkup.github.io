@@ -325,4 +325,137 @@
   text-decoration: none;
 }
 
+.icon-fixed {
+  position: fixed;
+  width: 137px;
+  height: 137px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12.5px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-fixed img {
+  max-width: 100%;
+}
+@media screen and (max-width: 979px) {
+  .icon-fixed {
+    width: 100px;
+    height: 100px;
+  }
+}
+.icon-fixed:before, .icon-fixed:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transition: 0.8s all ease-in-out;
+}
+.icon-fixed:before {
+  top: -3px;
+  left: -8px;
+}
+.icon-fixed:after {
+  top: 3px;
+  left: 8px;
+}
+.icon-fixed:hover:before {
+  top: 3px;
+  left: 8px;
+}
+.icon-fixed:hover:after {
+  top: -3px;
+  left: -8px;
+}
+.icon-fixed_burger {
+  top: 20px;
+  left: 30px;
+}
+.icon-fixed_phone {
+  right: 20px;
+  bottom: 130px;
+}
+
+.main-slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfdfdf;
+  position: relative;
+}
+.main-slider__item.swiper-slide {
+  height: 100vh;
+}
+.main-slider__item.swiper-slide-active .index-slide__pics {
+  transform: scale(1.05);
+  transition: 1s all linear;
+}
+.main-slider__item.swiper-slide-active .index-slide__wrap {
+  transform: translateX(0);
+  opacity: 1;
+}
+.main-slider .index-slide__wrap {
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0.3;
+  transition: 0.8s 0.2s all ease;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.main-slider .index-slide__pics {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: scale(1);
+  transition: 1s all linear;
+}
+.main-slider .index-slide__title {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 4px 60px rgba(0, 0, 0, 0.15);
+  font-size: 150px;
+  text-transform: uppercase;
+  font-family: "Druk Cyr", sans-serif;
+  text-align: center;
+  line-height: 90%;
+  letter-spacing: 6.75px;
+  position: relative;
+  z-index: 5;
+}
+
+.nav__item {
+  color: #FFF;
+  text-shadow: 0 0 25px #C5B295;
+  font-family: "Druk Cyr", sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: 90%;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  padding-top: 50%;
+}
+.nav__item:before {
+  content: "";
+  padding-top: 100%;
+  float: left;
+}
+.nav__item span {
+  width: 100%;
+  margin: auto;
+  background: silver;
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=style.css.map */
