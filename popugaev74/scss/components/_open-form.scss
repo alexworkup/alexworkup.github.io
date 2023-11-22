@@ -1,0 +1,121 @@
+.open-form {
+  padding: 40px 0;
+
+  @media screen and (max-width: 1800px) {
+    padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 20px 0;
+  }
+
+  &__wrap {
+    width: 650px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  }
+
+  &__row {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__condition {
+    color: #FFF;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+
+      br {
+        display: none;
+      }
+    }
+
+    a {
+      color: #FFF;
+    }
+  }
+
+  &__item {
+    position: relative;
+    height: 78px;
+
+    @media screen and (max-width: 1800px) {
+      height: 60px;
+    }
+
+    &.select {
+
+      &:before {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 6px;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 60px;
+      border: 1px solid #FFF;
+      z-index: 1;
+      transition: .2s all linear;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      appearance: none;
+      border: 0;
+      background: none;
+      border-radius: 60px;
+      background: rgba(255, 255, 255, 0.20);
+      backdrop-filter: blur(15px);
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      color: #FFF;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: uppercase;
+      padding: 0 35px;
+      outline: none;
+
+      @media screen and (max-width: 1800px) {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
+
+      &::placeholder {
+        color: #FFF;
+      }
+    }
+  }
+}

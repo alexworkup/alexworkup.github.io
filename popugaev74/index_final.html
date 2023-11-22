@@ -11,6 +11,7 @@
     <script src="js/jquery/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -23,48 +24,30 @@
             <img src="images/phone.svg" alt="Открыть заявку по номеру телефона">
         </a>
 
-        <!--
         <div class="menu-toggle">
             <div class="menu-toggle__wrap">
-                <div class="menu-toggle__close">
-                    <img src="images/clos1.svg" alt="">
+                <div class="menu-toggle__content">
+                    <div class="icon-fixed menu-toggle__close">
+                        <img src="images/close-toggle.svg" alt="">
+                    </div>
+                    <ul>
+                        <li><a href="">услуги</a></li>
+                        <li><a href="">Прайс лист</a></li>
+                        <li><a href="">Портфолио</a></li>
+                        <li><a href="">График работы</a></li>
+                        <li><a href="">акции</a></li>
+                        <li><a href="">В содружестве с профи</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Список анализов</a></li>
+                        <li><a href="">Позвоните мне, хочу записаться</a></li>
+                    </ul>
                 </div>
-                <ul>
-                    <li><a href="">услуги</a></li>
-                    <li><a href="">Прайс лист</a></li>
-                    <li><a href="">Портфолио</a></li>
-                    <li><a href="">График работы</a></li>
-                    <li><a href="">акции</a></li>
-                    <li><a href="">В содружестве с профи</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Список анализов</a></li>
-                    <li><a href="">Позвоните мне, хочу записаться</a></li>
-                </ul>
             </div>
         </div>
-        -->
 
         <div class="main-slider sections swiper">
             <div class="main-slider__list swiper-wrapper">
-                <div class="main-slider__item index-slide swiper-slide">
-                    <div class="index-slide__pics">
-                        <img style="object-position: top;" src="images/screen-08.jpg" alt="">
-                    </div>
-                    <div class="index-slide__wrap">
-                        <div class="nav">
-                            <a href="#" class="nav__item">
-                                <span>Список <br>анализов</span>
-                            </a>
-                            <a href="#" class="nav__item">
-                                <span>контакты</span>
-                            </a>
-                            <a href="#" class="nav__item">
-                                <span>FAQ</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-slider__item index-slide swiper-slide">
+                <div class="main-slider__item index-slide swiper-slide index-slide_personal">
                     <div class="index-slide__pics">
                         <img src="images/screen-01.jpg" alt="">
                     </div>
@@ -134,28 +117,68 @@
                         </div>
                     </div>
                 </div>
-                <!--
                 <div class="main-slider__item index-slide swiper-slide">
                     <div class="index-slide__pics">
                         <img style="object-position: top;" src="images/screen-08.jpg" alt="">
                     </div>
                     <div class="index-slide__wrap">
-                        <div class="index-slide__text">
-                            <img src="images/nav-02.svg" alt="">
+                        <div class="nav" id="nav">
+                            <div class="nav__item">
+                                <a href="#" class="nav__link" id="nav-item-1">
+                                    <span>Список <br>анализов</span>
+                                </a>
+                            </div>
+                            <div class="nav__item">
+                                <a href="#" class="nav__link" id="nav-item-2">
+                                    <span>контакты</span>
+                                </a>
+                            </div>
+                            <div class="nav__item">
+                                <a href="#" class="nav__link" id="nav-item-3">
+                                    <span>FAQ</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                -->
-                <div class="main-slider__item index-slide swiper-slide">
+                <div class="main-slider__item index-slide swiper-slide index-slide_form">
                     <div class="index-slide__pics">
                         <img style="object-position: top;" src="images/screen-09.jpg" alt="">
                     </div>
                     <div class="index-slide__wrap">
                         <div class="index-slide__text">
-                            <div class="index-slide__title">Позвоните мне, хочу записаться</div>
-                            <img class="menu-btn" src="images/form-02.svg" alt="">
-                            <div class="phone">+7-912-803-90-33</div>
+                            <div class="index-slide__title">Позвоните мне,<br> хочу записаться</div>
                         </div>
+                        <div class="open-form">
+                            <div class="open-form__wrap">
+                                <form action="#">
+                                    <div class="open-form__row">
+                                        <div class="open-form__item">
+                                            <input type="text" placeholder="имя">
+                                        </div>
+                                    </div>
+                                    <div class="open-form__row">
+                                        <div class="open-form__item">
+                                            <input type="tel" placeholder="телефон">
+                                        </div>
+                                    </div>
+                                    <div class="open-form__row">
+                                        <div class="open-form__item">
+                                            <input type="text" placeholder="комментарий">
+                                        </div>
+                                    </div>
+                                    <div class="open-form__row">
+                                        <a href="#" class="btn btn-form">отправить</a>
+                                    </div>
+                                    <div class="open-form__row">
+                                        <div class="open-form__condition">
+                                            нажимая кнопку «оставить заявку», вы принимаете<br> <a href="#">условия передачи указанной информации</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <a href="tel:+79128039033" class="phone">+7-912-803-90-33</a>
                     </div>
                 </div>
             </div>
