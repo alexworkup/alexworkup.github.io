@@ -78,7 +78,7 @@ body {
   line-height: 78px;
   text-align: center;
   border-radius: 44px;
-  background: linear-gradient(65deg, #E4BBA5 8.39%, #E4BBA5 82.16%);
+  background: linear-gradient(65deg, #E0E0E0 8.39%, #E3E0DE 82.16%);
   display: inline-block;
   color: #FFF;
   text-decoration: none;
@@ -632,6 +632,10 @@ body {
   right: 20%;
   top: 25%;
 }
+.nav__item:nth-child(4) {
+  top: 25%;
+  right: 65%;
+}
 .nav__item:before {
   content: "";
   padding-top: 100%;
@@ -697,6 +701,59 @@ body {
 @media screen and (max-width: 767px) {
   .nav__link span {
     font-size: 50px;
+  }
+}
+.nav_top .nav__item {
+  transform: translate(50%, -40%);
+}
+@media screen and (max-width: 767px) {
+  .nav_top .nav__item .nav__link {
+    padding: 45px;
+  }
+}
+.nav_top .nav__item:nth-child(1) .nav__link {
+  padding: 30px;
+}
+.nav_top .nav__item:nth-child(2) .nav__link {
+  padding: 85px;
+}
+@media screen and (max-width: 767px) {
+  .nav_top .nav__item:nth-child(2) .nav__link {
+    padding: 45px;
+  }
+}
+.nav_top .nav__item:nth-child(2) span {
+  font-size: 90px;
+}
+@media screen and (max-width: 1280px) {
+  .nav_top .nav__item:nth-child(2) span {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav_top .nav__item:nth-child(2) span {
+    font-size: 50px;
+  }
+}
+.nav_top .nav__item:nth-child(3) span {
+  font-size: 80px;
+}
+@media screen and (max-width: 1280px) {
+  .nav_top .nav__item:nth-child(3) span {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav_top .nav__item:nth-child(3) span {
+    font-size: 50px;
+  }
+}
+.nav_top .nav__item:nth-child(4) .nav__link {
+  padding: 110px;
+}
+@media screen and (max-width: 767px) {
+  .nav_top .nav__item:nth-child(4) .nav__link {
+    padding: 45px;
   }
 }
 
@@ -844,9 +901,15 @@ body {
 }
 .menu-toggle__close {
   position: absolute;
-  right: 30px;
-  top: 8px;
+  right: calc(10% - 20px);
+  top: calc(10% - 20px);
   cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+  .menu-toggle__close {
+    right: 20px;
+    top: 20px;
+  }
 }
 .menu-toggle__content {
   border-radius: 0 284px 284px 284px;
@@ -855,6 +918,8 @@ body {
   padding: 120px 100px 120px 120px;
   position: relative;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 1440px) {
   .menu-toggle__content {
@@ -874,7 +939,7 @@ body {
 }
 .menu-toggle__wrap {
   position: relative;
-  width: 50%;
+  width: 90%;
 }
 @media screen and (max-width: 1440px) {
   .menu-toggle__wrap {

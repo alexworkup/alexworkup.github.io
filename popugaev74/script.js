@@ -12,6 +12,14 @@ $(document).ready(function() {
             el: ".main-slider .swiper-pagination",
             clickable: true,
         },
+
+        on: {
+            slideChange: function () {
+                if (this.slides[this.activeIndex].classList.contains('js-parallax')) {
+                    activateParallax();
+                }
+            }
+        }
     });
 
     const $btnToggle = document.querySelector('.burger-fixed');
@@ -43,6 +51,9 @@ $(document).ready(function() {
         });
     }
 
+
+
+    /*
     // Параллакс по движению мышки
     var rect = document.querySelector('#nav').getBoundingClientRect();
     var mouse = { x: 0, y: 0, moved: false };
@@ -74,4 +85,28 @@ $(document).ready(function() {
     window.addEventListener('resize scroll', function() {
         rect = document.querySelector('#nav').getBoundingClientRect();
     });
+    */
+
+    console.log(document.querySelectorAll('.nav')[0].getBoundingClientRect());
+
+    /**/
+    function activateParallax() {
+
+        document.querySelectorAll('.nav').forEach((nav, i) => {
+            let mouse = { x: 0, y: 0, moved: false };
+
+            nav.addEventListener("mousemove", (e) => {
+                const rect = nav.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+
+                gsap.to(nav.querySelectorAll('.nav__link'), {
+                    duration: 0.5,
+                    x: index => (mouse.x - nav.offsetWidth / 2) / (30 + (index * i) * 500),
+                    y: index => (mouse.y - nav.offsetHeight / 2) / (30 + (index * i) * 500),
+                });
+            });
+        });
+    }
+
 });
