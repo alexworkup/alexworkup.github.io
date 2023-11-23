@@ -92,7 +92,7 @@ $(document).ready(function() {
     /**/
     function activateParallax() {
 
-        document.querySelectorAll('.nav').forEach((nav, i) => {
+        document.querySelectorAll('.nav').forEach(nav => {
             let mouse = { x: 0, y: 0, moved: false };
 
             nav.addEventListener("mousemove", (e) => {
@@ -102,8 +102,8 @@ $(document).ready(function() {
 
                 gsap.to(nav.querySelectorAll('.nav__link'), {
                     duration: 0.5,
-                    x: index => (mouse.x - nav.offsetWidth / 2) / (30 + (index * i) * 500),
-                    y: index => (mouse.y - nav.offsetHeight / 2) / (30 + (index * i) * 500),
+                    x: index => (mouse.x - nav.offsetWidth / 2) / (30 + index * 500),
+                    y: index => (mouse.y - nav.offsetHeight / 2) / (30 + index * 500)
                 });
             });
         });
