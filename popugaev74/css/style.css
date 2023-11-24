@@ -918,7 +918,7 @@ body {
   border-radius: 0 284px 284px 284px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12.5px);
-  padding: 120px 100px 120px 120px;
+  padding: 70px 100px 90px 120px;
   position: relative;
   width: 100%;
   display: flex;
@@ -942,7 +942,7 @@ body {
 }
 .menu-toggle__wrap {
   position: relative;
-  width: 70%;
+  width: 60%;
 }
 @media screen and (max-width: 1440px) {
   .menu-toggle__wrap {
