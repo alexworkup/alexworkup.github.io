@@ -7,6 +7,7 @@ $(document).ready(function() {
         speed: 1500,
         autoplay: false,
         mousewheel: true,
+        direction: 'vertical',
 
         pagination: {
             el: ".main-slider .swiper-pagination",
@@ -91,21 +92,41 @@ $(document).ready(function() {
 
     /**/
     function activateParallax() {
+        const navElements = document.querySelectorAll('.nav');
+        const navLinks = {};
 
-        document.querySelectorAll('.nav').forEach(nav => {
-            let mouse = { x: 0, y: 0, moved: false };
+        // Сохраняем ссылки на элементы nav__link
+        navElements.forEach((nav, index) => {
+            navLinks[index] = nav.querySelectorAll('.nav__link');
+        });
 
-            nav.addEventListener("mousemove", (e) => {
+        let mouse = { x: 0, y: 0 };
+        let isAnimating = false;
+
+        // Функция для обновления анимации
+        const updateAnimation = () => {
+            navElements.forEach((nav, index) => {
                 const rect = nav.getBoundingClientRect();
-                mouse.x = e.clientX - rect.left;
-                mouse.y = e.clientY - rect.top;
-
-                gsap.to(nav.querySelectorAll('.nav__link'), {
-                    duration: 0.5,
-                    x: index => (mouse.x - nav.offsetWidth / 2) / (30 + index * 500),
-                    y: index => (mouse.y - nav.offsetHeight / 2) / (30 + index * 500)
+                navLinks[index].forEach((link, linkIndex) => {
+                    const depth = (linkIndex + 1) * 10;
+                    gsap.to(link, {
+                        duration: 0.5,
+                        x: (mouse.x - rect.left - nav.offsetWidth / 2) / nav.offsetWidth * depth,
+                        y: (mouse.y - rect.top - nav.offsetHeight / 2) / nav.offsetHeight * depth
+                    });
                 });
             });
+            isAnimating = false;
+        };
+
+        document.addEventListener("mousemove", (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+
+            if (!isAnimating) {
+                requestAnimationFrame(updateAnimation);
+                isAnimating = true;
+            }
         });
     }
 

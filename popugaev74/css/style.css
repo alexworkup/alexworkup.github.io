@@ -452,6 +452,9 @@ body {
   }
 }
 
+.main-slider {
+  height: 100vh;
+}
 .main-slider__item {
   display: flex;
   align-items: center;
