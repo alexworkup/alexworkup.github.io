@@ -942,7 +942,7 @@ body {
 }
 .menu-toggle__wrap {
   position: relative;
-  width: 90%;
+  width: 70%;
 }
 @media screen and (max-width: 1440px) {
   .menu-toggle__wrap {
