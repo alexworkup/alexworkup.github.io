@@ -1015,7 +1015,7 @@ body {
   bottom: 0;
   width: 0;
   height: 1px;
-  background: rgb(255, 255, 255);
+  background: white;
   transition: 0.3s all ease-in-out;
 }
 .menu-toggle__wrap ul li a:hover:before {
