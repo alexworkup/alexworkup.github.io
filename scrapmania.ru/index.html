@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
@@ -15,7 +18,11 @@
     <header class="header header-mobile box">
         <div class="header__row header-mobile__row">
             <div class="header__col header-mobile__toggle">
-                <button class="toggle"><span></span></button>
+                <button class="toggle">
+                    <svg width="30" height="3" viewBox="0 0 30 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="2.5" rx="1.25" fill="#0B4C5E"/>
+                    </svg>
+                </button>
             </div>
             <div class="header__col header-mobile__logo">
                 <a href="/" class="logo">
@@ -37,9 +44,205 @@
                 </div>
             </div>
         </div>
+        <div class="header__row header-mobile__row">
+            <div class="search">
+                <form action="#" class="search__form">
+                    <div class="search__label">
+                        <input placeholder="Поиск" type="text" name="q" value="" autocomplete="off" class="search__input">
+                        <button class="search__submit" type="submit" name="s">
+                            <img src="images/icon-loupe.svg" alt="Поиск">
+                        </button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
     </header>
     <main class="main">
-
+        <div class="slider index-slider swiper">
+            <div class="slider__list swiper-wrapper">
+                <div class="slider__item swiper-slide">
+                    <a href="#" class="slider__link">
+                        <picture class="slider__picture">
+                            <source srcset="images/bn-mobile.webp" media="(max-width: 450px)">
+                            <source srcset="images/bn-tablet.webp" media="(max-width: 768px)">
+                            <img src="images/bn-desktop.webp" alt="Используй купон">
+                        </picture>
+                    </a>
+                </div>
+                <div class="slider__item swiper-slide">
+                    <a href="#" class="slider__link">
+                        <picture class="slider__picture">
+                            <source srcset="images/bn-mobile-2.webp" media="(max-width: 450px)">
+                            <source srcset="images/bn-tablet-2.webp" media="(max-width: 768px)">
+                            <img src="images/bn-desktop-2.webp" alt="Ликвидация дыроколов">
+                        </picture>
+                    </a>
+                </div>
+                <div class="slider__item swiper-slide">
+                    <a href="#" class="slider__link">
+                        <picture class="slider__picture">
+                            <source srcset="images/bn-mobile-3.webp" media="(max-width: 450px)">
+                            <source srcset="images/bn-tablet-3.webp" media="(max-width: 768px)">
+                            <img src="images/bn-desktop-3.webp" alt="Низкая цена">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="slider__pagination swiper-pagination"></div>
+        </div>
+        <div class="main-links">
+            <div class="main-links__wrap box">
+                <div class="main-links__title">Каталог более<br> <b>55000 товаров</b><br> <span>в наличии</span></div>
+                <a href="/shop/" class="main-links__caption"><span>Каталог</span></a>
+                <ul class="main-links__list">
+                    <li class="main-links__item">
+                        <a class="main-links__link" href="/shop/novinki/">Новинки</a>
+                    </li>
+                    <li class="main-links__item">
+                        <a class="main-links__link main-links__link_sale" href="/shop/skidki/">Распродажа %</a>
+                    </li>
+                    <li class="main-links__item">
+                        <a class="main-links__link" href="/shop/tema/">Тематики/подборки</a>
+                    </li>
+                    <li class="main-links__item">
+                        <a class="main-links__link" href="/shop/marki/">Марки/Бренды</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="welcome">
+            <div class="headline welcome__title">
+                <div class="headline__decor"></div>
+                <h1 class="h1 headline__title">
+                    <span class="headline__text">Материалы для скрапбукинга</span>
+                </h1>
+            </div>
+            <div class="welcome__text box">
+                <p>
+                    Добро пожаловать в самый крутой магазин товаров по скрапбукингу!
+                </p>
+                <p>
+                    Отправляем товары по всему миру. У&nbsp;нас <a href="https://scrapmania.ru/shop/">более 55000 товаров в наличии в каталоге, ЖМИ!</a>
+                </p>
+                <p>
+                    Все интересующие вас вопросы вы можете задать по эл.почте <a href="mailto:shop@scrapmania.ru">shop@scrapmania.ru</a> или по ватцап/вайбер 8912-771-3858&nbsp; (Андрей) или&nbsp;<a target="_blank" href="http://vk.com/scrapmaniaru">вк-группе</a>&nbsp;
+                </p>
+                <p>
+                    *СкрапМания – это мания по скрапбукингу. А скрапбукинг – это творчество по оформлению фотоальбомов, с применением специальной бумаги, разных украшений и инструментов. Основная идея скрапбукинга – сохранить фотографии и памятные вещи на длительный срок для будущих поколений.
+                </p>
+            </div>
+        </div>
+        <div class="popular-goods">
+            <div class="headline popular-goods__title">
+                <div class="headline__decor"></div>
+                <h2 class="h1 headline__title">
+                    <span class="headline__text">Популярные товары</span>
+                </h2>
+            </div>
+            <div class="popular-goods__list box">
+                <div class="popular-goods__col">
+                    <div class="popular-goods__item">
+                        <div class="popular-goods__name">Наборы бумаги</div>
+                        <a href="#" class="popular-goods__image">
+                            <img src="images/popular-01.webp" alt="Наборы бумаги">
+                            <span>смотреть</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="popular-goods__col">
+                    <div class="popular-goods__item">
+                        <div class="popular-goods__name">Бумага 30х30 см</div>
+                        <a href="#" class="popular-goods__image">
+                            <img src="images/popular-02.webp" alt="Бумага 30х30 см">
+                            <span>смотреть</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="popular-goods__col">
+                    <div class="popular-goods__item">
+                        <div class="popular-goods__name">Ножи для вырубки</div>
+                        <a href="#" class="popular-goods__image">
+                            <img src="images/popular-03.webp" alt="Ножи для вырубки">
+                            <span>смотреть</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="popular-goods__col">
+                    <div class="popular-goods__item">
+                        <div class="popular-goods__name">Чипборд</div>
+                        <a href="#" class="popular-goods__image">
+                            <img src="images/popular-04.webp" alt="Чипборд">
+                            <span>смотреть</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="headline news__title">
+                <div class="headline__decor"></div>
+                <h2 class="h1 headline__title">
+                    <span class="headline__text">Новости</span>
+                </h2>
+            </div>
+            <div class="news__list box">
+                <article class="news-item news-list__item">
+                    <div class="news-item__title">
+                        <span class="news-item__date date">25.11.2023</span>
+                        <h3 class="news-item__name">
+                            <a href="/info/news/chernaya-pyatnitsa-30-na-sammer-studio-muskari-mnogo-tovarov-scrapmania-i-ne-tolko/">Черная пятница: 30% на Саммер Студио, Мускари, много товаров ScrapMania и не только!</a>
+                        </h3>
+                    </div>
+                    <div class="news-item__text">
+                        - Скидка 30% на все товары марки <a href="https://scrapmania.ru/shop/skidki/summer30/">Summer Studio</a>, <a href="https://scrapmania.ru/shop/skidki/muscari30/">Muscari</a>, более <a href="https://scrapmania.ru/shop/skidki/black30/">500 товаров марки ScrapMania</a> (в том числе много бумаги полистно и на 50 дизайнов ножей)<br>
+                        <br>
+                        - Скидка 25% на все <a href="https://scrapmania.ru/shop/skidki/listi25/">листы для вырезания</a> ScrapMania (в том числе новые коллекции-2023!)<br>
+                        <br>
+                        - Скидка 15% на <a href="https://scrapmania.ru/shop/marki/scrapmania/">товары ScrapMania</a> и 10% на все остальное + до 7% за размер заказа&nbsp;до 28&nbsp;ноября включительно!<br>
+                        <br>
+                        - За каждую 1000 рублей в заказе (с учетом всех скидок) - вы получаете виртуальный билетик в розыгрыше призов: фен для эмбоссинга, наборы бумаги, резак! Розыгрыш в прямом эфире в ВК 8&nbsp;декабря!<br>
+                        <br>
+                        - При заказе от 1700 рублей - положите в корзину <a href="https://scrapmania.ru/product/bloknot_na_pruzhine_a6_novogodnyaya_vanilka_medvezhulya_vanilka_16_listov_scrapmania/">блокнот с веселым медвежонком</a> и введите купон ВАНИЛЬКА - скидка 100% ваша!&nbsp;<br>
+                        <br>
+                        - При заказе от 2000 рублей <a href="https://scrapmania.ru/product/podarok_zimniy_syurpriz_scrapmania/">зимний сюрприз (скрап+НЕскрап)</a> полагается &nbsp;вам со скидкой 100%! Он сам попросится в вашу корзину внизу, в разделе "Подарки".&nbsp;<br>
+                        <br>
+                        Еще больше подарочков в корзине при оформлении заказов на разные суммы! Чем больше ваш заказ - тем больше красоты вам будет предложено! Если у вас единовременный заказ&nbsp;от 6000р - можно выбрать себе наборы бумаги или ножи из предложенных в блоке "Выберите себе подарок"&nbsp; ;)&nbsp;<br>
+                        <br>
+                        А еще на сайте:<br>
+                        - <a href="https://scrapmania.ru/shop/novinki/">новинки</a>, в том числе&nbsp;бумага из Европы<br>
+                        - еще один новый релиз наших&nbsp;<a href="https://scrapmania.ru/shop/nozhi_dlya_vyrubki_i_mashinki/nozhi_dlya_vyrubki_i_tisneniya/">ножи для вырубки</a><br>
+                        -&nbsp;скраповый&nbsp;<a href="https://scrapmania.ru/product/advent_kalendar_novogodniy_31_yacheyka_na_2023_2024g_oformite_otdelnym_zakazom/">адвент-календарь</a>&nbsp;<br>
+                        - <a href="https://scrapmania.ru/shop/skidki/posledniy-shans/">Последний шанс до 99%</a>, увеличиваем скидки на эти товары каждую среду!<br>
+                        <br>
+                        Более 62000 товаров ждут вас!&nbsp;
+                    </div>
+                    <div class="news-item__gallery">
+                        <div class="slider news-slider swiper">
+                            <div class="slider__list swiper-wrapper">
+                                <div class="slider__item swiper-slide">
+                                    <a href="#" class="slider__link">
+                                        <img src="images/news-01.webp" alt="Черная пятница: 30% на Саммер Студио, Мускари, много товаров ScrapMania и не только!">
+                                    </a>
+                                </div>
+                                <div class="slider__item swiper-slide">
+                                    <a href="#" class="slider__link">
+                                        <img src="images/news-02.webp" alt="Черная пятница: 30% на Саммер Студио, Мускари, много товаров ScrapMania и не только!">
+                                    </a>
+                                </div>
+                                <div class="slider__item swiper-slide">
+                                    <a href="#" class="slider__link">
+                                        <img src="images/news-03.webp" alt="Черная пятница: 30% на Саммер Студио, Мускари, много товаров ScrapMania и не только!">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider__pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <a href="#" class="more"><span>прочитать полностью</span></a>
+                </article>
+            </div>
+        </div>
     </main>
     <footer class="footer">
 

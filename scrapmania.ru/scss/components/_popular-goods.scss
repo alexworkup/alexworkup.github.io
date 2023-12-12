@@ -1,0 +1,66 @@
+.popular-goods {
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 6px;
+  }
+
+  &__col {
+    width: calc(100% / 4);
+    padding: 6px;
+
+    @media #{$phone} {
+      width: calc(100% / 2);
+    }
+  }
+
+  &__item {
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    color: #0B4C5E;
+    font-family: $font-family-add;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+    box-sizing: border-box;
+    padding: 6px;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    font-size: 0;
+    height: 166px;
+    background-color: #f1f1f1;
+
+    span {
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #72919A;
+      font-size: 14px;
+      height: 25px;
+      line-height: 25px;
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0 12px;
+      display: block;
+    }
+
+    img {
+      max-height: inherit;
+      width: auto;
+    }
+  }
+}

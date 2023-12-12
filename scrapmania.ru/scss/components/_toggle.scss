@@ -1,0 +1,31 @@
+.toggle {
+  position: relative;
+  border: none;
+  background: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMyIgdmlld0JveD0iMCAwIDMwIDMiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMCIgaGVpZ2h0PSIyLjUiIHJ4PSIxLjI1IiBmaWxsPSIjMEI0QzVFIi8+Cjwvc3ZnPgo=");
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+}

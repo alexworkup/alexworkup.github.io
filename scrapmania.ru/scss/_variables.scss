@@ -1,17 +1,21 @@
 // Fonts
-$font-family-base:    'Kelson Sans RU', 'Arial Narrow', sans-serif;
-$font-family-add:     'Gilroy', 'Arial Narrow', sans-serif;
+$font-family-base:    'Gilroy', 'Arial Narrow', sans-serif;
+$font-family-add:     'Playfair Display', serif;
 $font-size-base:       16px;
 $font-weight-base:     400;
 
 // Color
-$c-white:             #FFFFFF;
+$c-dark:             #083542;
+$c-normal:           #0B4C5E;
+$c-light:            #177B91;
+$c-very-light:       #269DB7;
 
 // Responsive width
 $notebook: 'screen and (max-width: 1440px)';
 $laptop: 'screen and (max-width: 1279px)';
 $tablet: 'screen and (max-width: 979px)';
 $phone: 'screen and (max-width: 767px)';
+$small-phone: 'screen and (max-width: 374px)';
 
 
 

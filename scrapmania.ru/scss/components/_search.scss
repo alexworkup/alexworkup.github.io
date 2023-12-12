@@ -1,0 +1,46 @@
+.search {
+  width: 100%;
+
+  &__label {
+    position: relative;
+  }
+
+  &__input {
+    appearance: none;
+    padding: 0 0 0 40px;
+    margin: 0;
+    border-radius: 20px;
+    border: 1px solid rgba(11, 76, 94, 0.20);
+    background: rgba(255, 255, 255, 0.60);
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    text-transform: lowercase;
+    transition: .1s border linear;
+    font-family: $font-family-base;
+    line-height: 30px;
+
+    &::placeholder {
+      font-family: $font-family-base;
+    }
+
+    &:focus {
+      border: 1px solid rgba(11, 76, 94, 0.5);
+      outline: none;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    left: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

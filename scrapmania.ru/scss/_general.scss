@@ -3,6 +3,9 @@
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  font-family: $font-family-base;
+  font-size: 16px;
+  color: black;
 }
 
 .main {
@@ -19,4 +22,36 @@ img {
 
 .box {
   padding: 0 16px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-add;
+  font-weight: 600;
+  color: $c-normal;
+  line-height: 120%;
+}
+
+.h1 {
+  font-size: 24px;
+}
+
+.h2 {
+  font-size: 22px;
+}
+
+.h3 {
+  font-size: 20px;
+}
+
+.h4 {
+  font-size: 18px;
+}
+
+a:not([class]) {
+  color: $c-light;
 }

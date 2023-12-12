@@ -1,0 +1,49 @@
+.slider {
+
+  &__link {
+    font-size: 0;
+    display: block;
+  }
+
+  &__item {
+    text-align: center; 
+  }
+
+  &__pagination {
+    position: relative;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.swiper-pagination {
+      bottom: 0;
+
+      .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        margin: 0 10px;
+        background-color: $c-normal;
+        opacity: .5;
+        position: relative;
+        display: flex;
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+
+          &:before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            position: relative;
+            background-color: #177B91;
+            border-radius: 50%;
+            margin: auto;
+            border: 1px solid #fff;
+          }
+        }
+
+      }
+    }
+  }
+}

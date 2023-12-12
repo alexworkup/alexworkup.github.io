@@ -1,9 +1,27 @@
 .header-mobile {
   display: none;
   background-color: rgba(11, 76, 94, 0.20);
+  padding-top: 2px;
+  padding-bottom: 6px;
+  background-image: url("../images/header-mobile-bg.jpg");
+  background-repeat: repeat;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 17px;
+    width: 100%;
+    background-image: url("../images/header-mobile-after.png");
+    background-repeat: repeat-x;
+    bottom: -17px;
+    left: 0;
+    z-index: 5;
+  }
 
   &__row {
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 8px;
   }
 
   &__small-basket {

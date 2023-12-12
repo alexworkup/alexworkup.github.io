@@ -1,0 +1,16 @@
+.welcome {
+  margin-bottom: 30px;
+
+  &__text {
+    font-family: $font-family-base;
+    font-size: 16px;
+    color: #000000;
+    line-height: 140%;
+
+    a {
+      color: $c-light;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+}

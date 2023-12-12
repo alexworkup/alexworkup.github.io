@@ -1,0 +1,26 @@
+.news-item {
+
+  &__title {
+    margin-bottom: 25px;
+    line-height: 125%;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    display: inline;
+  }
+
+  &__date {
+    color: $c_light;
+  }
+
+  &__text {
+    margin-bottom: 27px;
+  }
+
+  &__gallery {
+    margin-bottom: 27px;
+  }
+
+}
