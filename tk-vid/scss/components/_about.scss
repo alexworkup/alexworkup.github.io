@@ -1,0 +1,154 @@
+.about {
+  padding-top: 14px;
+  padding-bottom: 75px;
+
+  &__title {
+    padding-bottom: 20px;
+    color: #004b5e;
+    font-family: 'Jura', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; // 73.333%
+  }
+
+  &__container {
+    padding: 27px 100px 41px 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 43px;
+    border-radius: 10px;
+    background: url('../images/Baner2.png'), lightgray -515.894px -57px / 136.85% 240.385% no-repeat;
+  }
+
+  &__wrapper {
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    padding-bottom: 20px;
+    color: #fff;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; // 122.222%
+  }
+
+  &__text_highlighting {
+    color: #fff;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  &__button {
+    text-decoration: none;
+    color: #38827f;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; // 88.889%
+  }
+
+  @media (max-width: 1517px) {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  @media (max-width: 1317px) {
+    max-width: 1080px;
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1197px) {
+    max-width: 900px;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1017px) {
+    max-width: 768px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__container {
+      padding: 27px 50px 41px 45px;
+    }
+  }
+
+  @media (max-width: 861px) {
+    max-width: 480px;
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__container {
+      display: block;
+      padding: 27px 50px 25px 45px;
+    }
+  }
+
+  @media (max-width: 491px) {
+    max-width: 375px;
+
+    &__title {
+      padding-left: 21px;
+      padding-bottom: 37px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 376px) {
+    max-width: 355px;
+
+    &__container {
+      padding: 27px 15px 25px 10px;
+    }
+  }
+
+  @media (max-width: 351px) {
+    max-width: 300px;
+  }
+}
+
+.logo__big {
+  width: 328px;
+
+  @media (max-width: 1017px) {
+    width: 300px;
+  }
+
+  @media (max-width: 861px) {
+    width: 354px;
+    margin-top: -44px;
+    padding-bottom: 14px;
+  }
+
+  @media (max-width: 491px) {
+    width: 225px;
+    margin-top: -40px;
+    padding-bottom: 14px;
+  }
+}

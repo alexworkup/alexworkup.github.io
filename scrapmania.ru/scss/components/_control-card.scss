@@ -1,0 +1,63 @@
+.control-card {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    color: $c-normal;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 15px;
+    height: 30px;
+    min-width: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 9px;
+    border: 1px solid #0B4C5E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.added {
+      color: #FFFFFF;
+    }
+
+    &_type {
+
+      &_cart {
+        justify-content: left;
+
+        @media #{$small-phone} {
+
+          svg {
+            display: none;
+          }
+        }
+
+        &.added {
+          background: linear-gradient(91deg, #177B91 -26.03%, #0B4C5E 86.1%);
+          font-weight: 400;
+
+          path {
+            stroke: #FFFFFF;
+          }
+        }
+
+        svg {
+          margin-right: 7px;
+        }
+      }
+
+      &_favorite {
+        padding: 0;
+
+        &.added {
+          background: #0B4C5E;
+
+          path {
+            fill: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}

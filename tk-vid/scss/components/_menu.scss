@@ -1,0 +1,148 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  max-width: 760px;
+  width: 100%;
+
+  @media (max-width: 1197px) {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  @media (max-width: 861px) {
+    order: -1;
+  }
+
+  ul {
+
+    li {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @media (max-width: 861px) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+      position: fixed;
+      align-items: start;
+      gap: 20px;
+      top: 0%;
+      left: 0%;
+      width: 50%;
+      height: 100%;
+      padding: 15px;
+      background-color: rgba(6, 45, 54, 0.9);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+      z-index: 20;
+    }
+
+    &.active {
+
+      @media (max-width: 861px) {
+        transform: translateX(0);
+        padding-top: 70px;
+      }
+    }
+  }
+
+  &__item {
+    margin-right: 51px;
+    position: relative;
+
+    @media (max-width: 1517px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 1317px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 1197px) {
+      margin-right: 10px;
+    }
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 3px;
+      flex-shrink: 0;
+      background-color: #209194;
+      position: absolute;
+      left: 0px;
+      bottom: -35px;
+      transform: scaleX(0);
+
+      @media (max-width: 1317px) {
+        bottom: -30px;
+      }
+
+      @media (max-width: 1197px) {
+        bottom: -21px;
+      }
+
+      @media (max-width: 861px) {
+        bottom: -5px;
+      }
+    }
+
+    &:hover {
+
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+
+    &:first-child {
+      margin-left: 28px;
+
+      @media (max-width: 1197px) {
+        margin-left: 15px;
+      }
+
+      @media (max-width: 861px) {
+        margin-left: 0px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @media (max-width: 1317px) {
+      font-size: 14px;
+    }
+  }
+
+  &__link_active {
+    color: #facb0a;
+  }
+
+  @media (max-width: 1517px) {
+    max-width: 580px;
+  }
+
+  @media (max-width: 1317px) {
+    max-width: 580px;
+  }
+}

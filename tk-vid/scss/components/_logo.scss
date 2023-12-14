@@ -1,0 +1,29 @@
+.logo {
+  transform: translateY(-15px);
+
+  @media (max-width: 1317px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1197px) {
+    width: 150px;
+    transform: translateY(-10px);
+  }
+
+  @media (max-width: 861px) {
+    width: 158px;
+    margin-left: 60px;
+    margin-right: 21px;
+    transform: translateY(0px);
+  }
+
+  @media (max-width: 491px) {
+    width: 158px;
+  }
+
+  @media (max-width: 351px) {
+    width: 140px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+}

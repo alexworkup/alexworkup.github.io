@@ -1,0 +1,13 @@
+.tel {
+
+  @media (max-width: 861px) {
+    display: block;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 491px) {
+    width: 22px;
+    display: block;
+    padding-right: 10px;
+  }
+}

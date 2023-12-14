@@ -1,0 +1,17 @@
+.section-sidebar {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 61px;
+  height: 200px;
+  background: url('../images/Union55.png') top right no-repeat,
+  url('../images/Union66.png') bottom right no-repeat;
+  top: 60%;
+  right: 0;
+
+  @media (max-width: 1017px) {
+    .section-sidebar {
+      display: none;
+    }
+  }
+}

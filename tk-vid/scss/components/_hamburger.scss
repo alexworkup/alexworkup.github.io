@@ -1,0 +1,56 @@
+.hamburger {
+  width: 30px;
+  height: 14px;
+  margin: 5px;
+  background-image: url(../../images/бургер.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 39%;
+  left: 1%;
+
+  &-menu {
+    display: none;
+
+    @media (max-width: 861px) {
+      display: block;
+    }
+
+    &.active {
+      @media (max-width: 861px) {
+        display: block;
+      }
+    }
+
+    &.active {
+
+      @media (max-width: 861px) {
+        width: 40px;
+        height: 40px;
+        margin: 0px;
+        background-image: url('../images/cross_9fh62rftufyi\(1\).svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        transition: transform 2s;
+        z-index: 50;
+        top: 25%;
+        left: 0;
+      }
+    }
+
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 376px) {
+    left: 5%;
+  }
+
+  @media (max-width: 351px) {
+    left: -8%;
+  }
+}

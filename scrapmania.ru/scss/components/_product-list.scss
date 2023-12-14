@@ -1,0 +1,16 @@
+.product-list {
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -6px;
+    padding-bottom: 24px;
+  }
+
+  &__item {
+    width: calc(100% / 2);
+    padding: 6px;
+  }
+}

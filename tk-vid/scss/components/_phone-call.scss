@@ -1,0 +1,17 @@
+.phone-call {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: 1017px) {
+    display: none;
+  }
+
+  &.header-tel {
+
+    @media (max-width: 491px) {
+      display: none;
+    }
+  }
+}

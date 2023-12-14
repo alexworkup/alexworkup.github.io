@@ -1,0 +1,25 @@
+.price-list {
+
+  &__item {
+    color: $c-light-dark;
+    font-size: 16px;
+
+    &_type {
+
+      &_actual {
+        font-size: 14px;
+
+        span {
+          font-size: 18px;
+          color: black;
+        }
+      }
+
+      &_old {
+        font-size: 12px;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+}

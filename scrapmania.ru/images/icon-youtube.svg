@@ -1,0 +1,30 @@
+<svg id="youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.594" height="35.75" viewBox="0 0 36.594 35.75">
+<defs>
+    <style>
+      .cls-1 {
+        fill: #7a6b67;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="134.406" y="15.125" width="36.594" height="35.75" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#e21b1b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="143" y="26" width="19" height="14" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Прямоугольник_скругл._углы_3_copy_2" data-name="Прямоугольник, скругл. углы 3 copy 2" class="cls-1" d="M152.412,15.139H153A17.81,17.81,0,0,1,170.99,32.761v0.492A17.81,17.81,0,0,1,153,50.874h-0.585a17.81,17.81,0,0,1-17.993-17.621V32.761A17.81,17.81,0,0,1,152.412,15.139Z" transform="translate(-134.406 -15.125)"/>
+  <path id="Forma_1" data-name="Forma 1" class="cls-2" d="M161.681,28.252a2.456,2.456,0,0,0-2.056-1.975A60.493,60.493,0,0,0,152.5,26a60.527,60.527,0,0,0-7.123.278,2.455,2.455,0,0,0-2.054,1.975,22.672,22.672,0,0,0-.336,4.75,22.665,22.665,0,0,0,.332,4.75,2.454,2.454,0,0,0,2.055,1.975,60.424,60.424,0,0,0,7.122.278,60.39,60.39,0,0,0,7.121-.278,2.457,2.457,0,0,0,2.056-1.975A22.665,22.665,0,0,0,162.01,33,22.669,22.669,0,0,0,161.681,28.252Zm-11.635,7.869V29.476l6.047,3.333Z" transform="translate(-134.406 -15.125)"/>
+</svg>

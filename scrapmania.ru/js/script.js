@@ -27,4 +27,17 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         });
     }
+
+    const controlCard = document.querySelectorAll('.control-card__item');
+
+    if(controlCard) {
+        controlCard.forEach((item) => {
+
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                item.classList.toggle('added');
+            });
+        });
+    }
+
 });
