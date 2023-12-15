@@ -1,0 +1,64 @@
+.small-basket {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0E2A33;
+  position: relative;
+
+  @media #{$tablet} {
+    width: 33px;
+    height: 33px;
+  }
+
+  &__num {
+    position: absolute;
+    font-size: 14px;
+    width: 19px;
+    height: 25px;
+    color: #0E2A33;
+    background-image: url("../images/small-basket-num-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: 700;
+    top: -6px;
+    right: -8px;
+
+    @media #{$tablet} {
+      width: 12px;
+      height: 14px;
+      background-size: cover;
+      top: -2px;
+      right: -2px;
+      font-size: 0;
+    }
+
+    i {
+      font-style: normal;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__icon {
+
+    @media #{$tablet} {
+      max-width: 17px;
+    }
+
+    path {
+      transition: .2s all linear;
+    }
+
+    &:hover {
+
+      path {
+        stroke: #FECD14;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.header-control {
+  display: flex;
+  align-items: center;
+  margin: 0 -13px;
+
+  @media #{$laptop} {
+    margin: 0 -8px;
+  }
+
+  &__item {
+    padding: 0 13px;
+
+    @media #{$laptop} {
+      padding: 0 8px;
+    }
+
+    &_type_search {
+
+      @media #{$laptop} {
+        display: none;
+      }
+    }
+  }
+}

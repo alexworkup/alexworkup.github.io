@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: #f3f7f9;
+  font-family: $font-family-base;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @media screen and (min-width: 1921px) {
+    background-size: cover;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  max-width: 1400px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
