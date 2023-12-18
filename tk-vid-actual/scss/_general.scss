@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,9 +10,15 @@ body {
   font-family: $font-family-base;
   background-repeat: no-repeat;
   background-position: top;
+  padding-top: 105px;
+  background-attachment: fixed;
 
   @media screen and (min-width: 1921px) {
     background-size: cover;
+  }
+
+  @media #{$tablet} {
+    padding-top: 65px;
   }
 }
 
@@ -27,7 +34,7 @@ p {
 }
 
 .box {
-  max-width: 1400px;
+  max-width: 1420px;
   padding: 0 10px;
   margin: 0 auto;
 }

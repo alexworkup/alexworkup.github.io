@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 10px;
+  background: linear-gradient(142deg, #004B5E 21.17%, rgba(18, 60, 74, 0.00) 132.69%);
+  height: 43px;
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 20px 0 40px;
+  min-width: 170px;
+  transition: .2s all linear;
+
+  span {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 15px;
+      margin-top: 3px;
+
+      path {
+        stroke: #ffffff;
+        transition: .2s all linear;
+      }
+    }
+  }
+
+  &:hover {
+    color: #FCEB0D;
+
+    span {
+
+      svg {
+
+        path {
+          stroke: #FCEB0D;
+        }
+      }
+    }
+  }
+}

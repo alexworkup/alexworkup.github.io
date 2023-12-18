@@ -23,6 +23,11 @@
     cursor: pointer;
     color: #299DAE;
     font-size: 14px;
+    transition: .2s all linear;
+
+    &:hover {
+      color: #FECD14;
+    }
   }
 
   &__text {

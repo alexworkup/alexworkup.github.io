@@ -5,6 +5,7 @@
   left: 0;
   top: 14px;
   width: 100%;
+  z-index: 100;
 
   @media #{$tablet} {
     top: 0;

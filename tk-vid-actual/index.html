@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -89,13 +93,13 @@
                 </div>
                 <div class="header__col header__col_type_phone">
                     <div class="phone">
-                        <a href="#" class="phone__icon">
+                        <a href="tel:+73512113735" class="phone__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <path d="M21.2923 15.8356C21.2535 15.8033 16.8615 12.6603 15.6699 12.8663C15.0971 12.9675 14.7693 13.3577 14.113 14.1401C13.9315 14.3578 13.746 14.5719 13.5564 14.7825C13.1416 14.6474 12.737 14.4827 12.3457 14.2897C10.3257 13.3063 8.69366 11.6743 7.71027 9.65433C7.5173 9.26304 7.35261 8.85843 7.21747 8.4436C7.43307 8.24633 7.7352 7.99187 7.86427 7.88333C8.64233 7.23067 9.03247 6.90287 9.13367 6.3294C9.3412 5.14213 6.19667 0.746533 6.1644 0.706933C6.0212 0.503841 5.83469 0.335078 5.61834 0.212826C5.40199 0.0905734 5.16119 0.0178824 4.91333 0C3.6388 0 0 4.71973 0 5.5154C0 5.5616 0.0667334 10.2579 5.85787 16.1487C11.7421 21.9333 16.4384 22 16.4846 22C17.2803 22 22 18.3612 22 17.0867C21.9821 16.8387 21.9094 16.5979 21.787 16.3815C21.6646 16.1651 21.4956 15.9787 21.2923 15.8356ZM16.4039 20.5289C15.763 20.4761 11.8221 19.9562 6.8948 15.1155C2.02913 10.1618 1.5224 6.20987 1.4718 5.59753C2.43304 4.08881 3.59391 2.71702 4.92287 1.51947C4.9522 1.5488 4.99107 1.5928 5.04093 1.65C6.06014 3.0413 6.93812 4.53073 7.66187 6.0962C7.42651 6.33297 7.17774 6.55603 6.9168 6.76427C6.51214 7.0726 6.14055 7.42207 5.808 7.80707L5.6298 8.0564L5.6826 8.3578C5.83779 9.03007 6.07549 9.68058 6.39027 10.2945C7.51805 12.6104 9.38943 14.4815 11.7055 15.609C12.3193 15.9242 12.9698 16.1622 13.6422 16.3174L13.9436 16.3702L14.1929 16.192C14.5794 15.858 14.9303 15.4849 15.2401 15.0788C15.4697 14.8045 15.7769 14.4386 15.8928 14.3352C17.4627 15.0582 18.956 15.9373 20.35 16.9591C20.4109 17.0104 20.4534 17.05 20.482 17.0757C19.2846 18.405 17.9128 19.5662 16.4039 20.5275V20.5289Z" fill="#3C7082"/>
                             </svg>
                         </a>
                         <div class="phone__text">
-                            <a href="te:+73512113735" class="phone__link">+7 351 211 37 35</a>
+                            <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
                             <button class="phone__btn">Заказать звонок</button>
                         </div>
                     </div>
@@ -104,7 +108,133 @@
         </div>
     </header>
     <main class="main">
-
+        <div class="main-slider box">
+            <div class="main-slider__wrap swiper">
+                <div class="main-slider__list swiper-wrapper">
+                    <div class="main-slider__item swiper-slide">
+                        <div class="index-slide">
+                            <div class="index-slide__wrap">
+                                <div class="index-slide__content">
+                                    <div class="index-slide__title">
+                                        <span>N-</span>DURO
+                                    </div>
+                                    <div class="index-slide__anons">
+                                        <div class="index-slide__text">Полностью синтетическое масло премиум-класса для высоконагруженных дизельных двигателей тяжелых грузовиков.</div>
+                                        <div class="index-slide__more">
+                                            <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="index-slide__image index-image">
+                                <picture class="index-image__item index-image__item_type_main">
+                                    <source srcset="images/index-slide-1-mobile.png" media="(max-width: 450px)">
+                                    <img src="images/index-slide-1.png" alt="">
+                                </picture>
+                                <picture class="index-image__item index-image__item_type_bg">
+                                    <img src="images/index-slide-2.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__item swiper-slide">
+                        <div class="index-slide">
+                            <div class="index-slide__wrap">
+                                <div class="index-slide__content">
+                                    <div class="index-slide__title">
+                                        <span>N-</span>FORCE SPECIAL
+                                    </div>
+                                    <div class="index-slide__anons">
+                                        <div class="index-slide__text">Современное топливосберегающее синтетическое моторное масло для всесезонного использования.</div>
+                                        <div class="index-slide__more">
+                                            <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="index-slide__image index-image">
+                                <picture class="index-image__item index-image__item_type_main">
+                                    <source srcset="images/index-slide-3-mobile.png" media="(max-width: 450px)">
+                                    <img src="images/index-slide-3.png" alt="">
+                                </picture>
+                                <picture class="index-image__item index-image__item_type_bg">
+                                    <img src="images/index-slide-2.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__item swiper-slide">
+                        <div class="index-slide">
+                            <div class="index-slide__wrap">
+                                <div class="index-slide__content">
+                                    <div class="index-slide__title">
+                                        <span>N-</span>FORCE ASIA
+                                    </div>
+                                    <div class="index-slide__anons">
+                                        <div class="index-slide__text">Полностью синтетическое топливосберегающее моторное масло для всесезонного использования.</div>
+                                        <div class="index-slide__more">
+                                            <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="index-slide__image index-image">
+                                <picture class="index-image__item index-image__item_type_main">
+                                    <source srcset="images/index-slide-4-mobile.png" media="(max-width: 450px)">
+                                    <img src="images/index-slide-4.png" alt="">
+                                </picture>
+                                <picture class="index-image__item index-image__item_type_bg">
+                                    <img src="images/index-slide-2.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="main-slider__nav section-nav box">
+                <div class="section-nav__wrap">
+                    <ul class="section-nav__list">
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Моторные масла</a></li>
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Трансмиссионные масла</a></li>
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Гидравлические масла</a></li>
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Пластичные смазки</a></li>
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Антифризы</a></li>
+                        <li class="section-nav__item"><a class="section-nav__link" href="">Специальные масла</a></li>
+                        <li class="section-nav__item section-nav__item_type_toggle">
+                            <a class="section-nav__link section-nav__link_type_toggle" href="">
+                                <svg width="32" height="7" viewBox="0 0 32 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="28.5" cy="3.5" r="3.5" fill="white"/>
+                                    <circle cx="15.5" cy="3.5" r="3.5" fill="white"/>
+                                    <circle cx="3.5" cy="3.5" r="3.5" fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
 

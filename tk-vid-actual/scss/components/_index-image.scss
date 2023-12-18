@@ -1,0 +1,45 @@
+.index-image {
+  height: 100%;
+  
+  @media #{$phone} {
+    padding: 10px 0;
+  }
+
+  &__item {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    transition: .5s all ease-in-out;
+
+    @media #{$phone} {
+      justify-content: flex-end;
+    }
+
+    img {
+      max-height: 100%;
+
+      @media #{$phone} {
+        max-width: 170px;
+      }
+    }
+
+    &_type_main {
+      transform: translateX(20px);
+    }
+
+    &_type_bg {
+
+      @media #{$phone} {
+        display: none;
+      }
+
+      img {
+        position: absolute;
+        z-index: -1;
+        left: calc(50% - 80px);
+        bottom: 60px;
+        transition: .5s all ease-in-out;
+      }
+    }
+  }
+}
