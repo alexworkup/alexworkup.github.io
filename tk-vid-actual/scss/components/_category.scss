@@ -1,0 +1,21 @@
+.category {
+  margin-bottom: 55px;
+
+  &__list {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+
+  &__head {
+    margin-bottom: -20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__item {
+    height: 360px;
+    width: calc(100% / 4);
+  }
+}

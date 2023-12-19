@@ -51,4 +51,13 @@ $(function() {
     applyClamp();
     window.addEventListener('resize', applyClamp);
 
+    const categoryList = document.getElementById('category-slider')
+
+    if(categoryList) {
+
+        const categoryListSwiper = new Swiper('#category-slider .swiper', {
+            slidesPerView: 4,
+            spaceBetween: 26,
+        });
+    }
 });
