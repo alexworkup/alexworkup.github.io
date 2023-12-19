@@ -1,0 +1,30 @@
+.link-more {
+  font-size: 18px;
+  color: #38827F;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  transition: .2s all linear;
+  line-height: 120%;
+
+  &:hover {
+    color: #FCEB0D;
+
+    svg {
+
+      path {
+        stroke: #FCEB0D;
+      }
+    }
+  }
+
+  svg {
+    margin-left: 6px;
+    margin-top: 2px;
+
+    path {
+      transition: .2s all linear;
+    }
+  }
+}

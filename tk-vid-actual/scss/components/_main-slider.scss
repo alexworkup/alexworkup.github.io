@@ -1,5 +1,6 @@
 .main-slider {
   position: relative;
+  margin-bottom: 44px;
 
   .swiper-pagination {
     display: flex;
@@ -70,11 +71,18 @@
     }
   }
 
-  &__nav {
+  &__section {
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 50px;
     z-index: 1;
+
+    @media #{$laptop} {
+      position: relative;
+      bottom: 0;
+      margin-top: 20px;
+      padding: 0;
+    }
   }
 }

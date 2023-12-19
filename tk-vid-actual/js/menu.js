@@ -1,9 +1,6 @@
 (function (window){
 	'use strict';
 
-    if (window.Alpha.Menu)
-        return;
-    
     window.Alpha.Menu = function (params)
     {
         this.params = {};

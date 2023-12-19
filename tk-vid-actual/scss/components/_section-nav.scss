@@ -6,6 +6,12 @@
     backdrop-filter: blur(7.5px);
     border-radius: 10px;
     padding-left: 50px;
+    display: flex;
+    align-items: center;
+    
+    @media #{$phone} {
+      padding-left: 30px;
+    }
   }
 
   &__list {
@@ -20,14 +26,6 @@
     position: relative;
     padding-right: 28px;
     margin-right: 16px;
-
-    &:nth-last-child(2) {
-      padding-right: 0;
-
-      &:before {
-        content: none;
-      }
-    }
 
     &:last-child {
       margin-right: 0;
@@ -68,6 +66,50 @@
 
     &_type_toggle {
       padding-right: 25px;
+    }
+  }
+
+  .nav__dropdown-toggle {
+    border: none;
+    appearance: none;
+    margin-right: 26px;
+    cursor: pointer;
+    background-image: url("../images/nav-toggle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 35px;
+    font-size: 0;
+  }
+
+  .nav__dropdown-wrapper {
+    margin-left: auto;
+    align-self: stretch;
+    display: flex;
+    align-content: center;
+  }
+
+  .priority-nav__dropdown {
+    right: 0;
+    top: 50px;
+    background: linear-gradient(90deg, rgba(0, 85, 92, 0.70) 0%, rgba(4, 145, 147, 0.70) 22.74%, rgba(0, 95, 96, 0.70) 47.23%, rgba(11, 141, 140, 0.70) 72.92%, rgba(0, 93, 99, 0.70) 100%);
+    backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    list-style: none;
+    padding: 20px;
+
+    .section-nav__item {
+      margin-right: 0;
+      padding-right: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    .section-nav__link {
+      padding: 10px 0;
+      transition: none;
     }
   }
 }

@@ -1,0 +1,95 @@
+.index-about {
+  margin-bottom: 80px;
+
+  &__head {
+    margin-bottom: 18px;
+    position: relative;
+    line-height: 122%;
+    font-size: 18px;
+
+    @media #{$phone} {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      content: '';
+      clear: both;
+      display: inline-block;
+
+      @media #{$phone} {
+        content: none;
+      }
+    }
+
+    img {
+      float: left;
+      margin-right: 45px;
+      
+      @media #{$laptop} {
+        margin-right: 45px;
+        margin-bottom: 10px;
+      }
+
+      @media #{$phone} {
+        float: none;
+        margin-bottom: 14px;
+        max-width: 227px;
+        margin-right: 0;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__wrap {
+    border-radius: 10px;
+    background-color: #0f2d2d;
+    color: #ffffff;
+    padding: 40px 50px;
+    background-image: url("../images/about-index-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @media #{$phone} {
+      background-color: #1A3E49;
+      padding: 22px 11px;
+      background-image: url("../images/about-index-bg-mobile.png");
+      background-position: top;
+    }
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 15px;
+
+    b {
+      font-size: 20px;
+
+      @media #{$phone} {
+        font-size: 18px;
+      }
+    }
+
+    p {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__more {
+    text-align: right;
+
+    @media #{$phone} {
+      text-align: left;
+    }
+  }
+}

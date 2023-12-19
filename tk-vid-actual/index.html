@@ -10,6 +10,9 @@
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/script.js"></script>
+    <script src="js/priority-nav.min.js"></script>
+    <script src="js/clamp/clamp.min.js"></script>
+    <link rel="stylesheet" href="css/priority-nav-core.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -213,8 +216,8 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-            <div class="main-slider__nav section-nav box">
-                <div class="section-nav__wrap">
+            <div class="main-slider__section section-nav box">
+                <div class="section-nav__wrap priority-nav">
                     <ul class="section-nav__list">
                         <li class="section-nav__item"><a class="section-nav__link" href="">Моторные масла</a></li>
                         <li class="section-nav__item"><a class="section-nav__link" href="">Трансмиссионные масла</a></li>
@@ -222,16 +225,189 @@
                         <li class="section-nav__item"><a class="section-nav__link" href="">Пластичные смазки</a></li>
                         <li class="section-nav__item"><a class="section-nav__link" href="">Антифризы</a></li>
                         <li class="section-nav__item"><a class="section-nav__link" href="">Специальные масла</a></li>
-                        <li class="section-nav__item section-nav__item_type_toggle">
-                            <a class="section-nav__link section-nav__link_type_toggle" href="">
-                                <svg width="32" height="7" viewBox="0 0 32 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="28.5" cy="3.5" r="3.5" fill="white"/>
-                                    <circle cx="15.5" cy="3.5" r="3.5" fill="white"/>
-                                    <circle cx="3.5" cy="3.5" r="3.5" fill="white"/>
-                                </svg>
-                            </a>
-                        </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="benefit__wrap box">
+                <div class="benefit__list">
+                    <div class="benefit__item benefits-item">
+                        <div class="benefits-item__icon">
+                            <picture>
+                                <img src="images/benefit-icon-01.svg" alt="Высокое качество">
+                            </picture>
+                        </div>
+                        <div class="benefits-item__name">
+                            Высокое<br> качество
+                        </div>
+                    </div>
+                    <div class="benefit__item benefits-item">
+                        <div class="benefits-item__icon">
+                            <picture>
+                                <img src="images/benefit-icon-02.svg" alt="Надежный производитель">
+                            </picture>
+                        </div>
+                        <div class="benefits-item__name">
+                            Надежный<br> производитель
+                        </div>
+                    </div>
+                    <div class="benefit__item benefits-item">
+                        <div class="benefits-item__icon">
+                            <picture>
+                                <img src="images/benefit-icon-03.svg" alt="Широкий ассортимент">
+                            </picture>
+                        </div>
+                        <div class="benefits-item__name">
+                            Широкий<br> ассортимент
+                        </div>
+                    </div>
+                    <div class="benefit__item benefits-item">
+                        <div class="benefits-item__icon">
+                            <picture>
+                                <source srcset="images/benefit-icon-04-mobile.svg" media="(max-width: 600px)">
+                                <img src="images/benefit-icon-04.svg" alt="Удобная доставка">
+                            </picture>
+                        </div>
+                        <div class="benefits-item__name">
+                            Удобная<br> доставка
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index-about box">
+            <h2 class="index-about__title h2">О бренде C.N.R.G</h2>
+            <div class="index-about__wrap">
+                <div class="index-about__head">
+                    <img src="images/logo-cnrg-about.svg" alt="О бренде C.N.R.G">
+                    <p>Компания C.N.R.G. с 1997 года разрабатывает и производит смазочные материалы и технические жидкости на собственном заводе в Москве. C.N.R.G. прошла путь от производства масел ГОСТ до запуска собственного бренда премиальных смазочных материалов по мировым стандартам. </p>
+                </div>
+                <div class="index-about__content">
+                    <p><b>C.N.R.G. состоит из трех структурных подразделений:</b></p>
+                    <p>- ЗАВОД ПО ПРОИЗВОДСТВУ СМАЗОЧНЫХ МАТЕРИАЛОВ<br>
+                    Завод C.N.R.G. оборудован установками с трехступенчатой системой блендинга, реактором по производству смазок и несколькими полуавтоматическими фасовочными линиями. Резервуарный парк предприятия позволяет хранить одновременно 400 тонн сырья и 250 тонн готовой продукции.</p>
+                    <p>- ЛАБОРАТОРИЯ<br>
+                    Собственная лаборатория контролирует качество продукта на всех стадиях производства. В результате продукты C.N.R.G. отличаются стабильно высоким качеством. К каждой партии прилагаются декларация соответствия EAC и паспорт качества.</p>
+                    <p>- ТОРГОВЫЙ ДОМ<br>
+                    Торговый дом отвечает за дистрибуцию смазочных материалов C.N.R.G. по всей территории России и в зарубежных странах, предоставляет маркетинговую и техническую поддержку партнерам. Система сбыта охватывает несколько каналов: прямые поставки предприятиям с собственным парком техники, региональную дилерскую сеть и розничные или мелкооптовые продажи через интернет-магазин.</p>
+                </div>
+                <div class="index-about__more">
+                    <a href="#" class="link-more">
+                        <span>Подробнее</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="category box">
+            <div class="category__head">
+                <div class="category__title h2"></div>
+                <div class="category__more">
+                    <a href="#" class="link-more">
+                        <span>Подробнее</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="category__wrap">
+                <div class="category__list">
+                    <div class="category__item">
+                        <div class="category-item">
+                            <div class="category-item__title">
+                                Моторные масла
+                            </div>
+                            <div class="category-item__pics">
+                                <img src="images/category-item__pics-01.png" alt="">
+                            </div>
+                            <div class="category-item__desc">
+                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                            </div>
+                            <div class="category-item__control">
+                                <a href="#" class="btn">
+                                    <span>
+                                        Подробнее
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                            <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item">
+                            <div class="category-item__title">
+                                Гидравлические масла
+                            </div>
+                            <div class="category-item__pics">
+                                <img src="images/category-item__pics-02.png" alt="">
+                            </div>
+                            <div class="category-item__desc">
+                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                            </div>
+                            <div class="category-item__control">
+                                <a href="#" class="btn">
+                                    <span>
+                                        Подробнее
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                            <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item">
+                            <div class="category-item__title">
+                                Трансмиссионные масла
+                            </div>
+                            <div class="category-item__pics">
+                                <img src="images/category-item__pics-03.png" alt="">
+                            </div>
+                            <div class="category-item__desc">
+                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                            </div>
+                            <div class="category-item__control">
+                                <a href="#" class="btn">
+                                    <span>
+                                        Подробнее
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                            <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item">
+                            <div class="category-item__title">
+                                Вакуумные масла
+                            </div>
+                            <div class="category-item__pics">
+                                <img src="images/category-item__pics-04.png" alt="">
+                            </div>
+                            <div class="category-item__desc">
+                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                            </div>
+                            <div class="category-item__control">
+                                <a href="#" class="btn">
+                                    <span>
+                                        Подробнее
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                            <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
