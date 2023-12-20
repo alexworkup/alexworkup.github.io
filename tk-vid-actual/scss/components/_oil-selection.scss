@@ -1,0 +1,52 @@
+.oil-selection {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(60% - 20px);
+    background-color: #0C2D35;
+    left: 0;
+    top: calc(50% + 30px);
+    transform: translateY(-50%);
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/oil-selection-bg.png");
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 115%;
+    margin-bottom: 30px;
+
+    b {
+      font-weight: inherit;
+      font-size: 90px;
+      color: #17E3DB;
+      display: block;
+      margin-left: -5px;
+    }
+
+  }
+
+  .btn {
+    height: 64px;
+    font-size: 25px;
+    padding: 0 35px 0 55px;
+    border-radius: 10px;
+    background: linear-gradient(142deg, #004B5E 21.17%, rgba(18, 60, 74, 0.00) 132.69%);
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.30);
+  }
+}

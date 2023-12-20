@@ -12,23 +12,35 @@
 
     &-bullet {
       width: 42px;
-      height: 3px;
-      background-color: #CED6DC;
+      height: 20px;
       position: relative;
       border-radius: 0;
       opacity: 1;
+      background: transparent;
 
       &:before {
         content: '';
         position: absolute;
         width: 0;
-        height: 100%;
+        height: 3px;
         left: 0;
-        top: 0;
+        top: 8px;
         background: #26AAAB;
         transition-timing-function: linear;
         transition-property: width;
         transition-duration: .3s;
+        z-index: 2;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #CED6DC;
+        left: 0;
+        top: 8px;
+        z-index: 1;
       }
 
       &-active {

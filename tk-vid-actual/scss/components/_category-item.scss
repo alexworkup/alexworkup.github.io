@@ -2,22 +2,32 @@
   height: 100%;
   width: 100%;
   position: relative;
-  border-radius: 10px;
-  background: #FFF;
 
   &:hover {
 
-    .category-item__content {
-      opacity: 1;
-      max-height: 300px;
-      visibility: visible;
+    @media screen and (min-width: 768px) {
+
+      .category-item__content {
+        opacity: 1;
+        max-height: 300px;
+        visibility: visible;
+      }
+
+      .category-item__wrap {
+        top: -20px;
+        height: auto;
+
+        &:before {
+          box-shadow: -5px -5px 20px rgba(7, 28, 37, 0.1);
+          clip-path: polygon(210% -20px, -20px 165%, -20px -20px);
+        }
+      }
+
+      .category-item__name {
+        color: #18948F;
+      }
     }
 
-    .category-item__wrap {
-      top: -20px;
-      box-shadow: 0 4px 30px rgba(7, 28, 37, 0.10);
-      //clip-path: polygon(100% 0, 0 100%, 0 0);
-    }
   }
 
   &__name {
@@ -26,7 +36,15 @@
     font-weight: 700;
     text-align: center;
     padding-bottom: 20px;
+    line-height: 100%;
     position: relative;
+    transition: .2s all linear;
+    
+    @media #{$phone} {
+      font-size: 15px;
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
 
     &:after {
       content: '';
@@ -46,6 +64,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    @media #{$phone} {
+      height: auto;
+      flex-grow: 1;
+    }
 
     img {
       height: auto;
@@ -60,16 +84,38 @@
   }
 
   &__wrap {
-    border-radius: 10px;
-    background: #FFF;
     padding: 15px 20px;
     width: 100%;
-    height: auto;
+    height: 100%;
     top: 0;
     left: 0;
     position: absolute;
-    box-shadow: none;
     transition: .2s all ease-in;
+
+    @media #{$phone} {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 15px 10px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: none;
+      clip-path: polygon(275% -20px, -20px 165%, -20px -20px);
+      transition: .2s all ease-in;
+
+      @media #{$phone} {
+        clip-path: none;
+      }
+    }
   }
 
   &__control {
@@ -80,6 +126,20 @@
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: .2s all ease-in;
+    //transition: .2s all ease-in;
+    position: relative;
+
+    @media #{$phone} {
+      display: none;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
 }

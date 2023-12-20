@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   background-color: #f3f7f9;
@@ -19,6 +23,7 @@ body {
     padding-top: 65px;
   }
 }
+
 
 .h2 {
   font-size: 30px;
@@ -38,4 +43,19 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.title-decor {
+  position: relative;
+  padding-left: 29px;
+
+  &:before {
+    content: '';
+    background-image: url("../images/title-decor.svg");
+    width: 18px;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
 }

@@ -51,13 +51,50 @@ $(function() {
     applyClamp();
     window.addEventListener('resize', applyClamp);
 
-    const categoryList = document.getElementById('category-slider')
+    const categoryList = document.getElementById('category-slider');
 
-    if(categoryList) {
+    let categoryListSwiper;
 
-        const categoryListSwiper = new Swiper('#category-slider .swiper', {
-            slidesPerView: 4,
-            spaceBetween: 26,
-        });
+    function initializeSwiper() {
+        if (window.innerWidth >= 768) {
+
+            if (!categoryListSwiper) {
+
+                categoryListSwiper = new Swiper('#category-slider .swiper', {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                    navigation: {
+                        nextEl: '#category-slider .swiper-button-next',
+                        prevEl: '#category-slider .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        425: {
+                            slidesPerView: 2,
+                            spaceBetween: 15
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 15
+                        },
+                        979: {
+                            slidesPerView: 3,
+                            spaceBetween: 15
+                        },
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 26,
+                        },
+                    }
+                });
+            }
+        } else if (categoryListSwiper) {
+
+            categoryListSwiper.destroy(true, true);
+            categoryListSwiper = null;
+        }
     }
+
+    initializeSwiper();
+
+    window.addEventListener('resize', initializeSwiper);
 });

@@ -1,6 +1,10 @@
 .index-about {
   margin-bottom: 80px;
 
+  @media #{$phone} {
+    margin-bottom: 40px;
+  }
+
   &__head {
     margin-bottom: 18px;
     position: relative;
