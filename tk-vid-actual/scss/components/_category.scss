@@ -2,6 +2,10 @@
   margin-bottom: 55px;
   position: relative;
 
+  @media #{$phone} {
+    margin-bottom: 35px;
+  }
+
   &__list {
     display: flex;
     padding-top: 50px;
@@ -37,6 +41,10 @@
     @media #{$phone} {
       width: 100%;
       height: auto;
+
+      &:nth-of-type(n+5) {
+        display: none;
+      }
     }
   }
 

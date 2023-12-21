@@ -1,0 +1,44 @@
+.products-list {
+  padding-bottom: 90px;
+
+  @media #{$phone} {
+    padding-bottom: 38px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 26px;
+    margin-bottom: 50px;
+
+    @media #{$notebook} {
+      grid-gap: 15px;
+    }
+
+    @media #{$laptop} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$tablet} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__more {
+    text-align: center;
+  }
+}

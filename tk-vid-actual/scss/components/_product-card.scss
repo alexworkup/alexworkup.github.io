@@ -1,0 +1,157 @@
+.product-card {
+  position: relative;
+  padding: 20px;
+  height: 100%;
+
+  &:hover {
+
+    @media screen and (min-width: 768px) {
+
+      &:before {
+        box-shadow: -5px -5px 20px rgba(7, 28, 37, 0.1);
+        clip-path: polygon(210% -20px, -20px 165%, -20px -20px);
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    border-radius: 10px;
+    clip-path: polygon(275% -20px, -20px 165%, -20px -20px);
+    transition: .2s all ease-in;
+  }
+
+  &__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__badge {
+    position: absolute;
+    z-index: 1;
+    top: 21px;
+    right: -9px;
+
+    @media #{$phone} {
+      right: 10px;
+    }
+  }
+
+  &__title {
+    text-decoration: none;
+    color: #215C6A;
+    font-size: 17px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    position: relative;
+    margin-bottom: 16px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(270deg, rgba(221, 233, 239, 0.00) 0%, rgba(181, 207, 221, 0.50) 50%, rgba(221, 233, 239, 0.00) 100%);
+    }
+  }
+
+  &__pics {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__property {
+    margin-bottom: 20px;
+  }
+
+  &__control {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .card-property {
+    color: #585B63;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+
+    &__list {
+      padding: 0;
+      margin: 0 0 0 15px;
+    }
+  }
+
+  .card-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      font-weight: 600;
+
+      &_type_actual {
+        color: #38827F;
+        font-size: 25px;
+        line-height: 100%;
+
+        @media #{$notebook} {
+          font-size: 20px;
+        }
+
+        @media #{$phone} {
+          font-size: 25px;
+        }
+      }
+
+      &_type_old {
+        color: #718B98;
+        font-size: 16px;
+        text-decoration: line-through;
+      }
+    }
+
+  }
+
+  .card-buy {
+
+    &.in-cart {
+
+      .btn {
+        color: #FCEB0D;
+        background: linear-gradient(142deg, #004B5E 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
+
+        &:before {
+          content: none;
+        }
+
+        svg {
+
+          path,
+          circle {
+            fill: #FCEB0D;
+          }
+        }
+      }
+    }
+  }
+}

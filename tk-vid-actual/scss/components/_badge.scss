@@ -1,0 +1,28 @@
+.badge {
+
+  &__item {
+    border-radius: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    width: 65px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_type_new {
+      background: rgba(24, 148, 143, 0.50);
+      color: #215C6A;
+    }
+
+    &_type_discount {
+      background: #FAB909;
+      color: #ffffff;
+    }
+  }
+}

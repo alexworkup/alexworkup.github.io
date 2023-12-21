@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__link {
+    padding: 12px;
+    font-size: 0;
+    display: block;
+
+    svg {
+
+      path {
+        transition: .2s all linear;
+      }
+    }
+
+    &:hover {
+
+      svg {
+
+        path {
+          fill: #FECD14;
+        }
+      }
+    }
+  }
+}

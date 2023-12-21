@@ -17,577 +17,879 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-image: url('images/index-bg.jpg')">
-    <header class="header">
-        <div class="header__wrap box">
-            <div class="header__row">
-                <div class="header__col header__col_type_toggle">
-                    <button class="toggle">
-                        <img src="images/toggle.svg" alt="Открыть мобильное меню">
-                    </button>
-                </div>
-                <div class="header__col header__col_type_logo">
-                    <ul class="logo-list">
-                        <li class="logo-list__item logo-list__item_type_cnrg logo">
-                            <a href="#" class="logo-list__link">
-                                <img src="images/logo-cnrg.svg" alt="CNRG">
-                            </a>
-                        </li>
-                        <li class="logo-list__item logo-list__item_type_vid logo">
-                            <a href="#" class="logo-list__link">
-                                <img src="images/logo-tk-vid.svg" alt="ТК ВИД">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header__col header__col_type_nav">
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">О бренде C.N.R.G</a>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__wrap box">
+                <div class="header__row">
+                    <div class="header__col header__col_type_toggle">
+                        <button class="toggle">
+                            <img src="images/toggle.svg" alt="Открыть мобильное меню">
+                        </button>
+                    </div>
+                    <div class="header__col header__col_type_logo">
+                        <ul class="logo-list">
+                            <li class="logo-list__item logo-list__item_type_cnrg logo">
+                                <a href="#" class="logo-list__link">
+                                    <img src="images/logo-cnrg.svg" alt="CNRG">
+                                </a>
                             </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Каталог</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Подбор масла</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Оплата</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Доставка</a>
-                            </li>
-                            <li class="nav__item">
-                                <a class="nav__link" href="#">Контакты</a>
+                            <li class="logo-list__item logo-list__item_type_vid logo">
+                                <a href="#" class="logo-list__link">
+                                    <img src="images/logo-tk-vid.svg" alt="ТК ВИД">
+                                </a>
                             </li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="header__col header__col_type_control">
-                    <div class="header-control">
-                        <div class="header-control__item header-control__item_type_search">
-                            <button class="open-search">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_170_421)">
-                                        <circle cx="10.5" cy="10.5" r="9.5" stroke="#3C7082" stroke-width="1.5"/>
-                                        <path d="M17.5 17.5L21 21" stroke="#3C7082" stroke-width="1.5" stroke-linecap="round"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_170_421">
-                                            <rect width="22" height="22" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </button>
+                    </div>
+                    <div class="header__col header__col_type_nav">
+                        <nav class="nav">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">О бренде C.N.R.G</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Каталог</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Подбор масла</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Оплата</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Доставка</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__col header__col_type_control">
+                        <div class="header-control">
+                            <div class="header-control__item header-control__item_type_search">
+                                <button class="open-search">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_170_421)">
+                                            <circle cx="10.5" cy="10.5" r="9.5" stroke="#3C7082" stroke-width="1.5"/>
+                                            <path d="M17.5 17.5L21 21" stroke="#3C7082" stroke-width="1.5" stroke-linecap="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_170_421">
+                                                <rect width="22" height="22" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="header-control__item header-control__item_type_basket">
+                                <a href="#" class="small-basket">
+                                    <span class="small-basket__num"><i>9</i></span>
+                                    <svg class="small-basket__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.55514 12.2572C0.836681 8.90435 0.47745 7.22793 1.378 6.11397C2.27855 5 3.99302 5 7.42196 5H12.5781C16.0071 5 17.7215 5 18.6221 6.11397C19.5226 7.22793 19.1634 8.90435 18.4449 12.2572L18.0164 14.2572C17.5294 16.5297 17.2859 17.666 16.4608 18.333C15.6357 19 14.4737 19 12.1495 19H7.85053C5.52639 19 4.36432 19 3.53925 18.333C2.71418 17.666 2.47069 16.5297 1.98372 14.2572L1.55514 12.2572Z" stroke="#26AAAB" stroke-width="1.5"/>
+                                        <path d="M6 10H14" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 13H12" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 7L13 1" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4 7L7 1" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="header-control__item header-control__item_type_basket">
-                            <a href="#" class="small-basket">
-                                <span class="small-basket__num"><i>9</i></span>
-                                <svg class="small-basket__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.55514 12.2572C0.836681 8.90435 0.47745 7.22793 1.378 6.11397C2.27855 5 3.99302 5 7.42196 5H12.5781C16.0071 5 17.7215 5 18.6221 6.11397C19.5226 7.22793 19.1634 8.90435 18.4449 12.2572L18.0164 14.2572C17.5294 16.5297 17.2859 17.666 16.4608 18.333C15.6357 19 14.4737 19 12.1495 19H7.85053C5.52639 19 4.36432 19 3.53925 18.333C2.71418 17.666 2.47069 16.5297 1.98372 14.2572L1.55514 12.2572Z" stroke="#26AAAB" stroke-width="1.5"/>
-                                    <path d="M6 10H14" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8 13H12" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 7L13 1" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M4 7L7 1" stroke="#26AAAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </div>
+                    <div class="header__col header__col_type_phone">
+                        <div class="phone">
+                            <a href="tel:+73512113735" class="phone__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                    <path d="M21.2923 15.8356C21.2535 15.8033 16.8615 12.6603 15.6699 12.8663C15.0971 12.9675 14.7693 13.3577 14.113 14.1401C13.9315 14.3578 13.746 14.5719 13.5564 14.7825C13.1416 14.6474 12.737 14.4827 12.3457 14.2897C10.3257 13.3063 8.69366 11.6743 7.71027 9.65433C7.5173 9.26304 7.35261 8.85843 7.21747 8.4436C7.43307 8.24633 7.7352 7.99187 7.86427 7.88333C8.64233 7.23067 9.03247 6.90287 9.13367 6.3294C9.3412 5.14213 6.19667 0.746533 6.1644 0.706933C6.0212 0.503841 5.83469 0.335078 5.61834 0.212826C5.40199 0.0905734 5.16119 0.0178824 4.91333 0C3.6388 0 0 4.71973 0 5.5154C0 5.5616 0.0667334 10.2579 5.85787 16.1487C11.7421 21.9333 16.4384 22 16.4846 22C17.2803 22 22 18.3612 22 17.0867C21.9821 16.8387 21.9094 16.5979 21.787 16.3815C21.6646 16.1651 21.4956 15.9787 21.2923 15.8356ZM16.4039 20.5289C15.763 20.4761 11.8221 19.9562 6.8948 15.1155C2.02913 10.1618 1.5224 6.20987 1.4718 5.59753C2.43304 4.08881 3.59391 2.71702 4.92287 1.51947C4.9522 1.5488 4.99107 1.5928 5.04093 1.65C6.06014 3.0413 6.93812 4.53073 7.66187 6.0962C7.42651 6.33297 7.17774 6.55603 6.9168 6.76427C6.51214 7.0726 6.14055 7.42207 5.808 7.80707L5.6298 8.0564L5.6826 8.3578C5.83779 9.03007 6.07549 9.68058 6.39027 10.2945C7.51805 12.6104 9.38943 14.4815 11.7055 15.609C12.3193 15.9242 12.9698 16.1622 13.6422 16.3174L13.9436 16.3702L14.1929 16.192C14.5794 15.858 14.9303 15.4849 15.2401 15.0788C15.4697 14.8045 15.7769 14.4386 15.8928 14.3352C17.4627 15.0582 18.956 15.9373 20.35 16.9591C20.4109 17.0104 20.4534 17.05 20.482 17.0757C19.2846 18.405 17.9128 19.5662 16.4039 20.5275V20.5289Z" fill="#3C7082"/>
+                                </svg>
+                            </a>
+                            <div class="phone__text">
+                                <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
+                                <button class="phone__btn">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-slider box">
+                <div class="main-slider__wrap swiper">
+                    <div class="main-slider__list swiper-wrapper">
+                        <div class="main-slider__item swiper-slide">
+                            <div class="index-slide">
+                                <div class="index-slide__wrap">
+                                    <div class="index-slide__content">
+                                        <div class="index-slide__title">
+                                            <span>N-</span>DURO
+                                        </div>
+                                        <div class="index-slide__anons">
+                                            <div class="index-slide__text">Полностью синтетическое масло премиум-класса для высоконагруженных дизельных двигателей тяжелых грузовиков.</div>
+                                            <div class="index-slide__more">
+                                                <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-slide__image index-image">
+                                    <picture class="index-image__item index-image__item_type_main">
+                                        <source srcset="images/index-slide-1-mobile.png" media="(max-width: 450px)">
+                                        <img src="images/index-slide-1.png" alt="">
+                                    </picture>
+                                    <picture class="index-image__item index-image__item_type_bg">
+                                        <img src="images/index-slide-2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider__item swiper-slide">
+                            <div class="index-slide">
+                                <div class="index-slide__wrap">
+                                    <div class="index-slide__content">
+                                        <div class="index-slide__title">
+                                            <span>N-</span>FORCE SPECIAL
+                                        </div>
+                                        <div class="index-slide__anons">
+                                            <div class="index-slide__text">Современное топливосберегающее синтетическое моторное масло для всесезонного использования.</div>
+                                            <div class="index-slide__more">
+                                                <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-slide__image index-image">
+                                    <picture class="index-image__item index-image__item_type_main">
+                                        <source srcset="images/index-slide-3-mobile.png" media="(max-width: 450px)">
+                                        <img src="images/index-slide-3.png" alt="">
+                                    </picture>
+                                    <picture class="index-image__item index-image__item_type_bg">
+                                        <img src="images/index-slide-2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-slider__item swiper-slide">
+                            <div class="index-slide">
+                                <div class="index-slide__wrap">
+                                    <div class="index-slide__content">
+                                        <div class="index-slide__title">
+                                            <span>N-</span>FORCE ASIA
+                                        </div>
+                                        <div class="index-slide__anons">
+                                            <div class="index-slide__text">Полностью синтетическое топливосберегающее моторное масло для всесезонного использования.</div>
+                                            <div class="index-slide__more">
+                                                <a href="#" class="index-slide__btn btn">
+                                                <span>
+                                                    Подробнее
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="index-slide__image index-image">
+                                    <picture class="index-image__item index-image__item_type_main">
+                                        <source srcset="images/index-slide-4-mobile.png" media="(max-width: 450px)">
+                                        <img src="images/index-slide-4.png" alt="">
+                                    </picture>
+                                    <picture class="index-image__item index-image__item_type_bg">
+                                        <img src="images/index-slide-2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="main-slider__section section-nav box">
+                    <div class="section-nav__wrap priority-nav">
+                        <ul class="section-nav__list">
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Моторные масла</a></li>
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Трансмиссионные масла</a></li>
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Гидравлические масла</a></li>
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Пластичные смазки</a></li>
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Антифризы</a></li>
+                            <li class="section-nav__item"><a class="section-nav__link" href="">Специальные масла</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="blur-wrapper">
+                <div class="benefit">
+                    <div class="benefit__wrap box">
+                        <div class="benefit__list">
+                            <div class="benefit__item benefits-item">
+                                <div class="benefits-item__icon">
+                                    <picture>
+                                        <img src="images/benefit-icon-01.svg" alt="Высокое качество">
+                                    </picture>
+                                </div>
+                                <div class="benefits-item__name">
+                                    Высокое<br> качество
+                                </div>
+                            </div>
+                            <div class="benefit__item benefits-item">
+                                <div class="benefits-item__icon">
+                                    <picture>
+                                        <img src="images/benefit-icon-02.svg" alt="Надежный производитель">
+                                    </picture>
+                                </div>
+                                <div class="benefits-item__name">
+                                    Надежный<br> производитель
+                                </div>
+                            </div>
+                            <div class="benefit__item benefits-item">
+                                <div class="benefits-item__icon">
+                                    <picture>
+                                        <img src="images/benefit-icon-03.svg" alt="Широкий ассортимент">
+                                    </picture>
+                                </div>
+                                <div class="benefits-item__name">
+                                    Широкий<br> ассортимент
+                                </div>
+                            </div>
+                            <div class="benefit__item benefits-item">
+                                <div class="benefits-item__icon">
+                                    <picture>
+                                        <source srcset="images/benefit-icon-04-mobile.svg" media="(max-width: 600px)">
+                                        <img src="images/benefit-icon-04.svg" alt="Удобная доставка">
+                                    </picture>
+                                </div>
+                                <div class="benefits-item__name">
+                                    Удобная<br> доставка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-about box">
+                    <h2 class="index-about__title h2">О бренде C.N.R.G</h2>
+                    <div class="index-about__wrap">
+                        <div class="index-about__head">
+                            <img src="images/logo-cnrg-about.svg" alt="О бренде C.N.R.G">
+                            <p>Компания C.N.R.G. с 1997 года разрабатывает и производит смазочные материалы и технические жидкости на собственном заводе в Москве. C.N.R.G. прошла путь от производства масел ГОСТ до запуска собственного бренда премиальных смазочных материалов по мировым стандартам. </p>
+                        </div>
+                        <div class="index-about__content">
+                            <p><b>C.N.R.G. состоит из трех структурных подразделений:</b></p>
+                            <p>- ЗАВОД ПО ПРОИЗВОДСТВУ СМАЗОЧНЫХ МАТЕРИАЛОВ<br>
+                                Завод C.N.R.G. оборудован установками с трехступенчатой системой блендинга, реактором по производству смазок и несколькими полуавтоматическими фасовочными линиями. Резервуарный парк предприятия позволяет хранить одновременно 400 тонн сырья и 250 тонн готовой продукции.</p>
+                            <p>- ЛАБОРАТОРИЯ<br>
+                                Собственная лаборатория контролирует качество продукта на всех стадиях производства. В результате продукты C.N.R.G. отличаются стабильно высоким качеством. К каждой партии прилагаются декларация соответствия EAC и паспорт качества.</p>
+                            <p>- ТОРГОВЫЙ ДОМ<br>
+                                Торговый дом отвечает за дистрибуцию смазочных материалов C.N.R.G. по всей территории России и в зарубежных странах, предоставляет маркетинговую и техническую поддержку партнерам. Система сбыта охватывает несколько каналов: прямые поставки предприятиям с собственным парком техники, региональную дилерскую сеть и розничные или мелкооптовые продажи через интернет-магазин.</p>
+                        </div>
+                        <div class="index-about__more">
+                            <a href="#" class="link-more">
+                                <span>Подробнее</span>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="header__col header__col_type_phone">
-                    <div class="phone">
-                        <a href="tel:+73512113735" class="phone__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                                <path d="M21.2923 15.8356C21.2535 15.8033 16.8615 12.6603 15.6699 12.8663C15.0971 12.9675 14.7693 13.3577 14.113 14.1401C13.9315 14.3578 13.746 14.5719 13.5564 14.7825C13.1416 14.6474 12.737 14.4827 12.3457 14.2897C10.3257 13.3063 8.69366 11.6743 7.71027 9.65433C7.5173 9.26304 7.35261 8.85843 7.21747 8.4436C7.43307 8.24633 7.7352 7.99187 7.86427 7.88333C8.64233 7.23067 9.03247 6.90287 9.13367 6.3294C9.3412 5.14213 6.19667 0.746533 6.1644 0.706933C6.0212 0.503841 5.83469 0.335078 5.61834 0.212826C5.40199 0.0905734 5.16119 0.0178824 4.91333 0C3.6388 0 0 4.71973 0 5.5154C0 5.5616 0.0667334 10.2579 5.85787 16.1487C11.7421 21.9333 16.4384 22 16.4846 22C17.2803 22 22 18.3612 22 17.0867C21.9821 16.8387 21.9094 16.5979 21.787 16.3815C21.6646 16.1651 21.4956 15.9787 21.2923 15.8356ZM16.4039 20.5289C15.763 20.4761 11.8221 19.9562 6.8948 15.1155C2.02913 10.1618 1.5224 6.20987 1.4718 5.59753C2.43304 4.08881 3.59391 2.71702 4.92287 1.51947C4.9522 1.5488 4.99107 1.5928 5.04093 1.65C6.06014 3.0413 6.93812 4.53073 7.66187 6.0962C7.42651 6.33297 7.17774 6.55603 6.9168 6.76427C6.51214 7.0726 6.14055 7.42207 5.808 7.80707L5.6298 8.0564L5.6826 8.3578C5.83779 9.03007 6.07549 9.68058 6.39027 10.2945C7.51805 12.6104 9.38943 14.4815 11.7055 15.609C12.3193 15.9242 12.9698 16.1622 13.6422 16.3174L13.9436 16.3702L14.1929 16.192C14.5794 15.858 14.9303 15.4849 15.2401 15.0788C15.4697 14.8045 15.7769 14.4386 15.8928 14.3352C17.4627 15.0582 18.956 15.9373 20.35 16.9591C20.4109 17.0104 20.4534 17.05 20.482 17.0757C19.2846 18.405 17.9128 19.5662 16.4039 20.5275V20.5289Z" fill="#3C7082"/>
+                <div class="category box" id="category-slider">
+                    <div class="category__head">
+                        <div class="category__title h2 title-decor">Популярные категории</div>
+                        <div class="category__more category__more_type_header">
+                            <a href="#" class="link-more">
+                                <span>Все категории</span>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="category__wrap swiper">
+                        <div class="category__list swiper-wrapper">
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Моторные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-01.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа...
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Гидравлические масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-02.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Трансмиссионные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-03.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Вакуумные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-04.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа...
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Моторные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-01.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Гидравлические масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-02.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Трансмиссионные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-03.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category__item swiper-slide">
+                                <div class="category-item">
+                                    <a href="#" class="category-item__link"></a>
+                                    <div class="category-item__wrap">
+                                        <div class="category-item__name">
+                                            Вакуумные масла
+                                        </div>
+                                        <div class="category-item__pics">
+                                            <img src="images/section-item__pics-04.png" alt="">
+                                        </div>
+                                        <div class="category-item__content">
+                                            <div class="category-item__desc">
+                                                Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
+                                            </div>
+                                            <div class="category-item__control">
+                                                <a href="#" class="btn">
+                                        <span>
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
+                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.71436 1L1.00007 5.5L5.71436 10" stroke="#798C97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M1 1L5.71429 5.5L1 10" stroke="#798C97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="category__more category__more_type_footer">
+                        <a href="#" class="link-more">
+                            <span>Все категории</span>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
-                        <div class="phone__text">
-                            <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
-                            <button class="phone__btn">Заказать звонок</button>
-                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <div class="main-slider box">
-            <div class="main-slider__wrap swiper">
-                <div class="main-slider__list swiper-wrapper">
-                    <div class="main-slider__item swiper-slide">
-                        <div class="index-slide">
-                            <div class="index-slide__wrap">
-                                <div class="index-slide__content">
-                                    <div class="index-slide__title">
-                                        <span>N-</span>DURO
-                                    </div>
-                                    <div class="index-slide__anons">
-                                        <div class="index-slide__text">Полностью синтетическое масло премиум-класса для высоконагруженных дизельных двигателей тяжелых грузовиков.</div>
-                                        <div class="index-slide__more">
-                                            <a href="#" class="index-slide__btn btn">
-                                                <span>
-                                                    Подробнее
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="oil-selection">
+                    <div class="oil-selection__wrap box">
+                        <div class="oil-selection__row">
+                            <div class="oil-selection__img">
+                                <img src="images/oil-selection-img.png" alt="ПОДБОР МАСЛА">
                             </div>
-                            <div class="index-slide__image index-image">
-                                <picture class="index-image__item index-image__item_type_main">
-                                    <source srcset="images/index-slide-1-mobile.png" media="(max-width: 450px)">
-                                    <img src="images/index-slide-1.png" alt="">
-                                </picture>
-                                <picture class="index-image__item index-image__item_type_bg">
-                                    <img src="images/index-slide-2.png" alt="">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-slider__item swiper-slide">
-                        <div class="index-slide">
-                            <div class="index-slide__wrap">
-                                <div class="index-slide__content">
-                                    <div class="index-slide__title">
-                                        <span>N-</span>FORCE SPECIAL
-                                    </div>
-                                    <div class="index-slide__anons">
-                                        <div class="index-slide__text">Современное топливосберегающее синтетическое моторное масло для всесезонного использования.</div>
-                                        <div class="index-slide__more">
-                                            <a href="#" class="index-slide__btn btn">
-                                                <span>
-                                                    Подробнее
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
+                            <div class="oil-selection__text">
+                                <div class="oil-selection__title">
+                                    ПОДБОР МАСЛА
+                                    <b>ON-LINE</b>
                                 </div>
-                            </div>
-                            <div class="index-slide__image index-image">
-                                <picture class="index-image__item index-image__item_type_main">
-                                    <source srcset="images/index-slide-3-mobile.png" media="(max-width: 450px)">
-                                    <img src="images/index-slide-3.png" alt="">
-                                </picture>
-                                <picture class="index-image__item index-image__item_type_bg">
-                                    <img src="images/index-slide-2.png" alt="">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-slider__item swiper-slide">
-                        <div class="index-slide">
-                            <div class="index-slide__wrap">
-                                <div class="index-slide__content">
-                                    <div class="index-slide__title">
-                                        <span>N-</span>FORCE ASIA
-                                    </div>
-                                    <div class="index-slide__anons">
-                                        <div class="index-slide__text">Полностью синтетическое топливосберегающее моторное масло для всесезонного использования.</div>
-                                        <div class="index-slide__more">
-                                            <a href="#" class="index-slide__btn btn">
-                                                <span>
-                                                    Подробнее
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                      <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    </svg>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="index-slide__image index-image">
-                                <picture class="index-image__item index-image__item_type_main">
-                                    <source srcset="images/index-slide-4-mobile.png" media="(max-width: 450px)">
-                                    <img src="images/index-slide-4.png" alt="">
-                                </picture>
-                                <picture class="index-image__item index-image__item_type_bg">
-                                    <img src="images/index-slide-2.png" alt="">
-                                </picture>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="main-slider__section section-nav box">
-                <div class="section-nav__wrap priority-nav">
-                    <ul class="section-nav__list">
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Моторные масла</a></li>
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Трансмиссионные масла</a></li>
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Гидравлические масла</a></li>
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Пластичные смазки</a></li>
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Антифризы</a></li>
-                        <li class="section-nav__item"><a class="section-nav__link" href="">Специальные масла</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="benefit">
-            <div class="benefit__wrap box">
-                <div class="benefit__list">
-                    <div class="benefit__item benefits-item">
-                        <div class="benefits-item__icon">
-                            <picture>
-                                <img src="images/benefit-icon-01.svg" alt="Высокое качество">
-                            </picture>
-                        </div>
-                        <div class="benefits-item__name">
-                            Высокое<br> качество
-                        </div>
-                    </div>
-                    <div class="benefit__item benefits-item">
-                        <div class="benefits-item__icon">
-                            <picture>
-                                <img src="images/benefit-icon-02.svg" alt="Надежный производитель">
-                            </picture>
-                        </div>
-                        <div class="benefits-item__name">
-                            Надежный<br> производитель
-                        </div>
-                    </div>
-                    <div class="benefit__item benefits-item">
-                        <div class="benefits-item__icon">
-                            <picture>
-                                <img src="images/benefit-icon-03.svg" alt="Широкий ассортимент">
-                            </picture>
-                        </div>
-                        <div class="benefits-item__name">
-                            Широкий<br> ассортимент
-                        </div>
-                    </div>
-                    <div class="benefit__item benefits-item">
-                        <div class="benefits-item__icon">
-                            <picture>
-                                <source srcset="images/benefit-icon-04-mobile.svg" media="(max-width: 600px)">
-                                <img src="images/benefit-icon-04.svg" alt="Удобная доставка">
-                            </picture>
-                        </div>
-                        <div class="benefits-item__name">
-                            Удобная<br> доставка
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="index-about box">
-            <h2 class="index-about__title h2">О бренде C.N.R.G</h2>
-            <div class="index-about__wrap">
-                <div class="index-about__head">
-                    <img src="images/logo-cnrg-about.svg" alt="О бренде C.N.R.G">
-                    <p>Компания C.N.R.G. с 1997 года разрабатывает и производит смазочные материалы и технические жидкости на собственном заводе в Москве. C.N.R.G. прошла путь от производства масел ГОСТ до запуска собственного бренда премиальных смазочных материалов по мировым стандартам. </p>
-                </div>
-                <div class="index-about__content">
-                    <p><b>C.N.R.G. состоит из трех структурных подразделений:</b></p>
-                    <p>- ЗАВОД ПО ПРОИЗВОДСТВУ СМАЗОЧНЫХ МАТЕРИАЛОВ<br>
-                    Завод C.N.R.G. оборудован установками с трехступенчатой системой блендинга, реактором по производству смазок и несколькими полуавтоматическими фасовочными линиями. Резервуарный парк предприятия позволяет хранить одновременно 400 тонн сырья и 250 тонн готовой продукции.</p>
-                    <p>- ЛАБОРАТОРИЯ<br>
-                    Собственная лаборатория контролирует качество продукта на всех стадиях производства. В результате продукты C.N.R.G. отличаются стабильно высоким качеством. К каждой партии прилагаются декларация соответствия EAC и паспорт качества.</p>
-                    <p>- ТОРГОВЫЙ ДОМ<br>
-                    Торговый дом отвечает за дистрибуцию смазочных материалов C.N.R.G. по всей территории России и в зарубежных странах, предоставляет маркетинговую и техническую поддержку партнерам. Система сбыта охватывает несколько каналов: прямые поставки предприятиям с собственным парком техники, региональную дилерскую сеть и розничные или мелкооптовые продажи через интернет-магазин.</p>
-                </div>
-                <div class="index-about__more">
-                    <a href="#" class="link-more">
-                        <span>Подробнее</span>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="category box" id="category-slider">
-            <div class="category__head">
-                <div class="category__title h2 title-decor">Популярные категории</div>
-                <div class="category__more category__more_type_header">
-                    <a href="#" class="link-more">
-                        <span>Все категории</span>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="category__wrap swiper">
-                <div class="category__list swiper-wrapper">
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Моторные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-01.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа...
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Гидравлические масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-02.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Трансмиссионные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-03.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Вакуумные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-04.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа...
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Моторные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-01.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Гидравлические масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-02.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Трансмиссионные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-03.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category__item swiper-slide">
-                        <div class="category-item">
-                            <a href="#" class="category-item__link"></a>
-                            <div class="category-item__wrap">
-                                <div class="category-item__name">
-                                    Вакуумные масла
-                                </div>
-                                <div class="category-item__pics">
-                                    <img src="images/section-item__pics-04.png" alt="">
-                                </div>
-                                <div class="category-item__content">
-                                    <div class="category-item__desc">
-                                        Трансмиссионное масло предназначается для обеспечения надежной защиты зубьев шестеренок от преждевременного износа под воздействием высоких температур и высоких скоростей.
-                                    </div>
-                                    <div class="category-item__control">
-                                        <a href="#" class="btn">
-                                        <span>
-                                            Подробнее
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7" viewBox="0 0 8 7" fill="none">
-                                                <path d="M1 1L3.57143 3.5L1 6M4.42857 1L7 3.5L4.42857 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-prev">
-                <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.71436 1L1.00007 5.5L5.71436 10" stroke="#798C97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="swiper-button-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none">
-                    <path d="M1 1L5.71429 5.5L1 10" stroke="#798C97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            <div class="category__more category__more_type_footer">
-                <a href="#" class="link-more">
-                    <span>Все категории</span>
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L5.28571 4L1 7M6.71429 1L11 4L6.71429 7" stroke="#18948F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="oil-selection">
-            <div class="oil-selection__wrap box">
-                <div class="oil-selection__row">
-                    <div class="oil-selection__img">
-                        <img src="images/oil-selection-img.png" alt="ПОДБОР МАСЛА">
-                    </div>
-                    <div class="oil-selection__text">
-                        <div class="oil-selection__title">
-                            ПОДБОР МАСЛА
-                            <b>ON-LINE</b>
-                        </div>
-                        <a href="#" class="btn">
+                                <a href="#" class="btn">
                             <span>
                                 Подробнее
                                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 1L6.14286 6L1 11M7.85714 1L13 6L7.85714 11" stroke="#FCEB0D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-list products-list_type_popular box">
+                    <div class="products-list__title h2 title-decor">Популярные категории</div>
+                    <div class="products-list__row">
+                        <div class="products-list__item">
+                            <div class="product-card">
+                                <div class="product-card__wrap">
+                                    <a href="#" class="product-card__pics">
+                                        <img src="images/product-card-01.jpg" alt="">
+                                    </a>
+                                    <a href="#" class="product-card__title">
+                                        Масло моторное C.N.R.G. N-Force Supreme 10W-40 SN/CF (кан. 20 л)
+                                    </a>
+                                    <div class="product-card__property card-property">
+                                        <ul class="card-property__list">
+                                            <li class="card-property__item">Вязкость: 10W-40</li>
+                                            <li class="card-property__item">Емкость: 20 л (канистра)</li>
+                                            <li class="card-property__item">Тип: полусинтетическое</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-card__control">
+                                        <div class="card-price">
+                                            <div class="card-price__item card-price__item_type_actual">379 579 ₽</div>
+                                            <div class="card-price__item card-price__item_type_old">99 579 ₽</div>
+                                        </div>
+                                        <div class="card-buy">
+                                            <a href="#" class="btn btn_type_cart">
+                                                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.625 0C0.279833 0 0 0.2825 0 0.631083C0 0.979583 0.279833 1.26208 0.625 1.26208H3.1185C4.15292 3.84883 5.17183 6.44033 6.198 9.03183L5.25392 11.3259C5.17483 11.5172 5.19708 11.7478 5.31125 11.9201C5.42542 12.0923 5.62808 12.201 5.83342 12.2002H16.2502C16.5803 12.2048 16.884 11.9026 16.884 11.5692C16.884 11.2357 16.5803 10.9334 16.2502 10.9381H6.77092L7.31125 9.63658L17.3439 8.82808C17.6065 8.80725 17.8442 8.60067 17.9038 8.34158L19.1538 2.87258C19.2356 2.50417 18.9157 2.10225 18.5418 2.1035H4.79817L4.12108 0.394417C4.02842 0.163084 3.78883 0 3.54167 0H0.625ZM5.2995 3.36558H17.7541L16.784 7.612L7.28525 8.3745L5.2995 3.36558Z" fill="#38827F"/>
+                                                    <circle cx="7.0835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                    <circle cx="14.5835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                </svg>
+                                                В корзину
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__badge badge">
+                                    <div class="badge__item badge__item_type_new">NEW</div>
+                                    <div class="badge__item badge__item_type_discount">-25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-list__item">
+                            <div class="product-card">
+                                <div class="product-card__wrap">
+                                    <a href="#" class="product-card__pics">
+                                        <img src="images/product-card-01.jpg" alt="">
+                                    </a>
+                                    <a href="#" class="product-card__title">
+                                        Масло моторное C.N.R.G. N-Force Supreme 10W-40 SN/CF (кан. 20 л)
+                                    </a>
+                                    <div class="product-card__property card-property">
+                                        <ul class="card-property__list">
+                                            <li class="card-property__item">Вязкость: 10W-40</li>
+                                            <li class="card-property__item">Емкость: 20 л (канистра)</li>
+                                            <li class="card-property__item">Тип: полусинтетическое</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-card__control">
+                                        <div class="card-price">
+                                            <div class="card-price__item card-price__item_type_actual">379 579 ₽</div>
+                                            <div class="card-price__item card-price__item_type_old">99 579 ₽</div>
+                                        </div>
+                                        <div class="card-buy">
+                                            <a href="#" class="btn btn_type_cart">
+                                                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.625 0C0.279833 0 0 0.2825 0 0.631083C0 0.979583 0.279833 1.26208 0.625 1.26208H3.1185C4.15292 3.84883 5.17183 6.44033 6.198 9.03183L5.25392 11.3259C5.17483 11.5172 5.19708 11.7478 5.31125 11.9201C5.42542 12.0923 5.62808 12.201 5.83342 12.2002H16.2502C16.5803 12.2048 16.884 11.9026 16.884 11.5692C16.884 11.2357 16.5803 10.9334 16.2502 10.9381H6.77092L7.31125 9.63658L17.3439 8.82808C17.6065 8.80725 17.8442 8.60067 17.9038 8.34158L19.1538 2.87258C19.2356 2.50417 18.9157 2.10225 18.5418 2.1035H4.79817L4.12108 0.394417C4.02842 0.163084 3.78883 0 3.54167 0H0.625ZM5.2995 3.36558H17.7541L16.784 7.612L7.28525 8.3745L5.2995 3.36558Z" fill="#38827F"/>
+                                                    <circle cx="7.0835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                    <circle cx="14.5835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                </svg>
+                                                В корзину
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__badge badge">
+                                    <div class="badge__item badge__item_type_new">NEW</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-list__item">
+                            <div class="product-card">
+                                <div class="product-card__wrap">
+                                    <a href="#" class="product-card__pics">
+                                        <img src="images/product-card-01.jpg" alt="">
+                                    </a>
+                                    <a href="#" class="product-card__title">
+                                        Масло моторное C.N.R.G. N-Force Supreme 10W-40 SN/CF (кан. 20 л)
+                                    </a>
+                                    <div class="product-card__property card-property">
+                                        <ul class="card-property__list">
+                                            <li class="card-property__item">Вязкость: 10W-40</li>
+                                            <li class="card-property__item">Емкость: 20 л (канистра)</li>
+                                            <li class="card-property__item">Тип: полусинтетическое</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-card__control">
+                                        <div class="card-price">
+                                            <div class="card-price__item card-price__item_type_actual">379 579 ₽</div>
+                                            <div class="card-price__item card-price__item_type_old">99 579 ₽</div>
+                                        </div>
+                                        <div class="card-buy">
+                                            <a href="#" class="btn btn_type_cart">
+                                                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.625 0C0.279833 0 0 0.2825 0 0.631083C0 0.979583 0.279833 1.26208 0.625 1.26208H3.1185C4.15292 3.84883 5.17183 6.44033 6.198 9.03183L5.25392 11.3259C5.17483 11.5172 5.19708 11.7478 5.31125 11.9201C5.42542 12.0923 5.62808 12.201 5.83342 12.2002H16.2502C16.5803 12.2048 16.884 11.9026 16.884 11.5692C16.884 11.2357 16.5803 10.9334 16.2502 10.9381H6.77092L7.31125 9.63658L17.3439 8.82808C17.6065 8.80725 17.8442 8.60067 17.9038 8.34158L19.1538 2.87258C19.2356 2.50417 18.9157 2.10225 18.5418 2.1035H4.79817L4.12108 0.394417C4.02842 0.163084 3.78883 0 3.54167 0H0.625ZM5.2995 3.36558H17.7541L16.784 7.612L7.28525 8.3745L5.2995 3.36558Z" fill="#38827F"/>
+                                                    <circle cx="7.0835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                    <circle cx="14.5835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                </svg>
+                                                В корзину
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__badge badge">
+                                    <div class="badge__item badge__item_type_discount">-25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products-list__item">
+                            <div class="product-card">
+                                <div class="product-card__wrap">
+                                    <a href="#" class="product-card__pics">
+                                        <img src="images/product-card-01.jpg" alt="">
+                                    </a>
+                                    <a href="#" class="product-card__title">
+                                        Масло моторное C.N.R.G. N-Force Supreme 10W-40 SN/CF (кан. 20 л)
+                                    </a>
+                                    <div class="product-card__property card-property">
+                                        <ul class="card-property__list">
+                                            <li class="card-property__item">Вязкость: 10W-40</li>
+                                            <li class="card-property__item">Емкость: 20 л (канистра)</li>
+                                            <li class="card-property__item">Тип: полусинтетическое</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-card__control">
+                                        <div class="card-price">
+                                            <div class="card-price__item card-price__item_type_actual">379 579 ₽</div>
+                                            <div class="card-price__item card-price__item_type_old">99 579 ₽</div>
+                                        </div>
+                                        <div class="card-buy in-cart">
+                                            <a href="#" class="btn btn_type_cart">
+                                                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.625 0C0.279833 0 0 0.2825 0 0.631083C0 0.979583 0.279833 1.26208 0.625 1.26208H3.1185C4.15292 3.84883 5.17183 6.44033 6.198 9.03183L5.25392 11.3259C5.17483 11.5172 5.19708 11.7478 5.31125 11.9201C5.42542 12.0923 5.62808 12.201 5.83342 12.2002H16.2502C16.5803 12.2048 16.884 11.9026 16.884 11.5692C16.884 11.2357 16.5803 10.9334 16.2502 10.9381H6.77092L7.31125 9.63658L17.3439 8.82808C17.6065 8.80725 17.8442 8.60067 17.9038 8.34158L19.1538 2.87258C19.2356 2.50417 18.9157 2.10225 18.5418 2.1035H4.79817L4.12108 0.394417C4.02842 0.163084 3.78883 0 3.54167 0H0.625ZM5.2995 3.36558H17.7541L16.784 7.612L7.28525 8.3745L5.2995 3.36558Z" fill="#38827F"/>
+                                                    <circle cx="7.0835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                    <circle cx="14.5835" cy="13.75" r="1.25" fill="#38827F"/>
+                                                </svg>
+                                                В корзине
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-list__more">
+                        <a href="#" class="load-more">
+                            <span>Еще товары</span>
+                            <img src="images/load-more.svg" alt="Еще товары">
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer class="footer">
-
-    </footer>
+        </main>
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="footer__wrap box">
+                    <div class="footer__row footer__row_type_top">
+                        <div class="footer__col footer__col_type_nav">
+                            <nav class="nav">
+                                <ul class="nav__list">
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">О бренде C.N.R.G</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Каталог</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Подбор масла</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Оплата</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Доставка</a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a class="nav__link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__col footer__col_type_email">
+                            <a href="mailto:info@molchel.ru">info@molchel.ru</a>
+                        </div>
+                        <div class="footer__col footer__col_type_social">
+                            <ul class="socials">
+                                <li class="socials__item">
+                                    <a class="socials__link" href="#">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.075 11.487C20.071 11.487 20.0661 11.487 20.1044 11.487C19.5208 11.4802 19.0864 11.0353 19.1207 10.5355C19.1423 6.55647 15.5284 2.85114 11.5124 2.71751C10.971 2.6998 10.5473 2.24623 10.565 1.70463C10.5837 1.16362 11.0426 0.769273 11.6043 0.756104C16.6895 0.925451 21.1185 5.48563 21.0556 10.5172C21.0487 11.056 20.6103 11.487 20.075 11.487ZM11.5114 4.0339C14.9722 4.44179 17.7654 7.41519 17.7379 10.6626C17.733 11.2011 17.2947 11.6354 16.7572 11.6354C16.7543 11.6354 16.7514 11.6354 16.7483 11.6354C16.2069 11.6305 15.7716 11.1875 15.7765 10.6448C15.7961 8.36952 13.7797 6.27849 11.32 5.9831C10.7445 5.92045 10.36 5.45958 10.4229 4.89373C10.4866 4.35466 10.9768 3.96611 11.5114 4.0339ZM7.90534 9.13515C7.51204 9.39736 7.35415 9.64639 7.64351 10.2779L9.25611 12.5408C9.95641 13.2033 10.9191 13.9472 11.9154 14.3897C12.4842 14.6429 12.6088 14.4572 12.7402 14.2642C13.2963 13.4373 13.9759 12.9417 14.7595 12.7925C15.5932 12.6335 16.5023 12.8868 17.4942 13.5981L17.8045 13.7831C18.3253 14.1874 18.8637 14.5311 19.3786 14.9146L19.661 15.1305C20.463 15.7088 21.7255 16.6765 21.0507 18.5475C20.4613 20.1879 18.4116 22.0001 16.4002 22.0001C16.307 22.0001 16.2129 21.9911 16.1227 21.9666L15.9569 21.9291C15.7147 21.9032 15.3489 21.7954 14.9918 21.6445C8.0642 18.7173 3.15968 13.8781 0.444166 7.26057C-0.121689 5.96867 -0.142225 4.70831 0.355921 3.61842C0.875645 2.48202 1.97097 1.63089 3.34301 1.15655C3.97762 0.944499 4.60322 0.949633 5.20353 1.16638C6.57371 1.70135 9.27932 5.33235 9.35678 6.72939C9.43326 8.17093 8.40163 8.80323 7.90534 9.13515ZM7.39827 6.83907C7.27959 6.09501 5.21134 3.326 4.5248 3.01015C4.4434 3.03768 4.38915 2.96387 4.27375 2.96387C4.17665 2.96387 4.07368 2.98351 3.95991 3.02079C3.05573 3.31923 2.46056 3.80904 2.13972 4.43636C1.87395 5.0165 1.92112 5.78399 2.22507 6.5064C4.76617 12.6305 9.31749 17.1658 15.7549 19.8356C15.9452 19.9159 16.1835 19.9679 16.3747 20.0101C16.4243 20.084 16.4482 20.027 16.4816 20.0338C17.483 19.9769 18.8294 18.9257 19.2041 17.8821C19.3591 17.453 19.3767 17.3286 18.4842 16.7023C18.3764 16.6206 18.2675 16.5403 18.1625 16.4567C17.6908 16.084 17.1927 15.7433 16.6954 15.4478L16.3982 15.1621C15.9961 14.9227 15.5039 14.6505 15.1243 14.7224C14.8743 14.7706 14.6192 14.9854 14.3662 15.3625C13.618 16.4733 12.4332 16.7728 11.1181 16.1842C8.88326 14.7137 8.29397 13.8097 7.77707 13.4821L5.98315 11.3269C5.94781 11.2768 5.91737 11.2248 5.89282 11.169C4.97011 9.12913 6.13992 7.99652 6.85794 7.5015C7.37178 7.13178 7.40809 6.99919 7.39827 6.83907Z" fill="#296776"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="socials__item">
+                                    <a class="socials__link" href="#">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4202 10.3659C21.4202 16.1231 16.743 20.732 10.9723 20.732C9.14119 20.732 7.42097 20.2637 5.9234 19.4423L0.140137 21.28L2.02543 15.7179C1.07502 14.1568 0.527513 12.3232 0.527513 10.3656C0.527513 4.64081 5.20369 0 10.9743 0C16.7437 0.0012881 21.4202 4.64155 21.4202 10.3659ZM10.9723 1.70727C6.12942 1.70727 2.22061 5.56268 2.22061 10.3682C2.22061 12.2756 2.81184 14.0417 3.86326 15.4768L2.76676 18.7124L6.14061 17.6405C7.52843 18.5505 9.18891 19.0814 10.9723 19.0814C15.8323 19.0814 19.7565 15.1717 19.7565 10.3659C19.7565 5.56268 15.8391 1.70727 10.9723 1.70727ZM16.2489 12.7539C16.1839 12.6494 16.0131 12.586 15.7576 12.4579C15.5021 12.3297 14.2417 11.7157 14.0085 11.6331C13.7728 11.5734 13.602 11.5046 13.4311 11.7591C13.2618 12.0139 12.7706 12.586 12.6207 12.7554C12.4717 12.9253 12.3226 12.9464 12.0664 12.8204C11.8103 12.6924 10.9842 12.4247 10.0056 11.5599C9.24457 10.8854 8.73022 10.065 8.58182 9.80031C8.43138 9.54601 8.56663 9.40886 8.69368 9.28256C8.80825 9.16792 8.94946 8.98535 9.07787 8.86162C9.2062 8.68841 9.24864 8.58373 9.33406 8.41357C9.41799 8.24361 9.4007 8.09575 9.31237 7.96728C9.24864 7.83949 8.73734 6.59071 8.5229 6.08239C8.30976 5.57407 8.09668 5.65793 7.94692 5.65793C7.79777 5.65793 7.62714 5.63732 7.45629 5.63732C7.28552 5.63732 7.00804 5.70037 6.77354 5.95514C6.53904 6.20964 5.87764 6.82386 5.87764 8.07439C5.87764 9.32595 6.79422 10.5789 6.92262 10.7018C7.05163 10.9022 8.70174 13.5209 11.2979 14.5383C13.9022 15.5547 13.9022 15.2151 14.3712 15.1717C14.8408 15.1297 15.9266 14.5577 16.0991 13.9655C16.3127 13.3706 16.3127 12.8598 16.2489 12.7539Z" fill="#296776"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__col footer__col_type_phone">
+                            <div class="phone">
+                                <a href="tel:+73512113735" class="phone__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                        <path d="M21.2923 15.8356C21.2535 15.8033 16.8615 12.6603 15.6699 12.8663C15.0971 12.9675 14.7693 13.3577 14.113 14.1401C13.9315 14.3578 13.746 14.5719 13.5564 14.7825C13.1416 14.6474 12.737 14.4827 12.3457 14.2897C10.3257 13.3063 8.69366 11.6743 7.71027 9.65433C7.5173 9.26304 7.35261 8.85843 7.21747 8.4436C7.43307 8.24633 7.7352 7.99187 7.86427 7.88333C8.64233 7.23067 9.03247 6.90287 9.13367 6.3294C9.3412 5.14213 6.19667 0.746533 6.1644 0.706933C6.0212 0.503841 5.83469 0.335078 5.61834 0.212826C5.40199 0.0905734 5.16119 0.0178824 4.91333 0C3.6388 0 0 4.71973 0 5.5154C0 5.5616 0.0667334 10.2579 5.85787 16.1487C11.7421 21.9333 16.4384 22 16.4846 22C17.2803 22 22 18.3612 22 17.0867C21.9821 16.8387 21.9094 16.5979 21.787 16.3815C21.6646 16.1651 21.4956 15.9787 21.2923 15.8356ZM16.4039 20.5289C15.763 20.4761 11.8221 19.9562 6.8948 15.1155C2.02913 10.1618 1.5224 6.20987 1.4718 5.59753C2.43304 4.08881 3.59391 2.71702 4.92287 1.51947C4.9522 1.5488 4.99107 1.5928 5.04093 1.65C6.06014 3.0413 6.93812 4.53073 7.66187 6.0962C7.42651 6.33297 7.17774 6.55603 6.9168 6.76427C6.51214 7.0726 6.14055 7.42207 5.808 7.80707L5.6298 8.0564L5.6826 8.3578C5.83779 9.03007 6.07549 9.68058 6.39027 10.2945C7.51805 12.6104 9.38943 14.4815 11.7055 15.609C12.3193 15.9242 12.9698 16.1622 13.6422 16.3174L13.9436 16.3702L14.1929 16.192C14.5794 15.858 14.9303 15.4849 15.2401 15.0788C15.4697 14.8045 15.7769 14.4386 15.8928 14.3352C17.4627 15.0582 18.956 15.9373 20.35 16.9591C20.4109 17.0104 20.4534 17.05 20.482 17.0757C19.2846 18.405 17.9128 19.5662 16.4039 20.5275V20.5289Z" fill="#3C7082"/>
+                                    </svg>
+                                </a>
+                                <div class="phone__text">
+                                    <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
+                                    <button class="phone__btn">Заказать звонок</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__wrap box">
+                    <div class="footer__row footer__row_type_bottom">
+                        <div class="footer__col footer__col_type_copy">
+                            <ul class="logo-list">
+                                <li class="logo-list__item logo-list__item_type_cnrg logo">
+                                    <a href="#" class="logo-list__link">
+                                        <img src="images/logo-cnrg.svg" alt="CNRG">
+                                    </a>
+                                </li>
+                                <li class="logo-list__item logo-list__item_type_vid logo">
+                                    <a href="#" class="logo-list__link">
+                                        <img src="images/logo-tk-vid.svg" alt="ТК ВИД">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="copyright">Copyright © 2010-2023  Все права защищены.</div>
+                        </div>
+                        <div class="footer__col footer__col_type_address">
+                            <div class="item-address">
+                                <div class="item-address__icon">
+                                    <img src="images/icon-pin-address.svg" alt="">
+                                </div>
+                                <div class="item-address__text">
+                                    Офис: Челябинск, ул. Маркса, 46, оф. 405<br>
+                                    Склад: Челябинск, ул. 2-я Потребительская, 26.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__col footer__col_type_time">
+                            <div class="work-time">
+                                <div class="work-time__icon">
+                                    <img src="images/work-time-icon.svg" alt="График работы">
+                                </div>
+                                <div class="work-time__text">График работы: <span>с 9-17</span>, <i>пн-пт</i></div>
+                            </div>
+                            <a href="#">
+                                <img src="images/logo-develop.svg" alt="LuxarGroup">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__row footer__row_type_mobile">
+                        <div class="footer__col footer__col_type_nav-footer">
+                            <ul class="footer-nav">
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Подбор масла</a></li>
+                                <li><a href="#">Оплата</a></li>
+                                <li><a href="#">Доставка</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__col footer__col_type_logo">
+                            <ul class="logo-list">
+                                <li class="logo-list__item logo-list__item_type_cnrg logo">
+                                    <a href="#" class="logo-list__link">
+                                        <img src="images/logo-cnrg.svg" alt="CNRG">
+                                    </a>
+                                </li>
+                                <li class="logo-list__item logo-list__item_type_vid logo">
+                                    <a href="#" class="logo-list__link">
+                                        <img src="images/logo-tk-vid.svg" alt="ТК ВИД">
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#">
+                                <img src="images/logo-develop.svg" alt="LuxarGroup">
+                            </a>
+                        </div>
+                        <div class="footer__col footer__col_type_copy-footer">
+                            <div class="copyright">Copyright © 2010-2023  Все права защищены.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

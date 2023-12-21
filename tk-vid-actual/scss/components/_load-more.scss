@@ -1,0 +1,26 @@
+.load-more {
+  display: inline-flex;
+  align-items: center;
+  color: #798C97;
+  text-decoration: none;
+  border-radius: 50px;
+  background: #FFF;
+  padding: 8px 10px 8px 22px;
+  font-weight: 600;
+
+  span {
+    margin-right: 14px;
+  }
+
+  img {
+    transform: rotate(0);
+    transition: .2s all linear;
+  }
+
+  &:hover {
+
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}

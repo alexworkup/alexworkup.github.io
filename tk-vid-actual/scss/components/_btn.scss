@@ -39,4 +39,53 @@
       }
     }
   }
+
+  &_type {
+
+    &_cart {
+      border-radius: 10px;
+      padding: 0 15px;
+      min-width: auto;
+      background: none;
+      height: 45px;
+      color: #38827F;
+      font-weight: 700;
+      position: relative;
+      transition: .2s color linear;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 2px solid #E2E9F0;
+        border-radius: 10px;
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+
+      &:hover {
+        color: #FCEB0D;
+        background: linear-gradient(142deg, #004B5E 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
+
+        &:before {
+          content: none;
+        }
+
+        svg {
+
+          path,
+          circle {
+            fill: #ffffff;
+          }
+        }
+      }
+
+      svg {
+        margin-right: 12px;
+      }
+    }
+  }
 }
