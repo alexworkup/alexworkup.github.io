@@ -6,6 +6,95 @@
     margin-bottom: 35px;
   }
 
+  &_type_catalog {
+    margin-bottom: 30px;
+
+    .category__list {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 26px;
+
+      @media #{$notebook} {
+        grid-gap: 10px;
+      }
+
+      @media #{$laptop} {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media #{$phone} {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .category__item {
+      height: 370px;
+      width: 100%;
+
+      @media #{$phone} {
+        height: 150px;
+
+        &:nth-of-type(n+5) {
+          display: block;
+        }
+      }
+    }
+
+    .category-item {
+
+      .category-item__wrap {
+        display: flex;
+        flex-direction: column;
+
+        @media #{$phone} {
+          flex-direction: column-reverse;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        &:before {
+          clip-path: none;
+        }
+      }
+
+      .category-item__pics {
+        flex-grow: 1;
+
+        @media #{$phone} {
+          height: calc(100% - 20px);
+
+          img {
+            max-height: 100%;
+          }
+        }
+      }
+
+      &:hover {
+
+        .category-item__wrap {
+          top: 0;
+          height: 100%;
+
+          &:before {
+            box-shadow: 0 4px 50px rgba(7, 28, 37, 0.10);
+            clip-path: none;
+          }
+        }
+      }
+
+      .category-item__name {
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+
   &__list {
     display: flex;
     padding-top: 50px;

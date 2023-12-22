@@ -1,6 +1,22 @@
 .products-list {
   padding-bottom: 90px;
 
+  &.blur-wrapper {
+    padding-bottom: 30px;
+    margin-bottom: 90px;
+
+    @media #{$phone} {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      top: -20px;
+      height: calc(100% + 20px);
+      max-width: 1450px;
+      width: calc(100% + 30px);
+    }
+  }
+
   @media #{$phone} {
     padding-bottom: 38px;
   }

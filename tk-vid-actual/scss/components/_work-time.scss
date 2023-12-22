@@ -2,9 +2,31 @@
   display: flex;
   align-items: center;
 
+  &_type_checkout {
+
+    .work-time__icon {
+      margin-right: 33px;
+
+      @media #{$phone} {
+        margin-right: 18px;
+      }
+
+      img {
+        width: 26px;
+        height: auto;
+      }
+    }
+  }
+
   &__icon {
     margin-right: 19px;
     font-size: 0;
+  }
+
+  &__title {
+    color: #718B98;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   &__text {
