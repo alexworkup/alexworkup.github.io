@@ -1,0 +1,70 @@
+.contacts {
+
+  &__info {
+    margin-bottom: 55px;
+
+    @media #{$phone} {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__requisites {
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 125%;
+      font-weight: 600;
+
+      li {
+        display: flex;
+        
+        @media #{$phone} {
+          flex-direction: column;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        b {
+          color: #718B98;
+          min-width: 250px;
+          text-align: right;
+          margin-right: 15px;
+
+          @media #{$phone} {
+            min-width: auto;
+            margin-right: 0;
+            text-align: left;
+          }
+        }
+
+        span {
+          color: #000;
+        }
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &__map {
+
+    .contacts-map {
+      margin-bottom: 55px;
+      
+      @media #{$phone} {
+        margin-bottom: 45px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

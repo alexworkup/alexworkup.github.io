@@ -1,0 +1,40 @@
+.item-contacts {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: 20px;
+    font-size: 0;
+  }
+
+  &__text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &_type {
+
+    &_work {
+      font-weight: 500;
+
+      .item-contacts__title {
+        color: #718B98;
+      }
+
+      .item-contacts__text {
+        color: #004B5E;
+      }
+    }
+
+    &_email {
+
+      .item-contacts__text {
+
+        a {
+          color: #0C2D35;
+        }
+      }
+    }
+  }
+}

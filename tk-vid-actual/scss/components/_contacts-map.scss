@@ -1,0 +1,49 @@
+.contacts-map {
+
+  &:hover {
+
+    .contacts-map__wrap {
+      filter: grayscale(0);
+    }
+  }
+
+  &__title {
+    color: #2C2C2C;
+    font-size: 22px;
+    margin-bottom: 17px;
+
+    @media #{$phone} {
+      font-size: 18px;
+    }
+
+    span {
+      color: #004B5E;
+      font-size: 28px;
+
+      @media #{$phone} {
+        font-size: 18px;
+      }
+    }
+
+    &:before {
+      top: -1px;
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: grayscale(1);
+    transition: .2s all linear;
+  }
+
+  &_type_storage {
+
+    .contacts-map__wrap {
+      height: 290px;
+    }
+  }
+
+}

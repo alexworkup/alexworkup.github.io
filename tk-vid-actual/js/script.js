@@ -48,8 +48,10 @@ $(function() {
         }
     }
 
-    applyClamp();
-    window.addEventListener('resize', applyClamp);
+    if(aboutContent) {
+        applyClamp();
+        window.addEventListener('resize', applyClamp);
+    }
 
     const categoryList = document.getElementById('category-slider');
 
@@ -97,4 +99,47 @@ $(function() {
     initializeSwiper();
 
     window.addEventListener('resize', initializeSwiper);
+
+    // Функция для инициализации карты с меткой
+    function initMap(mapId, centerCoords, balloonContent) {
+        ymaps.ready(function () {
+            var map = new ymaps.Map(mapId, {
+                center: centerCoords,
+                zoom: 15
+            });
+
+            map.geoObjects
+                .add(new ymaps.Placemark(centerCoords, {
+                    balloonContent: balloonContent
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: './images/balloon.svg',
+                    iconImageSize: [38, 46],
+                    iconImageOffset: [-30, -50],
+                    preset: 'islands#icon',
+                    iconColor: '#0095b6'
+                }));
+        });
+    }
+
+// Конфигурация карт
+    var mapsConfig = [
+        {
+            mapId: 'map-1',
+            centerCoords: [55.165786, 61.409947],
+            balloonContent: 'Офис: Челябинск, ул. Маркса, 46, оф. 405'
+        },
+        {
+            mapId: 'map-2',
+            centerCoords: [55.098444, 61.367429],
+            balloonContent: 'Склад: Челябинск, ул. 2-я Потребительская, 26. График работы с 9-17, пн-пт'
+        }
+    ];
+
+// Инициализация всех карт
+    mapsConfig.forEach(function(config) {
+        if($('#' + config.mapId).length) {
+            initMap(config.mapId, config.centerCoords, config.balloonContent);
+        }
+    });
 });

@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.0/?load=package.full&mode=release&lang=ru-RU"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="page" style="background-image: url('images/catalog-bg.jpg')">
+<body class="page" style="background-image: url('images/index-bg.jpg')">
     <div class="wrapper">
         <header class="header">
             <div class="header__wrap box">
@@ -117,208 +118,93 @@
                     <a href="/"><span>Главная</span></a>
                 </li>
                 <li class="breadcrumbs__item">
-                    <span>Каталог</span>
+                    <span>Контакты</span>
                 </li>
             </ul>
-            <h1 class="h1 title-decor">Каталог</h1>
-            <div class="category category_type_catalog">
-                <div class="category__wrap">
-                    <div class="category__list">
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Моторные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-01.png" alt="">
-                                    </div>
+            <h1 class="h1 title-decor">Контакты</h1>
+            <div class="contacts">
+                <div class="contacts__info contacts-info">
+                    <div class="contacts-info__item contacts-info__item_type_address">
+
+                        <div class="item-contacts item-contacts_type_pin">
+                            <div class="item-contacts__icon">
+                                <img src="images/pin-address-icon.svg" alt="ул. Маркса, 46, офис 405">
+                            </div>
+                            <div class="item-contacts__content">
+                                <div class="item-contacts__text">
+                                    г. Челябинск,<br>
+                                    ул. Маркса, 46, офис 405
                                 </div>
                             </div>
                         </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Гидравлические масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-02.png" alt="">
-                                    </div>
+
+                    </div>
+                    <div class="contacts-info__item contacts-info__item_type_phone">
+
+                        <div class="item-contacts item-contacts_type_phone">
+                            <div class="item-contacts__icon">
+                                <img src="images/icon-phone.svg" alt="8 (351) 211-37-35; 8 (351) 247 34 30">
+                            </div>
+                            <div class="item-contacts__text">
+                                8 (351) 211-37-35;<br> 8 (351) 247 34 30
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contacts-info__item contacts-info__item_type_email">
+
+                        <div class="item-contacts item-contacts_type_email">
+                            <div class="item-contacts__icon">
+                                <img src="images/icon-email.svg" alt="info@molchel.ru">
+                            </div>
+                            <div class="item-contacts__text">
+                                <a href="mailto:info@molchel.ru">info@molchel.ru</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contacts-info__item contacts-info__item_type_time">
+
+                        <div class="item-contacts item-contacts_type_work">
+                            <div class="item-contacts__icon">
+                                <img src="images/work-time-icon2.svg" alt="График работы">
+                            </div>
+                            <div class="item-contacts__content">
+                                <div class="item-contacts__title">Режим работы</div>
+                                <div class="item-contacts__text">
+                                    Пн - Пт: с 9-00 до 17-00
                                 </div>
                             </div>
                         </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Трансмиссионные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-03.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Вакуумные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-04.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Пластичные смазки
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-05.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Антифризы
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-06.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Специальные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-07.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Индустриальные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-08.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Тракторные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-09.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Компрессорные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-010.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Турбинные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-11.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Судовые масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-12.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Холодильные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-13.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Редукторные масла
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-14.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="category__item">
-                            <div class="category-item">
-                                <a href="#" class="category-item__link"></a>
-                                <div class="category-item__wrap">
-                                    <div class="category-item__name">
-                                        Тормозные жидкости
-                                    </div>
-                                    <div class="category-item__pics">
-                                        <img src="images/section-item__pics-15.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                    </div>
+                </div>
+                <div class="contacts__requisites">
+                    <ul>
+                        <li><b>Полное наименование</b><span>Общество с ограниченной ответственностью ТК «Вид»</span></li>
+                        <li><b>Сокращенное наименование</b><span>ООО ТК «Вид»</span></li>
+                        <li><b>Юридический адрес</b><span>454090, Челябинская область, г. Челябинск, ул. Маркса, 46, офис 405</span></li>
+                        <li><b>Почтовый адрес</b><span>454090, Челябинская область, г. Челябинск, ул. Маркса, 46, офис 405</span></li>
+                        <li><b>ИНН</b><span>7451335193</span></li>
+                        <li><b>КПП</b><span>745301001</span></li>
+                        <li><b>ОГРН</b><span>1127451002667</span></li>
+                        <li><b>Банковские реквизиты</b><span>Р/с 40702810490000015930 в ПАО «ЧЕЛЯБИНВЕСТБАНК» г. Челябинск <br>
+                        К/с 30101810400000000779<br>
+                        БИК 047501779</span></li>
+                        <li><b>ОКПО</b><span>37885631</span></li>
+                        <li><b>Руководитель</b><span>Директор: Протасов Денис Владимирович, действующий на основании Устава</span></li>
+                        <li><b>Телефон/факс</b><span>(351) 211-37-35; 245-46-09</span></li>
+                        <li><b>Эл. почта</b><span><a href="mailto:info@molchel.ru">info@molchel.ru</a></span></li>
+                    </ul>
+                </div>
+                <div class="contacts__map">
+                    <div class="contacts-map contacts-map_type_office">
+                        <h2 class="contacts-map__title title-decor"><span>Офис:</span> Челябинск, ул. Маркса, 46, оф. 405</h2>
+                        <div class="contacts-map__wrap" id="map-1"></div>
+                    </div>
+                    <div class="contacts-map contacts-map_type_storage">
+                        <h2 class="contacts-map__title title-decor"><span>Склад:</span> Челябинск, ул. 2-я Потребительская, 26. График работы с 9-17, пн-пт</h2>
+                        <div class="contacts-map__wrap" id="map-2"></div>
                     </div>
                 </div>
             </div>
