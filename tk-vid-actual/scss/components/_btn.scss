@@ -52,6 +52,7 @@
       font-weight: 700;
       position: relative;
       transition: .2s color linear;
+      white-space: nowrap;
 
       &:before {
         content: '';

@@ -1,0 +1,100 @@
+.pagination {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.70);
+  padding: 12px 20px;
+  display: flex;
+  position: relative;
+  min-height: 48px;
+
+  @media #{$phone} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pag-more {
+    display: flex;
+    align-items: center;
+    margin: auto;
+
+    @media #{$phone} {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #91A2AB;
+      margin-right: 10px;
+
+      span {
+        color: #38827F;
+      }
+    }
+
+    &__btn {
+      font-size: 0;
+    }
+  }
+
+  .num-page {
+    color: #37444F;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 12px;
+
+    @media #{$phone} {
+      position: relative;
+      top: initial;
+    }
+
+    &__arrow,
+    &__item,
+    &__more {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    &__item {
+      background: transparent;
+      transition: .1s all linear;
+      color: #37444F;
+      font-size: 14px;
+
+      &.active,
+      &:hover {
+        color: #FCEB0D;
+        background: #004B5D;
+      }
+    }
+
+    &__arrow {
+
+      svg {
+
+        path {
+          transition: .1s all linear;
+        }
+      }
+
+      &:hover {
+
+        svg {
+          transition: .1s all linear;
+
+          path {
+            stroke: #004B5D;
+          }
+        }
+      }
+    }
+
+  }
+}

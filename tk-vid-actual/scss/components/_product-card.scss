@@ -34,8 +34,11 @@
     height: 100%;
     background: #FFF;
     border-radius: 10px;
-    clip-path: polygon(275% -20px, -20px 165%, -20px -20px);
     transition: .2s all ease-in;
+
+    @media screen and (min-width: 768px) {
+      clip-path: polygon(275% -20px, -20px 165%, -20px -20px);
+    }
   }
 
   &__wrap {
@@ -43,6 +46,11 @@
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
   }
 
   &__badge {
@@ -91,6 +99,17 @@
 
   &__property {
     margin-bottom: 20px;
+  }
+
+  &__article {
+    color: #A1ABAF;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 7px;
+
+    @media #{$phone} {
+      display: none;
+    }
   }
 
   &__control {
