@@ -122,7 +122,7 @@ $(function() {
         });
     }
 
-// Конфигурация карт
+    // Конфигурация карт
     var mapsConfig = [
         {
             mapId: 'map-1',
@@ -136,10 +136,43 @@ $(function() {
         }
     ];
 
-// Инициализация всех карт
+    // Инициализация всех карт
     mapsConfig.forEach(function(config) {
         if($('#' + config.mapId).length) {
             initMap(config.mapId, config.centerCoords, config.balloonContent);
         }
     });
+
+    const tabLinks = document.querySelectorAll('.product .nav-tab__link');
+    let isTrim = false;
+
+    function updateTextContent() {
+        if (window.innerWidth <= 768 && !isTrim) {
+            tabLinks.forEach((item) => {
+                if (item.textContent.trim() === "Характеристики") {
+                    item.textContent = "Хар-ки";
+                    isTrim = true;
+                }
+            });
+        } else if (window.innerWidth > 768 && isTrim) {
+            tabLinks.forEach((item) => {
+                if (item.textContent.trim() === "Хар-ки") {
+                    item.textContent = "Характеристики";
+                    isTrim = false;
+                }
+            });
+        }
+    }
+
+    // Проверка при первоначальной загрузке
+    updateTextContent();
+
+    // Добавление debounce к обработчику resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateTextContent, 250);
+    });
+
+
 });

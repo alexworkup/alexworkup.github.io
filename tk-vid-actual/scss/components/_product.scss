@@ -4,15 +4,23 @@
     border-radius: 10px;
     background: #FFF;
     padding: 25px 16px 35px 40px;
+    margin-bottom: 27px;
 
     @media #{$phone} {
       padding: 16px;
     }
+
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 40px;
+    font-size: 28px;
+
+    @media #{$phone} {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
   }
 
   .product-info {
@@ -155,6 +163,10 @@
       font-size: 16px;
       background: linear-gradient(142deg, #5C8C98 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
 
+      @media #{$phone} {
+        max-width: 100%;
+      }
+
       &:hover {
         color: #FCEB0D;
         background: linear-gradient(142deg, #004B5E 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
@@ -179,6 +191,7 @@
 
     @media #{$phone} {
       width: 100%;
+      padding-right: 0;
     }
   }
 
@@ -301,14 +314,26 @@
     width: 100%;
     margin-bottom: 25px;
 
+    @media #{$phone} {
+      margin-bottom: 0;
+    }
+
     &__item {
       width: 100%;
       text-align: center;
       padding: 20px 0;
 
+      @media #{$phone} {
+        height: 290px;
+      }
+
       img {
         max-width: 100%;
         height: auto;
+
+        @media #{$phone} {
+          height: 100%;
+        }
       }
     }
   }
@@ -320,6 +345,10 @@
     line-height: 105%;
     color: #38827F;
 
+    @media #{$phone} {
+      margin-bottom: 25px;
+    }
+
     img {
       margin-right: 15px;
     }
@@ -327,6 +356,89 @@
     span {
       max-width: 235px;
       text-decoration: underline;
+    }
+  }
+
+  .nav-tab {
+    list-style: none;
+    margin: 0 0 -25px 0;
+    padding: 0;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+
+    &__link {
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.50);
+      padding: 12px 40px 40px 40px;
+      min-width: 210px;
+      display: inline-block;
+      color: #000;
+      text-align: center;
+      transform: translateY(0);
+      transition: .2s all linear;
+      position: relative;
+
+      @media #{$phone} {
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: 150px;
+      }
+
+      &:after {
+        content: '';
+        width: 32px;
+        height: 30px;
+        background-image: url("../images/icon-corner.svg");
+        background-size: cover;
+        position: absolute;
+        right: -31px;
+        bottom: 21px;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      &.active,
+      &:hover {
+        background: #ffffff;
+        transform: translateY(-3px);
+      }
+
+      &.active {
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .content-tab {
+    border-radius: 10px;
+    background: #FFF;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+
+    @media #{$phone} {
+      padding: 16px;
+    }
+
+    b {
+      font-size: 18px;
+      color: #004B5D;
+      font-weight: 700;
+    }
+
+    &__item {
+
+      p {
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
     }
   }
 }
