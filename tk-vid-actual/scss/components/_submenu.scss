@@ -1,0 +1,13 @@
+.submenu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  &__inner {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.70);
+    box-shadow: 0 4px 60px 0 rgba(0, 47, 58, 0.10);
+    backdrop-filter: blur(30px);
+    padding: 45px;
+  }
+}
