@@ -6,6 +6,44 @@ $(function() {
         isMobile = true;
     }
 
+    function setupFancyboxForSelector(selector, fancyboxSrc, fancyboxMainClass) {
+        const elements = document.querySelectorAll(selector);
+
+        if (elements.length > 0) {
+            elements.forEach(item => {
+                item.addEventListener('click', () => {
+                    Fancybox.show([{
+                            src: fancyboxSrc,
+                            type: "inline",
+                        }],
+                        {
+                            mainClass: fancyboxMainClass,
+                        });
+
+                    return false;
+                });
+            });
+        }
+
+        if(fancyboxMainClass === 'popup-search') {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            const popupBlock = document.querySelector(fancyboxSrc);
+
+            if(headerHeight) {
+                popupBlock.style.paddingTop = (headerHeight + 24) + 'px';
+            }
+
+        }
+    }
+
+    setupFancyboxForSelector('[data-open="#order-call"]', "#order-call", 'popup-order');
+    setupFancyboxForSelector('[data-open="#open-search"]', "#open-search", 'popup-search');
+
+    const closePopupSearch = document.querySelector('.popup-search__close');
+    closePopupSearch.addEventListener('click', () => {
+        Fancybox.close();
+    });
+
     const mainSlaider = document.querySelector('.main-slider');
 
     if(mainSlaider) {
@@ -22,7 +60,6 @@ $(function() {
         });
     }
 
-    /* Ссылки на разделы на главной странице section-nav, при сужении окна, лишние пункты убираем в выпадающее меню */
     const wrapperSectionNav = document.querySelector(".section-nav__wrap");
     if(wrapperSectionNav) {
 

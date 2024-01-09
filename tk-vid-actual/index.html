@@ -12,6 +12,8 @@
     <script src="js/script.js"></script>
     <script src="js/priority-nav.min.js"></script>
     <script src="js/clamp/clamp.min.js"></script>
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
+    <script src="js/fancyapp/fancybox.umd.js"></script>
     <link rel="stylesheet" href="css/priority-nav-core.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -67,7 +69,7 @@
                     <div class="header__col header__col_type_control">
                         <div class="header-control">
                             <div class="header-control__item header-control__item_type_search">
-                                <button class="open-search">
+                                <button data-open="#open-search" class="open-search">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_170_421)">
                                             <circle cx="10.5" cy="10.5" r="9.5" stroke="#3C7082" stroke-width="1.5"/>
@@ -104,7 +106,7 @@
                             </a>
                             <div class="phone__text">
                                 <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
-                                <button class="phone__btn">Заказать звонок</button>
+                                <button data-open="#order-call" class="phone__btn">Заказать звонок</button>
                             </div>
                         </div>
                     </div>
@@ -807,7 +809,7 @@
                                 </a>
                                 <div class="phone__text">
                                     <a href="tel:+73512113735" class="phone__link">+7 351 211 37 35</a>
-                                    <button class="phone__btn">Заказать звонок</button>
+                                    <button data-open="#order-call" class="phone__btn">Заказать звонок</button>
                                 </div>
                             </div>
                         </div>
@@ -909,8 +911,72 @@
             </svg>
         </a>
     </div>
-    <svg id="mask-side-panel" width="52" height="204" viewBox="0 0 52 204" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8877 34.2075C9.78802 44.0602 0 60.5703 0 78.6002V85.158V118.842V125.4C0 143.43 9.78802 159.94 24.8877 169.793C40.0554 179.69 57.1412 192.2 60.4345 200.209C60.5619 203.647 60.7333 204.904 60.9583 203.327C61.0917 202.392 60.9021 201.346 60.4345 200.209C60.0313 189.324 60.0692 156.582 60.2444 122.684C60.4105 121.346 60.4918 119.973 60.4814 118.567C60.4417 113.198 60.4028 107.642 60.366 102C60.4028 96.3578 60.4417 90.8023 60.4814 85.4325C60.4918 84.0272 60.4105 82.6539 60.2444 81.3163C60.0692 47.4182 60.0313 14.6758 60.4345 3.79145C60.9021 2.65438 61.0917 1.60804 60.9583 0.672801C60.7333 -0.904032 60.5619 0.353071 60.4345 3.79145C57.1412 11.8002 40.0554 24.3103 24.8877 34.2075Z" fill="black"/>
-    </svg>
+    <div class="popup-form" id="order-call" style="display: none">
+        <div class="popup-form__wrap">
+            <div class="popup-form__header">
+                <div class="popup-form__title h2 title-decor">Заказ звонка</div>
+                <div class="popup-form__subtitle">Наши администраторы ответят на любой<br> интересующий вопрос по услуге</div>
+            </div>
+            <div class="popup-form__fields">
+                <div class="popup-form__label">
+                    <input name="name" type="text" placeholder="Ваше имя">
+                </div>
+                <div class="popup-form__label">
+                    <input name="phone" type="text" placeholder="Телефон">
+                </div>
+                <div class="popup-form__label">
+                    <textarea name="message" id="" cols="30" rows="5" placeholder="Интересующая Вас услуга"></textarea>
+                </div>
+            </div>
+            <div class="popup-form__control">
+                <input class="popup-form__btn btn" type="submit" value="Заказать">
+                <label class="popup-form__check">
+                    <input type="checkbox">
+                    <span>
+                    <i>Я согласен на <a href="#">обработку персональных данных</a></i>
+                </span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="popup-search" id="open-search" style="display: none;">
+        <div class="popup-search__wrap box">
+            <div class="popup-search__inner">
+                <button class="popup-search__close">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15.0415" y="0.121338" width="2" height="21" rx="1" transform="rotate(45 15.0415 0.121338)" fill="#004B5D"/>
+                        <rect x="16.2637" y="14.8491" width="2" height="21" rx="1" transform="rotate(135 16.2637 14.8491)" fill="#004B5D"/>
+                    </svg>
+                </button>
+                <form class="popup-search__form search-form">
+                    <label class="search-form__label">
+                        <svg class="search-form__icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1017_8)">
+                                <circle cx="10.5" cy="10.5" r="9.5" stroke="#3C7082" stroke-width="1.5"/>
+                                <path d="M17.5 17.5L21 21" stroke="#3C7082" stroke-width="1.5" stroke-linecap="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1017_8">
+                                    <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <input class="search-form__field" type="text" placeholder="Поиск">
+                    </label>
+                    <input type="submit" class="search-form__submit btn" placeholder="Найти">
+                </form>
+                <div class="search-result">
+                    <ul class="search-result__list">
+                        <li><a href="#">Масло моторное C.N.R.G. N-Duro Ultim MS 15W-40 CК-4/CJ-4/SN (кан. 20 л)</a></li>
+                        <li><a href="#">Масло моторное C.N.R.G. N-Duro Ultim MS 15W-40 </a></li>
+                        <li><a href="#">Масло моторное C.N.R.G. N-Duro  (кан. 20 л)</a></li>
+                        <li><a href="#">Масло моторное C.N.R.G. N-Duro (кан. 60 л)</a></li>
+                        <li><a href="#">Масло моторное C.N.R.G. N-Duro</a></li>
+                    </ul>
+                    <a href="#" class="search-result__more">Все результаты</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

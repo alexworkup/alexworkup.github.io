@@ -1,0 +1,130 @@
+.popup-search {
+  width: 100%;
+
+  &__close {
+    position: absolute;
+    appearance: none;
+    outline: none!important;
+    padding: 10px;
+    border: 0;
+    right: 10px;
+    top: 10px;
+    font-size: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 10;
+
+    @media #{$phone} {
+      right: 5px;
+      top: 5px;
+    }
+  }
+
+  &__inner {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0 4px 60px 0 rgba(0, 47, 58, 0.10);
+    backdrop-filter: blur(30px);
+    padding: 35px 75px 55px 45px;
+
+    @media #{$phone} {
+      padding: 20px;
+    }
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+
+    @media #{$phone} {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__submit {
+      display: inline-block;
+      text-align: center;
+      border: none;
+      padding: 0 20px;
+      color: #FCEB0D;
+      cursor: pointer;
+    }
+
+    &__label {
+      flex-grow: 1;
+      position: relative;
+
+      @media #{$phone} {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__field {
+      width: calc(100% - 11px);
+      border-radius: 10px;
+      border: 1px solid #D8E3E9;
+      background: rgba(255, 255, 255, 0.30);
+      appearance: none;
+      min-height: 43px;
+      padding-left: 50px;
+      padding-right: 20px;
+      margin-right: 11px;
+      color: #000000;
+      font-weight: 500;
+      outline: none!important;
+
+      @media #{$phone} {
+        width: calc(100% - 25px);
+      }
+
+      &::placeholder {
+        color: #718B98;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .search-result {
+    margin-top: 36px;
+    margin-left: 15px;
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 30px 0;
+
+      li {
+        line-height: 120%;
+        margin-bottom: 10px;
+        font-weight: 600;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #001B22;
+          transition: .1s all linear;
+
+          &:hover {
+            color: #004B5D;
+          }
+        }
+      }
+    }
+
+    &__more {
+      color: #004B5D;
+      font-weight: 600;
+    }
+  }
+
+}

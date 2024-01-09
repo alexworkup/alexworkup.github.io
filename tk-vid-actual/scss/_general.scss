@@ -22,6 +22,11 @@ body {
   @media #{$tablet} {
     padding-top: 65px;
   }
+
+  &.compensate-for-scrollbar {
+    padding-right: 0;
+    overflow: initial!important;
+  }
 }
 
 
@@ -142,4 +147,60 @@ img {
 a {
   text-decoration: none;
   color: #26AAAB;
+}
+
+.fancybox {
+
+  &__container {
+
+    &.popup-order {
+
+      .fancybox__content {
+        padding: 0;
+        background: transparent;
+      }
+
+      .fancybox__backdrop {
+        background: rgba(0, 47, 58, 0.30);
+        backdrop-filter: blur(5px);
+      }
+
+      .is-close {
+        background-image: url("../images/close-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 15px;
+        right: 15px;
+
+        @media #{$phone} {
+          top: -40px;
+          right: 0;
+        }
+
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    &.popup-search {
+
+      .fancybox__content {
+        padding: 0;
+        background: transparent;
+      }
+
+      .fancybox__backdrop {
+        background: none;
+      }
+
+      .fancybox__slide {
+        padding: 0;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
 }
