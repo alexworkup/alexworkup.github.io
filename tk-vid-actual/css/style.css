@@ -231,6 +231,9 @@ a {
   width: 100%;
   z-index: 100;
 }
+.header.open-submenu {
+  backdrop-filter: none;
+}
 @media screen and (max-width: 979px) {
   .header {
     top: 0;
@@ -576,12 +579,17 @@ a {
   position: absolute;
   transform: scaleX(0);
   transition: 0.2s all linear;
+  pointer-events: none;
 }
-.nav__link:hover {
+.nav__link:hover, .nav__link.active {
   color: #FCEB0D;
 }
-.nav__link:hover:before {
+.nav__link:hover:before, .nav__link.active:before {
   transform: scaleX(1);
+}
+.nav__link:hover + .submenu, .nav__link.active + .submenu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .open-search {
@@ -3979,6 +3987,16 @@ a {
   position: absolute;
   width: 100%;
   left: 0;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s all linear;
+}
+.submenu:hover {
+  opacity: 1;
+  visibility: visible;
 }
 .submenu__inner {
   border-radius: 10px;
@@ -3986,6 +4004,75 @@ a {
   box-shadow: 0 4px 60px 0 rgba(0, 47, 58, 0.1);
   backdrop-filter: blur(30px);
   padding: 45px;
+}
+.submenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+.submenu ul:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(0deg, rgba(221, 233, 239, 0) 0%, rgba(210, 224, 232, 0.85) 44.66%, rgba(221, 233, 239, 0) 100%);
+}
+.submenu ul li a {
+  color: #004B5D;
+  transition: 0.1s all linear;
+  line-height: 120%;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 75px;
+  position: relative;
+}
+.submenu ul li a + ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  max-width: 400px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s all linear;
+  width: 100vw;
+}
+.submenu ul li a + ul a:hover:before {
+  content: none;
+}
+.submenu ul li a + ul:after {
+  content: none;
+}
+.submenu ul li a + ul:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.submenu ul li a:before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #18948F;
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: 0.2s all linear;
+}
+.submenu ul li a:hover, .submenu ul li a.selected {
+  color: #18948F;
+}
+.submenu ul li a:hover:before, .submenu ul li a.selected:before {
+  transform: scaleY(1);
+}
+.submenu ul li a:hover + ul, .submenu ul li a.selected + ul {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

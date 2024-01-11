@@ -43,13 +43,20 @@
       position: absolute;
       transform: scaleX(0);
       transition: .2s all linear;
+      pointer-events: none;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
       color: #FCEB0D;
 
       &:before {
         transform: scaleX(1);
+      }
+
+      & + .submenu {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
