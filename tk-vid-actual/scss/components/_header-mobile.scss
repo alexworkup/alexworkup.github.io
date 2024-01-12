@@ -1,0 +1,83 @@
+.header-mobile {
+  background: rgba(29, 65, 75, 0.97);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  z-index: 100;
+  transition: .2s all ease-in-out;
+  display: none;
+  
+  @media #{$phone} {
+    display: block;
+  }
+
+  &.open {
+    left: 0;
+  }
+
+  &__close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__wrap {
+    padding: 30px 40px 30px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+
+    .phone {
+      margin-right: 30px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 20px;
+
+    &.nav {
+      font-size: 16px;
+
+      .nav__list {
+        flex-direction: column;
+      }
+
+      .nav__link {
+        line-height: 140%;
+
+        &:hover {
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+
+      .nav__item {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

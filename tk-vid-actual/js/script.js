@@ -35,9 +35,10 @@ $(function() {
 
         }
     }
-
     setupFancyboxForSelector('[data-open="#order-call"]', "#order-call", 'popup-order');
     setupFancyboxForSelector('[data-open="#open-search"]', "#open-search", 'popup-search');
+
+
 
     const closePopupSearch = document.querySelector('.popup-search__close');
     closePopupSearch.addEventListener('click', () => {
@@ -45,7 +46,6 @@ $(function() {
     });
 
     const elementsHoverSubmenu = document.querySelectorAll('.nav__link_submenu, .submenu');
-
     if(elementsHoverSubmenu.length > 0) {
 
         elementsHoverSubmenu.forEach(item => {
@@ -63,7 +63,6 @@ $(function() {
     }
 
     const mainSlaider = document.querySelector('.main-slider');
-
     if(mainSlaider) {
 
         const mainSlaiderSwiper = new Swiper('.main-slider .swiper', {
@@ -79,7 +78,6 @@ $(function() {
     }
 
     const wrapperSectionNav = document.querySelector(".section-nav__wrap");
-
     if(wrapperSectionNav) {
         const nav = priorityNav.init({
             mainNavWrapper: ".section-nav__wrap",
@@ -230,4 +228,21 @@ $(function() {
     });
 
 
+    const headerMobileClose = document.querySelector('.header-mobile__close');
+    const headerMobile = document.querySelector('.header-mobile');
+    const body = document.querySelector('body');
+    const toggle = document.querySelector('.toggle');
+
+    if (headerMobileClose && headerMobile && toggle) {
+
+        headerMobileClose.addEventListener('click', () => {
+            headerMobile.classList.remove('open');
+            body.classList.remove('open-burger');
+        });
+
+        toggle.addEventListener('click', () => {
+            headerMobile.classList.add('open');
+            body.classList.add('open-burger');
+        });
+    }
 });
