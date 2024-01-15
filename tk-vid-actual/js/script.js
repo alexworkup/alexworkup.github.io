@@ -245,4 +245,25 @@ $(function() {
             body.classList.add('open-burger');
         });
     }
+
+    const footer = document.querySelector('.footer');
+    const upButton = document.querySelector('.up');
+
+    if(footer && upButton) {
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    upButton.classList.add('show');
+                } else {
+                    upButton.classList.remove('show');
+                }
+            });
+        });
+
+        observer.observe(footer);
+    }
+
 });

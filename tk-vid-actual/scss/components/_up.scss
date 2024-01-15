@@ -1,0 +1,27 @@
+.up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 53px;
+  border: 2px solid #59898C;
+  background: rgba(255, 255, 255, 0.30);
+  position: fixed;
+  top: 60%;
+  right: 40px;
+  width: 53px;
+  height: 53px;
+  opacity: 0;
+  transition: .2s opacity linear;
+
+  &.show {
+    opacity: 1;
+  }
+
+  @media #{$phone} {
+    display: none;
+  }
+
+  svg {
+    margin-top: -5px;
+  }
+}
