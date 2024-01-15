@@ -45,7 +45,7 @@ $(function() {
         Fancybox.close();
     });
 
-    const elementsHoverSubmenu = document.querySelectorAll('.nav__link_submenu, .submenu');
+    const elementsHoverSubmenu = document.querySelector('.nav__link_submenu, .submenu');
     if(elementsHoverSubmenu.length > 0) {
 
         elementsHoverSubmenu.forEach(item => {
