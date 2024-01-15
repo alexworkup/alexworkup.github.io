@@ -59,6 +59,18 @@
         visibility: visible;
       }
     }
+
+    &.selected {
+      color: #FCEB0D;
+
+      &:before {
+        transform: scaleX(1);
+
+        @media #{$phone} {
+          content: none;
+        }
+      }
+    }
   }
 
 }

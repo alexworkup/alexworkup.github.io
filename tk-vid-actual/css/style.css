@@ -594,6 +594,17 @@ a {
   opacity: 1;
   visibility: visible;
 }
+.nav__link.selected {
+  color: #FCEB0D;
+}
+.nav__link.selected:before {
+  transform: scaleX(1);
+}
+@media screen and (max-width: 767px) {
+  .nav__link.selected:before {
+    content: none;
+  }
+}
 
 .open-search {
   appearance: none;
