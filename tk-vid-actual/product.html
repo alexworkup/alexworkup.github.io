@@ -288,8 +288,10 @@
                                         <div class="product-quantity">
                                             <div class="product-quantity__field">
                                                 <span class="btn-minus">-</span>
-                                                <input type="number" name="quantity" value="1">
-                                                <span class="text-count">шт.</span>
+                                                <div class="product-quantity__input">
+                                                    <input type="number" min="0" max="999" name="quantity" value="1">
+                                                    <span class="text-count">шт.</span>
+                                                </div>
                                                 <span class="btn-plus">+</span>
                                             </div>
                                         </div>
@@ -307,22 +309,75 @@
                     </div>
                     <div class="product__tab">
                         <ul class="nav-tab">
-                            <li class="nav-tab__item"><a class="nav-tab__link active" href="#">Описание</a></li>
-                            <li class="nav-tab__item"><a class="nav-tab__link" href="#">Характеристики</a></li>
+                            <li class="nav-tab__item"><a data-id="tab_description" class="nav-tab__link active" href="#">Описание</a></li>
+                            <li class="nav-tab__item"><a data-id="tab_spec" class="nav-tab__link" href="#">Характеристики</a></li>
                         </ul>
                         <div class="content-tab">
-                            <div class="content-tab__item">
-                                <p>Современное топливосберегающее синтетическое моторное масло для всесезонного использования. Производится по передовым технологиям с использованием высокоиндексных синтетических базовых масел и сбалансированного пакета присадок нового поколения. Обеспечивает экономию топлива, снижение выбросов CO2, отличные пусковые качества и надежную защиту смазывания холодного двигателя. Идеально подходит для городского режима эксплуатации «старт-стоп».Предназначено для легковых и коммерческих автомобилей Ford и Renault, а также для бензиновых и дизельных двигателей, для которых требуются спецификации ACEA A1/B1, A5/B5 и API SN/CF.</p>
-                                <p>
-                                    <b>Соответствие требованиям:</b><br>
-                                    API SN/CF<br>
-                                    ACEA A5/B5<br>
-                                    Renault RN 0700<br>
-                                    Ford WSS-M2C-913-A/B/C/D<br>
-                                    Jaguar Land Rover STJLR.03.5003<br>
-                                    IVECO 18-1811 S1<br>
-                                    FIAT 9.55535-G1
-                                </p>
+                            <div id="tab_description" class="content-tab__item active">
+                                <div class="content-tab__wrap">
+                                    <p>Современное топливосберегающее синтетическое моторное масло для всесезонного использования. Производится по передовым технологиям с использованием высокоиндексных синтетических базовых масел и сбалансированного пакета присадок нового поколения. Обеспечивает экономию топлива, снижение выбросов CO2, отличные пусковые качества и надежную защиту смазывания холодного двигателя. Идеально подходит для городского режима эксплуатации «старт-стоп».Предназначено для легковых и коммерческих автомобилей Ford и Renault, а также для бензиновых и дизельных двигателей, для которых требуются спецификации ACEA A1/B1, A5/B5 и API SN/CF.</p>
+                                    <p>
+                                        <b>Соответствие требованиям:</b><br>
+                                        API SN/CF<br>
+                                        ACEA A5/B5<br>
+                                        Renault RN 0700<br>
+                                        Ford WSS-M2C-913-A/B/C/D<br>
+                                        Jaguar Land Rover STJLR.03.5003<br>
+                                        IVECO 18-1811 S1<br>
+                                        FIAT 9.55535-G1
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="tab_spec" class="content-tab__item">
+                                <div class="content-tab__wrap">
+                                    <table>
+                                        <thead>
+                                        <tr><td>Наименование показателя</td><td>Методы испытания</td><td>N-DUSTRIAL COMPRESSOR VDL 46</td></tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Класс вязкости по ISO</td>
+                                            <td>—</td>
+                                            <td>46</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Плотность при 20 °С, кг/м³</td>
+                                            <td>ГОСТ 3900 / ASTM D 4052</td>
+                                            <td>875</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Вязкость кинематическая при 40 °С,&nbsp; мм²/с</td>
+                                            <td>ГОСТ 33 / ASTM D 445</td>
+                                            <td>47,1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Индекс вязкости</td>
+                                            <td>ГОСТ 25371 / ASTM D 2270</td>
+                                            <td>102</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Температура вспышки в открытом тигле,&nbsp;°С</td>
+                                            <td>ГОСТ 4333 / ASTM D 92</td>
+                                            <td>220</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Температура застывания, °С</td>
+                                            <td>ГОСТ 20287 / ASTM D 97</td>
+                                            <td>-25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Трибологические характеристики на четырехшариковой машине при (20±5) °С:</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>диаметр пятна износа, мм</td>
+                                            <td>ГОСТ 9490</td>
+                                            <td>0,35</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
