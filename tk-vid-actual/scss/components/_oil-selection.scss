@@ -32,8 +32,8 @@
     }
 
     @media #{$phone} {
-      height: calc(100% - 30px);
-      top: 15px;
+      height: 100%;
+      top: 0;
       transform: none;
     }
   }

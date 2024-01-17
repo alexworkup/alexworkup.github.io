@@ -790,6 +790,9 @@ a {
 .index-slide__title span {
   color: #FAB909;
 }
+.index-slide__btn span {
+  margin-top: -3px;
+}
 .index-slide__text {
   color: #ffffff;
   font-size: 18px;
@@ -1767,8 +1770,8 @@ a {
 }
 @media screen and (max-width: 767px) {
   .oil-selection:before {
-    height: calc(100% - 30px);
-    top: 15px;
+    height: 100%;
+    top: 0;
     transform: none;
   }
 }
