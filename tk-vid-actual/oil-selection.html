@@ -12,9 +12,11 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/select2/lang/ru.js"></script>
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/script.js"></script>
+    <script src="js/calc.js"></script>
     <script src="js/priority-nav.min.js"></script>
     <script src="js/clamp/clamp.min.js"></script>
     <link rel="stylesheet" href="js/fancyapp/fancybox.css">
@@ -22,85 +24,7 @@
     <link rel="stylesheet" href="css/priority-nav-core.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
-    <script>
-        $(function() {
 
-            window.gon={};
-            gon.locale="ru";
-            gon.req_tk="QmVhcmVyIGV5SmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2prMExDSmxl\nSEFpT2pFM01EVTBPRGcwTVRoOS5Ib195NVhaWmZFZWdyaWhoNWhlTmFURkJj\nQ00wcktGLVFUTEpLVjBnc3FJ\n";
-            gon.kw="кВт";
-            gon.hp="л.с";
-            gon.option_label_category_group="Выберите категорию...";
-            gon.option_label_manufacturer="Выберите производителя...";
-            gon.option_label_series="Выберите модель...";
-            gon.option_label_engine_size="Выберите объем двигателя...";
-            gon.option_label_model="Выберите технику...";
-            gon.option_label_search="Быстрый поиск...";
-            gon.not_available=false;
-            gon.plate_text={
-                "2":"ЛЕГКОВЫЕ А/М",
-                "7":"ЛЕГКИЕ ГРУЗОВЫЕ А/М",
-                "1":"КОММЕРЧЕСКИЕ А/М",
-                "5":"МОТОТЕХНИКА",
-                "3":"СЕЛЬСКОХОЗЯЙСТВЕННАЯ ТЕХНИКА",
-                "6":"ИНДУСТРИАЛЬНОЕ ОБОРУДОВАНИЕ",
-                "4":"ВНЕДОРОЖНАЯ ТЕХНИКА"
-            };
-
-            const categoryIcons = {
-                1: 'fa-truck-container',
-                2: 'fa-car',
-                3: 'fa-tractor',
-                4: 'fa-truck-monster',
-                5: 'fa-motorcycle',
-                6: 'fa-train-subway',
-                7: 'fa-truck'
-            };
-
-            $('#selectors_category_group').select2({
-                placeholder: gon.option_label_category_group,
-                allowClear: true,
-                templateResult: formatCategory,
-                templateSelection: formatCategorySelection,
-                ajax: {
-                    url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups',
-                    dataType: 'json',
-                    headers: {
-                        "Authorization": atob(gon.req_tk)
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data.results.map(function(item) {
-                                return {
-                                    id: item.id,
-                                    text: item.name,
-                                };
-                            })
-                        };
-                    }
-                }
-            });
-
-            // Функция для форматирования отображения результатов
-            function formatCategory(category) {
-                if (!category.id) {
-                    return category.text;
-                }
-
-                // Получаем класс FontAwesome из сопоставления
-                const iconClass = categoryIcons[category.id] || 'fa-question-circle'; // fa-question-circle как запасной вариант
-                var $category = $(
-                    `<span><i class="fa-solid ${iconClass}"></i> ${category.text}</span>`
-                );
-                return $category;
-            };
-
-            function formatCategorySelection(category) {
-                return category.text;
-            };
-        });
-    </script>
 </head>
 <body class="page" style="background-image: url('images/index-bg.jpg')">
     <div class="wrapper">
@@ -319,13 +243,51 @@
             <div class="oil-calc">
                 <div class="oil-calc__left">
                     <div class="calc-category">
-                        <div class="calc-category__item">
-                            <select id="selectors_category_group" style="width: 100%;"></select>
+
+                        <div class="calc-category__title">Быстрый поиск</div>
+                        <div class="calc-category__search">
+                            <div class="calc-search">
+                                <select id="calc-search" style="width: 100%;"></select>
+                            </div>
+                        </div>
+                        <div class="calc-category__title">Поиск по категориям</div>
+                        <div class="calc-category__list">
+                            <div class="calc-category__item">
+                                <select id="selectors_category_group" style="width: 100%;"></select>
+                            </div>
+                            <div class="calc-category__item">
+                                <select id="selectors_manufacturer" style="width: 100%;"></select>
+                            </div>
+                            <div class="calc-category__item">
+                                <select id="selectors_series" style="width: 100%;"></select>
+                            </div>
+                            <div class="calc-category__item">
+                                <select id="selectors_engine_sizes" style="width: 100%;"></select>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="oil-calc__right">
-
+                    <div class="model">
+                        <div class="model__wrap">
+                            <div class="model__header model-info">
+                                <div class="model-info__search">
+                                    <a href="" class="btn">Новый поиск</a>
+                                </div>
+                                <div class="model-info__logo">
+                                    <img src="images/model-logo.png" alt="CITROEN C8 2006 - 2009">
+                                </div>
+                                <div class="model-info__props">
+                                    <p class="model-info__name">CITROEN C8 2006 - 2009</p>
+                                    <ul class="model-info__list">
+                                        <li><span>Объем двигателя</span> 2.0</li>
+                                        <li><span>Мощность</span>  100 кВт 136 л.с</li>
+                                        <li><span>Тип топлива</span>  Дизель</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -1,0 +1,129 @@
+.oil-calc {
+  display: flex;
+  gap: 12px;
+
+  &__left,
+  &__right {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.70);
+    padding: 22px;
+  }
+
+  &__left {
+    width: 600px;
+    flex-shrink: 0;
+  }
+
+  &__right {
+    flex-grow: 1;
+  }
+
+  .calc-category {
+
+    &__item {
+      margin-bottom: 13px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 11px;
+    }
+
+    &__search {
+      margin-bottom: 68px;
+    }
+  }
+
+  .select2-selection {
+
+    &--single {
+      border-radius: 10px;
+      border: 1px solid #B6C3CC;
+      background: rgba(255, 255, 255, 0.60);
+      height: 40px;
+      color: #718B98;
+      font-size: 16px;
+
+      .select2-selection__rendered {
+        line-height: 40px;
+        padding-left: 19px;
+      }
+
+      .select2-selection__arrow {
+        height: 40px;
+        width: 30px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-image: url("../images/arrow-select.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        b {
+          display: none;
+        }
+      }
+
+      .select2-selection__placeholder {
+        color: #718B98;
+        font-weight: 600;
+      }
+    }
+
+    &__rendered {
+
+      span {
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .select2-container {
+
+    &--open {
+
+      .select2-selection__arrow {
+
+        &:before {
+          transform: translate(-50%, -50%) scale(1, -1);
+        }
+      }
+    }
+  }
+
+}
+
+.select2-results {
+
+  &__option {
+    padding: 10px;
+
+    span {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+
+}
