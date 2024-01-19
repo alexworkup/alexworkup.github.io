@@ -1,0 +1,89 @@
+.oil-card {
+  display: flex;
+  column-gap: 43px;
+
+  @media #{$laptop} {
+    column-gap: 15px;
+  }
+
+  @media #{$phone} {
+    flex-direction: column;
+  }
+
+  &__pics {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    @media #{$phone} {
+      margin-bottom: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: #004B5D;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__anons {
+    color: #292929;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+
+  &__control {
+    display: flex;
+    column-gap: 15px;
+
+    @media #{$phone} {
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 20px;
+
+    @media #{$phone} {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_type_buy {
+      background: linear-gradient(142deg, #004B5E 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
+    }
+
+    &_type_link {
+      border: 1px solid #5B8B97;
+      background: none;
+      color: #004B5D;
+
+      &:hover {
+        color: #004B5D;
+      }
+    }
+  }
+}

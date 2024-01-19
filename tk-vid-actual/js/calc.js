@@ -2,7 +2,7 @@ $(function() {
 
     window.gon={};
     gon.locale="ru";
-    gon.req_tk="QmVhcmVyIGV5SmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2prMExDSmxl\nSEFpT2pFM01EVTFOekUyT1RKOS5TODJXWEVya01ObS1wYzBWcW5jTDl2akFP\neHBBSkFNTHc0cFBjdzlqVkdz\n";
+    gon.req_tk="QmVhcmVyIGV5SmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2prMExDSmxl\nSEFpT2pFM01EVTJOVEF6TWpsOS5xcVRxWjJ6RC13SWlsTnZDOTJKaTNuVlFm\nLTF0bF9ST3AxU2xSRHo4aW5N\n";
     gon.kw="кВт";
     gon.hp="л.с";
     gon.option_label_category_group="Выберите категорию...";
@@ -34,14 +34,21 @@ $(function() {
     };
     */
 
+    $('#calc-search').select2({
+        placeholder: gon.option_label_search,
+        language: "ru",
+        data: []
+    });
+
     var categoryId,
         manufacturerId,
-        seriesId;
+        seriesId,
+        modelId;
 
     $('#selectors_category_group').select2({
         placeholder: gon.option_label_category_group,
         templateResult: formatCategory,
-        templateSelection: formatStateSelection,
+        templateSelection: formatCategorySelection,
         language: "ru",
         ajax: {
             url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups/',
@@ -73,7 +80,7 @@ $(function() {
         return $category;
     };
 
-    function formatStateSelection(state) {
+    function formatCategorySelection(state) {
         if (!state.id) {
             return state.text;
         }
@@ -261,10 +268,57 @@ $(function() {
     };
 
 
-    $('#calc-search').select2({
-        placeholder: gon.option_label_search,
+    $('#selectors_models').select2({
+        placeholder: gon.option_label_model,
+        templateResult: formatModel,
+        templateSelection: formatModelSelection,
         language: "ru",
         data: []
+    }).prop('disabled', true);
+
+    $('#selectors_engine_sizes').on('select2:select', function (e) {
+        modelId = e.params.data.id;
+
+        $('#selectors_models').select2({
+            placeholder: gon.option_label_engine_size,
+            templateResult: formatModel,
+            templateSelection: formatModelSelection,
+            language: "ru",
+            ajax: {
+                url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups/' + categoryId + '/manufacturers/' + manufacturerId + '/series/' + seriesId + '/engine_sizes/',
+                dataType: 'json',
+                headers: {
+                    "Authorization": atob(gon.req_tk)
+                },
+                processResults: function (data) {
+                    return {
+                        results: data.results.map(function(item) {
+                            return {
+                                id: item.volume,
+                                text: item.volume,
+                            };
+                        })
+                    };
+                }
+            }
+        }).prop('disabled', false);
     });
+
+    function formatModel(model) {
+
+        var $model = $(
+            `<span>${model.text}</span>`
+        );
+        return $model;
+    };
+
+    function formatModelSelection(model) {
+
+        var $model = $(
+            `<span>${model.text}</span>`
+        );
+        return $model;
+    };
+
 
 });

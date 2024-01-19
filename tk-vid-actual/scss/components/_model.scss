@@ -2,12 +2,23 @@
 
   &__header {
     margin-bottom: 20px;
+
+    @media #{$phone} {
+      margin-bottom: 60px;
+    }
   }
 
   .model-info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     column-gap: 20px;
+
+    @media #{$phone} {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      column-gap: 10px;
+    }
 
     &__logo {
       width: 200px;
@@ -18,14 +29,41 @@
       font-size: 0;
       padding: 20px;
 
+      @media #{$phone} {
+        order: 1;
+        padding: 10px;
+        width: 100%;
+        height: auto;
+      }
+
       img {
         max-width: 100%;
+      }
+    }
+
+    &__search {
+      width: 100%;
+      text-align: right;
+
+      @media #{$phone} {
+        order: 3;
+        margin-top: 30px;
+        grid-column: 1/3;
+
+        .btn {
+          width: 100%;
+          justify-content: center;
+        }
       }
     }
 
     &__props {
       font-weight: 600;
       line-height: 130%;
+
+      @media #{$phone} {
+        order: 2;
+      }
     }
 
     &__name {

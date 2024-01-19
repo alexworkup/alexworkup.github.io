@@ -88,5 +88,35 @@
         margin-right: 12px;
       }
     }
+
+    &_search {
+      padding: 0 60px;
+      border-radius: 10px;
+      background: linear-gradient(142deg, #004B5E 21.17%, rgba(69, 122, 139, 0.94) 132.69%);
+      font-size: 16px;
+      position: relative;
+
+      &:hover {
+
+        &:after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-image: url("../images/btn-search-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: center;
+        transition: .2s all linear;
+      }
+    }
   }
 }

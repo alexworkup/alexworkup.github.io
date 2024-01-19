@@ -1,6 +1,11 @@
 .oil-calc {
   display: flex;
+  align-items: flex-start;
   gap: 12px;
+
+  @media #{$tablet} {
+    flex-wrap: wrap;
+  }
 
   &__left,
   &__right {
@@ -10,12 +15,35 @@
   }
 
   &__left {
-    width: 600px;
+    width: 500px;
     flex-shrink: 0;
+
+    @media #{$laptop} {
+      width: 350px;
+    }
+
+    @media #{$tablet} {
+      width: 100%;
+    }
+
+    @media #{$phone} {
+      background: none;
+      backdrop-filter: none;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__right {
     flex-grow: 1;
+
+    @media #{$tablet} {
+      width: 100%;
+    }
+
+    @media #{$phone} {
+      padding: 10px;
+    }
   }
 
   .calc-category {
@@ -37,6 +65,10 @@
 
     &__search {
       margin-bottom: 68px;
+
+      @media #{$phone} {
+        margin-bottom: 20px;
+      }
     }
   }
 
