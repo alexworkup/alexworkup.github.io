@@ -313,7 +313,7 @@ $(function() {
         placeholder: gon.option_label_model,
         templateResult: formatModel,
         templateSelection: formatModelSelection,
-        language: "ru",
+        language: "eng",
         data: []
     }).prop('disabled', true);
 
