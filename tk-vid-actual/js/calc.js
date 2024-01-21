@@ -2,7 +2,7 @@ $(function() {
 
     window.gon={};
     gon.locale="ru";
-    gon.req_tk="QmVhcmVyIGV5SmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2prMExDSmxl\nSEFpT2pFM01EVTJOVEF6TWpsOS5xcVRxWjJ6RC13SWlsTnZDOTJKaTNuVlFm\nLTF0bF9ST3AxU2xSRHo4aW5N\n";
+    gon.req_tk="QmVhcmVyIGV5SmhiR2NpT2lKSVV6STFOaUo5LmV5SnpkV0lpT2prMExDSmxl\nSEFpT2pFM01EVTNOekkxTmpsOS5IWjlNc1p2VVlJTUIxRWxnaEhHYXBlREM4\nNHBiaS1lck9ScmJxTHRyT3VN\n";
     gon.kw="кВт";
     gon.hp="л.с";
     gon.option_label_category_group="Выберите категорию...";
@@ -109,7 +109,19 @@ $(function() {
             templateSelection: formatManufacturerSelection,
             language: "ru",
             ajax: {
-                url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups/' + categoryId + '/manufacturers/',
+                url: function() {
+                    const baseUrl = `https://lubribase.ru/${gon.locale}/api/v1/category_groups/${categoryId}/manufacturers/`;
+                    const url = new URL(baseUrl);
+                    const params = {
+                        'filter[logic]': 'and',
+                        'filter[filters][0][field]': 'id',
+                        'filter[filters][0][operator]': 'eq',
+                        'filter[filters][0][value]': categoryId
+                    };
+
+                    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+                    return url;
+                },
                 dataType: 'json',
                 headers: {
                     "Authorization": atob(gon.req_tk)
@@ -127,6 +139,7 @@ $(function() {
                 }
             }
         }).prop('disabled', false);
+
     });
 
     function formatManufacturer(manufacturer) {
@@ -171,7 +184,20 @@ $(function() {
             templateSelection: formatSeriesSelection,
             language: "ru",
             ajax: {
-                url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups/' + categoryId + '/manufacturers/' + manufacturerId + '/series/',
+                url: function() {
+                    const baseUrl = `https://lubribase.ru/${gon.locale}/api/v1/category_groups/${categoryId}/manufacturers/${manufacturerId}/series/`;
+                    const url = new URL(baseUrl);
+                    const params = {
+                        'filter[logic]': 'and',
+                        'filter[filters][0][field]': 'id',
+                        'filter[filters][0][operator]': 'eq',
+                        'filter[filters][0][value]': manufacturerId
+                    };
+
+                    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+                    return url;
+                },
+
                 dataType: 'json',
                 headers: {
                     "Authorization": atob(gon.req_tk)
@@ -232,6 +258,21 @@ $(function() {
             language: "ru",
             ajax: {
                 url: 'https://lubribase.ru/' + gon.locale + '/api/v1/category_groups/' + categoryId + '/manufacturers/' + manufacturerId + '/series/' + seriesId + '/engine_sizes/',
+
+                url: function() {
+                    const baseUrl = `https://lubribase.ru/${gon.locale}/api/v1/category_groups/${categoryId}/manufacturers/${manufacturerId}/series/`;
+                    const url = new URL(baseUrl);
+                    const params = {
+                        'filter[logic]': 'and',
+                        'filter[filters][0][field]': 'id',
+                        'filter[filters][0][operator]': 'eq',
+                        'filter[filters][0][value]': manufacturerId
+                    };
+
+                    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+                    return url;
+                },
+
                 dataType: 'json',
                 headers: {
                     "Authorization": atob(gon.req_tk)
@@ -319,6 +360,8 @@ $(function() {
         );
         return $model;
     };
+
+
 
 
 });
