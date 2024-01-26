@@ -1,0 +1,10 @@
+.header {
+  background: rgba(5, 9, 19, 0.80);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+}

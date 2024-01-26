@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: #050913;
+  font-family: "Jura", "Arial Narrow", sans-serif;
+}
+
+.box {
+  max-width: 1420px;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 105px);
+}
+@media screen and (max-width: 979px) {
+  .wrapper {
+    min-height: calc(100vh - 65px);
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #26AAAB;
+}
+
+.header {
+  background: rgba(5, 9, 19, 0.8);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0;
+}
+
+@font-face {
+  font-family: "Jura";
+  src: url("../fonts/jura/Jura-SemiBold.woff2") format("woff2"), url("../fonts/jura/Jura-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.index-video {
+  width: 100%;
+}
+.index-video__wrap {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+.index-video__wrap iframe {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav {
+  font-size: 18px;
+}
+.nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav__link {
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 0;
+}
+
+.main-nav__row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 60px;
+}
+.main-nav__col {
+  display: flex;
+  align-items: center;
+}
+.main-nav__col_type_toggle .toggle svg path {
+  fill: #8089BF;
+  transition: 0.2s all linear;
+}
+.main-nav__col_type_toggle .toggle:hover svg path {
+  fill: #ffffff;
+}
+.main-nav__col_type_menu {
+  flex-grow: 1;
+}
+
+.phone {
+  display: flex;
+  align-items: flex-end;
+  column-gap: 9px;
+}
+.phone__icons {
+  display: flex;
+  column-gap: 9px;
+}
+.phone__icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(76.56% 76.64% at 50% 50.32%, #192845 0%, #071121 100%);
+  filter: drop-shadow(0px 4px 70px #000);
+}
+.phone__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.phone__link {
+  font-size: 20px;
+  background: linear-gradient(269deg, #00DFFF 1.58%, #C130D5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 90%;
+  margin-bottom: 3px;
+}
+.phone__btn {
+  color: #C130D5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 72%;
+  margin-bottom: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

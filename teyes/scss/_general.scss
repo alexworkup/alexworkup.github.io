@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: #050913;
+  font-family: $font-family-base;
+}
+
+.box {
+  max-width: 1420px;
+  padding: 0 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 105px);
+
+  @media #{$tablet} {
+    min-height: calc(100vh - 65px);
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #26AAAB;
+}

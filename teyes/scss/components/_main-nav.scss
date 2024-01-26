@@ -1,0 +1,44 @@
+.main-nav {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 60px;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+
+    &_type {
+
+      &_toggle {
+
+        .toggle {
+
+          svg {
+
+            path {
+              fill: #8089BF;
+              transition: .2s all linear;
+            }
+          }
+
+          &:hover {
+
+            svg {
+
+              path {
+                fill: #ffffff;
+              }
+            }
+          }
+        }
+      }
+
+      &_menu {
+        flex-grow: 1;
+      }
+    }
+  }
+}
