@@ -1,0 +1,115 @@
+.brands {
+  margin-bottom: 30px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin-bottom: 60px;
+  }
+
+  .brands-item {
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: #131a27;
+      padding: 13px;
+      border-radius: 10px;
+      transition: .2s background-color ease-out;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        left: 1px;
+        top: 1px;
+        background: #283243;
+        margin: -2px;
+        z-index: -1;
+        opacity: 1;
+        pointer-events: none;
+        transition: .2s all ease-out;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 100%;
+      color: #CED8E0;
+      text-align: center;
+      margin-top: auto;
+      display: flex;
+      align-items: flex-end;
+      transition: .2s all ease-out;
+    }
+
+    &__logo {
+      height: 77px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px;
+
+      img {
+        max-height: 100%;
+      }
+    }
+
+    &:hover {
+
+      .brands-item__wrap {
+        background-color: #050913;
+
+        &:after {
+          background: linear-gradient(rgba(193, 48, 213, 1), rgba(0, 0, 0, 1), rgba(193, 48, 213, 1));
+          opacity: .8;
+        }
+      }
+
+      .brands-item__name {
+        color: #C130D5;
+      }
+    }
+  }
+
+  &__more {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, #050913 -0.23%, #121B34 48.31%, #050913 100%);
+      z-index: -1;
+    }
+
+    .link-more {
+      background-color: #050913;
+      padding: 0 4px;
+    }
+  }
+}

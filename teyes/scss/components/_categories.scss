@@ -1,0 +1,136 @@
+.categories {
+  margin-bottom: 60px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+
+  .category-item {
+    position: relative;
+    height: 100%;
+    min-height: 226px;
+    padding: 1px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: .2s box-shadow ease-out;
+
+    &__wrap {
+      border-radius: 25px;
+      width: 100%;
+      height: 100%;
+      padding: 14px;
+      background-color: #212A3B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: .2s background-color ease-out;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 55%;
+        height: 55%;
+        left: 50%;
+        top: 50%;
+        background-color: #275EAE;
+        border-radius: 50%;
+        filter: blur(32.5px);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        left: 1px;
+        top: 1px;
+        background: #283243;
+        margin: -2px;
+        z-index: -1;
+        opacity: 1;
+        pointer-events: none;
+        transition: .2s all ease-out;
+      }
+
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px 0 rgb(193 48 213 / 35%);
+
+      .category-item__wrap {
+        background-color: #050913;
+
+        &:after {
+          background: linear-gradient(rgba(193, 48, 213, 1), rgba(0, 0, 0, 1), rgba(193, 48, 213, 1));
+          opacity: .8;
+        }
+      }
+
+      .category-item__more {
+        color: #ffffff;
+      }
+    }
+
+    &__name,
+    &__pics {
+      position: relative;
+    }
+
+    &__pics {
+      width: 100%;
+      height: 156px;
+      margin-bottom: 8px;
+      text-align: center;
+
+      img {
+        max-height: 100%;
+        width: auto;
+      }
+    }
+
+    &__name {
+      color: #8089BF;
+      font-size: 15px;
+      line-height: 100%;
+      font-family: $font-family-add;
+      margin-top: auto;
+      min-height: 30px;
+      text-align: center;
+    }
+
+    &__link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &_type {
+
+      &_more {
+
+          .category-item__wrap {
+            background-color: #050913;
+            justify-content: center;
+
+            &:after {
+              background: linear-gradient(rgba(7, 17, 35, 1), rgba(0, 0, 0, 1), rgba(10, 24, 47, 1));
+            }
+          }
+      }
+    }
+  }
+}

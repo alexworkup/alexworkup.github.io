@@ -42,3 +42,98 @@ a {
   text-decoration: none;
   color: #26AAAB;
 }
+
+.h2 {
+  font-family: $font-family-add;
+  font-size: 30px;
+  line-height: 100%;
+  background: linear-gradient(269deg, #00DFFF 1.58%, #C130D5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.link-more {
+  position: relative;
+  font-family: $font-family-add;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6392D7;
+  transition: .2s color ease-out;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  span {
+    margin-right: 3px;
+  }
+}
+
+.btn {
+  height: 46px;
+  line-height: 46px;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: $font-family-add;
+  border-radius: 10px;
+  background: linear-gradient(287deg, #353F56 21.6%, #384356 59.96%, #475467 99.13%);
+  box-shadow: 0 0 15px 3px #353f56;
+  padding: 0 60px;
+  position: relative;
+  transition: .2s all ease-out;
+
+  &:hover {
+    background: linear-gradient(287deg, #353F56 21.6%, #273347 59.96%, #475467 99.13%);
+    color: #C130D5;
+  }
+
+  &_type {
+
+    &_buy {
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../images/icon-add-cart.svg");
+        right: 20px;
+        bottom: calc(50% - 5px);
+        transform: translateY(50%);
+        opacity: 0;
+        transition: .2s all linear;
+      }
+
+      &:hover {
+
+        &:before {
+          bottom: 50%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.in-cart {
+    color: #C130D5;
+    background: linear-gradient(287deg, #353F56 21.6%, #273347 59.96%, #475467 99.13%);
+
+    &:before {
+      background-image: url("../images/icon-in-cart.svg");
+      opacity: 1;
+      bottom: 50%;
+    }
+  }
+}

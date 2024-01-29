@@ -1,5 +1,6 @@
 .nav {
   font-size: 18px;
+  font-family: $font-family-add;
 
   &__list {
     padding: 0;
@@ -11,5 +12,11 @@
 
   &__link {
     padding: 0 40px;
+    color: #8089BF;
+    transition: .2s color ease-out;
+
+    &:hover {
+       color: #ffffff;
+    }
   }
 }
