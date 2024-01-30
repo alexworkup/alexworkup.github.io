@@ -43,9 +43,12 @@ a {
   color: #26AAAB;
 }
 
-.h2 {
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
   font-family: $font-family-add;
-  font-size: 30px;
   line-height: 100%;
   background: linear-gradient(269deg, #00DFFF 1.58%, #C130D5 100%);
   background-clip: text;
@@ -53,6 +56,16 @@ a {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   display: inline-block;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+h2, .h2 {
+  font-size: 30px;
+}
+
+h3, .h3 {
+  font-size: 25px;
 }
 
 .link-more {

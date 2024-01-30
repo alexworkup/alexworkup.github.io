@@ -1,0 +1,94 @@
+.side-panel {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    background-image: url("../images/bg-side-panel.svg");
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 155px;
+    height: 333px;
+    opacity: .6;
+    transition: .2s opacity ease-out;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0 0 20px;
+    background: rgba(13, 17, 54, 0.60);
+    backdrop-filter: blur(30px);
+    padding: 25px 15px;
+    align-items: center;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_type {
+
+      &_cart {
+
+        #status_buy {
+          display: none;
+        }
+
+        &.added {
+
+          #status_buy {
+            display: block;
+          }
+
+          #status_empty {
+            display: none;
+          }
+        }
+      }
+
+      &_favorite {
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          background: #DB18F5;
+          border-radius: 50%;
+          right: -2px;
+          top: -3px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &.added {
+
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  &:hover {
+
+    &:before {
+      opacity: 1;
+    }
+  }
+}

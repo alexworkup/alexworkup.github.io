@@ -1,0 +1,89 @@
+.dropdown {
+  position: fixed;
+  width: 100%;
+  top: -100%;
+  z-index: 2000;
+  transition: .5s top ease-out;
+
+  &.active {
+    top: 92px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 790px;
+    height: 52px;
+    left: 50%;
+    bottom: -52px;
+    backdrop-filter: blur(10px);
+    clip-path: path("M0.015625 0C19.8639 0 38.52 9.474 50.2299 25.5C61.9398 41.5259 80.5958 50.9999 100.444 50.9999H703.008C720.244 50.9999 735.939 41.0732 743.325 25.5C750.712 9.9267 766.407 0 783.643 0H0.015625Z");
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgb(5 9 19), rgb(5 9 19), rgb(5 9 19));
+  }
+
+  &__box {
+    backdrop-filter: blur(10px);
+    background-image: linear-gradient(to bottom, rgba(5, 9, 19, .2), rgb(5, 9, 19));
+  }
+
+  &__close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__wrap {
+    position: relative;
+    padding: 60px 17px 40px 17px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+
+    &_type {
+
+      &_dropdown {
+        flex-grow: 1;
+      }
+
+      &_menu {
+        position: absolute;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    font-family: $font-family-add;
+
+    li {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: #98A9C8;
+        font-size: 16px;
+        line-height: 130%;
+        transition: .2s color linear;
+
+        &:hover {
+          color: #C130D5;
+        }
+      }
+    }
+  }
+}

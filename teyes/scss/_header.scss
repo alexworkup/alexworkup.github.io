@@ -7,4 +7,30 @@
   width: 100%;
   z-index: 1000;
   padding: 25px 0;
+
+  .logo {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(../images/bg-logo-header.svg);
+      width: 412px;
+      height: 167px;
+      left: 50%;
+      top: -25px;
+      z-index: -1;
+      transform: translateX(-50%);
+      opacity: .6;
+      pointer-events: none;
+      transition: .2s opacity ease-out;
+    }
+
+    &:hover {
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
 }

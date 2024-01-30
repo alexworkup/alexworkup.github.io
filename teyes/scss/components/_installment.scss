@@ -1,0 +1,86 @@
+.installment {
+  position: relative;
+
+  &:before {
+    content: '';
+    background-image: url("../images/bg-installment.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 150%;
+    position: absolute;
+    bottom: -30%;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+
+    &_type {
+
+      &_pics {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 20px 55px 50px 20px;
+    color: #ffffff;
+    font-size: 16px;
+
+    &:before {
+      content: '';
+      border-radius: 20px;
+      background: rgba(13, 17, 54, 0.60);
+      backdrop-filter: blur(30px);
+      position: absolute;
+      width: 1420px;
+      height: 100%;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .h2 + p {
+      margin-top: 0;
+    }
+  }
+
+  &__pics {
+    margin-top: -30px;
+  }
+
+  &__btn {
+    border-radius: 50px;
+    border: 2px solid #C130D5;
+    background: rgba(3, 6, 14, 0.60);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    color: #FFF;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 36px;
+    font-family: $font-family-add;
+    text-transform: uppercase;
+    display: inline-flex;
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s color ease-out;
+
+    &:hover {
+      color: #C130D5;
+    }
+  }
+}

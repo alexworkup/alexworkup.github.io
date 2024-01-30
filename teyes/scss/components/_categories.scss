@@ -4,6 +4,10 @@
   &__title {
     text-align: center;
     margin-bottom: 60px;
+
+    .h2 {
+      margin-bottom: 0;
+    }
   }
 
   &__row {
