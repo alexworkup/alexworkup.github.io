@@ -8,8 +8,22 @@
   z-index: 1000;
   padding: 25px 0;
 
+  @media #{$phone} {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background: rgba(3, 6, 14, 0.80);
+  }
+
   .logo {
     position: relative;
+
+    @media #{$laptop} {
+      max-width: 150px;
+    }
+
+    @media #{$phone} {
+      max-width: 140px;
+    }
 
     &:before {
       content: "";
@@ -24,6 +38,14 @@
       opacity: .6;
       pointer-events: none;
       transition: .2s opacity ease-out;
+
+      @media #{$laptop} {
+        top: -35px;
+      }
+
+      @media #{$phone} {
+        content: none;
+      }
     }
 
     &:hover {
@@ -32,5 +54,66 @@
         opacity: 1;
       }
     }
+  }
+
+  .phone {
+
+    &__text {
+
+      @media #{$tablet} {
+        display: none;
+      }
+    }
+
+    &__icon {
+
+      @media #{$phone} {
+        width: 30px;
+        height: 30px;
+        background: none;
+      }
+
+      svg {
+
+        path {
+
+          @media #{$phone} {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+
+    &__icons {
+
+      @media #{$phone} {
+        column-gap: 12px;
+      }
+    }
+  }
+
+  .main-nav {
+
+    @media #{$phone} {
+      padding: 0 24px;
+    }
+
+    &__col {
+
+      &_type {
+
+        &_logo {
+
+          @media #{$phone} {
+            margin: 0 auto;
+          }
+        }
+
+      }
+    }
+  }
+
+  .toggle {
+    font-size: 0;
   }
 }

@@ -4,6 +4,10 @@
   &__title {
     margin-bottom: 60px;
 
+    @media #{$tablet} {
+      margin-bottom: 30px;
+    }
+
     .h2 {
       margin-bottom: 0;
     }
@@ -11,15 +15,36 @@
 
   &__row {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     margin-bottom: 50px;
     margin: -14px;
     padding-bottom: 60px;
+
+    @media #{$phone} {
+      margin: -10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      padding-bottom: 30px;
+    }
   }
 
   &__col {
     position: relative;
     padding: 14px;
+
+    @media #{$phone} {
+      padding: 10px;
+
+      &:nth-child(even) {
+
+        &:before {
+          content: none;
+        }
+
+        .decor-line {
+          display: none;
+        }
+      }
+    }
 
     &:before {
       content: '';

@@ -83,7 +83,7 @@ body.open-burger {
 }
 @media screen and (max-width: 767px) {
   .h2,
-  .h1 {
+.h1 {
     font-size: 25px;
     line-height: 100%;
   }

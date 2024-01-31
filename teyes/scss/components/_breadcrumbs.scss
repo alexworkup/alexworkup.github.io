@@ -1,0 +1,43 @@
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+
+  &__item {
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+    padding-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    &:after {
+      content: '>';
+      position: absolute;
+      width: 10px;
+      right: 0;
+      top: calc(50% + 1px);
+      transform: translateY(-50%);
+      color: #4F5785;
+    }
+
+    a {
+      color: #4F5785;
+      text-decoration: none;
+    }
+
+    & > span {
+      font-weight: 500;
+    }
+
+  }
+}

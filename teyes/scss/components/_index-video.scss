@@ -2,6 +2,10 @@
   width: 100%;
   margin-bottom: 60px;
 
+  @media #{$phone} {
+    margin-bottom: 30px;
+  }
+
   &__wrap {
     width: 100%;
     padding-top: 56.25%;

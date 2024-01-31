@@ -1,6 +1,11 @@
 .installment {
   position: relative;
 
+  @media #{$tablet} {
+    background: rgba(13, 17, 54, 0.60);
+    backdrop-filter: blur(30px);
+  }
+
   &:before {
     content: '';
     background-image: url("../images/bg-installment.svg");
@@ -16,10 +21,18 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+
+    @media #{$tablet} {
+      content: none;
+    }
   }
 
   &__row {
     display: flex;
+
+    @media #{$tablet} {
+      flex-direction: column;
+    }
   }
 
   &__col {
@@ -38,6 +51,11 @@
     color: #ffffff;
     font-size: 16px;
 
+    @media #{$phone} {
+      padding-right: 20px;
+      padding-bottom: 10px;
+    }
+
     &:before {
       content: '';
       border-radius: 20px;
@@ -49,6 +67,10 @@
       right: 0;
       top: 0;
       z-index: -1;
+
+      @media #{$tablet} {
+        content: none;
+      }
     }
 
     .h2 + p {
@@ -78,6 +100,13 @@
     left: 50%;
     transform: translateX(-50%);
     transition: .2s color ease-out;
+
+    @media #{$phone} {
+      font-size: 10px;
+      position: relative;
+      line-height: 50px;
+      height: 50px;
+    }
 
     &:hover {
       color: #C130D5;

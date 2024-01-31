@@ -4,6 +4,14 @@
     display: flex;
     justify-content: space-between;
     column-gap: 60px;
+
+    @media #{$notebook} {
+      column-gap: 40px;
+    }
+
+    @media #{$laptop} {
+      column-gap: 20px;
+    }
   }
 
   &__col {
@@ -38,7 +46,12 @@
 
       &_menu {
         flex-grow: 1;
+
+        @media #{$phone} {
+          display: none;
+        }
       }
+
     }
   }
 }

@@ -22,6 +22,10 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    @media #{$phone} {
+      padding: 10px 7px 10px 7px;
+    }
   }
 
   &__props {
@@ -34,6 +38,10 @@
       font-size: 14px;
       line-height: 120%;
       margin-bottom: 5px;
+
+      @media #{$phone} {
+        font-size: 11px;
+      }
 
       span {
         color: #566582;
@@ -52,6 +60,10 @@
     font-weight: 500;
     margin-bottom: 15px;
     display: inline-block;
+
+    @media #{$phone} {
+      font-size: 10px;
+    }
   }
 
   &__price {
@@ -73,8 +85,14 @@
     }
 
     .card-favorite {
+      font-size: 0;
+
+      @media #{$phone} {
+        width: 20px;
+      }
 
       svg {
+        max-width: 100%;
 
         path {
 
@@ -84,7 +102,6 @@
   }
 
   &__gallery {
-    height: 252px;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
   }
@@ -93,6 +110,17 @@
 
     .btn {
       width: 100%;
+
+      @media #{$phone} {
+        font-size: 10px;
+        padding: 0 15px;
+        height: 30px;
+        line-height: 30px;
+
+        &:before {
+          content: none;
+        }
+      }
     }
   }
 

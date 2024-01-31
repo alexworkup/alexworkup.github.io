@@ -10,6 +10,18 @@ body {
   width: 100%;
   background-color: #050913;
   font-family: $font-family-base;
+
+  &.open-burger {
+    overflow: hidden;
+  }
+
+  &.page {
+    padding-top: 92px;
+
+    .main {
+      padding-top: 40px;
+    }
+  }
 }
 
 .box {
@@ -27,11 +39,7 @@ img {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 105px);
-
-  @media #{$tablet} {
-    min-height: calc(100vh - 65px);
-  }
+  min-height: 100vh;
 }
 
 .main {
@@ -60,8 +68,16 @@ h3, .h3 {
   margin: 0 0 20px 0;
 }
 
+h1, .h1 {
+  margin-top: 17px;
+}
+
 h2, .h2 {
   font-size: 30px;
+
+  @media #{$phone} {
+    font-size: 25px;
+  }
 }
 
 h3, .h3 {
@@ -101,7 +117,7 @@ h3, .h3 {
   border-radius: 10px;
   background: linear-gradient(287deg, #353F56 21.6%, #384356 59.96%, #475467 99.13%);
   box-shadow: 0 0 15px 3px #353f56;
-  padding: 0 60px;
+  padding: 0 55px;
   position: relative;
   transition: .2s all ease-out;
 

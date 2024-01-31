@@ -2,6 +2,11 @@
   padding: 25px 0 80px 0;
   position: relative;
 
+  @media #{$phone} {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -20,10 +25,18 @@
 
   &__nav {
     margin-bottom: 25px;
+
+    @media #{$phone} {
+      margin-bottom: 5px;
+    }
   }
 
   .socials {
     margin-bottom: 22px;
+
+    @media #{$phone} {
+      margin-bottom: 0;
+    }
   }
 
   .copyright {
@@ -34,13 +47,42 @@
   }
 
   &__row {
+    display: grid;
+  }
+
+  &__col {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    &_type {
+
+      &_dev {
+        grid-row: 1/3;
+        grid-column: 2/3;
+        display: flex;
+        justify-content: flex-end;
+
+        @media #{$phone} {
+          grid-row: 1/2;
+        }
+      }
+
+      &_copy {
+
+        @media #{$phone} {
+          grid-column: 1/3;
+          text-align: center;
+        }
+      }
+    }
   }
 
   .logo {
     position: relative;
+
+    @media #{$phone} {
+      max-width: 120px;
+    }
 
     &:before {
       content: "";
@@ -71,9 +113,37 @@
 
     &__icons {
 
+      @media #{$laptop} {
+        display: none;
+      }
+
       &:before {
         content: none;
       }
     }
+
+    &__link {
+
+      @media #{$phone} {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .main-nav {
+
+    &__col {
+
+      &_type {
+
+        &_menu {
+
+          @media #{$laptop} {
+            display: none;
+          }
+        }
+      }
+    }
+
   }
 }

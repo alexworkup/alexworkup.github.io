@@ -1,8 +1,16 @@
 .models {
 
+  @media #{$tablet} {
+    margin-bottom: 40px;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 20px;
+
+    @media #{$phone} {
+      margin-bottom: 10px;
+    }
 
     .h2 {
       margin-bottom: 0;
@@ -12,6 +20,18 @@
   &__row {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    @media #{$laptop} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media #{$tablet} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$phone} {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__col {
@@ -19,7 +39,17 @@
     height: 300px;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
+
+    @media #{$tablet} {
+      padding: 30px;
+      height: auto;
+    }
+
+    @media #{$phone} {
+      padding: 10px;
+    }
 
     &:before {
       position: absolute;
@@ -48,6 +78,47 @@
       &:before,
       &:after {
         content: none;
+      }
+    }
+
+    &:nth-child(4) {
+
+      &:before,
+      &:after {
+
+        @media #{$laptop} {
+          content: none;
+        }
+
+        @media #{$tablet} {
+          content: '';
+        }
+      }
+    }
+
+    &:nth-child(3) {
+
+      &:before,
+      &:after {
+
+        @media #{$tablet} {
+          content: none;
+        }
+
+        @media #{$phone} {
+          content: '';
+        }
+      }
+    }
+
+    &:nth-child(even) {
+
+      @media #{$phone} {
+
+        &:before,
+        &:after {
+          content: none;
+        }
       }
     }
   }
@@ -98,6 +169,10 @@
       max-width: 700px;
       margin: 0 auto;
 
+      @media #{$laptop} {
+        max-width: 600px;
+      }
+
       .models__row {
         grid-template-columns: repeat(3, 1fr);
         position: relative;
@@ -117,6 +192,10 @@
         justify-content: center;
         height: auto;
         padding: 30px;
+
+        @media #{$laptop} {
+          padding: 20px;
+        }
 
         &:after {
           bottom: -6px;

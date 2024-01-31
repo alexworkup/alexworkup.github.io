@@ -3,10 +3,26 @@
   width: 100%;
   top: -100%;
   z-index: 2000;
-  transition: .5s top ease-out;
+  transition: .5s top ease-out,
+              .3s left ease-out;
+
+  @media #{$phone} {
+    height: 100vh;
+    top: 0;
+    left: -100%;
+  }
 
   &.active {
     top: 92px;
+
+    @media #{$phone} {
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      opacity: 1;
+    }
   }
 
   &:before {
@@ -20,31 +36,101 @@
     clip-path: path("M0.015625 0C19.8639 0 38.52 9.474 50.2299 25.5C61.9398 41.5259 80.5958 50.9999 100.444 50.9999H703.008C720.244 50.9999 735.939 41.0732 743.325 25.5C750.712 9.9267 766.407 0 783.643 0H0.015625Z");
     transform: translateX(-50%);
     background-image: linear-gradient(to bottom, rgb(5 9 19), rgb(5 9 19), rgb(5 9 19));
+
+    @media #{$phone} {
+      content: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -86px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 775px;
+    height: 74px;
+    background-image: url(../images/dropdown-after-light.svg);
+    z-index: -1;
+    background-size: contain;
+    transition: .2s opacity ease-out .5s;
+    opacity: 0;
+
+    @media #{$phone} {
+      content: none;
+    }
   }
 
   &__box {
     backdrop-filter: blur(10px);
     background-image: linear-gradient(to bottom, rgba(5, 9, 19, .2), rgb(5, 9, 19));
+
+    @media #{$phone} {
+      height: 100%;
+    }
   }
 
   &__close {
     width: 40px;
     height: 40px;
     position: absolute;
+    z-index: 10;
     right: 0;
     top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media #{$notebook} {
+      right: 40px;
+      top: 40px;
+    }
+
+    @media #{$phone} {
+      right: 10px;
+      top: 10px;
+    }
+
+    svg {
+
+      path {
+        stroke: #566582;
+        transition: .2s all ease-out;
+      }
+    }
+
+    &:hover {
+
+      svg {
+
+        path {
+          stroke: #ffffff;
+        }
+      }
+    }
   }
 
   &__wrap {
     position: relative;
     padding: 60px 17px 40px 17px;
+
+    @media #{$laptop} {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    @media #{$phone} {
+      padding-top: 50px;
+      height: 100%;
+    }
   }
 
   &__row {
     display: flex;
+
+    @media #{$phone} {
+      flex-direction: column;
+    }
   }
 
   &__col {
@@ -53,10 +139,23 @@
 
       &_dropdown {
         flex-grow: 1;
+
+        @media #{$phone} {
+          display: none;
+        }
       }
 
       &_menu {
         position: absolute;
+
+        @media #{$tablet} {
+          display: none;
+        }
+
+        @media #{$phone} {
+          display: block;
+          position: relative;
+        }
       }
     }
   }
@@ -69,6 +168,10 @@
 
     li {
       margin-bottom: 25px;
+
+      @media #{$phone} {
+        margin-bottom: 10px;
+      }
 
       &:last-child {
         margin-bottom: 0;
