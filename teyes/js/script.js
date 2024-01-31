@@ -6,6 +6,8 @@ $(function() {
         isMobile = true;
     }
 
+    /* Toggle */
+
     const buttonsToggle = document.querySelectorAll('.js-toggle-btn, .js-toggle-close');
     const boxToggle = document.querySelector('.js-toggle-box');
     const body = document.querySelector('body');
@@ -28,6 +30,9 @@ $(function() {
         })
     }
 
+
+    /* Product gallery */
+
     const bigGallery = document.querySelector('.js-big-gallery');
     const smallGallery = document.querySelector('.js-small-gallery');
 
@@ -49,6 +54,23 @@ $(function() {
             thumbs: {
                 swiper: swiperSmallGallery,
             },
+        });
+    }
+
+
+    /* Product SKU */
+
+    const skuTitle = document.querySelectorAll('.js-sku-title');
+
+    if(skuTitle.length > 0) {
+        skuTitle.forEach(function (item) {
+            item.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const parentItem = this.closest('.product-sku__item');
+                if (parentItem) {
+                    parentItem.classList.toggle('active');
+                }
+            });
         });
     }
 

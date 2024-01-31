@@ -128,7 +128,7 @@ h3, .h3 {
 
   &_type {
 
-    &_buy {
+    &_into {
 
       &:before {
         content: '';
@@ -153,6 +153,28 @@ h3, .h3 {
         }
       }
     }
+
+    &_buy,
+    &_click {
+      border-radius: 30px;
+      font-size: 12px;
+      height: 50px;
+      line-height: 50px;
+      background: transparent;
+      border: 2px solid #566582;
+      box-shadow: 0 0 15px 3px #181E2C;
+
+      &:hover {
+        border: 2px solid #C130D5;
+        background: #181D24;
+        box-shadow: 0 0 15px 0 #C130D5;
+      }
+    }
+
+    &_buy {
+      border: 2px solid #C130D5;
+    }
+
   }
 
   &.in-cart {

@@ -71,34 +71,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
-
-    .card-price {
-      color: #0B0E15;
-      font-family: $font-family-add;
-      font-size: 18px;
-      line-height: 100%;
-      padding-right: 10px;
-
-      span {
-        font-family: $font-family-base;
-      }
-    }
-
-    .card-favorite {
-      font-size: 0;
-
-      @media #{$phone} {
-        width: 20px;
-      }
-
-      svg {
-        max-width: 100%;
-
-        path {
-
-        }
-      }
-    }
   }
 
   &__gallery {

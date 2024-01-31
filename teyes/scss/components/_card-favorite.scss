@@ -1,0 +1,27 @@
+.card-favorite {
+  font-size: 0;
+
+  @media #{$phone} {
+    width: 20px;
+  }
+
+  svg {
+    max-width: 100%;
+
+    path {
+      fill: #66778D;
+      transition: .2s fill ease-out;
+    }
+  }
+
+  &.added,
+  &:hover {
+
+    svg {
+
+      path {
+        fill: #C130D5;
+      }
+    }
+  }
+}
