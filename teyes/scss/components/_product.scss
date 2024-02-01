@@ -1,9 +1,26 @@
 .product {
   margin-bottom: 80px;
 
+  @media #{$phone} {
+    margin-bottom: 60px;
+  }
+
   &__row {
     display: flex;
     gap: 20px;
+
+    @media #{$notebook} {
+      gap: 10px;
+    }
+
+    @media #{$laptop} {
+      display: grid;
+      grid-template-columns: 600px 1fr;
+    }
+
+    @media #{$tablet} {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__col {
@@ -12,12 +29,179 @@
 
       &_gallery {
         flex-grow: 0;
+        width: 100%;
+        overflow: hidden;
       }
 
       &_sku {
         width: 310px;
         flex-shrink: 0;
+
+        @media #{$laptop} {
+          width: 100%;
+        }
       }
+
+      &_info {
+
+        @media #{$laptop} {
+          grid-column: 1/3;
+        }
+
+        @media #{$tablet} {
+          grid-column: 1/2;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-bottom: 56px;
+  }
+
+  &__tab {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      width: 100%;
+      height: 200px;
+      background-image: url("../images/content-tab-after.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: -1;
+    }
+
+    .nav-tab {
+      list-style: none;
+      margin: 0 0 -25px 0;
+      padding: 0;
+      display: flex;
+      font-size: 18px;
+      font-family: $font-family-add;
+      font-weight: normal;
+
+      @media #{$phone} {
+        margin-bottom: 0;
+      }
+
+      &__link {
+        border-radius: 20px;
+        padding: 12px 40px 40px 40px;
+        min-width: 210px;
+        display: inline-block;
+        color: rgb(102, 119, 141);
+        text-align: center;
+        transform: translateY(0);
+        transition: .2s all linear;
+        position: relative;
+        background: transparent;
+
+        @media #{$phone} {
+          padding: 10px;
+          min-width: auto;
+          font-size: 14px;
+          height: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+
+        &:after {
+          content: '';
+          width: 32px;
+          height: 30px;
+          background-image: url("../images/icon-corner.svg");
+          background-size: cover;
+          position: absolute;
+          right: -31px;
+          bottom: 21px;
+          pointer-events: none;
+          opacity: 0;
+
+          @media #{$phone} {
+            content: none;
+          }
+        }
+
+        &.active,
+        &:hover {
+          backdrop-filter: blur(60px);
+          background: rgba(13, 17, 54, 0.6);
+          transform: translateY(-3px);
+          color: #ffffff;
+
+          @media #{$phone} {
+            transform: none;
+          }
+        }
+
+        &.active {
+
+          &:after {
+            opacity: .6;
+          }
+        }
+      }
+    }
+
+    .content-tab {
+      border-radius: 0 20px 20px 20px;
+      backdrop-filter: blur(60px);
+      background: rgba(13, 17, 54, 0.6);
+      padding: 25px 60px 80px 25px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 125%;
+      color: #a1abbf;
+      position: relative;
+
+      @media #{$phone} {
+        padding: 25px 16px 16px 16px;
+        border-radius: 0 0 20px 20px;
+        font-size: 14px;
+      }
+
+      b {
+        color: #ffffff;
+        font-family: $font-family-add;
+        font-weight: normal;
+      }
+
+      &__item {
+        display: none;
+        overflow: hidden;
+
+        &.active {
+          display: block;
+        }
+
+        p {
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        table {
+          border-collapse: collapse;
+
+          td {
+            border: 1px solid #f3f3f3;
+            padding: 10px;
+          }
+
+          thead {
+            font-weight: 700;
+
+            tr {
+              background-color: #f3f3f3;
+            }
+          }
+        }
+      }
+
     }
   }
 

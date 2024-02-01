@@ -1,10 +1,28 @@
 .product-info {
   height: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 62px;
+    background-image: url(../images/product-info-after.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -32px;
+    z-index: -1;
+    background-size: contain;
+  }
 
   &__wrap {
     height: 100%;
     position: relative;
     padding: 32px 25px;
+
+    @media #{$phone} {
+      padding: 32px 16px 22px 16px;
+    }
 
     &:before {
       border-radius: 20px 20px 60px 60px;
@@ -17,6 +35,10 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+
+      @media #{$phone} {
+        border-radius: 20px 20px 30px 30px;
+      }
     }
   }
 
@@ -37,12 +59,21 @@
     text-transform: uppercase;
     font-family: $font-family-add;
     margin-bottom: 20px;
+
+    @media #{$phone} {
+      font-size: 16px;
+    }
   }
 
   &__content {
     padding-bottom: 40px;
     margin-bottom: 40px;
     position: relative;
+
+    @media #{$phone} {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
 
     &:before {
       content: '';
@@ -60,14 +91,35 @@
     align-items: center;
     margin-bottom: 35px;
 
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
+
     .card-price {
       color: #C130D5;
       font-size: 25px;
       min-width: 155px;
     }
+
+    .card-favorite {
+
+      @media #{$phone} {
+        width: 30px;
+      }
+    }
   }
 
   &__buttons {
+
+    @media #{$phone} {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+    }
+
+    @media screen and (max-width: 360px) {
+      grid-template-columns: 1fr;
+    }
 
     .btn {
       margin-bottom: 18px;
@@ -81,6 +133,13 @@
         &_buy,
         &_click {
           min-width: 223px;
+
+          @media #{$phone} {
+            min-width: auto;
+            padding: 0 10px;
+            width: 100%;
+            margin-bottom: 0;
+          }
         }
       }
     }

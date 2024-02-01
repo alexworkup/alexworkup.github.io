@@ -13,6 +13,10 @@
     max-width: 60px;
     font-size: 0;
 
+    @media #{$phone} {
+      max-width: 33px;
+    }
+
     img {
       max-width: 100%;
       height: auto;

@@ -5,6 +5,15 @@
   max-width: inherit;
   height: 100%;
 
+  @media #{$notebook} {
+    padding-right: 20px;
+  }
+
+  @media #{$phone} {
+    border-radius: 30px 15px;
+    padding: 20px;
+  }
+
   &__row {
     display: flex;
     gap: 10px;
@@ -12,6 +21,13 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &_type {
+
+      &_small-gallery {
+        display: block;
+      }
     }
   }
 
@@ -23,6 +39,12 @@
         flex-grow: 1;
         width: 435px;
         max-width: 435px;
+
+        @media #{$phone} {
+          width: 100%;
+          max-width: 100%;
+          overflow: hidden;
+        }
       }
 
       &_picto {
@@ -32,6 +54,10 @@
 
       &_small {
         width: 435px;
+
+        @media #{$phone} {
+          width: 100%;
+        }
       }
     }
   }
@@ -47,6 +73,10 @@
       img {
         max-width: 100%;
         height: auto;
+
+        @media #{$phone} {
+          width: 100%;
+        }
       }
     }
   }

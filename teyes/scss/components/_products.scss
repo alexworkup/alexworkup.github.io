@@ -1,6 +1,29 @@
 .products {
   margin-bottom: 30px;
 
+  &_type {
+
+    &_catalog {
+
+      .products__row {
+        row-gap: 20px;
+        margin: -5px;
+      }
+
+      .products__col {
+        padding: 5px;
+
+        &:before {
+          content: none;
+        }
+
+        .decor-line {
+          display: none;
+        }
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 60px;
 

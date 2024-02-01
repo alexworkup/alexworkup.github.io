@@ -68,6 +68,10 @@
   &__item {
     margin-bottom: 30px;
 
+    @media #{$phone} {
+      margin-bottom: 20px;
+    }
+
     &.active {
 
       .sku-list {

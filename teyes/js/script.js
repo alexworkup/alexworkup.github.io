@@ -74,4 +74,31 @@ $(function() {
         });
     }
 
+
+    /* Product tabs */
+
+    const tabLinks = document.querySelectorAll('.product .nav-tab__link');
+    const tabContents = document.querySelectorAll('.content-tab__item');
+
+    tabLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            tabLinks.forEach(item => {
+                item.classList.remove('active');
+            });
+
+            link.classList.add('active');
+
+            const activeTabId = link.getAttribute('data-id');
+
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.getAttribute('id') === activeTabId) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+
 });
