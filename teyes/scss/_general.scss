@@ -9,6 +9,7 @@ html {
 body {
   width: 100%;
   background-color: #050913;
+  color: #a1abbf;
   font-family: $font-family-base;
 
   &.open-burger {
@@ -60,7 +61,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #26AAAB;
+  color: #c130d5;
 }
 
 
@@ -120,87 +121,47 @@ h3, .h3 {
   }
 }
 
-.btn {
-  height: 46px;
-  line-height: 46px;
-  display: inline-flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: #FFF;
-  text-transform: uppercase;
-  font-family: $font-family-add;
-  border-radius: 10px;
-  background: linear-gradient(287deg, #353F56 21.6%, #384356 59.96%, #475467 99.13%);
-  box-shadow: 0 0 15px 3px #353f56;
-  padding: 0 55px;
+
+.page-inner {
+  margin-bottom: 120px;
   position: relative;
-  transition: .2s all ease-out;
 
-  &:hover {
-    background: linear-gradient(287deg, #353F56 21.6%, #273347 59.96%, #475467 99.13%);
-    color: #C130D5;
+  @media #{$phone} {
+    margin-bottom: 40px;
   }
 
-  &_type {
+  &__wrap {
+    backdrop-filter: blur(60px);
+    background: rgba(13, 17, 54, 0.6);
+    border-radius: 20px;
+    padding: 48px 60px;
+    line-height: 130%;
 
-    &_into {
-
-      &:before {
-        content: '';
-        position: absolute;
-        width: 28px;
-        height: 25px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url("../images/icon-add-cart.svg");
-        right: 20px;
-        bottom: calc(50% - 5px);
-        transform: translateY(50%);
-        opacity: 0;
-        transition: .2s all linear;
-      }
-
-      &:hover {
-
-        &:before {
-          bottom: 50%;
-          opacity: 1;
-        }
-      }
+    h2, .h2,
+    h3, .h3 {
+      font-size: 25px;
+      color: #c130d5;
+      background: none;
+      -webkit-text-fill-color: initial;
+      text-transform: initial;
+      display: block;
     }
 
-    &_buy,
-    &_click {
-      border-radius: 30px;
-      font-size: 12px;
-      height: 50px;
-      line-height: 50px;
-      background: transparent;
-      border: 2px solid #566582;
-      box-shadow: 0 0 15px 3px #181E2C;
-
-      &:hover {
-        border: 2px solid #C130D5;
-        background: #181D24;
-        box-shadow: 0 0 15px 0 #C130D5;
-      }
+    @media #{$phone} {
+      padding: 28px 20px;
     }
-
-    &_buy {
-      border: 2px solid #C130D5;
-    }
-
   }
 
-  &.in-cart {
-    color: #C130D5;
-    background: linear-gradient(287deg, #353F56 21.6%, #273347 59.96%, #475467 99.13%);
-
-    &:before {
-      background-image: url("../images/icon-in-cart.svg");
-      opacity: 1;
-      bottom: 50%;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/content-tab-after.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
   }
 }

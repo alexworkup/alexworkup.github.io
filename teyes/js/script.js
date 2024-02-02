@@ -101,4 +101,35 @@ $(function() {
         });
     });
 
+
+
+    /* Popup */
+    const popupLinks = document.querySelectorAll('.js-popup-open');
+    const buttonsClosePopup = document.querySelectorAll('.js-popup-close');
+
+    if(buttonsClosePopup.length > 0) {
+        buttonsClosePopup.forEach(item => {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
+                Fancybox.close();
+            });
+        })
+    }
+
+    if(popupLinks.length > 0) {
+        popupLinks.forEach(item => {
+            item.addEventListener('click', function (event) {
+                event.preventDefault();
+                Fancybox.show([{
+                        src: item.dataset.open,
+                        type: "inline",
+                    }],
+                    {
+                        mainClass: 'popup-open',
+                        closeButton: false,
+                    });
+            });
+        });
+    }
+
 });

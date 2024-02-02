@@ -1,0 +1,27 @@
+.stocks {
+  margin-bottom: 120px;
+  
+  @media #{$phone} {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+
+    @media #{$phone} {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+  }
+
+  &__item {
+    font-size: 0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      height: auto;
+    }
+  }
+}

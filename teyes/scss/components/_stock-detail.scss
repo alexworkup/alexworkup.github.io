@@ -1,0 +1,42 @@
+.stock-detail {
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    
+    @media #{$phone} {
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+  }
+
+  &__pics {
+    max-width: 220px;
+    margin-right: 20px;
+  }
+
+  &__logo {
+    max-width: 600px;
+
+    @media #{$phone} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .btn {
+      margin-right: 22px;
+      margin-bottom: 10px;
+    }
+  }
+}

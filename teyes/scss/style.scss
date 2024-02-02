@@ -6,6 +6,7 @@
 @import "fonts";
 
 //Components
+@import "components/btn";
 @import "components/index-video";
 @import "components/nav";
 @import "components/logo";
@@ -28,8 +29,13 @@
 @import "components/product-pictograms";
 @import "components/product-sku";
 @import "components/product-info";
+@import "components/product-props";
 @import "components/card-price";
 
 @import "components/search-form";
 @import "components/catalog";
 @import "components/sort-main";
+@import "components/popup-form";
+@import "components/about-page";
+@import "components/stocks";
+@import "components/stock-detail";

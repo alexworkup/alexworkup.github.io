@@ -109,6 +109,24 @@
         }
       }
 
+      &.selected {
+
+        span {
+          color: #C130D5;
+
+          &:before {
+            background-image: url("../images/bg-checked.svg");
+          }
+        }
+      }
+
+      &:hover {
+
+        span {
+          color: #C130D5;
+        }
+      }
+
       &:last-child {
         margin-bottom: 0;
       }

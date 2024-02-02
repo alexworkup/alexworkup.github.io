@@ -4,11 +4,20 @@
   &__row {
     display: flex;
     gap: 20px;
+
+    @media #{$tablet} {
+      flex-direction: column;
+    }
   }
 
   &__sort-block {
     display: flex;
     align-items: flex-start;
+    
+    @media #{$laptop} {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -71,6 +80,10 @@
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+
+    @media #{$tablet} {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     li {
 
