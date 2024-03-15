@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Thin'), local('BebasNeue-Thin'),
+  url('fonts/bebasneuethin.woff2') format('woff2'),
+  url('fonts/bebasneuethin.woff') format('woff'),
+  url('fonts/bebasneuethin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Light'), local('BebasNeue-Light'),
+  url('fonts/bebasneuelight.woff2') format('woff2'),
+  url('fonts/bebasneuelight.woff') format('woff'),
+  url('fonts/bebasneuelight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Book'), local('BebasNeueBook'),
+  url('fonts/bebasneuebook.woff2') format('woff2'),
+  url('fonts/bebasneuebook.woff') format('woff'),
+  url('fonts/bebasneuebook.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
+  url('fonts/bebasneueregular.woff2') format('woff2'),
+  url('fonts/bebasneueregular.woff') format('woff'),
+  url('fonts/bebasneueregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  src: local('Bebas Neue Bold'), local('BebasNeueBold'),
+  url('fonts/bebasneuebold.woff2') format('woff2'),
+  url('fonts/bebasneuebold.woff') format('woff'),
+  url('fonts/bebasneuebold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.fit-schedule {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  max-width: 1790px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #c4c9c9 17.86%, #fff 100%);
+
+  &__sort {
+
+    .fit-sort {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        margin-right: 50px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .sort-item {
+        position: relative;
+        cursor: pointer;
+
+        &__title {
+          font-weight: 400;
+          font-size: 25px;
+          line-height: 150%;
+          text-transform: uppercase;
+          color: #3a4b55;
+          padding-right: 20px;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 7px;
+            background-image: url("images/arrow-down.svg");
+            background-repeat: no-repeat;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      .sort-popup {
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 130%;
+        font-size: 18px;
+        min-width: 281px;
+        position: absolute;
+        left: calc(50% - 20px);
+        padding-top: 25px;
+
+        &__wrap {
+          border-radius: 30px;
+          background-color: #d2d2d2;
+          width: 100%;
+          padding: 22px;
+          position: relative;
+
+          &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 50px solid #d2d2d2;
+            border-bottom: 20px solid transparent;
+            position: absolute;
+            left: 0;
+            top: -20px;
+          }
+        }
+
+        &__inner {
+          max-height: 220px;
+          overflow-y: scroll;
+        }
+
+        &__list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        &__item {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            color: #5d6b74;
+            text-decoration: none;
+            transition: .2s color ease-out;
+
+            &:hover {
+              color: #f75b2d;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
