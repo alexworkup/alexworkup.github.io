@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -82,47 +84,61 @@
                     <div class="f-arrow f-arrow_type_left">
                         <img src="images/f-arrow_type_left.svg" alt="Назад">
                     </div>
-                    <div class="f-row">
-                        <div class="f-col">
-                            <div data-column="1" class="f-date">
-                                понедельник<br>
-                                <span>29 января</span>
+                    <div class="schedule-head__slider swiper">
+                        <div class="f-row swiper-wrapper">
+                            <div class="f-col swiper-slide">
+                                <div data-column="29 января" class="f-date">
+                                    понедельник<br>
+                                    <span>29 января</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="2" class="f-date">
-                                вторник<br>
-                                <span>30 января</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="30 января" class="f-date">
+                                    вторник<br>
+                                    <span>30 января</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="3" class="f-date">
-                                среда<br>
-                                <span>31 января</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="31 января" class="f-date">
+                                    среда<br>
+                                    <span>31 января</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="4" class="f-date">
-                                четверг<br>
-                                <span>1 февраля</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="1 февраля" class="f-date">
+                                    четверг<br>
+                                    <span>1 февраля</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="5" class="f-date">
-                                пятница<br>
-                                <span>2 февраля</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="2 февраля" class="f-date">
+                                    пятница<br>
+                                    <span>2 февраля</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="6" class="f-date">
-                                суббота<br>
-                                <span>3 февраля</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="3 февраля" class="f-date">
+                                    суббота<br>
+                                    <span>3 февраля</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="f-col">
-                            <div data-column="7" class="f-date">
-                                воскресенье<br>
-                                <span>4 февраля</span>
+                            <div class="f-col swiper-slide">
+                                <div data-column="4 февраля" class="f-date">
+                                    воскресенье<br>
+                                    <span>4 февраля</span>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide">
+                                <div data-column="5 февраля" class="f-date">
+                                    понедельник<br>
+                                    <span>5 февраля</span>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide">
+                                <div data-column="6 февраля" class="f-date">
+                                    вторник<br>
+                                    <span>6 февраля</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,6 +148,635 @@
                 </div>
             </div>
             <div class="schedule-body">
+                <div class="schedule-body__week">
+                    <div class="schedule-body__hours schedule-body__hours_type_left">
+                        <div class="f-time" data-time="08:00"><span>08:00</span></div>
+                        <div class="f-time" data-time="09:00"><span>09:00</span></div>
+                        <div class="f-time" data-time="10:00"><span>10:00</span></div>
+                        <div class="f-time" data-time="11:00"><span>11:00</span></div>
+                        <div class="f-time" data-time="12:00"><span>12:00</span></div>
+                    </div>
+                    <div class="schedule-body__wrap swiper">
+                        <div class="f-row swiper-wrapper">
+                            <div class="f-col swiper-slide" data-column="29 января">
+                                <div class="schedule-body__time" data-time="08:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>08:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Total Body
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>08:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Total Body
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>10:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="11:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>11:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="12:00"></div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="30 января">
+                                <div class="schedule-body__time" data-time="08:00"></div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>10:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="11:00"></div>
+                                <div class="schedule-body__time" data-time="12:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>12:45</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="31 января">
+                                <div class="schedule-body__time" data-time="08:00"></div>
+                                <div class="schedule-body__time" data-time="09:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>9:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="10:00"></div>
+                                <div class="schedule-body__time" data-time="11:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>11:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="12:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>12:45</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="1 февраля">
+                                <div class="schedule-body__time" data-time="08:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>08:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Total Body
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00"></div>
+                                <div class="schedule-body__time" data-time="11:00"></div>
+                                <div class="schedule-body__time" data-time="12:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>12:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="2 февраля">
+                                <div class="schedule-body__time" data-time="08:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>08:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Total Body
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>10:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="11:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>11:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="12:00"></div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="3 февраля">
+                                <div class="schedule-body__time" data-time="08:00"></div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00"></div>
+                                <div class="schedule-body__time" data-time="11:00"></div>
+                                <div class="schedule-body__time" data-time="12:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>12:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="4 февраля">
+                                <div class="schedule-body__time" data-time="08:00"></div>
+                                <div class="schedule-body__time" data-time="09:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>9:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="10:00"></div>
+                                <div class="schedule-body__time" data-time="11:00"></div>
+                                <div class="schedule-body__time" data-time="12:00"></div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="5 февраля">
+                                <div class="schedule-body__time" data-time="08:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>08:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Total Body
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>10:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="11:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>11:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="12:00"></div>
+                            </div>
+                            <div class="f-col swiper-slide" data-column="6 февраля">
+                                <div class="schedule-body__time" data-time="08:00"></div>
+                                <div class="schedule-body__time" data-time="09:00"></div>
+                                <div class="schedule-body__time" data-time="10:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>10:30</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-body__time" data-time="11:00"></div>
+                                <div class="schedule-body__time" data-time="12:00">
+                                    <div class="f-col fit-card">
+                                        <div class="fit-card__date">
+                                            <div class="fit-card__day">
+                                                <i>пн</i> <span>12:45</span>
+                                            </div>
+                                            <div class="fit-card__duration">
+                                                <div class="fit-card__time">45 (мин)</div>
+                                                <div class="fit-card__spec">
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-01.svg" alt="">
+                                                    </div>
+                                                    <div class="spec-icon">
+                                                        <img src="images/spec-icon-02.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="fit-card__name">
+                                            <span>Тренажерный зал</span>
+                                            Antigravity Yoga
+                                        </div>
+                                        <div class="fit-card__trainer">
+                                            ШАТСКИХ ВАЛЕРИЯ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-body__hours schedule-body__hours_type_right">
+                        <div class="f-time" data-time="08:00"><span>08:00</span></div>
+                        <div class="f-time" data-time="09:00"><span>09:00</span></div>
+                        <div class="f-time" data-time="10:00"><span>10:00</span></div>
+                        <div class="f-time" data-time="11:00"><span>11:00</span></div>
+                        <div class="f-time" data-time="12:00"><span>12:00</span></div>
+                    </div>
+                </div>
+                <!--
                 <div class="schedule-body__week">
                     <div class="f-time"><span>08:00</span></div>
                     <div class="f-row">
@@ -552,6 +1197,7 @@
                         <div class="f-col"></div>
                     </div>
                 </div>
+                -->
             </div>
         </div>
     </div>

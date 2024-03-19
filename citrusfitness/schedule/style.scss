@@ -212,6 +212,11 @@ body {
 
     .schedule-head {
 
+      &__slider {
+        width: 100%;
+        box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+      }
+
       &__wrap {
         display: flex;
         align-items: center;
@@ -220,16 +225,10 @@ body {
       .f-row {
         display: flex;
         width: 100%;
-        border: 1px solid #fff;
 
         .f-col {
-          width: calc(100% / 7);
           text-align: center;
-          border-right: 1px solid #fff;
-
-          &:last-child {
-            border-right: 0;
-          }
+          box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
         }
       }
 
@@ -241,14 +240,15 @@ body {
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        border: 1px solid #ffffff;
+        //border: 1px solid #ffffff;
         background: transparent;
-        box-shadow: none;
+        //box-shadow: none;
         transition: .1s all ease-out;
         cursor: pointer;
+        box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 
         &:hover {
-          box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
+          //box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
           background: rgba(255, 255, 255, 0.5);
         }
 
@@ -283,7 +283,7 @@ body {
         }
 
         &:hover,
-        &.active {
+        &.current {
           box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
           background: rgba(255, 255, 255, 0.5);
 
@@ -299,12 +299,27 @@ body {
     padding: 15px;
     background-color: transparent;
     transition: .1s all ease-out;
-    box-shadow: none;
+    //box-shadow: none;
     cursor: pointer;
+    //height: 208px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    //border-right: 1px solid #fff;
+    //border-bottom: 1px solid #fff;
+    box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+
+    &.empty {
+
+      &:hover {
+        background: transparent;
+        box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+      }
+    }
 
     &:hover {
       background-color: #FFFFFF;
-      box-shadow: 0 4px 25px 0 rgba(58, 75, 85, 0.2);
+      //box-shadow: 0 4px 25px 0 rgba(58, 75, 85, 0.2);
 
       .fit-card__name {
         color: #f75b2d;
@@ -375,7 +390,7 @@ body {
       text-transform: uppercase;
       color: #3F494E;
       font-weight: 600;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
 
       span {
         font-size: 15px;
@@ -390,6 +405,7 @@ body {
       line-height: 125%;
       text-transform: uppercase;
       color: #8ea1ac;
+      margin-top: auto;
     }
   }
 
@@ -420,6 +436,7 @@ body {
       color: #657984;
       font-weight: 400;
       font-size: 20px;
+      position: relative;
 
       span {
         transform: rotate(-90deg);
@@ -427,20 +444,69 @@ body {
       }
     }
 
-    .f-row {
-      display: flex;
-      width: calc(100% - 110px);
-      border-right: 1px solid #ffffff;
-      border-left: 1px solid #ffffff;
+    .f-col {
+      box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 
-      .f-col {
-        width: calc(100% / 7);
-        border-right: 1px solid #ffffff;
+      &.current {
 
-        &:last-child {
-          border-right: 0;
+          .fit-card {
+            background-color: #FFFFFF;
+
+            &.empty {
+              background-color: transparent;
+              box-shadow: none;
+
+              .fit-card__name {
+                color: #3F494E;
+              }
+            }
+
+            .fit-card__name {
+              color: #f75b2d;
+            }
+          }
+      }
+    }
+
+    &__hours {
+
+      .f-time {
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 1px;
+          background-color: #ffffff;
+          bottom: -1px;
+        }
+      }
+
+      &_type_left {
+
+        .f-time {
+
+          &:after {
+            right: 0;
+          }
+        }
+      }
+
+      &_type_right {
+
+        .f-time {
+          border-left: 1px solid #ffffff;
+
+          &:after {
+            left: 0;
+          }
         }
       }
     }
+
+    &__time {
+      box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+    }
+
   }
 }

@@ -165,6 +165,10 @@ body {
 .fit-schedule__sort .fit-sort .sort-popup__item a:hover {
   color: #f75b2d;
 }
+.fit-schedule__wrap .schedule-head__slider {
+  width: 100%;
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+}
 .fit-schedule__wrap .schedule-head__wrap {
   display: flex;
   align-items: center;
@@ -172,15 +176,10 @@ body {
 .fit-schedule__wrap .schedule-head .f-row {
   display: flex;
   width: 100%;
-  border: 1px solid #fff;
 }
 .fit-schedule__wrap .schedule-head .f-row .f-col {
-  width: 14.2857142857%;
   text-align: center;
-  border-right: 1px solid #fff;
-}
-.fit-schedule__wrap .schedule-head .f-row .f-col:last-child {
-  border-right: 0;
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 }
 .fit-schedule__wrap .schedule-head .f-arrow {
   font-size: 0;
@@ -190,14 +189,12 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid #ffffff;
   background: transparent;
-  box-shadow: none;
   transition: 0.1s all ease-out;
   cursor: pointer;
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 }
 .fit-schedule__wrap .schedule-head .f-arrow:hover {
-  box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
   background: rgba(255, 255, 255, 0.5);
 }
 .fit-schedule__wrap .schedule-head .f-arrow_type_left {
@@ -223,23 +220,29 @@ body {
   color: #768186;
   transition: 0.1s color linear;
 }
-.fit-schedule__wrap .schedule-head .f-date:hover, .fit-schedule__wrap .schedule-head .f-date.active {
+.fit-schedule__wrap .schedule-head .f-date:hover, .fit-schedule__wrap .schedule-head .f-date.current {
   box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
   background: rgba(255, 255, 255, 0.5);
 }
-.fit-schedule__wrap .schedule-head .f-date:hover span, .fit-schedule__wrap .schedule-head .f-date.active span {
+.fit-schedule__wrap .schedule-head .f-date:hover span, .fit-schedule__wrap .schedule-head .f-date.current span {
   color: #f75b2d;
 }
 .fit-schedule .fit-card {
   padding: 15px;
   background-color: transparent;
   transition: 0.1s all ease-out;
-  box-shadow: none;
   cursor: pointer;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+}
+.fit-schedule .fit-card.empty:hover {
+  background: transparent;
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 }
 .fit-schedule .fit-card:hover {
   background-color: #FFFFFF;
-  box-shadow: 0 4px 25px 0 rgba(58, 75, 85, 0.2);
 }
 .fit-schedule .fit-card:hover .fit-card__name {
   color: #f75b2d;
@@ -297,7 +300,7 @@ body {
   text-transform: uppercase;
   color: #3F494E;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .fit-schedule .fit-card__name span {
   font-size: 15px;
@@ -310,6 +313,7 @@ body {
   line-height: 125%;
   text-transform: uppercase;
   color: #8ea1ac;
+  margin-top: auto;
 }
 .fit-schedule .schedule-body__week {
   display: flex;
@@ -334,23 +338,47 @@ body {
   color: #657984;
   font-weight: 400;
   font-size: 20px;
+  position: relative;
 }
 .fit-schedule .schedule-body .f-time span {
   transform: rotate(-90deg);
   transform-origin: center;
 }
-.fit-schedule .schedule-body .f-row {
-  display: flex;
-  width: calc(100% - 110px);
-  border-right: 1px solid #ffffff;
+.fit-schedule .schedule-body .f-col {
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
+}
+.fit-schedule .schedule-body .f-col.current .fit-card {
+  background-color: #FFFFFF;
+}
+.fit-schedule .schedule-body .f-col.current .fit-card.empty {
+  background-color: transparent;
+  box-shadow: none;
+}
+.fit-schedule .schedule-body .f-col.current .fit-card.empty .fit-card__name {
+  color: #3F494E;
+}
+.fit-schedule .schedule-body .f-col.current .fit-card .fit-card__name {
+  color: #f75b2d;
+}
+.fit-schedule .schedule-body__hours .f-time:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #ffffff;
+  bottom: -1px;
+}
+.fit-schedule .schedule-body__hours_type_left .f-time:after {
+  right: 0;
+}
+.fit-schedule .schedule-body__hours_type_right .f-time {
   border-left: 1px solid #ffffff;
 }
-.fit-schedule .schedule-body .f-row .f-col {
-  width: 14.2857142857%;
-  border-right: 1px solid #ffffff;
+.fit-schedule .schedule-body__hours_type_right .f-time:after {
+  left: 0;
 }
-.fit-schedule .schedule-body .f-row .f-col:last-child {
-  border-right: 0;
+.fit-schedule .schedule-body__time {
+  box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
 }
 
 /*# sourceMappingURL=style.css.map */
