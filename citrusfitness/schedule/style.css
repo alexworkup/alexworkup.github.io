@@ -72,7 +72,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 40px);
   background: linear-gradient(to bottom, #c4c9c9, transparent);
   pointer-events: none;
 }
@@ -226,6 +226,9 @@ body {
 .fit-schedule .schedule-head__wrap {
   display: flex;
   align-items: center;
+  backdrop-filter: blur(25px);
+  background: rgba(217, 217, 217, 0.2);
+  border-radius: 65px;
 }
 .fit-schedule .schedule-head .f-row {
   display: flex;
@@ -234,7 +237,6 @@ body {
 .fit-schedule .schedule-head .f-row .f-col {
   text-align: center;
   box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
-  background: rgba(217, 217, 217, 0.9);
 }
 @media screen and (max-width: 767px) {
   .fit-schedule .schedule-head .f-row .f-col {
@@ -242,15 +244,29 @@ body {
     background: none;
   }
 }
-.fit-schedule .schedule-head .f-row .f-col.current .f-date {
-  box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
-  background: rgba(255, 255, 255, 0.5);
+@media screen and (min-width: 767px) {
+  .fit-schedule .schedule-head .f-row .f-col.current .f-date {
+    box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .fit-schedule .schedule-head .f-row .f-col.current .f-date span {
+    color: #f75b2d;
+  }
 }
-.fit-schedule .schedule-head .f-row .f-col.current .f-date span {
-  color: #f75b2d;
+.fit-schedule .schedule-head .f-row .f-col.past-date .f-date {
+  opacity: 0.2;
 }
 @media screen and (max-width: 767px) {
-  .fit-schedule .schedule-head .f-row .f-col.current .f-date {
+  .fit-schedule .schedule-head .f-row .f-col.active .f-date {
+    box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .fit-schedule .schedule-head .f-row .f-col.active .f-date span {
+    color: #f75b2d;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .fit-schedule .schedule-head .f-row .f-col.active .f-date {
     background-image: url("images/bg-f-date.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -259,7 +275,7 @@ body {
     box-shadow: none;
     font-weight: 600;
   }
-  .fit-schedule .schedule-head .f-row .f-col.current .f-date span {
+  .fit-schedule .schedule-head .f-row .f-col.active .f-date span {
     color: #ffffff;
   }
 }
@@ -274,7 +290,7 @@ body {
   transition: 0.1s all ease-out;
   cursor: pointer;
   box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
-  background: rgba(217, 217, 217, 0.9);
+  user-select: none;
 }
 @media screen and (max-width: 767px) {
   .fit-schedule .schedule-head .f-arrow {
@@ -298,7 +314,6 @@ body {
   color: #3f494e;
   text-transform: uppercase;
   padding: 17px 0 10px 0;
-  cursor: pointer;
   background: transparent;
   box-shadow: none;
   transition: 0.1s all ease-out;
@@ -317,15 +332,6 @@ body {
 .fit-schedule .schedule-head .f-date span {
   color: #768186;
   transition: 0.1s color linear;
-}
-@media screen and (min-width: 767px) {
-  .fit-schedule .schedule-head .f-date:hover {
-    box-shadow: 0 4px 25px 0 rgba(41, 56, 64, 0.1);
-    background: rgba(255, 255, 255, 0.5);
-  }
-  .fit-schedule .schedule-head .f-date:hover span {
-    color: #f75b2d;
-  }
 }
 .fit-schedule .fit-card {
   padding: 15px;
@@ -459,6 +465,9 @@ body {
   font-size: 20px;
   position: relative;
 }
+.fit-schedule .schedule-body .f-time.current {
+  color: #F75B2D;
+}
 @media screen and (max-width: 767px) {
   .fit-schedule .schedule-body .f-time {
     display: none;
@@ -489,20 +498,9 @@ body {
 .fit-schedule .schedule-body .f-col.current .fit-card .fit-card__name {
   color: #f75b2d;
 }
-@media screen and (max-width: 767px) {
-  .fit-schedule .schedule-body .f-col.swiper-slide-active .fit-card {
-    background-color: #FFFFFF;
-  }
-  .fit-schedule .schedule-body .f-col.swiper-slide-active .fit-card.empty {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  .fit-schedule .schedule-body .f-col.swiper-slide-active .fit-card.empty .fit-card__name {
-    color: #3F494E;
-  }
-  .fit-schedule .schedule-body .f-col.swiper-slide-active .fit-card .fit-card__name {
-    color: #f75b2d;
-  }
+.fit-schedule .schedule-body .f-col.past-date .fit-card {
+  opacity: 0.2;
+  pointer-events: none;
 }
 .fit-schedule .schedule-body__hours .f-time:after {
   content: "";

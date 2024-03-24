@@ -34,10 +34,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
             itemDay.addEventListener('click', () => {
 
                 weekday.forEach((item) => {
-                    item.classList.remove('current');
+                    item.classList.remove('active');
                 });
 
-                itemDay.classList.add('current');
+                itemDay.classList.add('active');
 
                 const dataColumn = itemDay.getAttribute('data-match-index');
                 const columnItems = document.querySelectorAll('[data-match-index="' + dataColumn + '"]:not(.f-col-date)');
@@ -45,9 +45,9 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 if (columnItems.length > 0) {
                     columnItems.forEach((item) => {
                         document.querySelectorAll('[data-match-index]:not(.f-col-date)').forEach((colItem) => {
-                            colItem.classList.remove('current');
+                            colItem.classList.remove('active');
                         });
-                        item.classList.add('current');
+                        item.classList.add('active');
                     });
                 }
             });
@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 click: function () {
                   if(isMobile) {
                       let slideIndex = this.clickedSlide.getAttribute('data-match-index');
-                      scheduleBodySlider.slideTo(slideIndex - 1);
+                      scheduleBodySlider.slideTo(slideIndex);
                   }
                 },
             }
@@ -101,6 +101,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         scheduleBodySlider = new Swiper(scheduleBody, {
             slidesPerView: 1,
             allowTouchMove: true,
+            //initialSlide: 2,
             breakpoints: {
                 768: {
                     slidesPerView: 3,
@@ -119,12 +120,18 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 slideChange: function() {
                     if(scheduleHeadSlider && isMobile) {
                         scheduleHeadSlider.slideTo(this.activeIndex);
-                        let slideIndex = this.activeIndex + 1;
+                        let slideIndex = this.activeIndex;
                         weekday.forEach((item) => {
-                            item.classList.remove('current');
+                            item.classList.remove('active');
                         });
-                        document.querySelector('.f-col-date[data-match-index="' + slideIndex + '"]').classList.add('current');
+                        document.querySelector('.f-col-date[data-match-index="' + slideIndex + '"]').classList.add('active');
                     }
+                },
+                
+                init: function (swiper) {
+                    let indexInitial = document.querySelector('.schedule-body .f-col.current').getAttribute('data-match-index');
+                    scheduleHeadSlider.slideTo(indexInitial, 0);
+                    swiper.slideTo(indexInitial, 0);
                 }
             }
         });
