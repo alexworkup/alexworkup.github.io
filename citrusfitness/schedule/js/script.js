@@ -162,6 +162,37 @@ window.addEventListener('DOMContentLoaded', ()=> {
             element.querySelector('.f-date').innerHTML = `${dayShort}<br><span>${dateShort}</span>`;
         });
     }
+
+    const btnSign = document.querySelector('.js-sign');
+    const btnSubmit = document.querySelector('.js-submit');
+    const scheduleForm = document.querySelector('.schedule-form');
+    const inputName = document.querySelector('.schedule-form input[name=name]');
+
+    if(btnSign && scheduleForm) {
+
+        btnSign.addEventListener('click', (e) => {
+            e.preventDefault();
+            scheduleForm.classList.add('show');
+            btnSign.classList.add('hide');
+            btnSubmit.classList.add('show');
+            inputName.focus();
+        });
+    }
+
+    const fitCards = document.querySelectorAll('.fit-card');
+    const popupForm = document.querySelector('.popup-schedule');
+    const wrapSchedule = document.querySelector('.fit-schedule');
+
+    if(fitCards.length > 0) {
+
+        fitCards.forEach((itemCard) => {
+
+            itemCard.addEventListener('click', () => {
+                popupForm.classList.toggle('show');
+                wrapSchedule.classList.toggle('open-popup');
+            })
+        });
+    }
 });
 
 window.addEventListener('load', ()=> {
