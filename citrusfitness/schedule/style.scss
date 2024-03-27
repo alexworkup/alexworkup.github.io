@@ -215,11 +215,11 @@ body {
         text-transform: uppercase;
         line-height: 130%;
         font-size: 18px;
-        min-width: 281px;
+        min-width: 330px;
         position: absolute;
         left: calc(50% - 20px);
         top: 30px;
-        padding-top: 25px;
+        padding: 25px;
         opacity: 0;
         height: 0;
         pointer-events: none;
@@ -241,6 +241,7 @@ body {
           width: 100%;
           padding: 22px;
           position: relative;
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
 
           &:before {
             content: "";
@@ -407,6 +408,17 @@ body {
       cursor: pointer;
       box-shadow: 1px 0 0 0 #ffffff, 0 1px 0 0 #ffffff, 1px 1px 0 0 #ffffff, 1px 0 0 0 #ffffff inset, 0 1px 0 0 #ffffff inset;
       user-select: none;
+
+      &.swiper-button-disabled {
+
+        &:hover {
+          background: initial;
+        }
+
+        img {
+          filter: grayscale(1);
+        }
+      }
 
       @media screen and (max-width: 767px) {
         display: none;

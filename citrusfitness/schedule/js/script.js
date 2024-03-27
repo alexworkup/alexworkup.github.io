@@ -209,8 +209,13 @@ window.addEventListener('DOMContentLoaded', ()=> {
                         mainClass: 'open-popup-schedule',
                     });
 
-                const nameFitCard = itemCard.querySelector('.fit-card__name b').textContent;
-                popupForm.querySelector('.popup-schedule__title b').textContent = nameFitCard;
+                const workoutCard = itemCard.querySelector('.fit-card__name b').textContent;
+                const hallCard = itemCard.querySelector('.fit-card__name span').textContent;
+                const trainer = itemCard.querySelector('.fit-card__trainer').textContent;
+
+                popupForm.querySelector('.popup-schedule__title b').textContent = workoutCard;
+                popupForm.querySelector('.popup-schedule__title i').textContent = hallCard;
+                popupForm.querySelector('.popup-schedule__name').textContent = trainer;
 
                 /*
                 popupForm.classList.toggle('show');
