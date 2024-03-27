@@ -224,6 +224,11 @@ window.addEventListener('DOMContentLoaded', ()=> {
             })
         });
     }
+
+    $('.schedule-form input[name=phone]').inputmask({
+        mask: '+7 (*{1}99) 999-99-99',
+        placeholder: "+7 (___) ___-__-__",
+    });
 });
 
 window.addEventListener('load', ()=> {
