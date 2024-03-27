@@ -124,6 +124,7 @@ body {
     @media screen and (max-width: 767px) {
       padding-left: 16px;
       padding-right: 16px;
+      padding-top: 0;
     }
 
     &:before {
@@ -486,6 +487,7 @@ body {
       box-shadow: none;
       background: rgba(255, 255, 255, 0.5);
       margin-bottom: 10px;
+      min-height: auto;
     }
 
     &.empty {
@@ -578,6 +580,7 @@ body {
 
       @media screen and (max-width: 767px) {
         color: #f75b2d;
+        margin-bottom: 5px;
       }
 
       span {

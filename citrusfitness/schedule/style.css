@@ -95,6 +95,7 @@ body {
   .fit-schedule__header {
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 0;
   }
 }
 .fit-schedule__header:before {
@@ -398,6 +399,7 @@ body {
     box-shadow: none;
     background: rgba(255, 255, 255, 0.5);
     margin-bottom: 10px;
+    min-height: auto;
   }
 }
 .fit-schedule .fit-card.empty:hover {
@@ -475,6 +477,7 @@ body {
 @media screen and (max-width: 767px) {
   .fit-schedule .fit-card__name {
     color: #f75b2d;
+    margin-bottom: 5px;
   }
 }
 .fit-schedule .fit-card__name span {

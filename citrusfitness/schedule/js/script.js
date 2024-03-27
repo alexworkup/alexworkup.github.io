@@ -101,19 +101,23 @@ window.addEventListener('DOMContentLoaded', ()=> {
         scheduleBodySlider = new Swiper(scheduleBody, {
             slidesPerView: 1,
             allowTouchMove: true,
+            autoHeight: true,
             //initialSlide: 2,
             breakpoints: {
                 768: {
                     slidesPerView: 3,
                     allowTouchMove: false,
+                    autoHeight: false,
                 },
                 980: {
                     slidesPerView: 5,
                     allowTouchMove: false,
+                    autoHeight: false,
                 },
                 1460: {
                     slidesPerView: 7,
                     allowTouchMove: false,
+                    autoHeight: false,
                 }
             },
             on: {
@@ -168,6 +172,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     const scheduleForm = document.querySelector('.schedule-form');
     const inputName = document.querySelector('.schedule-form input[name=name]');
     const closeBtnPopup = document.querySelector('.popup-schedule__close');
+    const btnInFormSubmit = document.querySelector('.schedule-form__submit .btn');
 
     if(btnSign && scheduleForm) {
 
@@ -181,6 +186,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
     }
 
     btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+
+    btnInFormSubmit.addEventListener('click', (e) => {
         e.preventDefault();
     });
 
