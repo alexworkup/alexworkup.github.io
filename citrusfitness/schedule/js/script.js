@@ -167,6 +167,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     const btnSubmit = document.querySelector('.js-submit');
     const scheduleForm = document.querySelector('.schedule-form');
     const inputName = document.querySelector('.schedule-form input[name=name]');
+    const closeBtnPopup = document.querySelector('.popup-schedule__close');
 
     if(btnSign && scheduleForm) {
 
@@ -179,6 +180,17 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
+
+    if(closeBtnPopup) {
+
+        closeBtnPopup.addEventListener('click', () => {
+            Fancybox.close();
+        });
+    }
+
     const fitCards = document.querySelectorAll('.fit-card');
     const popupForm = document.querySelector('.popup-schedule');
     const wrapSchedule = document.querySelector('.fit-schedule');
@@ -188,8 +200,22 @@ window.addEventListener('DOMContentLoaded', ()=> {
         fitCards.forEach((itemCard) => {
 
             itemCard.addEventListener('click', () => {
+
+                Fancybox.show([{
+                        src: popupForm,
+                        type: "inline",
+                    }],
+                    {
+                        mainClass: 'open-popup-schedule',
+                    });
+
+                const nameFitCard = itemCard.querySelector('.fit-card__name b').textContent;
+                popupForm.querySelector('.popup-schedule__title b').textContent = nameFitCard;
+
+                /*
                 popupForm.classList.toggle('show');
                 wrapSchedule.classList.toggle('open-popup');
+                 */
             })
         });
     }
