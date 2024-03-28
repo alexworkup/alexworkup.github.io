@@ -6,10 +6,14 @@ window.addEventListener('DOMContentLoaded', ()=> {
         isMobile = true;
     }
 
-    const sortInner = document.querySelectorAll('.sort-popup__inner');
+
     const sortItems = document.querySelectorAll('.sort-item');
     const weekday = document.querySelectorAll('.schedule-head .f-col');
+    const fitCards = document.querySelectorAll('.fit-card');
+    const popupForm = document.querySelector('.popup-schedule');
+    const wrapSchedule = document.querySelector('.fit-schedule');
 
+    /*
     if(sortInner.length > 0) {
 
         sortInner.forEach((innerItem) => {
@@ -25,7 +29,45 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 if(heightItems > innerItem.offsetHeight) {
                     innerItem.classList.add('view-scroll');
                 }
+
             }
+        });
+    }
+     */
+
+    if(sortItems.length > 0) {
+
+        sortItems.forEach( (sortItem) => {
+
+            const sortInner = sortItem.querySelector('.sort-popup__inner');
+            const popupItems = sortInner.querySelectorAll('.sort-popup__item');
+
+            if(popupItems.length > 0) {
+                let heightItems = 0;
+                popupItems.forEach((popupItem) => {
+                    const rect = popupItem.getBoundingClientRect();
+                    heightItems += rect.height;
+                });
+
+                if(heightItems > sortInner.offsetHeight) {
+                    sortInner.classList.add('view-scroll');
+                }
+            }
+
+            tippy(sortItem, {
+                content: sortItem.querySelector('.sort-popup'),
+                allowHTML: true,
+                trigger: 'click',
+                theme: 'sort-popup',
+                placement: 'bottom-start',
+                onShow: function(instance) {
+                    wrapSchedule.classList.add('show-tippy');
+                },
+                onHide: function(instance) {
+                    wrapSchedule.classList.remove('show-tippy');
+                },
+            });
+
         });
     }
 
@@ -200,10 +242,6 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
-    const fitCards = document.querySelectorAll('.fit-card');
-    const popupForm = document.querySelector('.popup-schedule');
-    const wrapSchedule = document.querySelector('.fit-schedule');
-
     if(fitCards.length > 0) {
 
         fitCards.forEach((itemCard) => {
@@ -238,6 +276,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         mask: '+7 (*{1}99) 999-99-99',
         placeholder: "+7 (___) ___-__-__",
     });
+
 });
 
 window.addEventListener('load', ()=> {
