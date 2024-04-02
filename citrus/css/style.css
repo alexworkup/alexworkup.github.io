@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Thin"), local("BebasNeue-Thin"), url("../fonts/bebasneuethin.woff2") format("woff2"), url("../fonts/bebasneuethin.woff") format("woff"), url("../fonts/bebasneuethin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Light"), local("BebasNeue-Light"), url("../fonts/bebasneuelight.woff2") format("woff2"), url("../fonts/bebasneuelight.woff") format("woff"), url("../fonts/bebasneuelight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Book"), local("BebasNeueBook"), url("../fonts/bebasneuebook.woff2") format("woff2"), url("../fonts/bebasneuebook.woff") format("woff"), url("../fonts/bebasneuebook.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Regular"), local("BebasNeueRegular"), url("../fonts/bebasneueregular.woff2") format("woff2"), url("../fonts/bebasneueregular.woff") format("woff"), url("../fonts/bebasneueregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Bold"), local("BebasNeueBold"), url("../fonts/bebasneuebold.woff2") format("woff2"), url("../fonts/bebasneuebold.woff") format("woff"), url("../fonts/bebasneuebold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.eot");
+  src: local("Gilroy Light"), local("Gilroy-Light"), url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff") format("woff"), url("../fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.st {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+.box-green {
+  background-color: green;
+}
+.box-red {
+  background-color: red;
+}
+.box-orange {
+  background-color: orange;
+}
+.box-orange {
+  background-color: blue;
+}
+.box-aqua {
+  background-color: aquamarine;
+}
+
+.screen {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c4c9c9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.first-screen {
+  background: linear-gradient(180deg, #c4c9c9 17.86%, #c3cbcd 69.95%, #eff3f4 100%);
+  position: relative;
+}
+.first-screen__img {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+.first-screen__content {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 5;
+}
+.first-screen__header {
+  text-align: right;
+}
+.first-screen__circle {
+  position: absolute;
+  right: -10%;
+  font-size: 0;
+  bottom: -50%;
+  width: 914px;
+  height: 914px;
+}
+.first-screen__circle img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.first-screen__circle_type_2 {
+  z-index: 1;
+  right: 20%;
+}
+.first-screen__circle_type_1 {
+  z-index: 2;
+}
+.first-screen__circle img {
+  max-width: 914px;
+  height: auto;
+}
+.first-screen__title {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 200px;
+  text-transform: uppercase;
+  background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */

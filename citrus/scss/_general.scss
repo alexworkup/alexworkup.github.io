@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.st {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+
+  &-green {
+    background-color: green;
+  }
+
+  &-red {
+    background-color: red;
+  }
+
+  &-orange {
+    background-color: orange;
+  }
+
+  &-orange {
+    background-color: blue;
+  }
+
+  &-aqua {
+    background-color: aquamarine;
+  }
+}
