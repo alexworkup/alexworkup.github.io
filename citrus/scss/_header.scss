@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 45px;
+
+  &__row {
+    display: flex;
+    margin: 0 -20px;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    &_type {
+
+      &_phone {
+        margin-left: auto;
+      }
+    }
+  }
+}

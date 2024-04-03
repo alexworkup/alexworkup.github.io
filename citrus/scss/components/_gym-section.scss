@@ -1,0 +1,37 @@
+.gym-section {
+  height: 100%;
+
+  &__list {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    height: 100%;
+  }
+
+  &__item {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: auto;
+    backdrop-filter: blur(15px);
+    background: rgba(52, 73, 85, 0.3);
+    border-radius: 20px;
+    padding: 22px;
+    overflow: hidden;
+
+    span {
+      font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+      display: inline-block;
+      background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

@@ -13,48 +13,167 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__row">
+            <div class="header__col header__col_type_toggle">
+                <button class="burger">
+                    <svg width="66" height="17" viewBox="0 0 66 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_946_363)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H66V1H0V0ZM0 8H66V9H0V8ZM51 16H0V17H51V16Z" fill="white" fill-opacity="0.9"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_946_363" x="-4" y="-4" width="74" height="25" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_946_363"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_946_363" result="shape"/>
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__col header__col_type_phone">
+                <a href="tel:+73512203333" class="phone">+7 (351) 220-33-33</a>
+            </div>
+            <div class="header__col header__col_type_btn">
+                <a href="#" class="btn btn_type_color">Записаться</a>
+            </div>
+        </div>
+    </header>
     <main class="main" id="main">
-        <div class="screen main-screen">
-            <div class="first-screen__img">
+        <div class="screen screen-main" data-title="Главная" id="screen-main">
+            <div class="main-screen__img">
                 <img loading="lazy" src="images/first-img.png" alt="Фитнес-центр">
             </div>
-            <div class="first-screen__content">
-                <div class="first-screen__logo">
+            <div class="main-screen__content">
+                <div class="main-screen__logo">
                     <img loading="lazy" src="images/first-logo.svg" alt="Фитнес-центр">
                 </div>
-                <!--
-                <div class="first-screen__header">
-                    <div class="first-screen__title">
-                        Живи ярче
-                    </div>
-                </div>
-                -->
             </div>
-            <div class="first-screen__circle first-screen__circle_type_2">
+            <div class="main-screen__circle main-screen__circle_type_2">
                 <img loading="lazy" src="images/first-circle-2.svg" alt="">
             </div>
-            <div class="first-screen__circle first-screen__circle_type_1">
+            <div class="main-screen__circle main-screen__circle_type_1">
                 <img loading="lazy" src="images/first-circle-1.svg" alt="">
             </div>
         </div>
-        <div class="screen play-screen" style="background-image: url(images/play-screen-bg.jpg)">
-
+        <div class="screen screen-play" data-title="Видео" id="screen-play">
+            <picture class="screen__bg">
+                <source srcset="images/play-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/play-screen-bg.jpg" alt="Живи ярче">
+            </picture>
+            <div class="screen__content play-section">
+                <div class="play-section__title">Живи ярче</div>
+                <div class="play-section__button">
+                    <div class="play-section__icon">
+                        <img src="images/play-section-img.svg" alt="Живи ярче">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="screen pool-screen" style="background-image: url(images/pool-screen-bg.jpg)">
-
+        <div class="screen screen-pool" data-title="Бассейн" id="screen-pool">
+            <picture class="screen__bg">
+                <source srcset="images/pool-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/pool-screen-bg.jpg" alt="Спортивный бассейн">
+            </picture>
+            <div class="screen__content pool-section">
+                <div class="pool-section__play">
+                    <div class="pool-section__icon">
+                        <img src="images/pool-section-img.svg" alt="Живи ярче">
+                    </div>
+                </div>
+                <div class="pool-section__content">
+                    <div class="pool-section__title">
+                        Спортивный <span>бассейн</span>
+                    </div>
+                    <div class="pool-section__subtitle"><span>50 метров</span></div>
+                    <div class="pool-section__description">
+                        <div class="pool-section__text">
+                            Всем известно как благотворно влияет плавание на здоровье и общий жизненный тонус. И взрослым, и детям рекомендуются тренировки в бассейне. Плавание помогает сбросить лишние килограммы, способствует укреплению позвоночника, нормализации работы дыхательной и сердечнососудистой системы, избавляет от депрессии, нормализует сон.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="screen gym-screen" style="background-image: url(images/gym-screen-bg.jpg)">
-
+        <div class="screen screen-gym" data-title="Зал" id="screen-gym">
+            <picture class="screen__bg">
+                <source srcset="images/gym-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/gym-screen-bg.jpg" alt="Зал">
+            </picture>
+            <div class="screen__content gym-section">
+                <div class="gym-section__list">
+                    <a href="#" class="gym-section__item">
+                        <span>БАССЕЙН</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>групповые программы</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>ВОСТОЧНЫЕ ЕДИНОБОРСТВА</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>ИГРОВОЙ ЗАЛ</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>ТРЕНАЖЕРНЫЙ ЗАЛ</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>МОЛОДЕТСКИЙ КЛУБ</span>
+                    </a>
+                    <a href="#" class="gym-section__item">
+                        <span>ЦЕНТР ДИАГНОСТИКИ И ВОССТАНОВЛЕНИЯ</span>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="screen team-screen">
-
+        <div class="screen screen-team" data-title="Наша команда" id="screen-team">
+            <picture class="screen__bg">
+                <source srcset="images/team-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/team-screen-bg.jpg" alt="Наша команда">
+            </picture>
         </div>
-        <div class="screen send-screen">
-
+        <div class="screen screen-send" data-title="Заявка" id="screen-send">
+            <picture class="screen__bg">
+                <source srcset="images/send-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/send-screen-bg.jpg" alt="Посетить клуб">
+            </picture>
         </div>
-        <div class="screen footer-screen">
-
+        <div class="screen screen-footer" data-title="Низ" id="screen-footer">
+            <picture class="screen__bg">
+                <source srcset="images/footer-screen-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/footer-screen-bg.jpg" alt="Фитнес-центр">
+            </picture>
         </div>
     </main>
+    <div class="side-panel">
+        <div class="side-panel__pagination side-pagination">
+            <div class="side-pagination__list">
+                <a href="#screen-main" class="side-pagination__item">
+                    <span>Главная</span>
+                </a>
+                <a href="#screen-play" class="side-pagination__item">
+                    <span>Видео</span>
+                </a>
+                <a href="#screen-pool" class="side-pagination__item">
+                    <span>Бассейн</span>
+                </a>
+                <a href="#screen-gym" class="side-pagination__item">
+                    <span>Зал</span>
+                </a>
+                <a href="#screen-team" class="side-pagination__item active">
+                    <span>Наша команда</span>
+                </a>
+                <a href="#screen-send" class="side-pagination__item">
+                    <span>Заявка</span>
+                </a>
+                <a href="#screen-footer" class="side-pagination__item">
+                    <span>Низ</span>
+                </a>
+            </div>
+        </div>
+        <div class="side-panel__logo">
+            <img src="images/logo-vertical.svg" alt="Citrus Fitness">
+        </div>
+    </div>
 </body>
 </html>

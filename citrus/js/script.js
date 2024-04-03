@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 pin: true,
                 pinSpacing: false,
                 scrub: 1,
+                //markers: true,
             });
         });
     }

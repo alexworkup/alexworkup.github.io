@@ -1,0 +1,123 @@
+.side-panel {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  position: fixed;
+  z-index: 90;
+  backdrop-filter: blur(15px);
+  background: rgba(52, 73, 85, 0.3);
+  border-radius: 0 0 50px 0;
+  width: 100px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 140px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__logo {
+    padding-top: 50px;
+    font-size: 0;
+    position: relative;
+
+    img {
+      position: relative;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 75%;
+      background-color: #ffffff;
+      border-radius: 50%;
+      filter: blur(28px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .side-pagination {
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        font-weight: 300;
+        white-space: nowrap;
+        padding-left: 30px;
+        text-shadow: 0 0 30px #152128;
+        opacity: 0;
+        left: -10px;
+        visibility: hidden;
+        transition: .1s all ease-in-out;
+      }
+
+      &:before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        background: rgb(252, 254, 255, 0.6);
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .1s all linear;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        width: 18px;
+        height: 18px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .1s all linear;
+      }
+
+      &:hover,
+      &.active {
+
+        &:before {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+
+        span {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

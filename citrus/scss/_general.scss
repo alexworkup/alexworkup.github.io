@@ -15,35 +15,20 @@ img {
   height: auto;
 }
 
-
-.st {
-  height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
+.burger {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 0;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-
-  &-green {
-    background-color: green;
-  }
-
-  &-red {
-    background-color: red;
-  }
-
-  &-orange {
-    background-color: orange;
-  }
-
-  &-orange {
-    background-color: blue;
-  }
-
-  &-aqua {
-    background-color: aquamarine;
-  }
+.phone {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  color: #ffffff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 300;
 }

@@ -1,9 +1,16 @@
 //Main
 @import "fonts";
 @import "general";
+@import "header";
 
 //Components
 @import 'components/screen';
+@import 'components/main-screen';
+@import 'components/btn';
+@import 'components/side-panel';
+@import 'components/play-section';
+@import 'components/pool-section';
+@import 'components/gym-section';
 
 @import 'components/section';
 @import 'components/first-screen';

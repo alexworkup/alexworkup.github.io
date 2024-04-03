@@ -1,6 +1,6 @@
 .screen {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,4 +8,31 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 35px 35px 35px 130px;
+
+  &-play {
+    justify-content: flex-end;
+  }
+
+  &-gym {
+    padding-top: 140px;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
 }
