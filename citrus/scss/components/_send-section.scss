@@ -1,0 +1,24 @@
+.send-section {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+
+  &__title {
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 106%;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    span {
+      background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+}

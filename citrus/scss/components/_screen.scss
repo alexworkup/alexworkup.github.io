@@ -1,14 +1,13 @@
 .screen {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #c4c9c9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 35px 35px 35px 130px;
+  padding: 35px 35px 60px 130px;
 
   &-play {
     justify-content: flex-end;
@@ -16,6 +15,14 @@
 
   &-gym {
     padding-top: 140px;
+  }
+
+  &-team {
+    align-items: flex-start;
+  }
+
+  &-footer {
+    width: 100%;
   }
 
   &__bg {

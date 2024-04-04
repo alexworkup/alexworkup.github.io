@@ -100,23 +100,35 @@ img {
   margin-left: auto;
 }
 
+.footer {
+  width: 100%;
+}
+.footer__logo {
+  margin-bottom: 50px;
+}
+
 .screen {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   background-color: #c4c9c9;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 35px 35px 35px 130px;
+  padding: 35px 35px 60px 130px;
 }
 .screen-play {
   justify-content: flex-end;
 }
 .screen-gym {
   padding-top: 140px;
+}
+.screen-team {
+  align-items: flex-start;
+}
+.screen-footer {
+  width: 100%;
 }
 .screen__bg {
   position: absolute;
@@ -199,14 +211,22 @@ img {
   border-radius: 31px 0;
   text-decoration: none;
   height: 50px;
-  padding: 0 55px;
+  padding: 0 65px;
   line-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
 }
 .btn_type_color {
   backdrop-filter: blur(4px);
   background: linear-gradient(93deg, rgba(250, 188, 42, 0.9) 0%, rgba(247, 91, 45, 0.9) 100%);
-  color: #ffffff;
   font-size: 20px;
+}
+.btn_type_submit {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px 0;
+  height: 90px;
+  line-height: 90px;
 }
 
 .side-panel {
@@ -243,6 +263,7 @@ img {
   filter: blur(28px);
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0.6;
 }
 .side-panel .side-pagination__list {
   display: flex;
@@ -493,6 +514,228 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.team-section {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.team-section__title {
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.team-section__title span {
+  background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.team-section__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 6px;
+  height: calc(100% - 150px);
+}
+.team-section__list::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  flex-shrink: 1;
+}
+.team-section__item {
+  margin-bottom: 6px;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 33%;
+  backdrop-filter: blur(15px);
+  background: rgba(52, 73, 85, 0.3);
+}
+.team-section__item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 28px;
+  display: inline-block;
+  width: 100%;
+}
+.team-section__item:last-child {
+  margin-bottom: 0;
+}
+
+.form-screen {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  position: relative;
+  padding: 60px 60px 0 60px;
+}
+.form-screen:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% + 150px);
+  backdrop-filter: blur(15px);
+  background: rgba(52, 73, 85, 0.3);
+  border-radius: 50px 0;
+  pointer-events: none;
+}
+.form-screen__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-screen__check {
+  font-weight: 300;
+  font-size: 20px;
+  color: #c1c6c9;
+  text-transform: uppercase;
+}
+.form-screen__check a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.form-screen__check span {
+  position: relative;
+  padding-left: 30px;
+}
+.form-screen__check span:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #949a9c;
+  background-color: transparent;
+  transition: 0.1s all linear;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-screen__check input {
+  display: none;
+}
+.form-screen__check input:checked + span:before {
+  background-color: #ffffff;
+}
+.form-screen__field {
+  position: relative;
+  padding-left: 18px;
+  padding-bottom: 10px;
+  background-image: url("../images/field-bg.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-bottom: 30px;
+}
+.form-screen__field:last-of-type {
+  margin-bottom: 0;
+}
+.form-screen__field input {
+  appearance: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 100%;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.form-screen__field input::placeholder {
+  color: #ffffff;
+}
+.form-screen__submit {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -100px;
+  margin-bottom: -20px;
+  font-weight: 300;
+}
+.form-screen__submit .btn {
+  font-size: 30px;
+}
+
+.send-section {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+}
+.send-section__title {
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 106%;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+.send-section__title span {
+  background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.send-section__content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-menu {
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+}
+.footer-menu__row {
+  display: flex;
+}
+.footer-menu__col {
+  margin-right: 80px;
+}
+.footer-menu__col:last-child {
+  margin-right: 0;
+}
+.footer-menu__title {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.footer-menu__title a {
+  text-decoration: none;
+  color: #8aa0ac;
+  transition: 0.1s all linear;
+}
+.footer-menu__title a:hover {
+  color: #ffffff;
+}
+.footer-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 25px;
+  font-weight: 300;
+}
+.footer-menu__list li {
+  margin-bottom: 10px;
+}
+.footer-menu__list li:last-child {
+  margin-bottom: 0;
+}
+.footer-menu__list li a {
+  text-decoration: none;
+  color: #657984;
+  transition: 0.1s all linear;
+}
+.footer-menu__list li a:hover {
+  color: #ffffff;
 }
 
 .section {

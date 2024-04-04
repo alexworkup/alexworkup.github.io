@@ -3,16 +3,25 @@
   border-radius: 31px 0;
   text-decoration: none;
   height: 50px;
-  padding: 0 55px;
+  padding: 0 65px;
   line-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
 
   &_type {
 
     &_color {
       backdrop-filter: blur(4px);
       background: linear-gradient(93deg, rgba(250, 188, 42, 0.9) 0%, rgba(247, 91, 45, 0.9) 100%);
-      color: #ffffff;
       font-size: 20px;
+    }
+
+    &_submit {
+      border: 8px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px 0;
+      height: 90px;
+      line-height: 90px;
     }
   }
 }

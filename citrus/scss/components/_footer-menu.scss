@@ -1,0 +1,58 @@
+.footer-menu {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      color: #8aa0ac;
+      transition: .1s all linear;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #657984;
+        transition: .1s all linear;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,115 @@
+.form-screen {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  position: relative;
+  padding: 60px 60px 0 60px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% + 150px);
+    backdrop-filter: blur(15px);
+    background: rgba(52, 73, 85, 0.3);
+    border-radius: 50px 0;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__check {
+    font-weight: 300;
+    font-size: 20px;
+    color: #c1c6c9;
+    text-transform: uppercase;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    span {
+      position: relative;
+      padding-left: 30px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 1px solid #949a9c;
+        background-color: transparent;
+        transition: .1s all linear;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    input {
+      display: none;
+
+      &:checked {
+
+        & + span {
+
+          &:before {
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  &__field {
+    position: relative;
+    padding-left: 18px;
+    padding-bottom: 10px;
+    background-image: url("../images/field-bg.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    input {
+      appearance: none;
+      background: none;
+      outline: none;
+      margin: 0;
+      padding: 0;
+      border: none;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 100%;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__submit {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -100px;
+    margin-bottom: -20px;
+    font-weight: 300;
+
+    .btn {
+      font-size: 30px;
+    }
+  }
+}

@@ -2,6 +2,7 @@
 @import "fonts";
 @import "general";
 @import "header";
+@import "footer";
 
 //Components
 @import 'components/screen';
@@ -11,6 +12,10 @@
 @import 'components/play-section';
 @import 'components/pool-section';
 @import 'components/gym-section';
+@import 'components/team-section';
+@import 'components/form-screen';
+@import 'components/send-section';
+@import 'components/footer-menu';
 
 @import 'components/section';
 @import 'components/first-screen';
