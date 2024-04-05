@@ -23,6 +23,11 @@
 
   &-footer {
     width: 100%;
+    align-items: flex-start;
+
+    .screen__content {
+      width: 100%;
+    }
   }
 
   &__bg {

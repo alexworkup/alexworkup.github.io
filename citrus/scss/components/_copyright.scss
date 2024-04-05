@@ -1,0 +1,19 @@
+.copyright {
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  color: #37444A;
+  font-size: 25px;
+  line-height: 100%;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: #37444A;
+    text-decoration: none;
+    transition: .1s all linear;
+
+    &:hover {
+      color: rgb(255 255 255 / 30%);
+    }
+  }
+}

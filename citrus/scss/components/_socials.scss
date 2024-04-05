@@ -1,0 +1,40 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #90A2AB;
+    margin-right: 9px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+
+      path {
+        fill: #9FB3BD;
+        fill-opacity: .6;
+        transition: .1s all linear;
+      }
+    }
+
+    &:hover {
+
+      svg {
+
+        path {
+          fill: #ffffff;
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.app {
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 70px 0;
+    width: 247px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+
+    &_type {
+
+     &_google {
+        margin: 0 0 -50px -50px;
+     }
+    }
+  }
+}

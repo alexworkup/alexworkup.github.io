@@ -1,0 +1,18 @@
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  grid-template-rows: auto;
+  column-gap: 50px;
+  row-gap: 15px;
+
+  &__col {
+
+    &_type {
+
+      &_socials {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+    }
+  }
+}
