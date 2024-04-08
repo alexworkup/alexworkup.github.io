@@ -2,6 +2,11 @@
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
+
+  @media #{$tablet} {
+    flex-direction: column;
+  }
 
   &__title,
   &__subtitle {
@@ -21,12 +26,32 @@
   &__title {
     font-size: 70px;
     color: #ffffff;
+
+    @media #{$notebook} {
+      font-size: 50px;
+    }
+
+    @media #{$phone} {
+      font-size: 45px;
+    }
   }
 
   &__subtitle {
     font-size: 200px;
     line-height: 82%;
     margin-bottom: 40px;
+
+    @media #{$notebook} {
+      font-size: 160px;
+    }
+
+    @media #{$tablet} {
+      margin-bottom: 10px;
+    }
+
+    @media #{$phone} {
+      font-size: 80px;
+    }
   }
 
   &__text {
@@ -37,6 +62,10 @@
     color: #fff;
     position: relative;
     z-index: 1;
+
+    @media #{$phone} {
+      font-size: 14px;
+    }
   }
 
   &__description {
@@ -57,8 +86,7 @@
   }
 
   &__play {
-    width: 440px;
-    height: 440px;
+    width: 35%;
     margin-right: 30px;
     flex-shrink: 0;
     display: flex;
@@ -73,13 +101,41 @@
     background-color: rgba(255, 255, 255, 0.01);
     overflow: hidden;
     border-radius: 50% 50% 0 50%;
+
+    &:before {
+      content: '';
+      padding-top: 100%;
+      float: left;
+    }
+
+    @media #{$tablet} {
+      margin-bottom: 30px;
+      margin-right: 0;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    @media #{$phone} {
+      width: 70%;
+      margin-bottom: 15px;
+    }
   }
 
   &__icon {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    font-size: 0;
 
     img {
       position: relative;
+      width: 100%;
+
+      @media #{$notebook} {
+        max-width: 80px;
+      }
     }
 
     &:before {

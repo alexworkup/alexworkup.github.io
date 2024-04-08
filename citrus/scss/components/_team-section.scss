@@ -12,6 +12,14 @@
     text-transform: uppercase;
     margin-bottom: 32px;
 
+    @media #{$tablet} {
+      font-size: 100px;
+    }
+
+    @media #{$phone} {
+      font-size: 50px;
+    }
+
     span {
       background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
       background-clip: text;
@@ -48,12 +56,28 @@
     backdrop-filter: blur(15px);
     background: rgba(52, 73, 85, 0.3);
 
+    @media #{$laptop} {
+      width: 50%;
+    }
+
+    @media #{$tablet} {
+      width: 100%;
+    }
+
+    @media #{$phone} {
+      font-size: 25px;
+    }
+
     a {
       color: #fff;
       text-decoration: none;
       padding: 12px 28px;
       display: inline-block;
       width: 100%;
+
+      @media #{$phone} {
+        padding: 8px;
+      }
     }
 
     &:last-child {

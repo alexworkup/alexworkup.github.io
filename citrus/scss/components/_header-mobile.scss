@@ -1,0 +1,58 @@
+.header-mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.01);
+  display: none;
+
+  @media #{$phone} {
+    display: block;
+  }
+
+  &__row {
+    padding: 5px 16px;
+    display: flex;
+    align-items: center;
+    margin: 0 -10px;
+  }
+
+  &__col {
+    padding: 0 10px;
+
+    &_type {
+
+      &_toggle {
+
+        .burger {
+
+          svg {
+            max-width: 50px;
+          }
+        }
+      }
+
+      &_phone {
+        margin-left: auto;
+
+        .phone-link {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(15px);
+            background-color: rgba(0, 0, 0, 0.9);
+          }
+        }
+      }
+    }
+  }
+}

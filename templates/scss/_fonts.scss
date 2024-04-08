@@ -1,0 +1,10 @@
+/* Для примера */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormorant/CormorantGaramond-Medium.woff2') format('woff2'),
+  url('../fonts/cormorant/CormorantGaramond-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

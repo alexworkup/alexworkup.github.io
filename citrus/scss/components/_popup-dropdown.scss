@@ -1,0 +1,70 @@
+.popup-dropdown {
+  display: none;
+  position: fixed;
+  width: 40%;
+  height: 100%;
+  padding: 45px 45px 45px 80px;
+  left: 0;
+  top: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(52, 73, 85, 0.3);
+  z-index: 200;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__close {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 40px auto;
+    cursor: pointer;
+    display: block;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+
+    .phone-link {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+  }
+
+  .popup-menu {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    list-style: none;
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 130%;
+    padding: 0;
+    margin: 0 0 40px 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+
+      &.active,
+      &:hover {
+        background: linear-gradient(90deg, #fbc92a 0%, #f6342e 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

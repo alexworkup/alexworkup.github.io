@@ -16,6 +16,15 @@
     position: relative;
     z-index: 1;
     margin-bottom: -100px;
+    
+    @media #{$laptop} {
+      font-size: 150px;
+    }
+
+    @media #{$phone} {
+      font-size: 80px;
+      margin-bottom: -30px;
+    }
   }
 
   &__button {
@@ -33,6 +42,16 @@
     background-color: rgba(255, 255, 255, 0.01);
     overflow: hidden;
     border-radius: 50% 50% 50% 0;
+
+    @media #{$laptop} {
+      width: 400px;
+      height: 400px;
+    }
+
+    @media #{$phone} {
+      width: 290px;
+      height: 290px;
+    }
   }
 
   &__icon {
@@ -40,6 +59,14 @@
 
     img {
       position: relative;
+
+      @media #{$laptop} {
+        max-width: 110px;
+      }
+
+      @media #{$phone} {
+        max-width: 80px;
+      }
     }
 
     &:before {

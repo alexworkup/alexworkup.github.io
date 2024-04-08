@@ -9,16 +9,43 @@
   background-position: center;
   padding: 35px 35px 60px 130px;
 
+  @media #{$phone} {
+    padding: 50px 20px 35px 20px;
+  }
+
+  &-main {
+
+    @media #{$phone} {
+      align-items: flex-start;
+    }
+  }
+
   &-play {
     justify-content: flex-end;
+
+    @media #{$phone} {
+      justify-content: center;
+    }
   }
 
   &-gym {
     padding-top: 140px;
+
+    @media #{$phone} {
+      padding-top: 70px;
+    }
   }
 
   &-team {
     align-items: flex-start;
+
+    @media #{$tablet} {
+      padding-top: 80px;
+    }
+
+    @media #{$phone} {
+      padding-top: 60px;
+    }
   }
 
   &-footer {

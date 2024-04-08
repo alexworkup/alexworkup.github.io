@@ -7,6 +7,17 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
     height: 100%;
+
+    @media #{$tablet} {
+      grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$phone} {
+      display: flex;
+      flex-direction: column;
+      grid-gap: initial;
+    }
   }
 
   &__item {
@@ -23,7 +34,20 @@
     background: rgba(52, 73, 85, 0.3);
     border-radius: 20px;
     padding: 22px;
-    overflow: hidden;
+
+    @media #{$notebook} {
+      font-size: 35px;
+    }
+
+    @media #{$phone} {
+      display: block;
+      margin-bottom: 8px;
+      padding: 12px 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     span {
       font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;

@@ -1,4 +1,5 @@
 //Main
+@import "variables";
 @import "fonts";
 @import "general";
 @import "header";
@@ -21,6 +22,8 @@
 @import 'components/app';
 @import 'components/footer-bottom';
 @import 'components/footer-people';
+@import 'components/popup-dropdown';
+@import 'components/header-mobile';
 
 @import 'components/section';
 @import 'components/first-screen';

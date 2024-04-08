@@ -18,6 +18,10 @@
     padding: 0 20px;
     text-align: center;
     z-index: 5;
+
+    @media #{$phone} {
+      padding: 20px 0 0 0;
+    }
   }
 
   &__header {
@@ -31,6 +35,15 @@
     bottom: -50%;
     width: 914px;
     height: 914px;
+    border-radius: 50%;
+    pointer-events: none;
+
+    @media #{$phone} {
+      width: 400px;
+      height: 400px;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
 
     img {
       max-width: 100%;
@@ -44,10 +57,20 @@
       &_2 {
         z-index: 1;
         right: 20%;
+        background-color: rgb(217, 217, 217, 0.6);
+
+        @media #{$phone} {
+          bottom: 40%;
+        }
       }
 
       &_1 {
         z-index: 2;
+        border: 47px solid rgba(178, 190, 191, 0.5);
+
+        @media #{$phone} {
+          border: 30px solid rgba(178, 190, 191, 0.5);
+        }
       }
     }
 
