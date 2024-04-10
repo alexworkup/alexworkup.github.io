@@ -3,10 +3,35 @@
 
   &__row {
     display: flex;
+
+    @media #{$tablet} {
+      flex-wrap: wrap;
+    }
   }
 
   &__col {
-    margin-right: 80px;
+    margin-right: 5em;
+
+    @media #{$tablet} {
+      margin-right: 0;
+      margin-bottom: 15px;
+      padding-right: 10px;
+      width: 50%;
+    }
+
+    &_type {
+
+      &_services {
+
+        @media #{$phone} {
+          width: 100%;
+
+          li {
+            display: inline-block;
+          }
+        }
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -17,6 +42,10 @@
     font-size: 25px;
     font-weight: 400;
     margin-bottom: 10px;
+
+    @media #{$notebook} {
+      font-size: 20px;
+    }
 
     a {
       text-decoration: none;
@@ -36,8 +65,17 @@
     font-size: 25px;
     font-weight: 300;
 
+    @media #{$notebook} {
+      font-size: 20px;
+    }
+
     li {
       margin-bottom: 10px;
+
+      @media #{$tablet} {
+        margin-bottom: 6px;
+        margin-right: 10px;
+      }
 
       &:last-child {
         margin-bottom: 0;

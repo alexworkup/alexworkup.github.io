@@ -7,6 +7,10 @@
   margin: 0;
   padding: 0;
 
+  @media #{$notebook} {
+    font-size: 20px;
+  }
+
   a {
     color: #37444A;
     text-decoration: none;

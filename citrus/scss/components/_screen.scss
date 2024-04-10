@@ -31,6 +31,10 @@
   &-gym {
     padding-top: 140px;
 
+    @media #{$tablet} {
+      padding-top: 100px;
+    }
+
     @media #{$phone} {
       padding-top: 70px;
     }
@@ -52,8 +56,13 @@
     width: 100%;
     align-items: flex-start;
 
+    @media #{$tablet} {
+      padding-top: 80px;
+    }
+
     .screen__content {
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -73,5 +82,9 @@
 
   &__content {
     position: relative;
+    
+    @media #{$phone} {
+      width: 100%;
+    }
   }
 }

@@ -9,6 +9,16 @@
     position: relative;
     z-index: 1;
 
+    @media #{$tablet} {
+      font-size: 100px;
+    }
+
+    @media #{$phone} {
+      font-size: 80px;
+      line-height: 95%;
+      margin-bottom: 10px;
+    }
+
     span {
       background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
       background-clip: text;

@@ -12,8 +12,9 @@
     text-transform: uppercase;
     margin-bottom: 32px;
 
-    @media #{$tablet} {
+    @media #{$notebook} {
       font-size: 100px;
+      margin-bottom: 20px;
     }
 
     @media #{$phone} {
@@ -38,11 +39,20 @@
     column-gap: 6px;
     height: calc(100% - 150px);
 
+    @media #{$tablet} {
+      height: auto;
+      width: 100%;
+    }
+
     &::after {
       content: "";
       height: 100%;
       width: 100%;
       flex-shrink: 1;
+
+      @media #{$tablet} {
+        content: none;
+      }
     }
   }
 
@@ -56,12 +66,13 @@
     backdrop-filter: blur(15px);
     background: rgba(52, 73, 85, 0.3);
 
-    @media #{$laptop} {
+    @media #{$notebook} {
       width: 50%;
     }
 
     @media #{$tablet} {
       width: 100%;
+      font-size: 30px;
     }
 
     @media #{$phone} {
