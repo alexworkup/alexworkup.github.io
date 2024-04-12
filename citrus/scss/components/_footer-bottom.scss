@@ -11,6 +11,7 @@
 
   @media #{$phone} {
     column-gap: 15px;
+    row-gap: 10px;
   }
 
   &__col {

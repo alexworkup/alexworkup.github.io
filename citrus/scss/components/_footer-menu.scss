@@ -12,6 +12,10 @@
   &__col {
     margin-right: 5em;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media #{$tablet} {
       margin-right: 0;
       margin-bottom: 15px;

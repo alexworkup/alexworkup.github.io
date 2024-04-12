@@ -60,9 +60,15 @@
       padding-top: 80px;
     }
 
+    @media #{$phone} {
+      padding-top: 60px;
+    }
+
     .screen__content {
       width: 100%;
       height: 100%;
+      position: relative;
+      z-index: 1;
     }
   }
 

@@ -36,7 +36,7 @@
     flex-grow: 1;
 
     @media #{$phone} {
-      gap: 15px;
+      gap: 8px;
       grid-template-rows: 1fr auto auto;
     }
   }

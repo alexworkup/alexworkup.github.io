@@ -6,6 +6,11 @@
   height: 100%;
   pointer-events: none;
 
+  @media #{$phone} {
+    opacity: .2;
+    right: -20%;
+  }
+
   &__item {
     position: absolute;
     right: 0;
@@ -16,10 +21,18 @@
       &_boy {
         max-width: 38%;
         right: 3%;
+
+        @media #{$phone} {
+          max-width: 85%;
+        }
       }
 
       &_girl {
         max-width: 26%;
+
+        @media #{$phone} {
+          max-width: 58%;
+        }
       }
     }
   }
