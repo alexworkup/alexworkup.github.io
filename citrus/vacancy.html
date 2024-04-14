@@ -8,21 +8,23 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/fancyapp/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-    <div class="header__row">
-        <div class="header__col header__col_type_phone">
-            <a href="tel:+73512203333" class="phone-link">+7 (351) 220-33-33</a>
+        <div class="header__row">
+            <div class="header__col header__col_type_phone">
+                <a href="tel:+73512203333" class="phone-link">+7 (351) 220-33-33</a>
+            </div>
+            <div class="header__col header__col_type_btn">
+                <a href="#" class="btn btn_type_color">Записаться</a>
+            </div>
         </div>
-        <div class="header__col header__col_type_btn">
-            <a href="#" class="btn btn_type_color">Записаться</a>
-        </div>
-    </div>
-</header>
+    </header>
     <header class="header-mobile">
         <div class="header-mobile__row">
             <div class="header-mobile__col header-mobile__col_type_toggle">
@@ -58,13 +60,13 @@
             <div class="main-screen__content">
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item"><a href="#"><span>Главная</span></a> / </li>
-                    <li class="breadcrumbs__item"><span>О компании</span> / </li>
+                    <li class="breadcrumbs__item"><span>Вакансии</span> / </li>
                 </ul>
                 <div class="page-inner">
-                    <h1 class="h1">о компании</h1>
+                    <h1 class="h1">Вакансии</h1>
                     <ul class="page-nav">
                         <li class="page-nav__item">
-                            <a href="#" class="selected"><span>о нас</span></a>
+                            <a href="#"><span>о нас</span></a>
                         </li>
                         <li class="page-nav__item">
                             <a href="#"><span>Правила и политика клуба</span></a>
@@ -73,7 +75,7 @@
                             <a href="#"><span>ПРАВИЛА безопасности КЛУБА</span></a>
                         </li>
                         <li class="page-nav__item">
-                            <a href="#"><span>ВАКАНСИИ</span></a>
+                            <a href="#" class="selected"><span>ВАКАНСИИ</span></a>
                         </li>
                     </ul>
                     <div class="page-inner__text">
@@ -85,56 +87,35 @@
             <div class="main-screen__circle main-screen__circle_type_2"></div>
             <div class="main-screen__circle main-screen__circle_type_1"></div>
         </div>
-        <div class="screen screen-advantages" data-title="Площадь" id="screen-square">
+        <div class="screen screen-team" data-title="Вакансии" id="screen-vacancy">
             <picture class="screen__bg">
-                <source srcset="images/gym-screen-bg-mob.jpg" media="(max-width: 767px)">
-                <img loading="lazy" src="images/gym-screen-bg.jpg" alt="Площадь">
+                <source srcset="images/combat-vacancy-bg-mob.jpg" media="(max-width: 767px)">
+                <img loading="lazy" src="images/combat-vacancy-bg.jpg" alt="Вакансии">
             </picture>
-            <div class="screen__content">
-                <div class="advantage">
-                    <h2 class="advantage__title">
-                        <span>более </span>
-                        <b>10 000 кв.м.</b>
-                    </h2>
-                    <div class="advantage__desc">
-                        <h3>общая площадь фитнес-центра </h3>
-                        <p>Тренажерный зал Citrus Fitness – это сердце нашего клуба. Площадь нашего тренажерного зала 1000 кв. м. Тренажерный зал оснащен новейшим оборудованием от ведущих производителей: Precor, Hoist, Life Fitness. Более 140 тренажеров дают возможность даже при полной загрузке зала заниматься с минимальным ожиданием. Мы постоянно развиваемся и совершенствуемся – линейки наших тренажеров регулярно пополняются.</p>
-                    </div>
+            <div class="screen__content team-section">
+                <div class="team-section__title">
+                    <span>Вакансии</span>
                 </div>
-            </div>
-        </div>
-        <div class="screen screen-advantages" data-title="Бассейн" id="screen-pool">
-            <picture class="screen__bg">
-                <source srcset="images/pool-screen-bg-mob.jpg" media="(max-width: 767px)">
-                <img loading="lazy" src="images/pool-screen-bg.jpg" alt="Бассейн">
-            </picture>
-            <div class="screen__content">
-                <div class="advantage">
-                    <h2 class="advantage__title">
-                        <span>спортивный <i>бассейн</i></span>
-                        <b>50 метров</b>
-                    </h2>
-                    <div class="advantage__desc">
-                        <p>Всем известно как благотворно влияет плавание на здоровье и общий жизненный тонус. И взрослым, и детям рекомендуются тренировки в бассейне. Плавание помогает сбросить лишние килограммы, способствует укреплению позвоночника, нормализации работы дыхательной и сердечнососудистой системы, избавляет от депрессии, нормализует сон.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="screen screen-advantages" data-title="Единоборства" id="screen-combat">
-            <picture class="screen__bg">
-                <source srcset="images/combat-screen-bg-mob.jpg" media="(max-width: 767px)">
-                <img loading="lazy" src="images/combat-screen-bg.jpg" alt="Единоборства">
-            </picture>
-            <div class="screen__content">
-                <div class="advantage">
-                    <h2 class="advantage__title">
-                        <span>ВОСТОЧНЫЕ</span>
-                        <b>ЕДИНОБОРСТВА</b>
-                    </h2>
-                    <div class="advantage__desc">
-                        <p>Одним из способов самосовершенствования являются занятия восточными единоборствами. Единоборства позволяют укрепить нервную систему, научиться концентрироваться в сложной ситуации, а также позволяют побороть плохое настроение. Занятия восточными единоборствами позволяют укрепить организм и постепенно овладеть техникой и правилами борьбы, отточенными веками. Благодаря восточным единоборствам мужчина превращается в защитника, человека с сильным духом и волей.</p>
-                    </div>
-                </div>
+                <ul class="team-section__list" id="listVacancies">
+                    <li class="team-section__item">
+                        <a href="#">Тренер по детскому фитнесу</a>
+                    </li>
+                    <li class="team-section__item">
+                        <a href="#">Врач</a>
+                    </li>
+                    <li class="team-section__item">
+                        <a href="#">Педагог в детский центр</a>
+                    </li>
+                    <li class="team-section__item">
+                        <a href="#">Массажист</a>
+                    </li>
+                    <li class="team-section__item">
+                        <a href="#">Инструктор тренажерного зала</a>
+                    </li>
+                    <li class="team-section__item">
+                        <a href="#">Тренер по художественной гимнастике</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="screen screen-send" data-title="Заявка" id="screen-send">
@@ -325,9 +306,9 @@
             <img src="images/logo-vertical.svg" alt="Citrus Fitness">
         </div>
     </div>
-    <div class="popup-dropdown">
+    <div class="popup-dropdown" id="popupDropdown">
         <div class="popup-dropdown__wrap">
-            <button class="popup-dropdown__close">
+            <button class="popup-dropdown__close js-close-fancy">
                 <img src="images/popup-menu-close.svg" alt="">
             </button>
             <ul class="popup-menu">
@@ -363,6 +344,33 @@
                 </div>
                 <div class="dropdown-bottom__col dropdown-bottom__col_type_btn">
                     <a href="#" class="btn btn_type_color">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-content" id="popupContent">
+        <button class="popup-content__close js-close-fancy">
+            <img src="images/close-icon.svg" alt="Закрыть окно">
+        </button>
+        <div class="popup-content__wrap">
+            <div class="popup-content__row">
+                <div class="popup-content__col popup-content__col_type_text">
+                    <h2 class="h2"><span>Тренер по детскому фитнесу</span></h2>
+                    <p><b>Обязанности:</b><br> Проведение индивидуальных и групповых тренировок по различным направлениям детского фитнеса</p>
+                    <p><b>Требования:</b></p>
+                    <ul>
+                        <li>Опыт работы тренером от 2 лет</li>
+                        <li>Личные спортивные достижения</li>
+                        <li>Высшее спортивное или педагогическое образование</li>
+                        <li>Ответственность, активная жизненная позиция</li>
+                        <li>Любовь к детям</li>
+                    </ul>
+                    <p><b>Резюме отправлять на почту:</b><br> <a href="mailto:nikolaeva-anna-an@mail.ru">nikolaeva-anna-an@mail.ru</a></p>
+                </div>
+                <div class="popup-content__col popup-content__col_type_img">
+                    <div class="popup-img">
+                        <img loading="lazy" src="images/popup-img.jpg" alt="Тренер по детскому фитнесу">
+                    </div>
                 </div>
             </div>
         </div>

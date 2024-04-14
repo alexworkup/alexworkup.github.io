@@ -1,0 +1,19 @@
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #FFFFFF;
+  font-family: $font-family-base;
+
+  &__item {
+    display: inline-block;
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+}

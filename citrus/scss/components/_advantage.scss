@@ -1,0 +1,122 @@
+.advantage {
+  border-radius: 200px 0 0 200px;
+  backdrop-filter: blur(15px);
+  background: rgba(52, 73, 85, 0.3);
+  padding: 45px 100px;
+  max-width: 70%;
+  min-height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @media #{$notebook} {
+    max-width: 85%;
+  }
+
+  @media #{$tablet} {
+    padding: 50px;
+    border-radius: 100px 0 0 100px;
+  }
+
+  @media #{$phone} {
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+    padding: 20px 30px;
+    border-radius: 60px 0 0 60px;
+    min-height: auto;
+  }
+
+  &__title {
+    font-family: $font-family-base;
+    margin: 0;
+
+    span {
+      display: block;
+      font-weight: 300;
+      font-size: 80px;
+      line-height: 125%;
+      color: #fff;
+
+      i {
+        display: inline-block;
+        font-style: normal;
+        background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media #{$notebook} {
+        font-size: 65px;
+      }
+
+      @media #{$tablet} {
+        font-size: 40px;
+      }
+    }
+
+    b {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 150px;
+      line-height: 87%;
+      text-transform: uppercase;
+      background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media #{$notebook} {
+        font-size: 130px;
+      }
+
+      @media #{$tablet} {
+        font-size: 100px;
+      }
+
+      @media #{$phone} {
+        font-size: 65px;
+      }
+    }
+  }
+
+  &__desc {
+    font-family: $font-family-add;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 125%;
+    font-weight: 300;
+
+    @media #{$phone} {
+      font-size: 16px;
+    }
+
+    h3 {
+      font-family: $font-family-base;
+      font-weight: 300;
+      font-size: 60px;
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      @media #{$notebook} {
+        font-size: 50px;
+      }
+
+      @media #{$tablet} {
+        font-size: 30px;
+      }
+
+      @media #{$phone} {
+        font-size: 25px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

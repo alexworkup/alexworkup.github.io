@@ -1,0 +1,160 @@
+.popup-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  font-family: $font-family-add;
+  padding: 0;
+  background: none;
+  display: none;
+
+  @media #{$notebook} {
+    width: 85%;
+  }
+
+  @media #{$phone} {
+    width: 100%;
+    overflow-y: scroll;
+  }
+
+  &__close {
+    appearance: none;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 0;
+    outline: none!important;
+  }
+
+  &__wrap {
+    height: 100%;
+    padding: 70px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 4px 25px 0 rgba(23, 29, 32, 0.5);
+    background: rgba(255, 255, 255, 0.75);
+
+    @media #{$tablet} {
+      padding: 30px;
+    }
+
+    @media #{$phone} {
+      padding: 16px;
+      height: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 30px;
+
+    @media #{$tablet} {
+      flex-direction: column-reverse;
+      column-gap: 0;
+    }
+  }
+
+  &__col {
+
+    &_type {
+
+      &_text {
+        width: 60%;
+        color: #3a4b55;
+        font-size: 18px;
+        line-height: 130%;
+
+        @media #{$notebook} {
+          width: 55%;
+        }
+
+        @media #{$tablet} {
+          width: 100%;
+          font-style: 16px;
+        }
+
+        .h2 {
+          font-family: $font-family-base;
+          font-weight: 700;
+          font-size: 60px;
+          text-transform: uppercase;
+          margin: 0 0 30px 0;
+          line-height: 100%;
+
+          @media #{$tablet} {
+            font-size: 40px;
+            margin-bottom: 10px;
+          }
+
+          span {
+            background: linear-gradient(269deg, #fabc2a 0%, #f75b2d 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        a {
+          color: #f75b2d;
+          text-decoration: none;
+        }
+      }
+
+      &_img {
+        width: 40%;
+
+        @media #{$notebook} {
+          width: 45%;
+        }
+
+        @media #{$tablet} {
+          width: 100%;
+          margin-bottom: 20px;
+          max-width: 315px;
+        }
+
+        @media #{$phone} {
+          max-width: 260px;
+        }
+      }
+    }
+  }
+
+  .popup-img {
+    border: 60px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50% 50% 50% 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    @media #{$tablet} {
+      border-width: 40px;
+    }
+
+    @media #{$phone} {
+      border-width: 30px;
+    }
+
+    &:before {
+      content: '';
+      padding-top: 100%;
+      display: block;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+    }
+  }
+}

@@ -10,6 +10,18 @@
     z-index: 2;
     width: 100%;
     text-align: center;
+
+    &_type {
+
+      &_page {
+        max-width: 45%;
+        right: 0;
+        bottom: 0;
+        left: initial;
+        top: initial;
+        transform: none;
+      }
+    }
   }
 
   &__content {
@@ -28,6 +40,8 @@
       &_page {
         justify-content: left;
         align-items: flex-start;
+        flex-direction: column;
+        text-align: left;
       }
     }
 

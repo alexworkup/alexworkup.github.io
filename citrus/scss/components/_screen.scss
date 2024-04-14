@@ -18,6 +18,54 @@
     @media #{$phone} {
       align-items: flex-start;
     }
+
+    &_type {
+
+      &_page {
+
+        @media #{$tablet} {
+          padding-top: 66px;
+        }
+
+        .main-screen__img {
+          max-width: 45%;
+          right: 0;
+          bottom: 0;
+          left: initial;
+          top: initial;
+          transform: none;
+
+          @media #{$phone} {
+            max-width: 65%;
+            opacity: .5;
+          }
+        }
+
+        .main-screen__content {
+          justify-content: left;
+          align-items: flex-start;
+          flex-direction: column;
+          text-align: left;
+
+          @media #{$tablet} {
+            padding: 0;
+          }
+        }
+
+        .main-screen__circle {
+          top: -50%;
+          opacity: .5;
+        }
+      }
+
+      &_cards {
+
+        .page-inner {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
   }
 
   &-play {
@@ -25,6 +73,20 @@
 
     @media #{$phone} {
       justify-content: center;
+    }
+  }
+
+  &-advantages {
+    justify-content: flex-end;
+    padding-right: 0;
+
+    @media #{$phone} {
+      padding-left: 0;
+    }
+
+    .screen__content {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -83,6 +145,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top;
     }
   }
 

@@ -18,6 +18,15 @@
     display: none;
   }
 
+  &__burger {
+      position: absolute;
+      top: 40px;
+
+      @media #{$tablet} {
+        top: 30px;
+      }
+  }
+
   &__logo {
     font-size: 0;
     position: relative;

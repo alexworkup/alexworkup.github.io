@@ -1,13 +1,13 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: auto;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
-  padding: 45px;
+  padding: 45px 45px 45px 15px;
 
   @media #{$tablet} {
-    padding: 20px 45px;
+    padding: 16px;
   }
 
   @media #{$phone} {
@@ -17,12 +17,20 @@
   &__row {
     display: flex;
     margin: 0 -20px;
+
+    @media #{$tablet} {
+      margin: 0 -10px;
+    }
   }
 
   &__col {
     display: flex;
     align-items: center;
     padding: 0 20px;
+
+    @media #{$tablet} {
+      padding: 0 10px;
+    }
 
     &_type {
 

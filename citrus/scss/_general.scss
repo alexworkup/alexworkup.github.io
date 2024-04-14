@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: $font-family-add;
+}
+
 .main {
   overflow: hidden;
 }
@@ -31,4 +35,92 @@ img {
   font-size: 25px;
   text-decoration: none;
   font-weight: 300;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  margin: 20px 0 20px 0;
+  line-height: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: #f75b2d;
+}
+
+h1, .h1 {
+  font-family: $font-family-base;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 87%;
+  text-transform: uppercase;
+  background: linear-gradient(93deg, #fabc2a 0%, #f75b2d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media #{$notebook} {
+    font-size: 100px;
+  }
+
+  @media #{$phone} {
+    font-size: 40px;
+  }
+}
+
+.page-inner {
+  padding-top: 40px;
+  max-width: 1080px;
+
+  @media #{$tablet} {
+    padding-top: 0;
+  }
+
+  &__text {
+    font-family: $font-family-add;
+    color: #3a4b55;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 120%;
+
+    @media #{$phone} {
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: 400;
+
+      @media #{$phone} {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .page-nav {
+    margin-bottom: 50px;
+
+    @media #{$tablet} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.open-popup-content {
+
+  .fancybox__content {
+    align-self: flex-end;
+  }
+
+  .fancybox__slide {
+    padding: 0;
+  }
+
+  .fancybox__backdrop {
+    background-color: rgb(58 75 85 / 90%);
+    backdrop-filter: blur(5px);
+  }
 }

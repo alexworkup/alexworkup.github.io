@@ -1,0 +1,117 @@
+.page-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-base;
+  font-weight: 300;
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media #{$notebook} {
+    font-size: 25px;
+  }
+
+  @media #{$phone} {
+    flex-direction: column;
+    font-size: 20px;
+    padding: 20px 30px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:not(:first-child) {
+      margin-left: -30px;
+
+      @media #{$notebook} {
+        margin-left: -20px;
+      }
+
+      @media #{$tablet} {
+        margin-left: 10px;
+      }
+
+      @media #{$phone} {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      padding: 0 50px;
+      color: #fff;
+      text-decoration: none;
+      height: 70px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px 0;
+      overflow: hidden;
+
+      @media #{$notebook} {
+        padding: 0 30px;
+      }
+
+      @media #{$tablet} {
+        height: 60px;
+      }
+
+      @media #{$phone} {
+        padding: 0;
+        height: auto;
+        justify-content: flex-start;
+        border-radius: 0;
+      }
+
+      span {
+        position: relative;
+      }
+
+      &.selected,
+      &:hover {
+        z-index: 1;
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @media #{$phone} {
+          content: none;
+        }
+      }
+
+      &:before {
+        background: linear-gradient(90deg, #fabc2a 0%, #f75b2d 100%);
+        opacity: 0;
+        transition: .2s opacity linear;
+      }
+
+      &:after {
+        border: 8px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px 0;
+        pointer-events: none;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* Для примера */
+/* Для примера */
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/cormorant/CormorantGaramond-Medium.woff2") format("woff2"), url("../fonts/cormorant/CormorantGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gilroy", "Arial Narrow", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
