@@ -8,10 +8,49 @@
     @media #{$notebook} {
       column-gap: 20px;
     }
+
+    @media #{$laptop} {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
+
+    @media #{$phone} {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__item {
     margin-bottom: 30px;
+  }
+
+  .btn {
+    border-radius: 40px 0;
+    height: 70px;
+    padding: 0 10px;
+    font-size: 30px;
+
+    @media #{$notebook} {
+      height: 60px;
+      font-size: 22px;
+    }
+
+    @media #{$phone} {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      border: 8px solid rgba(255, 255, 255, 0.2);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+      border-radius: 40px 0;
+    }
+
   }
 
   &__desc {
@@ -24,6 +63,53 @@
       list-style: none;
       padding: 0;
       margin: 0;
+
+      li {
+
+        &:nth-of-type(n+7) {
+          display: none;
+        }
+
+        @media #{$laptop} {
+
+          &:nth-of-type(n+5) {
+            display: none;
+          }
+        }
+
+        @media #{$phone} {
+
+          &:nth-of-type(n+5) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .more {
+      margin-top: 10px;
+      display: inline-block;
+      appearance: none;
+      color: #f75b2d;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      background: transparent;
+
+      @media #{$phone} {
+        display: none;
+      }
+    }
+
+    .btn {
+      display: none;
+
+      @media #{$phone} {
+        display: inline-block;
+        padding: 0 60px;
+        margin-top: 15px;
+      }
     }
   }
+
 }
