@@ -43,6 +43,10 @@
     p {
       margin: 0 0 20px 0;
 
+      @media #{$phone} {
+        margin-bottom: 15px;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -66,6 +70,10 @@
       pointer-events: none;
       background: linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 5%, transparent 50%, #e7e7e7 95%, #e7e7e7 100%);
       z-index: 1;
+      
+      @media #{$phone} {
+        background: linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 5%, transparent 15%, #e7e7e7 95%, #e7e7e7 100%);
+      }
     }
 
     .ymaps-layers-pane {

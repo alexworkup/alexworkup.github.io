@@ -29,18 +29,6 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
     }
 
-    /*
-    if(moreDesc.length > 0) {
-
-        moreDesc.forEach((item)=> {
-            item.addEventListener('click', (e)=> {
-                e.preventDefault();
-                item.closest('.club-cards__desc').classList.toggle('show-more');
-            });
-        });
-    }
-    */
-
     if(burgerBtn.length > 0) {
 
         burgerBtn.forEach(item => {
@@ -113,6 +101,12 @@ window.addEventListener('DOMContentLoaded', ()=> {
             const mapElement = document.getElementById(mapId);
             if (!mapElement) return;
 
+            // Определяем начальные параметры для карты
+            let isMobile = window.innerWidth < 768; // Примерная ширина для определения мобильного устройства
+            let zoomLevel = isMobile ? 15 : 16; // Уменьшаем масштаб на мобильных
+            let offsetLng = isMobile ? 0.000 : 0.006; // Уменьшаем смещение на мобильных
+            let offsetLat = isMobile ? -0.003 : 0; // Смещаем карту вверх на мобильных
+
             // Вычисляем средние координаты для исходного центра
             let avgLat = 0, avgLng = 0;
             locations.forEach(function (location) {
@@ -122,10 +116,10 @@ window.addEventListener('DOMContentLoaded', ()=> {
             avgLat /= locations.length;
             avgLng /= locations.length;
 
-            // Создаем карту с исходным центром
+            // Создаем карту с начальным центром
             var map = new ymaps.Map(mapId, {
                 center: [avgLat, avgLng],
-                zoom: 16,
+                zoom: zoomLevel,
                 type: 'yandex#map',
                 controls: ['zoomControl']
             }, {
@@ -133,8 +127,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 yandexMapDisablePoiInteractivity: true
             });
 
-            // Добавляем метки и рассчитываем новый центр карты
-            let offsetLng = 0.006; // Смещение долготы, адаптируйте под размер вашей карты
+            // Добавляем метки на карту
             locations.forEach(function (location) {
                 map.geoObjects.add(new ymaps.Placemark(location.centerCoords, {
                     balloonContent: location.balloonContent
@@ -148,8 +141,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 }));
             });
 
-            // Обновляем центр карты, смещая его влево
-            map.setCenter([avgLat, avgLng - offsetLng]);
+            // Обновляем центр карты, смещая его в зависимости от устройства
+            map.setCenter([avgLat + offsetLat, avgLng - offsetLng]);
         });
     }
 

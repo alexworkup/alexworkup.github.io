@@ -94,7 +94,11 @@ h1, .h1 {
 
 .page-inner {
   padding-top: 40px;
-  max-width: 1080px;
+  width: 100%;
+
+  &__text {
+    max-width: 1080px;
+  }
 
   @media #{$tablet} {
     padding-top: 0;
