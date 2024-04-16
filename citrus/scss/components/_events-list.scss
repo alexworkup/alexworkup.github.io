@@ -11,6 +11,10 @@
       text-transform: uppercase;
       color: #3f494e;
       font-weight: 300;
+      line-height: 100%;
+      margin-bottom: -30px;
+      position: relative;
+      z-index: 1;
 
       span {
         font-size: 50px;

@@ -78,6 +78,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
+    /*
     gsap.registerPlugin(ScrollTrigger);
 
     const screens = document.querySelectorAll('.screen');
@@ -95,6 +96,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             });
         });
     }
+    */
 
     function initMap(mapId, locations) {
         ymaps.ready(function () {

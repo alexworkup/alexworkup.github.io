@@ -336,7 +336,7 @@ h1, .h1 {
 
 .screen {
   position: relative;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   background-color: #c4c9c9;
@@ -2446,6 +2446,10 @@ h1, .h1 {
   text-transform: uppercase;
   color: #3f494e;
   font-weight: 300;
+  line-height: 100%;
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 1;
 }
 .events-list .event__date span {
   font-size: 50px;
