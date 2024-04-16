@@ -35,6 +35,10 @@
     border-radius: 20px;
     padding: 22px;
 
+    &:nth-child(1) {
+
+    }
+
     @media #{$notebook} {
       font-size: 35px;
     }

@@ -1,11 +1,14 @@
 window.addEventListener('DOMContentLoaded', ()=> {
 
+    const mainBlock = document.querySelector('.main');
     const popupContent = document.querySelector('#popupContent');
+    const itemEvent = document.querySelectorAll('.event');
     const itemVacancy = document.querySelectorAll('#listVacancies .team-section__item');
     const closeBtnFancy = document.querySelectorAll('.js-close-fancy');
     const burgerBtn = document.querySelectorAll('.burger');
     const popupDropdown = document.querySelector('#popupDropdown');
     const moreDesc = document.querySelectorAll('.js-more-desc');
+    const mapSection = document.querySelector('#map');
     const clubDesc = document.querySelectorAll('.club-cards__desc');
 
     if(moreDesc.length > 0) {
@@ -58,6 +61,26 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
+    if(itemEvent.length > 0) {
+        itemEvent.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                Fancybox.show(
+                    [
+                        {
+                            src: popupContent,
+                            type: "inline"
+                        }
+                    ],
+                    {
+                        mainClass: 'open-popup-content'
+                    });
+            });
+
+        });
+    }
+
     if(itemVacancy.length > 0) {
         itemVacancy.forEach(item => {
             item.addEventListener('click', (e) => {
@@ -78,8 +101,80 @@ window.addEventListener('DOMContentLoaded', ()=> {
         });
     }
 
-    /*
     gsap.registerPlugin(ScrollTrigger);
+
+    const screen = gsap.utils.toArray('.screen');
+
+    /*
+    if(screen.length > 0) {
+        gsap.to(screen, {
+            yPercent: -100 * (screen.length - 1),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.main',
+                pin: true,
+                scrub: 1,
+                snap: 1 / (screen.length - 1),
+                end: () => "+=" +
+                    document.querySelector('.main').offsetWidth,
+                markers: true,
+            }
+        });
+    }
+*/
+
+
+    // .screen-play
+    const elAnimation = document.querySelectorAll('.js-animation');
+
+    elAnimation.forEach((item) => {
+        let delay = item.getAttribute('data-delay');
+
+        gsap.from(item, {
+            duration: 1,
+            y: '50%',
+            opacity: 0,
+            ease: 'power2.out',
+            delay: delay ? delay : 0,
+            scrollTrigger: {
+                trigger: item.closest('.screen'),
+                start: "80% bottom",
+                toggleActions: 'restart pause reverse reverse'
+            }
+        });
+    });
+
+
+
+
+    /*
+    document.querySelectorAll('.screen-play').forEach((section) => {
+        gsap.from('.play-section__title', {
+            duration: 1,
+            y: '50%',
+            opacity: 0,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: "80% bottom",
+                toggleActions: 'restart pause reverse reverse'
+            }
+        });
+
+        gsap.from('.play-section__button', {
+            duration: 1,
+            y: '20%',
+            opacity: 0,
+            ease: 'power2.out',
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: section,
+                start: "80% bottom",
+                toggleActions: 'restart pause reverse reverse'
+            }
+        });
+    });
+     */
 
     const screens = document.querySelectorAll('.screen');
 
@@ -96,18 +191,17 @@ window.addEventListener('DOMContentLoaded', ()=> {
             });
         });
     }
-    */
+
 
     function initMap(mapId, locations) {
         ymaps.ready(function () {
             const mapElement = document.getElementById(mapId);
             if (!mapElement) return;
 
-            // Определяем начальные параметры для карты
-            let isMobile = window.innerWidth < 768; // Примерная ширина для определения мобильного устройства
-            let zoomLevel = isMobile ? 15 : 16; // Уменьшаем масштаб на мобильных
-            let offsetLng = isMobile ? 0.000 : 0.006; // Уменьшаем смещение на мобильных
-            let offsetLat = isMobile ? -0.003 : 0; // Смещаем карту вверх на мобильных
+            let isMobile = window.innerWidth < 768;
+            let zoomLevel = isMobile ? 15 : 16;
+            let offsetLng = isMobile ? 0.000 : 0.006;
+            let offsetLat = isMobile ? -0.003 : 0;
 
             // Вычисляем средние координаты для исходного центра
             let avgLat = 0, avgLng = 0;
@@ -159,8 +253,8 @@ window.addEventListener('DOMContentLoaded', ()=> {
         }
     ];
 
-    initMap('map', locations);
-
-
+    if(mapSection) {
+        initMap('map', locations);
+    }
 
 });

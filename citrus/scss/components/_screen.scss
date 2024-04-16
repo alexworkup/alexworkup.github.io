@@ -1,7 +1,7 @@
 .screen {
   position: relative;
-  //height: 100vh;
-  height: auto;
+  overflow: hidden;
+  height: 100vh;
   display: flex;
   align-items: center;
   background-color: #c4c9c9;
@@ -9,6 +9,16 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 35px 35px 60px 130px;
+
+  &:hover {
+
+    .screen__bg {
+
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
 
   @media #{$phone} {
     padding: 50px 20px 35px 20px;
@@ -171,6 +181,8 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+      transform: scale(1);
+      transition: 8s transform ease-in;
     }
   }
 

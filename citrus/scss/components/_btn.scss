@@ -8,6 +8,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   color: #ffffff;
 
   &_type {
@@ -23,6 +24,28 @@
       border-radius: 50px 0;
       height: 90px;
       line-height: 90px;
+    }
+
+    &_border {
+      border-radius: 0;
+      background-image: url("../images/btn-border-bg.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-transform: uppercase;
+      color: #3a4b55;
+      font-size: 30px;
+      font-weight: 600;
+      height: 90px;
+      line-height: 90px;
+      padding: 0 64px;
+
+      @media #{$phone} {
+        font-size: 22px;
+        line-height: 57px;
+        height: 57px;
+        padding: 0 33px;
+      }
     }
   }
 }

@@ -18,6 +18,56 @@
     overflow-y: scroll;
   }
 
+  &_type {
+
+    &_event {
+
+      .popup-content__row {
+        align-items: center;
+
+        @media #{$phone} {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    line-height: 100%;
+
+    @media #{$tablet} {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      background: linear-gradient(269deg, #fabc2a 0%, #f75b2d 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__text {
+    color: #3a4b55;
+    font-size: 18px;
+    line-height: 130%;
+
+    @media #{$tablet} {
+      font-size: 16px;
+    }
+
+    a {
+      color: #f75b2d;
+      text-decoration: none;
+    }
+  }
+
   &__close {
     appearance: none;
     border: none;
@@ -31,6 +81,13 @@
     cursor: pointer;
     font-size: 0;
     outline: none!important;
+
+    @media #{$phone} {
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &__wrap {
@@ -45,7 +102,7 @@
     }
 
     @media #{$phone} {
-      padding: 16px;
+      padding: 50px 16px 16px 16px;
       height: auto;
     }
   }
@@ -66,9 +123,6 @@
 
       &_text {
         width: 60%;
-        color: #3a4b55;
-        font-size: 18px;
-        line-height: 130%;
 
         @media #{$notebook} {
           width: 55%;
@@ -76,34 +130,8 @@
 
         @media #{$tablet} {
           width: 100%;
-          font-style: 16px;
         }
 
-        .h2 {
-          font-family: $font-family-base;
-          font-weight: 700;
-          font-size: 60px;
-          text-transform: uppercase;
-          margin: 0 0 30px 0;
-          line-height: 100%;
-
-          @media #{$tablet} {
-            font-size: 40px;
-            margin-bottom: 10px;
-          }
-
-          span {
-            background: linear-gradient(269deg, #fabc2a 0%, #f75b2d 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-
-        a {
-          color: #f75b2d;
-          text-decoration: none;
-        }
       }
 
       &_img {
@@ -133,6 +161,14 @@
     width: 100%;
     height: auto;
     position: relative;
+
+    &_type {
+
+      &_event {
+        border: 50px solid rgba(255, 255, 255, 0.2);
+        border-radius: 80px 0;
+      }
+    }
 
     @media #{$tablet} {
       border-width: 40px;
