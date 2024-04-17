@@ -121,10 +121,11 @@ window.addEventListener('DOMContentLoaded', ()=> {
             }
         });
     }
-*/
+    */
 
 
     // .screen-play
+    /*
     const elAnimation = document.querySelectorAll('.js-animation');
 
     elAnimation.forEach((item) => {
@@ -143,8 +144,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             }
         });
     });
-
-
+    */
 
 
     /*
@@ -176,6 +176,9 @@ window.addEventListener('DOMContentLoaded', ()=> {
     });
      */
 
+
+
+    /*
     const screens = document.querySelectorAll('.screen');
 
     if(screens.length > 1) {
@@ -190,6 +193,51 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 //markers: true,
             });
         });
+    }
+    */
+
+    if(mainBlock) {
+        const speed = 1800;
+        const screenSwiper = new Swiper(".main", {
+            direction: "vertical",
+            slidesPerView: 1,
+            mousewheel: true,
+            effect: 'fade',
+            //parallax: true,
+            speed: speed,
+            pagination: {
+                el: '.screen-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="side-pagination__item ' + className + '"><span>' + (this.slides[index].getAttribute('data-title')) + '</span></span>';
+                }
+            },
+            on: {
+                slideChange: function () {
+                    if(this.activeIndex === 1) {
+                        document.querySelector('.side-panel__logo').classList.add('active');
+                    }
+                },
+            },
+        });
+
+        screenSwiper.on("slideNextTransitionStart", () => {
+            const elementsAnimation = screenSwiper.slides[screenSwiper.activeIndex].querySelectorAll('.js-animation');
+            if(elementsAnimation.length > 0) {
+                elementsAnimation.forEach((el, index) => {
+                    gsap.fromTo(el,
+                        { opacity: 0, translateY: '50%' },
+                        {
+                            opacity: 1,
+                            translateY: '0%',
+                            duration: speed / 1000,
+                            ease: "power2.out",
+                            delay: 0.2 * index
+                        });
+                });
+            }
+        });
+
     }
 
 

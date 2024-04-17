@@ -1,5 +1,6 @@
 .advantage {
   border-radius: 200px 0 0 200px;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   background: rgba(52, 73, 85, 0.3);
   padding: 45px 100px;
