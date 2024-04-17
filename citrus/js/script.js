@@ -197,7 +197,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     */
 
     if(mainBlock) {
-        const speed = 1800;
+        const speed = window.innerWidth <= 979 ? 800 : 1800;
         const screenSwiper = new Swiper(".main", {
             direction: "vertical",
             slidesPerView: 1,
