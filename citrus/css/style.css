@@ -192,6 +192,16 @@ h1, .h1 {
   backdrop-filter: blur(5px);
 }
 
+.open-toggle .fancybox__content {
+  align-self: flex-end;
+}
+.open-toggle .fancybox__slide {
+  padding: 0;
+}
+.open-toggle .fancybox__backdrop {
+  background-color: rgba(58, 75, 85, 0.4);
+}
+
 [data-theme=tippy-desc] {
   border-radius: 30px;
   padding: 20px;

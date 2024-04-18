@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                         }
                     ],
                     {
-                        mainClass: 'open-popup-content'
+                        mainClass: 'open-toggle'
                     });
             });
         });
@@ -197,7 +197,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
     */
 
     if(mainBlock) {
-        const speed = window.innerWidth <= 979 ? 800 : 1800;
+        const speed = window.innerWidth <= 979 ? 800 : 1400;
         const screenSwiper = new Swiper(".main", {
             direction: "vertical",
             slidesPerView: 1,

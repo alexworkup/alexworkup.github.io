@@ -151,6 +151,21 @@ h1, .h1 {
   }
 }
 
+.open-toggle {
+
+  .fancybox__content {
+    align-self: flex-end;
+  }
+
+  .fancybox__slide {
+    padding: 0;
+  }
+
+  .fancybox__backdrop {
+    background-color: rgb(58 75 85 / 40%);
+  }
+}
+
 [data-theme="tippy-desc"] {
   border-radius: 30px;
   padding: 20px;
