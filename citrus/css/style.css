@@ -58,7 +58,6 @@ body {
 body.show-tippy {
   max-height: 100vh;
   overflow: hidden;
-  padding-right: 17px;
 }
 body.show-tippy:before {
   content: "";

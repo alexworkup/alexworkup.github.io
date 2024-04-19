@@ -12,7 +12,6 @@ body {
   &.show-tippy {
     max-height: 100vh;
     overflow: hidden;
-    padding-right: 17px;
 
     &:before {
       content: "";
