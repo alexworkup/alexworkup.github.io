@@ -8,6 +8,10 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+    <script src="js/fancyapp/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="js/fancyapp/fancybox.css">
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -92,7 +96,7 @@
                     <img loading="lazy" src="images/gym-screen-bg.jpg" alt="Площадь">
                 </picture>
                 <div class="screen__content">
-                    <div class="advantage">
+                    <div class="advantage js-animation">
                         <h2 class="advantage__title">
                             <span>более </span>
                             <b>10 000 кв.м.</b>
@@ -110,7 +114,7 @@
                     <img loading="lazy" src="images/pool-screen-bg.jpg" alt="Бассейн">
                 </picture>
                 <div class="screen__content">
-                    <div class="advantage">
+                    <div class="advantage js-animation">
                         <h2 class="advantage__title">
                             <span>спортивный <i>бассейн</i></span>
                             <b>50 метров</b>
@@ -127,7 +131,7 @@
                     <img loading="lazy" src="images/combat-screen-bg.jpg" alt="Единоборства">
                 </picture>
                 <div class="screen__content">
-                    <div class="advantage">
+                    <div class="advantage js-animation">
                         <h2 class="advantage__title">
                             <span>ВОСТОЧНЫЕ</span>
                             <b>ЕДИНОБОРСТВА</b>
@@ -144,10 +148,10 @@
                     <img loading="lazy" src="images/send-screen-bg.jpg" alt="Посетить клуб">
                 </picture>
                 <div class="screen__content send-section">
-                    <div class="send-section__title">
+                    <div class="send-section__title js-animation">
                         <span>Посетить клуб</span>
                     </div>
-                    <div class="send-section__content">
+                    <div class="send-section__content js-animation">
                         <form action="#" class="form-screen">
                             <div class="form-screen__content">
                                 <label class="form-screen__field">
@@ -174,14 +178,14 @@
             <div class="screen screen-footer swiper-slide" data-title="Низ" id="screen-footer">
                 <picture class="screen__bg">
                     <source srcset="images/footer-screen-bg-mob.jpg" media="(max-width: 767px)">
-                    <img loading="lazy" src="images/footer-screen-bg.jpg" alt="Фитнес-центр">
+                    <img  src="images/footer-screen-bg.jpg" alt="Фитнес-центр">
                 </picture>
                 <div class="screen__content footer-section">
                     <footer class="footer">
-                        <div class="footer__logo">
+                        <div class="footer__logo js-animation">
                             <img src="images/footer-logo.svg" alt="">
                         </div>
-                        <div class="footer__grid">
+                        <div class="footer__grid js-animation">
                             <div class="footer__col footer__col_type_menu">
                                 <div class="footer-menu">
                                     <div class="footer-menu__row">
@@ -223,7 +227,7 @@
                                 </div>
                             </div>
                             <div class="footer__col footer__col_type_copyright">
-                                <div class="footer-bottom">
+                                <div class="footer-bottom js-animation">
                                     <div class="footer-bottom__col footer-bottom__col_type_socials">
                                         <div class="socials">
                                             <a href="#" class="socials__item">
@@ -270,10 +274,10 @@
                     </footer>
                 </div>
                 <div class="footer-people">
-                    <div class="footer-people__item footer-people__item_type_boy">
+                    <div class="footer-people__item footer-people__item_type_boy js-animation">
                         <img src="images/boy-footer.png" alt="">
                     </div>
-                    <div class="footer-people__item footer-people__item_type_girl">
+                    <div class="footer-people__item footer-people__item_type_girl js-animation">
                         <img src="images/girl-footer.png" alt="">
                     </div>
                 </div>
@@ -299,37 +303,15 @@
             </button>
         </div>
         <div class="side-panel__pagination side-pagination">
-            <div class="side-pagination__list">
-                <a href="#screen-main" class="side-pagination__item">
-                    <span>Главная</span>
-                </a>
-                <a href="#screen-play" class="side-pagination__item">
-                    <span>Видео</span>
-                </a>
-                <a href="#screen-pool" class="side-pagination__item">
-                    <span>Бассейн</span>
-                </a>
-                <a href="#screen-gym" class="side-pagination__item">
-                    <span>Зал</span>
-                </a>
-                <a href="#screen-team" class="side-pagination__item active">
-                    <span>Наша команда</span>
-                </a>
-                <a href="#screen-send" class="side-pagination__item">
-                    <span>Заявка</span>
-                </a>
-                <a href="#screen-footer" class="side-pagination__item">
-                    <span>Низ</span>
-                </a>
-            </div>
+            <div class="side-pagination__list screen-pagination"></div>
         </div>
         <div class="side-panel__logo">
             <img src="images/logo-vertical.svg" alt="Citrus Fitness">
         </div>
     </div>
-    <div class="popup-dropdown">
+    <div class="popup-dropdown" id="popupDropdown">
         <div class="popup-dropdown__wrap">
-            <button class="popup-dropdown__close">
+            <button class="popup-dropdown__close js-close-fancy">
                 <img src="images/popup-menu-close.svg" alt="">
             </button>
             <ul class="popup-menu">
