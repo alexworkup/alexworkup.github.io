@@ -202,6 +202,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             direction: "vertical",
             slidesPerView: 1,
             mousewheel: true,
+            allowTouchMove: window.innerWidth <= 979,
             effect: 'fade',
             //parallax: true,
             speed: speed,
