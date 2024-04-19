@@ -204,6 +204,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             mousewheel: true,
             allowTouchMove: window.innerWidth <= 979,
             effect: 'fade',
+            autoHeight: true,
             //parallax: true,
             speed: speed,
             pagination: {

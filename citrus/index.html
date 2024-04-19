@@ -388,3 +388,134 @@
     </div>
 </body>
 </html>
+
+<style>
+    #offer {
+        padding: 0 32px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #offer__content {
+        max-width: 1056px;
+    }
+
+    #offer__content-backgrounds {
+        max-width: 1056px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        border-radius: 64px;
+        overflow: hidden;
+    }
+
+    #offer .lc-body-image__container {
+        max-width: 1152px;
+        padding: 0;
+    }
+
+    #offer .lc-body-image__title .lc-text-block,
+    #offer .lc-body-image__description .lc-text-block {
+        margin-bottom: 24px;
+    }
+
+    #offer .lc-body-image__title span {
+        position: relative;
+        display: inline-block;
+        padding: 3px 8px;
+    }
+
+    #offer .lc-body-image__title span:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 3px solid #ffffff;
+        border-radius: 12px;
+        left: -2px;
+        top: -2px;
+    }
+
+    #offer .lc-body-image__description a {
+        color: #fff;
+        text-decoration: underline;
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+    }
+
+    #offer .lc-body-image__container {
+        padding: 50px;
+        box-sizing: border-box;
+        background-image: url("https://avatars.mds.yandex.net/get-lpc/10116223/60f04651-ca8d-431c-a0b3-f09f4687ff4c/orig?width=568&height=351");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 64px;
+        max-width: 568px;
+        margin-left: 0;
+        position: relative;
+    }
+
+    #offer .lc-body-image:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 64px;
+        right: -30px;
+        top: 0;
+        backdrop-filter: blur(4px);
+        box-shadow: -1px 1px 0 0 rgba(0, 0, 0, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.1), inset -1px 1px 4px 0 rgba(255, 255, 255, 0.65), inset 0 2px 3px 0 #21d0fb;
+        background: linear-gradient(331deg, rgba(136, 85, 255, 0.8) 5.5%, rgba(33, 208, 251, 0.2) 43%, rgba(255, 255, 255, 0.8) 100%);
+        max-width: 646px;
+        left: 0;
+    }
+
+    @media(max-width: 767px) {
+
+        #offer {
+            padding: 0 8px;
+        }
+
+        #offer .lc-body-image__title .lc-text-block {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        #offer__content > .lc-offsets {
+            padding: 24px!important;
+        }
+
+        #offer__content-backgrounds {
+            border-radius: 32px;
+        }
+
+        #offer .lc-body-image__title br {
+            display: none;
+        }
+
+        #offer .lc-body-image__description .open-more {
+            display: block;
+        }
+
+        #offer > .lc-offsets {
+            padding-top: 0;
+        }
+
+        #offer__content-backgrounds .lc-image-background__image {
+            background: -o-linear-gradient(135deg, #85f 5.5%, #21d0fb 82%)!important;
+            background: linear-gradient(315deg, #85f 5.5%, #21d0fb 82%)!important;
+        }
+
+        #offer .lc-button-list__container > span {
+            --sizes-width: 100%!important;
+            --sizes-height: 51px!important;
+            --sizes-font-size: 16px!important;
+            width: 100%;
+        }
+
+        #offer .lc-button-list__container {
+            margin-right: 0;
+        }
+    }
+</style>
