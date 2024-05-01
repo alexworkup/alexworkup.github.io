@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/swiper/swiper-bundle.min.js"></script>
@@ -14,6 +15,8 @@
     <script src="js/tippy/tippy-bundle.umd.min.js"></script>
     <script src="js/fancyapp/fancybox.umd.js"></script>
     <link rel="stylesheet" href="js/fancyapp/fancybox.css">
+    <link rel="stylesheet" href="js/select2/select2.min.css">
+    <script src="js/select2/select2.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -25,7 +28,7 @@
                 <a href="tel:+73512203333" class="phone-link">+7 (351) 220-33-33</a>
             </div>
             <div class="header__col header__col_type_btn">
-                <a href="#" class="btn btn_type_color">Записаться</a>
+                <a href="#" class="btn btn_type_color js-order">Записаться</a>
             </div>
         </div>
     </header>
@@ -448,9 +451,66 @@
                     <a href="tel:+73512203333" class="phone-link">+7 (351) 220-33-33</a>
                 </div>
                 <div class="dropdown-bottom__col dropdown-bottom__col_type_btn">
-                    <a href="#" class="btn btn_type_color">Записаться</a>
+                    <a href="#" class="btn btn_type_color js-order">Записаться</a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="popup-order" id="popupOrder">
+        <div class="popup-order__wrap">
+            <button class="popup-order__close js-close-fancy">
+                <img src="images/close-icon-color.svg" alt="Закрыть окно">
+            </button>
+            <div class="popup-order__title">
+                <img src="images/title-form.svg" alt="Гостевой визит">
+            </div>
+            <form action="#" class="popup-order__form">
+                <div class="popup-order__field">
+                    <select name="DATE" class="js-select">
+                        <option value="">Выберите день</option>
+                        <option>Понедельник</option>
+                        <option>Вторник</option>
+                        <option>Среда</option>
+                        <option>Четверг</option>
+                        <option>Пятница</option>
+                        <option>Суббота</option>
+                        <option>Воскресенье</option>
+                    </select>
+                </div>
+                <div class="popup-order__field">
+                    <select name="TIME" class="js-select">
+                        <option value="">Выберите время</option>
+                        <option>Первая половина дня</option>
+                        <option>Вторая половина дня</option>
+                    </select>
+                </div>
+                <div class="popup-order__field">
+                    <select name="WHAT" class="js-select">
+                        <option value="">Что хотите посетить?</option>
+                        <option>Тренажёрный зал</option>
+                        <option>Групповые программы</option>
+                        <option>Игровой зал</option>
+                        <option>Единоборства</option>
+                        <option>Молодетский клуб</option>
+                    </select>
+                </div>
+                <div class="popup-order__field">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="popup-order__field">
+                    <input type="tel" name="phone" placeholder="Ваш телефон">
+                </div>
+                <div class="popup-order__field">
+                    <input type="email" name="email" placeholder="Ваш email">
+                </div>
+                <label class="popup-order__field popup-order__field_type_checkbox">
+                    <input type="checkbox">
+                    <span>Я соглашаюсь с условиями обработки <a href="#">персональных данных</a></span>
+                </label>
+                <div class="popup-order__submit">
+                    <a href="#" class="btn btn_type_border">Отправить</a>
+                </div>
+            </form>
         </div>
     </div>
 </body>

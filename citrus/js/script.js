@@ -7,9 +7,21 @@ window.addEventListener('DOMContentLoaded', ()=> {
     const closeBtnFancy = document.querySelectorAll('.js-close-fancy');
     const burgerBtn = document.querySelectorAll('.burger');
     const popupDropdown = document.querySelector('#popupDropdown');
+    const popupOrder = document.querySelector('#popupOrder');
     const moreDesc = document.querySelectorAll('.js-more-desc');
     const mapSection = document.querySelector('#map');
     const clubDesc = document.querySelectorAll('.club-cards__desc');
+    const itemsSelect = document.querySelectorAll('.js-select');
+    const orderBtn = document.querySelectorAll('.js-order');
+
+    if (itemsSelect.length > 0) {
+        itemsSelect.forEach((select) => {
+            $(select).select2({
+                theme: "custom",
+                minimumResultsForSearch: -1,
+            });
+        });
+    }
 
     if(moreDesc.length > 0) {
 
@@ -47,6 +59,29 @@ window.addEventListener('DOMContentLoaded', ()=> {
                     ],
                     {
                         mainClass: 'open-toggle'
+                    });
+            });
+        });
+
+    }
+
+    if(orderBtn.length > 0) {
+
+        orderBtn.forEach(item => {
+
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                Fancybox.show(
+                    [
+                        {
+                            src: popupOrder,
+                            type: "inline",
+                        }
+                    ],
+                    {
+                        mainClass: 'open-order',
+                        closeButton: false
                     });
             });
         });

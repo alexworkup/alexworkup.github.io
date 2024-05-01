@@ -5,17 +5,25 @@
   transition: .3s all ease;
   transform: none;
 
+  @media #{$phone} {
+    border-radius: 15px;
+  }
+
   &:hover {
-    transform: translateY(-10px);
 
-    &:after {
-      bottom: -30px;
-    }
+    @media(min-width: 767px) {
 
-    .btn {
-      opacity: 1;
-      bottom: -15px;
-      visibility: visible;
+      transform: translateY(-10px);
+
+      &:after {
+        bottom: -30px;
+      }
+
+      .btn {
+        opacity: 1;
+        bottom: -15px;
+        visibility: visible;
+      }
     }
   }
 
@@ -45,6 +53,10 @@
     top: 20px;
     left: 10px;
     z-index: 1;
+
+    @media #{$phone} {
+      max-width: 50%;
+    }
   }
 
   &__img {
@@ -55,6 +67,10 @@
     top: 0;
     border-radius: 30px;
     overflow: hidden;
+
+    @media #{$phone} {
+      border-radius: 15px;
+    }
 
     img {
       width: 100%;

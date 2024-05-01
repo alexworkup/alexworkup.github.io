@@ -162,6 +162,25 @@ h1, .h1 {
 
   .fancybox__backdrop {
     background-color: rgb(58 75 85 / 0);
+
+    @media #{$phone} {
+      background-color: rgb(58 75 85 / .6);
+    }
+  }
+}
+
+.open-order {
+
+  .fancybox__content {
+    background: none;
+    padding: 16px;
+  }
+
+  .fancybox__slide {
+
+    @media #{$notebook} {
+      padding: 20px;
+    }
   }
 }
 
@@ -171,6 +190,10 @@ h1, .h1 {
   color: #3a4b55;
   background-color: #ffffff;
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+
+  @media #{$phone} {
+    border-radius: 15px;
+  }
 
   .tippy-arrow {
     color: #ffffff;

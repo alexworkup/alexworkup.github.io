@@ -15,13 +15,28 @@
     }
 
     @media #{$phone} {
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+    }
+
+  }
+
+  &__col {
+
+    @media #{$phone} {
       display: flex;
-      flex-direction: column;
+      align-items: center;
     }
   }
 
   &__item {
     margin-bottom: 30px;
+
+    @media #{$phone} {
+      width: 50%;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
   }
 
   .btn {
@@ -59,6 +74,10 @@
     font-size: 14px;
     line-height: 130%;
 
+    @media #{$phone} {
+      font-size: 12px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -79,10 +98,11 @@
 
         @media #{$phone} {
 
-          &:nth-of-type(n+5) {
-            display: block;
+          &:nth-of-type(n+4) {
+            display: none;
           }
         }
+
       }
     }
 
@@ -97,19 +117,12 @@
       background: transparent;
 
       @media #{$phone} {
-        display: none;
+        margin-top: 5px;
       }
     }
 
     .btn {
       display: none;
-
-      @media #{$phone} {
-        display: inline-block;
-        padding: 0 60px;
-        margin-top: 15px;
-        line-height: 60px;
-      }
     }
   }
 
