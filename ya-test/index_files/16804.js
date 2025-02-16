@@ -19,8 +19,9 @@ document.addEventListener("reactHydrated", () => {
       this.animationId = null;
       this.lastTime = 0;
 
-      // Увеличенный порог для определения перетаскивания
-      this.DRAG_THRESHOLD = 5;
+      // Устанавливаем порог для перетаскивания:
+      // 5 пикселей для мобильных и 1 пиксель для десктопов
+      this.DRAG_THRESHOLD = isMobile ? 5 : 1;
 
       // Переменные для троттлинга функции checkActiveItems
       this.lastActiveCheckTime = 0;
@@ -116,10 +117,11 @@ document.addEventListener("reactHydrated", () => {
       if (e.pointerType === "mouse") {
         e.preventDefault();
       }
-
       this.isDragging = true;
       this.hasMoved = false;
       this.startX = e.clientX;
+      // Захватываем указатель, чтобы получать события только на треке
+      e.target.setPointerCapture(e.pointerId);
       this.stopAnimation();
     }
 
@@ -140,7 +142,7 @@ document.addEventListener("reactHydrated", () => {
       }
     }
 
-    onPointerUp() {
+    onPointerUp(e) {
       if (!this.isDragging) return;
       this.isDragging = false;
       this.wrapPosition();
@@ -150,14 +152,17 @@ document.addEventListener("reactHydrated", () => {
       if (this.checkActive) {
         this.checkActiveItems();
       }
+      // Освобождаем захват указателя
+      e.target.releasePointerCapture(e.pointerId);
     }
 
     attachEvents() {
+      // Вешаем события только на трек, чтобы не перехватывать свайпы по всей странице
       this.track.addEventListener("pointerdown", this.onPointerDown);
-      window.addEventListener("pointermove", this.onPointerMove);
-      window.addEventListener("pointerup", this.onPointerUp);
-      this.track.addEventListener("pointerleave", this.onPointerUp);
+      this.track.addEventListener("pointermove", this.onPointerMove);
+      this.track.addEventListener("pointerup", this.onPointerUp);
       this.track.addEventListener("pointercancel", this.onPointerUp);
+      this.track.addEventListener("pointerleave", this.onPointerUp);
 
       this.track.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", (e) => {
