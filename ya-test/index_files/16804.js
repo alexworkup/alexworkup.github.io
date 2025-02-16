@@ -15,19 +15,20 @@ document.addEventListener("reactHydrated", () => {
       this.isDragging = false;
       this.hasMoved = false;
       this.startX = 0;
+      this.startY = 0;
+      this.draggingType = null; // null, "horizontal" или "vertical"
       this.trackPos = 0;
       this.animationId = null;
       this.lastTime = 0;
 
-      // Устанавливаем порог для перетаскивания:
-      // 5 пикселей для мобильных и 1 пиксель для десктопов
+      // Порог для перетаскивания: 5 для мобильных, 1 для десктопа
       this.DRAG_THRESHOLD = isMobile ? 5 : 1;
 
-      // Переменные для троттлинга функции checkActiveItems
+      // Переменные для троттлинга проверки активных элементов
       this.lastActiveCheckTime = 0;
       this.ACTIVE_CHECK_THROTTLE = 50; // мс
 
-      // Настройка аппаратного ускорения и разрешения вертикальной прокрутки
+      // Разрешаем вертикальную прокрутку и включаем аппаратное ускорение
       this.track.style.touchAction = "pan-y";
 
       this.totalWidth = track.scrollWidth;
@@ -55,7 +56,7 @@ document.addEventListener("reactHydrated", () => {
     }
 
     updateTransform() {
-      // Используем translate3d для ускорения отрисовки
+      // Используем translate3d для аппаратного ускорения
       this.track.style.transform = `translate3d(${this.trackPos}px, 0, 0)`;
     }
 
@@ -119,45 +120,77 @@ document.addEventListener("reactHydrated", () => {
       }
       this.isDragging = true;
       this.hasMoved = false;
+      this.draggingType = null; // направление ещё не определено
       this.startX = e.clientX;
-      // Захватываем указатель, чтобы получать события только на треке
-      e.target.setPointerCapture(e.pointerId);
+      this.startY = e.clientY;
+      // Не захватываем указатель сразу, дождёмся определения жеста
       this.stopAnimation();
     }
 
     onPointerMove(e) {
       if (!this.isDragging) return;
 
-      const x = e.clientX;
-      const dx = x - this.startX;
-      if (Math.abs(dx) > this.DRAG_THRESHOLD) {
-        this.hasMoved = true;
-      }
-      this.startX = x;
-      this.trackPos += dx;
-      this.updateTransform();
+      const currentX = e.clientX;
+      const currentY = e.clientY;
+      const dx = currentX - this.startX;
+      const dy = currentY - this.startY;
 
-      if (this.checkActive) {
-        this.checkActiveItems();
+      // Если направление жеста ещё не определено, определяем его
+      if (this.draggingType === null) {
+        if (Math.abs(dx) < this.DRAG_THRESHOLD && Math.abs(dy) < this.DRAG_THRESHOLD) {
+          return; // недостаточно движения для определения
+        }
+        if (Math.abs(dx) >= Math.abs(dy)) {
+          this.draggingType = "horizontal";
+          // Захватываем указатель для горизонтального перетаскивания
+          e.target.setPointerCapture(e.pointerId);
+        } else {
+          this.draggingType = "vertical";
+          // Если жест вертикальный, отменяем перетаскивание слайдера,
+          // чтобы пользователь мог скроллить страницу
+          this.isDragging = false;
+          if (e.target.hasPointerCapture(e.pointerId)) {
+            e.target.releasePointerCapture(e.pointerId);
+          }
+          return;
+        }
       }
+
+      if (this.draggingType === "horizontal") {
+        if (Math.abs(dx) > this.DRAG_THRESHOLD) {
+          this.hasMoved = true;
+        }
+        this.startX = currentX; // обновляем начальную координату по X
+        this.trackPos += dx;
+        this.updateTransform();
+
+        if (this.checkActive) {
+          this.checkActiveItems();
+        }
+      }
+      // Если определено как vertical – ничего не делаем
     }
 
     onPointerUp(e) {
       if (!this.isDragging) return;
-      this.isDragging = false;
-      this.wrapPosition();
-      this.updateTransform();
-      this.startAnimation();
 
-      if (this.checkActive) {
-        this.checkActiveItems();
+      if (this.draggingType === "horizontal") {
+        this.wrapPosition();
+        this.updateTransform();
+        this.startAnimation();
+        if (this.checkActive) {
+          this.checkActiveItems();
+        }
+        if (e.target.hasPointerCapture(e.pointerId)) {
+          e.target.releasePointerCapture(e.pointerId);
+        }
       }
-      // Освобождаем захват указателя
-      e.target.releasePointerCapture(e.pointerId);
+      this.isDragging = false;
+      this.draggingType = null;
     }
 
     attachEvents() {
-      // Вешаем события только на трек, чтобы не перехватывать свайпы по всей странице
+      // Обрабатываем события только на треке
       this.track.addEventListener("pointerdown", this.onPointerDown);
       this.track.addEventListener("pointermove", this.onPointerMove);
       this.track.addEventListener("pointerup", this.onPointerUp);
