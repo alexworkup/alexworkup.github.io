@@ -19,8 +19,15 @@ document.addEventListener("reactHydrated", () => {
       this.animationId = null;
       this.lastTime = 0;
 
-      // Порог для определения "реального" перетаскивания
-      this.DRAG_THRESHOLD = 1;
+      // Увеличенный порог для определения перетаскивания
+      this.DRAG_THRESHOLD = 5;
+
+      // Переменные для троттлинга функции checkActiveItems
+      this.lastActiveCheckTime = 0;
+      this.ACTIVE_CHECK_THROTTLE = 50; // мс
+
+      // Настройка аппаратного ускорения и разрешения вертикальной прокрутки
+      this.track.style.touchAction = "pan-y";
 
       this.totalWidth = track.scrollWidth;
       this.singleSetWidth = this.totalWidth / 2;
@@ -47,7 +54,8 @@ document.addEventListener("reactHydrated", () => {
     }
 
     updateTransform() {
-      this.track.style.transform = `translateX(${this.trackPos}px)`;
+      // Используем translate3d для ускорения отрисовки
+      this.track.style.transform = `translate3d(${this.trackPos}px, 0, 0)`;
     }
 
     wrapPosition() {
@@ -148,7 +156,6 @@ document.addEventListener("reactHydrated", () => {
       this.track.addEventListener("pointerdown", this.onPointerDown);
       window.addEventListener("pointermove", this.onPointerMove);
       window.addEventListener("pointerup", this.onPointerUp);
-
       this.track.addEventListener("pointerleave", this.onPointerUp);
       this.track.addEventListener("pointercancel", this.onPointerUp);
 
@@ -162,6 +169,12 @@ document.addEventListener("reactHydrated", () => {
     }
 
     checkActiveItems() {
+      const now = performance.now();
+      if (now - this.lastActiveCheckTime < this.ACTIVE_CHECK_THROTTLE) {
+        return;
+      }
+      this.lastActiveCheckTime = now;
+
       const container = this.track.parentElement;
       if (!container) return;
 
@@ -177,8 +190,8 @@ document.addEventListener("reactHydrated", () => {
         const containerCenterX = containerRect.left + containerRect.width / 2;
         const containerCenterY = containerRect.top + containerRect.height / 2;
         const distance = Math.hypot(
-          containerCenterX - itemCenterX,
-          containerCenterY - itemCenterY
+            containerCenterX - itemCenterX,
+            containerCenterY - itemCenterY
         );
 
         if (distance < minDistance) {
