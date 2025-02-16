@@ -1,5 +1,4 @@
 document.addEventListener("reactHydrated", () => {
-  // Если нужно ограничить область до блока #cards_group:
   const group = document.querySelector("#cards_group");
   if (!group) return;
 
@@ -9,7 +8,6 @@ document.addEventListener("reactHydrated", () => {
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
   const SPEED_PX_PER_SEC = isMobile ? 60 : 40;
 
-  // Функция дебаунс (с задержкой wait)
   function debounce(func, wait) {
     let timeout;
     return function (...args) {
@@ -29,15 +27,13 @@ document.addEventListener("reactHydrated", () => {
       this.hasMoved = false;
       this.startX = 0;
       this.startY = 0;
-      this.draggingType = null; // "horizontal" или "vertical"
+      this.draggingType = null;
       this.trackPos = 0;
       this.animationId = null;
       this.lastTime = 0;
 
-      // Порог перетаскивания: 5 для мобильных, 1 для десктопов
       this.DRAG_THRESHOLD = isMobile ? 5 : 1;
 
-      // Переменные для троттлинга функции checkActiveItems
       this.lastActiveCheckTime = 0;
       this.ACTIVE_CHECK_THROTTLE = 50; // мс
 
@@ -81,7 +77,6 @@ document.addEventListener("reactHydrated", () => {
     }
 
     updateTransform() {
-      // Используем translate3d для аппаратного ускорения
       this.track.style.transform = `translate3d(${this.trackPos}px, 0, 0)`;
     }
 
