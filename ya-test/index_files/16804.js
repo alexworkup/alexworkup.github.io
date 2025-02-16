@@ -22,7 +22,7 @@ document.addEventListener("reactHydrated", () => {
       this.lastTime = 0;
 
       // Порог для перетаскивания: 5 для мобильных, 1 для десктопа
-      this.DRAG_THRESHOLD = isMobile ? 5 : 1;
+      this.DRAG_THRESHOLD = isMobile ? 50 : 1;
 
       // Переменные для троттлинга проверки активных элементов
       this.lastActiveCheckTime = 0;
