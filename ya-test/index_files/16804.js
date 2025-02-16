@@ -1,16 +1,14 @@
 document.addEventListener("reactHydrated", () => {
-  const group = document.querySelector("#cards_group");
-  if (!group) return;
-
-  const track = group.querySelector(".lc-features__items");
+  const track = document.querySelector("#cards_desk .lc-features__items");
   if (!track) return;
 
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
   const SPEED_PX_PER_SEC = isMobile ? 60 : 40;
 
+  // Функция debounce
   function debounce(func, wait) {
     let timeout;
-    return function (...args) {
+    return function(...args) {
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
     };
@@ -26,38 +24,24 @@ document.addEventListener("reactHydrated", () => {
       this.isDragging = false;
       this.hasMoved = false;
       this.startX = 0;
-      this.startY = 0;
-      this.draggingType = null;
       this.trackPos = 0;
       this.animationId = null;
       this.lastTime = 0;
 
-      this.DRAG_THRESHOLD = isMobile ? 5 : 1;
-
-      this.lastActiveCheckTime = 0;
-      this.ACTIVE_CHECK_THROTTLE = 50; // мс
-
-      // Разрешаем вертикальную прокрутку и включаем аппаратное ускорение
-      this.track.style.touchAction = "pan-y";
+      // Порог для определения "реального" перетаскивания
+      this.DRAG_THRESHOLD = 1;
 
       this.totalWidth = track.scrollWidth;
       this.singleSetWidth = this.totalWidth / 2;
 
-      // Начальная позиция зависит от направления
       this.trackPos = direction > 0 ? -this.singleSetWidth : 0;
 
-      // Привязка контекста методов
       this.updateTransform = this.updateTransform.bind(this);
       this.animate = this.animate.bind(this);
       this.onPointerDown = this.onPointerDown.bind(this);
       this.onPointerMove = this.onPointerMove.bind(this);
       this.onPointerUp = this.onPointerUp.bind(this);
       this.updateDimensions = this.updateDimensions.bind(this);
-
-      // Для мобильных устройств создаем дебаунс-версию updateDimensions
-      if (isMobile) {
-        this.debouncedUpdateDimensions = debounce(this.updateDimensions, 200);
-      }
 
       this.init();
     }
@@ -67,9 +51,11 @@ document.addEventListener("reactHydrated", () => {
       this.startAnimation();
       this.attachEvents();
 
+      // Для мобильных устройств используем debounced-версию updateDimensions
       if (isMobile) {
-        window.addEventListener("resize", this.debouncedUpdateDimensions);
-        window.addEventListener("orientationchange", this.debouncedUpdateDimensions);
+        const debouncedUpdate = debounce(this.updateDimensions, 200);
+        window.addEventListener("resize", debouncedUpdate);
+        window.addEventListener("orientationchange", debouncedUpdate);
       } else {
         window.addEventListener("resize", this.updateDimensions);
         window.addEventListener("orientationchange", this.updateDimensions);
@@ -77,7 +63,7 @@ document.addEventListener("reactHydrated", () => {
     }
 
     updateTransform() {
-      this.track.style.transform = `translate3d(${this.trackPos}px, 0, 0)`;
+      this.track.style.transform = `translateX(${this.trackPos}px)`;
     }
 
     wrapPosition() {
@@ -138,82 +124,49 @@ document.addEventListener("reactHydrated", () => {
       if (e.pointerType === "mouse") {
         e.preventDefault();
       }
+
       this.isDragging = true;
       this.hasMoved = false;
-      this.draggingType = null; // направление пока не определено
       this.startX = e.clientX;
-      this.startY = e.clientY;
       this.stopAnimation();
     }
 
     onPointerMove(e) {
       if (!this.isDragging) return;
 
-      const currentX = e.clientX;
-      const currentY = e.clientY;
-      const dx = currentX - this.startX;
-      const dy = currentY - this.startY;
-
-      // Если направление жеста не определено, определяем его
-      if (this.draggingType === null) {
-        if (Math.abs(dx) < this.DRAG_THRESHOLD && Math.abs(dy) < this.DRAG_THRESHOLD) {
-          return; // недостаточно движения для определения
-        }
-        if (Math.abs(dx) >= Math.abs(dy)) {
-          this.draggingType = "horizontal";
-          // Захватываем указатель для горизонтального перетаскивания
-          e.target.setPointerCapture(e.pointerId);
-        } else {
-          this.draggingType = "vertical";
-          // Если жест вертикальный – отменяем перетаскивание слайдера
-          this.isDragging = false;
-          if (e.target.hasPointerCapture(e.pointerId)) {
-            e.target.releasePointerCapture(e.pointerId);
-          }
-          return;
-        }
+      const x = e.clientX;
+      const dx = x - this.startX;
+      if (Math.abs(dx) > this.DRAG_THRESHOLD) {
+        this.hasMoved = true;
       }
+      this.startX = x;
+      this.trackPos += dx;
+      this.updateTransform();
 
-      if (this.draggingType === "horizontal") {
-        if (Math.abs(dx) > this.DRAG_THRESHOLD) {
-          this.hasMoved = true;
-        }
-        this.startX = currentX; // обновляем координату для следующего расчёта
-        this.trackPos += dx;
-        this.updateTransform();
-
-        if (this.checkActive) {
-          this.checkActiveItems();
-        }
+      if (this.checkActive) {
+        this.checkActiveItems();
       }
     }
 
-    onPointerUp(e) {
+    onPointerUp() {
       if (!this.isDragging) return;
-
-      if (this.draggingType === "horizontal") {
-        this.wrapPosition();
-        this.updateTransform();
-        this.startAnimation();
-
-        if (this.checkActive) {
-          this.checkActiveItems();
-        }
-        if (e.target.hasPointerCapture(e.pointerId)) {
-          e.target.releasePointerCapture(e.pointerId);
-        }
-      }
       this.isDragging = false;
-      this.draggingType = null;
+      this.wrapPosition();
+      this.updateTransform();
+      this.startAnimation();
+
+      if (this.checkActive) {
+        this.checkActiveItems();
+      }
     }
 
     attachEvents() {
-      // Обрабатываем события только на треке
       this.track.addEventListener("pointerdown", this.onPointerDown);
-      this.track.addEventListener("pointermove", this.onPointerMove);
-      this.track.addEventListener("pointerup", this.onPointerUp);
-      this.track.addEventListener("pointercancel", this.onPointerUp);
+      window.addEventListener("pointermove", this.onPointerMove);
+      window.addEventListener("pointerup", this.onPointerUp);
+
       this.track.addEventListener("pointerleave", this.onPointerUp);
+      this.track.addEventListener("pointercancel", this.onPointerUp);
 
       this.track.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", (e) => {
@@ -225,12 +178,6 @@ document.addEventListener("reactHydrated", () => {
     }
 
     checkActiveItems() {
-      const now = performance.now();
-      if (now - this.lastActiveCheckTime < this.ACTIVE_CHECK_THROTTLE) {
-        return;
-      }
-      this.lastActiveCheckTime = now;
-
       const container = this.track.parentElement;
       if (!container) return;
 
@@ -263,13 +210,13 @@ document.addEventListener("reactHydrated", () => {
 
     updateDimensions() {
       const newTotalWidth = this.track.scrollWidth;
-      // Обновляем размеры только если изменение значительное (более 10 пикселей)
+      // Обновляем размеры и позицию только если изменение значительное (более 10 пикселей)
       if (Math.abs(newTotalWidth - this.totalWidth) < 10) {
         return;
       }
       this.totalWidth = newTotalWidth;
       this.singleSetWidth = this.totalWidth / 2;
-      // Вместо сброса trackPos сохраняем текущую позицию и корректируем её
+      // Вместо сброса trackPos полностью корректируем позицию
       this.wrapPosition();
       this.updateTransform();
       if (this.checkActive) {
