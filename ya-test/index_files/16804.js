@@ -1,9 +1,22 @@
 document.addEventListener("reactHydrated", () => {
-  const track = document.querySelector("#cards_desk .lc-features__items");
+  // Если нужно ограничить область до блока #cards_group:
+  const group = document.querySelector("#cards_group");
+  if (!group) return;
+
+  const track = group.querySelector(".lc-features__items");
   if (!track) return;
 
   const isMobile = window.matchMedia("(pointer: coarse)").matches;
   const SPEED_PX_PER_SEC = isMobile ? 60 : 40;
+
+  // Функция дебаунс (с задержкой wait)
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
 
   class InfiniteSlider {
     constructor(track, { direction = -1, speed = SPEED_PX_PER_SEC, checkActive = true } = {}) {
@@ -16,15 +29,15 @@ document.addEventListener("reactHydrated", () => {
       this.hasMoved = false;
       this.startX = 0;
       this.startY = 0;
-      this.draggingType = null; // null, "horizontal" или "vertical"
+      this.draggingType = null; // "horizontal" или "vertical"
       this.trackPos = 0;
       this.animationId = null;
       this.lastTime = 0;
 
-      // Порог для перетаскивания: 5 для мобильных, 1 для десктопа
-      this.DRAG_THRESHOLD = isMobile ? 50 : 1;
+      // Порог перетаскивания: 5 для мобильных, 1 для десктопов
+      this.DRAG_THRESHOLD = isMobile ? 5 : 1;
 
-      // Переменные для троттлинга проверки активных элементов
+      // Переменные для троттлинга функции checkActiveItems
       this.lastActiveCheckTime = 0;
       this.ACTIVE_CHECK_THROTTLE = 50; // мс
 
@@ -34,14 +47,21 @@ document.addEventListener("reactHydrated", () => {
       this.totalWidth = track.scrollWidth;
       this.singleSetWidth = this.totalWidth / 2;
 
+      // Начальная позиция зависит от направления
       this.trackPos = direction > 0 ? -this.singleSetWidth : 0;
 
+      // Привязка контекста методов
       this.updateTransform = this.updateTransform.bind(this);
       this.animate = this.animate.bind(this);
       this.onPointerDown = this.onPointerDown.bind(this);
       this.onPointerMove = this.onPointerMove.bind(this);
       this.onPointerUp = this.onPointerUp.bind(this);
       this.updateDimensions = this.updateDimensions.bind(this);
+
+      // Для мобильных устройств создаем дебаунс-версию updateDimensions
+      if (isMobile) {
+        this.debouncedUpdateDimensions = debounce(this.updateDimensions, 200);
+      }
 
       this.init();
     }
@@ -51,8 +71,13 @@ document.addEventListener("reactHydrated", () => {
       this.startAnimation();
       this.attachEvents();
 
-      window.addEventListener("resize", this.updateDimensions);
-      window.addEventListener("orientationchange", this.updateDimensions);
+      if (isMobile) {
+        window.addEventListener("resize", this.debouncedUpdateDimensions);
+        window.addEventListener("orientationchange", this.debouncedUpdateDimensions);
+      } else {
+        window.addEventListener("resize", this.updateDimensions);
+        window.addEventListener("orientationchange", this.updateDimensions);
+      }
     }
 
     updateTransform() {
@@ -120,10 +145,9 @@ document.addEventListener("reactHydrated", () => {
       }
       this.isDragging = true;
       this.hasMoved = false;
-      this.draggingType = null; // направление ещё не определено
+      this.draggingType = null; // направление пока не определено
       this.startX = e.clientX;
       this.startY = e.clientY;
-      // Не захватываем указатель сразу, дождёмся определения жеста
       this.stopAnimation();
     }
 
@@ -135,7 +159,7 @@ document.addEventListener("reactHydrated", () => {
       const dx = currentX - this.startX;
       const dy = currentY - this.startY;
 
-      // Если направление жеста ещё не определено, определяем его
+      // Если направление жеста не определено, определяем его
       if (this.draggingType === null) {
         if (Math.abs(dx) < this.DRAG_THRESHOLD && Math.abs(dy) < this.DRAG_THRESHOLD) {
           return; // недостаточно движения для определения
@@ -146,8 +170,7 @@ document.addEventListener("reactHydrated", () => {
           e.target.setPointerCapture(e.pointerId);
         } else {
           this.draggingType = "vertical";
-          // Если жест вертикальный, отменяем перетаскивание слайдера,
-          // чтобы пользователь мог скроллить страницу
+          // Если жест вертикальный – отменяем перетаскивание слайдера
           this.isDragging = false;
           if (e.target.hasPointerCapture(e.pointerId)) {
             e.target.releasePointerCapture(e.pointerId);
@@ -160,7 +183,7 @@ document.addEventListener("reactHydrated", () => {
         if (Math.abs(dx) > this.DRAG_THRESHOLD) {
           this.hasMoved = true;
         }
-        this.startX = currentX; // обновляем начальную координату по X
+        this.startX = currentX; // обновляем координату для следующего расчёта
         this.trackPos += dx;
         this.updateTransform();
 
@@ -168,7 +191,6 @@ document.addEventListener("reactHydrated", () => {
           this.checkActiveItems();
         }
       }
-      // Если определено как vertical – ничего не делаем
     }
 
     onPointerUp(e) {
@@ -178,6 +200,7 @@ document.addEventListener("reactHydrated", () => {
         this.wrapPosition();
         this.updateTransform();
         this.startAnimation();
+
         if (this.checkActive) {
           this.checkActiveItems();
         }
@@ -244,9 +267,15 @@ document.addEventListener("reactHydrated", () => {
     }
 
     updateDimensions() {
-      this.totalWidth = this.track.scrollWidth;
+      const newTotalWidth = this.track.scrollWidth;
+      // Обновляем размеры только если изменение значительное (более 10 пикселей)
+      if (Math.abs(newTotalWidth - this.totalWidth) < 10) {
+        return;
+      }
+      this.totalWidth = newTotalWidth;
       this.singleSetWidth = this.totalWidth / 2;
-      this.trackPos = this.direction > 0 ? -this.singleSetWidth : 0;
+      // Вместо сброса trackPos сохраняем текущую позицию и корректируем её
+      this.wrapPosition();
       this.updateTransform();
       if (this.checkActive) {
         this.checkActiveItems();
