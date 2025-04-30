@@ -1,12 +1,30 @@
 .about {
   padding-top: 150px;
-  padding-bottom: 50px;
+  padding-bottom: 220px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 680px;
+    height: 138px;
+    background-image: url(../images/decor-block.png);
+    left: 20%;
+    bottom: 5%;
+    pointer-events: none;
+  }
 
   &__container {
-    max-width: 1420px;
+    max-width: 1640px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 100px;
     position: relative;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 520px;
+    top: -25px;
   }
 
   &__title {
@@ -28,11 +46,50 @@
     font-size: 16px;
     line-height: 156%;
     color: #fff;
+    max-width: 1030px;
 
     p {
+      margin-bottom: 20px;
+      margin-top: 0;
 
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      color: #e0df19;
     }
   }
 
+  &__more {
+    margin-top: 30px;
+  }
+
+  .btn_more {
+    font-family: $font-family-add;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 80%;
+    text-transform: uppercase;
+    color: #8fbe1f;
+    position: relative;
+    padding-right: 50px;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      right: 0;
+      top: calc(50% - 2px);
+      transform: translateY(-50%);
+      background-image: url(../images/arrow-next.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
 
 }

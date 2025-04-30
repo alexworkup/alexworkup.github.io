@@ -7,6 +7,7 @@
   background-size: cover;
   background-attachment: fixed;
   padding-top: 70px;
+  padding-bottom: 70px;
 
   &:before {
     content: '';
@@ -45,9 +46,9 @@
   }
 
   &__container {
-    max-width: 1420px;
+    max-width: 1640px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 100px;
     position: relative;
   }
 }
