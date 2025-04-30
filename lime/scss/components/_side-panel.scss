@@ -1,0 +1,24 @@
+.side-panel {
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  border-radius: 0 0 90px 0;
+  width: 83px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  .btn-burger {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 0;
+    position: absolute;
+    top: 50px;
+    right: -28px;
+  }
+}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  background-color: #141619;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

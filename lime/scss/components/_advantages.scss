@@ -1,0 +1,28 @@
+.advantages {
+  min-height: 100vh;
+  background-image: url("../images/advantages-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 138px;
+    height: 680px;
+    background-image: url("../images/advantages-line.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -197px;
+    left: 130px;
+    z-index: 1;
+  }
+
+  &__container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+}

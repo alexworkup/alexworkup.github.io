@@ -1,0 +1,53 @@
+.directions {
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../images/directions-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 70px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 680px;
+    height: 138px;
+    background-image: url("../images/decor-block.png");
+    right: 1%;
+    top: 5%;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-family: $font-family-add;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+
+    span {
+      display: flex;
+      font-weight: 700;
+      font-size: 40px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #8fbf1e 0%, #e0df19 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 130%;
+    }
+  }
+
+  &__container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+}
