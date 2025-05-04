@@ -288,5 +288,7 @@ $(function() {
         });
     });
 
-
+    /* learn */
+    let learnLink = document.querySelector('.nav__link');
+    console.dir(learnLink);
 });

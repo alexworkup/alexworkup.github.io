@@ -1,10 +1,14 @@
 .benefit {
-  transform: translateY(-130px);
+  transform: translateY(-13rem);
 
   &__list {
     display: flex;
-    column-gap: 20px;
+    column-gap: 2rem;
     align-items: flex-start;
+    
+    @media (max-width: 1680px) {
+      column-gap: 1rem;
+    }
   }
 
   &__item {
@@ -16,10 +20,10 @@
       content: '';
       position: absolute;
       width: 50%;
-      height: 60px;
-      bottom: -20px;
+      height: 6rem;
+      bottom: -2rem;
       border-radius: 100%;
-      filter: blur(40px);
+      filter: blur(4rem);
       transition: 2s all ease-in-out;
     }
 
@@ -45,15 +49,15 @@
     }
 
     &:nth-child(2) {
-      margin-top: 60px;
+      margin-top: 6rem;
     }
 
     &:nth-child(3) {
-      margin-top: 120px;
+      margin-top: 12rem;
     }
 
     &:nth-child(4) {
-      margin-top: 180px;
+      margin-top: 18rem;
     }
 
     &:last-child {
@@ -61,8 +65,8 @@
       .benefit {
 
         &__wrap {
-          padding-top: 90px;
-          padding-bottom: 50px;
+          padding-top: 9rem;
+          padding-bottom: 5rem;
           background-image:
                   url("../images/bg-benefit-wrap-1.png"),
                   url("../images/bg-benefit-wrap-3.png");
@@ -72,18 +76,18 @@
                   auto;
 
           background-position:
-                  14px 30px,
-                  calc(100% - 15px) calc(100% - 15px);
+                  1.4rem 3rem,
+                  calc(100% - 1.5rem) calc(100% - 1.5rem);
         }
       }
     }
   }
 
   &__wrap {
-    border-radius: 30px;
+    border-radius: 3rem;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(20px);
-    padding: 120px 35px;
+    backdrop-filter: blur(2rem);
+    padding: 12rem 3.5rem;
     clip-path: url(#myClip);
     -webkit-clip-path: url(#myClip);
 
@@ -92,8 +96,8 @@
             url("../images/bg-benefit-wrap-2.png");
 
     background-position:
-            14px 30px,
-            calc(100% - 17px) calc(100% - 24px);
+            1.4rem 3rem,
+            calc(100% - 1.7rem) calc(100% - 2.4rem);
 
     background-repeat:
             no-repeat,
@@ -107,24 +111,29 @@
   &__title {
     font-family: $font-family-add;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 5.5rem;
     background: linear-gradient(90deg, #90c01e 0%, #ebea00 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    line-height: 85%;
-    margin-bottom: 10px;
+    line-height: 100%;
+    margin-bottom: 1rem;
+
+    @media (max-width: 1680px) {
+      font-size: 5rem;
+    }
 
     span {
-      font-size: 30px;
+      font-size: 3rem;
       display: block;
+      line-height: 120%;
     }
   }
 
   &__desc {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 110%;
     color: #e4e4e4;
 
@@ -137,8 +146,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 1rem;
+    margin-top: 2rem;
 
     &__item {
 

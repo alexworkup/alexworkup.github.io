@@ -1,0 +1,21 @@
+.phone {
+  text-align: right;
+
+  a {
+    font-weight: 600;
+    font-size: 3.3rem;
+    color: #cbd93d;
+    font-family: $font-family-add;
+    text-decoration: none;
+    margin-bottom: -.8rem;
+    display: block;
+  }
+
+  address {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #fff;
+    font-family: $font-family-base;
+    font-style: normal;
+  }
+}

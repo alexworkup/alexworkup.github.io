@@ -9,20 +9,15 @@
   &:before {
     content: '';
     position: absolute;
-    width: 138px;
-    height: 680px;
+    width: 13.8rem;
+    height: 68rem;
     background-image: url("../images/advantages-line.png");
     background-repeat: no-repeat;
     background-position: center;
-    bottom: -197px;
-    left: 130px;
+    background-size: contain;
+    bottom: -19.7rem;
+    left: 13rem;
     z-index: 1;
   }
 
-  &__container {
-    max-width: 1640px;
-    margin: 0 auto;
-    padding: 0 100px;
-    position: relative;
-  }
 }

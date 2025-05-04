@@ -3,49 +3,49 @@
   &__title {
     font-family: $font-family-add;
     font-weight: 700;
-    font-size: 70px;
-    line-height: 86%;
+    font-size: 7rem;
+    line-height: 120%;
     text-transform: uppercase;
     background: linear-gradient(90deg, #8fbf1e 0%, #e0df19 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   &__row {
 
     &_bottom {
-      padding-left: 24px;
-      padding-top: 5px;
+      padding-left: 2.4rem;
+      padding-top: .5rem;
       display: flex;
       align-items: center;
-      column-gap: 60px;
+      column-gap: 6rem;
     }
 
     &:not(.inline-form__row_bottom) {
-      max-width: 1120px;
+      max-width: 112rem;
     }
   }
 
   &__col {
-    padding: 5px 0;
+    padding: .5rem 0;
 
     input {
 
       &:not([type="checkbox"]) {
         font-family: $font-family-add;
         font-weight: 600;
-        font-size: 25px;
+        font-size: 2.5rem;
         text-transform: uppercase;
         color: #fff;
         appearance: none;
         outline: none;
         margin: 0;
-        height: 67px;
-        line-height: 67px;
-        padding: 0 37px;
+        height: 6.7rem;
+        line-height: 6.7rem;
+        padding: 0 3.7rem;
         width: 100%;
         background: transparent;
         border: none;
@@ -67,31 +67,31 @@
             &:after {
               content: '';
               position: absolute;
-              width: 8px;
-              height: 8px;
+              width: .8rem;
+              height: .8rem;
               border-radius: 50%;
               background-color: #CBD93D;
-              left: 5px;
-              top: 3px;
+              left: .5rem;
+              top: .3rem;
             }
           }
         }
 
         & + span {
           font-weight: 400;
-          font-size: 14px;
+          font-size: 1.4rem;
           line-height: 100%;
           color: rgba(193, 198, 201, 0.5);
           position: relative;
-          padding-left: 28px;
+          padding-left: 2.8rem;
 
           &:before {
             content: '';
             position: absolute;
-            width: 18px;
-            height: 18px;
+            width: 1.8rem;
+            height: 1.8rem;
             border-radius: 50%;
-            top: -2px;
+            top: -.2rem;
             left: 0;
             border: 1px solid #949a9c;
             box-sizing: border-box;
@@ -102,10 +102,10 @@
   }
 
   &__item {
-    border-radius: 40px;
+    border-radius: 4rem;
     display: block;
     position: relative;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, rgb(20 22 25) 0%, rgba(0, 0, 0, 0) 100%);
 
     &:before {
       content: '';
@@ -122,7 +122,7 @@
       -webkit-mask-composite: destination-out;
       mask-composite: exclude;
       pointer-events: none;
-      padding: 2px;
+      padding: .2rem;
       border-radius: inherit;
     }
   }
@@ -130,14 +130,14 @@
   .btn {
     font-family: $font-family-add;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 2.5rem;
     text-transform: uppercase;
     color: #cbd93d;
     text-decoration: none;
-    padding: 0 80px;
+    padding: 0 8rem;
     position: relative;
-    height: 55px;
-    line-height: 55px;
+    height: 5.5rem;
+    line-height: 5.5rem;
     display: inline-block;
 
     &:before {
@@ -155,8 +155,8 @@
       -webkit-mask-composite: destination-out;
       mask-composite: exclude;
       pointer-events: none;
-      padding: 2px;
-      border-radius: 50px 0;
+      padding: .2rem;
+      border-radius: 5rem 0;
     }
 
     &_submit {
@@ -164,29 +164,4 @@
     }
   }
 
-  .btn_more {
-    font-family: $font-family-add;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 80%;
-    text-transform: uppercase;
-    color: #8fbe1f;
-    position: relative;
-    padding-right: 50px;
-    text-decoration: none;
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 36px;
-      height: 36px;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url("../images/arrow-next.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
-  }
 }

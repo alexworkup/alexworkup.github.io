@@ -13,7 +13,7 @@
     <header class="header">
         <div class="header__container">
             <div class="header__right">
-                <div class="header__address">
+                <div class="phone">
                     <a href="tel:+73452215511">+7 (3452) 21-55-11</a>
                     <address>Тюмень Народная 72к1</address >
                 </div>
@@ -22,7 +22,7 @@
         </div>
     </header>
     <div class="hero" id="hero">
-        <div class="hero__container">
+        <div class="hero__container container">
             <div class="hero__logo">
                 <a href="#">
                     <img src="images/logo-color.svg" alt="Лого Lime Fitness">
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="advantages" id="advantages">
-        <div class="advantages__container">
+        <div class="advantages__container container">
             <div class="benefit">
                 <div class="benefit__list">
                     <div class="benefit__item">
@@ -163,7 +163,7 @@
         </div>
     </div>
     <div class="directions" id="directions">
-        <div class="directions__container">
+        <div class="directions__container container">
             <div class="directions__title">
                 <span>У нас самые популярные</span>
                 фитнес-направления
@@ -203,22 +203,89 @@
         </div>
     </div>
     <div class="about" id="about">
-        <div class="about__container">
+        <div class="about__container container">
             <picture class="about__logo">
                 <img src="images/lime.svg" alt="">
             </picture>
             <div class="about__title">О lime fitness</div>
             <div class="about__desc">
-                <p>Мы команда профессионалов в области создания современных фитнес-центров мирового уровня. За нашими плечами несколько успешных проектов в других городах.</p>
-                <p>В настоящее время компания <span>Fitness Holding</span> - это крупнейший в России оператор фитнес-центров, который управляет 20-ю действующими проектами в Москве и Московской области, Перми, Красноярске, Уфе, Волгограде, Челябинске. Компания динамично развивается, планируя открытие новых клубов в разных городах и странах. Наша команда собрала всё самое лучшее для комплексного совершенствования Вашего тела. Посетив наш фитнес-центр, Вы получите мощный заряд энергии, радости, красоты!</p>
-                <p>Фитнес-центр <span>lime Fitness</span> является еще одним масштабным проектом одного из лидеров фитнес-движения в России - компании <span>Fitness Holding</span>. Наш фитнес-центр в Челябинске - один из крупнейших в России.</p>
-                <p><span>Теперь мы пришли в Тюмень в серьез и надолго)</span></p>
+                <div class="about__desc-text">
+                    <p>Мы команда профессионалов в области создания современных фитнес-центров мирового уровня. За нашими плечами несколько успешных проектов в других городах.</p>
+                    <p>В настоящее время компания <span>Fitness Holding</span> - это крупнейший в России оператор фитнес-центров, который управляет 20-ю действующими проектами в Москве и Московской области, Перми, Красноярске, Уфе, Волгограде, Челябинске. Компания динамично развивается, планируя открытие новых клубов в разных городах и странах. Наша команда собрала всё самое лучшее для комплексного совершенствования Вашего тела. Посетив наш фитнес-центр, Вы получите мощный заряд энергии, радости, красоты!</p>
+                    <p>Фитнес-центр <span>lime Fitness</span> является еще одним масштабным проектом одного из лидеров фитнес-движения в России - компании <span>Fitness Holding</span>. Наш фитнес-центр в Челябинске - один из крупнейших в России.</p>
+                    <p><span>Теперь мы пришли в Тюмень в серьез и надолго)</span></p>
+                </div>
+                <div class="about__desc-img">
+                    <img src="images/about.jpg" alt="О lime fitness">
+                </div>
             </div>
             <div class="about__more">
                 <a href="#" class="btn_more">хочу стать частью команды</a>
             </div>
         </div>
     </div>
+    <div class="order" id="order">
+        <div class="order__container container">
+            <div class="order__form">
+                <div class="inline-form">
+                    <div class="inline-form__title">Хочу в Лайм Фитнес</div>
+                    <div class="inline-form__content">
+                        <form action="#">
+                            <div class="inline-form__row">
+                                <div class="inline-form__col">
+                                    <label class="inline-form__item">
+                                        <input type="text" name="name" placeholder="ИМЯ">
+                                    </label>
+                                </div>
+                                <div class="inline-form__col">
+                                    <label class="inline-form__item">
+                                        <input type="tel" name="phone" placeholder="Телефон">
+                                    </label>
+                                </div>
+                                <div class="inline-form__col">
+                                    <label class="inline-form__item">
+                                        <input type="email" name="email" placeholder="E-mail">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="inline-form__row inline-form__row_bottom">
+                                <div class="inline-form__col">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span>Я соглашаюсь с условиями обработки персональных данных</span>
+                                    </label>
+                                </div>
+                                <div class="inline-form__col">
+                                    <a href="#" class="btn btn_submit">Отправить</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__container container">
+            <div class="footer__grid">
+                <a href="#" class="footer__logo">
+                    <img src="images/logo-color.svg" alt="Лого Lime Fitness">
+                </a>
+                <div class="footer__phone phone">
+                    <a href="tel:+73452215511">+7 (3452) 21-55-11</a>
+                    <address>Тюмень Народная 72к1</address>
+                </div>
+                <div class="footer__copyright">
+                    © «CITRUS FITNESS» фитнес центр, 2015 - 2025<br> Пользовательское соглашение Политика обработки персональных данных
+                </div>
+                <div class="footer__dev">
+                    <a href="#">
+                        <img src="images/luxar.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- SVG маска для элементов -->
     <ul class="socials">
         <li>
@@ -243,7 +310,6 @@
             </a>
         </li>
     </ul>
-
     <div class="side-panel">
         <button class="btn-burger">
             <img src="images/burger.svg" alt="Открыть меню">

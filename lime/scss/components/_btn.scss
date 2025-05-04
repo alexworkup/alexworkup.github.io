@@ -1,0 +1,28 @@
+.btn {
+
+  &_more {
+    font-family: $font-family-add;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 80%;
+    text-transform: uppercase;
+    color: #8fbe1f;
+    position: relative;
+    padding-right: 5rem;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 3.6rem;
+      height: 3.6rem;
+      right: 0;
+      top: calc(50% - .2rem);
+      transform: translateY(-50%);
+      background-image: url(../images/arrow-next.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}

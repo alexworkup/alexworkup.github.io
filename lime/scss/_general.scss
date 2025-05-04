@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: var(--scale) !important;
 }
 
 body {
@@ -21,4 +22,39 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+:root {
+  --scale: 10px;
+}
+
+@media (min-width: 1793px) {
+  :root {
+    --scale: calc(100vw / 179.2);
+  }
+}
+
+@media (max-width: 1792px) {
+  :root {
+    --scale: calc(100vw / 179.2);
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --scale: calc(100vw / 182);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --scale: calc(100vw / 36);
+  }
+}
+
+.container {
+  max-width: 164rem;
+  margin: 0 auto;
+  padding: 0 10rem;
+  position: relative;
 }

@@ -2,23 +2,25 @@
   min-height: 100vh;
   padding-top: 30px;
   position: relative;
-  margin-top: -100px;
+  margin-top: -10rem;
 
   &:before {
     content: '';
     position: absolute;
-    width: 680px;
-    height: 138px;
+    width: 68rem;
+    height: 13.8rem;
     background-image: url("../images/decor-block.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     right: 1%;
     top: 12%;
     pointer-events: none;
   }
 
   &__container {
-    max-width: 1420px;
+    max-width: 142rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
     position: relative;
   }
 

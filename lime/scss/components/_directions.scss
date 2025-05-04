@@ -6,15 +6,17 @@
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 
   &:before {
     content: '';
     position: absolute;
-    width: 680px;
-    height: 138px;
+    width: 68rem;
+    height: 13.8rem;
     background-image: url("../images/decor-block.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     right: 1%;
     top: 5%;
     pointer-events: none;
@@ -23,19 +25,19 @@
   &__title {
     font-family: $font-family-add;
     font-weight: 700;
-    font-size: 90px;
+    font-size: 9rem;
     line-height: 90%;
     text-transform: uppercase;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     span {
       display: flex;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 4rem;
       text-transform: uppercase;
       background: linear-gradient(90deg, #8fbf1e 0%, #e0df19 100%);
       background-clip: text;
@@ -45,10 +47,4 @@
     }
   }
 
-  &__container {
-    max-width: 1640px;
-    margin: 0 auto;
-    padding: 0 100px;
-    position: relative;
-  }
 }
