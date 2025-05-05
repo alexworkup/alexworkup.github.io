@@ -1,5 +1,29 @@
 $(document).ready(function () {
 
+    const btnBurger     = document.getElementById('btn-burger');
+    const popupDropdown = document.querySelector('.popup-dropdown');
+    const btnClose      = popupDropdown.querySelector('.popup-dropdown__close');
+
+    btnBurger.addEventListener('click', () => {
+        popupDropdown.classList.add('show');
+    });
+
+    btnClose.addEventListener('click', () => {
+        popupDropdown.classList.remove('show');
+    });
+
+    // (опционально) клик вне дропдауна закрывает его
+    /*
+    document.addEventListener('click', (e) => {
+        if (popupDropdown.classList.contains('show')
+            && !popupDropdown.contains(e.target)
+            && e.target !== btnBurger
+        ) {
+            popupDropdown.classList.remove('show');
+        }
+    });
+     */
+
     if (document.querySelector('.main-gallery__list')) {
 
         const photogallerySlider = new Swiper('.main-gallery .swiper', {
