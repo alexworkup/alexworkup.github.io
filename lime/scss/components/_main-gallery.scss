@@ -1,7 +1,112 @@
 .main-gallery {
   padding: 7rem 0;
   min-height: 100vh;
-  display: none;
+  width: 100%;
+
+  &__wrap,
+  &__list {
+    width: 100%;
+  }
+
+  &__container {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 68rem;
+      height: 13.8rem;
+      background-image: url("../images/decor-block.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: 10%;
+      top: 5%;
+      pointer-events: none;
+    }
+  }
+
+  &__pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+
+    .slider-progressbar {
+      width: 70rem;
+      position: relative;
+      height: 3px;
+      border-radius: 100px;
+      overflow: hidden;
+
+      .swiper-pagination-progressbar-fill {
+        background: #8fbe1f;
+        border-radius: 100px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      top: 0;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #141619 90%);
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #141619 90%);
+    }
+  }
+
+  &__slide {
+    width: calc(142.6rem + 10px);
+  }
+
+  &__item {
+    height: 31.7rem;
+    border-radius: 3.4rem;
+    overflow: hidden;
+
+    a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.w-34 {
+      width: 34rem;
+    }
+
+    &.w-58 {
+      width: 58rem;
+    }
+
+    &.w-46 {
+      width: 46rem;
+    }
+  }
 
   &__title {
     display: inline-block;
@@ -13,6 +118,22 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    padding-right: 6rem;
+    margin-bottom: 10rem;
+
+    &:after {
+      content: '';
+      width: 5.5rem;
+      height: 5.5rem;
+      background-size: contain;
+      background-image: url("../images/heart-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      bottom: 4rem;
+    }
 
     span {
       font-size: 3rem;
@@ -27,17 +148,7 @@
 
     b {
       padding-left: 8rem;
-      position: relative;
-
-      &:after {
-        content: '';
-        width: 5.5rem;
-        height: 5.5rem;
-        background-size: contain;
-        background-image: url("../images/heart-icon.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-      }
     }
   }
+
 }
