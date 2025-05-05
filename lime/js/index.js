@@ -13,16 +13,15 @@ $(document).ready(function () {
     });
 
     // (опционально) клик вне дропдауна закрывает его
-    /*
     document.addEventListener('click', (e) => {
-        if (popupDropdown.classList.contains('show')
-            && !popupDropdown.contains(e.target)
-            && e.target !== btnBurger
+        if (
+            popupDropdown.classList.contains('show') &&
+            !popupDropdown.contains(e.target) &&     // клик не внутри дропдауна
+            !btnBurger.contains(e.target)            // И клик не внутри кнопки «бургер»
         ) {
             popupDropdown.classList.remove('show');
         }
     });
-     */
 
     if (document.querySelector('.main-gallery__list')) {
 

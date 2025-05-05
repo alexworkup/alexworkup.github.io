@@ -15,10 +15,12 @@
   background-repeat: no-repeat;
   background-size: 10% calc(100% - 5rem);
   left: -95rem;
-  transition: 1s left cubic-bezier(0.51, 0.32, 0.35, 1.39);
+  opacity: 0;
+  transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
 
   &.show {
     left: 0;
+    opacity: 1;
   }
 
   @media #{$tablet} {
