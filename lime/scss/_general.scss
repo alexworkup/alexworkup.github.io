@@ -11,12 +11,14 @@ body {
   font-family: $font-family-base;
   background-color: #141619;
 
+  /*
   * {
 
     @media (max-width: 767px) {
       opacity: 0;
     }
   }
+  */
 }
 
 img {
@@ -63,6 +65,10 @@ img {
   margin: 0 auto;
   padding: 0 10rem;
   position: relative;
+
+  @media (max-width: 767px) {
+    padding: 0 1.5rem;
+  }
 }
 
 .main {

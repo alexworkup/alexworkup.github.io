@@ -10,8 +10,15 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
+    display: inline-block; 
     margin-bottom: 2rem;
+
+    @media (max-width: 767px) {
+      font-size: 3.5rem;
+      line-height: 100%;
+      margin-bottom: 1rem;
+      padding-left: 1.8rem;
+    }
   }
 
   &__row {
@@ -22,6 +29,11 @@
       display: flex;
       align-items: center;
       column-gap: 6rem;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        padding-left: 0;
+      }
     }
 
     &:not(.inline-form__row_bottom) {
@@ -31,6 +43,20 @@
 
   &__col {
     padding: .5rem 0;
+
+    &--btn {
+
+      @media (max-width: 767px) {
+        margin-left: auto;
+      }
+    }
+
+    &--more {
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
 
     input {
 
@@ -49,6 +75,13 @@
         width: 100%;
         background: transparent;
         border: none;
+
+        @media (max-width: 767px) {
+          font-weight: 300;
+          height: 6rem;
+          line-height: 6rem;
+          padding: 0 1.8rem;
+        }
 
         &::placeholder {
           font-size: inherit;
@@ -78,12 +111,17 @@
         }
 
         & + span {
-          font-weight: 400;
+          font-weight: 300;
           font-size: 1.4rem;
           line-height: 100%;
           color: rgba(193, 198, 201, 0.5);
           position: relative;
           padding-left: 2.8rem;
+          display: block;
+
+          @media (max-width: 767px) {
+            font-size: 1.2rem;
+          }
 
           &:before {
             content: '';
@@ -124,6 +162,10 @@
       pointer-events: none;
       padding: 2px;
       border-radius: inherit;
+
+      @media (max-width: 767px) {
+        background: linear-gradient(51deg, rgb(203 217 61 / 50%) 30%, transparent 65%);
+      }
     }
   }
 
@@ -139,6 +181,13 @@
     height: 5.5rem;
     line-height: 5.5rem;
     display: inline-block;
+    
+    @media (max-width: 767px) {
+      padding: 0 5rem;
+      font-size: 1.8rem;
+      height: 4.5rem;
+      line-height: 4.8rem;
+    }
 
     &:before {
       content: '';

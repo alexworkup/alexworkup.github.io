@@ -13,6 +13,10 @@
     width: 7.3rem;
   }
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   .btn-burger {
     appearance: none;
     background: none;

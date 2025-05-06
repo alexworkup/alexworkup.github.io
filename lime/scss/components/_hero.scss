@@ -13,6 +13,12 @@
     max-height: 80rem;
   }
 
+  @media (max-width: 767px) {
+    padding-top: 9rem;
+    max-height: 34rem;
+    min-height: auto;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -26,6 +32,10 @@
   &__logo {
     margin-bottom: 7rem;
     padding-left: 2rem;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     img {
       width: 32rem;
@@ -41,6 +51,10 @@
     line-height: 75%;
     margin: 0;
 
+    @media (max-width: 767px) {
+      font-size: 5rem;
+    }
+
     b {
       font-weight: 700;
       font-size: 16rem;
@@ -49,6 +63,10 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @media (max-width: 767px) {
+        font-size: 6rem;
+      }
     }
 
     span {

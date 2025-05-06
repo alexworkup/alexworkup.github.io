@@ -10,6 +10,11 @@
     min-height: auto;
   }
 
+  @media (max-width: 767px) {
+    height: auto;
+    max-height: inherit;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -32,12 +37,21 @@
 
   &__form {
     padding-left: 20%;
+    
+    @media (max-width: 767px) {
+      padding-left: 1rem;
+      padding-right: 2rem;
+    }
   }
 
   &__img {
     min-height: 100vh;
     width: 100%;
     position: relative;
+
+    @media (max-width: 767px) {
+      min-height: auto;
+    }
 
     img {
       width: 100%;
@@ -54,6 +68,13 @@
     left: 56rem;
     top: 14rem;
     text-shadow: 0 0 5px #ffffff;
+
+    @media (max-width: 767px) {
+      left: inherit;
+      top: inherit;
+      right: 0;
+      bottom: 0;
+    }
 
     &:before {
       content: '00:00';
@@ -75,4 +96,13 @@
     50% { opacity: 0; }
   }
 
+  .inline-form {
+
+    &__title {
+
+      @media (max-width: 767px) {
+        max-width: 23rem;
+      }
+    }
+  }
 }

@@ -1,9 +1,30 @@
 .header {
 
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   &__right {
     position: fixed;
     right: 4.5rem;
     top: 4rem;
     z-index: 100;
+
+    .address-group {
+
+      &__btn {
+
+        @media (max-width: 767px) {
+          font-size: 0;
+        }
+      }
+
+      &__phone {
+
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
   }
 }

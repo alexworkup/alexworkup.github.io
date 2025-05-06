@@ -28,6 +28,29 @@
             </div>
         </div>
     </header>
+    <header class="header-mobile">
+        <div class="header-mobile__row">
+            <div class="header-mobile__col header-mobile__col--burger">
+                <button data-popup-open="popupDropdown" class="btn-burger">
+                    <img src="images/burger-mobile.svg" alt="Открыть меню">
+                </button>
+            </div>
+            <div class="header-mobile__col header-mobile__col--logo">
+                <a href="#" class="logo">
+                    <img src="images/logo-color.svg" alt="Лого Lime Fitness">
+                </a>
+            </div>
+            <div class="header-mobile__col header-mobile__col--phone">
+                <div class="address-group">
+                    <a href="#" data-popup-open="popup-form" class="address-group__btn header__btn">
+                        <span>
+                            <img src="images/phone-icon.svg" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="main">
         <div class="hero" id="hero">
             <div class="hero__container container">
@@ -135,16 +158,16 @@
                                 </div>
                             </div>
                             <div class="inline-form__row inline-form__row_bottom">
-                                <div class="inline-form__col">
+                                <div class="inline-form__col inline-form__col--checkbox">
                                     <label>
                                         <input type="checkbox">
                                         <span>Я соглашаюсь с условиями обработки персональных данных</span>
                                     </label>
                                 </div>
-                                <div class="inline-form__col">
+                                <div class="inline-form__col inline-form__col--btn">
                                     <a href="#" class="btn btn_submit">Отправить</a>
                                 </div>
-                                <div class="inline-form__col">
+                                <div class="inline-form__col inline-form__col--more">
                                     <a href="#" class="btn_more">хочу стать частью команды</a>
                                 </div>
                             </div>
@@ -367,7 +390,7 @@
                 </div>
             </div>
         </footer>
-        <ul class="socials">
+        <ul class="socials fixed">
             <li>
                 <a href="#">
                     <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">

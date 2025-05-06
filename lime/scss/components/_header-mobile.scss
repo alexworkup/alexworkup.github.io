@@ -1,0 +1,63 @@
+.header-mobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: .5rem 2rem;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  .btn-burger {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .address-group {
+    padding: 0;
+    background: transparent;
+
+    &__btn {
+      font-size: 0;
+
+      span {
+        line-height: 3rem;
+        padding: 0 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.3rem;
+
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .logo {
+
+    img {
+      max-height: 5rem;
+      width: auto;
+    }
+  }
+}
