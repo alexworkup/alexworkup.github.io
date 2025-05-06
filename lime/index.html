@@ -24,7 +24,7 @@
                     <a href="tel:+73452215511">+7 (3452) 21-55-11</a>
                     <address>Тюмень Народная 72к1</address >
                 </div>
-                <a href="#" class="address-group__btn header__btn"><span>Хочу к вам!</span></a>
+                <a href="#" data-popup-open="popup-form" class="address-group__btn header__btn"><span>Хочу к вам!</span></a>
             </div>
         </div>
     </header>
@@ -402,13 +402,13 @@
             </li>
         </ul>
         <div class="side-panel">
-            <button class="btn-burger" id="btn-burger">
+            <button data-popup-open="popupDropdown" class="btn-burger" id="btn-burger">
                 <img src="images/burger.svg" alt="Открыть меню">
             </button>
         </div>
-        <div class="popup-form" id="popup-form">
+        <div class="popup-form popup" id="popup-form">
             <div class="popup-form__wrap">
-                <button class="popup-form__close">
+                <button data-popup-close class="popup-form__close">
                     <img src="images/popup-menu-close.svg" alt="">
                 </button>
                 <div class="popup-form__inline">
@@ -450,9 +450,9 @@
                 </div>
             </div>
         </div>
-        <div class="popup-dropdown" id="popupDropdown">
+        <div class="popup-dropdown popup" id="popupDropdown">
             <div class="popup-dropdown__wrap">
-                <button class="popup-dropdown__close">
+                <button data-popup-close class="popup-dropdown__close">
                     <img src="images/popup-menu-close.svg" alt="">
                 </button>
                 <ul class="popup-menu">

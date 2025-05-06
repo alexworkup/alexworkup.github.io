@@ -1,26 +1,28 @@
 $(document).ready(function () {
 
-    const btnBurger     = document.getElementById('btn-burger');
-    const popupDropdown = document.querySelector('.popup-dropdown');
-    const btnClose      = popupDropdown.querySelector('.popup-dropdown__close');
-
-    btnBurger.addEventListener('click', () => {
-        popupDropdown.classList.add('show');
+    // Открытие
+    document.querySelectorAll('[data-popup-open]').forEach(btn => {
+        const popup = document.getElementById(btn.dataset.popupOpen);
+        btn.addEventListener('click', () => popup.classList.add('show'));
     });
 
-    btnClose.addEventListener('click', () => {
-        popupDropdown.classList.remove('show');
+    // Закрытие через крестик
+    document.querySelectorAll('[data-popup-close]').forEach(btn => {
+        const popup = btn.closest('.popup');
+        btn.addEventListener('click', () => popup.classList.remove('show'));
     });
 
-    // (опционально) клик вне дропдауна закрывает его
-    document.addEventListener('click', (e) => {
-        if (
-            popupDropdown.classList.contains('show') &&
-            !popupDropdown.contains(e.target) &&     // клик не внутри дропдауна
-            !btnBurger.contains(e.target)            // И клик не внутри кнопки «бургер»
-        ) {
-            popupDropdown.classList.remove('show');
-        }
+    // Клик вне попапа
+    document.addEventListener('click', e => {
+        document.querySelectorAll('.popup.show').forEach(popup => {
+            const openBtn = document.querySelector(`[data-popup-open="${popup.id}"]`);
+            if (
+                !popup.contains(e.target) &&
+                !(openBtn && openBtn.contains(e.target))
+            ) {
+                popup.classList.remove('show');
+            }
+        });
     });
 
     if (document.querySelector('.main-gallery__list')) {
