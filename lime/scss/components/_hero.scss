@@ -9,6 +9,10 @@
   position: relative;
   padding-top: 2.6rem;
 
+  @media (max-width: 1024px) {
+    max-height: 80rem;
+  }
+
   &:before {
     content: '';
     position: absolute;

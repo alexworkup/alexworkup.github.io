@@ -1,21 +1,39 @@
 $(document).ready(function () {
 
-    // Открытие
+    /* Clock */
+    function updateClock() {
+        const now = new Date();
+        const hh = String(now.getHours()).padStart(2, '0');
+        const mm = String(now.getMinutes()).padStart(2, '0');
+
+        document.getElementById('hours').textContent = hh;
+        document.getElementById('minutes').textContent = mm;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
     document.querySelectorAll('[data-popup-open]').forEach(btn => {
         const popup = document.getElementById(btn.dataset.popupOpen);
-        btn.addEventListener('click', () => popup.classList.add('show'));
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            popup.classList.add('show');
+        });
     });
 
-    // Закрытие через крестик
     document.querySelectorAll('[data-popup-close]').forEach(btn => {
         const popup = btn.closest('.popup');
-        btn.addEventListener('click', () => popup.classList.remove('show'));
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            popup.classList.remove('show');
+        });
     });
 
-    // Клик вне попапа
     document.addEventListener('click', e => {
         document.querySelectorAll('.popup.show').forEach(popup => {
-            const openBtn = document.querySelector(`[data-popup-open="${popup.id}"]`);
+            const openBtn = document.querySelector(
+                `[data-popup-open="${popup.id}"]`
+            );
             if (
                 !popup.contains(e.target) &&
                 !(openBtn && openBtn.contains(e.target))
@@ -49,7 +67,7 @@ $(document).ready(function () {
 
         let photogallerySlide = $('.main-gallery__slide').packery({
             itemSelector: '.main-gallery__item',
-            gutter: 20
+            gutter: 20,
         });
 
         function layoutPackery() {

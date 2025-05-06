@@ -1,5 +1,5 @@
 .directions {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   background-image: url("../images/directions-bg.jpg");
   background-repeat: no-repeat;
@@ -8,6 +8,10 @@
   background-attachment: fixed;
   padding-top: 7rem;
   padding-bottom: 7rem;
+
+  @media (max-width: 1024px) {
+    max-height: 100rem;
+  }
 
   &:before {
     content: '';

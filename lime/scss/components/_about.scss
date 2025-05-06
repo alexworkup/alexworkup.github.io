@@ -48,6 +48,10 @@
     line-height: 156%;
     color: #fff;
 
+    @media (max-width: 1440px) {
+      font-size: 1.8rem;
+    }
+
     p {
       margin-bottom: 2rem;
       margin-top: 0;
@@ -64,6 +68,10 @@
 
   &__desc-text {
     max-width: 102rem;
+
+    @media (max-width: 1024px) {
+      max-width: 80rem;
+    }
 
     img[src*=heart-icon] {
       margin-bottom: -15px;

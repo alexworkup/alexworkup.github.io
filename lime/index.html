@@ -153,21 +153,10 @@
                 </div>
             </div>
             <div class="learn__img">
-                <!--
-                <div id="clock">00:00:00</div>
-                <script>
-                    function updateClock() {
-                        const now = new Date();
-                        const hh = String(now.getHours()).padStart(2, '0');
-                        const mm = String(now.getMinutes()).padStart(2, '0');
-                        const ss = String(now.getSeconds()).padStart(2, '0');
-                        document.getElementById('clock').textContent = `${hh}:${mm}:${ss}`;
-                    }
-                    setInterval(updateClock, 1000);
-                    updateClock();
-                </script>
-                -->
-                <img src="images/learn-bg.jpg" alt="">
+                <div id="clock" class="clock">
+                    <span id="hours">00</span><span id="colon">:</span><span id="minutes">00</span>
+                </div>
+                <img src="images/learn-bg-2.jpg" alt="">
             </div>
         </div>
         <div class="directions" id="directions">
@@ -494,7 +483,7 @@
                                 <a href="tel:+73452215511">+7 (3452) 21-55-11</a>
                                 <address>Тюмень Народная 72к1</address>
                             </div>
-                            <a href="#" class="address-group__btn header__btn"><span>Записаться</span></a>
+                            <a href="#" data-popup-open="popup-form" class="address-group__btn header__btn"><span>Записаться</span></a>
                         </div>
                     </div>
                 </div>

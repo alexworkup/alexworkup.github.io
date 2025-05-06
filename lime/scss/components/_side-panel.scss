@@ -9,6 +9,10 @@
   top: 0;
   z-index: 1;
 
+  @media (max-width: 1024px) {
+    width: 7.3rem;
+  }
+
   .btn-burger {
     appearance: none;
     background: none;
@@ -20,5 +24,10 @@
     position: absolute;
     top: 5rem;
     right: -2.8rem;
+
+    img {
+      width: 6.6rem;
+      height: 1.8rem;
+    }
   }
 }

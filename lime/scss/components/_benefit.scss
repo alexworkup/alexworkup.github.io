@@ -124,6 +124,10 @@
       font-size: 5rem;
     }
 
+    @media (max-width: 1024px) {
+      font-size: 4rem;
+    }
+
     span {
       font-size: 3rem;
       display: block;

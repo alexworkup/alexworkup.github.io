@@ -18,20 +18,15 @@
   opacity: 0;
   transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
 
+  @media (max-width: 1440px) {
+    padding-left: 18rem;
+    width: 45%;
+    min-width: 80rem;
+  }
+
   &.show {
     left: 0;
     opacity: 1;
-  }
-
-  @media #{$tablet} {
-    width: 70%;
-    min-width: auto;
-    padding: 3rem;
-  }
-
-  @media #{$phone} {
-    width: 90%;
-    padding: 1.6rem;
   }
 
   &__wrap {
@@ -50,15 +45,6 @@
     display: block;
     outline: none!important;
     font-size: 0;
-
-    @media #{$tablet} {
-      margin-bottom: 2rem;
-    }
-
-    @media #{$phone} {
-      max-width: 3rem;
-      margin-bottom: 1rem;
-    }
   }
 
   .dropdown-bottom {
@@ -77,27 +63,10 @@
         &_phone {
           margin-left: auto;
           margin-right: 3rem;
-
-          @media #{$phone} {
-            margin-right: 0;
-
-            .phone-link {
-              font-size: 2.2rem;
-            }
-          }
         }
 
         &_btn {
 
-          @media #{$phone} {
-            width: 100%;
-            margin-bottom: 0;
-            margin-top: 2rem;
-
-            .btn {
-              width: 100%;
-            }
-          }
         }
       }
     }
@@ -111,10 +80,6 @@
     line-height: 120%;
     padding: 0;
     margin: 0 0 2rem 0;
-
-    @media #{$phone} {
-      font-size: 3rem;
-    }
 
     li {
       margin-bottom: 1rem;

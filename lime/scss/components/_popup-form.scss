@@ -17,6 +17,12 @@
   background-size: 10% calc(100% - 5rem);
   transition: 1s all cubic-bezier(0.23, 1, 0.32, 1);
 
+  @media (max-width: 1440px) {
+    padding-right: 18rem;
+    width: 45%;
+    min-width: 80rem;
+  }
+
   &.show {
     right: 0;
     opacity: 1;
@@ -32,15 +38,6 @@
     display: block;
     outline: none!important;
     font-size: 0;
-
-    @media #{$tablet} {
-      margin-bottom: 2rem;
-    }
-
-    @media #{$phone} {
-      max-width: 3rem;
-      margin-bottom: 1rem;
-    }
   }
 
   .inline-form {

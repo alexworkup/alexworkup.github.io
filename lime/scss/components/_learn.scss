@@ -4,6 +4,12 @@
   position: relative;
   margin-top: -10rem;
 
+  @media (max-width: 1024px) {
+    height: 100vh;
+    max-height: 90rem;
+    min-height: auto;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -31,6 +37,7 @@
   &__img {
     min-height: 100vh;
     width: 100%;
+    position: relative;
 
     img {
       width: 100%;
@@ -39,8 +46,32 @@
     }
   }
 
-  .inline-form {
+  .clock {
+    font-family: 'DS-Digital', monospace;
+    font-size: 5rem;
+    color: #ffffff;
+    position: absolute;
+    left: 56rem;
+    top: 14rem;
 
+    &:before {
+      content: '00:00';
+      font-family: 'DS-Digital', monospace;
+      font-size: 5rem;
+      color: #ffffff;
+      position: absolute;
+      opacity: .1;
+      left: -10px;
+      top: 0;
+    }
+  }
+
+  #colon {
+    animation: blink 1s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 
 }

@@ -9,6 +9,10 @@
       max-width: 144rem;
       padding: 0 5rem;
 
+      @media (max-width: 1024px) {
+        padding: 0 10rem;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -25,11 +29,23 @@
     }
   }
 
+  &__logo {
+
+    img {
+      width: 32rem;
+      height: 10.4rem;
+    }
+  }
+
   &__copyright {
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 100%;
     color: #3c3c3c;
+
+    @media (max-width: 1024px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__grid {
