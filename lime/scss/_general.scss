@@ -10,6 +10,13 @@ html {
 body {
   font-family: $font-family-base;
   background-color: #141619;
+
+  * {
+
+    @media (max-width: 767px) {
+      opacity: 0;
+    }
+  }
 }
 
 img {
