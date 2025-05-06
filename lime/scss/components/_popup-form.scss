@@ -23,6 +23,16 @@
     min-width: 80rem;
   }
 
+  @media (max-width: 767px) {
+    width: 100%;
+    min-width: 100%;
+    right: -100vw;
+    border-radius: 0;
+    padding-left: 2.4rem;
+    padding-right: 5.8rem;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   &.show {
     right: 0;
     opacity: 1;
@@ -38,6 +48,16 @@
     display: block;
     outline: none!important;
     font-size: 0;
+
+    @media (max-width: 767px) {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+
+      img {
+        max-width: 3.2rem;
+      }
+    }
   }
 
   .inline-form {
