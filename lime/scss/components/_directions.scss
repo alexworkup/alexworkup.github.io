@@ -13,6 +13,20 @@
     max-height: 100rem;
   }
 
+  @media (max-width: 767px) {
+    max-height: none;
+    height: auto;
+    padding-bottom: 20rem;
+    padding-top: 3.6rem;
+  }
+
+  .container {
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -38,6 +52,12 @@
     justify-content: flex-start;
     margin-bottom: 6rem;
 
+    @media (max-width: 767px) {
+      font-size: 4.4rem;
+      margin-bottom: 2rem;
+      padding: 0 1.5rem;
+    }
+
     span {
       display: flex;
       font-weight: 700;
@@ -48,6 +68,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       line-height: 130%;
+
+      @media (max-width: 767px) {
+        font-size: 2.5rem;
+      }
     }
   }
 

@@ -43,6 +43,40 @@ $(document).ready(function () {
         });
     });
 
+    if (document.querySelector('.area__list')) {
+
+        let areaSwiper = null;
+        const initSwiper = () => {
+            if (!areaSwiper) {
+                areaSwiper = new Swiper('.area__list.swiper', {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    watchOverflow: true,
+                });
+            }
+        };
+        const destroySwiper = () => {
+            if (areaSwiper) {
+                areaSwiper.destroy(true, true);
+                areaSwiper = null;
+            }
+        };
+
+        const mobileQuery = window.matchMedia('(max-width: 767px)');
+
+        const checkBreakpoint = () => {
+            if (mobileQuery.matches) {
+                initSwiper();
+            } else {
+                destroySwiper();
+            }
+        };
+
+        checkBreakpoint();
+
+        mobileQuery.addEventListener('change', checkBreakpoint);
+    }
+
     if (document.querySelector('.main-gallery__list')) {
 
         const photogallerySlider = new Swiper('.main-gallery .swiper', {
