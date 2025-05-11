@@ -1,8 +1,19 @@
 .about {
-  padding-top: 15rem;
+  padding-top: 8rem;
   padding-bottom: 22rem;
   position: relative;
   overflow: hidden;
+
+  &__container {
+
+    @media (max-width: 767px) {
+      position: initial;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    padding-top: 2rem;
+  }
 
   &:before {
     content: "";
@@ -15,6 +26,11 @@
     left: 20%;
     bottom: 5%;
     pointer-events: none;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      left: 1.5rem;
+    }
   }
 
   &__logo {
@@ -22,9 +38,21 @@
     left: 52rem;
     top: -1.5rem;
 
+    @media (max-width: 767px) {
+      left: 1.5rem;
+      top: initial;
+      bottom: 2rem;
+      width: calc(100% - 3rem);
+    }
+
     img {
       width: 94.5rem;
       height: 7.9rem;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -40,6 +68,11 @@
     -webkit-text-fill-color: transparent;
     display: inline-block;
     margin-bottom: 4rem;
+
+    @media (max-width: 767px) {
+      font-size: 6rem;
+      margin-bottom: 0;
+    }
   }
 
   &__desc {
@@ -52,9 +85,17 @@
       font-size: 1.8rem;
     }
 
+    @media (max-width: 767px) {
+      font-size: 1.4rem;
+    }
+
     p {
       margin-bottom: 2rem;
       margin-top: 0;
+
+      @media (max-width: 767px) {
+        margin-bottom: 1rem;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -67,11 +108,6 @@
   }
 
   &__desc-text {
-    max-width: 102rem;
-
-    @media (max-width: 1024px) {
-      max-width: 80rem;
-    }
 
     img[src*=heart-icon] {
       margin-bottom: -15px;

@@ -6,6 +6,10 @@
     padding: 7rem;
     background: linear-gradient(180deg, rgba(20, 22, 25, 0.5) 0%, rgba(10, 11, 13, 0.5) 49.52%, rgba(0, 0, 0, 0.5) 100%);
 
+    @media (max-width: 767px) {
+      padding: 1rem;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -17,6 +21,10 @@
       background-position: center;
       right: 0;
       top: 0;
+
+      @media (max-width: 767px) {
+        opacity: .2;
+      }
     }
   }
 

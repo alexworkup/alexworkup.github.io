@@ -1,5 +1,6 @@
 .advantages {
   height: 100vh;
+  min-height: 70rem;
   background-image: url("../images/advantages-bg.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -7,11 +8,13 @@
   position: relative;
 
   @media (max-width: 1024px) {
-      max-height: 80rem;
+    max-height: 80rem;
+    min-height: auto;
   }
 
   @media (max-width: 767px) {
-    display: none;
+    height: auto;
+    max-height: none;
   }
 
   &:before {

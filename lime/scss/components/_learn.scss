@@ -1,11 +1,11 @@
 .learn {
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 140rem;
   padding-top: 30px;
   position: relative;
   margin-top: -10rem;
 
   @media (max-width: 1024px) {
-    height: 100vh;
     max-height: 90rem;
     min-height: auto;
   }
@@ -26,6 +26,18 @@
     right: 1%;
     top: 12%;
     pointer-events: none;
+
+    @media (max-width: 767px) {
+      width: 10rem;
+      height: 49.5rem;
+      background-image: url(../images/advantages-line.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      right: 1rem;
+      top: 11rem;
+      z-index: 1;
+    }
   }
 
   &__container {
