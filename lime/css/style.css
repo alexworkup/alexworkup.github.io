@@ -438,6 +438,7 @@ img {
   .advantages {
     height: auto;
     max-height: none;
+    padding-bottom: 25rem;
   }
 }
 .advantages:before {
@@ -634,6 +635,7 @@ img {
   .learn {
     height: auto;
     max-height: inherit;
+    margin-top: 0;
   }
 }
 .learn:before {
