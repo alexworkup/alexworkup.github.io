@@ -15,7 +15,15 @@
   @media (max-width: 767px) {
     height: auto;
     max-height: none;
-    padding-bottom: 25rem;
+    padding-bottom: 20rem;
+    background-size: 180%;
+  }
+
+  &__container {
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
 
   &:before {

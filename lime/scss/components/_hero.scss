@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../images/hero-bg.jpg");
+  background-image: url("../images/hero-bg-new.jpg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -15,7 +15,7 @@
 
   @media (max-width: 767px) {
     padding-top: 9rem;
-    max-height: 34rem;
+    max-height: 50rem;
     min-height: auto;
   }
 

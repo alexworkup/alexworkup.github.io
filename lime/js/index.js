@@ -13,41 +13,40 @@ $(document).ready(function () {
     setInterval(updateClock, 1000);
     updateClock();
 
-    document.querySelectorAll('[data-popup-open]').forEach(btn => {
-        const popup = document.getElementById(btn.dataset.popupOpen);
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            popup.classList.add('show');
-        });
-    });
-
-    document.querySelectorAll('[data-popup-close]').forEach(btn => {
-        const popup = btn.closest('.popup');
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            popup.classList.remove('show');
-        });
-    });
-
     document.addEventListener('click', e => {
+
+        const opener = e.target.closest('[data-popup-open]');
+        if (opener) {
+            e.preventDefault();
+            const popupId = opener.dataset.popupOpen;
+            const popup = document.getElementById(popupId);
+            if (popup) popup.classList.add('show');
+            return;
+        }
+
+
+        const closer = e.target.closest('[data-popup-close]');
+        if (closer) {
+            e.preventDefault();
+            const popup = closer.closest('.popup');
+            if (popup) popup.classList.remove('show');
+            return;
+        }
+
+
         document.querySelectorAll('.popup.show').forEach(popup => {
-            const openBtn = document.querySelector(
-                `[data-popup-open="${popup.id}"]`
-            );
-            if (
-                !popup.contains(e.target) &&
-                !(openBtn && openBtn.contains(e.target))
-            ) {
+            if (!popup.contains(e.target)) {
                 popup.classList.remove('show');
             }
         });
     });
 
-    if (document.querySelector('.area__list')) {
-
+    if (document.querySelector('.area__list.swiper') || document.querySelector('.benefit.swiper')) {
         let areaSwiper = null;
-        const initSwiper = () => {
-            if (!areaSwiper) {
+        let benefitSwiper = null;
+
+        const initAreaSwiper = () => {
+            if (!areaSwiper && document.querySelector('.area__list.swiper')) {
                 areaSwiper = new Swiper('.area__list.swiper', {
                     slidesPerView: 1.5,
                     spaceBetween: 10,
@@ -55,10 +54,27 @@ $(document).ready(function () {
                 });
             }
         };
-        const destroySwiper = () => {
+        const destroyAreaSwiper = () => {
+
             if (areaSwiper) {
                 areaSwiper.destroy(true, true);
                 areaSwiper = null;
+            }
+        };
+
+        const initBenefitSwiper = () => {
+            if (!benefitSwiper && document.querySelector('.benefit.swiper')) {
+                benefitSwiper = new Swiper('.benefit.swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    watchOverflow: true,
+                });
+            }
+        };
+        const destroyBenefitSwiper = () => {
+            if (benefitSwiper) {
+                benefitSwiper.destroy(true, true);
+                benefitSwiper = null;
             }
         };
 
@@ -66,36 +82,33 @@ $(document).ready(function () {
 
         const checkBreakpoint = () => {
             if (mobileQuery.matches) {
-                initSwiper();
+                initAreaSwiper();
+                initBenefitSwiper();
             } else {
-                destroySwiper();
+                destroyAreaSwiper();
+                destroyBenefitSwiper();
             }
         };
 
+        // initial check
         checkBreakpoint();
 
+        // слушаем изменения вьюпорта
         mobileQuery.addEventListener('change', checkBreakpoint);
     }
+
 
     if (document.querySelector('.main-gallery__list')) {
 
         const photogallerySlider = new Swiper('.main-gallery .swiper', {
-            slidesPerView: 0.46,
+            slidesPerView: 'auto',
             freeMode: true,
+            autoplay: true,
+            loop: true,
+            speed: 5000,
             pagination: {
                 type: 'progressbar',
                 el: '.main-gallery .slider-progressbar'
-            },
-            breakpoints: {
-                993: {
-                    slidesPerView: 'auto'
-                },
-                769: {
-                    slidesPerView: 0.93
-                },
-                577: {
-                    slidesPerView: 0.7
-                }
             }
         });
 

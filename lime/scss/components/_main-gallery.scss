@@ -5,14 +5,13 @@
   width: 100%;
 
   @media (max-width: 1024px) {
-    max-height: 110rem;
-    min-height: auto;
+    height: auto;
+    max-height: none;
   }
 
   @media (max-width: 767px) {
-    height: auto;
-    max-height: none;
     padding-bottom: 3rem;
+    min-height: auto;
   }
 
   &__wrap,

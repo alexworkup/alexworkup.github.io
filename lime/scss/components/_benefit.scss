@@ -3,6 +3,8 @@
 
   @media (max-width: 767px) {
     transform: none;
+    padding: 0 1rem;
+    margin-top: -9rem;
   }
 
   &__list {
@@ -15,16 +17,19 @@
     }
 
     @media (max-width: 767px) {
-      flex-wrap: wrap;
+      column-gap: 0;
     }
+
   }
 
   &__item {
     width: calc(100% / 2);
     position: relative;
+    flex-shrink: initial;
 
     @media (max-width: 767px) {
       width: 100%;
+      flex-shrink: 0;
     }
 
     &:before,
@@ -37,6 +42,12 @@
       border-radius: 100%;
       filter: blur(4rem);
       transition: 2s all ease-in-out;
+
+      @media (max-width: 767px) {
+        bottom: 0;
+        filter: blur(2rem);
+        opacity: .7;
+      }
     }
 
     &:before {
