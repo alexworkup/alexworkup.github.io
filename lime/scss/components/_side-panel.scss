@@ -17,6 +17,25 @@
     display: none;
   }
 
+  &__logo {
+    position: absolute;
+    bottom: -100%;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .8s all linear;
+
+    &.show {
+      bottom: 10%;
+      opacity: 1;
+    }
+
+    img {
+      width: 5.8rem;
+      height: 31.5rem;
+    }
+  }
+
   .btn-burger {
     appearance: none;
     background: none;

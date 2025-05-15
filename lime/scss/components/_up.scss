@@ -1,0 +1,15 @@
+.up {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(21, 22, 26, 0.2);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  font-size: 0;
+  
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

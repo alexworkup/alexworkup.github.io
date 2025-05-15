@@ -12,6 +12,7 @@
     -webkit-text-fill-color: transparent;
     display: inline-block; 
     margin-bottom: 2rem;
+    margin-top: 0;
 
     @media (max-width: 767px) {
       font-size: 3.5rem;
@@ -182,6 +183,11 @@
     height: 5.5rem;
     line-height: 5.5rem;
     display: inline-block;
+    transition: .2s all linear;
+
+    &:hover {
+      color: #ffffff;
+    }
     
     @media (max-width: 767px) {
       padding: 0 5rem;
@@ -209,9 +215,6 @@
       border-radius: 5rem 0;
     }
 
-    &_submit {
-
-    }
   }
 
 }

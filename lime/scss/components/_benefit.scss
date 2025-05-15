@@ -120,8 +120,8 @@
 
   &__wrap {
     border-radius: 3rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(2rem);
+    background-color: rgba(0, 0, 0, 0.9);
+    //backdrop-filter: blur(2rem);
     padding: 12rem 3.5rem;
     clip-path: url(#myClip);
     -webkit-clip-path: url(#myClip);

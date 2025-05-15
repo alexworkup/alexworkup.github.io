@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
     <script src="js/fancyapp/fancybox.umd.js"></script>
     <link rel="stylesheet" href="js/fancyapp/fancybox.css">
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Основной хедер -->
     <header class="header">
         <div class="header__container">
             <div class="header__right address-group">
@@ -28,6 +31,8 @@
             </div>
         </div>
     </header>
+
+    <!-- Мобильный хедер -->
     <header class="header-mobile">
         <div class="header-mobile__row">
             <div class="header-mobile__col header-mobile__col--burger">
@@ -52,19 +57,22 @@
         </div>
     </header>
     <main class="main">
-        <div class="hero" id="hero">
+        <!-- Первый экран -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero__container container">
                 <div class="hero__logo">
                     <a href="#">
                         <img src="images/logo-color.svg" alt="Лого Lime Fitness">
                     </a>
                 </div>
-                <h1 class="hero__title"><b>НОВЫЙ фитнес</b><br> в Тюмени <span>24/7</span></h1>
+                <h1 class="hero__title" id="hero-title"><b>НОВЫЙ фитнес</b><br> в Тюмени <span>24/7</span></h1>
             </div>
-        </div>
-        <div class="advantages" id="advantages">
+        </section>
+        <!-- Преимущества -->
+        <section class="advantages" id="advantages" aria-labelledby="advantages-title">
+            <h2 id="advantages-title" class="visually-hidden">Наши преимущества</h2>
             <div class="advantages__container container">
-                <div class="benefit swiper">
+                <div class="benefit swiper" aria-label="Слайдер преимуществ">
                     <div class="benefit__list swiper-wrapper">
                         <div class="benefit__item swiper-slide">
                             <div class="benefit__wrap">
@@ -133,11 +141,12 @@
                     <path d="M0 0.085 C0 0.033 0.049 0 0.103 0.003 L0.927 0.137 C0.97 0.143 1 0.179 1 0.219 V0.912 C1 0.961 0.961 1 0.912 1 H0.088 C0.039 1 0 0.961 0 0.912 V0.085 Z" />
                 </clipPath>
             </svg>
-        </div>
-        <div class="learn" id="learn">
+        </section>
+        <!-- Форма "Узнать о старте предпродаж" -->
+        <section class="learn" id="learn" aria-labelledby="learn-title">
             <div class="learn__form">
                 <div class="inline-form">
-                    <div class="inline-form__title">узнать о старте предпродаж</div>
+                    <h2 class="inline-form__title" id="learn-title">узнать о старте предпродаж</h2>
                     <div class="inline-form__content">
                         <form action="#">
                             <div class="inline-form__row">
@@ -168,7 +177,7 @@
                                     <a href="#" class="btn btn_submit">Отправить</a>
                                 </div>
                                 <div class="inline-form__col inline-form__col--more">
-                                    <a href="#" class="btn_more">хочу стать частью команды</a>
+                                    <a href="#" data-popup-open="popup-form" data-title="Хочу стать частью команды" class="btn_more">хочу стать частью команды</a>
                                 </div>
                             </div>
                         </form>
@@ -176,56 +185,58 @@
                 </div>
             </div>
             <div class="learn__img">
-                <div id="clock" class="clock">
+                <div id="clock" class="clock" aria-label="Часы предпродаж">
                     <span id="hours">00</span><span id="colon">:</span><span id="minutes">00</span>
                 </div>
                 <img src="images/learn-bg-2.jpg" alt="">
             </div>
-        </div>
-        <div class="directions" id="directions">
+        </section>
+        <!-- Направления -->
+        <section class="directions" id="directions" aria-labelledby="directions-title">
             <div class="directions__container container">
-                <div class="directions__title">
+                <h2 class="directions__title" id="directions-title">
                     <span>У нас самые популярные</span>
                     фитнес-направления
-                </div>
+                </h2>
                 <div class="area">
                     <div class="area__list swiper">
                         <div class="area__row swiper-wrapper">
                             <div class="area__item swiper-slide">
                                 <div class="area__title">тренажерный зал</div>
-                                <div class="area__desc">инерционные беговые дорожки, уникальные функциональные рамы с подвижными системами турников . . .</div>
+                                <div class="area__desc">инерционные беговые дорожки, уникальные функциональные рамы с подвижными системами турников</div>
                             </div>
                             <div class="area__item swiper-slide">
                                 <div class="area__title">бассейн</div>
-                                <div class="area__desc">персональные тренировки с инструктором, свободное плавание, аквааэробики уникальных форматов . . .</div>
+                                <div class="area__desc">персональные тренировки с инструктором, свободное плавание, аквааэробики уникальных форматов</div>
                             </div>
                             <div class="area__item swiper-slide">
                                 <div class="area__title">пилатес</div>
-                                <div class="area__desc">специальный комплекс упражнений, направленный на стабилизацию позвоночника . . .</div>
+                                <div class="area__desc">специальный комплекс упражнений, направленный на стабилизацию позвоночника</div>
                             </div>
                             <div class="area__item swiper-slide">
                                 <div class="area__title">групповые программы</div>
-                                <div class="area__desc">разнообразные направления групповых занятий позволяют сделать тренировки  динамичными . . .</div>
+                                <div class="area__desc">разнообразные направления групповых занятий позволяют сделать тренировки  динамичными</div>
                             </div>
                             <div class="area__item swiper-slide">
                                 <div class="area__title">Восточные единоборства</div>
-                                <div class="area__desc">Регулярные занятия единоборствами – не только отличная функциональная нагрузка, но и способ укрепить нервную систему . . .</div>
+                                <div class="area__desc">Регулярные занятия единоборствами – не только отличная функциональная нагрузка, но и способ укрепить нервную систему</div>
                             </div>
                             <div class="area__item swiper-slide">
                                 <div class="area__title">игровой зал</div>
-                                <div class="area__desc">тренировки в игровом зале по таким видам спорта, как футбол, волейбол, баскетбол, теннис . . . </div>
+                                <div class="area__desc">тренировки в игровом зале по таким видам спорта, как футбол, волейбол, баскетбол, теннис</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main-gallery" id="main-gallery">
+        </section>
+        <!-- Галерея интерьера -->
+        <section class="main-gallery" id="main-gallery" aria-labelledby="gallery-title">
             <div class="main-gallery__container container">
-                <div class="main-gallery__title">
+                <h2 class="main-gallery__title" id="gallery-title">
                     <span>Наш стильный интерьер, идеально подходит</span>
                     для тренировок<br> <b>и красивых фото</b>
-                </div>
+                </h2>
             </div>
             <div class="main-gallery__wrap swiper">
                 <div class="main-gallery__list swiper-wrapper">
@@ -300,14 +311,15 @@
             <div class="main-gallery__pagination">
                 <div class="slider-progressbar"></div>
             </div>
-        </div>
-        <div class="about" id="about">
+        </section>
+        <!-- О клубе -->
+        <section class="about" id="about" aria-labelledby="about-title">
             <div class="about__container container">
                 <picture class="about__logo">
                     <source srcset="images/lime-mobile.svg" media="(max-width: 767px)" />
                     <img src="images/lime.svg" alt="">
                 </picture>
-                <div class="about__title">О lime fitness</div>
+                <h2 class="about__title" id="about-title">О lime fitness</h2>
                 <div class="about__desc">
                     <div class="about__desc-text">
                         <p>Мы команда профессионалов в области создания современных фитнес-центров мирового уровня. За нашими плечами несколько успешных проектов в других городах.</p>
@@ -327,19 +339,21 @@
                     -->
                 </div>
                 <div class="about__more">
-                    <a href="#" class="btn_more">хочу стать частью команды</a>
+                    <a href="#" data-popup-open="popup-form" data-title="Хочу стать частью команды" class="btn_more">хочу стать частью команды</a>
                 </div>
             </div>
-        </div>
-        <div class="about-scheme" id="about-scheme">
+        </section>
+        <!-- Схема этажей -->
+        <section class="about-scheme" id="about-scheme" aria-labelledby="about-scheme-title">
             <div class="about-scheme__container container">
+                <h2 class="visually-hidden" id="about-scheme-title">Схема клуба по этажам</h2>
                 <div class="about-scheme__wrap">
                     <div class="about-scheme__info">
-                        <div class="about-scheme__nav">
+                        <nav class="about-scheme__nav" aria-label="Навигация по этажам">
                             <a class="active" href="#floor-1">1 этаж</a>
                             <a href="#floor-2">2 этаж</a>
-                        </div>
-                        <div class="about-scheme__item" data-id="floor-1">
+                        </nav>
+                        <div class="about-scheme__item active" data-id="floor-1">
                             <ul>
                                 <li>Рецепция</li>
                                 <li>Залы детского фитнеса</li>
@@ -371,18 +385,37 @@
                                 <li>Гидромассаж</li>
                             </ul>
                         </div>
+                        <div class="about-scheme__item" data-id="floor-2">
+                            <ul>
+                                <li>Кардио-линия</li>
+                                <li>Блочные тренажеры и свободные веса</li>
+                                <li>Функциональная зона</li>
+                                <li>Единоборства, боксерский ринг</li>
+                                <li>Большой зал групповых программ</li>
+                                <li>Студия antigravity yoga</li>
+                                <li>Сайкл-студия</li>
+                                <li>Универсальный игровой зал</li>
+                                <li>Пилатес-студия</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="about-scheme__floor">
-                        <img src="images/floor-01.png" alt="">
+                        <a class="active" href="images/floor-01.png" data-fancybox="" data-id="floor-1">
+                            <img src="images/floor-01.png" alt="">
+                        </a>
+                        <a href="images/floor-02.png" data-fancybox="" data-id="floor-2">
+                            <img src="images/floor-02.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="order" id="order">
+        </section>
+        <!-- Заявка на вступление -->
+        <section class="order" id="order" aria-labelledby="order-title">
             <div class="order__container container">
                 <div class="order__form">
                     <div class="inline-form">
-                        <div class="inline-form__title">Хочу в Лайм Фитнес</div>
+                        <h2 class="inline-form__title" id="order-title">Хочу в Лайм Фитнес</h2>
                         <div class="inline-form__content">
                             <form action="#">
                                 <div class="inline-form__row">
@@ -421,7 +454,7 @@
                     <img src="images/about.jpg" alt="О lime fitness">
                 </div>
             </div>
-        </div>
+        </section>
         <footer class="footer" id="footer">
             <div class="footer__container container">
                 <div class="footer__grid">
@@ -466,11 +499,14 @@
                 </a>
             </li>
         </ul>
-        <div class="side-panel">
+        <aside class="side-panel">
             <button data-popup-open="popupDropdown" class="btn-burger">
                 <img src="images/burger.svg" alt="Открыть меню">
             </button>
-        </div>
+            <div class="side-panel__logo">
+                <img src="images/logo-vertical.svg" alt="">
+            </div>
+        </aside>
         <div class="popup-form popup" id="popup-form">
             <div class="popup-form__wrap">
                 <button data-popup-close class="popup-form__close">
@@ -564,6 +600,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="up js-up">
+            <img src="images/up.svg" alt="Наверх">
         </div>
     </main>
 </body>
