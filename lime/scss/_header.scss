@@ -21,6 +21,10 @@
 
       &__phone {
 
+        a {
+          font-size: 4.5rem;
+        }
+
         @media (max-width: 767px) {
           display: none;
         }
