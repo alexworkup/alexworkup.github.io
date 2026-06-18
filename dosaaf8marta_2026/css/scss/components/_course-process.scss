@@ -1,0 +1,205 @@
+.course-process {
+  padding-top: 9rem;
+
+  @media (max-width: 767px) {
+    padding-top: 3rem;
+  }
+
+  &__head {
+    margin-bottom: 1.7rem;
+  }
+
+  &__scheme {
+    padding: 5.5rem 0;
+    background: $bg-light;
+
+    @media (max-width: 767px) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  &__list {
+    padding: 0 7rem;
+    margin: 0;
+    list-style: none;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8.5rem;
+    height: 100%;
+
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      gap: 2.3rem;
+      padding: 0;
+      max-width: 21.5rem;
+    }
+
+    &-wrap {
+      max-width: 108.5rem;
+      margin: 0 auto;
+      position: relative;
+      height: 34.5rem;
+
+      @media (max-width: 767px) {
+        height: auto;
+        display: flex;
+        column-gap: .8rem;
+        align-items: center;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 124%;
+    text-align: center;
+    color: $text;
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+
+  &__road {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 767px) {
+      position: relative;
+      width: 12.6rem;
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 114%;
+    text-align: center;
+    color: $text-muted;
+    min-height: 6.5rem;
+    display: inline-flex;
+
+    @media (max-width: 767px) {
+      text-align: left;
+      min-height: auto;
+    }
+  }
+
+  &__number {
+    width: 11.8rem;
+    height: 11.8rem;
+    border-radius: 50%;
+    background-color: #263D4F;
+    font-weight: 700;
+    font-size: 4.5rem;
+    line-height: 75%;
+    letter-spacing: -0.02em;
+    color: $white;
+    font-family: "Roboto", Arial, sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    span {
+      position: relative;
+    }
+
+    &:before {
+      content: '';
+      width: 85%;
+      height: 85%;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #3B5E79;
+      position: absolute;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 8rem 0;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
+    &--top {
+
+      .course-process__body {
+        flex-direction: column-reverse;
+        top: 0;
+
+        @media (max-width: 767px) {
+          flex-direction: column;
+        }
+      }
+
+      .course-process__name {
+        margin-top: 1rem;
+
+        @media (max-width: 767px) {
+          margin-top: 0;
+          margin-bottom: .5rem;
+        }
+      }
+
+      .course-process__text {
+        align-items: flex-end;
+      }
+    }
+
+    &--bottom {
+
+      .course-process__body {
+        bottom: 0;
+      }
+
+      .course-process__name {
+        margin-bottom: 1rem;
+
+        @media (max-width: 767px) {
+          margin-bottom: .5rem;
+        }
+      }
+
+      .course-process__text {
+        align-items: flex-start;
+      }
+    }
+
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: 767px) {
+      position: relative;
+      width: 100%;
+      left: initial;
+      transform: none;
+    }
+  }
+
+}

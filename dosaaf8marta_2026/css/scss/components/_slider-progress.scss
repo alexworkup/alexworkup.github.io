@@ -1,0 +1,12 @@
+.slider-progress {
+
+  &.swiper-pagination {
+    height: 2px!important;
+    border-radius: 10px;
+    background: $white;
+
+    .swiper-pagination-progressbar-fill {
+      background: $accent;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.school-stats {
+  position: relative;
+  margin-top: 7rem;
+  padding: 2rem 0;
+  background: rgba(255, 255, 255, 0.8);
+
+  @media (max-width: 767px) {
+    margin-top: 2.6rem;
+    padding: 3rem 0;
+    background: rgba(255, 255, 255, 1);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 1.4rem;
+      top: 50%;
+      width: calc(100% - 2.8rem);
+      height: 1px;
+      background: #e7e9ee;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width: 767px) {
+      row-gap: 5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__value {
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 87%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #224750;
+    font-family: "Roboto", Arial, sans-serif;
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 100%;
+    text-align: center;
+    color: $text-muted;
+    margin-top: .4rem;
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+}

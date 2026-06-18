@@ -1,0 +1,154 @@
+.site-search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4.8rem 4.8rem 13rem;
+  align-items: center;
+  min-height: 4.8rem;
+  border: 1px solid #dbdde1;
+  border-radius: 10rem;
+  background: $white;
+  overflow: hidden;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+
+  &__field {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    height: 100%;
+    padding-left: 1.6rem;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1.4rem;
+    background-image: url("../images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    color: $text;
+    font-size: 1.4rem;
+    line-height: 1;
+    outline: none;
+
+    &::placeholder {
+      color: #b0bbca;
+      opacity: 1;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  &__clear,
+  &__voice {
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__clear {
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1.4rem;
+      height: 2px;
+      border-radius: 1rem;
+      background: #9FACBF;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &.has-value {
+    .site-search__clear {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__voice {
+    //border-left: 1px solid #e7eef4;
+    background-image: url('../images/icon-mic.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__submit {
+    height: 4.8rem;
+    border: 0;
+    border-radius: 10rem;
+    background: $brand;
+    color: $accent;
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 600;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: #0f424b;
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: minmax(0, 1fr) 4.6rem;
+    min-height: 4.6rem;
+    border-radius: 1.2rem;
+
+    &__field {
+      padding-left: 1.4rem;
+    }
+
+    &__input {
+      font-size: 1.4rem;
+    }
+
+    &__clear,
+    &__voice {
+      display: none;
+    }
+
+    &__submit {
+      width: 4.6rem;
+      height: 4.6rem;
+      padding: 0;
+      font-size: 0;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin: 0 auto;
+        background: #f5a400;
+        mask: url('../images/icon-search.svg') center / contain no-repeat;
+      }
+    }
+  }
+}

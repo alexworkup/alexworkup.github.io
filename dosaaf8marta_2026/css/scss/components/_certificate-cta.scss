@@ -1,0 +1,76 @@
+.certificate-cta {
+  padding: 4rem 7rem 4rem 30rem;
+  box-shadow: 0 .4rem 3rem 0 rgba(26, 32, 44, 0.1);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $white 100%);
+  border-radius: 1.6rem;
+  position: relative;
+
+  @media (max-width: 767px) {
+    padding: 19rem 1.4rem 1.4rem 1.4rem;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 115%;
+    color: #0f2550;
+
+    @media (max-width: 767px) {
+      font-size: 1.6rem;
+      line-height: 130%;
+    }
+
+    span {
+      color: $red-dark;
+
+      @media (max-width: 767px) {
+        font-size: 2rem;
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: $text-grey;
+    margin-top: 2rem;
+
+    @media (max-width: 767px) {
+      margin-top: .5rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    max-width: 24rem;
+    left: .7rem;
+    top: -2.4rem;
+
+    @media (max-width: 767px) {
+      max-width: 27rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

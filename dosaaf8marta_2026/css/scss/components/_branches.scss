@@ -1,0 +1,102 @@
+.branches {
+  padding: 7rem 0;
+  background: $white;
+
+  &__head {
+    margin-bottom: 4rem;
+
+    .section-head__title {
+      span {
+        color: #b11218;
+      }
+    }
+  }
+
+  &__search {
+    margin-bottom: 2rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 31rem minmax(0, 1fr);
+    gap: 2.4rem;
+    align-items: stretch;
+  }
+
+  &__aside {
+    min-width: 0;
+  }
+
+  &__list {
+    max-height: 51rem;
+    padding-right: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9aa6b2 transparent;
+    padding-bottom: 1rem;
+  }
+
+  &__all {
+    width: 100%;
+    min-height: 4.8rem;
+    margin-top: 0.8rem;
+    border-radius: 10px;
+  }
+
+  &__map {
+    position: relative;
+    height: 56rem;
+    min-height: 56rem;
+    border: 0.1rem solid #dce4ea;
+    border-radius: 1.4rem;
+    overflow: hidden;
+    background: #eef1f3;
+  }
+
+  // Немного обесцвечиваем стандартную подложку Яндекс.Карты
+  &__map [class*='ground-pane'] {
+    filter: grayscale(1);
+  }
+
+  @media (max-width: 1024px) {
+    &__body {
+      grid-template-columns: 1fr;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
+      max-height: none;
+      padding-right: 0;
+      overflow: visible;
+    }
+
+    &__map {
+      height: 42rem;
+      min-height: 42rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 4rem 0;
+
+    &__head {
+      margin-bottom: 3rem;
+    }
+
+    &__body {
+      gap: 1.6rem;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__map {
+      height: 36rem;
+      min-height: 36rem;
+      border-radius: 1.2rem;
+    }
+  }
+}

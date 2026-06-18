@@ -1,0 +1,145 @@
+.student-app {
+  padding: 6rem 0;
+  
+  @media (max-width: 767px) {
+    padding: 3rem 0;
+  }
+
+  &__head {
+
+    .section-head__title {
+
+      span {
+        color: $accent;
+      }
+    }
+  }
+
+  &__showcase {
+    margin-top: 5rem;
+    padding: 4.2rem 0;
+    background:
+            url('../images/student-app-left.jpg') left center / auto 100% no-repeat,
+            url('../images/student-app-right.jpg') right center / auto 100% no-repeat,
+            #e8e6e3;
+    
+    @media (max-width: 1280px) {
+
+      background:
+              url('../images/student-app-left.jpg') left center / auto 100% no-repeat
+              #e8e6e3;
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 0;
+      padding-top: 6rem;
+      margin-top: 8rem;
+    }
+  }
+
+  &__grid {
+
+    &.swiper-wrapper {
+
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+    }
+  }
+
+  &__phone {
+    width: 34rem;
+    height: 40rem;
+    position: absolute;
+    left: 0;
+    bottom: -4.2rem;
+    
+    @media (max-width: 767px) {
+      width: 26.7rem;
+      height: 31.4rem;
+      bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__slider {
+
+    &.swiper {
+
+      @media (min-width: 768px) {
+        padding-left: 24rem;
+      }
+
+      @media (max-width: 767px) {
+        padding-bottom: 3rem;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+      }
+    }
+  }
+
+  &__card {
+    border: 1px solid $white;
+    border-radius: 1.6rem;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.6);
+    padding: 2.4rem;
+    min-height: 14rem;
+
+    &.swiper-slide {
+
+      @media (max-width: 767px) {
+        height: auto;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 110%;
+      color: $text;
+
+      @media (max-width: 767px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 138%;
+      color: $text-muted;
+      margin-top: 1.6rem;
+
+      @media (max-width: 767px) {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  &__progress {
+    display: none;
+    bottom: 1.4rem;
+    top: initial!important;
+    width: calc(100% - 5.6rem) !important;
+    left: 2.8rem !important;
+    
+    @media (max-width: 767px) {
+      display: block;
+    }
+
+  }
+
+  &__inner {
+    padding: 0;
+  }
+}

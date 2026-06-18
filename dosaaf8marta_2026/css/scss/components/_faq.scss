@@ -1,0 +1,127 @@
+.faq {
+  padding: 7rem 0;
+  background: $bg-light;
+
+  @media (max-width: 767px) {
+    padding: 3rem 0;
+  }
+
+  &__head {
+    margin-bottom: 3.7rem;
+
+    @media (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__question {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $text;
+    list-style: none;
+    padding: 1.9rem 2.4rem 1.9rem 0;
+    position: relative;
+    cursor: pointer;
+    
+    @media (max-width: 767px) {
+      padding: 1.6rem 2.4rem 1.6rem 0;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__plus {
+    position: absolute;
+    right: 0;
+    top: 1.9rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0.9rem;
+      height: 0.1rem;
+      border-radius: 1rem;
+      background: #728098;
+      transform: translate(-50%, -50%);
+      transition: 0.2s ease;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__item[open] {
+
+    .faq__answer {
+      opacity: 1;
+      padding-bottom: 2rem;
+    }
+
+    .faq__plus {
+      background: $text-muted;
+    }
+
+    .faq__plus::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: $white;
+    }
+
+    .faq__plus::after {
+      transform: translate(-50%, -50%) rotate(135deg);
+      background: $white;
+    }
+  }
+
+  &__item:not([open]) {
+
+    .faq__answer {
+      opacity: 0;
+    }
+  }
+
+  &__answer {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4c5c74;
+    overflow: hidden;
+    transition:
+            height 0.28s ease,
+            opacity 0.28s ease;
+    display: flex;
+    column-gap: 2rem;
+    align-items: flex-start;
+    padding-left: 2rem;
+
+    p {
+      max-width: 77.5rem;
+    }
+
+    img {
+      max-width: 6rem;
+      flex-shrink: 0;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  &__certificate {
+    margin-top: 8rem;
+  }
+
+}

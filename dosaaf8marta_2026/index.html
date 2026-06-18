@@ -1,0 +1,3000 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_KEY&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="js/ripple/vanilla-ripplejs.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__desktop">
+        <div class="header__top">
+            <div class="header__container container">
+                <div class="header__top-inner">
+                    <nav class="header__top-nav" aria-label="Дополнительное меню" data-header-overflow-nav="top">
+                        <a href="#">О компании</a>
+                        <a href="#">Полезная информация</a>
+                        <a href="#">Сведения об образовательной организации</a>
+                        <a href="#">Часто задаваемые вопросы</a>
+                        <a href="#">Отзывы</a>
+                        <a href="#">Контакты</a>
+                    </nav>
+
+                    <details class="header__more header__more--top" data-header-more="top">
+                        <summary class="header__more-toggle">
+                            Ещё
+                        </summary>
+
+                        <div class="header__more-list" data-header-more-list="top"></div>
+                    </details>
+
+                    <a class="header__phone" href="tel:+73512201415">
+                        <span class="header__phone-icon"><img src="images/icon-phone.svg" alt=""></span>
+                        +7 (351) 220-14-15
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="header__container container">
+
+                <div class="header__main-inner">
+
+                    <a class="header__logo" href="/">
+                        <img src="images/logo.png" alt="ДОСААФ Автошкола">
+                    </a>
+
+                    <nav class="header__main-nav" aria-label="Основное меню" data-header-overflow-nav="main">
+                        <a href="#">Категории и цены</a>
+                        <a href="#">Инструкторы</a>
+                        <a href="#">Филиалы</a>
+                        <a class="is-accent" href="#">Акции</a>
+                        <a href="#">Оплатить обучение</a>
+                    </nav>
+
+                    <details class="header__more header__more--main" data-header-more="main">
+                        <summary class="header__more-toggle">
+                            Ещё
+                        </summary>
+
+                        <div class="header__more-list" data-header-more-list="main"></div>
+                    </details>
+
+                    <div class="socials header__socials">
+                        <a class="socials__link socials__link--max" href="#" aria-label="MAX">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="4" width="21" height="21" rx="7" fill="#8A9FA4" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7387 10.4546C12.7763 10.3582 11.2449 11.634 10.9072 13.6308C10.6276 15.2845 11.1234 17.2994 11.5475 17.4009C11.7274 17.4439 12.1603 17.1337 12.4752 16.8554C12.5344 16.8031 12.6239 16.7943 12.6934 16.8341C13.1843 17.1154 13.7401 17.3267 14.3529 17.3568C16.3675 17.4558 18.1529 15.9785 18.2584 14.0908C18.3639 12.2031 16.7534 10.5536 14.7387 10.4546ZM11.4525 20.0412C11.3766 19.9908 11.2719 20.0044 11.2082 20.0681C10.3571 20.9186 8.17891 21.5152 8.07914 20.3543C8.07914 19.4448 7.86111 18.6784 7.62105 17.8346C7.32704 16.8011 7 15.6515 7 13.9807C7 9.99638 10.4876 7 14.6227 7C18.7579 7 22 10.1427 22 14.0194C22 17.8961 18.6547 20.9614 14.6619 20.9614C13.2453 20.9614 12.5579 20.7744 11.4525 20.0412Z" fill="#0A1C20" />
+                            </svg>
+                        </a>
+
+                        <a class="socials__link socials__link--vk" href="#" aria-label="VK">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="4" width="21" height="21" rx="5" fill="#8A9FA4" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6236 10.7072C11.8505 10.821 12.3797 10.7618 12.5698 11.456C12.741 12.0813 12.734 13.5767 12.6016 14.2728C12.2356 16.1976 10.6906 13.1532 10.3092 12.4845C10.1118 12.1381 9.76821 11.3483 9.61555 10.9629C9.35219 10.298 8.72079 10.4396 7.96826 10.4396C7.68517 10.4396 7.49406 10.467 7.22696 10.4664C6.80901 10.4654 6 10.3807 6 10.7875C6 11.0986 6.16843 11.4096 6.29818 11.6794L6.99729 13.1417C7.11944 13.3875 7.2315 13.6338 7.36953 13.8759L7.74936 14.5753C8.74971 16.3045 9.95161 18.3327 11.7514 19.2695C13.1156 19.9796 13.7577 19.9652 15.2535 19.9652C15.4863 19.9652 15.7788 19.8325 15.8597 19.6633C15.9584 19.457 15.9483 19.1156 15.9698 18.842C16.0225 18.1757 16.3317 17.2964 17.0791 17.84C17.4332 18.0976 17.8636 18.6977 18.1867 19.0354C18.3618 19.2184 18.5737 19.4579 18.7703 19.6018C18.871 19.6756 19.0378 19.7819 19.1419 19.8284C19.7599 20.1038 20.4697 19.965 21.235 19.9652C21.6598 19.9654 22.4002 20.0387 22.7582 19.7937C23.3259 19.4051 22.7582 18.7107 22.4365 18.2795C22.2526 18.0333 21.5434 17.2469 21.2923 17.0154C19.6485 15.5002 19.9774 15.7459 21.6805 13.3676C22.0378 12.8686 22.9988 11.5612 22.9988 10.8677C22.9988 10.5042 22.6307 10.4731 22.3553 10.4424C22.2136 10.4268 22.1742 10.4655 22.0285 10.4674C21.5757 10.4733 19.5139 10.4155 19.256 10.5086C19.0894 10.5688 18.9947 10.7482 18.927 10.9134C18.5438 11.8473 18.2826 12.4904 17.7332 13.3565C17.5108 13.7071 16.7984 14.8813 16.3526 14.8813C16.0332 14.8813 15.9181 14.2154 15.9181 13.8913C15.9181 12.9083 15.9692 12.0115 15.9692 11.0551C15.9692 10.8514 15.9272 10.638 15.8632 10.4971C15.5838 9.88137 14.0626 10.0115 13.3619 10.0115C12.8558 10.0115 12.0399 10.0663 11.7248 10.492C11.6758 10.5583 11.6327 10.5938 11.6236 10.7072Z" fill="#0A1C20" />
+                            </svg>
+                        </a>
+
+                        <a class="socials__link socials__link--tg" href="#" aria-label="Telegram">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26 14.5C26 20.8513 20.8513 26 14.5 26C8.14873 26 3 20.8513 3 14.5C3 8.14873 8.14873 3 14.5 3C20.8513 3 26 8.14873 26 14.5ZM14.9121 11.4898C13.7936 11.9551 11.558 12.918 8.20555 14.3786C7.66116 14.5951 7.37599 14.8069 7.35003 15.014C7.30615 15.3639 7.74442 15.5018 8.34123 15.6894C8.42241 15.7149 8.50653 15.7414 8.59276 15.7694C9.17994 15.9603 9.96978 16.1836 10.3804 16.1925C10.7529 16.2005 11.1686 16.0469 11.6275 15.7318C14.7599 13.6174 16.3768 12.5487 16.4783 12.5256C16.5499 12.5094 16.6491 12.4889 16.7164 12.5487C16.7836 12.6085 16.777 12.7216 16.7699 12.752C16.7265 12.9371 15.0061 14.5365 14.1158 15.3642C13.8383 15.6222 13.6414 15.8053 13.6011 15.8471C13.511 15.9407 13.4191 16.0293 13.3308 16.1144C12.7853 16.6403 12.3762 17.0346 13.3535 17.6786C13.823 17.9881 14.1988 18.244 14.5737 18.4992C14.9831 18.7781 15.3915 19.0562 15.9199 19.4025C16.0545 19.4908 16.183 19.5824 16.3083 19.6717C16.7847 20.0114 17.2128 20.3165 17.7416 20.2679C18.0489 20.2396 18.3663 19.9506 18.5275 19.0889C18.9085 17.0522 19.6574 12.6394 19.8304 10.8209C19.8456 10.6616 19.8265 10.4577 19.8112 10.3682C19.7959 10.2787 19.7639 10.1512 19.6475 10.0568C19.5098 9.94498 19.2971 9.92141 19.2019 9.92308C18.7694 9.9307 18.1058 10.1615 14.9121 11.4898Z" fill="#8A9FA4" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <a class="btn btn--primary header__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="mobile-header header__mobile" data-mobile-header>
+        <div class="mobile-header__top-nav">
+            <a href="">О компании</a>
+            <a href="">Контакты</a>
+        </div>
+        <div class="mobile-header__bar">
+            <a class="mobile-header__logo" href="/">
+                <img src="images/logo.png" alt="ДОСААФ Автошкола">
+            </a>
+
+            <a class="mobile-header__phone" href="tel:+73512201415">
+            <span class="mobile-header__phone-icon">
+                <img src="images/icon-phone-red.svg" alt="">
+            </span>
+                +7 (351) 220-14-15
+            </a>
+
+            <button
+                    class="mobile-header__toggle"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    data-mobile-menu-toggle
+            >
+                <span></span>
+            </button>
+        </div>
+
+        <div class="mobile-header__panel" aria-hidden="true" data-mobile-menu>
+            <div class="mobile-header__panel-inner">
+                <nav class="mobile-header__main-nav" aria-label="Основное меню">
+                    <a href="#">Категории и цены</a>
+                    <a href="#">Инструкторы</a>
+                    <a href="#">Филиалы</a>
+                    <a class="is-accent" href="#">Акции</a>
+                    <a href="#">Оплатить обучение</a>
+                </nav>
+
+                <nav class="mobile-header__secondary-nav" aria-label="Дополнительное меню">
+                    <a href="#">О компании</a>
+                    <a href="#">Полезная информация</a>
+                    <a href="#">Сведения об образовательной организации</a>
+                    <a href="#">Часто задаваемые вопросы</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Контакты</a>
+                </nav>
+
+                <div class="mobile-header__bottom">
+                    <a class="mobile-header__contact" href="tel:+73512201415">
+                        <span class="mobile-header__contact-icon">
+                            <img src="images/icon-phone-red.svg" alt="">
+                        </span>
+                        +7 (351) 220-14-15
+                    </a>
+                    <div class="socials mobile-header__socials header__socials">
+
+                        <a class="socials__link socials__link--max" href="#" aria-label="MAX">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="4" width="21" height="21" rx="7" fill="#8A9FA4"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7387 10.4546C12.7763 10.3582 11.2449 11.634 10.9072 13.6308C10.6276 15.2845 11.1234 17.2994 11.5475 17.4009C11.7274 17.4439 12.1603 17.1337 12.4752 16.8554C12.5344 16.8031 12.6239 16.7943 12.6934 16.8341C13.1843 17.1154 13.7401 17.3267 14.3529 17.3568C16.3675 17.4558 18.1529 15.9785 18.2584 14.0908C18.3639 12.2031 16.7534 10.5536 14.7387 10.4546ZM11.4525 20.0412C11.3766 19.9908 11.2719 20.0044 11.2082 20.0681C10.3571 20.9186 8.17891 21.5152 8.07914 20.3543C8.07914 19.4448 7.86111 18.6784 7.62105 17.8346C7.32704 16.8011 7 15.6515 7 13.9807C7 9.99638 10.4876 7 14.6227 7C18.7579 7 22 10.1427 22 14.0194C22 17.8961 18.6547 20.9614 14.6619 20.9614C13.2453 20.9614 12.5579 20.7744 11.4525 20.0412Z" fill="#0A1C20"></path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link socials__link--vk" href="#" aria-label="VK">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4" y="4" width="21" height="21" rx="5" fill="#8A9FA4"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6236 10.7072C11.8505 10.821 12.3797 10.7618 12.5698 11.456C12.741 12.0813 12.734 13.5767 12.6016 14.2728C12.2356 16.1976 10.6906 13.1532 10.3092 12.4845C10.1118 12.1381 9.76821 11.3483 9.61555 10.9629C9.35219 10.298 8.72079 10.4396 7.96826 10.4396C7.68517 10.4396 7.49406 10.467 7.22696 10.4664C6.80901 10.4654 6 10.3807 6 10.7875C6 11.0986 6.16843 11.4096 6.29818 11.6794L6.99729 13.1417C7.11944 13.3875 7.2315 13.6338 7.36953 13.8759L7.74936 14.5753C8.74971 16.3045 9.95161 18.3327 11.7514 19.2695C13.1156 19.9796 13.7577 19.9652 15.2535 19.9652C15.4863 19.9652 15.7788 19.8325 15.8597 19.6633C15.9584 19.457 15.9483 19.1156 15.9698 18.842C16.0225 18.1757 16.3317 17.2964 17.0791 17.84C17.4332 18.0976 17.8636 18.6977 18.1867 19.0354C18.3618 19.2184 18.5737 19.4579 18.7703 19.6018C18.871 19.6756 19.0378 19.7819 19.1419 19.8284C19.7599 20.1038 20.4697 19.965 21.235 19.9652C21.6598 19.9654 22.4002 20.0387 22.7582 19.7937C23.3259 19.4051 22.7582 18.7107 22.4365 18.2795C22.2526 18.0333 21.5434 17.2469 21.2923 17.0154C19.6485 15.5002 19.9774 15.7459 21.6805 13.3676C22.0378 12.8686 22.9988 11.5612 22.9988 10.8677C22.9988 10.5042 22.6307 10.4731 22.3553 10.4424C22.2136 10.4268 22.1742 10.4655 22.0285 10.4674C21.5757 10.4733 19.5139 10.4155 19.256 10.5086C19.0894 10.5688 18.9947 10.7482 18.927 10.9134C18.5438 11.8473 18.2826 12.4904 17.7332 13.3565C17.5108 13.7071 16.7984 14.8813 16.3526 14.8813C16.0332 14.8813 15.9181 14.2154 15.9181 13.8913C15.9181 12.9083 15.9692 12.0115 15.9692 11.0551C15.9692 10.8514 15.9272 10.638 15.8632 10.4971C15.5838 9.88137 14.0626 10.0115 13.3619 10.0115C12.8558 10.0115 12.0399 10.0663 11.7248 10.492C11.6758 10.5583 11.6327 10.5938 11.6236 10.7072Z" fill="#0A1C20"></path>
+                            </svg>
+                        </a>
+
+                        <a class="socials__link socials__link--tg" href="#" aria-label="Telegram">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26 14.5C26 20.8513 20.8513 26 14.5 26C8.14873 26 3 20.8513 3 14.5C3 8.14873 8.14873 3 14.5 3C20.8513 3 26 8.14873 26 14.5ZM14.9121 11.4898C13.7936 11.9551 11.558 12.918 8.20555 14.3786C7.66116 14.5951 7.37599 14.8069 7.35003 15.014C7.30615 15.3639 7.74442 15.5018 8.34123 15.6894C8.42241 15.7149 8.50653 15.7414 8.59276 15.7694C9.17994 15.9603 9.96978 16.1836 10.3804 16.1925C10.7529 16.2005 11.1686 16.0469 11.6275 15.7318C14.7599 13.6174 16.3768 12.5487 16.4783 12.5256C16.5499 12.5094 16.6491 12.4889 16.7164 12.5487C16.7836 12.6085 16.777 12.7216 16.7699 12.752C16.7265 12.9371 15.0061 14.5365 14.1158 15.3642C13.8383 15.6222 13.6414 15.8053 13.6011 15.8471C13.511 15.9407 13.4191 16.0293 13.3308 16.1144C12.7853 16.6403 12.3762 17.0346 13.3535 17.6786C13.823 17.9881 14.1988 18.244 14.5737 18.4992C14.9831 18.7781 15.3915 19.0562 15.9199 19.4025C16.0545 19.4908 16.183 19.5824 16.3083 19.6717C16.7847 20.0114 17.2128 20.3165 17.7416 20.2679C18.0489 20.2396 18.3663 19.9506 18.5275 19.0889C18.9085 17.0522 19.6574 12.6394 19.8304 10.8209C19.8456 10.6616 19.8265 10.4577 19.8112 10.3682C19.7959 10.2787 19.7639 10.1512 19.6475 10.0568C19.5098 9.94498 19.2971 9.92141 19.2019 9.92308C18.7694 9.9307 18.1058 10.1615 14.9121 11.4898Z" fill="#8A9FA4"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="course-hero">
+    <picture class="course-hero__picture" aria-hidden="true">
+        <source srcset="images/hero-bg-mobile.jpg" media="(max-width: 767px)">
+        <img src="images/hero-bg.jpg" alt="" class="course-hero__image">
+    </picture>
+    <div class="course-hero__container container">
+        <div class="course-hero__inner">
+            <div class="course-hero__content">
+                <div class="course-hero__label">
+                    Набор открыт · ближайшая группа через 5 дней
+                </div>
+
+                <h1 class="course-hero__title">
+                    Автошкола ДОСААФ для тех, кто живёт <span>по своему графику</span>
+                </h1>
+
+                <p class="course-hero__text">
+                    Вечерние, утренние, дневные, выходные, сменный график,
+                    онлайн-теория — подберём под вас. Категории А, В, C, D, E.
+                    29 филиалов. ДОСААФ — с 1970 года.
+                </p>
+
+                <ul class="course-hero__tags">
+                    <li>Вечерние</li>
+                    <li>Утренние</li>
+                    <li>Дневные</li>
+                    <li>По выходным</li>
+                    <li>Сменный график</li>
+                    <li>Раз в неделю</li>
+                    <li>Ускоренный</li>
+                    <li>Онлайн</li>
+                </ul>
+
+                <div class="course-hero__actions">
+                    <a class="btn btn--primary" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+
+                    <a class="btn btn--outline" href="#categories" data-scroll-to>
+                        Подобрать категорию
+                    </a>
+                </div>
+
+                <ul class="trust-list course-hero__trust" aria-label="Показатели автошколы">
+                    <li class="trust-list__item">
+                        <div class="trust-list__stars" aria-label="5 из 5">
+                            <span class="trust-list__stars-fill"></span>
+                        </div>
+
+                        <div class="trust-list__content">
+                            <span class="trust-list__text"><b>5.0</b> на</span>
+                            <img src="images/2gis-logo.svg" alt="2ГИС">
+                        </div>
+                    </li>
+
+                    <li class="trust-list__item">
+                        <div class="trust-list__stars" aria-label="4.9 из 5">
+                            <span class="trust-list__stars-fill" style="width: 90%;"></span>
+                        </div>
+
+                        <div class="trust-list__content">
+                            <span class="trust-list__text"><b>4.9</b> на</span>
+                            <img src="images/Yandex-logo.svg" alt="Яндекс">
+                        </div>
+                    </li>
+
+                    <li class="trust-list__item trust-list__item--success">
+                        <div class="trust-list__accent">92% сдают</div>
+
+                        <div class="trust-list__content">
+                            <span class="trust-list__text"><b>с 1–2</b> раза</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <form class="course-hero__form lead-form lead-form--glass" action="#" method="post" data-lead-form>
+                <div class="lead-form__head">
+                    <h2 class="lead-form__title">Записаться на курс</h2>
+                    <p class="lead-form__subtitle">Ответим в течение 15 минут</p>
+                </div>
+
+                <label class="lead-form__field">
+                    <span class="lead-form__label">Ваше имя</span>
+
+                    <input
+                            class="lead-form__control"
+                            type="text"
+                            name="name"
+                            placeholder="Иван Иванов"
+                            autocomplete="name"
+                            required
+                    >
+                </label>
+
+                <label class="lead-form__field">
+                    <span class="lead-form__label">Телефон</span>
+
+                    <input
+                            class="lead-form__control"
+                            type="tel"
+                            name="phone"
+                            placeholder="+7 (___) ___-__-__"
+                            autocomplete="tel"
+                            data-phone
+                            required
+                    >
+                </label>
+
+                <label class="lead-form__field">
+                    <span class="lead-form__label">Категория прав</span>
+
+                    <span class="lead-form__select">
+                <select class="lead-form__control" name="category" required>
+                <option value="">Выберите категорию...</option>
+                <option value="a">Категория A — мотоцикл</option>
+                <option value="b">Категория B — легковые</option>
+                <option value="c">Категория C — грузовые</option>
+                <option value="d">Категория D — автобусы</option>
+                <option value="e">Категория E — прицепы</option>
+                </select>
+        </span>
+                </label>
+
+                <label class="lead-form__field">
+                    <span class="lead-form__label">Удобное расписание</span>
+
+                    <span class="lead-form__select">
+            <select class="lead-form__control" name="schedule" required>
+                <option value="">Выберите формат...</option>
+                <option value="evening">Вечерние группы</option>
+                <option value="morning">Утренние группы</option>
+                <option value="weekend">Выходного дня</option>
+                <option value="intensive">Ускоренный</option>
+                <option value="online">Онлайн-теория</option>
+            </select>
+        </span>
+                </label>
+
+                <button class="btn btn--primary lead-form__submit" type="submit">
+                    Подобрать группу
+                </button>
+
+                <label class="lead-form__agree">
+                    <input type="checkbox" name="agreement" checked required>
+
+                    <span class="lead-form__check" aria-hidden="true"></span>
+
+                    <span class="lead-form__agree-text">
+            Я даю согласие на обработку персональных данных согласно
+            <a href="#">пользовательскому соглашению</a> и
+            <a href="#">политике обработки персональных данных сайта</a>
+        </span>
+                </label>
+            </form>
+        </div>
+    </div>
+    <section class="school-stats" aria-label="Ключевые показатели автошколы">
+        <div class="school-stats__container container">
+            <ul class="school-stats__list">
+                <li class="school-stats__item">
+                    <div class="school-stats__value">29</div>
+                    <div class="school-stats__text">
+                        филиалов<br>
+                        в Челябинске
+                    </div>
+                </li>
+                <li class="school-stats__item">
+                    <div class="school-stats__value">55+</div>
+                    <div class="school-stats__text">
+                        лет<br>
+                        работы
+                    </div>
+                </li>
+                <li class="school-stats__item">
+                    <div class="school-stats__value">1,5 млн</div>
+                    <div class="school-stats__text">
+                        выпускников<br>
+                        обучено
+                    </div>
+                </li>
+                <li class="school-stats__item">
+                    <div class="school-stats__value">5.0</div>
+                    <div class="school-stats__text">
+                        рейтинг<br>
+                        на 2ГИС
+                    </div>
+                </li>
+                <li class="school-stats__item">
+                    <div class="school-stats__value">92%</div>
+                    <div class="school-stats__text">
+                        сдают<br>
+                        с 1–2 раза
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+<section class="license-cats" id="license-cats">
+    <div class="license-cats__container container">
+        <header class="section-head license-cats__head">
+            <div class="section-head__eyebrow">Категории прав</div>
+            <h2 class="section-head__title">
+                Какие права вам нужны?
+            </h2>
+            <p class="section-head__text">
+                Выберите категорию — покажем доступные форматы, цены и ближайшие группы
+            </p>
+        </header>
+        <div class="license-cats__slider swiper" data-license-cats-slider>
+            <nav class="license-cats__list swiper-wrapper" aria-label="Категории прав">
+                <a class="license-cats__item swiper-slide" href="/categories/b/">
+                <span class="license-cats__picture">
+                    <img src="images/c-1.png" alt="Категория B — легковые">
+                </span>
+                    <span class="license-cats__name">
+                    Категория <b>В</b> — легковые
+                </span>
+                </a>
+                <a class="license-cats__item swiper-slide" href="/categories/a/">
+                <span class="license-cats__picture">
+                    <img src="images/c-2.png" alt="Категория A — мотоцикл">
+                </span>
+                    <span class="license-cats__name">
+                    Категория <b>A</b> — мотоцикл
+                </span>
+                </a>
+                <a class="license-cats__item swiper-slide" href="/categories/с/">
+                <span class="license-cats__picture">
+                    <img src="images/c-3.png" alt="C, D, E — профкатегории">
+                </span>
+                    <span class="license-cats__name">
+                    <b>C, D, E</b> — профкатегории
+                </span>
+                </a>
+                <a class="license-cats__item swiper-slide" href="/categories/">
+                <span class="license-cats__picture">
+                    <img src="images/c-4.png" alt="Переподготовка">
+                </span>
+                    <span class="license-cats__name">
+                    Переподготовка
+                </span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</section>
+<section class="learning-formats" id="formats">
+    <div class="learning-formats__container container">
+        <header class="section-head learning-formats__head">
+            <div class="section-head__eyebrow">Форматы обучения</div>
+
+            <h2 class="section-head__title">
+                Выберите удобный формат обучения
+            </h2>
+
+            <p class="section-head__text">
+                Все форматы доступны для категории B. По другим категориям — уточняйте у менеджера
+            </p>
+        </header>
+
+        <div class="learning-formats__grid">
+            <article class="format-card format-card--popular">
+                <div class="format-card__badge">Популярный</div>
+
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Вечерние группы</h3>
+
+                    <p class="format-card__text">
+                        Работаешь днём.<br>
+                        Занятия пн/ср/пт с 18:30
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-1.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· 2,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Выходного дня</h3>
+
+                    <p class="format-card__text">
+                        Суббота и воскресенье.<br>
+                        Идеально для занятых будни
+                    </p>
+
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-2.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· 3 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Утренние группы</h3>
+
+                    <p class="format-card__text">
+                        Работаешь вечером.<br>
+                        Занятия пн/ср/пт с 9:00
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-3.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· 2,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Ускоренный</h3>
+
+                    <p class="format-card__text">
+                        Права за 1,5 месяца.<br>
+                        Интенсив 3 раза в неделю
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-4.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>64 000 ₽</b> <span>· 1,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">ВИП — один-на-один</h3>
+
+                    <p class="format-card__text">
+                        Расписание полностью под вас.<br>
+                        Инструктор только ваш
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-5.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>79 000 ₽</b> <span>· 1,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Онлайн-теория</h3>
+
+                    <p class="format-card__text">
+                        Живые занятия с преподавателем<br>
+                        — не записи на YouTube
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-6.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>59 900 ₽</b> <span>· 2,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">1 раз в неделю</h3>
+
+                    <p class="format-card__text">
+                        Теория только по пятницам или только по субботам — для тех, кто не может чаще
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-7.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· 3–4 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Сменный график</h3>
+
+                    <p class="format-card__text">
+                        Работаешь 2/2 или посменно? Гибкое расписание подбираем индивидуально под вашу смену
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-8.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· уточняйте</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+
+            <article class="format-card">
+                <div class="format-card__content">
+                    <h3 class="format-card__title">Дневные группы</h3>
+
+                    <p class="format-card__text">
+                        Свободны в рабочее время?
+                        Занятия по будням с 13:00  — комфортно и без спешки
+                    </p>
+                </div>
+
+                <div class="format-card__image">
+                    <img src="images/card-9.png" alt="">
+                </div>
+
+                <div class="format-card__control">
+
+                    <div class="format-card__price">
+                        от <b>49 900 ₽</b> <span>· 2,5 мес</span>
+                    </div>
+
+                    <a class="btn btn--light format-card__button" href="#callback" data-scroll-to>
+                        Записаться
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<section class="advantages">
+    <div class="advantages__container container">
+        <header class="section-head section-head--light advantages__head">
+            <div class="section-head__eyebrow">Преимущества</div>
+
+            <h2 class="section-head__title">
+                Почему <span>ДОСААФ</span> доверяют с <span>1970 года</span>
+            </h2>
+        </header>
+
+        <div class="advantages__slider swiper" data-advantages-slider>
+            <div class="advantages__grid swiper-wrapper">
+                <article class="advantage-card swiper-slide">
+                    <div class="advantage-card__image">
+                        <img src="images/advs-1.jpg" alt="">
+                    </div>
+
+                    <div class="advantage-card__content">
+                        <h3 class="advantage-card__title">
+                            Несколько поколений выпускников
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            За десятки лет через ДОСААФ прошли поколения водителей.
+                            Мы готовим учеников на все категории А, В, C, D, E —
+                            от управления личным авто до профессионального транспорта.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="advantage-card swiper-slide">
+                    <div class="advantage-card__image">
+                        <img src="images/advs-2.jpg" alt="">
+                    </div>
+
+                    <div class="advantage-card__content">
+                        <h3 class="advantage-card__title">
+                            Нам доверяет Государство
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            ДОСААФ России — выполняет государственные задачи,
+                            участвует в выполнении гособоронзаказа, а также готовит
+                            водителей и других специалистов для гражданских,
+                            общественно значимых и государственных нужд.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="advantage-card swiper-slide">
+                    <div class="advantage-card__image">
+                        <img src="images/advs-3.jpg" alt="">
+                    </div>
+
+                    <div class="advantage-card__content">
+                        <h3 class="advantage-card__title">
+                            Собственный автодром 5 га
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            В нашей автошколе ДОСААФ несколько собственных автодромов,
+                            общей площадью 5 Га. Поэтому нет очередей и дополнительных платежей.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="advantage-card swiper-slide">
+                    <div class="advantage-card__image">
+                        <img src="images/advs-4.jpg" alt="">
+                    </div>
+
+                    <div class="advantage-card__content">
+                        <h3 class="advantage-card__title">
+                            29 филиалов в Челябинске
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Крупнейшая сеть автошкол в Челябинске. Учебная точка
+                            найдётся рядом с вашим домом или работой в любом районе.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="slider-progress advantages__progress swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<section class="course-process">
+    <div class="course-process__container container">
+        <header class="section-head course-process__head">
+            <div class="section-head__eyebrow">Процесс</div>
+
+            <h2 class="section-head__title">
+                5 шагов до прав
+            </h2>
+
+            <p class="section-head__text">
+                Просто и понятно. Мы рядом на каждом этапе
+            </p>
+        </header>
+    </div>
+
+    <div class="course-process__scheme">
+        <div class="course-process__scheme-inner container">
+
+            <div class="course-process__list-wrap">
+                <picture class="course-process__road" aria-hidden="true">
+                    <source srcset="images/process-road-mobile.png" media="(max-width: 767px)">
+                    <img src="images/process-road-desktop.png" alt="">
+                </picture>
+                <ol class="course-process__list">
+                    <li class="course-process__item course-process__item--1 course-process__item--top">
+                        <div class="course-process__body">
+                            <h3 class="course-process__name">Запись</h3>
+
+                            <p class="course-process__text">
+                                Выбираете категорию и формат. Менеджер подбирает группу за 5 минут
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="course-process__item course-process__item--2 course-process__item--bottom">
+                        <div class="course-process__body">
+                            <h3 class="course-process__name">Теория</h3>
+
+                            <p class="course-process__text">
+                                Очно или онлайн. Материалы в приложении
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="course-process__item course-process__item--3 course-process__item--top">
+                        <div class="course-process__body">
+                            <h3 class="course-process__name">Вождение</h3>
+
+                            <p class="course-process__text">
+                                По расписанию. На том же автомобиле, на котором будете сдавать ГАИ
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="course-process__item course-process__item--4 course-process__item--bottom">
+                        <div class="course-process__body">
+                            <h3 class="course-process__name">Внутренний экзамен</h3>
+
+                            <p class="course-process__text">
+                                Сдаёте в автошколе и получаете свидетельство об окончании — действительно бессрочно по всей России
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="course-process__item course-process__item--5 course-process__item--top">
+                        <div class="course-process__body">
+                            <h3 class="course-process__name">ГАИ → Права</h3>
+
+                            <p class="course-process__text">
+                                Сдаёте на той же машине. Экзамен в ГАИ сопровождаем до получения прав
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="student-app">
+    <div class="student-app__container container">
+        <header class="section-head student-app__head">
+            <div class="section-head__eyebrow">Приложение</div>
+
+            <h2 class="section-head__title">
+                <span>Приложение</span> для&nbsp;учеников ДОСААФ
+            </h2>
+
+            <p class="section-head__text">
+                Видеоуроки, билеты ПДД, онлайн-оплата и запись на вождение — в одном месте.
+            </p>
+        </header>
+    </div>
+
+    <div class="student-app__showcase">
+        <div class="student-app__inner container">
+            <img class="student-app__phone" src="images/student-app-phone.png" alt="">
+            <div class="student-app__slider swiper" data-student-app-slider>
+                <div class="student-app__grid swiper-wrapper">
+                    <article class="student-app__card swiper-slide">
+                        <h3 class="student-app__card-title">
+                            Видеоуроки по всем темам
+                        </h3>
+
+                        <p class="student-app__card-text">
+                            Видеолекции по каждой теме курса — смотрите в любое время
+                            для закрепления материала после занятия
+                        </p>
+                    </article>
+
+                    <article class="student-app__card swiper-slide">
+                        <h3 class="student-app__card-title">
+                            Тесты ПДД
+                        </h3>
+
+                        <p class="student-app__card-text">
+                            Тренируйтесь по официальным билетам в любое время.
+                            Разбор ошибок — подготовьтесь уверенно
+                        </p>
+                    </article>
+
+                    <article class="student-app__card swiper-slide">
+                        <h3 class="student-app__card-title">
+                            Удобная оплата
+                        </h3>
+
+                        <p class="student-app__card-text">
+                            Оплачивайте обучение прямо в приложении — не нужно никуда
+                            ехать. Карта, СБП или Сбербанк Онлайн
+                        </p>
+                    </article>
+
+                    <article class="student-app__card swiper-slide">
+                        <h3 class="student-app__card-title">
+                            Запись на вождение
+                        </h3>
+
+                        <p class="student-app__card-text">
+                            Всё в пару касаний. Запишитесь на вождение в приложении
+                            за 1 минуту. Без звонков и очередей.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="slider-progress student-app__progress swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="instructors">
+    <div class="instructors__container container">
+        <header class="section-head instructors__head">
+            <div class="section-head__eyebrow">Сотрудники</div>
+
+            <h2 class="section-head__title">
+                Наши инструкторы <span>78 профессионалов!</span>
+            </h2>
+
+            <p class="section-head__text">
+                Квалифицированные инструкторы с многолетним стажем и государственной аттестацией.
+            </p>
+        </header>
+
+
+        <div class="instructors__filters-wrap">
+            <div class="filter-tabs instructors__filters" aria-label="Фильтр инструкторов">
+
+                <button class="filter-tabs__button is-active" type="button" data-instructor-filter="all">
+                    Все
+                </button>
+
+                <button class="filter-tabs__button" type="button" data-instructor-filter="women">
+                    женщины
+                </button>
+
+                <button class="filter-tabs__button" type="button" data-instructor-filter="vip">
+                    вип
+                </button>
+
+                <button class="filter-tabs__button" type="button" data-instructor-filter="manual">
+                    механика
+                </button>
+
+                <button class="filter-tabs__button" type="button" data-instructor-filter="auto">
+                    автомат
+                </button>
+            </div>
+        </div>
+
+        <div class="instructors__grid">
+            <article class="instructor-card" data-instructor-tags="manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-1.jpg" alt="Богданов Анатолий Борисович">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Богданов Анатолий Борисович</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        Категория C. Обучает вождению на КАМАЗ-43114.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+
+            <article class="instructor-card" data-instructor-tags="manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-2.jpg" alt="Улин Евгений Владимирович">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Улин Евгений Владимирович</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        Категория C. Обучает вождению на КАМАЗ-43114.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+
+            <article class="instructor-card" data-instructor-tags="vip manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-3.jpg" alt="Плесовских Вячеслав Юрьевич">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Плесовских Вячеслав Юрьевич</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        ВИП. Обучает вождению на автомобиле Hyundai ix35 (механика) У311ЕН774.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+
+            <article class="instructor-card" data-instructor-tags="manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-4.jpg" alt="Петрушенко Владимир Владимирович">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Петрушенко Владимир Владимирович</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        Обучает на автомобиле Datsun on-DO (механика) У686КТ174.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+
+            <article class="instructor-card" data-instructor-tags="women manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-5.jpg" alt="Моисеева Наталья Владимировна">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Моисеева Наталья Владимировна</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        Обучает на автомобиле Škoda Fabia (механика) В514ОР174.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+
+            <article class="instructor-card" data-instructor-tags="women manual">
+                <a class="instructor-card__image" href="#">
+                    <img src="images/instructor-6.jpg" alt="Журавлева Ольга Николаевна">
+                </a>
+
+                <div class="instructor-card__content">
+                    <h3 class="instructor-card__title">
+                        <a href="#">Журавлева Ольга Николаевна</a>
+                    </h3>
+
+                    <p class="instructor-card__text">
+                        Обучает вождению на автомобиле Hyundai Accent (механика) А337ВМ174.
+                    </p>
+
+                    <a class="btn btn--light instructor-card__button" href="#">
+                        Подробнее
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <a class="btn btn--light instructors__more" href="#">
+            Все инструкторы
+        </a>
+    </div>
+</section>
+<section class="branches" id="branches">
+    <div class="branches__container container">
+        <header class="section-head branches__head">
+            <div class="section-head__eyebrow">Филиалы</div>
+
+            <h2 class="section-head__title">
+                Рядом с вашим домом — один из <span>29 филиалов</span>
+            </h2>
+
+            <p class="section-head__text">
+                Крупнейшая сеть автошкол в Челябинске. Найдите ближайший или
+                учитесь онлайн из любой точки
+            </p>
+        </header>
+
+        <form class="site-search branches__search" action="#" role="search" data-site-search>
+            <label class="site-search__field">
+                <span class="site-search__icon" aria-hidden="true"></span>
+                <input
+                        class="site-search__input"
+                        type="search"
+                        name="q"
+                        placeholder="Найти по улице или району..."
+                        autocomplete="off"
+                        data-site-search-input
+                >
+            </label>
+
+            <button
+                    class="site-search__clear"
+                    type="button"
+                    aria-label="Очистить поиск"
+                    data-site-search-clear
+            ></button>
+
+            <button
+                    class="site-search__voice"
+                    type="button"
+                    aria-label="Голосовой поиск"
+            ></button>
+
+            <button class="site-search__submit" type="submit">
+                найти
+            </button>
+        </form>
+
+        <div class="branches__body">
+            <aside class="branches__aside">
+                <div class="branches__list">
+                    <article class="branch-card branch-card--online">
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">
+                                    Онлайн — из любого места
+                                </h3>
+
+                                <p class="branch-card__text">
+                                    Теория онлайн · вождение в любом филиале
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card is-active"
+                            data-branch-id="1"
+                            data-branch-title="8 Марта, 108"
+                            data-branch-area="Советский район"
+                            data-branch-address="Челябинск, ул. 8 Марта, 108"
+                            data-branch-coords="55.146000,61.376000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">8 Марта, 108</h3>
+                                <p class="branch-card__text">Советский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Свернуть"
+                                    aria-expanded="true"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details">
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73517912944">
+                                <span>8 (351) 791-29-44</span>
+                                <small>отдел кадров</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73517912956">
+                                <span>8 (351) 791-29-56</span>
+                                <small>бухгалтерия</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="2"
+                            data-branch-title="250-летия Челябинска, 46"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. 250-летия Челябинска, 46"
+                            data-branch-coords="55.183000,61.300000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">250-летия Челябинска, 46</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="3"
+                            data-branch-title="60-летия Октября, 5"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. 60-летия Октября, 5"
+                            data-branch-coords="55.118000,61.452000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">60-летия Октября, 5</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="4"
+                            data-branch-title="Бейвеля, 48"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Академика Бейвеля, 48"
+                            data-branch-coords="55.234000,61.270000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Бейвеля, 48</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="5"
+                            data-branch-title="Воровского, 50б"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Воровского, 50б"
+                            data-branch-coords="55.140000,61.376000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Воровского, 50б</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="6"
+                            data-branch-title="Дарвина, 6"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Дарвина, 6"
+                            data-branch-coords="55.117500,61.398900"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Дарвина, 6</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="7"
+                            data-branch-title="Дружбы, 3"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. Дружбы, 3"
+                            data-branch-coords="55.125000,61.470000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Дружбы, 3</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="8"
+                            data-branch-title="Евтеева, 6"
+                            data-branch-area="Тракторозаводский район"
+                            data-branch-address="Челябинск, ул. Евтеева, 6"
+                            data-branch-coords="55.165000,61.475000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Евтеева, 6</h3>
+                                <p class="branch-card__text">Тракторозаводский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="9"
+                            data-branch-title="Зыкова, 20"
+                            data-branch-area="Тракторозаводский район"
+                            data-branch-address="Челябинск, ул. Зыкова, 20"
+                            data-branch-coords="55.180000,61.485000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Зыкова, 20</h3>
+                                <p class="branch-card__text">Тракторозаводский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="10"
+                            data-branch-title="Комсомольский проспект, 76"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, Комсомольский проспект, 76"
+                            data-branch-coords="55.195000,61.378000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Комсомольский проспект, 76</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="11"
+                            data-branch-title="Ленина, 7"
+                            data-branch-area="Тракторозаводский район"
+                            data-branch-address="Челябинск, проспект Ленина, 7"
+                            data-branch-coords="55.160000,61.460000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Ленина, 7</h3>
+                                <p class="branch-card__text">Тракторозаводский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="12"
+                            data-branch-title="Либкнехта, 2"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Карла Либкнехта, 2"
+                            data-branch-coords="55.161000,61.405000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Либкнехта, 2</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="13"
+                            data-branch-title="Масленникова, 17Б"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. Масленникова, 17Б"
+                            data-branch-coords="55.130000,61.430000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Масленникова, 17Б</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="14"
+                            data-branch-title="Молодогвардейцев, 32а"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Молодогвардейцев, 32а"
+                            data-branch-coords="55.180000,61.312000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Молодогвардейцев, 32а</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="15"
+                            data-branch-title="Новоэлеваторная, 49"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. Новоэлеваторная, 49"
+                            data-branch-coords="55.110000,61.470000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Новоэлеваторная, 49</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="16"
+                            data-branch-title="переулок Лермонтова, 4А"
+                            data-branch-area="Советский район"
+                            data-branch-address="Челябинск, переулок Лермонтова, 4А"
+                            data-branch-coords="55.145200,61.371200"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">переулок Лермонтова, 4А</h3>
+                                <p class="branch-card__text">Советский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="17"
+                            data-branch-title="Петра Столыпина, 9"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Петра Столыпина, 9"
+                            data-branch-coords="55.230000,61.262000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Петра Столыпина, 9</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="18"
+                            data-branch-title="Пограничная, 4"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. Пограничная, 4"
+                            data-branch-coords="55.105000,61.440000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Пограничная, 4</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="19"
+                            data-branch-title="проспект Победы, 388"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, проспект Победы, 388"
+                            data-branch-coords="55.200000,61.350000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">проспект Победы, 388</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="20"
+                            data-branch-title="Российская, 33"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Российская, 33"
+                            data-branch-coords="55.165000,61.420000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Российская, 33</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="21"
+                            data-branch-title="Свердловская, 28"
+                            data-branch-area="с. Долгодеревенское"
+                            data-branch-address="с. Долгодеревенское, ул. Свердловская, 28"
+                            data-branch-coords="55.345000,61.418000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Свердловская, 28</h3>
+                                <p class="branch-card__text">с. Долгодеревенское</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="22"
+                            data-branch-title="Сергея Герасимова, 27"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Сергея Герасимова, 27"
+                            data-branch-coords="55.175000,61.390000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Сергея Герасимова, 27</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="23"
+                            data-branch-title="Труда, 84"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Труда, 84"
+                            data-branch-coords="55.165000,61.395000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Труда, 84</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="24"
+                            data-branch-title="Университетская Набережная, 22Б"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Университетская Набережная, 22Б"
+                            data-branch-coords="55.190000,61.295000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Университетская Набережная, 22Б</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="25"
+                            data-branch-title="Университетская Набережная, 63"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Университетская Набережная, 63"
+                            data-branch-coords="55.195000,61.290000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Университетская Набережная, 63</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="26"
+                            data-branch-title="Чайковского, 20Б"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Чайковского, 20Б"
+                            data-branch-coords="55.190000,61.360000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Чайковского, 20Б</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="27"
+                            data-branch-title="Чичерина, 3"
+                            data-branch-area="Курчатовский район"
+                            data-branch-address="Челябинск, ул. Чичерина, 3"
+                            data-branch-coords="55.185000,61.305000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Чичерина, 3</h3>
+                                <p class="branch-card__text">Курчатовский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="28"
+                            data-branch-title="Шаумяна, 79"
+                            data-branch-area="Ленинский район"
+                            data-branch-address="Челябинск, ул. Шаумяна, 79"
+                            data-branch-coords="55.110000,61.432000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Шаумяна, 79</h3>
+                                <p class="branch-card__text">Ленинский район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                            class="branch-card"
+                            data-branch-id="29"
+                            data-branch-title="Энтузиастов, 11"
+                            data-branch-area="Центральный район"
+                            data-branch-address="Челябинск, ул. Энтузиастов, 11"
+                            data-branch-coords="55.158000,61.385000"
+                            data-branch-phone="8 (351) 220-14-15"
+                            data-branch-email="dosaaf-chel.otsh@mail.ru"
+                            data-branch-vk="https://vk.com/74dosaaf"
+                    >
+                        <div class="branch-card__head">
+                            <div class="branch-card__content">
+                                <h3 class="branch-card__title">Энтузиастов, 11</h3>
+                                <p class="branch-card__text">Центральный район</p>
+                            </div>
+
+                            <button
+                                    class="branch-card__toggle"
+                                    type="button"
+                                    aria-label="Подробнее"
+                                    aria-expanded="false"
+                            ></button>
+                        </div>
+
+                        <div class="branch-card__details" hidden>
+                            <a class="branch-card__contact branch-card__contact--phone" href="tel:+73512201415">
+                                <span>8 (351) 220-14-15</span>
+                                <small>общий номер</small>
+                            </a>
+
+                            <a class="branch-card__contact branch-card__contact--email" href="mailto:dosaaf-chel.otsh@mail.ru">
+                                dosaaf-chel.otsh@mail.ru
+                            </a>
+
+                            <a
+                                    class="branch-card__contact branch-card__contact--vk"
+                                    href="https://vk.com/74dosaaf"
+                                    target="_blank"
+                                    rel="noopener"
+                            >
+                                https://vk.com/74dosaaf
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <a class="btn btn--light branches__all" href="#">
+                    Все адреса
+                </a>
+            </aside>
+
+            <div class="branches__map" id="branches-map" data-branches-map></div>
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="reviews__container container">
+        <header class="section-head reviews__head">
+            <div class="section-head__eyebrow">Отзывы</div>
+
+            <h2 class="section-head__title">
+                Что говорят выпускники
+            </h2>
+
+            <p class="section-head__text">
+                Отбираем отзывы с упоминанием гибкого графика — именно это важно нашим клиентам
+            </p>
+        </header>
+
+        <div class="reviews__slider swiper" data-reviews-slider>
+            <div class="reviews__grid swiper-wrapper">
+                <article class="review-card swiper-slide">
+                    <div class="review-card__top">
+                        <div class="review-card__stars" aria-label="5 из 5">
+                            <span class="review-card__stars-fill"></span>
+                        </div>
+                        <img class="review-card__source" src="images/2gis-logo-r.svg" alt="2ГИС">
+                    </div>
+
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">МК</div>
+
+                        <div class="review-card__author-info">
+                            <h3 class="review-card__name">Мария К.</h3>
+                            <p class="review-card__meta">Вечерняя группа · кат. B · 2024</p>
+                        </div>
+                    </div>
+
+                    <p class="review-card__text">
+                        Работаю посменно 2/2. Думала, не смогу учиться. Вечерняя группа — спасение.
+                        Инструктор подстроился под мой график, сдала с первого раза
+                    </p>
+                </article>
+
+                <article class="review-card swiper-slide">
+                    <div class="review-card__top">
+                        <div class="review-card__stars" aria-label="5 из 5">
+                            <span class="review-card__stars-fill" style="width: 80%;"></span>
+                        </div>
+                        <img class="review-card__source" src="images/Yandex-logo-r.svg" alt="Яндекс">
+                    </div>
+
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">АП</div>
+
+                        <div class="review-card__author-info">
+                            <h3 class="review-card__name">Андрей П.</h3>
+                            <p class="review-card__meta">Онлайн · кат. B · 2024</p>
+                        </div>
+                    </div>
+
+                    <p class="review-card__text">
+                        Онлайн-теория — это настоящие живые занятия, не записи на ютубе.
+                        Можно задавать вопросы. Ближайший филиал к дому нашёлся быстро
+                    </p>
+                </article>
+
+                <article class="review-card swiper-slide">
+                    <div class="review-card__top">
+                        <div class="review-card__stars" aria-label="5 из 5">
+                            <span class="review-card__stars-fill" style="width: 80%;"></span>
+                        </div>
+                        <img class="review-card__source" src="images/Yandex-logo-r.svg" alt="Яндекс">
+                    </div>
+
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">АП</div>
+
+                        <div class="review-card__author-info">
+                            <h3 class="review-card__name">Андрей П.</h3>
+                            <p class="review-card__meta">Онлайн · кат. B · 2024</p>
+                        </div>
+                    </div>
+
+                    <p class="review-card__text">
+                        Онлайн-теория — это настоящие живые занятия, не записи на ютубе.
+                        Можно задавать вопросы. Ближайший филиал к дому нашёлся быстро
+                    </p>
+                </article>
+
+                <article class="review-card swiper-slide">
+                    <div class="review-card__top">
+                        <div class="review-card__stars" aria-label="5 из 5">
+                            <span class="review-card__stars-fill"></span>
+                        </div>
+                        <img class="review-card__source" src="images/2gis-logo-r.svg" alt="2ГИС">
+                    </div>
+
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">ДС</div>
+
+                        <div class="review-card__author-info">
+                            <h3 class="review-card__name">Денис С.</h3>
+                            <p class="review-card__meta">Кат. A · мотоцикл · 2025</p>
+                        </div>
+                    </div>
+
+                    <p class="review-card__text">
+                        Права на мотоцикл получил здесь же. Хорошая площадка, инструктор терпеливый.
+                        Приложение удобное — там были все материалы для теории
+                    </p>
+                </article>
+
+                <article class="review-card swiper-slide">
+                    <div class="review-card__top">
+                        <div class="review-card__stars" aria-label="5 из 5">
+                            <span class="review-card__stars-fill"></span>
+                        </div>
+                        <img class="review-card__source" src="images/2gis-logo-r.svg" alt="2ГИС">
+                    </div>
+
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">ДС</div>
+
+                        <div class="review-card__author-info">
+                            <h3 class="review-card__name">Денис С.</h3>
+                            <p class="review-card__meta">Кат. A · мотоцикл · 2025</p>
+                        </div>
+                    </div>
+
+                    <p class="review-card__text">
+                        Права на мотоцикл получил здесь же. Хорошая площадка, инструктор терпеливый.
+                        Приложение удобное — там были все материалы для теории
+                    </p>
+                </article>
+            </div>
+
+            <div class="slider-progress reviews__progress swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="faq__container container">
+        <header class="section-head faq__head">
+            <div class="section-head__eyebrow">FAQ</div>
+
+            <h2 class="section-head__title">
+                Частые вопросы
+            </h2>
+        </header>
+
+        <div class="faq__list">
+            <details class="faq__item" open>
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        Что если я пропущу занятие из-за работы?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Ничего страшного. Менеджер поможет подобрать удобное время,
+                        а пропущенную тему можно будет пройти с другой группой или разобрать дополнительно.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item">
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        Онлайн-теория — это записи на YouTube?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Нет. Это живые занятия с преподавателем, где можно задавать вопросы
+                        и разбирать сложные темы.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item">
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        На какой машине сдаётся экзамен в ГАИ?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Как правило, экзамен проходит на той же машине, на которой вы проходили обучение.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item">
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        Как связаться, если не хочу звонить?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Можно оставить заявку на сайте. Менеджер напишет вам и поможет подобрать группу.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item">
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        Что если не сдам экзамен с первого раза?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Вы сможете пересдать экзамен. Инструктор подскажет, что нужно доработать перед следующей попыткой.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item">
+                <summary class="faq__question">
+                    <span class="faq__question-text">
+                        Какие категории прав можно получить?
+                    </span>
+                    <span class="faq__plus" aria-hidden="true"></span>
+                </summary>
+
+                <div class="faq__answer">
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Доступны категории A, B, C, D, E, а также переподготовка.
+                        Точный список программ зависит от филиала.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+
+        <div class="certificate-cta faq__certificate">
+            <img class="certificate-cta__image" src="images/certificate-cta.png" alt="Подарите права — купите сертификат на обучение">
+
+            <div class="certificate-cta__inner">
+
+                <div class="certificate-cta__content">
+                    <h3 class="certificate-cta__title">
+                        <span>Подарите права</span> — купите сертификат на обучение
+                    </h3>
+
+                    <p class="certificate-cta__text">
+                        Универсальный подарок на день рождения, окончание школы или любой праздник.
+                        Сертификат действует на все форматы и категории. Именной, в красивом оформлении —
+                        можно забрать в офисе или получить на email.
+                    </p>
+                </div>
+
+                <a class="btn btn--primary certificate-cta__button" href="#callback" data-scroll-to>
+                    Купить сертификат
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="quick-start">
+    <div class="quick-start__container container">
+        <h2 class="quick-start__title">
+            <span>Готовы начать?</span> Подберём группу за <span>5 минут</span>
+        </h2>
+
+        <p class="quick-start__text">
+            Ответим быстро
+        </p>
+
+        <div class="contact-pills quick-start__contacts">
+            <a class="contact-pill contact-pill--red" href="#callback" data-scroll-to>
+                Записаться онлайн
+            </a>
+
+            <a class="contact-pill contact-pill--telegram" href="https://t.me/username" target="_blank" rel="noopener">
+                <span class="contact-pill__icon">
+                    <img src="images/icon-telegram.svg" alt="">
+                </span>
+                Написать в Telegram
+            </a>
+
+            <a class="contact-pill contact-pill--max" href="#" target="_blank" rel="noopener">
+                <span class="contact-pill__icon">
+                    <img src="images/icon-max.svg" alt="">
+                </span>
+                Написать в MAX
+            </a>
+
+            <a class="contact-pill contact-pill--phone" href="tel:+73512201415">
+                <span class="contact-pill__icon">
+                    <img src="images/icon-phone.svg" alt="">
+                </span>
+                +7 (351) 220-14-15
+            </a>
+        </div>
+
+        <p class="quick-start__note">
+            Ответим за 15 минут · Пн–Пт 9:00–21:00 · Сб–Вс 10:00–16:00
+        </p>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__top">
+            <a class="footer__logo" href="/">
+                <img src="images/logo.png" alt="ДОСААФ Автошкола">
+            </a>
+
+            <nav class="footer__nav" aria-label="Навигация в подвале">
+                <div class="footer__group">
+                    <h2 class="footer__title">Категории прав</h2>
+
+                    <ul class="footer__list">
+                        <li><a href="#">Категория A — мотоцикл</a></li>
+                        <li><a href="#">Категория B — легковые</a></li>
+                        <li><a href="#">Категория C — грузовые</a></li>
+                        <li><a href="#">Категория D — автобусы</a></li>
+                        <li><a href="#">Категория E — прицепы</a></li>
+                        <li><a href="#">Переподготовка C / B</a></li>
+                        <li><a href="#">Контраварийная</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h2 class="footer__title">О школе</h2>
+
+                    <ul class="footer__list">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Сотрудники и администрация</a></li>
+                        <li><a href="#">Инструкторы</a></li>
+                        <li><a href="#">Мероприятия</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a class="footer__accent" href="#">Акции и скидки</a></li>
+                        <li><a class="footer__accent" href="#">Купить сертификат</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h2 class="footer__title">Образовательная организация</h2>
+
+                    <ul class="footer__list">
+                        <li><a href="#">Сведения об организации</a></li>
+                        <li><a href="#">Основные сведения</a></li>
+                        <li><a href="#">Структура организации</a></li>
+                        <li><a href="#">Документы и лицензии</a></li>
+                        <li><a href="#">Образовательные стандарты</a></li>
+                        <li><a href="#">Материально-техническое обеспечение</a></li>
+                        <li><a href="#">Финансово-хоз. деятельность</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__group">
+                    <h2 class="footer__title">Помощь</h2>
+
+                    <ul class="footer__list">
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Полезная информация</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Все 29 филиалов</a></li>
+                        <li><a href="#">Оплатить обучение</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">
+                © ДОСААФ Автошкола · Челябинск · ул. 8 Марта, 108
+            </p>
+
+            <div class="socials footer__socials">
+                <a class="socials__link socials__link--max" href="#" aria-label="MAX">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="21" height="21" rx="7" fill="#8A9FA4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7387 10.4546C12.7763 10.3582 11.2449 11.634 10.9072 13.6308C10.6276 15.2845 11.1234 17.2994 11.5475 17.4009C11.7274 17.4439 12.1603 17.1337 12.4752 16.8554C12.5344 16.8031 12.6239 16.7943 12.6934 16.8341C13.1843 17.1154 13.7401 17.3267 14.3529 17.3568C16.3675 17.4558 18.1529 15.9785 18.2584 14.0908C18.3639 12.2031 16.7534 10.5536 14.7387 10.4546ZM11.4525 20.0412C11.3766 19.9908 11.2719 20.0044 11.2082 20.0681C10.3571 20.9186 8.17891 21.5152 8.07914 20.3543C8.07914 19.4448 7.86111 18.6784 7.62105 17.8346C7.32704 16.8011 7 15.6515 7 13.9807C7 9.99638 10.4876 7 14.6227 7C18.7579 7 22 10.1427 22 14.0194C22 17.8961 18.6547 20.9614 14.6619 20.9614C13.2453 20.9614 12.5579 20.7744 11.4525 20.0412Z" fill="#0A1C20" />
+                    </svg>
+                </a>
+
+                <a class="socials__link socials__link--vk" href="#" aria-label="VK">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="21" height="21" rx="5" fill="#8A9FA4" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6236 10.7072C11.8505 10.821 12.3797 10.7618 12.5698 11.456C12.741 12.0813 12.734 13.5767 12.6016 14.2728C12.2356 16.1976 10.6906 13.1532 10.3092 12.4845C10.1118 12.1381 9.76821 11.3483 9.61555 10.9629C9.35219 10.298 8.72079 10.4396 7.96826 10.4396C7.68517 10.4396 7.49406 10.467 7.22696 10.4664C6.80901 10.4654 6 10.3807 6 10.7875C6 11.0986 6.16843 11.4096 6.29818 11.6794L6.99729 13.1417C7.11944 13.3875 7.2315 13.6338 7.36953 13.8759L7.74936 14.5753C8.74971 16.3045 9.95161 18.3327 11.7514 19.2695C13.1156 19.9796 13.7577 19.9652 15.2535 19.9652C15.4863 19.9652 15.7788 19.8325 15.8597 19.6633C15.9584 19.457 15.9483 19.1156 15.9698 18.842C16.0225 18.1757 16.3317 17.2964 17.0791 17.84C17.4332 18.0976 17.8636 18.6977 18.1867 19.0354C18.3618 19.2184 18.5737 19.4579 18.7703 19.6018C18.871 19.6756 19.0378 19.7819 19.1419 19.8284C19.7599 20.1038 20.4697 19.965 21.235 19.9652C21.6598 19.9654 22.4002 20.0387 22.7582 19.7937C23.3259 19.4051 22.7582 18.7107 22.4365 18.2795C22.2526 18.0333 21.5434 17.2469 21.2923 17.0154C19.6485 15.5002 19.9774 15.7459 21.6805 13.3676C22.0378 12.8686 22.9988 11.5612 22.9988 10.8677C22.9988 10.5042 22.6307 10.4731 22.3553 10.4424C22.2136 10.4268 22.1742 10.4655 22.0285 10.4674C21.5757 10.4733 19.5139 10.4155 19.256 10.5086C19.0894 10.5688 18.9947 10.7482 18.927 10.9134C18.5438 11.8473 18.2826 12.4904 17.7332 13.3565C17.5108 13.7071 16.7984 14.8813 16.3526 14.8813C16.0332 14.8813 15.9181 14.2154 15.9181 13.8913C15.9181 12.9083 15.9692 12.0115 15.9692 11.0551C15.9692 10.8514 15.9272 10.638 15.8632 10.4971C15.5838 9.88137 14.0626 10.0115 13.3619 10.0115C12.8558 10.0115 12.0399 10.0663 11.7248 10.492C11.6758 10.5583 11.6327 10.5938 11.6236 10.7072Z" fill="#0A1C20" />
+                    </svg>
+                </a>
+
+                <a class="socials__link socials__link--tg" href="#" aria-label="Telegram">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26 14.5C26 20.8513 20.8513 26 14.5 26C8.14873 26 3 20.8513 3 14.5C3 8.14873 8.14873 3 14.5 3C20.8513 3 26 8.14873 26 14.5ZM14.9121 11.4898C13.7936 11.9551 11.558 12.918 8.20555 14.3786C7.66116 14.5951 7.37599 14.8069 7.35003 15.014C7.30615 15.3639 7.74442 15.5018 8.34123 15.6894C8.42241 15.7149 8.50653 15.7414 8.59276 15.7694C9.17994 15.9603 9.96978 16.1836 10.3804 16.1925C10.7529 16.2005 11.1686 16.0469 11.6275 15.7318C14.7599 13.6174 16.3768 12.5487 16.4783 12.5256C16.5499 12.5094 16.6491 12.4889 16.7164 12.5487C16.7836 12.6085 16.777 12.7216 16.7699 12.752C16.7265 12.9371 15.0061 14.5365 14.1158 15.3642C13.8383 15.6222 13.6414 15.8053 13.6011 15.8471C13.511 15.9407 13.4191 16.0293 13.3308 16.1144C12.7853 16.6403 12.3762 17.0346 13.3535 17.6786C13.823 17.9881 14.1988 18.244 14.5737 18.4992C14.9831 18.7781 15.3915 19.0562 15.9199 19.4025C16.0545 19.4908 16.183 19.5824 16.3083 19.6717C16.7847 20.0114 17.2128 20.3165 17.7416 20.2679C18.0489 20.2396 18.3663 19.9506 18.5275 19.0889C18.9085 17.0522 19.6574 12.6394 19.8304 10.8209C19.8456 10.6616 19.8265 10.4577 19.8112 10.3682C19.7959 10.2787 19.7639 10.1512 19.6475 10.0568C19.5098 9.94498 19.2971 9.92141 19.2019 9.92308C18.7694 9.9307 18.1058 10.1615 14.9121 11.4898Z" fill="#8A9FA4" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="callback-popup" id="callback-popup" style="display: none">
+    <form class="lead-form lead-form--glass" action="#" method="post" data-lead-form>
+        <div class="lead-form__head">
+            <h2 class="lead-form__title">Записаться на курс</h2>
+            <p class="lead-form__subtitle">Ответим в течение 15 минут</p>
+        </div>
+
+        <label class="lead-form__field">
+            <span class="lead-form__label">Ваше имя</span>
+
+            <input
+                    class="lead-form__control"
+                    type="text"
+                    name="name"
+                    placeholder="Иван Иванов"
+                    autocomplete="name"
+                    required
+            >
+        </label>
+
+        <label class="lead-form__field">
+            <span class="lead-form__label">Телефон</span>
+
+            <input
+                    class="lead-form__control"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    autocomplete="tel"
+                    data-phone
+                    required
+            >
+        </label>
+
+        <label class="lead-form__field">
+            <span class="lead-form__label">Категория прав</span>
+
+            <span class="lead-form__select">
+                <select class="lead-form__control" name="category" required>
+                    <option value="">Выберите категорию...</option>
+                    <option value="a">Категория A — мотоцикл</option>
+                    <option value="b">Категория B — легковые</option>
+                    <option value="c">Категория C — грузовые</option>
+                    <option value="d">Категория D — автобусы</option>
+                    <option value="e">Категория E — прицепы</option>
+                </select>
+            </span>
+        </label>
+
+        <label class="lead-form__field">
+            <span class="lead-form__label">Удобное расписание</span>
+
+            <span class="lead-form__select">
+                <select class="lead-form__control" name="schedule" required>
+                    <option value="">Выберите формат...</option>
+                    <option value="evening">Вечерние группы</option>
+                    <option value="morning">Утренние группы</option>
+                    <option value="weekend">Выходного дня</option>
+                    <option value="intensive">Ускоренный</option>
+                    <option value="online">Онлайн-теория</option>
+                </select>
+            </span>
+        </label>
+
+        <button class="btn btn--primary lead-form__submit" type="submit">
+            Подобрать группу
+        </button>
+
+        <label class="lead-form__agree">
+            <input type="checkbox" name="agreement" checked required>
+
+            <span class="lead-form__check" aria-hidden="true"></span>
+
+            <span class="lead-form__agree-text">
+                Я даю согласие на обработку персональных данных согласно
+                <a href="#">пользовательскому соглашению</a> и
+                <a href="#">политике обработки персональных данных сайта</a>
+            </span>
+        </label>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.callback-popup {
+  width: 40rem;
+  max-width: 100%;
+
+  .lead-form {
+    max-width: none;
+
+    &__head {
+      padding-right: 2rem;
+    }
+  }
+
+  .f-button.is-close-btn {
+    border-radius: 100%;
+    border: 1px solid $accent;
+    opacity: 1!important;
+    top: 2rem!important;
+    right: 2rem!important;
+    width: 2.6rem;
+    height: 2.6rem;
+
+    svg {
+      width: 1.2rem;
+    }
+  }
+}
+
+.fancybox--callback {
+
+  .fancybox__content {
+    padding: 0;
+    background: transparent;
+  }
+}

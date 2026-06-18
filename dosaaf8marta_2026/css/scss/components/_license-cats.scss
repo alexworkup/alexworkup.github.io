@@ -1,0 +1,99 @@
+.license-cats {
+  padding: 7rem 0;
+  overflow: hidden;
+  
+  @media (max-width: 767px) {
+    padding: 5rem 0;
+  }
+
+  &__list {
+    padding-top: 5rem;
+    display: flex;
+
+    @media (max-width: 767px) {
+      padding-top: 2rem;
+    }
+  }
+
+  &__slider {
+    border-bottom: 1px solid #eef2fa;
+
+    &.swiper {
+
+      @media (max-width: 767px) {
+        width: calc(100% + 2.8rem);
+        margin: 0 -1.4rem;
+        padding: 0 1.4rem;
+      }
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $text-muted;
+    display: inline-block;
+    margin-top: 2.2rem;
+    transition: .4s all ease-in-out;
+    padding-bottom: 1.2rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      background-color: $brand;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transition: .4s all ease-in-out;
+    }
+
+    b {
+      color: $text-muted;
+      font-weight: inherit;
+      transition: .4s all ease-in-out;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+
+    &.swiper-slide {
+      width: auto;
+    }
+
+    &:hover,
+    &.is-active,
+    &.swiper-slide-active {
+
+      .license-cats__picture {
+        transform: translateX(0);
+      }
+
+      .license-cats__name {
+        color: $brand;
+
+        &:before {
+          width: 100%;
+        }
+
+        b {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    transition: .4s all ease-in-out;
+    transform: translateX(2rem);
+    position: relative;
+    display: block;
+    padding-right: 2rem;
+
+    img {
+      max-height: 13rem;
+    }
+  }
+}

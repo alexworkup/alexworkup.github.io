@@ -1,0 +1,105 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Golos", Arial, sans-serif;
+
+  &.is-menu-open {
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 136.6rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+  
+  @media (max-width: 767px) {
+    padding: 0 1.4rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.4rem;
+  padding: 0 3.8rem;
+  border: 0.1rem solid transparent;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s all ease;
+
+  @media (max-width: 767px) {
+    padding: 0 2rem;
+  }
+
+  &--primary {
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(217deg, $red 0%, $red-dark 100%);
+    color: $white;
+
+    // hover-градиент лежит отдельным слоем и плавно проявляется по opacity
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(17deg, $red 0%, $red-dark 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  &--outline {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    color: $accent;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.46);
+    }
+  }
+
+  &--light {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: transparent;
+    color: $text;
+
+    &:hover {
+      border-color: $brand;
+      background: $brand;
+      color: $accent;
+    }
+  }
+}
+
+.fancybox__backdrop {
+  background: rgba(10, 28, 32, 0.8)!important;
+  backdrop-filter: blur(5px);
+}
+
