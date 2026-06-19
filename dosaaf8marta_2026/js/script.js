@@ -700,3 +700,204 @@
   jQuery.ripple('.btn', { on: 'mouseenter' });
   jQuery.ripple('.btn', { on: 'mousedown' });
 })();
+
+// Маска телефона +7 (___) ___-__-__ для всех полей с data-phone (Inputmask)
+(() => {
+  if (typeof Inputmask === 'undefined') return;
+
+  const inputs = document.querySelectorAll('input[data-phone]');
+  if (!inputs.length) return;
+
+  // Вставка/автозаполнение: «8 (900)…», «+7 900…», «9001234567» → 10 цифр.
+  // Префикс страны (8 или 7) срезаем только когда цифр ровно 11.
+  const normalize = (value) => {
+    let digits = String(value).replace(/\D/g, '');
+    if (digits.length === 11 && (digits[0] === '8' || digits[0] === '7')) {
+      digits = digits.slice(1);
+    }
+    return digits;
+  };
+
+  const mask = new Inputmask({
+    mask: '+7 (c99) 999-99-99',
+    definitions: {
+      // Первая цифра кода: что угодно, кроме 8 и 7. Привычный «выход на
+      // межгород» 8 (и 7 от +7) просто не вводится — мобильный код всегда с 9.
+      c: { validator: '[0-69]', cardinality: 1, placeholder: '_' },
+    },
+    showMaskOnHover: false,
+    clearIncomplete: true, // неполный номер очищается при потере фокуса
+    onBeforeMask: normalize,
+    onBeforePaste: normalize,
+  });
+
+  inputs.forEach((input) => mask.mask(input));
+})();
+
+// Стилизованный выпадающий список — кастомный дропдаун поверх нативного select.
+// Прогрессивное улучшение: без JS остаётся рабочий нативный <select>.
+(() => {
+  const wrappers = document.querySelectorAll('.lead-form__select');
+  if (!wrappers.length) return;
+
+  wrappers.forEach((wrapper) => {
+    const select = wrapper.querySelector('select');
+    if (!select || wrapper.classList.contains('is-enhanced')) return;
+
+    const allOptions = Array.from(select.options);
+    // В меню показываем только реальные пункты (без плейсхолдера value="").
+    const items = allOptions
+        .map((opt, index) => ({ opt, index }))
+        .filter(({ opt }) => opt.value !== '');
+    if (!items.length) return;
+
+    const baseId = `${select.name || 'cselect'}-${Math.random().toString(36).slice(2, 7)}`;
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'lead-form__control cselect__trigger';
+    trigger.id = `${baseId}-trigger`;
+    trigger.setAttribute('aria-haspopup', 'listbox');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    const menu = document.createElement('ul');
+    menu.className = 'cselect__menu';
+    menu.tabIndex = -1;
+    menu.setAttribute('role', 'listbox');
+    menu.setAttribute('aria-labelledby', trigger.id);
+
+    const optionEls = items.map(({ opt }, i) => {
+      const li = document.createElement('li');
+      li.className = 'cselect__option';
+      li.id = `${baseId}-opt-${i}`;
+      li.setAttribute('role', 'option');
+      li.textContent = opt.textContent;
+      menu.appendChild(li);
+      return li;
+    });
+
+    wrapper.classList.add('is-enhanced');
+    wrapper.appendChild(trigger);
+    wrapper.appendChild(menu);
+
+    let active = 0; // позиция подсветки внутри items
+
+    const selectedPos = () => items.findIndex(({ index }) => index === select.selectedIndex);
+
+    const syncTrigger = () => {
+      const sel = allOptions[select.selectedIndex];
+      const placeholder = !sel || sel.value === '';
+      trigger.textContent = placeholder ? allOptions[0].textContent : sel.textContent;
+      trigger.classList.toggle('cselect__trigger--placeholder', placeholder);
+    };
+
+    const paint = () => {
+      const pos = selectedPos();
+      optionEls.forEach((el, i) => {
+        el.classList.toggle('is-active', i === active);
+        el.setAttribute('aria-selected', i === pos ? 'true' : 'false');
+      });
+      const el = optionEls[active];
+      if (el) {
+        menu.setAttribute('aria-activedescendant', el.id);
+        el.scrollIntoView({ block: 'nearest' });
+      }
+    };
+
+    const isOpen = () => wrapper.classList.contains('is-open');
+
+    const open = () => {
+      if (isOpen()) return;
+      active = Math.max(selectedPos(), 0);
+      wrapper.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+      paint();
+    };
+
+    const close = () => {
+      if (!isOpen()) return;
+      wrapper.classList.remove('is-open');
+      trigger.setAttribute('aria-expanded', 'false');
+    };
+
+    const choose = (i) => {
+      select.selectedIndex = items[i].index;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      syncTrigger();
+      close();
+      trigger.focus();
+    };
+
+    trigger.addEventListener('click', () => (isOpen() ? close() : open()));
+
+    menu.addEventListener('click', (event) => {
+      const li = event.target.closest('.cselect__option');
+      if (li) choose(optionEls.indexOf(li));
+    });
+
+    menu.addEventListener('mousemove', (event) => {
+      const li = event.target.closest('.cselect__option');
+      if (li) {
+        active = optionEls.indexOf(li);
+        paint();
+      }
+    });
+
+    // Поиск пункта по набранным буквам
+    let typed = '';
+    let typedTimer = null;
+
+    trigger.addEventListener('keydown', (event) => {
+      switch (event.key) {
+        case 'ArrowDown':
+          event.preventDefault();
+          if (!isOpen()) { open(); break; }
+          active = Math.min(active + 1, items.length - 1);
+          paint();
+          break;
+        case 'ArrowUp':
+          event.preventDefault();
+          if (!isOpen()) { open(); break; }
+          active = Math.max(active - 1, 0);
+          paint();
+          break;
+        case 'Home':
+          if (isOpen()) { event.preventDefault(); active = 0; paint(); }
+          break;
+        case 'End':
+          if (isOpen()) { event.preventDefault(); active = items.length - 1; paint(); }
+          break;
+        case 'Enter':
+        case ' ':
+          event.preventDefault();
+          if (isOpen()) choose(active);
+          else open();
+          break;
+        case 'Escape':
+          if (isOpen()) { event.preventDefault(); close(); }
+          break;
+        case 'Tab':
+          close();
+          break;
+        default:
+          if (event.key.length === 1) {
+            if (!isOpen()) open();
+            typed += event.key.toLowerCase();
+            clearTimeout(typedTimer);
+            typedTimer = setTimeout(() => { typed = ''; }, 600);
+            const match = items.findIndex(({ opt }) =>
+                opt.textContent.trim().toLowerCase().startsWith(typed));
+            if (match >= 0) { active = match; paint(); }
+          }
+          break;
+      }
+    });
+
+    // Клик вне компонента — закрываем
+    document.addEventListener('click', (event) => {
+      if (!wrapper.contains(event.target)) close();
+    });
+
+    syncTrigger();
+  });
+})();
