@@ -12,6 +12,13 @@ html {
   text-size-adjust: none;
 }
 
+/* Smooth scrolling for in-page anchors (respects reduced-motion) */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Remove default margin in favour of better control in authored CSS */
 body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {

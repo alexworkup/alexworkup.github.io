@@ -35,10 +35,12 @@
     transition: .2s all linear;
     box-shadow: none;
     position: relative;
+    scroll-margin-top: 11rem; // отступ под фиксированный хедер при якорном скролле
 
     @media (max-width: 767px) {
       min-height: 16.8rem;
       padding: 1.4rem;
+      scroll-margin-top: 7rem;
     }
 
     &:hover {

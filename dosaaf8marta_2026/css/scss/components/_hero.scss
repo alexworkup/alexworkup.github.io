@@ -125,23 +125,42 @@
 
     li {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      align-items: stretch;
       min-height: 4rem;
-      padding: 0 1.6rem;
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 2rem;
       background: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.88);
       font-size: 1.4rem;
       line-height: 1.2;
       white-space: nowrap;
+      transition: background-color .2s ease, border-color .2s ease;
 
       @media (max-width: 767px) {
         background: rgba(255, 255, 255, 0.1);
         min-height: 3.5rem;
         font-size: 1.2rem;
         line-height: 117%;
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+
+      // Якорь занимает всю «пилюлю», чтобы кликабельной была вся область
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.6rem;
+        color: rgba(255, 255, 255, 0.88);
+        text-decoration: none;
+        border-radius: inherit;
+
+        &:focus-visible {
+          outline: 2px solid rgba(245, 158, 11, 0.9);
+          outline-offset: 2px;
+        }
       }
     }
   }
