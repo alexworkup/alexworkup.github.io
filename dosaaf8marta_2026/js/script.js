@@ -901,3 +901,61 @@
     syncTrigger();
   });
 })();
+
+// Плавное появление блоков при прокрутке (IntersectionObserver + CSS)
+(() => {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Группы блоков. items — одиночные элементы; container+item — сетка с
+  // каскадом (step — задержка между соседними элементами, мс).
+  const groups = [
+    { items: '.section-head' },
+    // Слайдеры Swiper показываем контейнером целиком: отдельные слайды каскадить
+    // нельзя — на мобиле сдвинутые по горизонтали слайды «застряли» бы скрытыми.
+    { items: '.license-cats__slider, .advantages__slider, .student-app__slider, .reviews__slider' },
+    { container: '.school-stats__list', item: ':scope > *', step: 70 },
+    { container: '.learning-formats__grid', item: '.format-card', step: 70 },
+    { container: '.course-process__list', item: '.course-process__item', step: 80 },
+    { container: '.instructors__grid', item: '.instructor-card', step: 60 },
+    { container: '.faq', item: '.faq__item', step: 60 },
+    { container: '.quick-start__container', item: ':scope > *', step: 80 },
+  ];
+
+  const targets = [];
+
+  const tag = (el, delay) => {
+    if (!el || el.hasAttribute('data-reveal')) return;
+    if (el.closest('.swiper-wrapper')) return; // слайды Swiper не трогаем
+    if (delay) el.style.setProperty('--reveal-delay', `${delay}ms`);
+    el.setAttribute('data-reveal', '');
+    targets.push(el);
+  };
+
+  groups.forEach((group) => {
+    if (group.items) {
+      document.querySelectorAll(group.items).forEach((el) => tag(el, 0));
+      return;
+    }
+    document.querySelectorAll(group.container).forEach((container) => {
+      container.querySelectorAll(group.item).forEach((el, i) => {
+        // задержку каскада ограничиваем, чтобы дальние элементы не «зависали»
+        tag(el, Math.min(i, 6) * (group.step || 60));
+      });
+    });
+  });
+
+  if (!targets.length) return;
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  // Наблюдатель сам покажет то, что уже в зоне видимости (верхние блоки мягко
+  // проявятся при загрузке), остальное — по мере прокрутки.
+  targets.forEach((el) => io.observe(el));
+})();
