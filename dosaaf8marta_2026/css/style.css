@@ -1984,12 +1984,26 @@ body.is-menu-open:after {
   text-decoration: none;
   padding: 1rem 2rem;
   transition: 0.2s all linear;
+  position: relative;
+}
+.header__main-nav a:before {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(10, 28, 32, 0.4);
+  transition: 0.2s all linear;
 }
 .header__main-nav a.is-accent {
   color: #e31e24;
 }
-.header__main-nav a:hover {
+.header__main-nav a:hover, .header__main-nav a.active {
   color: #0a1c20;
+}
+.header__main-nav a:hover:before, .header__main-nav a.active:before {
+  width: calc(100% - 4rem);
 }
 .header__top-nav {
   display: flex;

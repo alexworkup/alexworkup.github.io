@@ -64,13 +64,30 @@
       text-decoration: none;
       padding: 1rem 2rem;
       transition: .2s all linear;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 2rem;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: rgb(10 28 32 / 40%);
+        transition: .2s all linear;
+      }
 
       &.is-accent {
         color: #e31e24;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         color: $dark;
+
+        &:before {
+          width: calc(100% - 4rem);
+        }
       }
     }
   }

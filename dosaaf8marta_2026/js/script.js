@@ -693,12 +693,15 @@
   });
 })();
 
-// Ripple-эффект на кнопках — при наведении и при клике
+// Ripple-эффект — при наведении и при клике.
+// Работает для всех .btn, а также для любого элемента с классом .js-ripple.
 (() => {
   if (typeof jQuery === 'undefined' || typeof jQuery.ripple !== 'function') return;
 
-  jQuery.ripple('.btn', { on: 'mouseenter' });
-  jQuery.ripple('.btn', { on: 'mousedown' });
+  const selector = '.btn, .js-ripple';
+
+  jQuery.ripple(selector, { on: 'mouseenter' });
+  jQuery.ripple(selector, { on: 'mousedown' });
 })();
 
 // Маска телефона +7 (___) ___-__-__ для всех полей с data-phone (Inputmask)
