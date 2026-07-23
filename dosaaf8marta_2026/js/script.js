@@ -962,3 +962,79 @@
   // проявятся при загрузке), остальное — по мере прокрутки.
   targets.forEach((el) => io.observe(el));
 })();
+
+// Показатели школы: плавный набор цифр при прокрутке до блока
+(() => {
+  if (!('IntersectionObserver' in window)) return;
+
+  const values = document.querySelectorAll('.school-stats__item .school-stats__value');
+  if (!values.length) return;
+
+  // При «меньше движения» оставляем готовые числа из разметки
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const DURATION = 1400;
+
+  // Разбираем строку, сохраняя формат: «1,5 млн» → 1.5 + разделитель «,» +
+  // 1 знак после запятой + суффикс « млн». Так же ловятся «55+», «92%», «5.0».
+  const parse = (text) => {
+    const match = text.match(/\d+(?:[.,]\d+)?/);
+    if (!match) return null;
+
+    const raw = match[0];
+    const sep = (raw.match(/[.,]/) || [''])[0];
+    const decimals = sep ? raw.split(sep)[1].length : 0;
+
+    return {
+      prefix: text.slice(0, match.index),
+      suffix: text.slice(match.index + raw.length),
+      target: parseFloat(raw.replace(',', '.')),
+      sep,
+      decimals,
+    };
+  };
+
+  const format = (num, info) => {
+    const fixed = num.toFixed(info.decimals);
+    return info.prefix + (info.sep ? fixed.replace('.', info.sep) : fixed) + info.suffix;
+  };
+
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+  const animate = (el, info, original) => {
+    const start = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / DURATION, 1);
+      el.textContent = format(info.target * easeOut(progress), info);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = original; // финал — ровно исходная строка
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      obs.unobserve(entry.target);
+      const data = entry.target._counter;
+      animate(entry.target, data.info, data.original);
+    });
+  }, { threshold: 0.4 });
+
+  values.forEach((el) => {
+    const original = el.textContent.trim();
+    const info = parse(original);
+    if (!info) return;
+
+    el._counter = { info, original };
+    el.textContent = format(0, info); // стартовое состояние — нули
+    io.observe(el);
+  });
+})();

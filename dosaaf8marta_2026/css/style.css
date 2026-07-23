@@ -1972,6 +1972,12 @@ body.is-menu-open:after {
 .header__socials .socials__link--max path, .header__socials .socials__link--vk path {
   fill: #fff;
 }
+.header__socials .socials__link--max rect, .header__socials .socials__link--vk rect, .header__socials .socials__link--tg path {
+  transition: fill 0.2s linear;
+}
+.header__socials .socials__link--max:hover rect, .header__socials .socials__link--vk:hover rect, .header__socials .socials__link--tg:hover path {
+  fill: #224750;
+}
 .header__main-nav {
   display: flex;
   align-items: center;
@@ -2319,6 +2325,9 @@ body.is-menu-open:after {
   color: #f59e0b;
   text-decoration: none;
 }
+.mobile-header__socials .socials__link svg {
+  display: block;
+}
 .mobile-header__socials .socials__link--max path, .mobile-header__socials .socials__link--vk path {
   fill: #0e1e24;
 }
@@ -2425,8 +2434,8 @@ body.is-menu-open:after {
   top: 50%;
   width: 0.9rem;
   height: 0.9rem;
-  border-right: 0.2rem solid currentColor;
-  border-bottom: 0.2rem solid currentColor;
+  border-right: 0.2rem solid rgba(255, 255, 255, 0.5);
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.5);
   pointer-events: none;
   transform: translateY(-70%) rotate(45deg);
   transition: transform 0.2s ease;

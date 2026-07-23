@@ -86,8 +86,8 @@
       top: 50%;
       width: 0.9rem;
       height: 0.9rem;
-      border-right: 0.2rem solid currentColor;
-      border-bottom: 0.2rem solid currentColor;
+      border-right: 0.2rem solid rgb(255 255 255 / 50%);
+      border-bottom: 0.2rem solid rgb(255 255 255 / 50%);
       pointer-events: none;
       transform: translateY(-70%) rotate(45deg);
       transition: transform 0.2s ease;

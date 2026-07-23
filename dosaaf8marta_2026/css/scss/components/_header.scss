@@ -49,7 +49,20 @@
           fill: $white;
         }
       }
+
+      &--max rect,
+      &--vk rect,
+      &--tg path {
+        transition: fill 0.2s linear;
+      }
+
+      &--max:hover rect,
+      &--vk:hover rect,
+      &--tg:hover path {
+        fill: #224750;
+      }
     }
+
   }
 
   &__main-nav {
@@ -477,10 +490,15 @@
   &__socials {
 
     .socials__link {
+      svg {
+        display: block;
+      }
+
       &--max path,
       &--vk path {
         fill: #0e1e24;
       }
+
     }
   }
 
